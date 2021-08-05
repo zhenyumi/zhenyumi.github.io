@@ -188,8 +188,7 @@ encrypt: # hexo-blog-encrypt
 
 backup:
   type: git
-  branch: master
   repository:
-    backup: git@github.com:zhenyumi/Hexo_backup.git
+    github: git@github.com:zhenyumi/Hexo_backup.git,master
 
 
