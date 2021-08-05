@@ -189,6 +189,6 @@ encrypt: # hexo-blog-encrypt
 backup:
   type: git
   repository:
-    github: git@github.com:zhenyumi/Hexo_backup.git,master
+    origin: git@github.com:zhenyumi/Hexo_backup.git,master
 
 
