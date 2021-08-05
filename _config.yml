@@ -188,8 +188,8 @@ encrypt: # hexo-blog-encrypt
 
 backup:
   type: git
+  theme: fluid,next
   repository:
       backup: git@github.com:zhenyumi/Hexo_backup.git,master
-      theme: fluid,next
 
 
