@@ -1,0 +1,6 @@
+options:
+  askImageFilename: true
+  overwriteImages: false
+  lineNumbers: true
+editor:
+  lineNumbers: true

@@ -1,0 +1,287 @@
+
+// 背景图片
+body {
+    background:url(https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/87257816_p0%281%29.jpg);
+    background-repeat: no-repeat;
+    background-attachment:fixed; //不重复
+    background-size: cover;      //填充
+    background-position:50% 50%;
+}
+
+// 文章版块样式
+.post-block {
+    //background: var(--content-bg-color);
+	background: #fff
+    border-radius: initial;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+    padding: 40px;
+}
+
+// 页面头样式属性
+.header-inner {
+  // 也可以同时定义背景色
+  // background: #ddd 
+  // 透明度
+  // opacity: 0.8;
+}
+// sidebar侧边工具栏样式属性
+.sidebar{
+    // 动画过渡时间
+	transition-duration: 0.2s;
+    // 透明度
+	opacity: 0.8
+}
+// 标题样式
+.posts-expand .post-title-link {
+	// 设置字体颜色
+	color: #000000;
+}
+
+//博客内容透明化
+//文章内容的透明度设置
+.content-wrap {
+  opacity: 1.0;
+}
+
+//菜单栏的透明度设置
+.header-inner {
+  background: rgba(255,255,255,0.9);
+}
+
+//搜索框（local-search）的透明度设置
+.popup {
+  opacity: 0.9;
+}
+
+//底部字体颜色
+.footer-inner {
+    color: #ffffff;
+}
+
+// 文章阴影
+//.post {
+//   margin-top: 50px;
+//   margin-bottom: 50px;
+//   padding: 25px;
+//  -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);
+//   -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
+//}
+
+//文章链接格式
+.post-body p a{
+    color: #0593d3;
+    border-bottom: none;
+    border-bottom: 1px solid #0593d3;
+    &:hover {
+      color: #fc6423;
+      border-bottom: none;
+      border-bottom: 1px solid #fc6423;
+    }
+ }
+
+// 分类&&标签 页面样式
+.post-block.page {
+    margin-top: 40px;
+}
+// 分类页面page
+.category-all-page {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    padding: 20px 30px 60px 30px;
+    border-radius: 25px 25px 25px 25px;
+}
+.category-all-title {
+    font-family: Impact;
+    font-size: 24px;
+    color: #000;
+}
+.category-list {
+    overflow: auto;
+}
+.category-list li {
+    height: 100%;
+    float: left;
+    border-right: 3px solid #222;
+    padding: 0 20px;
+}
+.category-all ul li {
+    list-style: none!important;
+}
+.category-list li:last-child {
+    border-right: none;
+}
+.category-list li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    font-family: Helvetica, Verdana, sans-serif;
+    // text-transform: uppercase;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.category-list li a:hover {
+    color: black;
+}
+.category-list li.active a {
+    font-weight: bold;
+    color: black;
+}
+
+//hitokoto 一言
+
+.hitokoto-title {
+  text-align: center;
+  font-size: 10px;
+}
+
+#hitokoto {
+  text-align: left;
+  font-family: "Microsoft YaHei";
+  font-size: 10px;
+}
+
+#hitofrom {
+  float: right;
+  font-family: "Microsoft YaHei";
+  font-size: 10px;
+}
+
+//每日诗词-念两句诗
+/*诗*/
+.poem-wrap {
+    position: relative;
+    width: 730px;
+    max-width: 80%;
+    border: 2px solid #797979;
+    border-top: none;
+    text-align: center;
+    margin: 80px auto;
+}
+ 
+.poem-wrap h1 {
+    font-size: 30px;
+    position: relative;
+    margin-top: -20px;
+    display: inline-block;
+    letter-spacing: 4px;
+    color: #797979
+}
+ 
+.poem-wrap p {
+    width: 70%;
+    margin: auto;
+    line-height: 30px;
+    color: #797979;
+}
+ 
+.poem-wrap p#poem {
+    font-size: 25px;
+}
+ 
+.poem-wrap p#info {
+    font-size: 15px;
+    margin: 15px auto;
+}
+ 
+.poem-border {
+    position: absolute;
+    height: 2px;
+    width: 27%;
+    background-color: #797979;
+}
+ 
+.poem-right {
+    right: 0;
+}
+ 
+.poem-left {
+    left: 0;
+}
+ 
+@media (max-width: 685px) {
+    .poem-border {
+        width: 18%;
+    }
+}
+ 
+@media (max-width: 500px) {
+    .poem-wrap {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        border-top: 2px solid #797979;
+    }
+ 
+    .poem-wrap h1 {
+        margin: 20px 6px;
+    }
+ 
+    .poem-border {
+        display: none;
+    }
+}
+
+// 侧边栏文章TOC
+.post-toc {
+  font-size: $font-size-small;
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0 2px 5px 10px;
+    text-align: left;
+    border-bottom: none;
+    > ol {
+      padding-left: 0;
+    }
+
+    a {
+      transition-property: all;
+      the-transition();
+    }
+  }
+
+  .nav-item {
+    line-height: 1.8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // text-align: justify;
+
+    if (!hexo-config('toc.wrap')) {
+      white-space: nowrap;
+    }
+  }
+
+  .nav {
+    .nav-child {
+      display: hexo-config('toc.expand_all') ? block : none;
+    }
+
+    .active > .nav-child {
+      display: block;
+    }
+
+    .active-current > .nav-child {
+      display: block;
+
+      > .nav-item {
+        display: block;
+      }
+    }
+
+    .active > a {
+      border-bottom-color: $sidebar-highlight;
+      color: $sidebar-highlight;
+    }
+
+    .active-current > a {
+      color: $sidebar-highlight;
+
+      &:hover {
+        color: $sidebar-highlight;
+      }
+    }
+  }
+}

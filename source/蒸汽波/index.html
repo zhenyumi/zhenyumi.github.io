@@ -1,0 +1,125 @@
+<style type="text/css">
+.gallery-page {
+	margin-top: -50px;
+}
+.img-list,
+.gallery-list {
+	display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+}
+.img-column {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.img-column a,
+.gallery-column a {
+	border-bottom: 0px;
+}
+.gallery-item {
+	margin-bottom: -50px;
+    display: flex;
+    flex-direction: column;
+}
+.gallery-item p {
+	margin: -25px auto -10px;
+	max-width: 50%;
+	text-align: center;
+	font-size: 15px;
+	color: rgba(0,0,0);
+	background: rgba(255,255,255,.3);
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0);
+	box-shadow: 0 8px 20px -8px rgba(0,0,0,.3);
+}
+.posts-expand .post-body .gallery-column a img {
+	height: 300px;
+	width: 250px;
+	object-fit: cover;
+}
+@media (max-width: 767px){
+	.gallery-item p {
+		min-width: 75px;
+		font-size: 13px;
+	}
+}
+</style>
+<!--Lazyload-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+<!--
+<div class="gallery-page">
+	<div class="gallery-list">
+		<div class="gallery-column">
+			<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Photos/45773700_p0.jpg">
+			<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Photos/45985420_p0.jpg">
+			<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Photos/51528225_p0.jpg">
+		</div>
+		<div class="gallery-column">
+			<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Photos/52131522_p0.png">
+		</div>
+		<div class="gallery-column">
+			<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Photos/54075333_p0.jpg">
+		</div>
+	</div>
+</div>
+-->
+<!--
+<center>自定义分隔符【此行可删除】</center>
+-->
+<!--换行-->
+<center><font size=6>相册，以及一些记录</font></center>
+
+<br><br>
+<div class="gallery-page">
+	<div class="gallery-list">
+        <!--第一列-->
+		<div class="gallery-column">
+			<div class="gallery-item">
+                <div>
+                    <a href="相册背景图迭代"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Photos/%E7%9B%B8%E5%86%8C%E5%B0%81%E9%9D%A2%E5%9B%BE/avatar.png"></a>
+                </div>
+                <!--<a href="相册名"><img src="相册封面图名">-->
+				<div>
+                    <br>
+                    <p>相册背景图迭代</p>
+                </div>
+                <!--换行-->
+                <br>
+			</div>
+        </div>
+        <!--第二例-->
+        <div class="gallery-column">
+			<div class="gallery-item">
+                <div>
+                    <a href="生活图"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Photos/%E7%9B%B8%E5%86%8C%E5%B0%81%E9%9D%A2%E5%9B%BE/pixil-frame-0.png"></a>
+                </div>
+                <!--<a href="相册名"><img src="相册封面图名">-->
+				<div>
+                    <br>
+                    <p>生活图</p>
+                </div>
+			</div>
+		</div>
+        <!--第三例-->
+        <div class="gallery-column">
+			<div class="gallery-item">
+                <div>
+                    <a href="暂时什么都没有"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Photos/%E7%9B%B8%E5%86%8C%E5%B0%81%E9%9D%A2%E5%9B%BE/pixil-frame-0.png"></a>
+                </div>
+                <!--<a href="相册名"><img src="相册封面图名">-->
+				<div>
+                    <br>
+                    <p>暂时什么都没有</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--换行-->
+<br>
+<!--
+<center>自定义分割线【此行可删除】</center>
+-->      
