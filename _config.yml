@@ -190,6 +190,6 @@ backup:
   type: git
   branch: master
   repository:
-    origin: git@github.com:zhenyumi/Hexo_backup.git
+    backup: git@github.com:zhenyumi/Hexo_backup.git
 
 
