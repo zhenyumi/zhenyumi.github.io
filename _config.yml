@@ -190,6 +190,6 @@ backup:
   type: git
   theme: fluid,next
   repository:
-      backup: git@github.com:zhenyumi/Hexo_backup.git,main
+      backup: git@github.com:zhenyumi/zhenyumi.github.io.git,backup
 
 
