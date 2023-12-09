@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>L10 Intracellular transport II - ER and Golgi - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="一、ER importStructure of ER All eukaryotic cells have an endoplasmic reticulum (ER). Its membrane typically constitutes more than half of the total membrane of an average animal cell Thus, the ER and n"><meta property="og:type" content="blog"><meta property="og:title" content="L10 Intracellular transport II - ER and Golgi"><meta property="og:url" content="https://zhenyumi.github.io/posts/fe4294e6/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="一、ER importStructure of ER All eukaryotic cells have an endoplasmic reticulum (ER). Its membrane typically constitutes more than half of the total membrane of an average animal cell Thus, the ER and n"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><meta property="article:published_time" content="2020-07-03T09:32:00.000Z"><meta property="article:modified_time" content="2020-07-02T09:32:00.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="Cell Biology"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/fe4294e6/"},"headline":"L10 Intracellular transport II - ER and Golgi","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"],"datePublished":"2020-07-03T09:32:00.000Z","dateModified":"2020-07-02T09:32:00.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"一、ER importStructure of ER All eukaryotic cells have an endoplasmic reticulum (ER). Its membrane typically constitutes more than half of the total membrane of an average animal cell Thus, the ER and n"}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/fe4294e6/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png" alt="L10 Intracellular transport II - ER and Golgi"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-03T09:32:00.000Z" title="2020/7/3 19:32:00">2020-07-03</time>发表</span><span class="level-item"><time dateTime="2020-07-02T09:32:00.000Z" title="2020/7/2 19:32:00">2020-07-02</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/Academic-Notebook/">Academic Notebook</a><span> / </span><a class="link-muted" href="/categories/Academic-Notebook/Cell-Biology/">Cell Biology</a></span><span class="level-item">43 分钟读完 (大约6397个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">L10 Intracellular transport II - ER and Golgi</h1><div class="content"><h1 id="一、ER-import"><a href="#一、ER-import" class="headerlink" title="一、ER import"></a>一、ER import</h1><h2 id="Structure-of-ER"><a href="#Structure-of-ER" class="headerlink" title="Structure of ER"></a>Structure of ER</h2><blockquote>
+<p>All eukaryotic cells have an endoplasmic reticulum (ER). Its membrane typically constitutes <u>more than half of the total membrane of an average animal cell</u></p>
+<p>Thus, the ER and nuclear membranes form a continuous sheet enclosing a single internal space, called the <strong>ER lumen</strong> or the <strong>ER cisternal space</strong>, which often occupies <u>more than 10% of the total cell volume</u></p>
+<p>The ER membrane is also the site at which most of the lipids for mitochondrial and peroxisomal membranes are made.</p>
+<p>The ER Is Structurally and Functionally Diverse</p>
+</blockquote>
+<h3 id="1-Endoplasmic-reticulum-under-light-microscope"><a href="#1-Endoplasmic-reticulum-under-light-microscope" class="headerlink" title="1. Endoplasmic reticulum under light microscope"></a>1. Endoplasmic reticulum under light microscope</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317141424560.png" alt="image-20200317141424560"></p>
+<h3 id="2-Endoplasmic-reticulum-under-electron-microscope"><a href="#2-Endoplasmic-reticulum-under-electron-microscope" class="headerlink" title="2. Endoplasmic reticulum under electron microscope"></a>2. Endoplasmic reticulum under electron microscope</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317141725455.png" alt="image-20200317141725455" style="zoom: 80%;" />
+
+<p>The ER possesses different regions&#x2F;domains:</p>
+<ol>
+<li>smooth ER and rough ER are functionally and structurally different</li>
+<li>Some cell have partial rough and partial smooth ER</li>
+<li>Some cells have a scanty (稀疏的，少量的) region of smooth ER</li>
+<li>Some cells have abundant smooth ER (e. g., muscles cells)</li>
+<li>Some cells have expanded smooth ER to meet the function (synthesis of steroid hormone from cholesterol)</li>
+<li>Transitional ER (lecture 11)</li>
+</ol>
+<h3 id="3-Volume-in-Different-Cells"><a href="#3-Volume-in-Different-Cells" class="headerlink" title="3. Volume in Different Cells"></a>3. Volume in Different Cells</h3><p>Endoplasmic reticulum (ER) occupies large volume and accounts for large amounts of the cell</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317141540829.png" alt="image-20200317141540829"></p>
+<p><strong>Questions:</strong></p>
+<p>The ER possesses different regions&#x2F;domains:</p>
+<ol>
+<li>smooth ER and rough ER are functionally and structurally different<ol>
+<li>Why do ribosomes attach to ER but not to mitochondria?</li>
+<li>How proteins are imported into ER?</li>
+</ol>
+</li>
+</ol>
+<hr>
+<blockquote>
+<p>These membrane-bound ribosomes coat the surface of the ER, creating regions termed <strong>rough endoplasmic reticulum</strong>, or <strong>rough ER</strong>; </p>
+<p>Regions of ER that lack bound ribosomes are called <strong>smooth endoplasmic reticulum</strong>, or <strong>smooth ER</strong></p>
+</blockquote>
+<h2 id="ER-Functions"><a href="#ER-Functions" class="headerlink" title="ER Functions"></a>ER Functions</h2><blockquote>
+<p>To meet different functional demands, distinct regions of the ER become highly specialized</p>
+<p>We observe such functional specialization as dramatic changes in ER structure, and <u>different cell types can therefore possess characteristically different types of ER membrane.</u> One of the most remarkable ER specializations is the <strong>rough ER</strong></p>
+</blockquote>
+<h3 id="1-Featured-Functions"><a href="#1-Featured-Functions" class="headerlink" title="1. Featured Functions"></a>1. Featured Functions</h3><ol>
+<li><p><strong>Lipid synthesis</strong>: nearly all of the cell’s major classes (<strong>phospholipid</strong>, <strong>cholesterol</strong>, <strong>glycolipid</strong> precursor) of lipids are synthesized in ER. </p>
+</li>
+<li><p><strong>Transmembrane proteins synthesis</strong>: Produce transmembrane proteins for ER, Golgi, endosome, lysosome, and plasma membrane</p>
+<blockquote>
+<p><em>Lysosomes</em> contain digestive enzymes that degrade defunct intracellular organelles, as well as macromolecules and particles taken in from outside the cell by endocytosis.</p>
+</blockquote>
+<p>Water soluble proteins in the lumen of ER, endosome, and lysosome, respectively. </p>
+</li>
+<li><p><strong>Secreted proteins synthesis</strong></p>
+</li>
+<li><p><strong>Store Ca2+</strong> (Ca2+ pump and Ca2+ release channel, <u>control intracellular Ca2+ concentration</u>) (see lecture 7 and 8) </p>
+<blockquote>
+<p>Another crucially important function of the ER in most eukaryotic cells is to  <u>sequester（使隔绝;使隔离） Ca2+</u> from the cytosol. The release of Ca2+ into the cytosol from the ER,  and its subsequent reuptake, occurs in many <u>rapid responses to extracellular signals</u> </p>
+<p>Muscle cells have an abundant, modified smooth ER called the <strong>sarcoplasmic reticulum</strong> （SR）. The release and reuptake of Ca2+ by the sarcoplasmic reticulum <u>trigger myofibril contraction and relaxation,</u> respectively, during each round of muscle contraction</p>
+</blockquote>
+</li>
+<li><p><strong>Detoxification</strong>: e.g. cytochrome p450</p>
+</li>
+</ol>
+<h3 id="2-Isolation-and-purification-of-microsomes-from-ER"><a href="#2-Isolation-and-purification-of-microsomes-from-ER" class="headerlink" title="2. Isolation and purification of microsomes from ER"></a>2. Isolation and purification of microsomes from ER</h3><p><strong>Microsomes (微粒体)</strong>: physiologically intact</p>
+<ul>
+<li>capable of protein translocation, protein glycosylation, uptake of Ca2+ and release, lipid synthesis, etc.</li>
+</ul>
+<blockquote>
+<p>Because of the unusually large quantities of smooth ER or sarcoplasmic reticulum, respectively, most of the smooth microsomes in homogenates（均匀混合物,(组织)匀浆） of these tissues are <u>derived from the smooth ER or sarcoplasmic reticulum.</u></p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317142327486.png" alt="image-20200317142327486"></p>
+<h4 id="The-signal-hypothesis-and-discovery-of-signal-peptides"><a href="#The-signal-hypothesis-and-discovery-of-signal-peptides" class="headerlink" title="The signal hypothesis and discovery of signal peptides"></a>The signal hypothesis and discovery of signal peptides</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317142453121.png" alt="image-20200317142453121" style="zoom: 67%;" />
+
+<p>1970, study <u>secreted proteins</u></p>
+<p>In vitro translation assay (cell-free)</p>
+<ul>
+<li>mRNA of the secreted protein</li>
+<li>Ribosome</li>
+<li>With or without microsome</li>
+<li>Examine the translated protein by SDS-PAGE</li>
+</ul>
+<p>Result: The size of the protein was smaller in the presence of microsome than that in the absence of microsome</p>
+<ul>
+<li>In the absence of microsomes, the protein synthesized was slightly larger than the normal secreted protein. </li>
+<li>In the presence of microsomes, the protein of <u>correct size</u> was produced.</li>
+</ul>
+<p>These size difference suggests the presence of an <u>initial signal sequence</u> that guide the import of protein to the ER. </p>
+<p>Signal peptides were first discovered in protein imported in rough ER proteins.</p>
+<h2 id="Route-of-ER-Transport"><a href="#Route-of-ER-Transport" class="headerlink" title="Route of ER Transport"></a>Route of ER Transport</h2><blockquote>
+<p>Mammalian cells begin to import most proteins into the ER before complete synthesis of the polypeptide chain—that is, import is a <strong>co-translational process</strong></p>
+<ul>
+<li>In contrast, the import of proteins into mitochondria, chloroplasts, nuclei, and peroxisomes is a <strong>post-translational process</strong></li>
+</ul>
+<p>In <strong>co-translational transport</strong>, the <u>ribosome</u> that is synthesizing the protein is attached directly to the ER membrane, enabling one end of the protein to be translocated  into the ER while the rest of the polypeptide chain is being synthesized.</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317142017706.png" alt="image-20200317142017706" style="zoom:67%;" />
+
+<p>Features</p>
+<ol>
+<li>Membrane-bound ribosomes form the rough ER (<u>free ribosomes are in cytosol</u>).</li>
+<li>If the protein contain SRP (signal-recognition particle), SRP receptor on ER membrane will bind ribosome.</li>
+<li>New protein will move into ER lumen <u>through translocation channel</u> if it has one signal sequence.</li>
+</ol>
+<h2 id="The-ER-Transport-Mechanism"><a href="#The-ER-Transport-Mechanism" class="headerlink" title="The ER Transport Mechanism"></a>The ER Transport Mechanism</h2><blockquote>
+<p>Areas of smooth ER from which transport vesicles carrying newly synthesized proteins and lipids bud off for transport to the Golgi apparatus  are called <strong>transitional ER</strong>. </p>
+<ul>
+<li>In certain specialized cells, the smooth ER is abundant and has additional functions</li>
+</ul>
+</blockquote>
+<h3 id="1-The-ER-import-signals"><a href="#1-The-ER-import-signals" class="headerlink" title="1. The ER import signals"></a>1. The ER import signals</h3><blockquote>
+<p>The ER captures selected proteins from the cytosol as they are being synthesized. These proteins are of two types: </p>
+<ol>
+<li><strong>transmembrane proteins</strong>, which are only partly translocated across the ER membrane and become <u>embedded in it,</u> </li>
+<li><strong>water-soluble proteins</strong>, which are fully translocated across the ER membrane and are released <u>into the ER lumen.</u></li>
+</ol>
+<p>All of these proteins, regardless of their subsequent fate, are directed to the ER membrane by an <strong>ER signal sequence,</strong> which initiates their translocation by a common mechanism.</p>
+<p>According to the <strong>signal hypothesis</strong>, the <strong>size difference</strong> reflects the initial presence of a signal sequence that directs the secreted protein to the ER membrane and is then <u>cleaved off by a <strong>signal peptidase</strong></u> in the ER membrane before the polypeptide chain has been completed. </p>
+<p>ER signal sequences vary greatly in amino acid sequence, but each has <u>eight or more nonpolar amino acids</u> at its center</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317142647847.png" alt="image-20200317142647847"></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317142850638.png" alt="image-20200317142850638" style="zoom: 67%;" />
+
+<h3 id="2-SRP-and-SRP-Receptor-Involving-Mechanism"><a href="#2-SRP-and-SRP-Receptor-Involving-Mechanism" class="headerlink" title="2. SRP and SRP Receptor Involving Mechanism"></a>2. SRP and SRP Receptor Involving Mechanism</h3><p>Signal peptide is recognized by signal recognition particle (SRP)</p>
+<blockquote>
+<p>The ER signal sequence is guided to the ER membrane by at least two components: a <strong>signal-recognition particle (SRP)</strong>, which <u>cycles between the ER membrane and the cytosol</u> and <u>binds to the signal sequence, and an <strong>SRP receptor</strong> in the ER membrane</u></p>
+<p>While <u>the SRP and SRP receptor have fewer subunits in bacteria</u>, <u>homologs are present in all cells</u>, indicating that this protein-targeting mechanism arose early in evolution and has been conserved.</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317142937551.png" alt="image-20200317142937551"></p>
+<blockquote>
+<p>The signal-sequence-binding site is a <u>large hydrophobic pocket</u> lined by <strong>methionines</strong>. Because <strong>methionines</strong>  have unbranched, flexible side chains, the pocket is sufficiently <u>plastic</u> to accommodate hydrophobic signal sequences of different sequences, sizes, and shapes.</p>
+<p>The SRP is a rod-like structure, which wraps around the large ribosomal subunit, with one end binding to the ER signal sequence as it emerges from the ribosome as part of the newly made polypeptide chain; the other end <u>blocks the elongation</u></p>
+</blockquote>
+<p>Structure evidence:</p>
+<ol>
+<li>SRP binds to the <u>large ribosomal subunit</u> so that its signal-sequence-binding pocket is positioned near the growing polypeptide chain exit site.</li>
+<li>Its <strong>translational pause domain</strong> is positioned at the interface between the ribosomal subunits, where it interferes with elongation factor binding.</li>
+</ol>
+<h4 id="Route"><a href="#Route" class="headerlink" title="Route"></a>Route</h4><p>The ribosome binds to mRNA:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317143307381.png" alt="image-20200317143307381" style="zoom:80%;" />
+
+<p>Scenario</p>
+<ol>
+<li>Protein translation starts on the free ribosomes in the cytosol.</li>
+<li>Once the N-terminal ER signal peptide emerges, a signal recognition particle (SRP) <strong>stops</strong> the translation and <strong>guides</strong> the complex to the translocation pore on the ER, then, translation continues</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317143548817.png" alt="image-20200317143548817"></p>
+<p>Polypeptide chains passes through an aqueous channel (translocator) in the membrane</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317143612908.png" alt="image-20200317143612908"></p>
+<p>Most proteins imported <u>co-translationally（同时翻译和转运）</u> into the ER through the translocator.</p>
+<blockquote>
+<p>This co-translational transfer process creates two spatially separate populations of ribosomes in the cytosol. </p>
+<ol>
+<li><p><strong>Membrane-bound ribosomes</strong>, attached to the cytosolic side of the ER membrane, are engaged in the synthesis of proteins that are being concurrently translocated into the ER</p>
+</li>
+<li><p><strong>Free ribosomes</strong>, unattached to any membrane, synthesize all other proteins encoded by the nuclear genome.  <u>Membrane-bound and free ribosomes are structurally and functionally identical.</u>  </p>
+<p>They differ only in the proteins they are making at any given time.</p>
+</li>
+</ol>
+</blockquote>
+<h5 id="1-Polyribosome"><a href="#1-Polyribosome" class="headerlink" title="(1) Polyribosome"></a>(1) Polyribosome</h5><blockquote>
+<p>Since many ribosomes can bind to a single mRNA molecule, a <strong>polyribosome</strong>  is usually formed. If the mRNA encodes a protein with an ER signal sequence, the polyribosome becomes attached to the ER membrane, directed there by the <strong>signal sequences</strong> <u>on multiple growing polypeptide chains</u>.</p>
+<p>The individual ribosomes associated with such an mRNA molecule can return to the cytosol when they finish translation and intermix with the pool of free ribosomes. </p>
+<p>The mRNA itself, however, <u>remains attached to the ER membrane</u> by a <strong>changing population of ribosomes</strong>, each transiently held at the membrane by the translocator</p>
+</blockquote>
+<h4 id="Protein-translocator-Sec61"><a href="#Protein-translocator-Sec61" class="headerlink" title="Protein translocator: Sec61"></a>Protein translocator: Sec61</h4><blockquote>
+<p>The Polypeptide Chain Passes Through an Aqueous Channel in the Translocator  </p>
+<p>The identification of the translocator, which was shown to form a water-filled channel in the membrane through which the polypeptide chain passes. The core of the translocator, called the Sec61  complex, is built from three subunits that are highly conserved from bacteria to  eukaryotic cells.</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317143718167.png" alt="image-20200317143718167" style="zoom:67%;" />
+
+<p>Ribosomes bind to the translocation pore</p>
+<h5 id="1-Structure-and-Gated-Channel"><a href="#1-Structure-and-Gated-Channel" class="headerlink" title="(1) Structure and Gated Channel"></a>(1) Structure and Gated Channel</h5><blockquote>
+<p>The <strong>Sec61α subunit</strong> has an <strong>inverted repeat</strong> structure</p>
+<p>The structure of the Sec61 complex suggests that α helices contributed by the largest subunit surround a central channel through which the  polypeptide chain traverses the membrane</p>
+</blockquote>
+<p>Features</p>
+<ol>
+<li><p>“Closed conformation”: the yellow short helix is thought to form a plug（塞子） that seals the pore when the translocator is closed. （Showed in the figure below.）</p>
+</li>
+<li><p>To open, the complex rearranges itself thereby moving the plug helix out of the way (<u>red arrow</u>). </p>
+</li>
+<li><p>Prevent leaking: <u>a ring of hydrophobic amino acid side chains</u> is thought to form a tight-fitting diaphragm around the translocating polypeptide chain to prevent leaks of other molecules across the membrane.</p>
+</li>
+<li><p>The pore of the Sec61 complex can also open sideways at a lateral seam.</p>
+</li>
+</ol>
+<h4 id="Model-of-the-translocator-function"><a href="#Model-of-the-translocator-function" class="headerlink" title="Model of the translocator function"></a>Model of the translocator function</h4><blockquote>
+<p>The short helix which showed in yellow color below is thought to form a <strong>plug</strong> that seals the pore when the translocator is closed</p>
+<p>The channel is gated by a short α helix that is thought to keep the translocator closed when it is idle and to move aside when it is engaged in passing a polypeptide chain. According to this view, <u>the pore is a dynamic gated channel</u> that <u>opens only transiently when a  polypeptide chain traverses the membrane</u></p>
+<p>The structure of the Sec61 complex suggests that <u>the pore can also open along  a seam on its side</u></p>
+<ul>
+<li>This opening allows a translocating peptide chain lateral access into the hydrophobic core of the membrane, a process that is <u>important both for the release of a cleaved signal peptide into the membrane</u></li>
+</ul>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317144403488.png" alt="image-20200317144403488"></p>
+<blockquote>
+<p>In eukaryotic cells, <strong>four Sec61 complexes</strong> form a large translocator assembly  that can be visualized on ER-bound ribosomes after detergent solubilization of the ER membrane</p>
+<ul>
+<li>It is likely that this assembly includes other membrane complexes that associate with the translocator, such as enzymes that modify the growing polypeptide chain, including <strong>oligosaccharide transferase</strong> and the <strong>signal peptidase</strong>. The assembly of a translocator with these accessory components is called the <strong>translocon</strong>.</li>
+</ul>
+</blockquote>
+<h4 id="Structurally-similar-translocators"><a href="#Structurally-similar-translocators" class="headerlink" title="Structurally similar translocators"></a>Structurally similar translocators</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317144423334.png" alt="image-20200317144423334"></p>
+<p><u>Translocation does not always require ongoing protein elongation.</u></p>
+<blockquote>
+<p>In <strong>bacteria</strong>, a translocation motor protein, <strong>the SecA ATPase</strong>, attaches to the cytosolic side of the translocator, where it undergoes cyclic conformational changes driven by ATP hydrolysis</p>
+<ul>
+<li>Each time an ATP is hydrolyzed, a portion of <strong>the SecA protein</strong> inserts into the pore of the translocator, pushing a short segment of the passenger protein with it</li>
+<li>As a result of this <strong>ratchet（(防倒转的)棘齿）</strong> mechanism, the <strong>SecA ATPase</strong> progressively pushes the polypeptide chain of the transported protein across the membrane.</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Eukaryotic cells use a different set of accessory proteins that associate with the  <strong>Sec61 complex</strong>.</p>
+<ul>
+<li>These proteins span the ER membrane and use a small domain on the lumenal side of the ER membrane to deposit an <strong>hsp70-like chaperone protein</strong>  (called <strong>BiP</strong>, for binding protein) onto the polypeptide chain as it emerges from the pore into the ER lumen</li>
+<li><u>ATP-dependent cycles of <strong>BiP</strong> binding and release drive unidirectional translocation, as described earlier for the mitochondrial <strong>hsp70</strong></u>  proteins that pull proteins across mitochondrial membranes.</li>
+</ul>
+<p>Proteins that are transported into the ER by a post-translational mechanism are first released into the cytosol, where they bind to chaperone proteins to prevent folding, as discussed earlier for proteins destined for mitochondria and chloroplasts</p>
+</blockquote>
+<h4 id="Transport-into-the-ER-co-and-post—translational-translocation"><a href="#Transport-into-the-ER-co-and-post—translational-translocation" class="headerlink" title="Transport into the ER: co- and post—translational translocation"></a>Transport into the ER: co- and post—translational translocation</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317144625883.png" alt="image-20200317144625883" style="zoom: 67%;" />
+
+<blockquote>
+<p>Some completely synthesized proteins, however, are imported into the ER, demonstrating that translocation does not always require ongoing translation</p>
+</blockquote>
+<p>In contrast to the post-translational transport into the nucleus, mitochondria, chloroplasts and peroxisomes.</p>
+<p>Co-translational translocation of almost all ER proteins (not all, <strong>tail-anchored proteins</strong> use the post-translational mechanism)</p>
+<h4 id="Double-Check-for-The-Protein-import-into-ER"><a href="#Double-Check-for-The-Protein-import-into-ER" class="headerlink" title="Double Check for The Protein import into ER"></a>Double Check for The Protein import into ER</h4><blockquote>
+<p><u>An ER signal sequence is therefore recognized twice</u>: </p>
+<ul>
+<li>first by an <strong>SRP</strong> in the cytosol and then by a <strong>binding site in the pore of the protein translocator</strong>, where it serves as a <strong>start-transfer signal (or start-transfer peptide)</strong> that opens the pore (for example, see Figure 12–35 for how this works for a soluble protein)</li>
+</ul>
+<p> Dual recognition may help ensure that only appropriate proteins enter the lumen of the ER.</p>
+<p>When the <strong>nascent（初期的；开始存在的） polypeptide  chain</strong> grew long enough, the ER <strong>signal peptidase</strong> cleaved off the signal sequence  and released it from the pore into the membrane, where it was <u>rapidly degraded</u>  to amino acids by other proteases in the ER membrane</p>
+</blockquote>
+<p>Double-check for the proteins to be transported by signal sequence</p>
+<ol>
+<li>binding to SRP</li>
+<li>binding to translocator</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317144749698.png" alt="image-20200317144749698" style="zoom: 67%;" />
+
+<h3 id="3-Different-Kinds-of-Proteins-import-into-ER"><a href="#3-Different-Kinds-of-Proteins-import-into-ER" class="headerlink" title="3. Different Kinds of Proteins import into ER"></a>3. Different Kinds of Proteins import into ER</h3><p>Translocation of proteins into ER do differ, which is dependent on their topology</p>
+<p>Proteins differ:</p>
+<ul>
+<li>Water-soluble proteins ：<ol>
+<li><strong>ER lumen</strong> resident protein</li>
+<li>proteins to be transported <strong>Golgi</strong>, <strong>endosome</strong>, and <strong>lysosome lumen</strong></li>
+<li>proteins <u>to be secreted</u></li>
+</ol>
+</li>
+</ul>
+<p><u>The way how a protein is translocated into the endoplasmic reticulum (ER) depends on the topology of the respective proteins</u></p>
+<h4 id="Single-pass-transmembrane-protein-types"><a href="#Single-pass-transmembrane-protein-types" class="headerlink" title="Single-pass transmembrane protein types"></a>Single-pass transmembrane protein types</h4><ol>
+<li>Type I transmembrane proteins: N-terminus in the ER lumen, C-terminus in the cytosol.</li>
+<li>Type II transmembrane proteins: C-terminus in the ER lumen, N-terminus in the cytosol.</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200703172307360.png" alt="image-20200703172307360"></p>
+<h5 id="1-Translocation-of-water-soluble-proteins-to-the-ER-lumen"><a href="#1-Translocation-of-water-soluble-proteins-to-the-ER-lumen" class="headerlink" title="(1) Translocation of water-soluble proteins to the ER lumen"></a>(1) Translocation of water-soluble proteins to the ER lumen</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317145400585.png" alt="image-20200317145400585" style="zoom:67%;" />
+
+<p>The N-terminal signal sequence <strong>(<u>signal peptide</u></strong>) acts as <strong>start-transfer sequence</strong>, it is “opening the pore”</p>
+<p>This signal peptide left in the ER membrane cleaved off by the enzyme <strong><u>signal peptidase</u></strong> immediately after translocation</p>
+<h5 id="2-Single-pass-integral-membrane-proteins-contain-stop-transfer-sequence"><a href="#2-Single-pass-integral-membrane-proteins-contain-stop-transfer-sequence" class="headerlink" title="(2) Single-pass integral membrane proteins contain stop transfer sequence"></a>(2) Single-pass integral membrane proteins contain stop transfer sequence</h5><blockquote>
+<p>In Single-Pass Transmembrane Proteins, a Single Internal ER Signal Sequence Remains in the Lipid Bilayer as a Membrane-spanning α Helix</p>
+<p>The ER signal sequence in the growing polypeptide chain is thought to <u>trigger the opening of the pore</u> in the <strong>Sec61 protein</strong> translocator: after <u>the signal sequence is released from the SRP</u> and the <u>growing chain has reached a sufficient length</u>, the signal sequence binds to a specific site inside the pore itself, thereby opening the pore</p>
+</blockquote>
+<p>Insertion via N-terminal <strong>start-transfer</strong> signal and a <strong>stop-transfer</strong> signal</p>
+<blockquote>
+<p>In the simplest case, an N-terminal signal sequence initiates translocation, just as for a soluble protein, but an additional hydrophobic segment in the polypeptide chain stops the transfer process before the entire polypeptide chain is translocated. This <strong>stop-transfer signal</strong> anchors the protein in the membrane after <u>the ER signal sequence (the start-transfer signal) has been cleaved off</u> and released from the translocator</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317145549365.png" alt="image-20200317145549365" style="zoom:80%;" />
+
+<p>Prerequisites for the insertion:</p>
+<ol>
+<li>Recognition of a N-terminal signal peptide for the ER by the SRP: <u>start-transfer signal</u></li>
+<li>Recognition of the Internal <u>hydrophobic peptide</u> the translocator: <u>stop-transfer signal</u></li>
+<li>The start-transfer signal is cleaved off and the hydrophobic “stop-transfer” signal anchors the protein.</li>
+</ol>
+<h6 id="Single-pass-integral-membrane-proteins-have-different-topology"><a href="#Single-pass-integral-membrane-proteins-have-different-topology" class="headerlink" title="Single-pass integral membrane proteins have different topology"></a>Single-pass integral membrane proteins have different topology</h6><blockquote>
+<p>In the other two cases, <u>the signal sequence is internal</u>, rather than at the N-terminal end of the protein. As for an N-terminal ER signal sequence, the SRP binds to an internal signal sequence by recognizing its hydrophobic α-helical features.</p>
+<p>After release from the translocator, the internal start-transfer sequence remains in the lipid bilayer as a single membrane-spanning <strong>α helix</strong></p>
+<p>The <strong>orientation of the start-transfer sequence</strong> depends on the distribution of nearby charged  amino acids,</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317145833614.png" alt="image-20200317145833614"></p>
+<p>Charge of amino acids that flanks the internal start-transfer sequence can change the topology</p>
+<ol>
+<li>Type II configuration (C-terminus in the ER lumen, N-terminus in the cytosol) (<u>consider the topology</u>)<ul>
+<li>Positively charged amino acid <strong>before</strong> the internal start-transfer sequence!</li>
+</ul>
+</li>
+</ol>
+<p><u><strong>Configuration depends on the charge of flanking amino acids.</strong></u></p>
+<ol start="2">
+<li>Type I configuration (N-terminus in the ER lumen, C-terminus in the cytosol) (<u>consider the topology</u>)<ul>
+<li>Positively charged amino acids <strong>after</strong> the internal start-transfer sequence!</li>
+</ul>
+</li>
+</ol>
+<h4 id="Multi-pass-transmembrane-proteins"><a href="#Multi-pass-transmembrane-proteins" class="headerlink" title="Multi-pass transmembrane proteins"></a>Multi-pass transmembrane proteins</h4><blockquote>
+<p>Combinations of Start-Transfer and Stop-Transfer Signals Determine the Topology of Multipass Transmembrane Proteins</p>
+<p>In multipass transmembrane proteins, the polypeptide chain passes back and forth repeatedly across the lipid bilayer as <strong>hydrophobic α helices</strong></p>
+<ul>
+<li>It is thought that an internal signal sequence serves as a start-transfer signal in these proteins to <u>initiate translocation</u>, which continues until the translocator encounters a stop-transfer sequence</li>
+</ul>
+</blockquote>
+<h5 id="1-Insertion-of-a-double-pass-transmembrane-protein-into-the-ER"><a href="#1-Insertion-of-a-double-pass-transmembrane-protein-into-the-ER" class="headerlink" title="(1) Insertion of a double-pass transmembrane protein into the ER"></a>(1) Insertion of a double-pass transmembrane protein into the ER</h5><p>Two signals: an internal start-transfer signal and a stop-transfer signal</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317150210512.png" alt="image-20200317150210512" style="zoom: 67%;" />
+
+<h5 id="2-Multiple-pairs-of-“start-transfer”-and-“stop-transfer”-signals"><a href="#2-Multiple-pairs-of-“start-transfer”-and-“stop-transfer”-signals" class="headerlink" title="(2) Multiple pairs of “start-transfer” and “stop-transfer” signals"></a>(2) Multiple pairs of “start-transfer” and “stop-transfer” signals</h5><blockquote>
+<p>In more complex multipass proteins, in which <u>many hydrophobic α helices span the bilayer,</u> a second start-transfer sequence reinitiates  translocation further down the polypeptide chain until the next stop-transfer sequence causes polypeptide release, and so on for subsequent start-transfer and stop-transfer sequences</p>
+<p><u>Whether a given hydrophobic signal sequence functions as a start-transfer or stop-transfer sequence must depend on its <strong>location in a polypeptide chain</strong>,</u></p>
+<ul>
+<li>Thus, the distinction between start-transfer and stop-transfer sequences results <u>mostly from their <strong>relative order</strong> in the growing  polypeptide chain</u></li>
+<li>It seems that the SRP begins scanning an unfolded polypeptide chain for hydrophobic segments at its N-terminus and proceeds toward the C-terminus, in the direction that the protein is synthesized.</li>
+<li>A similar scanning process continues until all of the hydrophobic regions in the protein have been inserted into the membrane as transmembrane α helices</li>
+</ul>
+<p>The way in which a newly synthesized protein is inserted into the ER membrane <u>determines the orientation</u> of the protein in all of the other membranes as well.</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317150238121.png" alt="image-20200317150238121" style="zoom:67%;" />
+
+<h4 id="Tail-anchored-proteins"><a href="#Tail-anchored-proteins" class="headerlink" title="Tail-anchored proteins"></a>Tail-anchored proteins</h4><blockquote>
+<p>ER Tail-anchored Proteins Are Integrated into the ER Membrane by a Special Mechanism</p>
+<ul>
+<li>Many important membrane proteins are anchored in the membrane by a <strong>C-terminal transmembrane, hydrophobic α helix</strong></li>
+</ul>
+<p>These <strong>ER tail-anchored proteins</strong> include a large number of SNARE protein subunits that guide vesicular traffic</p>
+</blockquote>
+<p>ER tail-anchored protein is integrated by a <strong>special mechanism</strong></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317150328784.png" alt="image-20200317150328784" style="zoom: 67%;" />
+
+<blockquote>
+<p>When such a tail-anchored protein inserts into the ER membrane from the cytosol, only a few amino acids that follow the transmembrane α helix on its C-terminal side are translocated into the ER lumen, <u>while most of the protein remains in the cytosol</u></p>
+<p>Because of the unique position of the transmembrane α helix in the protein sequence, translation terminates while the C-terminal amino acids that will form the transmembrane α helix have <u>not yet emerged from the ribosome exit tunnel</u></p>
+<p>Recognition by SRP is therefore <strong>not possible.</strong> It was long thought that these proteins are released from <u>the ribosome and the hydrophobic C-terminal tail spontaneously partitions into the ER membrane.</u></p>
+<p>It is now clear that a specialized targeting machinery is involved that is fueled by ATP hydrolysis</p>
+<ul>
+<li>Although the components and details differ, this post-translational targeting mechanism is conceptually similar to SRP-dependent protein targeting</li>
+</ul>
+</blockquote>
+<h2 id="Protein-folding-and-“quality-control”-in-the-ER"><a href="#Protein-folding-and-“quality-control”-in-the-ER" class="headerlink" title="Protein folding and “quality control” in the ER"></a>Protein folding and “quality control” in the ER</h2><p>Features</p>
+<ol>
+<li><p>Translocated polypeptide chains are folded and assembled in the ER lumen.</p>
+</li>
+<li><p>Most proteins in rough ER are glycosylated via the addition of a common N-linked oligosaccharide. (<strong>∼</strong> 50% of the soluble and membrane-bound proteins are glycosylated)</p>
+<p>For details, see lecture 12</p>
+</li>
+</ol>
+<ul>
+<li>Protein folding is influenced by chaperons</li>
+<li>Quality control is associated with Glycosylation</li>
+</ul>
+<blockquote>
+<p>Many of the proteins in the lumen of the ER are in transit, <em>en route (在途中)</em> to other destinations; others, however, normally reside there and are present at high concentrations.</p>
+<p>These <strong>ER resident proteins</strong> contain an <strong>ER retention signal</strong> of <u>four amino acids</u> at their C-terminus that is responsible for retaining the protein in the ER</p>
+<ul>
+<li>Some of these proteins function as <strong>catalysts</strong> that help the many proteins that are translocated into the ER lumen to fold and assemble correctly.</li>
+</ul>
+<p>One important ER resident protein is <strong>protein disulfide isomerase (PDI)</strong>, which catalyzes the oxidation of free <strong>sulfhydryl (SH) groups</strong> on <strong>cysteines</strong> to form <strong>disulfide (S–S) bonds</strong></p>
+<ul>
+<li>Almost all <strong>cysteines</strong> in protein domains <u>exposed to either the extracellular space or the lumen of organelles</u> in the secretory and endocytic pathways are <strong>disulfide-bonded</strong></li>
+<li>By contrast, <strong>disulfide bond</strong>s form only <u>very rarely in domains exposed to the cytosol</u>, because of the <strong>reducing environment</strong> there</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Another ER resident protein is the chaperone protein <strong>BiP</strong>. We have already discussed how <strong>BiP</strong> <u>pulls proteins post-translationally into</u> the ER through the <strong>Sec61 ER translocator</strong>. </p>
+<ul>
+<li>Like other chaperones, <u><strong>BiP</strong> recognizes <strong>incorrectly folded proteins</strong></u>, as well as <strong>protein subunits that have not yet assembled</strong> into their final oligomeric complexes</li>
+<li>The <strong>bound BiP</strong> both <u>prevents the protein from aggregating</u> and helps <u>keep it in the ER</u> (and <u>thus out of the Golgi apparatus and later  parts of the secretory pathway).</u></li>
+<li>Like some other members of the <strong>hsp70</strong> family of chaperone proteins, which bind unfolded proteins and facilitate their import into  mitochondria and chloroplasts, <strong>BiP</strong> hydrolyzes <strong>ATP</strong> to shuttle between <strong>high- and low-affinity binding states</strong>, which allow it to hold on to and let go of its substrate proteins in a dynamic cycle</li>
+</ul>
+</blockquote>
+<h1 id="二、Glycosylation-sweet-life"><a href="#二、Glycosylation-sweet-life" class="headerlink" title="二、Glycosylation: sweet life"></a>二、Glycosylation: sweet life</h1><p>Glycosylation is add sugar molecule to proteins.</p>
+<blockquote>
+<p>Most Proteins Synthesized in the Rough ER Are Glycosylated by the Addition of a Common <strong>N-Linked Oligosaccharide</strong></p>
+<ul>
+<li>The covalent addition of <strong>oligosaccharides</strong> to proteins is one of the major biosynthetic functions of the ER</li>
+</ul>
+</blockquote>
+<h2 id="Function-of-glycosylation"><a href="#Function-of-glycosylation" class="headerlink" title="Function of glycosylation"></a>Function of glycosylation</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317151315130.png" alt="image-20200317151315130" style="zoom: 67%;" />
+
+<ol>
+<li>Folding</li>
+<li>Transport (e. g. sorting, M6P-receptor)</li>
+<li>Stability (quality control)</li>
+<li>Recognition (e.g. lectin)</li>
+<li>Regulatory roles (e.g. Notch protein)</li>
+</ol>
+<h2 id="Two-types-of-glycosylation"><a href="#Two-types-of-glycosylation" class="headerlink" title="Two types of glycosylation"></a>Two types of glycosylation</h2><blockquote>
+<ol>
+<li><p>During the most common form of protein glycosylation in the ER, a preformed <strong>precursor oligosaccharide</strong> (composed of <strong>N-acetylglucosamine, mannose</strong>,  and <strong>glucose</strong>, and containing a <u>total of 14 sugars</u>) is transferred <em>en bloc</em> (整块) to proteins.</p>
+<ul>
+<li>Because this <u>oligosaccharide is transferred to the side-chain <strong>hemiacetal group</strong> (<strong>NH2</strong>) of an <strong>asparagine</strong></u> in the protein, it is said to be <strong>N-linked or asparagine-linked</strong></li>
+<li>The <strong>N-linked oligosaccharides</strong> are by far <u>the most common</u> oligosaccharides,  being found on <u>90% of all glycoproteins</u></li>
+</ul>
+</li>
+<li><p>Less frequently, oligosaccharides are linked to the <strong>hydroxyl group（羟基,-OH）</strong> on the side chain of a <strong>serine</strong> (S), <strong>threonine</strong> (T), or <strong>hydroxylysine（羟(基)赖氨酸）</strong> amino acid. They are called <strong>O-linked oligosaccharides</strong>. </p>
+<ul>
+<li>A first sugar of these <strong>O-linked oligosaccharides</strong> is added in the ER and the oligosaccharide is then further extended in the Golgi apparatus.（在高尔基体中进一步得到扩展）</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317151450419.png" alt="image-20200317151450419"></p>
+<ol>
+<li><p><strong>N-glycosidic</strong> bonds form via an N-glycosidic linkage is through the amide group of <strong>asparagine</strong> and the hemiacetal group (NH<del>2</del>) of <strong>N-acetylglucosamine</strong> </p>
+</li>
+<li><p><strong>O-glycosidic</strong> bonds form via an O-glycosidic linkage is through the <strong>hydroxyl group</strong> (OH) of <u>serine</u> and the hemiacetal group of <strong>N-acetylglucosamine</strong></p>
+</li>
+</ol>
+<h3 id="1-Two-main-classes-of-N-linked-glycosylation"><a href="#1-Two-main-classes-of-N-linked-glycosylation" class="headerlink" title="1. Two main classes of N-linked glycosylation"></a>1. Two main classes of N-linked glycosylation</h3><ol>
+<li>In the ER</li>
+<li>In the Golgi</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317152927383.png" alt="image-20200317152927383" style="zoom: 67%;" />
+
+<h2 id="Glycosylation-occurs-in-the-ER-and-Golgi"><a href="#Glycosylation-occurs-in-the-ER-and-Golgi" class="headerlink" title="Glycosylation occurs in the ER and Golgi"></a>Glycosylation occurs in the ER and Golgi</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317151912693.png" alt="image-20200317151912693" style="zoom: 67%;" />
+
+<h3 id="1-Protein-glycosylation-in-the-ER"><a href="#1-Protein-glycosylation-in-the-ER" class="headerlink" title="1. Protein glycosylation in the ER"></a>1. Protein glycosylation in the ER</h3><blockquote>
+<p>The precursor oligosaccharide is built up sugar by sugar on the membrane-bound <strong>dolichol lipid</strong>（多元醇脂质） and is then transferred to a protein.</p>
+<p>The sugars are first <u>activated in the <strong>cytosol</strong></u> by the formation of <strong>nucleotide (UDP or GDP)-sugar  intermediates</strong>, <u>which then donate their sugar (directly or indirectly) to the lipid in an orderly sequence</u></p>
+<p>All of the diversity of the N-linked oligosaccharide structures on <strong>mature glycoproteins</strong> results from the <strong>later modification</strong> of the original precursor oligosaccharide.</p>
+<ul>
+<li>While still in the ER, three glucoses (see Figure 12–47) and one mannose are quickly <strong>removed</strong> from the oligosaccharides of most glycoproteins. We shall return  to the importance of <strong>glucose trimming</strong> shortly</li>
+<li>This oligosaccharide“trimming,” or“processing,”（修饰）continues in the Golgi apparatus</li>
+</ul>
+</blockquote>
+<p>Protein glycosylation in the ER: N (asparagine)-linked glycosylation </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317151956742.png" alt="image-20200317151956742" style="zoom: 75%;" />
+
+<ul>
+<li><u>N-linked</u> oligosaccharides takes up 90% of all glyco-proteins.</li>
+</ul>
+<p>The precursor oligosaccharide is attached only to asparagine in the sequence Asn-X-Ser and Asn-X-Thr (where X is any amino acid except <u>proline</u> (For proline has bulk side chain)).</p>
+<p>The other from <u>O-linked</u> in Golgi apparatus (Ser, Thr, hydroxylyserine).</p>
+<h4 id="Oligosaccharides-are-used-as-tags-to-mark-the-state-of-protein-folding-in-the-ER"><a href="#Oligosaccharides-are-used-as-tags-to-mark-the-state-of-protein-folding-in-the-ER" class="headerlink" title="Oligosaccharides are used as tags to mark the state of protein folding in the ER"></a>Oligosaccharides are used as tags to mark the state of protein folding in the ER</h4><blockquote>
+<p>A clue to the role of glycosylation in protein folding came from studies of two ER <strong>chaperone proteins</strong>, which are called <strong>calnexin</strong>（钙结合蛋白） and <strong>calreticulin</strong>（钙网蛋白） because  they <u>require Ca2+ for their activities</u></p>
+<ul>
+<li>These chaperones are carbohydrate-binding proteins, or <strong>lectins</strong>（凝集素）, which bind to <strong>oligosaccharides on incompletely folded proteins</strong> and retain them in the ER</li>
+<li>Like other chaperones, they <u>prevent incompletely folded proteins</u> from <u>irreversibly aggregating</u></li>
+</ul>
+</blockquote>
+<p><strong><u>Quality control of protein folding</u></strong>: calnexin (钙黏连蛋白) in and <strong>glucosyl transferase</strong>（葡萄糖基转移酶） prevent unfolded proteins from leaving the ER </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317152204461.png" alt="image-20200317152204461" style="zoom:50%;" />
+
+<p>Two lectins: <strong>calnexin</strong> (钙联结蛋白) &amp; <strong>calreticulin</strong> (钙网蛋白)</p>
+<ol>
+<li>Ca2+ binding essential for their activities</li>
+<li>recognize sugar group and bind them <u>until unfolded protein is proper folded</u> and exits ER</li>
+</ol>
+<blockquote>
+<p><u>When the <strong>third glucose</strong> has been <strong>removed</strong>, the glycoprotein dissociates from its chaperone and can leave the ER.</u></p>
+<p>How, then, do calnexin and calreticulin distinguish properly folded from incompletely folded proteins? The answer lies in yet another ER enzyme, a <strong>glucosyl transferase</strong> that <u>keeps adding a glucose to those oligosaccharides that have lost their last glucose</u></p>
+</blockquote>
+<p><strong><u>Mannosidase (甘露糖苷酶)</u> triggers degradation pathway for ER proteins</strong></p>
+<p>在一定时间内，不断进行循环，如果蛋白proper folded， 则转运出ER</p>
+<p>若始终未能proper folded，则被mannosidase降解。</p>
+<p>improper folded protein存在的时间越长，与mannosidase相遇的机会越大。</p>
+<blockquote>
+<p>Improperly Folded Proteins Are Exported from the ER and <u>Degraded in the Cytosol</u></p>
+<ul>
+<li>Such proteins are exported from the ER back into the <strong>cytosol</strong>, where they are degraded in <strong>proteasomes</strong></li>
+<li>The <strong>N-linked oligosaccharides</strong> serve as <strong>timers</strong> that measure how long a protein has spent in the ER.</li>
+</ul>
+<p>The slow trimming of a particular mannose on the core oligosaccharide tree by an enzyme (a <strong>mannosidase</strong>) in the ER creates a new oligosaccharide structure that ER-lumenal lectins of the retrotranslocation apparatus recognize.</p>
+<p>Multiple translocator complexes move different proteins from the ER membrane or lumen into the cytosol.</p>
+<ul>
+<li><p>A common feature is that they each contain an <strong>E3 ubiquitin ligase enzyme</strong>, which attaches <strong>polyubiquitin tags</strong> to the unfolded  proteins <u>as they emerge into the cytosol</u>, <u>marking them for destruction.</u></p>
+</li>
+<li><p>Fueled by the energy derived from ATP hydrolysis, a <strong>hexomeric ATPase</strong> of the family of  <strong>AAA-ATPases</strong></p>
+</li>
+</ul>
+<p> <img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200702173523424.png" alt="image-20200702173523424"></p>
+<ul>
+<li>An N-glycanase removes its oligosaccharide chains <em>en bloc</em>（整块）.  <u>Guided by its ubiquitin tag</u>, the deglycosylated polypeptide is rapidly fed into proteasomes, where it is degraded</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Misfolded Proteins in the ER Activate an Unfolded Protein Response</p>
+<ul>
+<li>An accumulation of misfolded proteins in the cytosol, for example, triggers a <strong>heat-shock response</strong>, which <u>stimulates the transcription of genes</u> encoding <strong>cytosolic chaperones</strong> that help to refold the proteins</li>
+<li>Similarly, an accumulation of <strong>misfolded proteins</strong> in the ER triggers an <strong>unfolded protein response</strong>, which includes an <u>increased transcription of genes encoding proteins</u> involved in retrotranslocation and protein degradation in the cytosol, ER chaperones, and many other proteins that help to increase the protein-folding capacity of the ER.</li>
+</ul>
+</blockquote>
+<h4 id="Pathways-that-execute-the-unfolded-protein-response"><a href="#Pathways-that-execute-the-unfolded-protein-response" class="headerlink" title="Pathways that execute the unfolded protein response"></a>Pathways that execute the unfolded protein response</h4><blockquote>
+<p> There are three parallel pathways that execute the unfolded protein response</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200702174139779.png" alt="image-20200702174139779" style="zoom: 67%;" />
+
+<ol>
+<li><p><strong>IRE1</strong>: The first pathway, which was initially discovered in yeast cells, is particularly remarkable. Misfolded proteins in the ER activate a <strong>transmembrane protein kinase</strong> in the  ER, called <strong>IRE1</strong>, which <u>causes the kinase to oligomerize and phosphorylate itself.</u></p>
+<p>The oligomerization and autophosphorylation of <strong>IRE1</strong> activates an <strong>endoribonuclease</strong>（核糖核酸内切酶） domain in the cytosolic portion of the same molecule, which cleaves a specific cytosolic mRNA molecule at two positions, <u>excising an intron</u>. This <strong>regulates mRNA splicing</strong> and finally causes an increase expression of protein chaperon.</p>
+</li>
+<li><p><strong>PERK</strong>: Misfolded proteins also activate a second <strong>transmembrane kinase</strong> in the ER,  <strong>PERK</strong>, which <strong>inhibits a translation initiation</strong> factor by phosphorylating it, thereby  <u>reducing the production of new proteins throughout the cell.</u></p>
+<p>One consequence of the reduction in protein synthesis is to reduce the flux of proteins into the ER,  thereby <u>reducing the load of proteins that need to be folded there.</u></p>
+</li>
+<li><p><strong>ATF6</strong>: Finally, a third <strong>transcription regulator,</strong> <strong>ATF6</strong>, is initially synthesized as a transmembrane ER protein. Because it is embedded in the ER membrane, it cannot activate the transcription of genes in the nucleus.</p>
+<p>When misfolded proteins accumulate in the ER, however, the <strong>ATF6</strong> protein is <strong>transported to the Golgi apparatus</strong>, where it encounters <strong>proteases</strong> that <u>cleave off its cytosolic domain</u>, which can now <strong>migrate to the nucleus</strong> and help <u>activate the transcription of genes</u> encoding <strong>proteins involved in the unfolded protein response.</strong></p>
+</li>
+</ol>
+</blockquote>
+<h2 id="The-Golgi-apparatus"><a href="#The-Golgi-apparatus" class="headerlink" title="The Golgi apparatus"></a>The Golgi apparatus</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317153025544.png" alt="image-20200317153025544" style="zoom:50%;" />
+
+<h3 id="1-Ordered-series-of-Golgi-apparatus"><a href="#1-Ordered-series-of-Golgi-apparatus" class="headerlink" title="1. Ordered series of Golgi apparatus"></a>1. Ordered series of Golgi apparatus</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317153057371.png" alt="image-20200317153057371"></p>
+<h3 id="2-Functional-compartmentation-of-Golgi-apparatus"><a href="#2-Functional-compartmentation-of-Golgi-apparatus" class="headerlink" title="2. Functional compartmentation of Golgi apparatus"></a>2. Functional compartmentation of Golgi apparatus</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317153118791.png" alt="image-20200317153118791" style="zoom:80%;" />
+
+<h3 id="3-Dolichol-长醇"><a href="#3-Dolichol-长醇" class="headerlink" title="3. Dolichol 长醇"></a>3. Dolichol 长醇</h3><p>Dolichol: lipid molecules anchor sugar molecules to the phospholipid bilayer. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317153153978.png" alt="image-20200317153153978"></p>
+<h2 id="Protein-glycosylation"><a href="#Protein-glycosylation" class="headerlink" title="Protein glycosylation"></a>Protein glycosylation</h2><h3 id="1-Assembly-of-the-precursor-oligosaccharide"><a href="#1-Assembly-of-the-precursor-oligosaccharide" class="headerlink" title="1. Assembly of the precursor oligosaccharide"></a>1. Assembly of the precursor oligosaccharide</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317153312951.png" alt="image-20200317153312951"></p>
+<h4 id="The-first-step-Synthesis-of-oligosaccharide"><a href="#The-first-step-Synthesis-of-oligosaccharide" class="headerlink" title="The first step: Synthesis of oligosaccharide"></a>The first step: Synthesis of oligosaccharide</h4><ol>
+<li>Assembly takes place on the carrier lipid dolichol, anchored in the ER membrane.</li>
+<li>A <strong>pyrophosphate bridge</strong> (焦磷酸盐桥) joins the 1st sugar to the dolichol-GDP.</li>
+<li>Sugars are added singly (逐一地) and sequentially.</li>
+<li>After the two N-acetylglucos-amines are added, the assembly flips from the cytosolic side to the ER lumen.</li>
+<li>Nine mannose and three glucose molecules are added, totaling 14 sugars.</li>
+<li>The assembly of sugar molecules <u>starts in the cytosol and is finalized in the ER</u>!</li>
+</ol>
+<h4 id="Second-step-attachment-to-protein"><a href="#Second-step-attachment-to-protein" class="headerlink" title="Second step, attachment to protein:"></a>Second step, attachment to protein:</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317153445068.png" alt="image-20200317153445068" style="zoom:80%;" />
+
+<p>Now in the second step, attachment to protein:</p>
+<ol>
+<li>One-step transfer, catalyzed by <strong>oligosaccharyl transferase</strong> (寡糖基转移酶), which is bound to the ER membrane <u>next to translocator.</u></li>
+<li><strong>Covalently attached</strong> to certain Asn (Asparagine) in the polypeptide chain (said to be “N-linked” glycosylation).</li>
+<li>Attaches to NH2 side chain of Asn but only in the context:<ul>
+<li>Asn-x-Ser or Asn-x-Thr (Threonine)</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-Oligosaccharide-transfer-catalyzed-by-oligosaccharyl-transferase"><a href="#2-Oligosaccharide-transfer-catalyzed-by-oligosaccharyl-transferase" class="headerlink" title="2. Oligosaccharide transfer catalyzed by oligosaccharyl transferase"></a>2. Oligosaccharide transfer catalyzed by oligosaccharyl transferase</h3><p>It is catalyzed by oligosaccharyl transferase, whose active sites are exposed in the ER lumen only.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317153634743.png" alt="image-20200317153634743" style="zoom: 67%;" />
+
+<h3 id="3-Modification-of-the-oligosaccharide-by-removal-of-sugars"><a href="#3-Modification-of-the-oligosaccharide-by-removal-of-sugars" class="headerlink" title="3. Modification of the oligosaccharide by removal of sugars"></a>3. Modification of the oligosaccharide by removal of sugars</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317153726127.png" alt="image-20200317153726127" style="zoom:67%;" />
+
+<p>Finally modification of oligosaccharide</p>
+<ul>
+<li>Three glucoses and one mannose are removed sequentially in the ER.</li>
+</ul>
+<h3 id="4-Carbohydrate-side-chains-sequentially-modified-by-Golgi-enzymes"><a href="#4-Carbohydrate-side-chains-sequentially-modified-by-Golgi-enzymes" class="headerlink" title="4. Carbohydrate side chains sequentially modified by Golgi enzymes"></a>4. Carbohydrate side chains sequentially modified by Golgi enzymes</h3><p>Golgi enzymes modify N-linked glycosylation of proteins.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317153956222.png" alt="image-20200317153956222"></p>
+<p><strong>Golgi enzymes</strong> catalyze O-linked glycosylation of proteins</p>
+<ul>
+<li><u>O-linked glycosylation only happens in Golgi</u></li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317154034302.png" alt="image-20200317154034302"></p>
+<h2 id="Oligosaccharide-processing-in-the-ER-and-the-Golgi"><a href="#Oligosaccharide-processing-in-the-ER-and-the-Golgi" class="headerlink" title="Oligosaccharide processing in the ER and the Golgi"></a>Oligosaccharide processing in the ER and the Golgi</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317154214005.png" alt="image-20200317154214005"></p>
+<h2 id="Summary-glycosylation"><a href="#Summary-glycosylation" class="headerlink" title="Summary: glycosylation"></a>Summary: glycosylation</h2><p>Glycosylation is the addition of sugars to proteins and occurs in the ER and Golgi.</p>
+<ul>
+<li>ER:<ul>
+<li><strong>Synthesis</strong> of the core portion of an N-linked oligosaccharide</li>
+</ul>
+</li>
+<li>Golgi:<ul>
+<li><strong>Modification</strong> of N-linked oligosaccharides</li>
+<li><strong>Synthesis</strong> of O-linked oligosaccharides</li>
+<li><strong>Phosphorylation</strong> of mannose (on <strong>N-linked oligosaccharide</strong>) on proteins targeted for lysosomes (see lecture 11)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Attachment-of-the-covalently-linked-GPI-anchor"><a href="#Attachment-of-the-covalently-linked-GPI-anchor" class="headerlink" title="Attachment of the covalently linked GPI anchor"></a>Attachment of the covalently linked GPI anchor</h2><blockquote>
+<p>A related process is catalyzed by ER enzymes that covalently attach a <strong>glycosylphosphatidylinositol (GPI) anchor</strong> to the <u>C-terminus of some membrane proteins</u> destined for the plasma membrane.</p>
+<p>This linkage forms in the lumen of the ER, where, at the same time, <u>the transmembrane segment of the protein is cleaved off</u> </p>
+<p>A  large number of plasma membrane proteins are <u>modified in this way</u>. Since they are attached to the <u>exterior of the plasma membrane</u> only by their GPI anchors</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317154408838.png" alt="image-20200317154408838"></p>
+<h2 id="Sorting-proteins-in-the-Golgi"><a href="#Sorting-proteins-in-the-Golgi" class="headerlink" title="Sorting proteins in the Golgi"></a>Sorting proteins in the Golgi</h2><blockquote>
+<p>The Golgi apparatus receives lipids and proteins from the ER and dispatches them to various destinations, usually <strong>covalently modifying</strong> them <em>en route.</em></p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317154444421.png" alt="image-20200317154444421" style="zoom:80%;" />
+
+<h2 id="The-ER-is-the-main-source-for-the-lipids-of-the-cell"><a href="#The-ER-is-the-main-source-for-the-lipids-of-the-cell" class="headerlink" title="The ER is the main source for the lipids of the cell"></a>The ER is the main source for the lipids of the cell</h2><p>Nearly all major lipids are synthesized in ER these include: </p>
+<ul>
+<li>Phospholipids</li>
+<li>Cholesterol</li>
+<li>Ceramide (precursor for Sphingomyelin)</li>
+</ul>
+<p>Synthesis is on the <u>cytosolic side of ER</u>, where key enzymes are located.</p>
+<p>Equal distribution for these lipids between both leaflets of ER after synthesis due to <strong>scramblase (混杂酶)</strong>, which catalyzes rapid <strong><u>flip-flop</u></strong>.</p>
+<h3 id="1-The-ER-assembles-most-lipid-bilayers"><a href="#1-The-ER-assembles-most-lipid-bilayers" class="headerlink" title="1. The ER assembles most lipid bilayers"></a>1. The ER assembles most lipid bilayers</h3><blockquote>
+<p>The ER membrane is the site of synthesis of nearly all of the cell’s major classes of lipids, including both <strong>phospholipids</strong> and <strong>cholesterol</strong>, required for the production of new cell membranes.</p>
+<p>The major phospholipid made is <strong>phosphatidylcholine</strong> （PC）, which can be formed in three steps from <strong>choline</strong>, two <strong>fatty acids</strong>, and <strong>glycerol phosphate</strong></p>
+<ul>
+<li>phospholipid synthesis occurs exclusively in the <strong>cytosolic leaflet</strong> of the ER membrane</li>
+</ul>
+</blockquote>
+<p>The synthesis of phosphatidylcholine (PC) </p>
+<p>Similar mechanism for other major phospholipids</p>
+<p>Equal distribution for these lipids between both leaflets of ER after synthesis due to scramblase, which catalyzes rapid <strong>flip-flop</strong></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317154602914.png" alt="image-20200317154602914"></p>
+<blockquote>
+<ol>
+<li><p>After arrival in the ER membrane and activation with CoA,  acyl transferases successively add two <strong>fatty acids</strong> to <strong>glycerol phosphate</strong> （磷酸甘油）to produce  <strong>phosphatidic acid</strong>（磷脂酸）. <strong>Phosphatidic acid</strong> is sufficiently <u>water-insoluble</u> to remain in the lipid bilayer; it cannot be extracted from the bilayer by the fatty acid binding proteins</p>
+<p>The later steps determine the <strong>head group</strong> of a newly formed lipid molecule and therefore the chemical nature of the bilayer, but they <u>do not result in net membrane growth.</u></p>
+</li>
+<li><p>The two other major membrane phospholipids—<strong>phosphatidylethanolamine</strong> and  <strong>phosphatidylserine</strong> (see Figure 10–3)—as well as the minor phospholipid <strong>phosphatidylinositol</strong> (PI), are all synthesized in this way.</p>
+</li>
+</ol>
+</blockquote>
+<h3 id="2-Symmetry-and-asymmetry-of-lipids-in-ER-and-plasma-membrane"><a href="#2-Symmetry-and-asymmetry-of-lipids-in-ER-and-plasma-membrane" class="headerlink" title="2. Symmetry and asymmetry of lipids in ER and plasma membrane"></a>2. Symmetry and asymmetry of lipids in ER and plasma membrane</h3><blockquote>
+<p>In the ER, however, phospholipids equilibrate across the membrane within minutes, which is almost 100,000 times faster than can be accounted for by spontaneous“flip-flop.”</p>
+<p>This rapid trans-bilayer movement is mediated by a poorly characterized <strong>phospholipid translocator</strong> called a <strong>scramblase</strong>, which <u>non-selectively equilibrates phospholipids</u> between the two leaflets of the lipid bilayer</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317154642106.png" alt="image-20200317154642106" style="zoom:80%;" />
+
+<p>Phosphatidylserine (PS) and phosphatidylethanolamine (PE) are specifically “flipped” by an ATP-driven <strong>flippase (翻转酶)</strong></p>
+<blockquote>
+<p>The plasma membrane contains a <u>different type of phospholipid translocator</u> that belongs to the family of <strong>P-type pumps</strong></p>
+<p>These <strong>flippases</strong> specifically recognize those phospholipids that contain free amino groups in their head groups (phosphatidylserine and phosphatidylethanolamine)  and transfers them from the extracellular to the cytosolic leaflet,  <u>using the energy of ATP hydrolysis</u></p>
+<ul>
+<li>The plasma membrane therefore has a highly asymmetric phospholipid composition, which is actively maintained by the <strong>flippases</strong></li>
+<li>The resulting exposure of <strong>phosphatidylserine</strong> on the surface of apoptotic cells serves as a signal for phagocytic cells to ingest and degrade the dead cell.</li>
+</ul>
+</blockquote>
+<h3 id="3-ER-also-synthesizes-the-sphingolipid-ceramide"><a href="#3-ER-also-synthesizes-the-sphingolipid-ceramide" class="headerlink" title="3. ER also synthesizes the sphingolipid ceramide"></a>3. ER also synthesizes the sphingolipid ceramide</h3><blockquote>
+<p>The ER also produces <strong>cholesterol</strong> and <strong>ceramide</strong></p>
+<ul>
+<li><strong>Ceramide</strong> is made by condensing the amino acid serine with a fatty acid to form the amino alcohol <strong>sphingosine</strong>, a second fatty acid is then covalently added to form ceramide.<ul>
+<li>The <strong>ceramide</strong> is exported to the <strong>Golgi apparatus</strong>, where it serves as a precursor for the synthesis of two types of lipids: <strong>oligosaccharide</strong> chains are added to form <strong>glycosphingolipids</strong>, and phosphocholine head groups are transferred from phosphatidylcholine to other ceramide molecules to form sphingomyelin</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>Features</p>
+<ol>
+<li><p>Ceramide is exported to the Golgi: precursor for the synthesis of</p>
+<ul>
+<li>glycosphingolipids </li>
+<li>sphingomyelin</li>
+</ul>
+</li>
+<li><p>Because they are produced by enzymes that have their <u>active sites exposed to the <strong>Golgi lumen</strong></u>, they are found exclusively in the <strong>non-cytosolic leaflet</strong> of the lipid bilayers</p>
+</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317154827864.png" alt="image-20200317154827864" style="zoom:50%;" />
+
+<h3 id="4-Summary-ER-functions"><a href="#4-Summary-ER-functions" class="headerlink" title="4. Summary: ER functions"></a>4. Summary: ER functions</h3><p>Functions of the Smooth ER</p>
+<ol>
+<li><strong>Steroid hormone</strong> synthesis</li>
+<li><strong>Detoxification</strong> in liver (lipid-soluble toxin)</li>
+<li><u>Release of glucose</u> from liver</li>
+<li>Sequestering Ca2+ ions</li>
+</ol>
+<p>Functions of the Rough ER</p>
+<ol>
+<li>Co-translational <u>import of proteins</u> destined for the ER-Golgi pathway</li>
+<li>Synthesis of membrane lipids and <u>generation of lipid compositional asymmetry</u></li>
+<li>Protein glycosylation: Synthesis of the core portion of an N-linked oligosaccharide</li>
+</ol>
+<blockquote>
+<p>The details of how lipid distribution between different membranes is catalyzed  and regulated are not known. Water-soluble carrier proteins called <strong>phospholipid exchange proteins</strong> (or <strong>phospholipid transfer proteins</strong>) are thought to transfer individual phospholipid molecules between membranes, functioning much like fatty acid binding proteins that shepherd fatty acids through the cytosol</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317155006573.png" alt="image-20200317155006573"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200317155014425.png" alt="image-20200317155014425"></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>L10 Intracellular transport II - ER and Golgi</p><p><a href="https://zhenyumi.github.io/posts/fe4294e6/">https://zhenyumi.github.io/posts/fe4294e6/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-07-03</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-07-02</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Cell-Biology/">Cell Biology</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/f6992a6c/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">L11 Membrane trafficking</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/12aa050d/"><span class="level-item">L9 Intracellular transport I - Nucleus, Mitochondria， Chloroplast, Peroxisome</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">196</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">28</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Undefined-notes/"><span class="level-start"><span class="level-item">Undefined notes</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-19T06:36:03.000Z">2022-09-19</time></p><p class="title"><a href="/posts/f5b7721a/">Embedding and Frozen Sectioning</a></p><p class="categories"><a href="/categories/Undefined-notes/">Undefined notes</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

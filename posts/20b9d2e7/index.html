@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>L04 Nucleic Acid - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+1000 (澳大利亚东部标准时间)"><meta property="og:type" content="blog"><meta property="og:title" content="L04 Nucleic Acid"><meta property="og:url" content="https://zhenyumi.github.io/posts/20b9d2e7/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+1000 (澳大利亚东部标准时间)"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><meta property="article:published_time" content="2020-07-25T15:45:00.000Z"><meta property="article:modified_time" content="2020-07-25T15:45:00.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="Biochemistry I (Macromolecules)"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/20b9d2e7/"},"headline":"L04 Nucleic Acid","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"],"datePublished":"2020-07-25T15:45:00.000Z","dateModified":"2020-07-25T15:45:00.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"Sat Jul 25 2020 23:45:00 GMT+1000 (澳大利亚东部标准时间)"}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/20b9d2e7/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png" alt="L04 Nucleic Acid"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-25T15:45:00.000Z" title="2020/7/26 01:45:00">2020-07-25</time>发表</span><span class="level-item"><time dateTime="2020-07-25T15:45:00.000Z" title="2020/7/26 01:45:00">2020-07-25</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/Academic-Notebook/">Academic Notebook</a><span> / </span><a class="link-muted" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/">Biochemistry I (Macromolecules)</a></span><span class="level-item">20 分钟读完 (大约2979个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">L04 Nucleic Acid</h1><div class="content"><h1 id="一、The-Nature-of-Nucleic-Acids"><a href="#一、The-Nature-of-Nucleic-Acids" class="headerlink" title="一、The Nature of Nucleic Acids"></a>一、The Nature of Nucleic Acids</h1><p>The function of nucleotides:</p>
+<ol>
+<li>Genetic Material: DNA replication; Transcription; Translation</li>
+<li>Biological catalysts: enzymatic activity; Ribozyme</li>
+</ol>
+<h2 id="Structure-of-the-nucleotides"><a href="#Structure-of-the-nucleotides" class="headerlink" title="Structure of the nucleotides"></a>Structure of the nucleotides</h2><h3 id="1-Nucleic-acids-are-polymers"><a href="#1-Nucleic-acids-are-polymers" class="headerlink" title="1. Nucleic acids are polymers"></a>1. Nucleic acids are polymers</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568558457798.png" alt="1568558457798" style="zoom: 33%;" />
+
+<p>Miescher discovered DNA, deoxyribonucleic acid, and the other major form is RNA, ribonucleic acid.</p>
+<h3 id="2-Basic-structures-of-nucleotides"><a href="#2-Basic-structures-of-nucleotides" class="headerlink" title="2.  Basic structures of nucleotides"></a>2.  Basic structures of nucleotides</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102105656631.png" alt="image-20191102105656631" style="zoom:50%;" />
+
+<h4 id="Sugar-Pentose"><a href="#Sugar-Pentose" class="headerlink" title="Sugar: Pentose"></a><em>Sugar: Pentose</em></h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102105739447.png" alt="image-20191102105739447" style="zoom:50%;" />
+
+<h4 id="Bases-Pyrimidines-and-Purines"><a href="#Bases-Pyrimidines-and-Purines" class="headerlink" title="Bases: Pyrimidines and Purines"></a><em>Bases: Pyrimidines and Purines</em></h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568558769830.png" alt="1568558769830" style="zoom: 33%;" />
+
+<p>碱基与五碳糖通过glycosidic bond（糖苷键）相连.</p>
+<p><strong>碱基的$C_1$链接pentose的$C_{5’}$.</strong></p>
+<h4 id="Nucleoside（核苷）-and-Nucleotide（核苷酸）"><a href="#Nucleoside（核苷）-and-Nucleotide（核苷酸）" class="headerlink" title="Nucleoside（核苷） and Nucleotide（核苷酸）"></a>Nucleoside（核苷） and Nucleotide（核苷酸）</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568558832263.png" alt="1568558832263"></p>
+<p>Because all of the nucleic acids may be regarded as polymers of nucleotides, they are often refered to by the generic name <strong>polynucleotides（多核苷酸）</strong>. Small polymers, containing only a few residues, are called <strong>oligonucleotides（寡核苷酸）</strong>.</p>
+<h4 id="Cyclic-nucleotides"><a href="#Cyclic-nucleotides" class="headerlink" title="Cyclic nucleotides"></a><em>Cyclic nucleotides</em></h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102110411301.png" alt="image-20191102110411301" style="zoom:50%;" />
+
+<p>特殊的cyclic结构具有特殊的作用</p>
+<p>如cAMP and cGMP：</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102110825461.png" alt="image-20191102110825461"></p>
+<p><u>Secondary messangers in signal transduction</u></p>
+<h2 id="Properties-of-the-Nucleotides"><a href="#Properties-of-the-Nucleotides" class="headerlink" title="Properties of the Nucleotides"></a>Properties of the Nucleotides</h2><h3 id="1-Nucleotides-are-strong-acids"><a href="#1-Nucleotides-are-strong-acids" class="headerlink" title="1. Nucleotides are strong acids"></a>1. Nucleotides are strong acids</h3><p>Nucleotides are strong acids; the primary ionization of the phosphate occurs with a pKa of approximately 1.0. Both <strong>secondary ionization</strong> of the phosphate and <strong>protonation（质子化） or deprotonation</strong> of the amino groups on the bases within the nucleotides can be observed at pH values <em>close to neutrality</em> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在化学中，质子化是原子、分子或离子获得质子（H）的过程。简单的可以理解为和质子化合， 即结合一个质子，一般都是该物质有孤对电子，所以可以通过配位键结合一个质子。如H2O变成H3O，NH3变成NH4等等。 质子化的逆过程是去质子化。</span><br></pre></td></tr></table></figure>
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568559840428.png" alt="1568559840428" style="zoom: 50%;" />
+
+<h3 id="2-Tautomerization-互变异构化-of-the-bases"><a href="#2-Tautomerization-互变异构化-of-the-bases" class="headerlink" title="2. Tautomerization(互变异构化) of the bases"></a>2. Tautomerization(互变异构化) of the bases</h3><p><u>Tautomeric forms: differing in the location of hydrogen atoms and double bonds</u></p>
+<p>The bases are also capable of conversion between <strong>tautomeric（互变异构的）</strong> forms.</p>
+<p><em>Tautomeric forms</em>, or <em>tautomers</em>,are structural isomers differing only in the location of their hydrogen atoms and double bonds. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102111655525.png" alt="image-20191102111655525" style="zoom: 50%;" />
+
+
+
+<h3 id="3-UV-absorption"><a href="#3-UV-absorption" class="headerlink" title="3. UV absorption"></a>3. UV absorption</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568616479329.png" alt="1568616479329" style="zoom: 67%;" />
+
+<p>因为共轭双键存在于碱基的ring结构中，所以nucleotide具有一定强度的UV absorption.</p>
+<p>This is a quantitative measurement of concentration of necleic  acids </p>
+<p>DNA can be damaged by absorbing UV light :</p>
+<ol>
+<li>Natural or artificial induced mutations</li>
+<li>Skin Cancer</li>
+</ol>
+<h2 id="Formation-of-polynecluotides"><a href="#Formation-of-polynecluotides" class="headerlink" title="Formation of polynecluotides"></a>Formation of polynecluotides</h2><p>Composed of four different nucleotides </p>
+<ul>
+<li><p>A, T, C, G in DNA </p>
+</li>
+<li><p>A, U, C, G in RNA</p>
+</li>
+</ul>
+<p>Nucleotides are linked via phosphodiester bonds</p>
+<h3 id="1-Direction"><a href="#1-Direction" class="headerlink" title="1. Direction"></a>1. Direction</h3><p><strong>Directional linkage</strong> </p>
+<p>5’ end and 3’ end </p>
+<p>5’ $\rarr$ 3’ </p>
+<p>Sugar residues</p>
+<h3 id="2-dehydration-and-hydrolysis"><a href="#2-dehydration-and-hydrolysis" class="headerlink" title="2. dehydration and hydrolysis"></a>2. dehydration and hydrolysis</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102113151997.png" alt="image-20191102113151997" style="zoom: 50%;" />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102113216424.png" alt="image-20191102113216424"></p>
+<p>整个过程的$\Delta G ^{\circ}$为$+25kJ&#x2F;mol$，因此不是thermodynamically favored reaction.</p>
+<h3 id="3-Stability-and-Formation-of-the-Phosphodiester-Linkage"><a href="#3-Stability-and-Formation-of-the-Phosphodiester-Linkage" class="headerlink" title="3. Stability and Formation of the Phosphodiester Linkage"></a>3. Stability and Formation of the Phosphodiester Linkage</h3><h4 id="Metastability（亚稳态）"><a href="#Metastability（亚稳态）" class="headerlink" title="Metastability（亚稳态）"></a>Metastability（亚稳态）</h4><p><strong>metastability：</strong>持续时间较长的激发态被叫做亚稳态（metastable）</p>
+<p>Metastable compounds are <u>thermodynamically favored to break down</u>, but do so only <u>very slowly unless the reaction is catalyzed.</u></p>
+<p>酶不改变反应的方向，改变反应的速度</p>
+<p>Polynucleotides are   metastable compounds </p>
+<ul>
+<li><u>The hydrolysis is extremely slow</u> under the conditions existing in living cells</li>
+</ul>
+<p>DNA is stable in living cells </p>
+<ul>
+<li>Serve as genetic information</li>
+</ul>
+<p>例：（核苷酸聚合）</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568617766440.png" alt="1568617766440"></p>
+<h4 id="Formation-of-polynecluotides-1"><a href="#Formation-of-polynecluotides-1" class="headerlink" title="Formation of polynecluotides"></a>Formation of polynecluotides</h4><h5 id="1-Polymerase（聚合酶）-and-Nucleases（核酸酶）"><a href="#1-Polymerase（聚合酶）-and-Nucleases（核酸酶）" class="headerlink" title="(1) Polymerase（聚合酶） and Nucleases（核酸酶）"></a>(1) Polymerase（聚合酶） and Nucleases（核酸酶）</h5><p>The formation of DNA or RNA is catalyzed by enzyme called <strong>polymerase</strong> </p>
+<ul>
+<li>DNA polymerase </li>
+<li>RNA polymerase</li>
+</ul>
+<p>The hydrolysis of DNA or RNA is catalyzed by enzyme  called <strong>nuclease</strong> </p>
+<ul>
+<li><p>Deoxyribonuclease (DNase)  </p>
+</li>
+<li><p>Ribonuclease (RNase)</p>
+</li>
+</ul>
+<h5 id="2-Environment-conditions"><a href="#2-Environment-conditions" class="headerlink" title="(2) Environment conditions"></a>(2) Environment conditions</h5><p>DNA is much more stable than RNA </p>
+<p>RNA is easy to be degraded in certain conditions </p>
+<ul>
+<li>alkaline conditions</li>
+</ul>
+<p>DNA forms more stable double helical structures </p>
+<p>RNase exists in our skin and hair</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102114428112.png" alt="image-20191102114428112" style="zoom:50%;" />
+
+<h1 id="二、The-Primary-Structure-of-Nucleic-Acid"><a href="#二、The-Primary-Structure-of-Nucleic-Acid" class="headerlink" title="二、The Primary Structure of Nucleic Acid"></a>二、The Primary Structure of Nucleic Acid</h1><ol>
+<li><p>A polynucleotide chain has a <strong>sense* or *directionality</strong>. The phosphodiester linkage between monomer units is between the carbon of one monomer and the carbon of the next. Thus, the two ends of a linear polynucleotide chain are distinguishable. One end normally carries an unreacted phosphate, the other end an unreacted hydroxyl group.</p>
+</li>
+<li><p>A polynucleotide chain has <strong>individuality</strong>, determined by the sequence of its bases—that is, the nucleotide sequence. This sequence is called the <em>primary structure （一级结构）</em> of that particular nucleic acid.</p>
+</li>
+</ol>
+<p>The main importance of primary structure, or sequence, is that <strong>genetic information is stored in the primary structure of DNA</strong>. A gene is nothing more than a particular DNA sequence, encoding information in a four-letter language in which each “letter” is one of the bases.</p>
+<h1 id="三、The-Secondary-And-Tertiary-Structure-of-Nucleic-Acids"><a href="#三、The-Secondary-And-Tertiary-Structure-of-Nucleic-Acids" class="headerlink" title="三、The Secondary And Tertiary Structure of Nucleic Acids"></a>三、The Secondary And Tertiary Structure of Nucleic Acids</h1><h2 id="The-Double-Helix"><a href="#The-Double-Helix" class="headerlink" title="The Double Helix"></a>The Double Helix</h2><p>We refer to such regular folding in polymers as <em>secondary structure（二级结构）.</em></p>
+<p>In the Watson–Crick model, the <u>hydrophilic phosphate–deoxyribose backbones of the helix were on the outside</u>, in contact with the aqueous environment, and the base pairs were stacked on one another with their planes <u>perpendicular to the helix axis</u>.</p>
+<p>The model also shows that although the bases are inside, they can be approached through two deep spiral grooves called the <strong>major grooves（大沟、深沟）</strong> and <strong>minor grooves（小沟）</strong></p>
+<p><font color="990000">The pairing distance &#x3D; 1.08 nm</font></p>
+<h3 id="1-The-force-that-exists-in-DNA-molecular"><a href="#1-The-force-that-exists-in-DNA-molecular" class="headerlink" title="1. The force that exists in DNA molecular"></a>1. The force that exists in DNA molecular</h3><p>DNA分子中包括了所有 noncovelent bonds：</p>
+<ol>
+<li><p>Hydrogen bonds：Watson‐Crick base paring</p>
+</li>
+<li><p>van der Waals interactions：<strong>π‐π stacking</strong> between bases</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">In chemistry, pi stacking (also called π–π stacking) refers to attractive, noncovalent interactions between aromatic rings, since they contain pi bonds. These interactions are important in nucleobase stacking within DNA and RNA molecules, protein folding, template-directed synthesis, materials science, and molecular recognition, although new research suggests that pi stacking may not be operative in some of these applications. Despite intense experimental and theoretical interest, there is no unified description of the factors that contribute to pi stacking interactions. </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Hydrophobic interactions：Phosphate‐deoxyribose backbones (outside) and Base pairs (inside)</p>
+</li>
+<li><p>Charge-Charge interactions: 使得蛋白质能够与DNA分子结合，但是具有Repulsive effects，使得DNA分子更加<strong>不稳定</strong></p>
+</li>
+</ol>
+<h3 id="2-Grooves-–-Interact-with-protein-molecular"><a href="#2-Grooves-–-Interact-with-protein-molecular" class="headerlink" title="2. Grooves – Interact with protein molecular"></a>2. Grooves – Interact with protein molecular</h3><p>蛋白质分子与DNA分子的结合部位是DNA分子的major groove</p>
+<p>同时DNA分子主要通过氢键实现蛋白质与DNA分子的interaction：</p>
+<p>碱基与蛋白质表面的binding site形成特异性的氢键，以此使得蛋白质可以识别当前的核苷酸</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568601892226.png" alt="1568601892226" style="zoom: 33%;" />
+
+<p><strong>The major groove gives more direct access to the bases; the minor groove faces the sugar backbone.</strong></p>
+<h3 id="3-The-biological-consequences"><a href="#3-The-biological-consequences" class="headerlink" title="3. The biological consequences"></a>3. The biological consequences</h3><h4 id="Redundancy"><a href="#Redundancy" class="headerlink" title="Redundancy"></a>Redundancy</h4><p>Two chains of a DNA are complementary to each other</p>
+<h4 id="Self‐replication"><a href="#Self‐replication" class="headerlink" title="Self‐replication"></a>Self‐replication</h4><p>“A copy mechanism for the genetic material”  ‐ W&amp;C</p>
+<h4 id="Models-of-replication"><a href="#Models-of-replication" class="headerlink" title="Models of replication"></a>Models of replication</h4><ul>
+<li><p>Conservative</p>
+<ul>
+<li>One of two daughter duplexes is the conserved parental duplex when the other is synthesized de novo</li>
+</ul>
+</li>
+<li><p>Dispersion</p>
+<ul>
+<li>Parental material is scattered through the structures of the daughter duplexes</li>
+</ul>
+</li>
+</ul>
+<h2 id="Semiconservative（半保留）-Nature-of-DNA-Replication"><a href="#Semiconservative（半保留）-Nature-of-DNA-Replication" class="headerlink" title="Semiconservative（半保留） Nature of DNA Replication"></a>Semiconservative（半保留） Nature of DNA Replication</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569237978773.png" alt="1569237978773" style="zoom:80%;" />
+
+<h2 id="The-Meselson‐Stahl-experiment"><a href="#The-Meselson‐Stahl-experiment" class="headerlink" title="The Meselson‐Stahl experiment"></a>The Meselson‐Stahl experiment</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102141337804.png" alt="image-20191102141337804"></p>
+<h2 id="Three-forms-of-polyneucleotide-helices"><a href="#Three-forms-of-polyneucleotide-helices" class="headerlink" title="Three forms of polyneucleotide helices"></a>Three forms of polyneucleotide helices</h2><p>Nucleic acid secondary structure is not homogeneous. <u>It varies in response to the local sequence and can be changed by interaction with other molecules.</u> </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102121905101.png" alt="image-20191102121905101" style="zoom:50%;" />
+
+<h3 id="1-B-form"><a href="#1-B-form" class="headerlink" title="1. B form"></a>1. B form</h3><ul>
+<li>B form is the Waston-Crick model</li>
+<li>Most DNA</li>
+</ul>
+<p>The <strong>B form</strong>, which is seen in DNA fibers prepared under <u>conditions of high humidity</u></p>
+<p>The B form of DNA, but not A-DNA, can <u>accommodate（容纳） a spine of water molecules lying in the minor groove</u>. The hydrogen bonding between these water molecules and the DNA may confer stability to the B form. According to this hypothesis, when this water is removed (as in fibers at low humidity), the B form becomes less stable than the A form.</p>
+<h3 id="2-A-form"><a href="#2-A-form" class="headerlink" title="2. A form"></a>2. A form</h3><ul>
+<li>Double strand RNA</li>
+<li>DNA&#x2F;RNA hybrids</li>
+</ul>
+<p>DNA fibers prepared under <u>conditions of low humidity</u> have a different structure, the so-called <strong>A form</strong></p>
+<p><u>Double-stranded RNA molecules always form the A structure,</u> and so do DNA–RNA hybrid molecules, which are formed by the pairing of one DNA strand with one RNA strand.</p>
+<p>In the A helix the bases lie farther to the outside and are strongly tilted(倾斜的) with respect to the helix axis. The surfaces of the helices are also different. <u>In the B helix the major and minor grooves are quite distinguishable, whereas in the A helix the two grooves are more nearly equal in width.</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102122118419.png" alt="image-20191102122118419" style="zoom: 67%;" />
+
+<h3 id="3-Z-form"><a href="#3-Z-form" class="headerlink" title="3. Z form"></a>3. Z form</h3><ul>
+<li>Appears in some junction regions</li>
+<li>Left-handed helix</li>
+<li>requirs specific sequence（CGCGCG） and certain conditions<ul>
+<li>Tension</li>
+<li>Salt: High salts concentration are needed to <u>minimize the repulsion between the backbone phosphates</u></li>
+</ul>
+</li>
+</ul>
+<p><strong>总而言之：B form是Watson‐Crick model，并且大多数DNA都是B form。在低湿度的条件下，B form会变为A form，常见于Double‐stranded RNA and DNA&#x2F;RNA hybrids</strong></p>
+<p><strong>Z form常常由于一些特殊的环境或者核苷酸的特殊序列导致：Specific sequences，Certain conditions（Tesion，Salt）</strong></p>
+<h3 id="4-The-Nuleoside-oriention-in-A-B-Z-form-helix"><a href="#4-The-Nuleoside-oriention-in-A-B-Z-form-helix" class="headerlink" title="4. The Nuleoside oriention in A,B,Z form helix"></a>4. The Nuleoside oriention in A,B,Z form helix</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102125916679.png" alt="image-20191102125916679" style="zoom: 67%;" />
+
+<h4 id="A-and-B-form"><a href="#A-and-B-form" class="headerlink" title="A and B form"></a>A and B form</h4><p>All <strong>anti</strong> oriention</p>
+<h4 id="Z-form"><a href="#Z-form" class="headerlink" title="Z form"></a>Z form</h4><p>Pyrimidines（C and T）are anti</p>
+<p>Purines （A and G）are syn</p>
+<p>Not stable</p>
+<h3 id="5-B-DNA-to-Z-DNA"><a href="#5-B-DNA-to-Z-DNA" class="headerlink" title="5. B-DNA to Z-DNA"></a>5. B-DNA to Z-DNA</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102130238740.png" alt="image-20191102130238740" style="zoom: 50%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102130313231.png" alt="image-20191102130313231" style="zoom: 67%;" />
+
+<h3 id="6-Structural-Properties-of-the-three-helixes"><a href="#6-Structural-Properties-of-the-three-helixes" class="headerlink" title="6. Structural Properties of the three helixes"></a>6. Structural Properties of the three helixes</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102130528573.png" alt="image-20191102130528573"></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102130545009.png" alt="image-20191102130545009" style="zoom: 80%;" />
+
+<h3 id="7-Sugar-Pucker"><a href="#7-Sugar-Pucker" class="headerlink" title="7. Sugar Pucker"></a>7. Sugar Pucker</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102132431466.png" alt="image-20191102132431466" style="zoom:50%;" />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102132503965.png" alt="image-20191102132503965"></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102132554107.png" alt="image-20191102132554107" style="zoom:50%;" />
+
+<p>The purine bases of Z-DNA, formed for example with d(CG)3, are rotated into the syn conformation. The sugar pucker is C3′-endo.<br>The pyrimidine bases maintain an anti conformation. Sugar pucker is C2′-endo<br>Z-DNA is thus characterized by a dinucleotide repeat in which anti and syn conformations of the bases alternate in succession along the chain.</p>
+<h2 id="DNA-and-RNA-Molecules-in-Vivo"><a href="#DNA-and-RNA-Molecules-in-Vivo" class="headerlink" title="DNA and RNA Molecules in Vivo"></a>DNA and RNA Molecules in Vivo</h2><h3 id="（1）Circular-DNA-and-Supercoiling"><a href="#（1）Circular-DNA-and-Supercoiling" class="headerlink" title="（1）Circular DNA and Supercoiling"></a>（1）Circular DNA and Supercoiling</h3><p>Three-dimensional structure, such as supercoiling, that involves a higher-order folding of elements of regular secondary structure is called the <strong>tertiary structure（三级结构）</strong> of a polymer.</p>
+<p>Most naturally occurring circular DNA molecules have left-handed superhelical twists, but it is possible to form DNA molecules with right-handed superhelicity. By convention, we call right supercoiling <strong>positive</strong> and left supercoiling <strong>negative</strong>.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568603917805.png" alt="1568603917805" style="zoom:33%;" />
+
+<p>The DNA molecules shown in Figure 4.18 <u>differ only in their topology</u>, meaning that they can be superimposed only by breaking bonds; therefore, they are called <strong>topoisomers（拓扑异构体）</strong>. Topoisomers can be interconverted only by cutting and resealing the DNA. Cells have enzymes capable of doing this. These enzymes are called <strong>topoisomerases（拓朴异构酶）</strong>, and they regulate the superhelicity of natural DNA molecules.</p>
+<h3 id="（2）Structure-of-Single-Stranded-Polynucleotides"><a href="#（2）Structure-of-Single-Stranded-Polynucleotides" class="headerlink" title="（2）Structure of Single-Stranded Polynucleotides"></a>（2）Structure of Single-Stranded Polynucleotides</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568604137314.png" alt="1568604137314" style="zoom:40%;" />
+
+<p>One Example of Single-strand polynucleotide is the <strong>tRNA</strong>:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568604288950.png" alt="1568604288950" style="zoom: 25%;" />
+
+<h1 id="四、The-Biological-Functions-of-Nucleic-Acids"><a href="#四、The-Biological-Functions-of-Nucleic-Acids" class="headerlink" title="四、The Biological Functions of Nucleic Acids"></a>四、The Biological Functions of Nucleic Acids</h1><h2 id="Genetic-Information-Storage-The-Genome"><a href="#Genetic-Information-Storage-The-Genome" class="headerlink" title="Genetic Information Storage: The Genome"></a>Genetic Information Storage: The Genome</h2><h2 id="Replication-DNA-to-DNA"><a href="#Replication-DNA-to-DNA" class="headerlink" title="Replication: DNA to DNA"></a>Replication: DNA to DNA</h2><p>The replication of DNA is accomplished by a complex of enzymes, acting in concert like a finely tuned machine.</p>
+<p>Each <strong>enzyme complex</strong>, or <strong>replisome（复制体）</strong>, centered on a protein called <strong>DNA polymerase（DNA聚合酶）</strong>, has multiple functions.</p>
+<p>each of the parental DNA strands serves as a template, specifying the sequence ofa daughter strand. DNA polymerase adds nucleotides, one at a time, to the growing daughter strand, which can be considered a primer to which nucleotides are added as the daughter DNA strand grows from its 5‘ end toward its 3’ end</p>
+<h2 id="Transcription-DNA-to-RNA"><a href="#Transcription-DNA-to-RNA" class="headerlink" title="Transcription: DNA to RNA"></a>Transcription: DNA to RNA</h2><h2 id="Translation-RNA-to-Protein"><a href="#Translation-RNA-to-Protein" class="headerlink" title="Translation: RNA to Protein"></a>Translation: RNA to Protein</h2><h1 id="五、Plasticity-of-Secondary-and-tertiary-DNA-Structure"><a href="#五、Plasticity-of-Secondary-and-tertiary-DNA-Structure" class="headerlink" title="五、Plasticity of Secondary and tertiary DNA Structure"></a>五、Plasticity of Secondary and tertiary DNA Structure</h1><h2 id="Changes-in-Tertiary-Structure-A-Closer-Look-at-Supercoiling"><a href="#Changes-in-Tertiary-Structure-A-Closer-Look-at-Supercoiling" class="headerlink" title="Changes in Tertiary Structure: A Closer Look at Supercoiling"></a>Changes in Tertiary Structure: A Closer Look at Supercoiling</h2><h3 id="（1）Twist-T"><a href="#（1）Twist-T" class="headerlink" title="（1）Twist (T)"></a>（1）Twist (T)</h3><p>Measure of the helical winding（弯曲） of the DNA strands around each other</p>
+<h3 id="（2）Writhe-W"><a href="#（2）Writhe-W" class="headerlink" title="（2）Writhe (W)"></a>（2）Writhe (W)</h3><p>The number of superhelical <strong>turns</strong></p>
+<p>Measure of the coiling of the axis of the double helix</p>
+<h3 id="（3）Linking-number-L"><a href="#（3）Linking-number-L" class="headerlink" title="（3）Linking number (L)"></a>（3）Linking number (L)</h3><p>The number of <strong>crosses a single strand</strong> makes across the other<br>$$<br>L &#x3D; T+W<br>$$</p>
+<p><strong>Right</strong> handed supercoiling &#x3D; <strong>negative</strong> supercoiling (underwinding)<br><strong>Lef</strong>t handed supercoiling &#x3D; <strong>positive</strong> supercoiling (overwinding)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569239962657.png" alt="1569239962657" style="zoom:80%;" />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102142320366.png" alt="image-20191102142320366"></p>
+<h2 id="topoisomerase-拓扑异构酶"><a href="#topoisomerase-拓扑异构酶" class="headerlink" title="topoisomerase 拓扑异构酶"></a>topoisomerase 拓扑异构酶</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102142557432.png" alt="image-20191102142557432" style="zoom:50%;" />
+
+<h2 id="Unconventional-Secondary-Structures-of-DNA"><a href="#Unconventional-Secondary-Structures-of-DNA" class="headerlink" title="Unconventional Secondary Structures of DNA"></a>Unconventional Secondary Structures of DNA</h2><p>Most ofthe DNA and RNA in cells can be described as having one ofthe three secondary structures—random coil (which is really a lack of secondary structure), B form, or A form.</p>
+<h2 id="Function-of-Supercoils"><a href="#Function-of-Supercoils" class="headerlink" title="Function of Supercoils"></a>Function of Supercoils</h2><p><u>The DNA of most organisms is negatively supercoiled</u> </p>
+<ul>
+<li>negative W</li>
+</ul>
+<p><u>DNA&#x2F;RNA synthesis</u> </p>
+<ul>
+<li>Generation of supercoils by polymerases</li>
+</ul>
+<p><u>Regulation of gene expression</u></p>
+<ul>
+<li>by the special effects of supercoiling torsion（超螺旋扭转） of  DNA：<ul>
+<li>Local melting</li>
+<li>Z-DNA formation</li>
+<li>H-DNA formation</li>
+<li>Cruciform extension (十字形延伸)</li>
+</ul>
+</li>
+</ul>
+<p><u>Condense DNA during nuclear division events</u></p>
+<ul>
+<li>Mitosis or meiosis</li>
+</ul>
+<p><u>DNA packing in bacteria</u></p>
+<h3 id="DNA-packing-in-eukaryotes"><a href="#DNA-packing-in-eukaryotes" class="headerlink" title="DNA packing in eukaryotes"></a>DNA packing in eukaryotes</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102151344005.png" alt="image-20191102151344005" style="zoom:50%;" />
+
+
+
+<h3 id="（1）Left-Handed-DNA-Z-DNA"><a href="#（1）Left-Handed-DNA-Z-DNA" class="headerlink" title="（1）Left-Handed DNA (Z-DNA)"></a>（1）Left-Handed DNA (Z-DNA)</h3><p>in polynucleotides, two most stable orientations of the bases with respect to their deoxyribose rings. They are called syn and anti:</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568609252914.png" alt="1568609252914"></p>
+<p>In both A- and B-form polynucleotides, <u>all bases are in the anti orientation</u>. In Backbone Bases Z-DNA, however, <u>the pyrimidines are always anti, but the purines are always syn.</u></p>
+<p>Because Z-DNA is most often found in polynucleotides with alternating purines and pyrimidines in each strand (such as that shown earlier), the base orientations will alternate.</p>
+<h4 id="B-DNA-to-z-DNA"><a href="#B-DNA-to-z-DNA" class="headerlink" title="B-DNA to z-DNA"></a>B-DNA to z-DNA</h4><p>因为Z-DNA中，磷酸基团之间靠得更近，因此也使得Z-DNA处于较高能的状态，所以Z-DNA相比于B与A-DNA更不稳定</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569234938817.png" alt="1569234938817" style="zoom:80%;" />
+
+<h4 id="The-Comparision-of-A-B-and-Z-DNA"><a href="#The-Comparision-of-A-B-and-Z-DNA" class="headerlink" title="The Comparision of A, B and Z-DNA"></a>The Comparision of A, B and Z-DNA</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569235067146.png" alt="1569235067146"></p>
+<h3 id="（2）Hairpins-and-Cruciforms"><a href="#（2）Hairpins-and-Cruciforms" class="headerlink" title="（2）Hairpins and Cruciforms"></a>（2）Hairpins and Cruciforms</h3><h4 id="Hairpins-发夹形-and-Criciforms-十字形"><a href="#Hairpins-发夹形-and-Criciforms-十字形" class="headerlink" title="Hairpins 发夹形 and Criciforms 十字形"></a>Hairpins 发夹形 and Criciforms 十字形</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569238028411.png" alt="1569238028411" style="zoom:80%;" />
+
+<p>Double hairpins, often called cruciform (cross-like) structures, can be formed in some DNA sequences. To form this structure, the sequence must be <strong>palindromic（回文的）</strong>.</p>
+<h3 id="（3）Triple-Helices-and-H-DNA"><a href="#（3）Triple-Helices-and-H-DNA" class="headerlink" title="（3）Triple Helices and H-DNA"></a>（3）Triple Helices and H-DNA</h3><h4 id="Hoogsteen-type-base-pairing"><a href="#Hoogsteen-type-base-pairing" class="headerlink" title="Hoogsteen-type base pairing"></a>Hoogsteen-type base pairing</h4><p>deoxy triplets like T - A - T and C^+^ - G - C (where C^+^is a protonated cytosine), which is in addition to the normal watson-click base pairing.</p>
+<h4 id="Triple-Helices"><a href="#Triple-Helices" class="headerlink" title="Triple Helices"></a>Triple Helices</h4><p>三螺旋的厂商也是因为Hoogsteen-type base pairing</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569238620556.png" alt="1569238620556" style="zoom: 50%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569238046575.png" alt="1569238046575" style="zoom: 55%;" />
+
+<h4 id="H-DNA"><a href="#H-DNA" class="headerlink" title="H-DNA"></a>H-DNA</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569238772356.png" alt="1569238772356" style="zoom: 33%;" />
+
+<p><strong>H-DNA</strong>是一种可以形成三螺旋的结构，<u>需要一条链全为嘧啶，一条链全为嘌呤</u></p>
+<h3 id="（4）G-Quadruplexes-G-四链体"><a href="#（4）G-Quadruplexes-G-四链体" class="headerlink" title="（4）G-Quadruplexes G-四链体"></a>（4）G-Quadruplexes G-四链体</h3><p>A G-quadruplex structure can form from one DNA strand, as shown, or from as many as four strands. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569238914310.png" alt="1569238914310"></p>
+<p>G-quadruplexes actually form in living cells and <u>exist in telomeres（端粒）</u>, special sequences at the ends of linear eukaryotic chromosomes</p>
+<p><u>Also exists in promoters (transcriptional control sites)</u></p>
+<h3 id="（5）An-Unexpected-Primary-Structure-Modification-DNA-Phosphorothioation（硫酸酰化）"><a href="#（5）An-Unexpected-Primary-Structure-Modification-DNA-Phosphorothioation（硫酸酰化）" class="headerlink" title="（5）An Unexpected Primary Structure Modification: DNA Phosphorothioation（硫酸酰化）"></a>（5）An Unexpected Primary Structure Modification: DNA Phosphorothioation（硫酸酰化）</h3><p>在部分细菌中，an enzyme system converts a phosphate group in DNA to a phosphorothioate.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569239238786.png" alt="1569239238786" style="zoom:28%;" />
+
+<p>but it might <u>confer resistance to some foreign invaders</u>, such as bacteriophages, which could degrade<br>unmodified DNA.</p>
+<h1 id="六、Stability-of-Secondary-and-Tertiary-DNA-Structure"><a href="#六、Stability-of-Secondary-and-Tertiary-DNA-Structure" class="headerlink" title="六、Stability of Secondary and Tertiary DNA Structure"></a>六、Stability of Secondary and Tertiary DNA Structure</h1><h2 id="The-Helix-to-Random-Coil-Transition-Nucleic-Acid-Denaturation"><a href="#The-Helix-to-Random-Coil-Transition-Nucleic-Acid-Denaturation" class="headerlink" title="The Helix-to-Random-Coil Transition: Nucleic Acid Denaturation"></a>The Helix-to-Random-Coil Transition: Nucleic Acid Denaturation</h2><p>DNA and RNA sometimes must not be too stable because important biochemical processes—DNA replication and transcription</p>
+<p>When it extends over large regions, this loss of secondary structure is called <strong>denaturation</strong>.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568610184318.png" alt="1568610184318" style="zoom:50%;" />
+
+<h3 id="1-The-Denaturation"><a href="#1-The-Denaturation" class="headerlink" title="1. The Denaturation"></a>1. The Denaturation</h3><p>$$<br>T_m &#x3D; \frac{\Delta H}{\Delta S}<br>$$</p>
+<p>$T_m$ depends on the (C+G)&#x2F;(A+T) ratio</p>
+<h2 id="Superhelical-Energy-and-Changes-of-DNA-Conformation"><a href="#Superhelical-Energy-and-Changes-of-DNA-Conformation" class="headerlink" title="Superhelical Energy and Changes of DNA Conformation"></a>Superhelical Energy and Changes of DNA Conformation</h2><h1 id="七、RNA-structure"><a href="#七、RNA-structure" class="headerlink" title="七、RNA structure"></a>七、RNA structure</h1><p>RNA is mainly a single-stranded polynucleotide </p>
+<ul>
+<li>transfer RNA (tRNA) </li>
+<li>messenger RNA (mRNA) </li>
+<li>ribosomal RNA (rRNA) </li>
+<li>small interfering RNA (siRNA) </li>
+<li>micro RNA (miRNA) </li>
+<li>small nuclear RNA (snRNA)</li>
+</ul>
+<h2 id="Secondary-structures"><a href="#Secondary-structures" class="headerlink" title="Secondary structures"></a>Secondary structures</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102151806445.png" alt="image-20191102151806445" style="zoom:67%;" />
+
+<h1 id="八、Other-Functions-of-Nucleic-Acids"><a href="#八、Other-Functions-of-Nucleic-Acids" class="headerlink" title="八、Other Functions of Nucleic Acids"></a>八、Other Functions of Nucleic Acids</h1><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102152303863.png" alt="image-20191102152303863"></p>
+<h2 id="ADP-AMP"><a href="#ADP-AMP" class="headerlink" title="ADP&#x2F;AMP"></a>ADP&#x2F;AMP</h2><ul>
+<li>Components of enzyme cofactors</li>
+</ul>
+<h2 id="ATP"><a href="#ATP" class="headerlink" title="ATP"></a>ATP</h2><ul>
+<li><p>Providing energy </p>
+</li>
+<li><p>Protein modification</p>
+</li>
+</ul>
+<h2 id="GTP-GDP"><a href="#GTP-GDP" class="headerlink" title="GTP&#x2F;GDP"></a>GTP&#x2F;GDP</h2><ul>
+<li><p>Involved in regulation of cytoskeleton by activating or inhibiting GTPases </p>
+</li>
+<li><p>Providing energy in translation elongation (GTP)</p>
+</li>
+</ul>
+<h2 id="cGMP-cAMP"><a href="#cGMP-cAMP" class="headerlink" title="cGMP&#x2F;cAMP"></a>cGMP&#x2F;cAMP</h2><ul>
+<li>Secondary messengers in signal transduction</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102152505649.png" alt="image-20191102152505649"></p>
+<h1 id="九、Biochemical-techniques-About-Nucleic-Acid"><a href="#九、Biochemical-techniques-About-Nucleic-Acid" class="headerlink" title="九、Biochemical techniques About Nucleic Acid"></a>九、Biochemical techniques About Nucleic Acid</h1><h2 id="Molecular-cloning"><a href="#Molecular-cloning" class="headerlink" title="Molecular cloning"></a>Molecular cloning</h2><p>Techniques used to <strong>assemble recombinant DNA</strong> molecules and to <u>direct their replication within host organisms</u></p>
+<ul>
+<li><p>Gene regulation </p>
+</li>
+<li><p>Exogenous（外生的,外成的,外因的） protein expression (recombinant proteins)</p>
+</li>
+</ul>
+<h3 id="1-Technique-Involved"><a href="#1-Technique-Involved" class="headerlink" title="1. Technique Involved"></a>1. Technique Involved</h3><h4 id="Polymerase-chain-reaction-PCR"><a href="#Polymerase-chain-reaction-PCR" class="headerlink" title="Polymerase chain reaction (PCR)"></a>Polymerase chain reaction (PCR)</h4><p>PCR: amplification of target DNA fragments</p>
+<h4 id="Transformation"><a href="#Transformation" class="headerlink" title="Transformation"></a>Transformation</h4><h4 id="DNA-purification"><a href="#DNA-purification" class="headerlink" title="DNA purification"></a>DNA purification</h4><h4 id="DNA-processing"><a href="#DNA-processing" class="headerlink" title="DNA processing"></a>DNA processing</h4><p>Restriction endonuclease</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102153111369.png" alt="image-20191102153111369"></p>
+<h5 id="1-Plasmid"><a href="#1-Plasmid" class="headerlink" title="(1) Plasmid"></a>(1) Plasmid</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102153153821.png" alt="image-20191102153153821" style="zoom: 67%;" />
+
+<h5 id="2-DNA-ligase"><a href="#2-DNA-ligase" class="headerlink" title="(2) DNA ligase"></a>(2) DNA ligase</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102153219506.png" alt="image-20191102153219506" style="zoom:67%;" />
+
+</div><div class="article-licensing box"><div class="licensing-title"><p>L04 Nucleic Acid</p><p><a href="https://zhenyumi.github.io/posts/20b9d2e7/">https://zhenyumi.github.io/posts/20b9d2e7/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-07-25</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-07-25</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Biochemistry-I-Macromolecules/">Biochemistry I (Macromolecules)</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/ef852217/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">L04 Extensions of Mendelian Inheritance</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/4edbb233/"><span class="level-item">L05 Amino Acids</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">196</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">28</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Undefined-notes/"><span class="level-start"><span class="level-item">Undefined notes</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-19T06:36:03.000Z">2022-09-19</time></p><p class="title"><a href="/posts/f5b7721a/">Embedding and Frozen Sectioning</a></p><p class="categories"><a href="/categories/Undefined-notes/">Undefined notes</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

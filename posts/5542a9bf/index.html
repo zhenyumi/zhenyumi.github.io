@@ -1,0 +1,1453 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>01. R &lt;- Plot 图像参数 - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="常用绘图命令"><meta property="og:type" content="blog"><meta property="og:title" content="01. R &lt;- Plot 图像参数"><meta property="og:url" content="https://zhenyumi.github.io/posts/5542a9bf/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="常用绘图命令"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/notebook_for_R%28cover%29.png"><meta property="article:published_time" content="2020-07-12T13:30:58.000Z"><meta property="article:modified_time" content="2020-07-17T13:37:00.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="速查"><meta property="article:tag" content="R"><meta property="article:tag" content="Statistics"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/notebook_for_R%28cover%29.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/5542a9bf/"},"headline":"01. R <- Plot 图像参数","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/notebook_for_R%28cover%29.png"],"datePublished":"2020-07-12T13:30:58.000Z","dateModified":"2020-07-17T13:37:00.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"常用绘图命令"}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/5542a9bf/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/notebook_for_R%28cover%29.png" alt="01. R &lt;- Plot 图像参数"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-12T13:30:58.000Z" title="2020/7/12 23:30:58">2020-07-12</time>发表</span><span class="level-item"><time dateTime="2020-07-17T13:37:00.000Z" title="2020/7/17 23:37:00">2020-07-17</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a><span> / </span><a class="link-muted" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/">R</a></span><span class="level-item">38 分钟读完 (大约5655个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">01. R &lt;- Plot 图像参数</h1><div class="content"><p>大二的下学期学习了生物统计学，在课程的最后老师推荐我们学习一门变成语言，首先学习的是Python，因为做分析的时候得到的数据相对不完整，其实是我实在懒得自己编写程序去计算一些其它的量。最后决定开始学习R语言，因此此文权当我自身学习R语言做统计学分析时候的一点小总结和笔记吧。</p>
+<h2 id="使用的数据（集）"><a href="#使用的数据（集）" class="headerlink" title="使用的数据（集）"></a>使用的数据（集）</h2><p>这篇文章中使用到的数据有R Studio还是R Language自带的 mtcars ：</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/Snipaste_2020-07-12_21-52-52.png" alt="Snipaste_2020-07-12_21-52-52" style="zoom: 67%;" />
+
+<p>以及一些方便演示而创建的数据集：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data1 <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">3</span><span class="punctuation">,</span><span class="number">5</span><span class="punctuation">,</span><span class="number">7</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">,</span><span class="number">6</span><span class="punctuation">,</span><span class="number">8</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用的Package"><a href="#使用的Package" class="headerlink" title="使用的Package"></a>使用的Package</h2><p>在绘图过程中，常用的包有很多，在下文中使用到的包也有很多交叉的地方，因为练习使用R语言的时候使用的是R Studio，这个软件的包管理做的简单明了，当有前置包需要载入的时候也会自动下载并载入，因此在此只列出所用package调用代码：</p>
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> library<span class="punctuation">(</span>vcd<span class="punctuation">)</span></span><br><span class="line">载入需要的程辑包：grid <span class="comment">#如vcd使用的前置包是grid，R studio便会自动载入grid</span></span><br><span class="line"><span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>下面是相关代码：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span>vcd<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>RColorBrewer<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="一、通用绘图操作"><a href="#一、通用绘图操作" class="headerlink" title="一、通用绘图操作"></a>一、通用绘图操作</h1><h2 id="合并、新建、保存"><a href="#合并、新建、保存" class="headerlink" title="合并、新建、保存"></a>合并、新建、保存</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dev.new<span class="punctuation">(</span><span class="punctuation">)</span> <span class="comment">#新建绘图窗口，避免图形覆盖</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="参数的保存和使用"><a href="#参数的保存和使用" class="headerlink" title="参数的保存和使用"></a>参数的保存和使用</h2><p>对于不同的图像，需要设置的参数可能也不同。</p>
+<p>最简单的方法是直接在绘图函数后面设置相应的参数，如：<code>plot(c(1,2,3), main = &quot;Main Title&quot;)</code></p>
+<p>第二种方法是直接改变全局变量：<code>par(main = &quot;Main Title&quot;)</code></p>
+<p>第三种方法稍显复杂，但是它可以对于每一个图片进行设置，同时保留每个图片的相关设置：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">opar <span class="operator">&lt;-</span> par<span class="punctuation">(</span><span class="punctuation">)</span> <span class="comment">#对当前的全局设置进行备份</span></span><br><span class="line">par<span class="punctuation">(</span>pch <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span> <span class="comment">#修改当前的全局设置</span></span><br><span class="line">par_1 <span class="operator">&lt;-</span> par<span class="punctuation">(</span><span class="punctuation">)</span> <span class="comment">#对当前图像的相关参数进行存档</span></span><br><span class="line">plot<span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span><span class="number">3</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">,</span><span class="number">5</span><span class="punctuation">)</span><span class="punctuation">,</span> main <span class="operator">=</span> <span class="string">&quot;Not Main Title&quot;</span><span class="punctuation">)</span> <span class="comment">#绘图</span></span><br><span class="line">par<span class="punctuation">(</span>opar<span class="punctuation">)</span> <span class="comment">#恢复默认的全局参数</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="图形的组合"><a href="#图形的组合" class="headerlink" title="图形的组合"></a>图形的组合</h2><p>在R中使用函数<code>par()</code>或<code>layout()</code>可以容易地组合多幅图形为一幅总括图形。</p>
+<h3 id="1-直接修改par"><a href="#1-直接修改par" class="headerlink" title="1. 直接修改par"></a>1. 直接修改par</h3><p>你可以在par()函数中使用图形参数<code>mfrow=c(nrows, ncols)</code>来创建按行填充的、行数为<code>nrows</code>、列数为<code>ncols</code>的图形矩阵。另外，可以使用<code>mfcol=c(nrows, ncols)</code>按列填充矩阵。</p>
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">attach<span class="punctuation">(</span>mtcars<span class="punctuation">)</span> </span><br><span class="line"></span><br><span class="line">opar <span class="operator">&lt;-</span> par<span class="punctuation">(</span>no.readonly<span class="operator">=</span><span class="literal">TRUE</span><span class="punctuation">)</span> </span><br><span class="line">par<span class="punctuation">(</span>mfrow<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="comment">#创建一副2行2列的总括图形</span></span><br><span class="line">plot<span class="punctuation">(</span>wt<span class="punctuation">,</span>mpg<span class="punctuation">,</span> main<span class="operator">=</span><span class="string">&quot;Scatterplot of wt vs. mpg&quot;</span><span class="punctuation">)</span> <span class="comment">#绘制图一</span></span><br><span class="line">plot<span class="punctuation">(</span>wt<span class="punctuation">,</span>disp<span class="punctuation">,</span> main<span class="operator">=</span><span class="string">&quot;Scatterplot of wt vs. disp&quot;</span><span class="punctuation">)</span> <span class="comment">#绘制图二</span></span><br><span class="line">hist<span class="punctuation">(</span>wt<span class="punctuation">,</span> main<span class="operator">=</span><span class="string">&quot;Histogram of wt&quot;</span><span class="punctuation">)</span> <span class="comment">#绘制图三</span></span><br><span class="line">boxplot<span class="punctuation">(</span>wt<span class="punctuation">,</span> main<span class="operator">=</span><span class="string">&quot;Boxplot of wt&quot;</span><span class="punctuation">)</span> <span class="comment">#绘制图四</span></span><br><span class="line">par<span class="punctuation">(</span>opar<span class="punctuation">)</span> </span><br><span class="line"></span><br><span class="line">detach<span class="punctuation">(</span>mtcars<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200714130918496.png" alt="image-20200714130918496" style="zoom: 67%;" />
+
+<h3 id="2-使用layout"><a href="#2-使用layout" class="headerlink" title="2. 使用layout()"></a>2. 使用<code>layout()</code></h3><p>函数<code>layout()</code>的调用形式为<code>layout(mat)</code>，其中的<code>mat</code>是一个矩阵，它指定了所要组合的多个图形的所在位置。</p>
+<ul>
+<li><code>mat</code> 的含义如下：如 <code>mat = matrix(c(1,1,2,3)), </code>，表示接下啦</li>
+</ul>
+<p><code>layout()</code>的调用格式为：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">layout<span class="punctuation">(</span>mat<span class="punctuation">,</span> </span><br><span class="line">       widths <span class="operator">=</span> rep.int<span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span> ncol<span class="punctuation">(</span>mat<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">       heights <span class="operator">=</span> rep.int<span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span> nrow<span class="punctuation">(</span>mat<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">       respect <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">attach<span class="punctuation">(</span>mtcars<span class="punctuation">)</span> </span><br><span class="line"><span class="comment">#设定一个2X2的绘图区域，沿着每一行进行填充</span></span><br><span class="line"><span class="comment">#第1，2个绘图位置分别放置第一幅图，第三个绘图位置方式第二幅图，第四个绘图位置放置第三幅图</span></span><br><span class="line">layout<span class="punctuation">(</span>matrix<span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span><span class="number">3</span><span class="punctuation">)</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">,</span> byrow <span class="operator">=</span> <span class="literal">TRUE</span><span class="punctuation">)</span><span class="punctuation">)</span> </span><br><span class="line"><span class="comment">#绘图</span></span><br><span class="line">hist<span class="punctuation">(</span>wt<span class="punctuation">)</span> </span><br><span class="line">hist<span class="punctuation">(</span>mpg<span class="punctuation">)</span> </span><br><span class="line">hist<span class="punctuation">(</span>disp<span class="punctuation">)</span> </span><br><span class="line"></span><br><span class="line">detach<span class="punctuation">(</span>mtcars<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200714132202655.png" alt="image-20200714132202655" style="zoom: 67%;" />
+
+<p>为了更精确地控制每幅图形的大小，可以有选择地在<code>layout()</code>函数中使用<code>widths=</code>和<code>heights=</code>两个参数。其形式为：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">widths <span class="operator">=</span> 各列宽度值组成的一个向量</span><br><span class="line">heights <span class="operator">=</span> 各行高度值组成的一个向量</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">attach<span class="punctuation">(</span>mtcars<span class="punctuation">)</span> </span><br><span class="line"><span class="comment">#设定第一行的宽度为3，高度为1；设定第二行的宽度为1，高度为2</span></span><br><span class="line">layout<span class="punctuation">(</span>matrix<span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">1</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">,</span> <span class="number">3</span><span class="punctuation">)</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">,</span> byrow <span class="operator">=</span> <span class="literal">TRUE</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line"> widths<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">3</span><span class="punctuation">,</span> <span class="number">1</span><span class="punctuation">)</span><span class="punctuation">,</span> heights<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">)</span><span class="punctuation">)</span> </span><br><span class="line"></span><br><span class="line">hist<span class="punctuation">(</span>wt<span class="punctuation">)</span> </span><br><span class="line">hist<span class="punctuation">(</span>mpg<span class="punctuation">)</span> </span><br><span class="line">hist<span class="punctuation">(</span>disp<span class="punctuation">)</span> </span><br><span class="line"></span><br><span class="line">detach<span class="punctuation">(</span>mtcars<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200714132230372.png" alt="image-20200714132230372" style="zoom:67%;" />
+
+<h1 id="二、绘图参数"><a href="#二、绘图参数" class="headerlink" title="二、绘图参数"></a>二、绘图参数</h1><p>通用的绘图参数对于基本绘图操作都有效，但是对于使用<code>ggplot2</code>包的情况来说，需要使用<code>ggplot2</code>的特殊方式来进行参数设置</p>
+<h2 id="使用绘图参数"><a href="#使用绘图参数" class="headerlink" title="使用绘图参数"></a>使用绘图参数</h2><p>绘图参数有很多，首先可以通过<code>par()</code>来查看所有的参数，也可以使用<code>par()</code>进行全局设置：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">par<span class="punctuation">(</span><span class="punctuation">)</span> <span class="comment">#查看参数及现状设置</span></span><br><span class="line">par<span class="punctuation">(</span>pch <span class="operator">=</span> <span class="number">25</span><span class="punctuation">,</span> cex <span class="operator">=</span> <span class="number">0.5</span><span class="punctuation">)</span> <span class="comment">#对全局的某个或某些默认参数进行设置调整</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="样式：符号-点-、线条"><a href="#样式：符号-点-、线条" class="headerlink" title="样式：符号 (点)、线条"></a>样式：符号 (点)、线条</h2><h3 id="1-相关参数"><a href="#1-相关参数" class="headerlink" title="1. 相关参数"></a>1. 相关参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pch (plotting character)</td>
+<td>指定绘制点时使用的符号</td>
+</tr>
+<tr>
+<td>cex</td>
+<td>指定符号的大小。cex 是一个数值，表示绘图符号相对于默认大小的缩放倍数。默认大小为 1，1.5 表示放大为默认值的 1.5 倍，0.5 表示缩小为默认值的 50%，等等</td>
+</tr>
+<tr>
+<td>lty</td>
+<td>指定线条类型</td>
+</tr>
+<tr>
+<td>lwd</td>
+<td>指定线条宽度。lwd 是以默认值的相对大小来表示的（默认值为 1）。例如，lwd&#x3D;2 将生成一条两倍于默认宽度的线条</td>
+</tr>
+</tbody></table>
+<h3 id="2-符号样式"><a href="#2-符号样式" class="headerlink" title="2. 符号样式"></a>2. 符号样式</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200712222057141.png" alt="image-20200712222057141" style="zoom: 67%;" />
+
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data <span class="operator">&lt;-</span> mtcars<span class="operator">$</span>mpg<span class="punctuation">[</span><span class="number">2</span><span class="operator">:</span><span class="number">5</span><span class="punctuation">]</span> <span class="comment">#data &lt;- c(21.0, 22.8, 21.4, 18.7)</span></span><br><span class="line">plot<span class="punctuation">(</span>data<span class="punctuation">,</span> pch <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span><span class="number">16</span><span class="punctuation">,</span><span class="number">21</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200712222446243.png" alt="image-20200712222446243" style="zoom: 80%;" />
+
+
+
+<h3 id="3-线条类型"><a href="#3-线条类型" class="headerlink" title="3. 线条类型"></a>3. 线条类型</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200712223518295.png" alt="image-20200712223518295" style="zoom:67%;" />
+
+<h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>main</td>
+<td>主标题</td>
+</tr>
+<tr>
+<td>sub</td>
+<td>副标题</td>
+</tr>
+<tr>
+<td>xlab</td>
+<td>x轴名称</td>
+</tr>
+<tr>
+<td>ylab</td>
+<td>y轴名称</td>
+</tr>
+<tr>
+<td>xlim</td>
+<td>x轴坐标轴范围</td>
+</tr>
+<tr>
+<td>ylim</td>
+<td>y轴坐标轴范围</td>
+</tr>
+<tr>
+<td>cex</td>
+<td>表示相对于默认大小缩放倍数的数值。默认大小为 1，1.5 表示放大为默认值的 1.5 倍，0.5 表示缩小为默认值的 50%，等等</td>
+</tr>
+<tr>
+<td>cex.axis</td>
+<td>坐标轴刻度文字的缩放倍数。类似于 cex</td>
+</tr>
+<tr>
+<td>cex.lab</td>
+<td>坐标轴标签（名称）的缩放倍数。类似于 cex</td>
+</tr>
+<tr>
+<td>cex.main</td>
+<td>标题的缩放倍数。类似于 cex</td>
+</tr>
+<tr>
+<td>cex.sub</td>
+<td>副标题的缩放倍数。类似于 cex</td>
+</tr>
+<tr>
+<td>font</td>
+<td>整数。用于指定绘图使用的字体样式。1&#x3D;常规，2&#x3D;粗体，3&#x3D;斜体，4&#x3D;粗斜体，5&#x3D;符号字体（以Adobe符号编码表示）</td>
+</tr>
+<tr>
+<td>font.axis</td>
+<td>坐标轴刻度文字的字体样式</td>
+</tr>
+<tr>
+<td>font.lab</td>
+<td>坐标轴标签（名称）的字体样式</td>
+</tr>
+<tr>
+<td>font.main</td>
+<td>标题的字体样式</td>
+</tr>
+<tr>
+<td>font.sub</td>
+<td>副标题的字体样式</td>
+</tr>
+<tr>
+<td>ps</td>
+<td>字体磅值（1磅约为1&#x2F;72英寸）。文本的最终大小为ps*cex</td>
+</tr>
+<tr>
+<td>family</td>
+<td>绘制文本时使用的字体族。标准的取值为serif（衬线）、sans（无衬线）和mono（等宽）</td>
+</tr>
+</tbody></table>
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">plot<span class="punctuation">(</span><span class="built_in">rep</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">        pch <span class="operator">=</span> <span class="number">16</span><span class="punctuation">,</span></span><br><span class="line">        main <span class="operator">=</span> <span class="string">&quot;The Main Title&quot;</span><span class="punctuation">,</span></span><br><span class="line">        sub <span class="operator">=</span> <span class="string">&quot;The Sub Title&quot;</span><span class="punctuation">,</span></span><br><span class="line">        xlab <span class="operator">=</span> <span class="string">&quot;The name of x-axis&quot;</span><span class="punctuation">,</span></span><br><span class="line">        ylab <span class="operator">=</span> <span class="string">&quot;The name of y-axis&quot;</span><span class="punctuation">,</span></span><br><span class="line">        xlim <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">12</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">        ylim <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span><span class="number">20</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">        cex <span class="operator">=</span> <span class="number">1.5</span><span class="punctuation">,</span></span><br><span class="line">        cex.axis <span class="operator">=</span> <span class="number">0.5</span><span class="punctuation">,</span></span><br><span class="line">        cex.lab <span class="operator">=</span> <span class="number">1.5</span><span class="punctuation">,</span></span><br><span class="line">        cex.sub <span class="operator">=</span> <span class="number">1.5</span><span class="punctuation">,</span></span><br><span class="line">        font <span class="operator">=</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">        font.axis <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        font.lab <span class="operator">=</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">        font.main <span class="operator">=</span> <span class="number">4</span><span class="punctuation">,</span></span><br><span class="line">        font.sub <span class="operator">=</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">        ps <span class="operator">=</span> <span class="number">12</span><span class="punctuation">,</span></span><br><span class="line">        family <span class="operator">=</span> <span class="string">&quot;mono&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200713222712335.png" alt="image-20200713222712335" style="zoom:67%;" />
+
+<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h2><h3 id="1-参数"><a href="#1-参数" class="headerlink" title="1. 参数"></a>1. 参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>col (color)</td>
+<td>图表内容的的绘图颜色。<br />某些函数（如 lines 和 pie）可以接受一个含有颜色值的<strong>向量</strong>并**<u>自动循环使用</u>**。例如，如果设定 col&#x3D;c(“red”, “blue”)并需要绘制三条线，则第一条线将为红色，第二条线为蓝色，第三条线又将为红色</td>
+</tr>
+<tr>
+<td>col.axis</td>
+<td>坐标轴刻度文字的颜色</td>
+</tr>
+<tr>
+<td>col.lab</td>
+<td>坐标轴标签（名称）的颜色</td>
+</tr>
+<tr>
+<td>col.main</td>
+<td>标题颜色</td>
+</tr>
+<tr>
+<td>col.sub</td>
+<td>副标题颜色</td>
+</tr>
+<tr>
+<td>fg (foreground)</td>
+<td>图形的前景色</td>
+</tr>
+<tr>
+<td>bg (background)</td>
+<td>填充色</td>
+</tr>
+</tbody></table>
+<ul>
+<li>对于符号21~25，可以指定边界颜色（col）和填充色（bg）</li>
+<li>在R中，可以通过颜色下标、颜色名称、十六进制的颜色值、RGB值或HSV值来指定颜色。<ul>
+<li>举例来说，<code>col=1</code>、<code>col=&quot;white&quot;</code>、<code>col=&quot;#FFFFFF&quot;</code>、<code>col=rgb(1,1,1)</code> 和 <code>col=hsv(0,0,1)</code> 都是表示白色的等价方式。</li>
+<li>函数<code>rgb()</code>可基于红－绿－蓝三色值生成颜色，而<code>hsv()</code>则基于色相－饱和度－亮度值来生成颜色。<ul>
+<li>rgb的取值范围是[0,1]，RGB的取值范围是[0,255]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">colors <span class="operator">&lt;-</span> rainbow<span class="punctuation">(</span><span class="number">7</span><span class="punctuation">)</span></span><br><span class="line">barplot<span class="punctuation">(</span><span class="built_in">rep</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">7</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">       main <span class="operator">=</span> <span class="string">&quot;The Main Title&quot;</span><span class="punctuation">,</span></span><br><span class="line">       sub <span class="operator">=</span> <span class="string">&quot;The Sub Title&quot;</span><span class="punctuation">,</span></span><br><span class="line">       xlab <span class="operator">=</span> <span class="string">&quot;The name of x-axis&quot;</span><span class="punctuation">,</span></span><br><span class="line">       ylab <span class="operator">=</span> <span class="string">&quot;The name of y-axis&quot;</span><span class="punctuation">,</span></span><br><span class="line">       col <span class="operator">=</span> colors<span class="punctuation">,</span></span><br><span class="line">       col.axis <span class="operator">=</span> colors<span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">       col.lab <span class="operator">=</span> colors<span class="punctuation">[</span><span class="number">2</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">       col.main <span class="operator">=</span> colors<span class="punctuation">[</span><span class="number">3</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">       col.sub <span class="operator">=</span> colors<span class="punctuation">[</span><span class="number">4</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">       fg <span class="operator">=</span> colors<span class="punctuation">[</span><span class="number">5</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">       bg <span class="operator">=</span> colors<span class="punctuation">[</span><span class="number">6</span><span class="punctuation">]</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200713222145147.png" alt="image-20200713222145147" style="zoom: 67%;" />
+
+<h4 id="常用十六进制颜色码"><a href="#常用十六进制颜色码" class="headerlink" title="常用十六进制颜色码"></a>常用十六进制颜色码</h4><table>
+<thead>
+<tr>
+<th>英文代码</th>
+<th>形像颜色</th>
+<th>HEX格式</th>
+<th>RGB格式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LightPink</td>
+<td>浅粉色<font color="FFB6C1"> &lt;- 示例</font></td>
+<td>#FFB6C1</td>
+<td>255,182,193</td>
+</tr>
+<tr>
+<td>Pink</td>
+<td>粉红<font color="FFC0CB"> &lt;- 示例</font></td>
+<td>#FFC0CB</td>
+<td>255,192,203</td>
+</tr>
+<tr>
+<td>Crimson</td>
+<td>猩红<font color="DC143C"> &lt;- 示例</font></td>
+<td>#DC143C</td>
+<td>220,20,60</td>
+</tr>
+<tr>
+<td>LavenderBlush</td>
+<td>偏红的淡紫色<font color="FFF0F5"> &lt;- 示例</font></td>
+<td>#FFF0F5</td>
+<td>255,240,245</td>
+</tr>
+<tr>
+<td>PaleVioletRed</td>
+<td>苍白的紫罗兰红色<font color="DB7093"> &lt;- 示例</font></td>
+<td>#DB7093</td>
+<td>219,112,147</td>
+</tr>
+<tr>
+<td>HotPink</td>
+<td>热情的粉红<font color="FF6984"> &lt;- 示例</font></td>
+<td>#FF69B4</td>
+<td>255,105,180</td>
+</tr>
+<tr>
+<td>DeepPink</td>
+<td>深粉色<font color="FF1493"> &lt;- 示例</font></td>
+<td>#FF1493</td>
+<td>255,20,147</td>
+</tr>
+<tr>
+<td>MediumVioletRed</td>
+<td>适中的紫罗兰红色<font color="C71585"> &lt;- 示例</font></td>
+<td>#C71585</td>
+<td>199,21,133</td>
+</tr>
+<tr>
+<td>Orchid</td>
+<td>兰花的紫色<font color="DA70D6"> &lt;- 示例</font></td>
+<td>#DA70D6</td>
+<td>218,112,214</td>
+</tr>
+<tr>
+<td>Thistle</td>
+<td>蓟<font color="D8BFD8"> &lt;- 示例</font></td>
+<td>#D8BFD8</td>
+<td>216,191,216</td>
+</tr>
+<tr>
+<td>plum</td>
+<td>李子<font color="DDA0DD"> &lt;- 示例</font></td>
+<td>#DDA0DD</td>
+<td>221,160,221</td>
+</tr>
+<tr>
+<td>Violet</td>
+<td>紫罗兰<font color="EE82EE"> &lt;- 示例</font></td>
+<td>#EE82EE</td>
+<td>238,130,238</td>
+</tr>
+<tr>
+<td>Light Purple</td>
+<td>亮紫色<font color="FF00FF"> &lt;- 示例</font></td>
+<td>#FF00FF</td>
+<td>255,0,255</td>
+</tr>
+<tr>
+<td>Pure Purple</td>
+<td>纯紫<font color="FF00FF"> &lt;- 示例</font></td>
+<td>#FF00FF</td>
+<td>255,0,255</td>
+</tr>
+<tr>
+<td>DarkPurple</td>
+<td>深紫色<font color="8B008B"> &lt;- 示例</font></td>
+<td>#8B008B</td>
+<td>139,0,139</td>
+</tr>
+<tr>
+<td>Purple</td>
+<td>紫色<font color="800080"> &lt;- 示例</font></td>
+<td>#800080</td>
+<td>128,0,128</td>
+</tr>
+<tr>
+<td>MediumOrchid</td>
+<td>适中的兰花紫<font color="BA55D3"> &lt;- 示例</font></td>
+<td>#BA55D3</td>
+<td>186,85,211</td>
+</tr>
+<tr>
+<td>DarkVoilet</td>
+<td>深蓝紫色<font color="9400D3"> &lt;- 示例</font></td>
+<td>#9400D3</td>
+<td>148,0,211</td>
+</tr>
+<tr>
+<td>DarkOrchid</td>
+<td>深兰花紫<font color="9932CC"> &lt;- 示例</font></td>
+<td>#9932CC</td>
+<td>153,50,204</td>
+</tr>
+<tr>
+<td>Indigo</td>
+<td>靛青<font color="4B0082"> &lt;- 示例</font></td>
+<td>#4B0082</td>
+<td>75,0,130</td>
+</tr>
+<tr>
+<td>BlueViolet</td>
+<td>深紫罗兰的蓝色<font color="8A2BE2"> &lt;- 示例</font></td>
+<td>#8A2BE2</td>
+<td>138,43,226</td>
+</tr>
+<tr>
+<td>MediumPurple</td>
+<td>适中的蓝紫色<font color="9370DB"> &lt;- 示例</font></td>
+<td>#9370DB</td>
+<td>147,112,219</td>
+</tr>
+<tr>
+<td>MediumSlateBlue</td>
+<td>适中的板岩暗蓝灰色<font color="7B68EE"> &lt;- 示例</font></td>
+<td>#7B68EE</td>
+<td>123,104,238</td>
+</tr>
+<tr>
+<td>SlateBlue</td>
+<td>板岩暗蓝灰色<font color="6A5ACD"> &lt;- 示例</font></td>
+<td>#6A5ACD</td>
+<td>106,90,205</td>
+</tr>
+<tr>
+<td>DarkSlateBlue</td>
+<td>深岩暗蓝灰色<font color="483D8B"> &lt;- 示例</font></td>
+<td>#483D8B</td>
+<td>72,61,139</td>
+</tr>
+<tr>
+<td>Lavender</td>
+<td>薰衣草花的淡紫色<font color="E6E6FA"> &lt;- 示例</font></td>
+<td>#E6E6FA</td>
+<td>230,230,250</td>
+</tr>
+<tr>
+<td>GhostWhite</td>
+<td>幽灵的白色<font color="F8F8FF"> &lt;- 示例</font></td>
+<td>#F8F8FF</td>
+<td>248,248,255</td>
+</tr>
+<tr>
+<td>Indigo Blue</td>
+<td>靛蓝<font color="0000FF"> &lt;- 示例</font></td>
+<td>#0000FF</td>
+<td>0,0,255</td>
+</tr>
+<tr>
+<td>MediumBlue</td>
+<td>适中的蓝色<font color="0000CD"> &lt;- 示例</font></td>
+<td>#0000CD</td>
+<td>0,0,205</td>
+</tr>
+<tr>
+<td>MidnightBlue</td>
+<td>午夜的蓝色<font color="191970"> &lt;- 示例</font></td>
+<td>#191970</td>
+<td>25,25,112</td>
+</tr>
+<tr>
+<td>DarkBlue</td>
+<td>深蓝色<font color="00008B"> &lt;- 示例</font></td>
+<td>#00008B</td>
+<td>0,0,139</td>
+</tr>
+<tr>
+<td>Navy</td>
+<td>海军蓝,深靛蓝<font color="000080"> &lt;- 示例</font></td>
+<td>#000080</td>
+<td>0,0,128</td>
+</tr>
+<tr>
+<td>RoyalBlue</td>
+<td>宝蓝<font color="4169E1"> &lt;- 示例</font></td>
+<td>#4169E1</td>
+<td>65,105,225</td>
+</tr>
+<tr>
+<td>CornflowerBlue</td>
+<td>矢车菊的蓝色<font color="6495ED"> &lt;- 示例</font></td>
+<td>#6495ED</td>
+<td>100,149,237</td>
+</tr>
+<tr>
+<td>LightSteelBlue</td>
+<td>淡钢蓝<font color="B0C4DE"> &lt;- 示例</font></td>
+<td>#B0C4DE</td>
+<td>176,196,222</td>
+</tr>
+<tr>
+<td>LightSlateGray</td>
+<td>浅石板灰<font color="778899"> &lt;- 示例</font></td>
+<td>#778899</td>
+<td>119,136,153</td>
+</tr>
+<tr>
+<td>SlateGray</td>
+<td>石板灰<font color="708090"> &lt;- 示例</font></td>
+<td>#708090</td>
+<td>112,128,144</td>
+</tr>
+<tr>
+<td>DodgerBlue</td>
+<td>道奇蓝<font color="1E90FF"> &lt;- 示例</font></td>
+<td>#1E90FF</td>
+<td>30,144,255</td>
+</tr>
+<tr>
+<td>AliceBlue</td>
+<td>爱丽丝蓝<font color="F0F8FF"> &lt;- 示例</font></td>
+<td>#F0F8FF</td>
+<td>240,248,255</td>
+</tr>
+<tr>
+<td>SteelBlue</td>
+<td>钢蓝<font color="4682B4"> &lt;- 示例</font></td>
+<td>#4682B4</td>
+<td>70,130,180</td>
+</tr>
+<tr>
+<td>LightSkyBlue</td>
+<td>淡蓝色<font color="87CEFA"> &lt;- 示例</font></td>
+<td>#87CEFA</td>
+<td>135,206,250</td>
+</tr>
+<tr>
+<td>TianyiBlue</td>
+<td>天依蓝<font color="66CCFF"> &lt;- 示例</font></td>
+<td>#66CCFF</td>
+<td></td>
+</tr>
+<tr>
+<td>SkyBlue</td>
+<td>天蓝色<font color="87CEEB"> &lt;- 示例</font></td>
+<td>#87CEEB</td>
+<td>135,206,235</td>
+</tr>
+<tr>
+<td>DeepSkyBlue</td>
+<td>深天蓝<font color="00BFFF"> &lt;- 示例</font></td>
+<td>#00BFFF</td>
+<td>0,191,255</td>
+</tr>
+<tr>
+<td>LightBLue</td>
+<td>淡蓝<font color="ADD8E6"> &lt;- 示例</font></td>
+<td>#ADD8E6</td>
+<td>173,216,230</td>
+</tr>
+<tr>
+<td>PowDerBlue</td>
+<td>火药蓝<font color="B0E0E6"> &lt;- 示例</font></td>
+<td>#B0E0E6</td>
+<td>176,224,230</td>
+</tr>
+<tr>
+<td>CadetBlue</td>
+<td>军校蓝<font color="5F9EA0"> &lt;- 示例</font></td>
+<td>#5F9EA0</td>
+<td>95,158,160</td>
+</tr>
+<tr>
+<td>Azure</td>
+<td>蔚蓝色<font color="F0FFFF"> &lt;- 示例</font></td>
+<td>#F0FFFF</td>
+<td>240,255,255</td>
+</tr>
+<tr>
+<td>LightCyan</td>
+<td>淡青色<font color="E1FFFF"> &lt;- 示例</font></td>
+<td>#E1FFFF</td>
+<td>225,255,255</td>
+</tr>
+<tr>
+<td>PaleTurquoise</td>
+<td>苍白的绿宝石<font color="AFEEEE"> &lt;- 示例</font></td>
+<td>#AFEEEE</td>
+<td>175,238,238</td>
+</tr>
+<tr>
+<td>Cyan</td>
+<td>青色<font color="00FFFF"> &lt;- 示例</font></td>
+<td>#00FFFF</td>
+<td>0,255,255</td>
+</tr>
+<tr>
+<td>Aqua</td>
+<td>水绿色<font color="00FFFF"> &lt;- 示例</font></td>
+<td>#00FFFF</td>
+<td>0,255,255</td>
+</tr>
+<tr>
+<td>DarkTurquoise</td>
+<td>深绿宝石<font color="00CED1"> &lt;- 示例</font></td>
+<td>#00CED1</td>
+<td>0,206,209</td>
+</tr>
+<tr>
+<td>DarkSlateGray</td>
+<td>深石板灰<font color="2F4F4F"> &lt;- 示例</font></td>
+<td>#2F4F4F</td>
+<td>47,79,79</td>
+</tr>
+<tr>
+<td>DarkCyan</td>
+<td>深青色<font color="008B8B"> &lt;- 示例</font></td>
+<td>#008B8B</td>
+<td>0,139,139</td>
+</tr>
+<tr>
+<td>Teal</td>
+<td>水鸭色<font color="008080"> &lt;- 示例</font></td>
+<td>#008080</td>
+<td>0,128,128</td>
+</tr>
+<tr>
+<td>MediumTurquoise</td>
+<td>适中的绿宝石<font color="48D1CC"> &lt;- 示例</font></td>
+<td>#48D1CC</td>
+<td>72,209,204</td>
+</tr>
+<tr>
+<td>LightSeaGreen</td>
+<td>浅海洋绿<font color="20B2AA"> &lt;- 示例</font></td>
+<td>#20B2AA</td>
+<td>32,178,170</td>
+</tr>
+<tr>
+<td>Turquoise</td>
+<td>绿宝石<font color="40E0D0"> &lt;- 示例</font></td>
+<td>#40E0D0</td>
+<td>64,224,208</td>
+</tr>
+<tr>
+<td>BabyGreen</td>
+<td>绿玉<font color="7FFFAA"> &lt;- 示例</font></td>
+<td>#7FFFAA</td>
+<td>127,255,170</td>
+</tr>
+<tr>
+<td>MediumAquamarine</td>
+<td>适中的碧绿色<font color="00FA9A"> &lt;- 示例</font></td>
+<td>#00FA9A</td>
+<td>0,250,154</td>
+</tr>
+<tr>
+<td>MediumSpringGreen</td>
+<td>适中的春天的绿色<font color="F5FFFA"> &lt;- 示例</font></td>
+<td>#F5FFFA</td>
+<td>245,255,250</td>
+</tr>
+<tr>
+<td>MintCream</td>
+<td>薄荷奶油<font color="00FF7F"> &lt;- 示例</font></td>
+<td>#00FF7F</td>
+<td>0,255,127</td>
+</tr>
+<tr>
+<td>SpringGreen</td>
+<td>春天的绿色<font color="3CB371"> &lt;- 示例</font></td>
+<td>#3CB371</td>
+<td>60,179,113</td>
+</tr>
+<tr>
+<td>SeaGreen</td>
+<td>海洋绿<font color="2E8B57"> &lt;- 示例</font></td>
+<td>#2E8B57</td>
+<td>46,139,87</td>
+</tr>
+<tr>
+<td>Honeydew</td>
+<td>蜂蜜<font color="f0fff0"> &lt;- 示例</font></td>
+<td>#F0FFF0</td>
+<td>240,255,0</td>
+</tr>
+<tr>
+<td>LightGreen</td>
+<td>淡绿色<font color="90ee90"> &lt;- 示例</font></td>
+<td>#90EE90</td>
+<td>144,238,144</td>
+</tr>
+<tr>
+<td>PaleGreen</td>
+<td>苍白的绿色<font color="98fb98"> &lt;- 示例</font></td>
+<td>#98FB98</td>
+<td>152,251,152</td>
+</tr>
+<tr>
+<td>DarkSeaGreen</td>
+<td>深海洋绿<font color="8fbc8f"> &lt;- 示例</font></td>
+<td>#8FBC8F</td>
+<td>143,188,143</td>
+</tr>
+<tr>
+<td>LimeGreen</td>
+<td>酸橙绿<font color="32cd32"> &lt;- 示例</font></td>
+<td>#32CD32</td>
+<td>50,205,50</td>
+</tr>
+<tr>
+<td>Lime</td>
+<td>纯绿,草绿色<font color="00ff00"> &lt;- 示例</font></td>
+<td>#00FF00</td>
+<td>0,255,0</td>
+</tr>
+<tr>
+<td>ForestGreen</td>
+<td>森林绿<font color="228b22"> &lt;- 示例</font></td>
+<td>#228B22</td>
+<td>34,139,34</td>
+</tr>
+<tr>
+<td>Green</td>
+<td>深绿<font color="008000"> &lt;- 示例</font></td>
+<td>#008000</td>
+<td>0,128,0</td>
+</tr>
+<tr>
+<td>DarkGreen</td>
+<td>深绿色<font color="006400"> &lt;- 示例</font></td>
+<td>#006400</td>
+<td>0,100,0</td>
+</tr>
+<tr>
+<td>Chartreuse</td>
+<td>查特酒绿<font color="7FFF00"> &lt;- 示例</font></td>
+<td>#7FFF00</td>
+<td>127,255,0</td>
+</tr>
+<tr>
+<td>LawnGreen</td>
+<td>草坪绿<font color="7CFC00"> &lt;- 示例</font></td>
+<td>#7CFC00</td>
+<td>124,252,0</td>
+</tr>
+<tr>
+<td>GreenYellow</td>
+<td>绿黄色<font color="ADFF2F"> &lt;- 示例</font></td>
+<td>#ADFF2F</td>
+<td>173,255,47</td>
+</tr>
+<tr>
+<td>OliveDrab</td>
+<td>橄榄土褐色<font color="556B2F"> &lt;- 示例</font></td>
+<td>#556B2F</td>
+<td>85,107,47</td>
+</tr>
+<tr>
+<td>Beige</td>
+<td>米色（浅褐色）<font color="6B8E23"> &lt;- 示例</font></td>
+<td>#6B8E23</td>
+<td>107,142,35</td>
+</tr>
+<tr>
+<td>LightGoldenrodYellow</td>
+<td>浅秋麒麟黄<font color="FAFAD2"> &lt;- 示例</font></td>
+<td>#FAFAD2</td>
+<td>250,250,210</td>
+</tr>
+<tr>
+<td>Ivory</td>
+<td>象牙色<font color="FFFFF0"> &lt;- 示例</font></td>
+<td>#FFFFF0</td>
+<td>255,255,240</td>
+</tr>
+<tr>
+<td>LightYellow</td>
+<td>浅黄色<font color="FFFFE0"> &lt;- 示例</font></td>
+<td>#FFFFE0</td>
+<td>255,255,224</td>
+</tr>
+<tr>
+<td>Yellow</td>
+<td>柠檬黄<font color="FFFF00"> &lt;- 示例</font></td>
+<td>#FFFF00</td>
+<td>255,255,0</td>
+</tr>
+<tr>
+<td>Olive</td>
+<td>橄榄绿<font color="808000"> &lt;- 示例</font></td>
+<td>#808000</td>
+<td>128,128,0</td>
+</tr>
+<tr>
+<td>DarkKhaki</td>
+<td>深卡其布<font color="BDB76B"> &lt;- 示例</font></td>
+<td>#BDB76B</td>
+<td>189,183,107</td>
+</tr>
+<tr>
+<td>LemonChiffon</td>
+<td>柠檬薄纱<font color="FFFACD"> &lt;- 示例</font></td>
+<td>#FFFACD</td>
+<td>255,250,205</td>
+</tr>
+<tr>
+<td>PaleGodenrod</td>
+<td>灰秋麒麟<font color="EEE8AA"> &lt;- 示例</font></td>
+<td>#EEE8AA</td>
+<td>238,232,170</td>
+</tr>
+<tr>
+<td>Khaki</td>
+<td>卡其布<font color="F0E68C"> &lt;- 示例</font></td>
+<td>#F0E68C</td>
+<td>240,230,140</td>
+</tr>
+<tr>
+<td>Gold</td>
+<td>金<font color="FFD700"> &lt;- 示例</font></td>
+<td>#FFD700</td>
+<td>255,215,0</td>
+</tr>
+<tr>
+<td>Cornislk</td>
+<td>玉米色<font color="FFF8DC"> &lt;- 示例</font></td>
+<td>#FFF8DC</td>
+<td>255,248,220</td>
+</tr>
+<tr>
+<td>GoldEnrod</td>
+<td>秋麒麟<font color="DAA520"> &lt;- 示例</font></td>
+<td>#DAA520</td>
+<td>218,165,32</td>
+</tr>
+<tr>
+<td>FloralWhite</td>
+<td>花的白色<font color="FFFAF0"> &lt;- 示例</font></td>
+<td>#FFFAF0</td>
+<td>255,250,240</td>
+</tr>
+<tr>
+<td>OldLace</td>
+<td>老饰带<font color="FDF5E6"> &lt;- 示例</font></td>
+<td>#FDF5E6</td>
+<td>253,245,230</td>
+</tr>
+<tr>
+<td>Wheat</td>
+<td>小麦色<font color="F5DEB3"> &lt;- 示例</font></td>
+<td>#F5DEB3</td>
+<td>245,222,179</td>
+</tr>
+<tr>
+<td>Moccasin</td>
+<td>鹿皮鞋<font color="FFE4B5"> &lt;- 示例</font></td>
+<td>#FFE4B5</td>
+<td>255,228,181</td>
+</tr>
+<tr>
+<td>Orange</td>
+<td>橙色<font color="FFA500"> &lt;- 示例</font></td>
+<td>#FFA500</td>
+<td>255,165,0</td>
+</tr>
+<tr>
+<td>PapayaWhip</td>
+<td>番木瓜<font color="FFEFD5"> &lt;- 示例</font></td>
+<td>#FFEFD5</td>
+<td>255,239,213</td>
+</tr>
+<tr>
+<td>BlanchedAlmond</td>
+<td>漂白的杏仁<font color="FFEBCD"> &lt;- 示例</font></td>
+<td>#FFEBCD</td>
+<td>255,235,205</td>
+</tr>
+<tr>
+<td>NavajoWhite</td>
+<td>Navajo白<font color="FFDEAD"> &lt;- 示例</font></td>
+<td>#FFDEAD</td>
+<td>255,222,173</td>
+</tr>
+<tr>
+<td>AntiqueWhite</td>
+<td>古代的白色<font color="FAEBD7"> &lt;- 示例</font></td>
+<td>#FAEBD7</td>
+<td>250,235,215</td>
+</tr>
+<tr>
+<td>Tan</td>
+<td>晒黑<font color="D2B48C"> &lt;- 示例</font></td>
+<td>#D2B48C</td>
+<td>210,180,140</td>
+</tr>
+<tr>
+<td>BrulyWood</td>
+<td>结实的树<font color="DEB887"> &lt;- 示例</font></td>
+<td>#DEB887</td>
+<td>222,184,135</td>
+</tr>
+<tr>
+<td>Bisque</td>
+<td>（浓汤）乳脂，番茄等<font color="FFE4C4"> &lt;- 示例</font></td>
+<td>#FFE4C4</td>
+<td>255,228,196</td>
+</tr>
+<tr>
+<td>DarkOrange</td>
+<td>深橙色<font color="FF8C00"> &lt;- 示例</font></td>
+<td>#FF8C00</td>
+<td>255,140,0</td>
+</tr>
+<tr>
+<td>Linen</td>
+<td>亚麻布<font color="FAF0E6"> &lt;- 示例</font></td>
+<td>#FAF0E6</td>
+<td>250,240,230</td>
+</tr>
+<tr>
+<td>Peru</td>
+<td>秘鲁<font color="CD853F"> &lt;- 示例</font></td>
+<td>#CD853F</td>
+<td>205,133,63</td>
+</tr>
+<tr>
+<td>PeachPuff</td>
+<td>桃色<font color="FFDAB9"> &lt;- 示例</font></td>
+<td>#FFDAB9</td>
+<td>255,218,185</td>
+</tr>
+<tr>
+<td>SandyBrown</td>
+<td>沙棕色<font color="F4A460"> &lt;- 示例</font></td>
+<td>#F4A460</td>
+<td>244,164,96</td>
+</tr>
+<tr>
+<td>Chocolate</td>
+<td>巧克力<font color="D2691E"> &lt;- 示例</font></td>
+<td>#D2691E</td>
+<td>210,105,30</td>
+</tr>
+<tr>
+<td>SaddleBrown</td>
+<td>马鞍棕色<font color="8B4513"> &lt;- 示例</font></td>
+<td>#8B4513</td>
+<td>139,69,19</td>
+</tr>
+<tr>
+<td>SeaShell</td>
+<td>海贝壳<font color="FFF5EE"> &lt;- 示例</font></td>
+<td>#FFF5EE</td>
+<td>255,245,238</td>
+</tr>
+<tr>
+<td>Sienna</td>
+<td>黄土赭色<font color="A0522D"> &lt;- 示例</font></td>
+<td>#A0522D</td>
+<td>160,82,45</td>
+</tr>
+<tr>
+<td>LightSalmon</td>
+<td>浅鲜肉（鲑鱼）色<font color="FFA07A"> &lt;- 示例</font></td>
+<td>#FFA07A</td>
+<td>255,160,122</td>
+</tr>
+<tr>
+<td>Coral</td>
+<td>珊瑚<font color="FF7F50"> &lt;- 示例</font></td>
+<td>#FF7F50</td>
+<td>255,127,80</td>
+</tr>
+<tr>
+<td>OrangeRed</td>
+<td>橙红色<font color="FF4500"> &lt;- 示例</font></td>
+<td>#FF4500</td>
+<td>255,69,0</td>
+</tr>
+<tr>
+<td>DarkSalmon</td>
+<td>深鲜肉（鲑鱼）色<font color="E9967A"> &lt;- 示例</font></td>
+<td>#E9967A</td>
+<td>233,150,122</td>
+</tr>
+<tr>
+<td>Tomato</td>
+<td>番茄<font color="FF6347"> &lt;- 示例</font></td>
+<td>#FF6347</td>
+<td>255,99,71</td>
+</tr>
+<tr>
+<td>MistyRose</td>
+<td>薄雾玫瑰<font color="FFE4E1"> &lt;- 示例</font></td>
+<td>#FFE4E1</td>
+<td>255,228,225</td>
+</tr>
+<tr>
+<td>Salmon</td>
+<td>鲜肉（鲑鱼）色<font color="FA8072"> &lt;- 示例</font></td>
+<td>#FA8072</td>
+<td>250,128,114</td>
+</tr>
+<tr>
+<td>Snow</td>
+<td>雪<font color="FFFAFA"> &lt;- 示例</font></td>
+<td>#FFFAFA</td>
+<td>255,250,250</td>
+</tr>
+<tr>
+<td>LightCoral</td>
+<td>淡珊瑚色<font color="F08080"> &lt;- 示例</font></td>
+<td>#F08080</td>
+<td>240,128,128</td>
+</tr>
+<tr>
+<td>RosyBrown</td>
+<td>玫瑰棕色<font color="BC8F8F"> &lt;- 示例</font></td>
+<td>#BC8F8F</td>
+<td>188,143,143</td>
+</tr>
+<tr>
+<td>IndianRed</td>
+<td>印度红<font color="CD5C5C"> &lt;- 示例</font></td>
+<td>#CD5C5C</td>
+<td>205,92,92</td>
+</tr>
+<tr>
+<td>Red</td>
+<td>纯红<font color="FF0000"> &lt;- 示例</font></td>
+<td>#FF0000</td>
+<td>255,0,0</td>
+</tr>
+<tr>
+<td>Brown</td>
+<td>棕色<font color="A52A2A"> &lt;- 示例</font></td>
+<td>#A52A2A</td>
+<td>165,42,42</td>
+</tr>
+<tr>
+<td>FireBrick</td>
+<td>耐火砖<font color="B22222"> &lt;- 示例</font></td>
+<td>#B22222</td>
+<td>178,34,34</td>
+</tr>
+<tr>
+<td>DarkRed</td>
+<td>深红色<font color="8B0000"> &lt;- 示例</font></td>
+<td>#8B0000</td>
+<td>139,0,0</td>
+</tr>
+<tr>
+<td>Maroon</td>
+<td>栗色<font color="800000"> &lt;- 示例</font></td>
+<td>#800000</td>
+<td>128,0,0</td>
+</tr>
+<tr>
+<td>White</td>
+<td>纯白<font color="FFFFFF"> &lt;- 示例</font></td>
+<td>#FFFFFF</td>
+<td>255,255,255</td>
+</tr>
+<tr>
+<td>WhiteSmoke</td>
+<td>白烟<font color="F5F5F5"> &lt;- 示例</font></td>
+<td>#F5F5F5</td>
+<td>245,245,245</td>
+</tr>
+<tr>
+<td>Gainsboro</td>
+<td>Gainsboro<font color="DCDCDC"> &lt;- 示例</font></td>
+<td>#DCDCDC</td>
+<td>220,220,220</td>
+</tr>
+<tr>
+<td>LightGray</td>
+<td>浅灰色<font color="D3D3D3"> &lt;- 示例</font></td>
+<td>#D3D3D3</td>
+<td>211,211,211</td>
+</tr>
+<tr>
+<td>Silver</td>
+<td>银白色<font color="C0C0C0"> &lt;- 示例</font></td>
+<td>#C0C0C0</td>
+<td>192,192,192</td>
+</tr>
+<tr>
+<td>DarkGray</td>
+<td>深灰色<font color="A9A9A9"> &lt;- 示例</font></td>
+<td>#A9A9A9</td>
+<td>169,169,169</td>
+</tr>
+<tr>
+<td>Gray</td>
+<td>灰色<font color="808080"> &lt;- 示例</font></td>
+<td>#808080</td>
+<td>128,128,128</td>
+</tr>
+<tr>
+<td>DimGray</td>
+<td>暗淡的灰色<font color="696969"> &lt;- 示例</font></td>
+<td>#696969</td>
+<td>105,105,105</td>
+</tr>
+<tr>
+<td>Black</td>
+<td>纯黑<font color="000000"> &lt;- 示例</font></td>
+<td>#000000</td>
+<td>0,0,0</td>
+</tr>
+</tbody></table>
+<h3 id="2-使用包来获得颜色"><a href="#2-使用包来获得颜色" class="headerlink" title="2. 使用包来获得颜色"></a>2. 使用包来获得颜色</h3><p>R中预设了很多种颜色，可以通过<code>colors()</code>来查看当前可以使用的预设颜色</p>
+<p>R中也有多种用于创建连续型颜色向量的函数，包括<code>rainbow()</code>、<code>heat.colors()</code>、<code>terrain.colors()</code>、<code>topo.colors()</code>以及<code>cm.colors()</code>。举例来说，rainbow(10)可以生成10种连续的“彩虹型”颜色。</p>
+<p>与此同时，也可以使用第三方包<code>RColorBrewer</code>来选择一些吸引人的颜色：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span>RColorBrewer<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">display.brewer.all<span class="punctuation">(</span><span class="punctuation">)</span> <span class="comment">#查看该包给出的预设Color Set</span></span><br><span class="line">display.brewer.pal<span class="punctuation">(</span><span class="string">&quot;name&quot;</span><span class="punctuation">)</span> <span class="comment">#查看某个Set中的具体元素</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200713215809694.png" alt="image-20200713215809694"></p>
+<p>使用<code>brewer.pal(n,&quot;Set Name&quot;)</code>来获得一个颜色值的向量，如：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">brewer.pal<span class="punctuation">(</span><span class="number">7</span><span class="punctuation">,</span><span class="string">&quot;Accent&quot;</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span> <span class="string">&quot;#7FC97F&quot;</span> <span class="string">&quot;#BEAED4&quot;</span> <span class="string">&quot;#FDC086&quot;</span> <span class="string">&quot;#FFFF99&quot;</span> <span class="string">&quot;#386CB0&quot;</span> <span class="string">&quot;#F0027F&quot;</span> <span class="string">&quot;#BF5B17&quot;</span></span><br><span class="line"></span><br><span class="line">barplot<span class="punctuation">(</span><span class="built_in">rep</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">7</span><span class="punctuation">)</span><span class="punctuation">,</span>col<span class="operator">=</span>brewer.pal<span class="punctuation">(</span><span class="number">7</span><span class="punctuation">,</span><span class="string">&quot;Accent&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200713220349840.png" alt="image-20200713220349840" style="zoom:33%;" />
+
+<h2 id="图形尺寸和边界尺寸"><a href="#图形尺寸和边界尺寸" class="headerlink" title="图形尺寸和边界尺寸"></a>图形尺寸和边界尺寸</h2><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pin</td>
+<td>以英寸表示的图形尺寸（宽和高）</td>
+</tr>
+<tr>
+<td>mai</td>
+<td>以数值向量表示的边界大小，顺序为“下、左、上、右”，单位为英寸</td>
+</tr>
+<tr>
+<td>mar</td>
+<td>以数值向量表示的边界大小，顺序为“下、左、上、右”，单位为英分①。默认值为 c(5, 4, 4, 2) + 0.1</td>
+</tr>
+</tbody></table>
+<h2 id="在图片上继续修改"><a href="#在图片上继续修改" class="headerlink" title="在图片上继续修改"></a>在图片上继续修改</h2><h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h3><p>在已经绘制出一个图像的时候，可以在这张图的基础上继续修改</p>
+<p>可以使用title()函数为图形添加标题和坐标轴标签。调用格式为：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title<span class="punctuation">(</span>main<span class="operator">=</span><span class="string">&quot;main title&quot;</span><span class="punctuation">,</span> </span><br><span class="line">      sub<span class="operator">=</span><span class="string">&quot;subtitle&quot;</span><span class="punctuation">,</span> </span><br><span class="line">      xlab<span class="operator">=</span><span class="string">&quot;x-axis label&quot;</span><span class="punctuation">,</span> </span><br><span class="line">      ylab<span class="operator">=</span><span class="string">&quot;y-axis label&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<p>函数title()中亦可指定其他图形参数（如文本大小、字体、旋转角度和颜色）。举例来说，以下代码将生成红色的标题和蓝色的副标题，以及比默认大小小25%的绿色<em>x</em>轴、<em>y</em>轴标签：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title<span class="punctuation">(</span>main<span class="operator">=</span><span class="string">&quot;My Title&quot;</span><span class="punctuation">,</span> </span><br><span class="line">      col.main<span class="operator">=</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span> </span><br><span class="line">      sub<span class="operator">=</span><span class="string">&quot;My Subtitle&quot;</span><span class="punctuation">,</span> </span><br><span class="line">      col.sub<span class="operator">=</span><span class="string">&quot;blue&quot;</span><span class="punctuation">,</span> </span><br><span class="line">      xlab<span class="operator">=</span><span class="string">&quot;My X label&quot;</span><span class="punctuation">,</span> </span><br><span class="line">      ylab<span class="operator">=</span><span class="string">&quot;My Y label&quot;</span><span class="punctuation">,</span> </span><br><span class="line">      col.lab<span class="operator">=</span><span class="string">&quot;green&quot;</span><span class="punctuation">,</span> </span><br><span class="line">      cex.lab<span class="operator">=</span><span class="number">0.75</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-自定义坐标轴"><a href="#2-自定义坐标轴" class="headerlink" title="2. 自定义坐标轴"></a>2. 自定义坐标轴</h3><p>可以使用函数axis()来创建自定义的坐标轴，而非使用R中的默认坐标轴。其格式为：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axis<span class="punctuation">(</span>side<span class="punctuation">,</span> at<span class="operator">=</span><span class="punctuation">,</span> labels<span class="operator">=</span><span class="punctuation">,</span> pos<span class="operator">=</span><span class="punctuation">,</span> lty<span class="operator">=</span><span class="punctuation">,</span> col<span class="operator">=</span><span class="punctuation">,</span> las<span class="operator">=</span><span class="punctuation">,</span> tck<span class="operator">=</span><span class="punctuation">,</span> ...<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<p>相关参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>side</td>
+<td>一个整数，表示在图形的哪边绘制坐标轴（1&#x3D;下，2&#x3D;左，3&#x3D;上，4&#x3D;右）</td>
+</tr>
+<tr>
+<td>at</td>
+<td>一个数值型向量，表示需要绘制刻度线的位置</td>
+</tr>
+<tr>
+<td>labels</td>
+<td>一个字符型向量，表示置于刻度线旁边的文字标签（如果为 NULL，则将直接使用 at 中的值）</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>坐标轴线绘制位置的坐标（即与另一条坐标轴相交位置的值）</td>
+</tr>
+<tr>
+<td>lty</td>
+<td>线条类型</td>
+</tr>
+<tr>
+<td>col</td>
+<td>线条和刻度线颜色</td>
+</tr>
+<tr>
+<td>las</td>
+<td>标签是否平行于（&#x3D;0）或垂直于（&#x3D;2）坐标轴<br/>numeric in {0,1,2,3}; the style of axis labels.<br/>0:<br/>always parallel to the axis [default],<br/>1:<br/>always horizontal,<br/>2:<br/>always perpendicular to the axis,<br/>3:<br/>always vertical.<br/>Also supported by mtext. Note that string&#x2F;character rotation via argument srt to par does not affect the axis labels.</td>
+</tr>
+<tr>
+<td>tck</td>
+<td>刻度线的长度，以相对于绘图区域大小的分数表示（负值表示在图形外侧，正值表示在图形内侧，0表示禁用刻度，1表示绘制网格线）；默认值为–0.01</td>
+</tr>
+<tr>
+<td>xaxt&#x3D;”n”</td>
+<td>禁用x坐标轴（会留下框架线，只是去除了刻度）</td>
+</tr>
+<tr>
+<td>yaxt&#x3D;”n”</td>
+<td>禁用y坐标轴</td>
+</tr>
+</tbody></table>
+<h3 id="3-参考线"><a href="#3-参考线" class="headerlink" title="3. 参考线"></a>3. 参考线</h3><p>函数abline()可以用来为图形添加参考线。其使用格式为：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abline<span class="punctuation">(</span>h<span class="operator">=</span>yvalues<span class="punctuation">,</span> v<span class="operator">=</span>xvalues<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<p>函数abline()中也可以指定其他图形参数（如线条类型、颜色和宽度）:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abline<span class="punctuation">(</span>v<span class="operator">=</span>seq<span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">10</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">)</span><span class="punctuation">,</span> lty<span class="operator">=</span><span class="number">2</span><span class="punctuation">,</span> col<span class="operator">=</span><span class="string">&quot;blue&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<p>举例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plot<span class="punctuation">(</span><span class="built_in">rep</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">7</span><span class="punctuation">)</span><span class="punctuation">,</span>xlim <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">10</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">abline<span class="punctuation">(</span>v<span class="operator">=</span>seq<span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">10</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">)</span><span class="punctuation">,</span> lty<span class="operator">=</span><span class="number">2</span><span class="punctuation">,</span> col<span class="operator">=</span><span class="string">&quot;blue&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200713224806079.png" alt="image-20200713224806079" style="zoom:67%;" />
+
+<h3 id="4-图例"><a href="#4-图例" class="headerlink" title="4. 图例"></a>4. 图例</h3><p>当图形中包含的数据不止一组时，图例可以帮助你辨别出每个条形、扇形区域或折线各代表哪一类数据。我们可以使用函数legend()来添加图例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">legend<span class="punctuation">(</span>location<span class="punctuation">,</span> title<span class="punctuation">,</span> legend<span class="punctuation">,</span> ...<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>location</td>
+<td>有许多方式可以指定图例的位置。<br />你可以直接给定图例左上角的x、y坐标，也可以执行<code>locator(1)</code>，然后通过鼠标单击给出图例的位置，<br />还可以使用关键字<code>“bottomright”, “bottom”, “bottomleft”, “left”, “topleft”, “top”, “topright”, “right”, “center”</code>放置图例。<br />如果你使用了以上某个关键字，那么可以同时使用参数inset&#x3D;指定图例向图形内侧移动的大小（以绘图区域大小的分数表示）</td>
+</tr>
+<tr>
+<td>title</td>
+<td>图例标题的字符串（可选）</td>
+</tr>
+<tr>
+<td>legend</td>
+<td>图例标签组成的字符型向量</td>
+</tr>
+<tr>
+<td>x, y</td>
+<td>the x and y co-ordinates to be used to position the legend.</td>
+</tr>
+<tr>
+<td>fill</td>
+<td>if specified, this argument will cause boxes filled with the specified colors (or shaded in the specified colors) to appear beside the legend text</td>
+</tr>
+<tr>
+<td>col</td>
+<td>the color of points or lines appearing in the legend.</td>
+</tr>
+<tr>
+<td>border</td>
+<td>the border color for the boxes (used only if fill is specified).</td>
+</tr>
+<tr>
+<td>lty, lwd</td>
+<td>the plotting symbols appearing in the legend, as numeric vector or a vector of 1-character strings. Unlike points, this can all be specified as a single multi-character string. Must be specified for symbol drawing.</td>
+</tr>
+<tr>
+<td>angle</td>
+<td>angle of shading lines.</td>
+</tr>
+<tr>
+<td>density</td>
+<td>the density of shading lines, if numeric and positive. If NULL or negative or NA color filling is assumed.</td>
+</tr>
+<tr>
+<td>bty</td>
+<td>the type of box to be drawn around the legend. The allowed values are “o” (the default) and “n”.</td>
+</tr>
+<tr>
+<td>bg</td>
+<td>the background color for the legend box. (Note that this is only used if bty !&#x3D; “n”.)</td>
+</tr>
+<tr>
+<td>box.lty, box.lwd, box.col</td>
+<td>the line type, width and color for the legend box (if bty &#x3D; “o”).</td>
+</tr>
+<tr>
+<td>pt.bg</td>
+<td>the background color for the points, corresponding to its argument bg.</td>
+</tr>
+<tr>
+<td>cex</td>
+<td>character expansion factor relative to current par(“cex”). Used for text, and provides the default for pt.cex.</td>
+</tr>
+<tr>
+<td>pt.cex</td>
+<td>expansion factor(s) for the points.</td>
+</tr>
+<tr>
+<td>pt.lwd</td>
+<td>line width for the points, defaults to the one for lines, or if that is not set, to par(“lwd”).</td>
+</tr>
+<tr>
+<td>xjust</td>
+<td>how the legend is to be justified relative to the legend x location. A value of 0 means left justified, 0.5 means centered and 1 means right justified.</td>
+</tr>
+<tr>
+<td>yjust</td>
+<td>the same as xjust for the legend y location.</td>
+</tr>
+<tr>
+<td>x.intersp</td>
+<td>character interspacing factor for horizontal (x) spacing.</td>
+</tr>
+<tr>
+<td>y.intersp</td>
+<td>the same for vertical (y) line distances.</td>
+</tr>
+<tr>
+<td>adj</td>
+<td>numeric of length 1 or 2; the string adjustment for legend text. Useful for y-adjustment when labels are plotmath expressions.</td>
+</tr>
+<tr>
+<td>text.width</td>
+<td>the width of the legend text in x (“user”) coordinates. (Should be a single positive number even for a reversed x axis.) Defaults to the proper value computed by strwidth(legend).</td>
+</tr>
+<tr>
+<td>text.col</td>
+<td>the color used for the legend text.</td>
+</tr>
+<tr>
+<td>text.font</td>
+<td>the font used for the legend text, see text.</td>
+</tr>
+<tr>
+<td>merge</td>
+<td>logical; if TRUE, merge points and lines but not filled boxes. Defaults to TRUE if there are points and lines.</td>
+</tr>
+<tr>
+<td>trace</td>
+<td>logical; if TRUE, shows how legend does all its magical computations.</td>
+</tr>
+<tr>
+<td>plot</td>
+<td>logical. If FALSE, nothing is plotted but the sizes are returned.</td>
+</tr>
+<tr>
+<td>ncol</td>
+<td>the number of columns in which to set the legend items (default is 1, a vertical legend).</td>
+</tr>
+<tr>
+<td>horiz</td>
+<td>logical; if TRUE, set the legend horizontally rather than vertically (specifying horiz overrides the ncol specification).</td>
+</tr>
+<tr>
+<td>inset</td>
+<td>inset distance(s) from the margins as a fraction of the plot region when legend is placed by keyword.</td>
+</tr>
+<tr>
+<td>xpd</td>
+<td>if supplied, a value of the graphical parameter xpd to be used while the legend is being drawn.</td>
+</tr>
+<tr>
+<td>title.col</td>
+<td>color for title.</td>
+</tr>
+<tr>
+<td>title.adj</td>
+<td>horizontal adjustment for title: see the help for par(“adj”).</td>
+</tr>
+<tr>
+<td>seg.len</td>
+<td>the length of lines drawn to illustrate lty and&#x2F;or lwd (in units of character widths).</td>
+</tr>
+<tr>
+<td>···</td>
+<td>其他选项。如果图例标示的是颜色不同的线条，需要指定col&#x3D;加上颜色值组成的向量。如果图例标示的是符号不同的点，则需指定pch&#x3D;加上符号的代码组成的向量。如果图例标示的是不同的线条宽度或线条类型，请使用lwd&#x3D;或lty&#x3D;加上宽度值或类型值组成的向量。要为图例创建颜色填充的盒形（常见于条形图、箱线图或饼图），需要使用参数fill&#x3D;加上颜色值组成的向量</td>
+</tr>
+</tbody></table>
+<p>举例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">dose <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">20</span><span class="punctuation">,</span> <span class="number">30</span><span class="punctuation">,</span> <span class="number">40</span><span class="punctuation">,</span> <span class="number">45</span><span class="punctuation">,</span> <span class="number">60</span><span class="punctuation">)</span> </span><br><span class="line">drugA <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">16</span><span class="punctuation">,</span> <span class="number">20</span><span class="punctuation">,</span> <span class="number">27</span><span class="punctuation">,</span> <span class="number">40</span><span class="punctuation">,</span> <span class="number">60</span><span class="punctuation">)</span> </span><br><span class="line">drugB <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">15</span><span class="punctuation">,</span> <span class="number">18</span><span class="punctuation">,</span> <span class="number">25</span><span class="punctuation">,</span> <span class="number">31</span><span class="punctuation">,</span> <span class="number">40</span><span class="punctuation">)</span> </span><br><span class="line"></span><br><span class="line">opar <span class="operator">&lt;-</span> par<span class="punctuation">(</span>no.readonly<span class="operator">=</span><span class="literal">TRUE</span><span class="punctuation">)</span> </span><br><span class="line">par<span class="punctuation">(</span>lwd<span class="operator">=</span><span class="number">2</span><span class="punctuation">,</span> cex<span class="operator">=</span><span class="number">1.5</span><span class="punctuation">,</span> font.lab<span class="operator">=</span><span class="number">2</span><span class="punctuation">)</span> <span class="comment">#增加线条、文本、符号、标签的宽度或大小</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#以绘图drugA数据绘图</span></span><br><span class="line">plot<span class="punctuation">(</span>dose<span class="punctuation">,</span> drugA<span class="punctuation">,</span> type<span class="operator">=</span><span class="string">&quot;b&quot;</span><span class="punctuation">,</span> </span><br><span class="line"> pch<span class="operator">=</span><span class="number">15</span><span class="punctuation">,</span> lty<span class="operator">=</span><span class="number">1</span><span class="punctuation">,</span> col<span class="operator">=</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span> ylim<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span> <span class="number">60</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line"> main<span class="operator">=</span><span class="string">&quot;Drug A vs. Drug B&quot;</span><span class="punctuation">,</span> </span><br><span class="line"> xlab<span class="operator">=</span><span class="string">&quot;Drug Dosage&quot;</span><span class="punctuation">,</span> ylab<span class="operator">=</span><span class="string">&quot;Drug Response&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#添加drugB的数据</span></span><br><span class="line">lines<span class="punctuation">(</span>dose<span class="punctuation">,</span> drugB<span class="punctuation">,</span> type<span class="operator">=</span><span class="string">&quot;b&quot;</span><span class="punctuation">,</span> pch<span class="operator">=</span><span class="number">17</span><span class="punctuation">,</span> lty<span class="operator">=</span><span class="number">2</span><span class="punctuation">,</span> col<span class="operator">=</span><span class="string">&quot;blue&quot;</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#添加次要刻度线，使用到了Hmisc包</span></span><br><span class="line">library<span class="punctuation">(</span>Hmisc<span class="punctuation">)</span> </span><br><span class="line">minor.tick<span class="punctuation">(</span>nx<span class="operator">=</span><span class="number">3</span><span class="punctuation">,</span> ny<span class="operator">=</span><span class="number">3</span><span class="punctuation">,</span> tick.ratio<span class="operator">=</span><span class="number">0.5</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#添加图例</span></span><br><span class="line">legend<span class="punctuation">(</span><span class="string">&quot;topleft&quot;</span><span class="punctuation">,</span> <span class="comment">#location，位置</span></span><br><span class="line">       inset<span class="operator">=</span><span class="number">.05</span><span class="punctuation">,</span> </span><br><span class="line">       title<span class="operator">=</span><span class="string">&quot;Drug Type&quot;</span><span class="punctuation">,</span> </span><br><span class="line">       legend <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;A&quot;</span><span class="punctuation">,</span><span class="string">&quot;B&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">       lty<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">       pch<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">15</span><span class="punctuation">,</span> <span class="number">17</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">       col<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span> <span class="string">&quot;blue&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">par<span class="punctuation">(</span>opar<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200713225358362.png" alt="image-20200713225358362" style="zoom:50%;" />
+
+<h3 id="5-标注"><a href="#5-标注" class="headerlink" title="5. 标注"></a>5. 标注</h3><h4 id="文本标注"><a href="#文本标注" class="headerlink" title="文本标注"></a>文本标注</h4><p>可以通过函数<code>text()</code>和<code>mtext()</code>将文本添加到图形上。</p>
+<p><code>text()</code>可向绘图区域内部添加文本，而<code>mtext()</code>则向图形的四个边界之一添加文本。</p>
+<ul>
+<li>text()函数也通常用来标示图形中的点。我们只需指定一系 列的x、y坐标作为位置参数，同时以向量的形式指定要放置的文本。x、y和文本标签向量的长度应当相同。</li>
+</ul>
+<p>使用格式分别为：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">text<span class="punctuation">(</span>location<span class="punctuation">,</span> <span class="string">&quot;text to place&quot;</span><span class="punctuation">,</span> pos<span class="punctuation">,</span> ...<span class="punctuation">)</span> </span><br><span class="line">mtext<span class="punctuation">(</span><span class="string">&quot;text to place&quot;</span><span class="punctuation">,</span> side<span class="punctuation">,</span> line<span class="operator">=</span>n<span class="punctuation">,</span> ...<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>location</td>
+<td>文本的位置参数。可为一对 x、y 坐标，也可通过指定 location 为 locator(1)使用鼠标交互式地确定摆放位置</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>文本相对于位置参数的方位。1&#x3D;下，2&#x3D;左，3&#x3D;上，4&#x3D;右。如果指定了 pos，就可以同时指定参数 offset&#x3D; 作为偏移量，以相对于单个字符宽度的比例表示</td>
+</tr>
+<tr>
+<td>side</td>
+<td>指定用来放置文本的边。1&#x3D;下，2&#x3D;左，3&#x3D;上，4&#x3D;右。你可以指定参数 line&#x3D;来内移或外移文本，随着值的增加，文本将外移。也可使用 adj&#x3D;0 将文本向左下对齐，或使用 adj&#x3D;1 右上对齐</td>
+</tr>
+</tbody></table>
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">attach<span class="punctuation">(</span>mtcars<span class="punctuation">)</span> </span><br><span class="line"><span class="comment">#使用mtcars预设数据绘图</span></span><br><span class="line">plot<span class="punctuation">(</span>wt<span class="punctuation">,</span> mpg<span class="punctuation">,</span>  <span class="comment">#使用wt，mpg的值作为x, y坐标</span></span><br><span class="line">     main<span class="operator">=</span><span class="string">&quot;Mileage vs. Car Weight&quot;</span><span class="punctuation">,</span> </span><br><span class="line">     xlab<span class="operator">=</span><span class="string">&quot;Weight&quot;</span><span class="punctuation">,</span> ylab<span class="operator">=</span><span class="string">&quot;Mileage&quot;</span><span class="punctuation">,</span> </span><br><span class="line">     pch<span class="operator">=</span><span class="number">18</span><span class="punctuation">,</span> col<span class="operator">=</span><span class="string">&quot;blue&quot;</span><span class="punctuation">)</span> </span><br><span class="line"><span class="comment">#进行标注</span></span><br><span class="line">text<span class="punctuation">(</span>wt<span class="punctuation">,</span> mpg<span class="punctuation">,</span> <span class="comment">#x, y坐标是原先plot时候的x, y值</span></span><br><span class="line">     row.names<span class="punctuation">(</span>mtcars<span class="punctuation">)</span><span class="punctuation">,</span> <span class="comment">#读取mtcars每一行的标签</span></span><br><span class="line">     cex<span class="operator">=</span><span class="number">0.6</span><span class="punctuation">,</span> pos<span class="operator">=</span><span class="number">4</span><span class="punctuation">,</span> col<span class="operator">=</span><span class="string">&quot;red&quot;</span><span class="punctuation">)</span> </span><br><span class="line"></span><br><span class="line">detach<span class="punctuation">(</span>mtcars<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200714125627567.png" alt="image-20200714125627567" style="zoom: 80%;" />
+
+
+
+<h4 id="数学标注"><a href="#数学标注" class="headerlink" title="数学标注"></a>数学标注</h4><p>可以使用类似于 TeX 中的写法为图形添加数学符号和公式。</p>
+<p>要即时看效果，可以尝试执行<code>demo(plotmath)</code>。</p>
+<p>函数<code>plotmath()</code>可以为图形主体或边界上的标题、坐标轴名称或文本标注添加数学符号。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>01. R &lt;- Plot 图像参数</p><p><a href="https://zhenyumi.github.io/posts/5542a9bf/">https://zhenyumi.github.io/posts/5542a9bf/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-07-12</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-07-17</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E9%80%9F%E6%9F%A5/">速查</a><a class="link-muted mr-2" rel="tag" href="/tags/R/">R</a><a class="link-muted mr-2" rel="tag" href="/tags/Statistics/">Statistics</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/a3d86d96/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">常用颜色代码</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/8087115f/"><span class="level-item">00. R &lt;- 数据类型</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">196</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">28</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Undefined-notes/"><span class="level-start"><span class="level-item">Undefined notes</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-19T06:36:03.000Z">2022-09-19</time></p><p class="title"><a href="/posts/f5b7721a/">Embedding and Frozen Sectioning</a></p><p class="categories"><a href="/categories/Undefined-notes/">Undefined notes</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

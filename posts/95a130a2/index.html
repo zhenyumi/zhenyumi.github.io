@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>L10 Synapses - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="The types of synapses and related receptors, mechanisms, etc. Also discussed the mechanism of LTP&amp;#x2F;LTD."><meta property="og:type" content="blog"><meta property="og:title" content="L10 Synapses"><meta property="og:url" content="https://zhenyumi.github.io/posts/95a130a2/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="The types of synapses and related receptors, mechanisms, etc. Also discussed the mechanism of LTP&amp;#x2F;LTD."><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><meta property="article:published_time" content="2021-01-02T09:09:04.000Z"><meta property="article:modified_time" content="2021-01-02T09:09:04.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="Animal Physiology"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/95a130a2/"},"headline":"L10 Synapses","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"],"datePublished":"2021-01-02T09:09:04.000Z","dateModified":"2021-01-02T09:09:04.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"The types of synapses and related receptors, mechanisms, etc. Also discussed the mechanism of LTP&#x2F;LTD."}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/95a130a2/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png" alt="L10 Synapses"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-01-02T09:09:04.000Z" title="2021/1/2 19:09:04">2021-01-02</time>发表</span><span class="level-item"><time dateTime="2021-01-02T09:09:04.000Z" title="2021/1/2 19:09:04">2021-01-02</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/Academic-Notebook/">Academic Notebook</a><span> / </span><a class="link-muted" href="/categories/Academic-Notebook/Animal-Physiology/">Animal Physiology</a></span><span class="level-item">21 分钟读完 (大约3167个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">L10 Synapses</h1><div class="content"><!--toc-->
+
+<h1 id="一、Synaptic-strength-underlies-learning-and-memory"><a href="#一、Synaptic-strength-underlies-learning-and-memory" class="headerlink" title="一、Synaptic strength underlies learning and memory"></a>一、Synaptic strength underlies learning and memory</h1><h2 id="Synaptic-functions"><a href="#Synaptic-functions" class="headerlink" title="Synaptic functions"></a>Synaptic functions</h2><p>Synaptic transmission</p>
+<ul>
+<li>Action potential – presynaptic signal – is rapid and transient</li>
+<li>Can be excitatory or inhibitory </li>
+<li>Neuromuscular junction as an example</li>
+</ul>
+<p>Synaptic plasticity</p>
+<ul>
+<li>The ability to change the synapse functional properties, to make it stronger or weaker which produces long lasting changes of the postsynaptic cells.</li>
+</ul>
+<p>A synapse can work both chemically or electrically</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231180332014.png" alt="image-20201231180332014" style="zoom:67%;" />
+
+<p>There are two kinds of synapses: <u>chemical</u> and <u>electrical</u>;</p>
+<ul>
+<li>both kinds can rapidly change the membrane potential of a postsynaptic cell.</li>
+</ul>
+<h2 id="Electrical-and-chemical-synapses"><a href="#Electrical-and-chemical-synapses" class="headerlink" title="Electrical and chemical synapses"></a>Electrical and chemical synapses</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231180447692.png" alt="image-20201231180447692" style="zoom: 50%;" />
+
+<p><strong>Electrical synapses</strong> have low-resistance pathways that allow currents to flow directly between neurons.</p>
+<p><strong>Chemical synapses</strong> the currents escape between neurons and do not enter the postsynaptic neuron. </p>
+<ul>
+<li>Neurotransmitter are released.</li>
+<li><u>Most synaptic transmission is chemical, While direct electrical transmission occurs uncommonly</u></li>
+</ul>
+<p>Electrical synapses transmit signals instantaneously</p>
+<ul>
+<li>Signals have no delay</li>
+<li>Can be both directions (not polarized)</li>
+<li>Can be used for synchronization</li>
+<li><strong>GAP junction</strong> <u>is</u> the major structure for electrical synapse</li>
+</ul>
+<h3 id="1-Electrical-Synapses"><a href="#1-Electrical-Synapses" class="headerlink" title="1. Electrical Synapses"></a>1. Electrical Synapses</h3><h4 id="The-molecular-structure-of-gap-junctions"><a href="#The-molecular-structure-of-gap-junctions" class="headerlink" title="The molecular structure of gap junctions"></a>The molecular structure of gap junctions</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231181250912.png" alt="image-20201231181250912" style="zoom: 33%;" />
+
+<p>Electrical synapses in the crayfish escape circuit：</p>
+<p>Electrical synapse is found in escape systems of crayfish and fish. Fast escape response Saves milliseconds, produces selective advantages of not being eaten by its prey.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231181326338.png" alt="image-20201231181326338" style="zoom: 50%;" />
+
+<ul>
+<li>The lateral giant neuron (LG) is dye-coupled with the green fluorescent neuron through Gap junction. LG was injected with large red and small green molecules.</li>
+</ul>
+<h3 id="2-Chemical-Synapses"><a href="#2-Chemical-Synapses" class="headerlink" title="2. Chemical Synapses"></a>2. Chemical Synapses</h3><h4 id="Chemical-synapses-can-modify-and-amplify-signals"><a href="#Chemical-synapses-can-modify-and-amplify-signals" class="headerlink" title="Chemical synapses can modify and amplify signals"></a>Chemical synapses can modify and amplify signals</h4><p>Chemical synapses have discontinuity due to the 20-30 nm synaptic cleft</p>
+<p>Neurotransmitters are stored in synaptic vesicles with several thousand molecules per vesicle.</p>
+<p>Both the pre and post synaptic membranes are thicker than elsewhere due to local protein aggregation.</p>
+<p>**Active zone **– cytoplasmic side of the presynaptic membrane where synaptic vesicles release their neurotransmitter.</p>
+<p><strong>Postsynaptic density</strong> – thick membrane at the postsynaptic membrane containing neurotransmitter receptors and scaffolding proteins which organize these receptors and other proteins</p>
+<h4 id="The-structure-of-a-chemical-synapse"><a href="#The-structure-of-a-chemical-synapse" class="headerlink" title="The structure of a chemical synapse"></a>The structure of a chemical synapse</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231182339651.png" alt="image-20201231182339651" style="zoom:50%;" />
+
+<p>The majority of excitatory synapses in a mammalian brain occur on dendritic spines</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231182459013.png" alt="image-20201231182459013" style="zoom:80%;" />
+
+<ul>
+<li>Dendritic spines – small mushroom-shaped Protrusions and their shape and form remain malleable even in mature CNS</li>
+</ul>
+<h4 id="The-function-of-a-chemical-synapse"><a href="#The-function-of-a-chemical-synapse" class="headerlink" title="The function of a chemical synapse"></a>The function of a chemical synapse</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231182716532.png" alt="image-20201231182716532" />
+
+<p>Neurotransmitter is released by <u>calcium-dependent exocytosis</u> – fusion of the Synaptic vesicles to the presynaptic membrane</p>
+<p>Neurotransmittor receptors:</p>
+<ul>
+<li>Ionotropic receptors (离子型受体）<ul>
+<li>fast,  permeability to ion changes Metabotropic</li>
+</ul>
+</li>
+<li>receptors (代谢性受体) <ul>
+<li>slow,  long-lasting, triggering a signaling cascade</li>
+</ul>
+</li>
+</ul>
+<h4 id="Advantage-of-chemical-synapses"><a href="#Advantage-of-chemical-synapses" class="headerlink" title="Advantage of chemical synapses"></a>Advantage of chemical synapses</h4><p>Chemical synapse is slower than the electrical synapse because the steps needed to release transmitters and receptor activation</p>
+<ul>
+<li>Fast ionotropic chemical synapses have a synaptic delay of 0.3 – 3 milliseconds, <u>depending on species and temperature.</u></li>
+</ul>
+<p>Advantages of chemical synapses:</p>
+<ul>
+<li>amplification of current flow–depending on the number of active zones and postsynaptic terminals.</li>
+<li>Both excitatory and inhibitory, while <u>electrical synapse is always excitatory.</u> </li>
+<li>Chemical synapse is <strong>one-way</strong>（单向的）, while electrical synapses are <strong>two-way</strong>（双向的）. </li>
+<li><strong>Plasticity: Modifiable than the electrical synapses, use and circumstances make them stronger and disuse make them weaker.</strong> This plasticity is important for nervous system development and learning.</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231183220321.png" alt="image-20201231183220321" style="zoom:100%;" />
+
+<h2 id="Synaptic-potentials-control-neuronal-excitability"><a href="#Synaptic-potentials-control-neuronal-excitability" class="headerlink" title="Synaptic potentials control neuronal excitability"></a>Synaptic potentials control neuronal excitability</h2><p><strong>Synaptic potential</strong> – a transitory graded change in the resting membrane potential in the postsynaptic cell caused by the burst of neurotransmitter diffuse across a synapse.</p>
+<ul>
+<li>Synaptic potential depolarizes the cell membrane is <u>excitatory</u>; one that hyperpolarizes the cell membrane is <u>inhibitory</u>.</li>
+</ul>
+<p><strong>Excitation</strong>: increase in generation of an action potential and increase the frequency of impulses. </p>
+<p><strong>Inhibition</strong>: decrease in the probability to generation of impulse of action potential and the frequencies of the impulses.</p>
+<p>Excitatory and inhibitory postsynaptic potentials: </p>
+<ul>
+<li>synapses onto a spinal motor neuron exemplify functions of fast synaptic potentials</li>
+</ul>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231183336501.png" alt="image-20201231183336501"></p>
+<ul>
+<li>Clusters of synapses: yellow color indicates excitatory Presynaptic terminals, red color indicates inhibitory Presynaptic terminals.</li>
+<li><strong>Excitotaory postsynaptic potentials (EPSPs)</strong> Motor neuron membrane produces synaptic potentials that are graded depolarizations with a brief rising phase and an exponential decay over a time course of 10 – 20 ms.</li>
+<li>Simulation of excitatory presynaptic neurons elicits excitatory postsynaptic potentials (EPSPs), graded depolarization’s that depolarize Vm (membrane potential toward threshold</li>
+<li>IPSPs are hyperpolarizing, moving Vm away from threshold.</li>
+</ul>
+<h3 id="1-Neuronal-Integration"><a href="#1-Neuronal-Integration" class="headerlink" title="1. Neuronal Integration"></a>1. Neuronal Integration</h3><p><strong>Temporal summation（时间总和）</strong> (peripheral nerve A is stimulated repeatedly and rapidly and the resultant EPSPs combine in a process called <strong>temporal summation</strong>)</p>
+<p><strong>Spatial summation（空间总和）</strong> (stimulus A + B combine)</p>
+<p>With sufficient presynaptic stimulation, EPSPs can summate temporally and spatially to the voltage threshold and cause the motor neuron to generate one or more action potentials.</p>
+<p><u>A cat motor neuron receives input from 10,000 synaptic terminals and the moment-to-moment balance of EPSPs and IPSPs determines whether the motor neuron generates impulses or remain quiescent</u></p>
+<p>A neuron’s output is not the same as its input, but is instead an integral function (整函数) of that input, a property called <strong>neuronal integration</strong>.</p>
+<p>The major process underlying neuronal integration is </p>
+<ul>
+<li>The <u>spatial and temporal summation of EPSPs and IPSPs.</u> </li>
+<li>Spatial relationships of excitatory and inhibitory synapses to one another</li>
+<li>Their relative proximity to the site of impulse initiation – the <u>initial segment of the axon</u></li>
+</ul>
+<h3 id="2-Summary"><a href="#2-Summary" class="headerlink" title="2. Summary"></a>2. Summary</h3><p>Summation of synaptic input is weighted by the electronic distance of the synapses from the axon hillock</p>
+<p>Postsynaptic potentials are graded potentials</p>
+<ul>
+<li>Their spread is governed by the cable properties of the postsynaptic cell membrane.</li>
+<li><strong>Axosomatic synapse（轴体突触）</strong> – a synapse located on the soma or cell body – very close to the axon initial segment</li>
+<li><strong>Axodendritic synapse（轴树突触）</strong> – a synapse onto a dendrite<ul>
+<li>The electrotonic length of motor neuron dendrites is estimated 1-2 lambda (so a synaptic potential at the tip of dendrites is decreased to 14 – 37% of the initial amplitude.</li>
+<li>Synapse closer to the axon hillock usually have more effect on the output of the postsynaptic cell that do synapses on the distal ends of dendrites</li>
+</ul>
+</li>
+</ul>
+<h2 id="Neuromuscular-synapse"><a href="#Neuromuscular-synapse" class="headerlink" title="Neuromuscular synapse"></a>Neuromuscular synapse</h2><h3 id="1-Basic-Structure-and-Mechanism"><a href="#1-Basic-Structure-and-Mechanism" class="headerlink" title="1. Basic Structure and Mechanism"></a>1. Basic Structure and Mechanism</h3><p>A vertebrate neuromuscular junction (Part 1) : an example of a fast chemical synaptic actions</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231192950675.png" alt="image-20201231192950675" style="zoom:50%;" />
+
+<p>Each muscle fiber is innervated by Only one motor neuron.</p>
+<p>Vertebrate neuromuscular junction – a model for fast chemical synaptic actions:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231193009455.png" alt="image-20201231193009455" style="zoom: 50%;" />
+
+<ul>
+<li>Also called motor end-plate</li>
+<li>Anatomically simple, large synaptic response, microscopically visible,</li>
+<li>Ligand-gated Ach receptors at the top part of the junctional fold</li>
+<li>Voltage-gated channels in the deep part of the fold</li>
+</ul>
+<p>Summary of events in chemical synaptic transmission at the vertebrate neuromuscular junction</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231194407715.png" alt="image-20201231194407715" style="zoom:50%;" />
+
+<ol>
+<li>An action potential depolarizes the axon terminal of the motor neuron. </li>
+<li>The depolarization opens voltage-gated Ca2+ channels. </li>
+<li>Depolarization of the terminal triggers vesicle exocytosis at an active zone, releasing <strong>acetylcholine</strong>(Ach). </li>
+<li>Ach diffuses rapidly across the synaptic cleft and binds to acetylcholine receptors at the postsynaptic membrane </li>
+<li>The receptor channel opens to allow Na”and K” ion flow, producing a depolarizing excitatory postsynaptic potential (EPSP). The EPSP spreads to depolarize nearby regions to threshold and triggers a muscle fiber action potential. </li>
+<li>The action potential propagates to all parts of the muscle fiber, eliciting contraction. </li>
+<li>Acetylcholinesterase hydrolyzes the acetylcholine into acetate and choline. </li>
+<li><u>Choline is actively transported back into the motor axon terminal to be resynthesized into acetyl</u></li>
+</ol>
+<h3 id="2-The-Role-of-Permeability-of-Postsynaptic-Membrane"><a href="#2-The-Role-of-Permeability-of-Postsynaptic-Membrane" class="headerlink" title="2. The Role of Permeability of Postsynaptic Membrane"></a>2. The Role of Permeability of Postsynaptic Membrane</h3><p>Postsynaptic potentials result from permeability changes that are neurotransmitter-dependent and voltage-independent</p>
+<p>Molecules that control permeability changes at fast synapses are ligand-gated!</p>
+<p>Permeability of the postsynaptic is the result of binding of neurotransmitter, not to depolarization!</p>
+<ul>
+<li><u>An EPSP results from a simultaneous increase in the postsynaptic membrane’s permeability to Na and K , but the driving force for Na is higher and the driving force for K is smaller</u></li>
+<li>The ion flows through all the channels that open in response to the release of neurotransmitter is called <u>synaptic current</u></li>
+</ul>
+<p>Fast IPSPs can result from an increase in permeability to chloride</p>
+<ul>
+<li>Hyperpolarizing rather than depolarizing due to increased permeability to Cl-</li>
+<li>Mediated by two neurotransmitters: GABA (gamma-aminobutyric acid) or glycine</li>
+<li><u>GABA-containing neurons – vesicle fusion – GABA release – GABA fuse to the postsynaptic membrane – increase Clentry – hyperpolarize membrane and produce fast IPSPs</u></li>
+</ul>
+<p>Presynaptic neurons release neurotransmitter molecules in quantal packets</p>
+<ul>
+<li>Cholinergic transmission (acetylcholine-mediated transmission) is a good general example</li>
+<li>Acetylcholine is made and stored in the presynaptic terminal</li>
+<li>Neurotransmitter release is quantal and vesicular</li>
+<li>Each quantum is equivalent to the contents of one synaptic vesicle of about 5000 molecules eachs</li>
+</ul>
+<h3 id="3-Comparison-between-Neuromuscular-Synapse-and-CNS-Synapse"><a href="#3-Comparison-between-Neuromuscular-Synapse-and-CNS-Synapse" class="headerlink" title="3. Comparison between Neuromuscular Synapse and CNS Synapse"></a>3. Comparison between Neuromuscular Synapse and CNS Synapse</h3><p>A neuromuscular synapse, a CNS excitatory synapse, and a CNS inhibitory synapse</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231194544858.png" alt="image-20201231194544858" style="zoom:50%;" />
+
+<ul>
+<li>CNS synapse</li>
+<li>Neuromuscular junction (green: presynaptic axon terminal; red: postsynaptic receptors; yellow: the synapses</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231194602791.png" alt="image-20201231194602791" style="zoom: 50%;" />
+
+<ul>
+<li>Fast rise 1-2 ms And exponential return lasting 1020 ms</li>
+</ul>
+<p>EPSPs between neurons resemble neuromuscular EPSPs but are smaller</p>
+<ul>
+<li>CNS synapses are <strong>integrating synapses</strong> (excitatory input from 20 to 50 neurons to be summate to depolarize the integrating neuron),</li>
+<li>while neuromuscular junction is a <strong>relay synapse</strong> (each presynaptic action potential produces a postsynaptic action potential)</li>
+</ul>
+<h3 id="4-Acetylcholine-synthesis-and-breakdown"><a href="#4-Acetylcholine-synthesis-and-breakdown" class="headerlink" title="4. Acetylcholine synthesis and breakdown"></a>4. Acetylcholine synthesis and breakdown</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231195438764.png" alt="image-20201231195438764" style="zoom:50%;" />
+
+<ul>
+<li>Choline acetyltransferase is made in the cell body And the availability of choline is the limiting factor</li>
+<li>Choline is supplied by the blood and by choline uptake transporter at the presynaptic Membrane.</li>
+<li>Neurotransmitter release requires voltage-dependent calcium influx (bathing neuromuscular Junction in a calcium free saline will not elicit EPSP Because there is no exocytosis.</li>
+</ul>
+<h3 id="5-Spontaneous-mEPSPs"><a href="#5-Spontaneous-mEPSPs" class="headerlink" title="5. Spontaneous mEPSPs"></a>5. Spontaneous mEPSPs</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231195713788.png" alt="image-20201231195713788" style="zoom:100%;" />
+
+<ul>
+<li>A series of small depolarization with a shape similar to neuromuscular EPSP but are about 1&#x2F;50th the amplitude (<strong>0.4 mV)</strong>,</li>
+<li>Thus they are termed <strong>spontaneous miniature EPSPs (mEPSPs).</strong> </li>
+<li>A spontaneous, low-frequency release of Ach quanta-that is about 5000 molecules at a time Which is accounted for spontaneous mEPSPs.</li>
+</ul>
+<h4 id="Evoked-miniature-EPSPs"><a href="#Evoked-miniature-EPSPs" class="headerlink" title="Evoked miniature EPSPs"></a>Evoked miniature EPSPs</h4><p>A neuromuscular EPSP evoked by a presynaptic impulse has an amplitude of 20 – 40 mV And requires the nearly simultaneous discharge of 100 to 300 quanta.</p>
+<p>To determine if the release of Ach evoked by presynaptic depolarization is also quantal, researcher lowered Ca concentration in the bath and raised Mg which competitively inhibits the action of Ca</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231200327376.png" alt="image-20201231200327376" style="zoom:100%;" />
+
+<p>Evoked mEPSPs fall into amplitude classes that are multiples of the spontaneous mEPSPs.</p>
+<h3 id="6-Synaptic-vesicles-are-cycled-at-nerve-terminals-in-distinct-steps"><a href="#6-Synaptic-vesicles-are-cycled-at-nerve-terminals-in-distinct-steps" class="headerlink" title="6. Synaptic vesicles are cycled at nerve terminals in distinct steps"></a>6. Synaptic vesicles are cycled at nerve terminals in distinct steps</h3><p>Vascular release hypothesis – vesicular exocytosis</p>
+<p>Calcium ion triggers the fusion of the vesicular and presynaptic membranes</p>
+<p>Two modes of fusion and subsequent retrieval of vesicular membranes: <strong>classical</strong> and <strong>kiss-and-run fusion</strong></p>
+<ul>
+<li><strong>Classical endocytosis</strong>: needs two proteins: <font color="FF0000">clathrin</font> and <font color="FF0000">dynamin</font></li>
+<li><strong>Kiss-and-run fusion</strong>: the docked vesicle opens only a pore to release neurotransmitter without completely becoming integrated into the terminal membrane</li>
+</ul>
+<h4 id="Synaptic-vesicle-recycling-at-the-neuromuscular-junction"><a href="#Synaptic-vesicle-recycling-at-the-neuromuscular-junction" class="headerlink" title="Synaptic vesicle recycling at the neuromuscular junction"></a>Synaptic vesicle recycling at the neuromuscular junction</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231200802051.png" alt="image-20201231200802051" style="zoom: 50%;" />
+
+
+
+<p>Stages of vesicular recycling:</p>
+<ol>
+<li>mobilization or targeting: at rest, <font color="FF0000">synapsin</font> attaches vesicles to the actin cytoskeleton</li>
+<li>phosphorylation of synapsin releases vesicles during mobilization to allow vesicles to move to the active zone</li>
+<li>vSNAREs intertwine with terminal-membrane t-SNAERs to hold the docked vesicle at the active zone<ul>
+<li><u>Classical and kiss-and-run</u></li>
+</ul>
+</li>
+</ol>
+<p>Vesicular docking and fusion release neurotransmitters</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231210853276.png" alt="image-20201231210853276" style="zoom:100%;" />
+
+<h2 id="Neurotransmitters"><a href="#Neurotransmitters" class="headerlink" title="Neurotransmitters"></a>Neurotransmitters</h2><h3 id="1-Neurotransmitters-are-of-two-general-kinds"><a href="#1-Neurotransmitters-are-of-two-general-kinds" class="headerlink" title="1. Neurotransmitters are of two general kinds"></a>1. Neurotransmitters are of two general kinds</h3><ol>
+<li>Small molecule neurotransmitters (mostly amines and amino acids)</li>
+<li>Neuropeptides</li>
+</ol>
+<ul>
+<li>Cholinergic synapses are the best known because of the neuromuscular junction studies (acetylcholine as the neurotransmitter). 乙酰胆碱</li>
+<li>Adrenergic synapses are the next best known (noradrenaline as neurotransmitter).去甲肾上腺素</li>
+<li>A neuron may release more than one transmitters cotransmitters</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231211016913.png" alt="image-20201231211016913" style="zoom:100%;" />
+
+<h3 id="2-Criteria-required-to-be-identified-as-a-neurotransmitter"><a href="#2-Criteria-required-to-be-identified-as-a-neurotransmitter" class="headerlink" title="2. Criteria required to be identified as a neurotransmitter"></a>2. Criteria required to be identified as a neurotransmitter</h3><p>The candidate neurotransmitter must:</p>
+<ul>
+<li>be present in the presynaptic terminal along with its synthetic machinery</li>
+<li>Released upon stimulation</li>
+<li>Mimic the effect of presynaptic stimulation when added in extracellular fluid</li>
+<li>Mechanism of removal should exist</li>
+<li>Effects of drugs on transmission: curare is Ach receptor antagonist!</li>
+</ul>
+<h3 id="3-Termination-of-neurotransmitter-action-enzymes-and-reuptake"><a href="#3-Termination-of-neurotransmitter-action-enzymes-and-reuptake" class="headerlink" title="3. Termination of neurotransmitter action: enzymes and reuptake"></a>3. Termination of neurotransmitter action: enzymes and reuptake</h3><p>Neurotransmitters are only active for a very short time (5 ms)</p>
+<p>Acetylcholinesterase (AChE) located in the synaptic cleft acts very fast to digest Ach. <strong>(enzymatic destruction)</strong><br>$$<br>\text{Ach} \xrightarrow{\text{AchE}} \text{Choline} + \text{acetate}<br>$$<br> (choline is returned back to the presynaptic terminal by a specific transporter)</p>
+<p>The synaptic action of norepnephrine is terminated by <u>reuptake of the neurotransmitter</u>, rather than the enzymatic destruction.</p>
+<p>Peptide neurotransmitters and small molecular neurotransmitter differ in synthesis, release and termination</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231211930095.png" alt="image-20201231211930095" style="zoom: 50%;" />
+
+<h2 id="Postsynaptic-Receptors"><a href="#Postsynaptic-Receptors" class="headerlink" title="Postsynaptic Receptors"></a>Postsynaptic Receptors</h2><h3 id="1-Ach-Receptors"><a href="#1-Ach-Receptors" class="headerlink" title="1. Ach Receptors"></a>1. Ach Receptors</h3><p>Postsynaptic receptors for fast ionotropic actions: ligand-gated channels</p>
+<ul>
+<li>Ach receptors (nicotinic) are the best example of ionotropic receptors</li>
+</ul>
+<p>The molecular structure and function of a ligand-gated channel, the nicotinic acetylcholine receptor:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231212003415.png" alt="image-20201231212003415" style="zoom: 50%;" />
+
+<ul>
+<li>Diameter of 0.6 nm</li>
+</ul>
+<h4 id="Patch-clamp-recordings-of-acetylcholine-receptor–channel-currents"><a href="#Patch-clamp-recordings-of-acetylcholine-receptor–channel-currents" class="headerlink" title="Patch-clamp recordings of acetylcholine receptor–channel currents"></a>Patch-clamp recordings of acetylcholine receptor–channel currents</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231212210597.png" alt="image-20201231212210597" style="zoom: 50%;" />
+
+<ul>
+<li>At low concentrations of acetylcholine, channel openings are infrequent</li>
+<li>At higher concentrations, sometimes both channels are open at once, and the individual currents summate</li>
+</ul>
+<p>The opening of the ligand-gated channel is an all-or-none phenomenon</p>
+<p>Channel opening depends on the concentration of neurotransmitter at the receptor</p>
+<p>The net ionic current through the Open channel provides that channel’s Contribution to a synaptic potential</p>
+<p>The current through all open channels can be summated and constitute the synaptic currents</p>
+<h3 id="2-Postsynaptic-receptors-for-slow-metabotropic-actions-G-protein-coupled-receptors"><a href="#2-Postsynaptic-receptors-for-slow-metabotropic-actions-G-protein-coupled-receptors" class="headerlink" title="2. Postsynaptic receptors for slow metabotropic actions: G protein coupled receptors"></a>2. Postsynaptic receptors for slow metabotropic actions: G protein coupled receptors</h3><p>Metabotropic receptors act via second messengers</p>
+<p>GPCR has seven transmembrane segments</p>
+<p>G protein–coupled receptors share a common structure:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201231212330512.png" alt="image-20201231212330512" style="zoom: 33%;" />
+
+<h3 id="3-Metabotropic-receptors-cAMP-as-a-second-messenger"><a href="#3-Metabotropic-receptors-cAMP-as-a-second-messenger" class="headerlink" title="3. Metabotropic receptors: cAMP as a second messenger"></a>3. Metabotropic receptors: cAMP as a second messenger</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101135324218.png" alt="image-20210101135324218" style="zoom: 50%;" />
+
+<p>G proteins can themselves activate ion channels, without a second messenger</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101135428119.png" alt="image-20210101135428119" style="zoom: 33%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101135509438.png" alt="image-20210101135509438" style="zoom:100%;" />
+
+<h3 id="4-Metabolic-receptors-Diacylglycerol-and-inositol-trisphosphate-are-other-second-messengers"><a href="#4-Metabolic-receptors-Diacylglycerol-and-inositol-trisphosphate-are-other-second-messengers" class="headerlink" title="4. Metabolic receptors: Diacylglycerol and inositol trisphosphate are other second messengers"></a>4. Metabolic receptors: Diacylglycerol and inositol trisphosphate are other second messengers</h3><ul>
+<li>Phospholipase C catalyzes the hydrolysis of PIP2 into IP3 and DAG</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101135535504.png" alt="image-20210101135535504" style="zoom:100%;" />
+
+<p>Together these metabotropic synaptic transmission can mediate relatively slow and long lasting effects</p>
+<p>The second messenger action may underlie synaptic changes involved in learning and memory!</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101135549265.png" alt="image-20210101135549265" style="zoom:100%;" />
+
+<h3 id="5-Metabotropic-receptors-plays-a-role-in-slow-synaptic-potentials"><a href="#5-Metabotropic-receptors-plays-a-role-in-slow-synaptic-potentials" class="headerlink" title="5. Metabotropic receptors plays a role in slow synaptic potentials"></a>5. Metabotropic receptors plays a role in slow synaptic potentials</h3><p><strong>Permeability-decrease synaptic potentials</strong> – a slow EPSP results in ion permeability decrease due to the closing of a type of K+ channel</p>
+<p><strong>Presynaptic inhibition</strong> (PSI): specific inhibitory interaction in which one axon terminal ends on another axon (<strong>axo-axonal synapse</strong>). Presynaptic inhibition is more specific than the more common postsynaptic inhibition.</p>
+<h4 id="Synaptic-plasticity-Synapse-changes-properties-with-time-and-activity"><a href="#Synaptic-plasticity-Synapse-changes-properties-with-time-and-activity" class="headerlink" title="Synaptic plasticity: Synapse changes properties with time and activity"></a>Synaptic plasticity: Synapse changes properties with time and activity</h4><p><strong>Neurotransmitter metabolism is regulated homeostatically</strong> (Ach level is stable during and after stimulation) – inhibitors to neurotranmitter synthesis and reuptake are used for psychiatric treatment (for example, selective serotonin reuptake inhibitors, resulting in increased availability of serotonin to postsynaptic receptors has been proven to be strikingly effective in treatment for depression and other mood disorders).</p>
+<p><u>Learning and memory MAYBE based on synaptic plasticity</u></p>
+<ul>
+<li>(<strong>synaptic strength</strong> – changes that that have a suitable long time course of min, days and weeks. <u>It is measured as the amplitude of a postsynaptic potential in response to a presynaptic potential.</u> )</li>
+</ul>
+<h4 id="Synaptic-facilitation-and-antifacilitation"><a href="#Synaptic-facilitation-and-antifacilitation" class="headerlink" title="Synaptic facilitation and antifacilitation"></a>Synaptic facilitation and antifacilitation</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101135732944.png" alt="image-20210101135732944" style="zoom: 50%;" />
+
+<p><u>Both</u> synaptic facilitation and antifacilitation <u>result from changes in the amount of neurotransmitter liberated per presynaptic impulse, which is calcium dependent.</u></p>
+<p>Tetanic stimulation of presynaptic neurons: <u>stimulation by train of stimuli at a rate of 10-100 per second for several seconds</u></p>
+<h2 id="LTP-and-LDP"><a href="#LTP-and-LDP" class="headerlink" title="LTP and LDP"></a>LTP and LDP</h2><p>Posttetanic potentiation: Extended enhancement of synaptic response . </p>
+<p>Long term potentiation: long-lasting enhancement of synaptic transmission following intense stimulation [ or long term depression (LDP)]. </p>
+<p>LTP has been reported in the hippocampus and cerebral cortex of the vertebrate brain, regions important in learning and memory.</p>
+<h3 id="1-Habituation-and-sensitization-in-Aplysia-gill-withdrawal"><a href="#1-Habituation-and-sensitization-in-Aplysia-gill-withdrawal" class="headerlink" title="1. Habituation and sensitization in Aplysia gill withdrawal"></a>1. Habituation and sensitization in <em>Aplysia</em> gill withdrawal</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101140231922.png" alt="image-20210101140231922" style="zoom: 67%;" />
+
+<blockquote>
+<p><strong>Eric Kandel</strong> – Nobel-Prize winning neurobiologist Mapped the neural circuit of the gill-withdrawal reflex And determined the synaptic locus of the habituation and sensitization</p>
+</blockquote>
+<p><strong>Habituation</strong>: the decrease in intensity of a reflex response to a stimulus when the stimulus is presented repeatedly</p>
+<p><strong>Sensitization</strong>: the prolonged enhancement of a reflex response to a stimulus resulting from the presentation of a second stimulus.</p>
+<p>Both are simple forms of learning – modification of behavior with experience</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101140532713.png" alt="image-20210101140532713" style="zoom: 80%;" />
+
+<ul>
+<li>How is neurotransmitter release diminished during habituation and increased by sensitization?</li>
+<li>Progressive and long lasting inactivation of calcium channels during habituation</li>
+<li>And <u>increased calcium influx</u> during presynaptic Facilitation at the axo-axonal synapse underlies sensitizations</li>
+</ul>
+<h4 id="A-model-of-Aplysia-sensitization"><a href="#A-model-of-Aplysia-sensitization" class="headerlink" title="A model of Aplysia sensitization"></a>A model of <em>Aplysia</em> sensitization</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101140746773.png" alt="image-20210101140746773" style="zoom:100%;" />
+
+<ul>
+<li>Serotonin neurons promote sensitization</li>
+<li>The increase in the duration of the action potential increases the time during which Ca2+ channels can open, leading to a greater influx of Ca2+ and increased release</li>
+<li>The kinase also acts on Ca2+ channels and on mobilization of neurotransmitter vesicles</li>
+</ul>
+<p>Both synaptic facilitation and antifacilitation result from changes in the amount of neurotransmitter liberated per presynaptic impulse. These changes are calcium dependent and the complete mechanism is incompletely known.</p>
+<p>Facilitation is often pronounced after tetanic stimulation (强直刺激) of presynaptic neurons (a rain of stimulation at a rate of about 10 – 100 per second for several seconds). The extended enhancement of synaptic response is termed <strong>posttetanic potentiation</strong>.</p>
+<p>Posttetanic potentiation means synaptic efficacy can change with use and these changes can be long-lasting</p>
+<p><strong>Long-term potentiation</strong> occurs in hippocampus and cerebral cortex, regions implicated in learning and memory</p>
+<h3 id="2-Long-term-potentiation-LTP-in-the-hippocampus"><a href="#2-Long-term-potentiation-LTP-in-the-hippocampus" class="headerlink" title="2. Long-term potentiation (LTP) in the hippocampus"></a>2. Long-term potentiation (LTP) in the hippocampus</h3><p>LTP is a long lasting enhancement of synaptic transmission following intense stimulation</p>
+<p>LTP in the brain involves changes in synapse strength (neurons that fire together wire together – Hebbian synapse, or Hebbian Theory)</p>
+<p>Hippocampal LTP is established depending on the NMDA receptor and AMPA receptor.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101141002582.png" alt="image-20210101141002582" style="zoom:100%;" />
+
+<ul>
+<li>Before a tetanic stimulation each single test stimulus produces an EPSP of a fairly Consistent size</li>
+<li>After the tetanus, the amplitudes of the test EPSP are increased to 200% to 300% of control amplitudes</li>
+</ul>
+<p>Induction and maintenance of LTP in the hippocampus:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101141045536.png" alt="image-20210101141045536" style="zoom:100%;" />
+
+<ol>
+<li>Normal synaptic transmission<ol>
+<li>Depolarization releases Mg2+</li>
+<li>NMDA receptors are blocked at resting potential by Mg2+ ions</li>
+<li>AMPA receptors open to produce a fast EPSP.</li>
+</ol>
+</li>
+<li>LTP induction<ol>
+<li>Depolarization releases Mg2+</li>
+<li>Ca2+ ions enter the NMDA receptor channels and act as second messengers in the postsynaptic cell…</li>
+<li>NMDA receptor channels and act as second messenger</li>
+<li>Ca2+ -triggered phosphorylation of AMPA receptors stored in internal vesicles stimulates fusion of the vesicles with the cell membrane. This fusion delivers new receptors and new lipid membrane to the spine head.</li>
+</ol>
+</li>
+</ol>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101142630021.png" alt="image-20210101142630021" style="zoom:100%;" />
+
+<p>Enduring changes in synaptic strength is caused by postsynaptic AMPA-type ionotropic glutamate receptors, which increase the amplitude of synaptic responses</p>
+<h3 id="3-Long-term-depression-LDP-and-LDP"><a href="#3-Long-term-depression-LDP-and-LDP" class="headerlink" title="3. Long term depression (LDP) and LDP"></a><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101142649631.png" alt="image-20210101142649631" style="zoom:100%;" />3. Long term depression (LDP) and LDP</h3><p>Also mediated by NMDA receptors</p>
+<p>Involving the removal of AMPA receptors from the postsynaptic membrane</p>
+<h3 id="4-Long-term-memories"><a href="#4-Long-term-memories" class="headerlink" title="4. Long term memories"></a>4. Long term memories</h3><p>Long term memories can involve changes to the physical structures of neurons</p>
+<ul>
+<li>LTP lasts for hours and weeks, some new genes and proteins are made, at the synapse and nucleus</li>
+<li>The excitatory synapses enlarge in response to local release of glutamate</li>
+<li><u>What is the character of these proteins and how are they transported to the correct synapses where the signals began? These are significant questions for the next generation of neuroscientists!</u></li>
+</ul>
+<p> Repeated imaging of dendrites through cranial windows in living rodents</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20210101142930247.png" alt="image-20210101142930247" style="zoom:100%;" />
+
+<ul>
+<li>Repeated imaging through a cranial window reveals Transient (blue), semistable (red) and stable (yellow) protrusions.</li>
+</ul>
+<h3 id="5-Long-term-potentiation-is-a-necessary-component-of-learning"><a href="#5-Long-term-potentiation-is-a-necessary-component-of-learning" class="headerlink" title="5. Long-term potentiation is a necessary component of learning"></a>5. Long-term potentiation is a necessary component of learning</h3><p><u>The existence of LTP DOES NOT prove that it is involved in learning and memory – only that it could be!</u></p>
+<p>Knockout NMDA receptors, CaMK kinase and other kinases disrupts both LTP and spatial learning in a water maze. Same is true when AMPA receptor insertion into the postsynaptic membrane is disrupted</p>
+<p>The most definitive answer comes from a relatively recent study of over-expressing NMDA receptors – Doogie mice – produced by Joe Tsien at Preston University. These mice performed several learning tasks better than normal mice.</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>L10 Synapses</p><p><a href="https://zhenyumi.github.io/posts/95a130a2/">https://zhenyumi.github.io/posts/95a130a2/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-01-02</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-01-02</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Animal-Physiology/">Animal Physiology</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/bba3f277/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">L11 Sensory System</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/d118e650/"><span class="level-item">L9 Neurons</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">196</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">28</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Undefined-notes/"><span class="level-start"><span class="level-item">Undefined notes</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-19T06:36:03.000Z">2022-09-19</time></p><p class="title"><a href="/posts/f5b7721a/">Embedding and Frozen Sectioning</a></p><p class="categories"><a href="/categories/Undefined-notes/">Undefined notes</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

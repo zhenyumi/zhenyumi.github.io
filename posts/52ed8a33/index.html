@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>L11 Mutation and DNA repair - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+1000 (澳大利亚东部标准时间)"><meta property="og:type" content="blog"><meta property="og:title" content="L11 Mutation and DNA repair"><meta property="og:url" content="https://zhenyumi.github.io/posts/52ed8a33/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+1000 (澳大利亚东部标准时间)"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><meta property="article:published_time" content="2020-07-25T15:45:00.000Z"><meta property="article:modified_time" content="2020-07-25T15:45:00.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="Genetics"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/52ed8a33/"},"headline":"L11 Mutation and DNA repair","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"],"datePublished":"2020-07-25T15:45:00.000Z","dateModified":"2020-07-25T15:45:00.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"Sat Jul 25 2020 23:45:00 GMT+1000 (澳大利亚东部标准时间)"}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/52ed8a33/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png" alt="L11 Mutation and DNA repair"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-25T15:45:00.000Z" title="2020/7/26 01:45:00">2020-07-25</time>发表</span><span class="level-item"><time dateTime="2020-07-25T15:45:00.000Z" title="2020/7/26 01:45:00">2020-07-25</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/Academic-Notebook/">Academic Notebook</a><span> / </span><a class="link-muted" href="/categories/Academic-Notebook/Genetics/">Genetics</a></span><span class="level-item">23 分钟读完 (大约3379个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">L11 Mutation and DNA repair</h1><div class="content"><h1 id="一、Mutations"><a href="#一、Mutations" class="headerlink" title="一、Mutations"></a>一、Mutations</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The term mutation refers to a <u>heritable</u> change in the genetic material</p>
+<blockquote>
+<p>Heritable: （可继承的、可转让的、可遗传的）指的是有能力遗传给下一代的<u>细胞</u>，而不是对个体而言</p>
+</blockquote>
+<p>Mutations provide allelic variations</p>
+<ul>
+<li><p>On the positive side, mutations are the foundation for evolutionary change needed for a species to adapt to changes in the environment</p>
+</li>
+<li><p>On the negative side, <u>new mutations are much more likely to be harmful</u> than beneficial to the individual and often are the cause of diseases</p>
+</li>
+</ul>
+<p>Understanding the molecular nature of mutations is a deeply compelling area of research.</p>
+<p><u>Since mutations can be quite harmful, organisms have developed ways to repair damaged DNA</u></p>
+<h2 id="Mutation-Types"><a href="#Mutation-Types" class="headerlink" title="Mutation Types"></a>Mutation Types</h2><p>Mutations can be divided into three main types</p>
+<ol>
+<li>Chromosome mutations<ul>
+<li>Changes in chromosome structure</li>
+</ul>
+</li>
+<li>Genome mutations<ul>
+<li>Changes in chromosome number</li>
+</ul>
+</li>
+<li>Gene mutations<ul>
+<li>Relatively small change in DNA structure that affects a single gene</li>
+</ul>
+</li>
+</ol>
+<h2 id="Chromosome-Mutations-And-Genome-Mutations"><a href="#Chromosome-Mutations-And-Genome-Mutations" class="headerlink" title="Chromosome Mutations And Genome Mutations"></a>Chromosome Mutations And Genome Mutations</h2><h3 id="1-Alter-Chromosome-Structure"><a href="#1-Alter-Chromosome-Structure" class="headerlink" title="1. Alter Chromosome Structure"></a>1. Alter Chromosome Structure</h3><p>There are two primary ways in which the structure of chromosomes can be altered</p>
+<ol>
+<li>The total amount of genetic material in the chromosome can change:<ul>
+<li>Deficiencies&#x2F;Deletions </li>
+<li>Duplications</li>
+</ul>
+</li>
+<li>The total amount of genetic material remains the same, but is rearranged<ul>
+<li>Inversions </li>
+<li>Translocations</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-Alter-Chromosome-Number"><a href="#2-Alter-Chromosome-Number" class="headerlink" title="2. Alter Chromosome Number"></a>2. Alter Chromosome Number</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130164702111.png" alt="image-20191130164702111"></p>
+<h2 id="Gene-Mutations"><a href="#Gene-Mutations" class="headerlink" title="Gene Mutations"></a>Gene Mutations</h2><p>A point mutation is a change in a single base pair</p>
+<ul>
+<li>It can involve a base substitution</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130165336424.png" alt="image-20191130165336424" style="zoom: 33%;" />
+
+<ol>
+<li><p>A <strong>transition（（碱基）转换）</strong> is a change of <u>a pyrimidine (C, T) to another pyrimidine or a purine (A, G) to another purine</u></p>
+</li>
+<li><p>A <strong>transversion（（碱基）颠换）</strong> is a change of a <u>pyrimidine to a purine or vice versa</u></p>
+</li>
+</ol>
+<ul>
+<li>Transitions are more common than transversions（因为碱基配对的能量因素）</li>
+</ul>
+<ol start="3">
+<li><strong>Insertion</strong></li>
+<li><strong>Deletion</strong></li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130165937018.png" alt="image-20191130165937018" style="zoom: 33%;" />
+
+<h2 id="Mutation-Effects"><a href="#Mutation-Effects" class="headerlink" title="Mutation Effects"></a>Mutation Effects</h2><h3 id="1-Point-Mutation-Effects"><a href="#1-Point-Mutation-Effects" class="headerlink" title="1. Point Mutation Effects"></a>1. Point Mutation Effects</h3><p>Mutations in the coding sequence of a structural gene can have various effects on the polypeptide</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130170252901.png" alt="image-20191130170252901" style="zoom: 80%;" />
+
+<h4 id="Point-Mutations-Silent-Mutation-静默突变"><a href="#Point-Mutations-Silent-Mutation-静默突变" class="headerlink" title="Point Mutations: Silent Mutation 静默突变"></a>Point Mutations: Silent Mutation 静默突变</h4><p><strong>Silent mutations</strong> are those base substitutions that <u>do not alter the amino acid sequence of the polypeptide</u></p>
+<p>原因在于Due to the <strong>degeneracy（简并）</strong> of the genetic code</p>
+<p>但是Silent Mutation可能引起蛋白质功能的变化：</p>
+<ul>
+<li>由于静默突变可能改变<u>密码子的偏好性</u>，因此影响translation，从而影响protein folding的过程</li>
+</ul>
+<p>Example：TTC → TTT</p>
+<h4 id="Point-Mutations-Missense-Mutations-错义突变"><a href="#Point-Mutations-Missense-Mutations-错义突变" class="headerlink" title="Point Mutations: Missense Mutations 错义突变"></a>Point Mutations: Missense Mutations 错义突变</h4><p><strong>Missense mutations</strong> are those base substitutions in which <u>an amino acid change does occur</u></p>
+<ul>
+<li>If the substituted amino acid has no detectable effect on protein function, the mutation is said to be <strong>neutral.</strong> </li>
+<li>This can occur if the new amino acid has <u>similar chemistry</u> to the amino acid it replaced</li>
+</ul>
+<p>Example: Sickle-cell anemia：</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130170739655.png" alt="image-20191130170739655"></p>
+<h4 id="Point-Mutations-Nonsense-Mutations-无义突变"><a href="#Point-Mutations-Nonsense-Mutations-无义突变" class="headerlink" title="Point Mutations: Nonsense Mutations 无义突变"></a>Point Mutations: Nonsense Mutations 无义突变</h4><p><strong>Nonsense mutations</strong> are those base substitutions that <u>change a normal codon to a stop codon</u></p>
+<h4 id="Point-Mutations-Frameshift-Mutations-移码突变"><a href="#Point-Mutations-Frameshift-Mutations-移码突变" class="headerlink" title="Point Mutations: Frameshift Mutations 移码突变"></a>Point Mutations: Frameshift Mutations 移码突变</h4><p>Frameshift mutations involve the <u>addition or deletion of a number of nucleotides that is not divisible by three</u></p>
+<ul>
+<li>This <u>shifts the reading frame</u> so that translation of the mRNA results in a completely different amino acid sequence downstream of the mutation</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171012417.png" alt="image-20191130171012417"></p>
+<p>但是最终蛋白质的功能也可能不改变</p>
+<h4 id="Summary-of-Point-Mutations"><a href="#Summary-of-Point-Mutations" class="headerlink" title="Summary of Point Mutations"></a>Summary of Point Mutations</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171228511.png" alt="image-20191130171228511"></p>
+<h3 id="2-Mutation-Effects-on-Genotype-and-Phenotype"><a href="#2-Mutation-Effects-on-Genotype-and-Phenotype" class="headerlink" title="2. Mutation Effects on Genotype and Phenotype"></a>2. Mutation Effects on Genotype and Phenotype</h3><p>Mutations can also be described based on their effects on the wild-type phenotype</p>
+<p>They are often <u>characterized by their differential ability to survive</u></p>
+<ol>
+<li><strong>Deleterious mutations（有害突变）</strong> decrease the chances of survival</li>
+</ol>
+<ul>
+<li>The most extreme are <u>lethal mutations（致死突变）</u></li>
+</ul>
+<ol start="2">
+<li><strong>Beneficial mutations</strong> enhance the survival or reproductive success of an organism </li>
+<li><u>The environment can affect whether a given mutation is deleterious or beneficial</u></li>
+</ol>
+<p>Some mutations are conditional</p>
+<ul>
+<li>They affect the phenotype only under a defined set of conditions</li>
+<li>An example is a temperature-sensitive mutation</li>
+</ul>
+<h3 id="3-Gene-Mutations-outside-of-coding-sequences"><a href="#3-Gene-Mutations-outside-of-coding-sequences" class="headerlink" title="3. Gene Mutations outside of coding sequences"></a>3. Gene Mutations outside of coding sequences</h3><p>Gene Mutations outside of coding sequences <u>can still affect phenotype</u></p>
+<p>Mutations in the core promoter can <u>change levels of gene expression</u></p>
+<ul>
+<li>Up mutations increase expression. </li>
+<li>Down mutations decrease expression</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171858384.png" alt="image-20191130171858384" style="zoom: 50%;" />
+
+<h2 id="Different-Mutation-Locations"><a href="#Different-Mutation-Locations" class="headerlink" title="Different Mutation Locations"></a>Different Mutation Locations</h2><p>Geneticists classify animal cells into two types</p>
+<ol>
+<li>Germ-line cells<ul>
+<li>Cells that give rise to gametes such as eggs and sperm</li>
+</ul>
+</li>
+<li>Somatic cells<ul>
+<li>All other cells</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-Occur-in-Germline-生殖细胞"><a href="#1-Occur-in-Germline-生殖细胞" class="headerlink" title="1. Occur in Germline 生殖细胞"></a>1. Occur in Germline 生殖细胞</h3><p><strong>Germ-line mutations</strong> are those that occur directly in a sperm or egg cell, or in one of their precursor cells</p>
+<h3 id="2-Occur-in-Somatic-Cells-体细胞"><a href="#2-Occur-in-Somatic-Cells-体细胞" class="headerlink" title="2. Occur in Somatic Cells 体细胞"></a>2. Occur in Somatic Cells 体细胞</h3><p>Somatic mutations are those that occur directly in a body cell, or in one of its precursor cells</p>
+<p>Somatic cell mutation may cause cancer.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130173353820.png" alt="image-20191130173353820"></p>
+<h2 id="Occurrence-and-Causes-of-Mutation"><a href="#Occurrence-and-Causes-of-Mutation" class="headerlink" title="Occurrence and Causes of Mutation"></a>Occurrence and Causes of Mutation</h2><p>Mutations can occur spontaneously or be induced</p>
+<ol>
+<li>**Spontaneous mutations **自发突变</li>
+</ol>
+<p>Occur without a known cause due to inherent metabolic errors (abnormalities in cellular&#x2F;biological processes ) or unknown agents in the environment.</p>
+<ul>
+<li>Errors in DNA replication</li>
+</ul>
+<ol start="2">
+<li>**Induced mutations **诱发突变</li>
+</ol>
+<p>Result from exposure organisms to mutagens, physical and chemical agents that cause changes in DNA, such as ionizing radiation, ultraviolet light, or certain chemicals.</p>
+<h3 id="1-Spontaneous-Mutations"><a href="#1-Spontaneous-Mutations" class="headerlink" title="1. Spontaneous Mutations"></a>1. Spontaneous Mutations</h3><p>Spontaneous mutations can arise by three types of chemical changes</p>
+<ol>
+<li>   Depurination 脱嘌呤作用 （most common）</li>
+<li>   Deamination 脱氨作用</li>
+<li>   Tautomeric shift 互变异构移位</li>
+</ol>
+<h4 id="Depurination"><a href="#Depurination" class="headerlink" title="Depurination"></a>Depurination</h4><p>Depurination involves the <u>removal of a purine (guanine or adenine) from the DNA</u></p>
+<ul>
+<li>The covalent bond between deoxyribose and a purine base is somewhat unstable<ul>
+<li>It occasionally undergoes a spontaneous reaction with water that releases the base from the sugar</li>
+</ul>
+</li>
+</ul>
+<p>This is termed an <strong>apurinic site</strong>（AP 位点）</p>
+<blockquote>
+<p>在生物化学和分子遗传学之中，AP位点(缺嘌呤&#x2F;缺嘧啶位点)，也被称作是缺碱基位点，通常位在由嘌呤或是嘧啶组成的DNA之内(也有极小机率出现在RNA之内)，不是自发的话就是由DNA损伤造成。在一般生理条件下，估计每天约有10,000个缺嘌呤位点和500个缺嘧啶位点在一个细胞中产生。</p>
+<p>AP位点能够由自发的去嘌呤作用产生，但也可能充当碱基切除修复机制中的中间产物。在这过程之中，DNA 糖苷酶识别受损的碱基，并切下N-糖苷键结，使碱基脱去产生AP位点。</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130174625066.png" alt="image-20191130174625066"></p>
+<p>Fortunately, apurinic sites can be repaired</p>
+<ul>
+<li>However, if the repair system fails, a mutation may result during subsequent rounds of DNA replication</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130174708225.png" alt="image-20191130174708225"></p>
+<h4 id="Deamination"><a href="#Deamination" class="headerlink" title="Deamination"></a>Deamination</h4><p>Deamination involves the <u>removal of an amino group from the cytosine base</u></p>
+<ul>
+<li>The other bases are not readily deaminated</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175026490.png" alt="image-20191130175026490" style="zoom: 33%;" />
+
+<p>DNA repair enzymes can recognize uracil as an inappropriate base in DNA and remove it</p>
+<p>However; if the repair system fails, a C-G to A-T mutation will result during subsequent rounds of DNA replication</p>
+<p>Deamination of 5-methyl cytosine can also occur</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175145338.png" alt="image-20191130175145338" style="zoom:33%;" />
+
+<p>Thymine is a normal constituent of DNA</p>
+<p>This poses a problem for repair enzymes</p>
+<ul>
+<li>They <u>cannot</u> determine which of the two bases on the two DNA strands is the incorrect base</li>
+</ul>
+<p>For this reason, <u>methylated cytosine bases tend to create hot spots for mutation</u></p>
+<h4 id="Tautomeric-Shift"><a href="#Tautomeric-Shift" class="headerlink" title="Tautomeric Shift"></a>Tautomeric Shift</h4><p>A tautomeric shift involves a temporary change in base structure</p>
+<ul>
+<li><p>The common, stable form of thymine and guanine is the <strong>keto</strong> form（酮式）</p>
+</li>
+<li><p>At a low rate, T and G can interconvert to an <strong>enol</strong> form（烯醇式）</p>
+</li>
+</ul>
+<p>The common, stable form of adenine and cytosine is the <strong>amino</strong> form（氨基形式）</p>
+<ul>
+<li>At a low rate, A and C can interconvert to an <strong>imino</strong> form（亚氨基形式）</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175624700.png" alt="image-20191130175624700" style="zoom: 50%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130180409422.png" alt="image-20191130180409422" style="zoom: 67%;" />
+
+<p>For a tautomeric shift to cause a mutation it must occur immediately prior to DNA replication<br><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130181151907.png" alt="image-20191130181151907" style="zoom: 67%;" /></p>
+<h3 id="2-Types-of-Mutagens"><a href="#2-Types-of-Mutagens" class="headerlink" title="2. Types of Mutagens"></a>2. Types of Mutagens</h3><p>An enormous array of agents can act as mutagens that permanently alter the structure of DNA</p>
+<p>The public is concerned about mutagens for two main reasons:</p>
+<ol>
+<li><p>Mutagens are often involved in the development of human cancers</p>
+</li>
+<li><p>Mutagens can cause gene mutations that may have harmful effects in future generations</p>
+</li>
+</ol>
+<p>Mutagenic agents are usually classified as <strong>chemical</strong> or <strong>physical</strong> mutagens</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130181744318.png" alt="image-20191130181744318"></p>
+<h4 id="Chemical-Mutagens-Alter-DNA-Structure-in-Different-Ways"><a href="#Chemical-Mutagens-Alter-DNA-Structure-in-Different-Ways" class="headerlink" title="Chemical Mutagens Alter DNA Structure in Different Ways"></a>Chemical Mutagens Alter DNA Structure in Different Ways</h4><p>Chemical Mutagens come into 3 main types:</p>
+<ol>
+<li>   Base modifiers</li>
+<li>   Intercalating agents 插入剂</li>
+<li>   Base analogues</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182221508.png" alt="image-20191130182221508" style="zoom:67%;" />
+
+<h5 id="1-Base-Modifiers"><a href="#1-Base-Modifiers" class="headerlink" title="(1) Base Modifiers"></a>(1) Base Modifiers</h5><p>Base modifiers <u>covalently modify</u> the structure of nucleotides.</p>
+<ol>
+<li>Deaminating agent 脱氨基剂</li>
+<li>Hydroxylating agent 羟基化剂</li>
+<li>Alkylating agent 烷化剂</li>
+</ol>
+<h6 id="Deaminating-Agent"><a href="#Deaminating-Agent" class="headerlink" title="Deaminating Agent"></a>Deaminating Agent</h6><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182412237.png" alt="image-20191130182412237"></p>
+<p>Example:</p>
+<ol>
+<li>Nitrous Acid 亚硝酸</li>
+</ol>
+<h6 id="Hydroxylating-Agent"><a href="#Hydroxylating-Agent" class="headerlink" title="Hydroxylating Agent"></a>Hydroxylating Agent</h6><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182543536.png" alt="image-20191130182543536"></p>
+<p>Example:</p>
+<ol>
+<li>Hydroxylamine 羟胺</li>
+</ol>
+<h6 id="Alkylating-Agent"><a href="#Alkylating-Agent" class="headerlink" title="Alkylating Agent"></a>Alkylating Agent</h6><p>Alkylation - process </p>
+<p>where <strong>electrophiles（亲电体）</strong>:</p>
+<blockquote>
+<p>亲电体（英语：Electrophile，意思为电子喜好者）为一化学术语，指在化学反应中对含有可成键电子对的原子或分子（亲核试剂）有亲和作用的原子或分子。</p>
+<p>因为亲电试剂可以接受电子，所以它们是路易斯酸（见酸碱反应理论）。大多数亲电试剂为正电性，有一个原子带正电，或有一个原子不具备八隅体电子。</p>
+<p>亲电试剂进攻亲核试剂上电子集中的部位。有机化学中常见的亲电子试剂有阳离子（如H 和 NO2）、极性分子（如氯化氢、卤代烃、酰卤，和羰基化合物）、可极化中电性分子（如Cl2 和 Br2）、氧化剂（如有机过氧酸）、不具备八隅体电子的试剂（如卡宾和自由基）、以及某些路易斯酸（如 BH3 和 DIBAL）。</p>
+</blockquote>
+<ul>
+<li>Attack <u>negative centers</u></li>
+<li>Add carbon-containinggroups (<strong>alkyl</strong> groups 烷基基团)</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182845729.png" alt="image-20191130182845729" style="zoom: 67%;" />
+
+<p>Common targets (red): N7 of G, N3 of A, phosphodiester bond O6 ofG </p>
+<p>Some chemical mutagens disrupt the appropriate pairing between nucleotides by alkylating bases within the DNA</p>
+<ul>
+<li>Induce transitions, transversions, frameshifts, and chromosome aberrations.</li>
+<li>Examples: Nitrogen mustards and ethyl methanesulfonate (EMS)</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183132651.png" alt="image-20191130183132651"></p>
+<h5 id="2-Intercalating-Agent"><a href="#2-Intercalating-Agent" class="headerlink" title="(2) Intercalating Agent"></a>(2) Intercalating Agent</h5><p>Intercalating agents contain flat planar structures that <u>intercalate themselves into the double helix</u></p>
+<ul>
+<li>This <u>distorts the helical structure</u></li>
+<li>When DNA containing these mutagens is replicated, the daughter strands may contain single-nucleotide additions and&#x2F;or deletions resulting in frameshifts</li>
+</ul>
+<p>Example:</p>
+<ol>
+<li>Acridine dyes 吖啶染料</li>
+<li>Proflavin 原黄素；二氨基吖啶</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183455902.png" alt="image-20191130183455902" style="zoom: 50%;" />
+
+<h5 id="3-Base-Analogs"><a href="#3-Base-Analogs" class="headerlink" title="(3) Base Analogs"></a>(3) Base Analogs</h5><p>Base analogues become incorporated into daughter strands during DNA replication</p>
+<ul>
+<li>For example, <strong>5-bromouracil（5-溴尿嘧啶 ）</strong> is a <u>thymine analogue</u></li>
+<li>It can be incorporated into DNA instead of thymine</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183637475.png" alt="image-20191130183637475" style="zoom:67%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183655700.png" alt="image-20191130183655700" style="zoom:67%;" />
+
+<p>In this way, 5-bromouracil can promote a change of an AT base pair into a GC base pair</p>
+<h4 id="Physical-Mutagens"><a href="#Physical-Mutagens" class="headerlink" title="Physical Mutagens"></a>Physical Mutagens</h4><p>Physical mutagens come into two main types</p>
+<ol>
+<li>Ionizing radiation</li>
+<li>Nonionizing radiation</li>
+</ol>
+<h5 id="1-Ionizing-radiation"><a href="#1-Ionizing-radiation" class="headerlink" title="(1) Ionizing radiation"></a>(1) Ionizing radiation</h5><ul>
+<li>Includes X-rays and gamma rays</li>
+<li>Has short wavelength and high energy</li>
+<li>Can penetrate deeply into biological molecules</li>
+<li>Creates chemically reactive molecules termed <u>free radicals</u></li>
+<li>Can cause<ul>
+<li>Base deletions</li>
+<li>Oxidized bases</li>
+<li>Single nicks（裂纹） in DNA strands</li>
+<li>Cross-linking</li>
+<li>Chromosomal breaks</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184106958.png" alt="image-20191130184106958"></p>
+<h5 id="2-Nonionizing-radiation"><a href="#2-Nonionizing-radiation" class="headerlink" title="(2) Nonionizing radiation"></a>(2) Nonionizing radiation</h5><p>Includes UV light</p>
+<p>Has less energy</p>
+<p>Cannot penetrate deeply into biological molecules</p>
+<p>Causes the formation of cross-linked thymine dimers</p>
+<p>Thymine dimers may cause mutations when that DNA strand is replicated </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184236065.png" alt="image-20191130184236065" style="zoom:50%;" />
+
+<h4 id="Tests-for-Mutagens"><a href="#Tests-for-Mutagens" class="headerlink" title="Tests for Mutagens"></a>Tests for Mutagens</h4><p>Many different kinds of tests have been used to evaluate mutagenicity</p>
+<ul>
+<li>One commonly used test is the <strong>Ames test</strong>（艾美氏试验）</li>
+<li>Developed by Bruce Ames</li>
+<li>The test uses a strain of Salmonella（沙门氏菌） typhimurium that cannot synthesize the amino acid histidine<ul>
+<li>It has a point mutation in a gene involved in histidine biosynthesis</li>
+</ul>
+</li>
+<li>A second mutation (i.e., a reversion) may occur restoring the ability to synthesize histidine</li>
+<li>The Ames test <u>monitors the rate at which this second mutation occurs</u></li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184509507.png" alt="image-20191130184509507"></p>
+<blockquote>
+<p>艾美氏试验（英语：Ames test，又称为细菌回复突变试验或安姆氏突变试验）为美国人布鲁斯·埃姆斯博士于1983年所提出的突变物测试方法。此法检测出175已知之致癌物，并发现其中有超过90%者皆显示为阳性(具突变性)，因此，艾美氏试验也被做为先期测试方法之一。而现在正以艾美氏试验为模式系统，进行各式化学物可能的毒性及致突变性之安全评估，但仍需其它的测试辅助测试而进一步确认。</p>
+</blockquote>
+<h1 id="二、DNA-Repair"><a href="#二、DNA-Repair" class="headerlink" title="二、DNA Repair"></a>二、DNA Repair</h1><p>Since most mutations are deleterious, DNA repair systems are vital to the survival of all organisms</p>
+<ul>
+<li>Living cells contain <u>several</u> DNA repair systems that can fix different type of DNA alterations</li>
+</ul>
+<p>In most cases, DNA repair is a multi-step process</p>
+<ol>
+<li>   An irregularity in DNA structure is <u>detected</u></li>
+<li>   The abnormal DNA is <u>removed</u></li>
+<li>   Normal DNA is <u>synthesized</u></li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184800489.png" alt="image-20191130184800489"></p>
+<h2 id="Directly-Repaired"><a href="#Directly-Repaired" class="headerlink" title="Directly Repaired"></a>Directly Repaired</h2><p>In a few cases, the <u>covalent modification</u>s of nucleotides can be reversed by specific enzymes</p>
+<ul>
+<li><strong>Photolyase (光裂合酶)</strong> can repair <u>thymine dimers</u><ul>
+<li>It splits the dimers restoring the DNA to its original condition</li>
+<li>Uses energy of visible light</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>光裂合酶（Photolyases，EC 4.1.99.3）为一种DNA修复酵素，专门修复遭受紫外线破坏的DNA。此酵素的作用需要可见光的协助，最好是在蓝紫光下，此现象称为光致活作用（photoreactivation）。</p>
+<p>由系统发生学来看，光裂合酶为一个相当古老的酵素，从细菌、真菌，到动物体内都有，在植物体内尤为重要。但人和其他胎盘哺乳类体内却改以另一种较无效率的核苷酸切除修复法来取代光裂合酶，因此并无此酵素活性。</p>
+<p>在DNA中，相邻的胸腺嘧啶受到紫外线的照射时，会形成共价键，形成环丁烷桥，称为胸腺嘧啶二聚体，导致基因病变。光裂合酶会接在DNA上，切除胸腺嘧啶二聚体。</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130185740285.png" alt="image-20191130185740285" style="zoom:67%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130185758179.png" alt="image-20191130185758179" style="zoom:50%;" />
+
+<p>$O^{6}$<strong>-alkylguanine alkyltransferase</strong> <u>repairs alkylated</u> bases<br>It transfers the methyl or ethyl group from the base to a cysteine side chain within the alkyltransferase protein</p>
+<ul>
+<li>Surprisingly, this permanently inactivates alkyltransferase!</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130190126239.png" alt="image-20191130190126239" style="zoom:50%;" />
+
+<h2 id="Base-Excision-Repair"><a href="#Base-Excision-Repair" class="headerlink" title="Base Excision Repair"></a>Base Excision Repair</h2><p><strong>Base excision repair (BER)</strong> involves a category of enzymes known as DNA N-glycosylases</p>
+<ul>
+<li>These enzymes can recognize an abnormal base and cleave the bond between it and the sugar in the DNA</li>
+</ul>
+<p>Depending on the species, this repair system can eliminate abnormal bases such as</p>
+<ul>
+<li><p>Uracil; Thymine dimers</p>
+</li>
+<li><p>3-methyladenine; 7-methylguanine</p>
+</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130190514159.png" alt="image-20191130190514159"></p>
+<h2 id="nucleotide-excision-repair-NER"><a href="#nucleotide-excision-repair-NER" class="headerlink" title="nucleotide excision repair (NER)"></a>nucleotide excision repair (NER)</h2><p>An important general process for DNA repair is <u>nucleotide excision repair (NER)</u></p>
+<p>This type of system can repair many types of DNA damage, including</p>
+<ul>
+<li><p>Thymine dimers and chemically modified bases</p>
+</li>
+<li><p>missing bases, some types of crosslinks</p>
+</li>
+</ul>
+<p>NER is found in all eukaryotes and prokaryotes</p>
+<ul>
+<li>However; its molecular mechanism is better understood in prokaryotes</li>
+</ul>
+<p>In E. coli, the NER system requires four key proteins</p>
+<ul>
+<li><p>These are designated UvrA, UvrB, UvrC and UvrD</p>
+<ul>
+<li>Named as such because they are involved in IJItrayiolet light repair of pyrimidine dimers<ul>
+<li>They are also important in repairing chemically damaged DNA</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>UvrA, B, C, and D recognize and remove a short segment of damaged DNA</p>
+</li>
+<li><p>DNA polymerase and ligase finish the repair job</p>
+</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191254017.png" alt="image-20191130191254017"></p>
+<h2 id="Mismatch-Repair-Systems-Detect-Correct-A-Base-Pair-Mismatch"><a href="#Mismatch-Repair-Systems-Detect-Correct-A-Base-Pair-Mismatch" class="headerlink" title="Mismatch Repair Systems Detect Correct A Base Pair Mismatch"></a>Mismatch Repair Systems Detect Correct A Base Pair Mismatch</h2><p>A base mismatch is another type of abnormality in DNA</p>
+<p>The structure of the DNA double helix obeys the AT&#x2F;GC rule of base pairing</p>
+<ul>
+<li>However; during DNA replication an incorrect base may be added to the growing strand by mistake</li>
+</ul>
+<p><u>DNA polymerases</u> have a 3’ to 5’ proofreading ability that can detect base mismatches and fix them</p>
+<p>If proofreading fails, the <strong>mismatch repair system</strong> comes to the rescue</p>
+<p>Mismatch repair systems are found in all species</p>
+<p>An important aspect of these systems is that they are specific to the newly made strand</p>
+<p>The molecular mechanism of mismatch repair has been studied extensively in E. coli</p>
+<ul>
+<li>Three proteins, MutL, MutH and MutS detect the mismatch and direct its removal from the newly made strand<ul>
+<li>The proteins are named Mut because their absence leads to a much higher mutation rate than normal</li>
+</ul>
+</li>
+<li>A key characteristic of MutH is that it can <u>distinguish between the parental strand and the daughter strand</u><ul>
+<li>Prior to replication, both strands are methylated</li>
+<li>Immediately after replication, <u>the parental strand is methylated whereas the daughter is not!</u></li>
+</ul>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191707854.png" alt="image-20191130191707854" style="zoom:67%;" />
+
+
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191826617.png" alt="image-20191130191826617" style="zoom:67%;" />
+
+<h2 id="Recombination-Repair"><a href="#Recombination-Repair" class="headerlink" title="Recombination Repair"></a>Recombination Repair</h2><p>DNA Double-Strand Breaks are very dangerous</p>
+<ul>
+<li>Breakage of chromosomes into pieces</li>
+<li>Caused by ionizing radiation and chemical mutagens<ul>
+<li>Also caused by reactive oxygen species which are the byproducts of cellular metabolism</li>
+<li>10-100 breaks occur each day in a typical human cell</li>
+</ul>
+</li>
+<li>Breaks can cause chromosomal rearrangements and deficiencies</li>
+<li>They may be repaired by two systems known as <strong>homologous recombination repair (HRR) and nonhomologous end joining (NHEJ)</strong></li>
+</ul>
+<h3 id="1-homologous-recombination-repair-同源重组修复"><a href="#1-homologous-recombination-repair-同源重组修复" class="headerlink" title="1. homologous recombination repair 同源重组修复"></a>1. homologous recombination repair 同源重组修复</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192322187.png" alt="image-20191130192322187"></p>
+<p>Advantage: Error-free</p>
+<p>Disadvantage: Sister chromatids <u>only available during S and G2 phases</u> of the cell cycle in eukaryotes or following DNA replication in bacteria</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192443939.png" alt="image-20191130192443939"></p>
+<h3 id="2-nonhomologous-end-joining-非同源端联接"><a href="#2-nonhomologous-end-joining-非同源端联接" class="headerlink" title="2. nonhomologous end joining 非同源端联接"></a>2. nonhomologous end joining 非同源端联接</h3><p> <img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192512895.png" alt="image-20191130192512895">Advantage: NHEJ doesn’t involve the participation of a sister chromatids → available at any stage of the cell cycle</p>
+<p>Disadvantage: result in small deletions on the region that has been repaired</p>
+<h2 id="Inherited-Human-Diseases-with-Defects-in-DNA-Repair"><a href="#Inherited-Human-Diseases-with-Defects-in-DNA-Repair" class="headerlink" title="Inherited Human Diseases with Defects in DNA Repair"></a>Inherited Human Diseases with Defects in DNA Repair</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192628841.png" alt="image-20191130192628841"></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>L11 Mutation and DNA repair</p><p><a href="https://zhenyumi.github.io/posts/52ed8a33/">https://zhenyumi.github.io/posts/52ed8a33/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-07-25</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-07-25</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Genetics/">Genetics</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/5d442000/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">L11 Biological Catalysts</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/11af9c4a/"><span class="level-item">L12 Introduction of the Transposable Elements</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">196</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">28</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Undefined-notes/"><span class="level-start"><span class="level-item">Undefined notes</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-19T06:36:03.000Z">2022-09-19</time></p><p class="title"><a href="/posts/f5b7721a/">Embedding and Frozen Sectioning</a></p><p class="categories"><a href="/categories/Undefined-notes/">Undefined notes</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

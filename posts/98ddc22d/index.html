@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>L17 Membrane Transport - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+1000 (澳大利亚东部标准时间)"><meta property="og:type" content="blog"><meta property="og:title" content="L17 Membrane Transport"><meta property="og:url" content="https://zhenyumi.github.io/posts/98ddc22d/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+1000 (澳大利亚东部标准时间)"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><meta property="article:published_time" content="2020-07-25T15:45:00.000Z"><meta property="article:modified_time" content="2020-07-25T15:45:00.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="Biochemistry I (Macromolecules)"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/98ddc22d/"},"headline":"L17 Membrane Transport","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"],"datePublished":"2020-07-25T15:45:00.000Z","dateModified":"2020-07-25T15:45:00.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"Sat Jul 25 2020 23:45:00 GMT+1000 (澳大利亚东部标准时间)"}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/98ddc22d/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png" alt="L17 Membrane Transport"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-25T15:45:00.000Z" title="2020/7/26 01:45:00">2020-07-25</time>发表</span><span class="level-item"><time dateTime="2020-07-25T15:45:00.000Z" title="2020/7/26 01:45:00">2020-07-25</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/Academic-Notebook/">Academic Notebook</a><span> / </span><a class="link-muted" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/">Biochemistry I (Macromolecules)</a></span><span class="level-item">24 分钟读完 (大约3630个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">L17 Membrane Transport</h1><div class="content"><h1 id="一、Transport-Across-Membranes"><a href="#一、Transport-Across-Membranes" class="headerlink" title="一、Transport Across Membranes"></a>一、Transport Across Membranes</h1><blockquote>
+<p>Molecules transport across membrane. the methods can include the actions of small molecules that act as ion <strong>carriers</strong>, larger proteins that are highly specific <strong>transporters</strong>, and proteins that promote the formation of membrane <strong>vesicles</strong>. </p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223185108539.png" alt="image-20191223185108539"></p>
+<h2 id="Thermodynamics-of-Transport"><a href="#Thermodynamics-of-Transport" class="headerlink" title="Thermodynamics of Transport"></a>Thermodynamics of Transport</h2><blockquote>
+<p>The thermodynamics can be shown in the $\Delta G$ form.</p>
+<p>Suppose transporting one mole of a substance from a location in which its concentration is $C_{1}$ to a  different location where its concentration is $C_{2}$:</p>
+</blockquote>
+<p>$$<br>\Delta G &#x3D; \Delta G^{\circ ‘} + RT \ln{Q} &#x3D; -RT \ln{K_{eq}} + RT \ln{\frac{[C_{2}]}{[C_{1}]}}<br>$$</p>
+<blockquote>
+<p>For a process that only involves transport of some substance across a membrane, the term $\Delta G^{\circ ‘} &#x3D; 0$</p>
+<p>The $\Delta G^{\circ ‘}$ describes the <em>equilibrium</em> <em>state</em> for a process, and for the case of transport across a membrane, the equilibrium state is reached when the concentrations of the substance are the same on both sides of the membrane</p>
+<p>此时：</p>
+</blockquote>
+<p>$$<br>K_{eq} &#x3D; [C_{2}]&#x2F;[C_{1}] &#x3D; 1 \<br>\because \text{At equilibrium: }\Delta G &#x3D; 0 \<br>\therefore \Delta G^{\circ ‘} &#x3D; -RT \ln{K_{eq}} &#x3D; 0<br>$$</p>
+<blockquote>
+<p>For a transport process that is not at equilibrium $[C_{2}] \ne [C_{1}]$, thus $RT \ln{Q} \ne 0$, and $\Delta G$ for the process is given by:</p>
+</blockquote>
+<p>$$<br>\Delta G &#x3D; \Delta G^{\circ ‘} + RT \ln{Q} &#x3D; 0 + RT \ln{\frac{[C_{2}]}{[C_{1}]}} &#x3D; RT \ln{\frac{[C_{2}]}{[C_{1}]}} \text{ (Equation 10.1 (b))}<br>$$</p>
+<blockquote>
+<p>According to this equation, if is $[C_{2}]$ less than $[C_{1}]$, $\Delta G$ is negative, and the process is <strong>thermodynamically favorable</strong>.</p>
+<p>As more and more substance is transferred (between the two locations), $[C_{1}]$ decreases and $[C_{2}]$ increases, until $[C_{2}] &#x3D; [C_{1}]$</p>
+<p>At this point $\Delta G &#x3D; 0$ and the system is at <strong>equilibrium</strong>.</p>
+</blockquote>
+<blockquote>
+<p>There are three circumstances under which this equilibrium state can be circumvented (设法克服或避免(某事物);回避), and each is important in the behavior of real membranes:</p>
+</blockquote>
+<h3 id="1-Chemically-Modified"><a href="#1-Chemically-Modified" class="headerlink" title="1. Chemically Modified"></a>1. Chemically Modified</h3><blockquote>
+<p>A substance may be preferentially bound by macromolecules confined to one side of the membrane or it may be chemically modified once it crosses.</p>
+</blockquote>
+<blockquote>
+<p>We may find that <strong>compound A</strong> is more concentrated inside a cell (in terms of total moles of A per unit volume) than outside. But much of A may be bound to some cellular macromolecules or may have been modified; that portion does not really count in Equation 10.1</p>
+<p>which simply states that <u>the concentrations of <em>free</em> A on the two sides must be equal at equilibrium.</u></p>
+</blockquote>
+<blockquote>
+<p>An appropriate example is oxygen in erythrocytes. If we were to measure the <em>total</em> <strong>oxygen concentration in an erythrocyte</strong>, we would find it higher than the concentration of in the surrounding blood plasma. But the total concentration inside the cell includes oxygen bound to hemoglobin. The <em>free</em> oxygen concentration in the fluids inside and outside an erythrocyte is the same at equilibrium.</p>
+</blockquote>
+<h3 id="2-Membrane-Electrical-Potential"><a href="#2-Membrane-Electrical-Potential" class="headerlink" title="2. Membrane Electrical Potential"></a>2. Membrane Electrical Potential</h3><blockquote>
+<p>A <strong>membrane electrical potential</strong> may be maintained across a membrane that influences the distribution of ions.</p>
+<p>This tendency can be expressed quantitatively in the following way. For an ion of <strong>charge <em>Z</em></strong>, the free energy change for transport across a cell or organelle membrane now involves two contributions:</p>
+<ol>
+<li>the normal concentration term, as given in <u>Equation 10.1b</u></li>
+<li>a second term describing the energy change (or work involved) in moving a mole of ions across the potential difference.</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>We consider a process in which one mole of ions is transported from <em>outside</em> to inside.</p>
+</blockquote>
+<p>$$<br>\Delta G &#x3D; RT \ln{\frac{[C_{in}]}{[C_{out}]}} + ZF \Delta \psi  \text{    (Equation 10.2)}<br>$$</p>
+<blockquote>
+<p>Here $F$ is the Faraday constant ($96.5 kJ \ mol^{-1} V^{-1}$); $\Delta \psi$ is the membrane potential in volts. We define $\Delta \psi$ in terms of the initial and final locations of the transported ion $\Delta \psi &#x3D; \psi_{final} - \psi_{initial}$, in this case, $\Delta \psi &#x3D; \psi_{in} - \psi_{out}$.</p>
+<p>In this example, $\Delta \psi$ will be negative if the inside of the membrane is negatively charged compared to the outside. Under these conditions, if <em>Z</em> is positive, the $ZF\Delta \psi$ term in Equation 10.2 is negative and makes more exergonic (favorable).</p>
+</blockquote>
+<blockquote>
+<p>equilibrium state $(\Delta G &#x3D; 0)$ will <em>not</em> correspond to the same concentration of ions on the two sides of the membrane. However, energy must be expended continually to keep up the potential difference; otherwise migration of ions would neutralize it.</p>
+<p>Conversely, Equation 10.2 may be interpreted to mean that if a difference in ionic concentration is maintained, an electrical potential will be produced across the membranes</p>
+</blockquote>
+<h3 id="3-Active-Transport-Coupled-Favorable-Reaction"><a href="#3-Active-Transport-Coupled-Favorable-Reaction" class="headerlink" title="3. Active Transport (Coupled Favorable Reaction)"></a>3. Active Transport (Coupled Favorable Reaction)</h3><blockquote>
+<p>If some thermodynamically favored process is <em>coupled</em> to the transport, then the $\Delta G^{\circ ‘}$ and <em>RT</em> ln <em>Q</em> for this favorable process must be included in the free energy equation</p>
+</blockquote>
+<p>$$<br>\Delta G &#x3D; \Delta G^{\circ ‘} + RT \ln{\frac{Q[C_{in}]}{[C_{out}]}}<br>$$</p>
+<center>equation 10.3 a</center>
+
+<blockquote>
+<p>Where $Q$ includes  activities for the species in the favorable reaction that is coupled to the transport of C</p>
+<p>If the substance <em>C</em> being transported is an ion we must also include the $ZF\Delta \psi$ term</p>
+</blockquote>
+<p>$$<br>\Delta G &#x3D; \Delta G^{\circ ‘} + RT \ln{\frac{Q[C_{in}]}{[C_{out}]}} + ZF\Delta \psi<br>$$</p>
+<center>equation 10.3 b</center>
+
+<blockquote>
+<p>This equation is a generalization of Equation 10.2, now allowing a variety of processes—not just those that maintain an electrical potential difference—to participate in the transport. In the case where hydrolysis of one mol of ATP results in transport of <u><em>n</em> mol of an ion <em>C</em></u>, we must modify Equation 10.3b to include the proper stoichiometry:</p>
+</blockquote>
+<p>$$<br>\Delta G &#x3D; \Delta G^{\circ ‘} + RT \ln{\frac{Q[C_{in}]^{n}}{[C_{out}]^{n}}} + nZF\Delta \psi<br>$$</p>
+<blockquote>
+<p>Where $n &#x3D; $ mol of <em>C</em> transported per mol of ATP. We will show examples of such calculations in the discussion that follows. </p>
+</blockquote>
+<h2 id="Nonmediated-Transport"><a href="#Nonmediated-Transport" class="headerlink" title="Nonmediated Transport"></a>Nonmediated Transport</h2><p>For a substance that can pass through a membrane, the normal state of equilibrium is achieved <strong>when the concentrations of the substance are equal</strong> on both sides of the membrane.</p>
+<p>Equalization of the concentrations of some substance across a membrane can be circumvented by:</p>
+<ol>
+<li><p>binding of the substance to macromolecules </p>
+</li>
+<li><p>maintaining a membrane potential (if the substance is ionic)</p>
+</li>
+<li><p>coupling transport to an exergonic process</p>
+</li>
+</ol>
+<p>The rate of <u>nonmediated transport (Molecular Diffusion),</u> as measured by membrane permeability, is proportional to the diffusion and partition coefficients and inversely proportional to membrane thickness.</p>
+<blockquote>
+<p>The net rate of transport:</p>
+</blockquote>
+<p>$$<br>J &#x3D; -\frac{KD_{l}(C_{2} - C_{1})}{l}<br>$$</p>
+<blockquote>
+<p>$J$ is <u>in moles per square centimeter per second</u>, which is proportional to the concentration difference $(C_{2} - C_{1})$</p>
+<p>$l$ is the  thickness of the membrane, $D_{l}$ is the <strong>diffusion coefficient</strong></p>
+<p>$K$ is the <strong>partition coefficient</strong> for the diffusing material between membrane lipid and water</p>
+<p> net transport will stop when $C_{2} &#x3D; C_{1}$</p>
+</blockquote>
+<blockquote>
+<p>We usually do not know $K$ either $D_{l}$ or the exact thickness of the membranes involved, so we often describe the rate of passive transport in terms of a <strong>permeability coefficient</strong>, <strong>P</strong>, which can be measured by direct experiment:</p>
+</blockquote>
+<p>$$<br>J &#x3D; -P(C_{2} - C_{1})<br>$$</p>
+<center>equation 10.5</center>
+
+<p>$$<br>P &#x3D; \frac{KD_{l}}{l}<br>$$</p>
+<center>equation 10.6</center>
+
+<p>with units of cm&#x2F;s</p>
+<blockquote>
+<p>The low <em>P</em> values of the ions are as expected because ions have low values of <em>K</em></p>
+</blockquote>
+<h2 id="Facilitated-Transport"><a href="#Facilitated-Transport" class="headerlink" title="Facilitated Transport"></a>Facilitated Transport</h2><p><strong>Facilitated transport</strong>, via <u>(1)pores, (2)permeases (渗透酶), or (3)carriers</u>, can increase the rate of diffusion across a membrane by many orders of magnitude.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223190442965.png" alt="image-20191223190442965" style="zoom: 50%;" />
+
+<blockquote>
+<p>Facilitated transport does not change the thermodynamics</p>
+</blockquote>
+<h3 id="1-Carriers"><a href="#1-Carriers" class="headerlink" title="1. Carriers"></a>1. Carriers</h3><p><strong>Valinomycin（缬氨霉素）</strong> is an antibiotic that acts as an ion carrier. </p>
+<p>The outside of this roughly spherical cyclic polypeptide is hydrophobic. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223190711917.png" alt="image-20191223190711917" style="zoom: 80%;" />
+
+<p>The central cavity surrounded by oxygens complexes a K+ ion. </p>
+<p>The surface is covered with CH3 groups (not shown)</p>
+<h3 id="2-Pore"><a href="#2-Pore" class="headerlink" title="2. Pore"></a>2. Pore</h3><h4 id="hemolysin"><a href="#hemolysin" class="headerlink" title="hemolysin"></a>hemolysin</h4><p><strong>The channel-forming hemolysin（溶血素） from</strong> <strong>S. aureus:</strong> </p>
+<p>Ribbon drawings of the <em>a</em>-hemolysin heptamer*,* viewed </p>
+<ol>
+<li><p>looking down the sevenfold axis </p>
+</li>
+<li><p>perpendicular to the sevenfold axis </p>
+</li>
+<li><p>one protomer extracted from the heptamer structure</p>
+</li>
+</ol>
+<p>The heptamer is 10 nm in diameter and 10 nm in length, as measured along the sevenfold axis. </p>
+<p>The β-barrel stem, which penetrates the membrane, is about <u>6 nm</u> long.</p>
+<blockquote>
+<p>Specially, the thickness of lipid bilayer is also <strong>6nm.</strong></p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223191239773.png" alt="image-20191223191239773"></p>
+<h4 id="Gramicidin-A"><a href="#Gramicidin-A" class="headerlink" title="Gramicidin A"></a>Gramicidin A</h4><p><strong>Gramicidin A（土霉素A）</strong> is an antibiotic that acts as an ion pore. </p>
+<p><u><strong>Two molecules</strong> of gramicidin A form a pore</u> through the membrane by adopting a helical conformation, with their hydrophobic side chains in contact with the lipid. </p>
+<blockquote>
+<p>In the hydrophobic environment, the H-bond is strong. Therefore the peptide tends to form a helix.</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223191846112.png" alt="image-20191223191846112" style="zoom: 50%;" />
+
+<p>Note the <em>N</em>-termini are inside and the <em>C</em>-termini are outside the bilayer core. </p>
+<p>The inside of the helix forms the hydrophilic pore. </p>
+<p>The hydrogen bonding in this open helical structure resembles that in β-sheet polypeptides. This is possible because of the alternating D and L residues</p>
+<h4 id="aquaporins-Water-Channel"><a href="#aquaporins-Water-Channel" class="headerlink" title="aquaporins (Water Channel)"></a>aquaporins (Water Channel)</h4><p>Many types of eukaryotic cells must move large amounts of <strong>water</strong> rapidly across their membranes as part of their physiological function.</p>
+<ul>
+<li><p><em>Erythrocytes</em> (which experience a wide range of solution osmolarity as they transit through lungs, capillaries, and kidneys)</p>
+</li>
+<li><p>Secretory cells in salivary glands</p>
+</li>
+<li><p>Epithelial cells in the kidney</p>
+</li>
+</ul>
+<p>Although water can cross membranes, it does so relatively slowly; thus, the inherent permeability of membranes toward water is not sufficient to support the rapid transport observed in many cell types.</p>
+<p>Such rapid transport is achieved by water-specific channels called <strong>aquaporins (水通道蛋白)</strong>. </p>
+<p>The <strong>aquaporins</strong> function as <u>tetramers</u> of identical monomers. </p>
+<p>Each monomer contains six membrane-spanning helices and two shorter helices that contain a conserved <em>N</em>-terminal <strong>Asn-Pro-Ala (NPA)</strong> motif.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223193031567.png" alt="image-20191223193031567"></p>
+<blockquote>
+<p>Crystal structures of the aquaporins reveal that <u>selectivity for water</u> is achieved by three means.</p>
+<ol>
+<li>First, the channel is quite narrow (~0.28 nm) and excludes anything larger than a water molecule (including hydrated ions).</li>
+<li>Second, $H_{3}O^{+}$ is excluded by <strong>electrostatic repulsion</strong>. A conserved Arg places a  (+) charge at this constriction, effectively repelling any cations. In addition, the two shorter helices are oriented with their N-termini pointing into the narrowest part of the channel; thus, the positive ends of the helical macrodipoles provide additional repulsion to Third, water molecules can only pass through the channel in <strong>single file</strong>.</li>
+</ol>
+<p>As they do so, main chain carbonyl groups as well as the conserved Asn72 and Asn192 side chains in the conserved NPA motifs form H-bonds with the individual water molecules, thereby <strong>reorienting</strong> the water molecules and <u>disrupting H-bonding between the water molecules in the channel.</u></p>
+<p>This is a critical feature of the transport mechanism because it prevents protons from traversing the membrane via an H-bonding network of water molecules</p>
+<p>many membranes must maintain ion gradients to carry out critical processes (e.g., bacterial flagellar motion, ATP synthesis, firing of neurons, etc.). The aquaporins elegantly solve the problem of maintaining the osmotic balance in a cell while not destroying critical ion gradients.</p>
+</blockquote>
+<blockquote>
+<p>H<del>2</del>O分子会与H+离子结合形成H<del>3</del>O+</p>
+<p>以水通道蛋白为例，整个大分子由多个helix组成，两条helix的N-terminal组合形成Positive Charge Region，这个区域具有筛选分子的作用。</p>
+<p>在水通道的两端都存在大量的水分子，它们互相形成氢键，而相互间氢键的形成并不利于水分子的运输。在Positive Charge Region中的水分子不会与其他水分子形成氢键，同时由于正电性对H<del>3</del>O+具有的排斥作用，使得当前的水分子可以re-orientation，接着与水通道蛋白另外一侧的大量水分子形成氢键，从而实现“通道”的运输作用。</p>
+</blockquote>
+<h3 id="3-Permeases"><a href="#3-Permeases" class="headerlink" title="3. Permeases"></a>3. Permeases</h3><blockquote>
+<p>Membrane-spanning proteins that recognize specific molecules for transport are called permeases or <strong>transporters</strong>.</p>
+</blockquote>
+<p>One example is The glucose transporter in erythrocytes (<strong>GLUT1</strong>, or band 4.5 protein) is thought to operate in this way</p>
+<blockquote>
+<p>namely, the permease shifts between two conformations: one open only to the “out-side,” and the other open only to the “inside.” Thus, the permease never forms a pore that allows unrestricted flow of the transported substrate</p>
+</blockquote>
+<blockquote>
+<p>When transport of the two molecules, or ions, is in the same direction, the transporter is referred to as a <strong>symport</strong>; when the substrates move in opposite directions, the transporter is called an <strong>antiport</strong>.</p>
+<p>This cotransport strategy allows the thermodynamically unfavorable transport of some substrate <em>against</em> its concentration gradient, when <u>coupled to the favorable transport of the cosubstrate.</u></p>
+</blockquote>
+<h3 id="4-Ion-Selectivity-And-Gating"><a href="#4-Ion-Selectivity-And-Gating" class="headerlink" title="4. Ion Selectivity And Gating"></a>4. Ion Selectivity And Gating</h3><p>Ion selectivity is achieved by <u>optimal geometry</u> of <strong>chelating groups (螯合基团)</strong> in ion channels</p>
+<p><strong>The structure of the potassium channel pore:</strong></p>
+<p>每一个单体都组成”Filter”的一部分</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223194718321.png" alt="image-20191223194718321"></p>
+<blockquote>
+<p>It is critical that the activity of any ion channel is regulated to maintain proper cell function; thus, there should be “open” (i.e., ion-conducting) and “closed” conformations for the channel. The switching between conductive and nonconductive conformations is called <strong>gating</strong>.</p>
+</blockquote>
+<h4 id="Selective-Binding"><a href="#Selective-Binding" class="headerlink" title="Selective Binding"></a>Selective Binding</h4><p><strong>Selective binding of Na+ and K+ in ion channels:</strong></p>
+<p>Two binding sites make up the selectivity filter in the transmembrane region of LeuT.</p>
+<p>Four are bound in the filter of the KcsA channel</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223194900193.png" alt="image-20191223194900193"></p>
+<h4 id="voltage-gating"><a href="#voltage-gating" class="headerlink" title="voltage-gating"></a>voltage-gating</h4><p><strong>A model for voltage-gating in the channel:</strong> </p>
+<p>The channel portion of the voltage-gated channel is structurally homologous to the KcsA channel. </p>
+<p>The Arg- and Lys-rich S4 helices are highlighted in blue. </p>
+<p>The depth of these helices in the bilayer changes as a function of the membrane potential. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223195110427.png" alt="image-20191223195110427"></p>
+<blockquote>
+<p>The position of the S4 helix in the channel is thought to change as a function of the membrane potential ($\Delta \psi$)</p>
+</blockquote>
+<h4 id="Distinguishing-Facilitated-from-Nonmediated-Transport"><a href="#Distinguishing-Facilitated-from-Nonmediated-Transport" class="headerlink" title="Distinguishing Facilitated from Nonmediated Transport"></a>Distinguishing Facilitated from Nonmediated Transport</h4><p>The rate of facilitated diffusion approaches a maximum value when all available transporters are saturated with substrate, whereas nonmediated diffusion shows a linear increase in rate as substrate concentration  increases.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223195331348.png" alt="image-20191223195331348"></p>
+<blockquote>
+<p>a simple test is that facilitated transport systems are <em>saturable</em>. Any membrane has a limited number of tranporters.</p>
+<p>Each carrier or permease can handle only one molecule or ion at a time; each pore can accommodate only one or a few ions or molecules at any moment</p>
+<p>The rate of nonmediated transport, on the other hand, increases linearly with the concentration difference, as predicted by Equation 10.4 or 10.5, because there are no sites to saturate.</p>
+</blockquote>
+<blockquote>
+<p>There is also an easy way to distinguish between pore-facilitated and carrier-facilitated diffusion. The latter should be extremely sensitive to membrane fluidity because the carrier must actually move in the membrane. If the temperature of a membrane is lowered below its fluid–gel transition temperature, transport by a carrier like valinomycin virtually ceases. Transport by a pore structure like gramicidin A, on the other hand, is affected little by temperature changes.</p>
+</blockquote>
+<h2 id="Active-Transport"><a href="#Active-Transport" class="headerlink" title="Active Transport"></a>Active Transport</h2><p>In <strong>active transport</strong>, substances are moved across a membrane against a concentration gradient. </p>
+<p>Direct or indirect coupling of transport to ATP hydrolysis provides the required free energy.</p>
+<p>The Na+-K+ pump acts in all cells to maintain higher concentrations of K+ inside and Na+ outside.</p>
+<table>
+<thead>
+<tr>
+<th>Ion</th>
+<th>Outside</th>
+<th>Inside</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Na+</td>
+<td>145 mM</td>
+<td>12mM</td>
+</tr>
+<tr>
+<td>K+</td>
+<td>4mM</td>
+<td>155mM</td>
+</tr>
+</tbody></table>
+<h3 id="1-Na-K-Pump"><a href="#1-Na-K-Pump" class="headerlink" title="1. Na+-K+ Pump"></a>1. Na+-K+ Pump</h3><p>The structure of the Na+-K+-ATPase with K+ bound:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223200227164.png" alt="image-20191223200227164" style="zoom:80%;" />
+
+<p>A schematic diagram of the functional cycle of the Na+–K+ pump:</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223200305621.png" alt="image-20191223200305621"></p>
+<p>The subunit is believed to have two states: </p>
+<ul>
+<li><p>one open only to the outside (brown</p>
+</li>
+<li><p>one open only to the inside (blue)</p>
+</li>
+</ul>
+<p>A dot between two symbols indicates noncovalent binding, a line indicates covalent attachment and (as in phosphorylation).</p>
+<p>Cardiotonic steroids (e.g., digoxin) inhibit the Na+–K+ pump,eventually resulting in increased Ca2+ ion concentration in heart muscle, which, in turn, leads to stronger contractions of the heart muscle.</p>
+<p>Two $K^{+}$ ions are pumped into the cell and three $Na^{+}$ ions are pumped out for every ATP hydrolyzed. </p>
+<h3 id="2-Cotransport-Systems"><a href="#2-Cotransport-Systems" class="headerlink" title="2. Cotransport Systems"></a>2. Cotransport Systems</h3><p>In <strong>cotransport</strong>, the unfavorable movement of a substance through the membrane is coupled to the favorable transport of another substance.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223200608997.png" alt="image-20191223200608997" style="zoom: 80%;" />
+
+<p>The <strong>sodium–glucose cotransport channel</strong> is also presumed to have two possible states</p>
+<ol>
+<li><p>one open only to the outside</p>
+</li>
+<li><p>one open only to the inside of the cell</p>
+</li>
+</ol>
+<p>Transition to the inside open state is stimulated by glucose binding to E$\cdot$Na+ </p>
+<p>Return to the outside-open state occurs upon Na+ release to the inside of the cell. </p>
+<p>The sodium gradient from inside to outside provides the driving force for the unfavorable transport of glucose. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223201006185.png" alt="image-20191223201006185"></p>
+<h3 id="3-Transport-By-Modification"><a href="#3-Transport-By-Modification" class="headerlink" title="3. Transport By Modification"></a>3. Transport By Modification</h3><p>In <strong>transport by modification</strong>, a substance that has diffused through a membrane is modified so that it cannot return.</p>
+<p>This method is used by many bacteria for the uptake of sugars. </p>
+<p>The sugars are phosphorylated, either during their diffusion through the membrane or as soon as they emerge into the cytosol.</p>
+<h3 id="4-Specific-transport-processes"><a href="#4-Specific-transport-processes" class="headerlink" title="4. Specific transport processes"></a>4. Specific transport processes</h3><p>•This composite plant–animal cell illustrates some of the most important specific transport processes.</p>
+<p>•All of the substances shown here, and many more, are transported in specific directions across cellular membranes.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223201155093.png" alt="image-20191223201155093" style="zoom: 80%;" />
+
+<h3 id="5-Bulk-Transport"><a href="#5-Bulk-Transport" class="headerlink" title="5. Bulk Transport"></a>5. Bulk Transport</h3><p>Caveolae and Coated Vesicles 小窝和包膜囊泡</p>
+<p><strong>Bulk transport</strong> across membranes involves the formation of <strong>clathrin-coated vesicles (网格蛋白包被的囊泡)</strong> and&#x2F;or <strong>caveolae ((复）小窝，小凹)</strong>.</p>
+<p>Formation of a clathrin-coated vesicle initiates with formation of a coated pit (top two panels), which then buds (third panel from top) forming a free coated vesicle (bottom panel). </p>
+<p>Caveola formation occurs at sites rich in cholesterol and sphingolipids due to insertion of caveolin into one leaflet of the membrane. Budding of the caveola yields a free vesicle</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223201402910.png" alt="image-20191223201402910" style="zoom:67%;" />
+
+<h1 id="二、Excitable-Membranes-Action-Potentials-and-Neurotransmission"><a href="#二、Excitable-Membranes-Action-Potentials-and-Neurotransmission" class="headerlink" title="二、Excitable Membranes, Action Potentials, and Neurotransmission"></a>二、Excitable Membranes, Action Potentials, and Neurotransmission</h1><p>Neurons conduct electrical impulses by membrane potential changes in regions of the plasma membrane cell.</p>
+<p>The cell body contains the nucleus and most of the cellular machinery. </p>
+<p>The dendrites receive signals from the axons of other neurons</p>
+<p>The axon transmits signals via the synaptic termini, which communicate to the dendrites of other neurons or to muscle cells. </p>
+<p>Along the axon are Schwann cells, which envelop the axon in layers of an insulating myelin membrane. The Schwann cells are separated by nonmyelinated regions called the nodes of Ranvier</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223202421173.png" alt="image-20191223202421173" style="zoom:67%;" />
+
+<h2 id="Use-of-squid-giant-axons-for-studies-of-neural-transmission"><a href="#Use-of-squid-giant-axons-for-studies-of-neural-transmission" class="headerlink" title="Use of squid giant axons for studies of neural transmission"></a>Use of squid giant axons for studies of neural transmission</h2><p>Electrodes attached to a voltmeter record the potential across the axonal membrane. </p>
+<p>At the resting axon ion concentrations shown here, the voltmeter would read about 60 mV. </p>
+<p>If the axon is stimulated at point A by a depolarizing pulse, the traveling membrane potential will shortly pass point B, where it can be recorded.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223202523472.png" alt="image-20191223202523472" style="zoom: 80%;" />
+
+<p>The resting potential of a nerve fiber is determined by the permeabilities of the membrane to different ions, particularly K+ , which has a high permeability due to K+ leak channels.</p>
+<p>The action potential is generated and propagated because a small depolarization of the nerve cell membrane opens voltage gated channels, allowing ions to flow through.</p>
+<h2 id="The-voltage-gated-channel-cycles-during-an-action-potential"><a href="#The-voltage-gated-channel-cycles-during-an-action-potential" class="headerlink" title="The voltage-gated channel cycles during an action potential"></a>The voltage-gated channel cycles during an action potential</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223202703380.png" alt="image-20191223202703380"></p>
+<h2 id="The-action-potential"><a href="#The-action-potential" class="headerlink" title="The action potential"></a>The action potential</h2><p>Changes in membrane conductance at a point on an axon as a neural impulse passes. </p>
+<p>The membrane first becomes permeable to sodium ions, allowing a large inward rush of Na+ . A decrease in the Na+ permeability results and is in turn followed by an outward flow of K+</p>
+<p>Changes in membrane potential accompanying the permeability changes shown in Figure(a).</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223202829658.png" alt="image-20191223202829658" style="zoom:67%;" /> 
+
+<p>As Na+ rushes in, the potential increases and becomes positive. As K+influx increases, the potential decreases, undershooting the resting potential, before returning to the resting potential.</p>
+<h2 id="Transmission-of-the-action-potential"><a href="#Transmission-of-the-action-potential" class="headerlink" title="Transmission of the action potential"></a>Transmission of the action potential</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223202853892.png" alt="image-20191223202853892"></p>
+<h3 id="1-Toxins"><a href="#1-Toxins" class="headerlink" title="1. Toxins"></a>1. Toxins</h3><p><strong>Neurotoxins</strong> 神经毒素can act by blocking gates in the axonal membrane in closed or open states.</p>
+<p><strong>Tetrodotoxin</strong> <strong>河豚毒素</strong>is found in some organs of the puffer fish. TTX binds specifically to the Na+ channel, blocking all ion movement.</p>
+<p><strong>Saxitoxin</strong> <strong>贝类毒素</strong>is contained in the marine <em>dinoflagellates</em> responsible for “red tide” also block Na+ channels. </p>
+<p><strong>Veratridine</strong> <em>is found in the seeds of a</em> plant of the lily family, <em>Schoenocaulon officinale.</em> This toxin also binds to the Na+ channels but blocks them in the “open” configuration.</p>
+<p>These toxins have proven to be useful in studies of axonal structure and conduction, for their tight binding makes them excellent affinity labels for the channel</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223202959190.png" alt="image-20191223202959190"></p>
+<h1 id="三、Techniques-for-the-Study-of-Membranes"><a href="#三、Techniques-for-the-Study-of-Membranes" class="headerlink" title="三、Techniques for the Study of Membranes"></a>三、Techniques for the Study of Membranes</h1><p>Examination of membrane structure as it exists within cells depends heavily on electron microscopy (EM).</p>
+<p>An especially useful variant of this method is the <strong>freeze fracture</strong> technique.</p>
+<p>If a membrane is frozen quickly and then broken by a sharp blow from a microtome knife, it frequently splits along the plane between the bilayer leaflets</p>
+<p>Membranes from individual types of cells or purified organelles can usually be obtained by lysis of the cell or organelle, followed by differential centrifugation.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223203256676.png" alt="image-20191223203256676" style="zoom: 80%;" />
+
+<h2 id="Preparation-of-vesicles-and-bilayers"><a href="#Preparation-of-vesicles-and-bilayers" class="headerlink" title="Preparation of vesicles and bilayers"></a>Preparation of vesicles and bilayers</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223203937082.png" alt="image-20191223203937082"></p>
+<h2 id="Reconstitution-of-the-Ca2-pump"><a href="#Reconstitution-of-the-Ca2-pump" class="headerlink" title="Reconstitution of the Ca2+ pump"></a>Reconstitution of the Ca2+ pump</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223203956964.png" alt="image-20191223203956964"></p>
+<h2 id="Preparation-and-resealing-of-erythrocyte-ghosts"><a href="#Preparation-and-resealing-of-erythrocyte-ghosts" class="headerlink" title="Preparation and resealing of erythrocyte ghosts"></a>Preparation and resealing of erythrocyte ghosts</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223204010563.png" alt="image-20191223204010563"></p>
+<h2 id="Fluorescence-recovery-after-photobleaching-FRAP"><a href="#Fluorescence-recovery-after-photobleaching-FRAP" class="headerlink" title="Fluorescence recovery after photobleaching (FRAP)"></a>Fluorescence recovery after photobleaching (FRAP)</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223204244573.png" alt="image-20191223204244573"></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>L17 Membrane Transport</p><p><a href="https://zhenyumi.github.io/posts/98ddc22d/">https://zhenyumi.github.io/posts/98ddc22d/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-07-25</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-07-25</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Biochemistry-I-Macromolecules/">Biochemistry I (Macromolecules)</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/d3e0f831/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">L15 Inheritance of  Complex Quantitative Traits</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/5848230a/"><span class="level-item">L16 Lipids And Membranes</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">196</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">28</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Undefined-notes/"><span class="level-start"><span class="level-item">Undefined notes</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-19T06:36:03.000Z">2022-09-19</time></p><p class="title"><a href="/posts/f5b7721a/">Embedding and Frozen Sectioning</a></p><p class="categories"><a href="/categories/Undefined-notes/">Undefined notes</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
