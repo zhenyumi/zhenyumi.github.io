@@ -26,7 +26,8 @@ if [[ $yn == "y" || $yn == "Y" ]]; then
 	# git remote add coding_backup https://e.coding.net/zhenyumi/zhenyumi/zhenyumi_backup.git 2>&1 | tee -a deploy.log
 	git remote add github_backup https://github.com/zhenyumi/Hexo_backup.git 2>&1 | tee -a deploy.log
 	echo -e "\e[33m========执行6/6 : 上传备份========\e[0m" 2>&1 | tee -a deploy.log
-	git push coding_backup master:backup -f && git push github_backup master:backup -f 2>&1 | tee -a deploy.log
+	# git push coding_backup master:backup -f && git push github_backup master:backup -f 2>&1 | tee -a deploy.log
+	git push github_backup master:backup -f 2>&1 | tee -a deploy.log
 	echo -e "\e[33m========清理========\e[0m" 2>&1 | tee -a deploy.log
 	hexo clean 2>&1 | tee -a deploy.log
 elif [[ $yn == "n" || $yn == "N" ]]; then

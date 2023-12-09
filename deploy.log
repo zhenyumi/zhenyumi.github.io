@@ -1,0 +1,32 @@
+[33m========执行1/6 : 清理========[0m
+[32mINFO [39m Validating config
+Inferno is in development mode.
+[32mINFO [39m =======================================
+ ██╗ ██████╗ █████╗ ██████╗ ██╗   ██╗███████╗
+ ██║██╔════╝██╔══██╗██╔══██╗██║   ██║██╔════╝
+ ██║██║     ███████║██████╔╝██║   ██║███████╗
+ ██║██║     ██╔══██║██╔══██╗██║   ██║╚════██║
+ ██║╚██████╗██║  ██║██║  ██║╚██████╔╝███████║
+ ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+=============================================
+[32mINFO [39m === Checking package dependencies ===
+[32mINFO [39m === Checking theme configurations ===
+[32mINFO [39m === Registering Hexo extensions ===
+[32mINFO [39m Deleted database.
+[32mINFO [39m Deleted public folder.
+[33m========执行2/6 : 生成========[0m
+[32mINFO [39m Validating config
+Inferno is in development mode.
+[32mINFO [39m =======================================
+ ██╗ ██████╗ █████╗ ██████╗ ██╗   ██╗███████╗
+ ██║██╔════╝██╔══██╗██╔══██╗██║   ██║██╔════╝
+ ██║██║     ███████║██████╔╝██║   ██║███████╗
+ ██║██║     ██╔══██║██╔══██╗██║   ██║╚════██║
+ ██║╚██████╗██║  ██║██║  ██║╚██████╔╝███████║
+ ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+=============================================
+[32mINFO [39m === Checking package dependencies ===
+[32mINFO [39m === Checking theme configurations ===
+[32mINFO [39m === Registering Hexo extensions ===
+[32mINFO [39m Start processing
+[32mINFO [39m Files loaded in [36m4.52 s[39m
