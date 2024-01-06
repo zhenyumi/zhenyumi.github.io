@@ -1,35 +1,310 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>L10 Synaptic plasticity - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Synaptic plasticity, the mechanism, function, effect and in different animals."><meta property="og:type" content="blog"><meta property="og:title" content="L10 Synaptic plasticity"><meta property="og:url" content="https://zhenyumi.github.io/posts/ce78770f/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="Synaptic plasticity, the mechanism, function, effect and in different animals."><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><meta property="article:published_time" content="2021-06-06T11:24:02.000Z"><meta property="article:modified_time" content="2021-06-06T11:24:02.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="Neurobiology"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/ce78770f/"},"headline":"L10 Synaptic plasticity","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"],"datePublished":"2021-06-06T11:24:02.000Z","dateModified":"2021-06-06T11:24:02.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"Synaptic plasticity, the mechanism, function, effect and in different animals."}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/ce78770f/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<!DOCTYPE html>
+<html lang="zh-CN" >
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png" alt="L10 Synaptic plasticity"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-06T11:24:02.000Z" title="2021/6/6 21:24:02">2021-06-06</time>发表</span><span class="level-item"><time dateTime="2021-06-06T11:24:02.000Z" title="2021/6/6 21:24:02">2021-06-06</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/Academic-Notebook/">Academic Notebook</a><span> / </span><a class="link-muted" href="/categories/Academic-Notebook/Neurobiology/">Neurobiology</a></span><span class="level-item">32 分钟读完 (大约4747个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">L10 Synaptic plasticity</h1><div class="content"><h1 id="一、Synaptic-plasticity"><a href="#一、Synaptic-plasticity" class="headerlink" title="一、Synaptic plasticity"></a>一、Synaptic plasticity</h1><p>Synaptic connections between neurons provide the basic “wiring”‘ of the brain’s  circuitry</p>
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Synaptic plasticity, the mechanism, function, effect and in different animals.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L10 Synaptic plasticity">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/ce78770f/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Synaptic plasticity, the mechanism, function, effect and in different animals.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606154928649.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606155842513.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606155848263.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606155931430.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160034817.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160057303.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160312770.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160400729.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160425291.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160449690.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160456238.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161102068.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161107611.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161157742.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161213710.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161157742.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161611776.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161711385.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161718976.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161728471.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161918293.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606162041050.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606162947070.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163022868.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163520893.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163641612.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163647724.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163709110.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163757098.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164007874.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164026784.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164122624.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164128883.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164454713.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164519227.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164800823.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164815772.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164823365.png">
+<meta property="article:published_time" content="2021-06-06T11:24:02.000Z">
+<meta property="article:modified_time" content="2021-06-06T11:24:02.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Neurobiology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606154928649.png">
+  
+  
+  
+  <title>L10 Synaptic plasticity - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L10 Synaptic plasticity</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-06-06 19:24" pubdate>
+          2021年6月6日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          523 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L10 Synaptic plasticity</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Synaptic-plasticity"><a href="#一、Synaptic-plasticity" class="headerlink" title="一、Synaptic plasticity"></a>一、Synaptic plasticity</h1><p>Synaptic connections between neurons provide the basic “wiring”‘ of the brain’s  circuitry</p>
 <p>The strength of synaptic connectivity between neurons is a dynamic entity that is  constantly changing in response to neural activity and other influences. </p>
 <p>Such changes in synaptic transmission arise from several forms of plasticity that  vary in time scale from milliseconds to years.</p>
 <h2 id="Short-term-synaptic-plasticity"><a href="#Short-term-synaptic-plasticity" class="headerlink" title="Short-term synaptic plasticity"></a>Short-term synaptic plasticity</h2><p><strong>Short-term synaptic plasticity</strong>:</p>
@@ -61,7 +336,7 @@
 <li>Thus, when action potentials arrive close together in  time, calcium builds up within the terminal and allows  more neurotransmitters to be released by a  subsequent presynaptic action potential</li>
 <li>Recent evidence indicates that the target of this  residual Ca2+ signal is synaptotagmin 7, a Ca2+binding protein that is found on the plasma  membrane and is related to the synaptotagmins that are present on synaptic vesicles and serve as  Ca2+ sensors for triggering neurotransmitter  release.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606154928649.png" alt="image-20210606154928649" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606154928649.png" srcset="/img/loading.gif" lazyload alt="image-20210606154928649" style="zoom: 67%;" />
 
 <h2 id="Synaptic-depression"><a href="#Synaptic-depression" class="headerlink" title="Synaptic depression"></a>Synaptic depression</h2><p>Opposing facilitation is <strong>synaptic depression</strong>, which causes neurotransmitter  release to decline during sustained synaptic activity</p>
 <p>An important clue to the cause of synaptic depression comes from observations  that depression depends on the amount of neurotransmitter that has been  released</p>
@@ -83,7 +358,7 @@
 <li>while potentiation may arise when Ca2+ activates presynaptic protein kinases  that go on to phosphorylate substrates (such as synapsin) that regulate  transmitter release.</li>
 </ul>
 <p>During repetitive synaptic activity, these forms of short-term plasticity can interact  to cause synaptic transmission to change in complex ways.</p>
-<h1 id="三、Synaptic-plasticity-in-Aplysia"><a href="#三、Synaptic-plasticity-in-Aplysia" class="headerlink" title="三、Synaptic plasticity in Aplysia"></a>三、Synaptic plasticity in <em>Aplysia</em></h1><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606155842513.png" alt="image-20210606155842513" style="zoom:67%;" />
+<h1 id="三、Synaptic-plasticity-in-Aplysia"><a href="#三、Synaptic-plasticity-in-Aplysia" class="headerlink" title="三、Synaptic plasticity in Aplysia"></a>三、Synaptic plasticity in <em>Aplysia</em></h1><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606155842513.png" srcset="/img/loading.gif" lazyload alt="image-20210606155842513" style="zoom:67%;" />
 
 <p><strong>Eric Kandel</strong> (2000 Nobel Prize) and his colleagues at Columbia University have  used the marine mollusk Aplysia californica to study synaptic plasticity.</p>
 <ul>
@@ -91,7 +366,7 @@
 <li>These attributes make it practical to monitor the electrical activity of specific,identifiable nerve cells, and thus to define the synaptic circuits involved in mediating the limited behavioral repertoire of <em>Aplysia</em>.</li>
 <li><em>Aplysia</em> exhibit several elementary forms of behavioral plasticity.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606155848263.png" alt="image-20210606155848263" style="zoom: 50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606155848263.png" srcset="/img/loading.gif" lazyload alt="image-20210606155848263" style="zoom: 50%;" />
 
 <h2 id="Habituation"><a href="#Habituation" class="headerlink" title="Habituation"></a>Habituation</h2><p><strong>Habituation</strong> is a process that causes the animal to become less responsive to  repeated occurrences of a stimulus.</p>
 <ul>
@@ -99,7 +374,7 @@
 <li>Habituation in humans?</li>
 <li>A light touch to the siphon of an Aplysia results in withdrawal of the animal’s gill, but  habituation causes the gill withdrawal to become weaker during repeated stimulation of  the siphon</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606155931430.png" alt="image-20210606155931430" style="zoom:80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606155931430.png" srcset="/img/loading.gif" lazyload alt="image-20210606155931430" style="zoom:80%;" />
 
 <h2 id="Sensitization"><a href="#Sensitization" class="headerlink" title="Sensitization"></a>Sensitization</h2><p>The gill-withdrawal response of Aplysia exhibits another form of plasticity called  <strong>sensitization</strong>.</p>
 <ul>
@@ -107,10 +382,10 @@
 <li>In <em>Aplysia</em> that have habituated to siphon touching, sensitization of gill withdrawal is elicited by pairing a strong electrical stimulus to the animal’s tail with another light touch of the siphon.</li>
 <li>This pairing causes the siphon stimulus to again elicit a strong withdrawal of the gill  because the noxious stimulus to the tail sensitizes the gill-withdrawal reflex to light  touch.</li>
 </ul>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160034817.png" alt="image-20210606160034817"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160034817.png" srcset="/img/loading.gif" lazyload alt="image-20210606160034817"></p>
 <p>Even after a single stimulus to the tail, the gill-withdrawal reflex remains enhanced for at  least an hour, which can be viewed as a simple form of short-term memory.</p>
 <p>With repeated pairing of tail and siphon stimuli, this behavior can be altered for days or  weeks, also demonstrating a simple form of long-term memory.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160057303.png" alt="image-20210606160057303"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160057303.png" srcset="/img/loading.gif" lazyload alt="image-20210606160057303"></p>
 <h2 id="Synaptic-mechanisms-in-Aplysia"><a href="#Synaptic-mechanisms-in-Aplysia" class="headerlink" title="Synaptic mechanisms in Aplysia"></a>Synaptic mechanisms in <em>Aplysia</em></h2><p>The small number of neurons in the Aplysia nervous system makes it possible to  define the synaptic circuits involved in gill withdrawal and to monitor the activity  of individual neurons in these circuits:</p>
 <ul>
 <li>Mechanosensory neurons that innervate the siphon</li>
@@ -119,29 +394,29 @@
 </ul>
 <p>Touching the siphon activates the mechanosensory neurons, which form  excitatory synapses that release glutamate onto both the interneurons and the  motor neurons.</p>
 <p>The interneurons form excitatory synapses on motor neurons</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160312770.png" alt="image-20210606160312770" style="zoom:80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160312770.png" srcset="/img/loading.gif" lazyload alt="image-20210606160312770" style="zoom:80%;" />
 
 <p>When the motor neurons are  activated by the summed synaptic  excitation of the sensory neurons  and interneurons, they release  acetylcholine that excites the  muscle cells of the gill, producing  gill withdrawal.</p>
 <h2 id="Synaptic-mechanisms-underlying-short-term-sensitization"><a href="#Synaptic-mechanisms-underlying-short-term-sensitization" class="headerlink" title="Synaptic mechanisms underlying  short-term sensitization"></a>Synaptic mechanisms underlying  short-term sensitization</h2><p>Both habituation and sensitization appear to arise from plastic changes in synaptic  transmission in this circuit.</p>
 <p>During habituation, transmission at the glutamatergic synapse between the  sensory and motor neurons is depressed.</p>
 <p>This synaptic depression is thought to be responsible for the decreasing ability of  siphon stimuli to evoke gill contractions during habituation</p>
 <p>This depression is presynaptic and is due to a reduction in the number of synaptic  vesicles available for release.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160400729.png" alt="image-20210606160400729" style="zoom:80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160400729.png" srcset="/img/loading.gif" lazyload alt="image-20210606160400729" style="zoom:80%;" />
 
 <p>Sensitization modifies the function of this circuit by recruiting additional neurons.</p>
 <p>The tail shock that evokes sensitization activates sensory neurons that innervate  the tail</p>
 <p>These sensory neurons in turn excite modulatory interneurons that release  serotonin onto the presynaptic terminals of the sensory neurons of the siphon.</p>
 <p>Serotonin enhances transmitter release from the siphon sensory neuron terminals,  leading to increased synaptic excitation of the motor neurons.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160425291.png" alt="image-20210606160425291"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160425291.png" srcset="/img/loading.gif" lazyload alt="image-20210606160425291"></p>
 <p>This modulation of the sensory neuron-motor neuron synapse lasts approximately  an hour</p>
 <p>This is similar to the duration of the short-term sensitization of gill withdrawal  produced by applying a single stimulus to the tail.</p>
 <p>Thus, the short-term sensitization apparently is due to recruitment of additional  synaptic elements, namely the modulatory interneurons that strengthen synaptic  transmission in the gill withdrawal circuit.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160449690.png" alt="image-20210606160449690" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160449690.png" srcset="/img/loading.gif" lazyload alt="image-20210606160449690" style="zoom:67%;" />
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160456238.png" alt="image-20210606160456238" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606160456238.png" srcset="/img/loading.gif" lazyload alt="image-20210606160456238" style="zoom:67%;" />
 
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161102068.png" alt="image-20210606161102068"></p>
-<h2 id="Mechanism-of-presynaptic-enhancement-underlying-short-term-sensitization"><a href="#Mechanism-of-presynaptic-enhancement-underlying-short-term-sensitization" class="headerlink" title="Mechanism of presynaptic enhancement  underlying short-term sensitization"></a>Mechanism of presynaptic enhancement  underlying short-term sensitization</h2><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161107611.png" alt="image-20210606161107611"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161102068.png" srcset="/img/loading.gif" lazyload alt="image-20210606161102068"></p>
+<h2 id="Mechanism-of-presynaptic-enhancement-underlying-short-term-sensitization"><a href="#Mechanism-of-presynaptic-enhancement-underlying-short-term-sensitization" class="headerlink" title="Mechanism of presynaptic enhancement  underlying short-term sensitization"></a>Mechanism of presynaptic enhancement  underlying short-term sensitization</h2><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161107611.png" srcset="/img/loading.gif" lazyload alt="image-20210606161107611"></p>
 <ol>
 <li>Serotonin released by the modulatory interneurons binds to G-protein-coupled receptors on  the presynaptic terminals of the siphon sensory neurons</li>
 <li>This stimulates production of the second messenger, cAMP.</li>
@@ -155,13 +430,13 @@
 </ol>
 <p>In summary, a signal transduction cascade that involves neurotransmitters, second  messengers, protein kinases, and ion channels mediates short-term sensitization  of gill withdrawal.</p>
 <p>This cascade ultimately causes a short-term enhancement of synaptic  transmission between the sensory and motor neurons within the gill withdrawal  circuit.</p>
-<h2 id="Mechanism-of-presynaptic-enhancement-underlying-long-term-sensitization"><a href="#Mechanism-of-presynaptic-enhancement-underlying-long-term-sensitization" class="headerlink" title="Mechanism of presynaptic enhancement  underlying long-term sensitization"></a>Mechanism of presynaptic enhancement  underlying long-term sensitization</h2><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161157742.png" alt="image-20210606161157742"></p>
+<h2 id="Mechanism-of-presynaptic-enhancement-underlying-long-term-sensitization"><a href="#Mechanism-of-presynaptic-enhancement-underlying-long-term-sensitization" class="headerlink" title="Mechanism of presynaptic enhancement  underlying long-term sensitization"></a>Mechanism of presynaptic enhancement  underlying long-term sensitization</h2><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161157742.png" srcset="/img/loading.gif" lazyload alt="image-20210606161157742"></p>
 <p>The same serotonin-induced enhancement of glutamate release that mediates  short-term sensitization is also thought to underlie long-term sensitization.</p>
 <p>The prolonged duration of this form of plasticity is evidently due to changes in  gene expression and thus protein synthesis.</p>
 <p>With repeated training (i.e., additional tail shocks), the serotonin-activated PKA  involved in short-term sensitization now also phosphorylates–and thereby  activates–the transcriptional activator CREB.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161213710.png" alt="image-20210606161213710" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161213710.png" srcset="/img/loading.gif" lazyload alt="image-20210606161213710" style="zoom: 67%;" />
 
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161157742.png" alt="image-20210606161157742"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161157742.png" srcset="/img/loading.gif" lazyload alt="image-20210606161157742"></p>
 <ol>
 <li>CREB stimulates the synthesis of an enzyme, ubiquitin hydroxylase, that stimulates  degradation of the regulatory subunit of PKA.<ul>
 <li>This causes a persistent increase in the amount of free catalytic subunit, meaning that some  PKA is persistently active and no longer requires serotonin to be activated.</li>
@@ -201,7 +476,7 @@
 <p>More recently, however, progress in understanding the mechanism of LTP  has relied heavily on in vitro studies of slices of Iiving hippocampus.</p>
 <h2 id="Trisynaptic-circuit-of-hippocampus"><a href="#Trisynaptic-circuit-of-hippocampus" class="headerlink" title="Trisynaptic circuit of hippocampus"></a>Trisynaptic circuit of hippocampus</h2><p>The arrangement of neurons allows the hippocampus to be sectioned such  that most of the relevant circuitry is left intact.</p>
 <p>In such preparations, the cell bodies of the pyramidal neurons lie in a  single densely packed layer that is readily apparent.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161611776.png" alt="image-20210606161611776" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161611776.png" srcset="/img/loading.gif" lazyload alt="image-20210606161611776" style="zoom: 67%;" />
 
 <ul>
 <li>This layer is divided into several distinct  regions, the major ones being CA1 and  CA3.<ul>
@@ -211,7 +486,7 @@
 </li>
 </ul>
 <h3 id="1-Long-term-potentiation-of-Schaffer-collateral-CA1-synapses"><a href="#1-Long-term-potentiation-of-Schaffer-collateral-CA1-synapses" class="headerlink" title="1. Long-term potentiation of Schaffer collateral-CA1 synapses"></a>1. Long-term potentiation of Schaffer collateral-CA1 synapses</h3><p>Much of the work on LTP has focused on the synaptic connections between  the Schaffer collaterals and CA1 pyramidal cells.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161711385.png" alt="image-20210606161711385" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161711385.png" srcset="/img/loading.gif" lazyload alt="image-20210606161711385" style="zoom:50%;" />
 
 <p>Electrical stimulation of Schaffer collaterals generates excitatory  postsynaptic potentials (EPSPs) in the postsynaptic CA1 cells .</p>
 <ul>
@@ -219,10 +494,10 @@
 <li>However, a brief, high-frequency train of  stimuli to the same axons causes LTP, which is evident as a long-lasting increase in EPSP  amplitude.</li>
 <li>While the maximum duration of LTP is not  known, LTP can last for more than a year in  some cases.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161718976.png" alt="image-20210606161718976" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161718976.png" srcset="/img/loading.gif" lazyload alt="image-20210606161718976" style="zoom: 67%;" />
 
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161728471.png" alt="image-20210606161728471"></p>
-<h3 id="2-Properties-of-LTP-in-Schaffer-collateral-CA1-synapses"><a href="#2-Properties-of-LTP-in-Schaffer-collateral-CA1-synapses" class="headerlink" title="2. Properties of LTP in Schaffer collateral-CA1 synapses"></a>2. Properties of LTP in Schaffer collateral-CA1 synapses</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161918293.png" alt="image-20210606161918293" style="zoom: 67%;" />
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161728471.png" srcset="/img/loading.gif" lazyload alt="image-20210606161728471"></p>
+<h3 id="2-Properties-of-LTP-in-Schaffer-collateral-CA1-synapses"><a href="#2-Properties-of-LTP-in-Schaffer-collateral-CA1-synapses" class="headerlink" title="2. Properties of LTP in Schaffer collateral-CA1 synapses"></a>2. Properties of LTP in Schaffer collateral-CA1 synapses</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606161918293.png" srcset="/img/loading.gif" lazyload alt="image-20210606161918293" style="zoom: 67%;" />
 
 <p>LTP of the Schaffer collateral synapse exhibits several properties that make  it an attractive neural mechanism for information storage</p>
 <ol>
@@ -243,10 +518,10 @@
 </ul>
 </li>
 </ol>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606162041050.png" alt="image-20210606162041050"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606162041050.png" srcset="/img/loading.gif" lazyload alt="image-20210606162041050"></p>
 <h2 id="Mechanisms-underlying-LTP"><a href="#Mechanisms-underlying-LTP" class="headerlink" title="Mechanisms underlying LTP"></a>Mechanisms underlying LTP</h2><p>The NMDA receptor channel is permeable to Ca2+ , but is blocked by Mg2+.</p>
 <p>This property provides a critical insight into how LTP is selectively induced  by high-frequency activity</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606162947070.png" alt="image-20210606162947070" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606162947070.png" srcset="/img/loading.gif" lazyload alt="image-20210606162947070" style="zoom: 67%;" />
 
 <ul>
 <li>During low-frequency synaptic  transmission, glutamate released by the  Schaffer collaterals binds to both NMDAtype and AMPA&#x2F;kainate-type glutamate  receptors.</li>
@@ -256,7 +531,7 @@
 <p>Because blockade of the NMDA receptor by Mg2+ is voltage-dependent, the  function of the synapse changes when the postsynaptic cell is depolarized.</p>
 <p>High-frequency stimulation will cause summation of EPSPs, leading to a  prolonged depolarization that expels Mg2+ from the NMDA channel pore.</p>
 <p>Removal of Mg2+ allows Ca2+ to enter the postsynaptic neuron, and the  resulting increase in Ca2+ concentration within the dendritic spines of the  postsynaptic cell turns out to be the trigger for LTP.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163022868.png" alt="image-20210606163022868" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163022868.png" srcset="/img/loading.gif" lazyload alt="image-20210606163022868" style="zoom:50%;" />
 
 <p>The NMDA receptor thus behaves like a  molecular <strong>coincidence detector</strong>: The channel  of this receptor opens (to induce LTP) only  when two events occur simultaneously:  glutamate is bound to the receptor, and the  postsynaptic cell is depolarized to relieve the  Mg2+ block of the channel pore.</p>
 <p>These properties of the NMDA receptor can account for many of the  characteristics of LTP:</p>
@@ -277,22 +552,22 @@
 </ul>
 </li>
 </ul>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163520893.png" alt="image-20210606163520893"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163520893.png" srcset="/img/loading.gif" lazyload alt="image-20210606163520893"></p>
 <p>The strengthening of synaptic transmission during LTP arises from an  increase in the sensitivity of the postsynaptic cell to glutamate.</p>
 <p>Excitatory synapses can dynamically regulate their postsynaptic glutamate  receptors and can even add <u>new AMPA receptors</u> to “silent” synapses that  did not previously have postsynaptic AMPA receptors.</p>
 <ul>
 <li>The “expression” or maintenance of LTP apparently is due to such insertion of  AMPA receptors into the postsynaptic membrane (as opposed to “induction“ of  LTP, which relies on activation of NMDA receptors).</li>
 <li>The resulting increase in the density of AMPA receptors in the postsynaptic  spine increases the response of the postsynaptic cell to released glutamate,  yielding a strengthening of synaptic transmission that can last for as long as LTP  is maintained.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163641612.png" alt="image-20210606163641612" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163641612.png" srcset="/img/loading.gif" lazyload alt="image-20210606163641612" style="zoom: 67%;" />
 
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163647724.png" alt="image-20210606163647724"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163647724.png" srcset="/img/loading.gif" lazyload alt="image-20210606163647724"></p>
 <p>Summary for the molecular signaling pathways involved in LTP at the  Schaffer collateral-CA1 synapse:</p>
 <ul>
 <li>During glutamate release, the NMDA channel opens only if the postsynaptic cell  is sufficiently depolarized.</li>
 <li>The Ca2+ ions that enter the cell through the channel activate postsynaptic  protein kinases such as CaMKII and PKC.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163709110.png" alt="image-20210606163709110" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163709110.png" srcset="/img/loading.gif" lazyload alt="image-20210606163709110" style="zoom: 67%;" />
 
 <p>These postsynaptic kinases trigger a series of  reactions that lead to insertion of new AMPA  receptors into the postsynaptic spine and an  increase in the spine’s sensitivity to glutamate.</p>
 <p>Under some circumstances, LTP also can  increase the ability of presynaptic terminals  to release glutamate.</p>
@@ -303,14 +578,14 @@
 <li>Repetitive high-frequency stimulation induces LTP that persists for many hours</li>
 <li>Treatment with anisomycin, an inhibitor of protein synthesis, causes LTP to  decay within a few hours after the high-frequency stimulation.</li>
 </ul>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163757098.png" alt="image-20210606163757098"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606163757098.png" srcset="/img/loading.gif" lazyload alt="image-20210606163757098"></p>
 <p>This late phase of LTP appears to be initiated by protein kinase A, which  goes on to activate transcription factors such as CREB, which stimulate the  expression of other proteins</p>
 <p>Although most of these newly synthesized proteins have not yet been  identified, they include other transcriptional regulators, protein kinases,  and AMPA receptors.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164007874.png" alt="image-20210606164007874" style="zoom:80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164007874.png" srcset="/img/loading.gif" lazyload alt="image-20210606164007874" style="zoom:80%;" />
 
 <p>There is evidence that the number and size of synaptic contacts increases  during LTP.</p>
 <p>It is likely that some of the proteins newly synthesized during the late  phase of LTP are involved in construction of new synaptic contacts that  serve to make LTP essentially permanent</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164026784.png" alt="image-20210606164026784" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164026784.png" srcset="/img/loading.gif" lazyload alt="image-20210606164026784" style="zoom:50%;" />
 
 <h2 id="LTP-in-Aplysia-and-mammalian-hippocampus"><a href="#LTP-in-Aplysia-and-mammalian-hippocampus" class="headerlink" title="LTP in Aplysia and mammalian hippocampus"></a>LTP in <em>Aplysia</em> and mammalian hippocampus</h2><p>Both consist of an early, transient phase that relies on protein kinases to  produce posttranslational changes in membrane channels.</p>
 <p>Both have later, long-lasting phases that require changes in gene  expression mediated by CREB</p>
@@ -321,8 +596,8 @@
 <p>This pattern of activity depresses  the EPSP for several hours and,  like LTP, is specific to the activated  synapses.</p>
 <p>LTD can erase the increase in EPSP  size due to LTP, and, conversely, LTP  can erase the decrease in EPSP size  due to LTD</p>
 <p>This complementarity suggests that  LTD and LTP reversibly affect  synaptic efficiency by acting at a  common site.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164122624.png" alt="image-20210606164122624"></p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164128883.png" alt="image-20210606164128883"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164122624.png" srcset="/img/loading.gif" lazyload alt="image-20210606164122624"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164128883.png" srcset="/img/loading.gif" lazyload alt="image-20210606164128883"></p>
 <h2 id="Key-elements-shared-by-LTP-and-LTD"><a href="#Key-elements-shared-by-LTP-and-LTD" class="headerlink" title="Key elements shared by LTP and LTD"></a>Key elements shared by LTP and LTD</h2><p>Both require activation of NMDA-type glutamate receptors and the  resulting entry of Ca2+ into the postsynaptic cell.</p>
 <p>The major determinant of whether LTP or LTD arises appears to be the  nature of the Ca2+ signal in the postsynaptic cell:</p>
 <ul>
@@ -341,21 +616,21 @@
 <p>It is possible that LTP and LTD phosphorylate and dephosphorylate the  same set of regulatory proteins to control the efficacy of transmission at  the Schaeffer collateral-CA1 synapse.</p>
 <p>Just as LTP at this synapse is associated with insertion of AMPA receptors,  LTD is often associated with a loss of synaptic AMPA receptors.</p>
 <p>This loss probably arises from  internalization of AMPA receptors  into the postsynaptic cell, due to  the same sort of clathrindependent endocytosis  mechanisms important for synaptic  vesicle recycling in the presynaptic  terminal.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164454713.png" alt="image-20210606164454713" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164454713.png" srcset="/img/loading.gif" lazyload alt="image-20210606164454713" style="zoom:50%;" />
 
 <h2 id="LTD-in-the-cerebellum"><a href="#LTD-in-the-cerebellum" class="headerlink" title="LTD in the cerebellum"></a>LTD in the cerebellum</h2><p>LTD of synaptic inputs onto cerebellar Purkinje cells was first described by  Masao Ito and his colleagues in Japan in the early 1980s.</p>
 <p>Purkinje neurons in the cerebellum receive two distinct types of excitatory  input: climbing fibers and parallel fibers.</p>
 <p>LTD reduces the strength of transmission at the parallel fiber synapse and  has recently been found to depress transmission at the climbing fiber  synapse as well.</p>
 <p>This form of LTD has been implicated in the  motor learning that mediates the  coordination, acquisition, and storage of  complex movements within the cerebellum.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164519227.png" alt="image-20210606164519227" style="zoom: 50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164519227.png" srcset="/img/loading.gif" lazyload alt="image-20210606164519227" style="zoom: 50%;" />
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164800823.png" alt="image-20210606164800823" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164800823.png" srcset="/img/loading.gif" lazyload alt="image-20210606164800823" style="zoom:67%;" />
 
 <p>Cerebellar LTD is associative because it  occurs only when climbing fibers and  parallel fibers are activated at the same  time</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164815772.png" alt="image-20210606164815772" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164815772.png" srcset="/img/loading.gif" lazyload alt="image-20210606164815772" style="zoom:67%;" />
 
 <p>Associativity arises from the combined  actions of two distinct intracellular  signal transduction pathways that are  activated in the postsynaptic Purkinje  cell due to the activity of climbing fiber  and parallel fiber synapses.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164823365.png" alt="image-20210606164823365" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606164823365.png" srcset="/img/loading.gif" lazyload alt="image-20210606164823365" style="zoom:67%;" />
 
 <ol>
 <li>Glutamate released from the parallel  fiber terminals activates at two types of  receptors, the AMPA-type and  metabotropic glutamate receptors<ol>
@@ -384,68 +659,408 @@
 <li>At least some of the synaptic changes produced by these long-lasting forms of  plasticity are postsynaptic, caused by changes in neurotransmitter receptor  trafficking, although alterations in neurotransmitter release from the  presynaptic terminal can also occur.</li>
 <li>In these more enduring forms of plasticity, protein phosphorylation and  changes in gene expression greatly outlast the period of synaptic activity and  can yield changes in synaptic strength that persist for hours, days, or even  longer</li>
 </ul>
-</div><div class="article-licensing box"><div class="licensing-title"><p>L10 Synaptic plasticity</p><p><a href="https://zhenyumi.github.io/posts/ce78770f/">https://zhenyumi.github.io/posts/ce78770f/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-06-06</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-06-06</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Neurobiology/">Neurobiology</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/8350c993/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Column based DNA purification and Genotyping</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/3b6899f8/"><span class="level-item">L9 Molecular signaling within neurons</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">195</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">27</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-06T11:24:02.000Z">2021-06-06</time></p><p class="title"><a href="/posts/ce78770f/">L10 Synaptic plasticity</a></p><p class="categories"><a href="/categories/Academic-Notebook/">Academic Notebook</a> / <a href="/categories/Academic-Notebook/Neurobiology/">Neurobiology</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
-            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
-                renderMathInElement(element);
-            });
-        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
-            'HTML-CSS': {
-                matchFontHeight: false
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Neurobiology/" class="category-chain-item">Neurobiology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Neurobiology/" class="print-no-link">#Neurobiology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L10 Synaptic plasticity</div>
+      <div>https://zhenyumi.github.io/posts/ce78770f/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年6月6日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/3b6899f8/" title="L9 Molecular signaling within neurons">
+                        <span class="hidden-mobile">L9 Molecular signaling within neurons</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
             },
-            SVG: {
-                matchFontHeight: false
+            loader : {
+              load: ['ui/lazy']
             },
-            CommonHTML: {
-                matchFontHeight: false
-            },
-            tex2jax: {
-                inlineMath: [
-                    ['$','$'],
-                    ['\\(','\\)']
-                ]
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
             }
-        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

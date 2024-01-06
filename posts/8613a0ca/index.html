@@ -1,35 +1,273 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>The record of one test program - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="An homework to write a program to test reaction time and some other things."><meta property="og:type" content="blog"><meta property="og:title" content="The record of one test program"><meta property="og:url" content="https://zhenyumi.github.io/posts/8613a0ca/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="An homework to write a program to test reaction time and some other things."><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><meta property="article:published_time" content="2021-02-15T03:46:20.000Z"><meta property="article:modified_time" content="2021-02-15T03:46:20.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="Machine learning and neural engineering"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/8613a0ca/"},"headline":"The record of one test program","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"],"datePublished":"2021-02-15T03:46:20.000Z","dateModified":"2021-02-15T03:46:20.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"An homework to write a program to test reaction time and some other things."}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/8613a0ca/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<!DOCTYPE html>
+<html lang="zh-CN" >
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png" alt="The record of one test program"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-02-15T03:46:20.000Z" title="2021/2/15 13:46:20">2021-02-15</time>发表</span><span class="level-item"><time dateTime="2021-02-15T03:46:20.000Z" title="2021/2/15 13:46:20">2021-02-15</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/Academic-Notebook/">Academic Notebook</a><span> / </span><a class="link-muted" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/">Machine learning and neural engineering</a></span><span class="level-item">19 分钟读完 (大约2840个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">The record of one test program</h1><div class="content"><p>这个假期需要用Python写一个测试的小软件，具体作用是为了测试被试者的反应时间。具体的软件功能是在屏幕上随机投入20-60个左斜杠<code>\</code>和右斜杠<code>/</code>，被试者需要判断出左斜杠多还是右斜杠多。在这个过程当中记录下一些值。</p>
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="An homework to write a program to test reaction time and some other things.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The record of one test program">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/8613a0ca/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="An homework to write a program to test reaction time and some other things.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Machine%20learning%20and%20neural%20engineering/image-20210215123143255.png">
+<meta property="article:published_time" content="2021-02-15T03:46:20.000Z">
+<meta property="article:modified_time" content="2021-02-15T03:46:20.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Machine learning and neural engineering">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Machine%20learning%20and%20neural%20engineering/image-20210215123143255.png">
+  
+  
+  
+  <title>The record of one test program - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">The record of one test program</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-02-15 11:46" pubdate>
+          2021年2月15日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          21 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">The record of one test program</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>这个假期需要用Python写一个测试的小软件，具体作用是为了测试被试者的反应时间。具体的软件功能是在屏幕上随机投入20-60个左斜杠<code>\</code>和右斜杠<code>/</code>，被试者需要判断出左斜杠多还是右斜杠多。在这个过程当中记录下一些值。</p>
 <p>对整个过程进行一次记录是对我来说很有必要的，我决定对一些重要的地方进行一些总结。</p>
 <h1 id="代码流程"><a href="#代码流程" class="headerlink" title="代码流程"></a>代码流程</h1><p>Requirements：</p>
 <ol>
@@ -55,22 +293,22 @@
 <li>输出结果为csv</li>
 </ol>
 <h2 id="1-构建界面"><a href="#1-构建界面" class="headerlink" title="1. 构建界面"></a>1. 构建界面</h2><p>整个界面使用到了pygame来进行构建，这是老师推荐的方法，本来大概也可能用PyQt5来进行GUI构建，不过对于游戏（测试过程当中）的动态画面来说，还是Pygame更适合一些。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">from</span> pygame.<span class="built_in">locals</span> <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># Construct Pygame GUI and Initiation of Variables</span></span><br><span class="line">pygame.init()</span><br><span class="line"><span class="comment">## Set the screen size</span></span><br><span class="line">screen_width = <span class="number">800</span></span><br><span class="line">screen_height = <span class="number">800</span></span><br><span class="line">screen = pygame.display.set_mode([screen_width, screen_height])</span><br><span class="line"><span class="comment">## Set the title of the windows</span></span><br><span class="line">pygame.display.set_caption(<span class="string">&quot;Trial&quot;</span>)</span><br><span class="line">background = pygame.Surface(screen.get_size())</span><br><span class="line">background.fill([<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">import</span> pygame<br><span class="hljs-keyword">from</span> pygame.<span class="hljs-built_in">locals</span> <span class="hljs-keyword">import</span> *<br><br><span class="hljs-comment"># Construct Pygame GUI and Initiation of Variables</span><br>pygame.init()<br><span class="hljs-comment">## Set the screen size</span><br>screen_width = <span class="hljs-number">800</span><br>screen_height = <span class="hljs-number">800</span><br>screen = pygame.display.set_mode([screen_width, screen_height])<br><span class="hljs-comment">## Set the title of the windows</span><br>pygame.display.set_caption(<span class="hljs-string">&quot;Trial&quot;</span>)<br>background = pygame.Surface(screen.get_size())<br>background.fill([<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>])<br></code></pre></td></tr></table></figure>
 
 <p>简单构建一个窗体，规定大小之后，继续接下来的操作。</p>
 <h2 id="2-实现抽样"><a href="#2-实现抽样" class="headerlink" title="2. 实现抽样"></a>2. 实现抽样</h2><h3 id="获得数目"><a href="#获得数目" class="headerlink" title="获得数目"></a>获得数目</h3><p>抽样的过程当中需要做到，左右斜杠的总数为60，其中左右斜杠的数目需要在[20,40]这个范围之内，两个斜杠的数目不能相等。</p>
 <p>我的想法就是通过一个无限循环，通过随机数来生成两个数字，并对两个数字进行比较，直到两个数字不相等才break整个循环。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment">## Record the number of \ and / in each round</span></span><br><span class="line"><span class="keyword">global</span> T_right, T_left</span><br><span class="line">T_right = []</span><br><span class="line">T_left = []</span><br><span class="line"></span><br><span class="line"><span class="comment">## Construct a random number and determine the number of / and \</span></span><br><span class="line"><span class="comment">### Make sure / and \ do not have equal numbers</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">	numofright = randint(<span class="number">20</span>, <span class="number">40</span>)</span><br><span class="line">	numofleft = <span class="number">60</span> - numofright</span><br><span class="line">    <span class="keyword">if</span> numofright != numofleft:</span><br><span class="line">        T_left.append(numofleft)</span><br><span class="line">        T_right.append(numofright)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *<br><br><span class="hljs-comment">## Record the number of \ and / in each round</span><br><span class="hljs-keyword">global</span> T_right, T_left<br>T_right = []<br>T_left = []<br><br><span class="hljs-comment">## Construct a random number and determine the number of / and \</span><br><span class="hljs-comment">### Make sure / and \ do not have equal numbers</span><br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>	numofright = randint(<span class="hljs-number">20</span>, <span class="hljs-number">40</span>)<br>	numofleft = <span class="hljs-number">60</span> - numofright<br>    <span class="hljs-keyword">if</span> numofright != numofleft:<br>        T_left.append(numofleft)<br>        T_right.append(numofright)<br>        <span class="hljs-keyword">break</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="避免重叠"><a href="#避免重叠" class="headerlink" title="避免重叠"></a>避免重叠</h3><p>在实际print到屏幕上时，需要防止两个斜杠的位置重叠，因此需要考虑一下这个因素。</p>
 <p>在print的过程当中，实际是通过规定斜杠的中心位置，之后再打字上去，因此需要使斜杠中心之间的距离足够远。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Randomly put / and \</span></span><br><span class="line"><span class="comment">## Record of the center of / and \</span></span><br><span class="line">x_coor = [<span class="number">0</span>]</span><br><span class="line">y_coor = [<span class="number">0</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, numofright):</span><br><span class="line">    <span class="comment">## Seperate the \</span></span><br><span class="line">    xNotS = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">while</span> xNotS:</span><br><span class="line">        x = randint(<span class="number">50</span>, <span class="number">750</span>)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> x_coor:</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">abs</span>(x - j) &lt; separate_distance:</span><br><span class="line">                xNotS = <span class="literal">True</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                xNotS = <span class="literal">False</span></span><br><span class="line">    x_coor.append(x)</span><br><span class="line">    yNotS = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">while</span> yNotS:</span><br><span class="line">        y = randint(<span class="number">100</span>, <span class="number">750</span>)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> y_coor:</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">abs</span>(y - j) &lt; separate_distance:</span><br><span class="line">                yNotS = <span class="literal">True</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                yNotS = <span class="literal">False</span></span><br><span class="line">    y_coor.append(y)</span><br><span class="line">    <span class="comment">## Put the \ into position</span></span><br><span class="line">    center = (x, y)  <span class="comment"># Position</span></span><br><span class="line">    textpos = textright.get_rect(center=center)</span><br><span class="line">    <span class="comment">## Insert \ into background</span></span><br><span class="line">    background.blit(textright, textpos)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, numofleft):</span><br><span class="line">    <span class="comment"># Seperate the /</span></span><br><span class="line">    xNotS = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">while</span> xNotS:</span><br><span class="line">        x = randint(<span class="number">50</span>, <span class="number">750</span>)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> x_coor:</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">abs</span>(x - j) &lt; separate_distance:</span><br><span class="line">                xNotS = <span class="literal">True</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                xNotS = <span class="literal">False</span></span><br><span class="line">    x_coor.append(x)</span><br><span class="line">    yNotS = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">while</span> yNotS:</span><br><span class="line">        y = randint(<span class="number">100</span>, <span class="number">750</span>)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> y_coor:</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">abs</span>(y - j) &lt; separate_distance:</span><br><span class="line">                yNotS = <span class="literal">True</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                yNotS = <span class="literal">False</span></span><br><span class="line">    y_coor.append(y)</span><br><span class="line">    <span class="comment">## Put the \ into position</span></span><br><span class="line">    center = (x, y)  <span class="comment"># Position</span></span><br><span class="line">    textpos = textleft.get_rect(center=center)</span><br><span class="line">    <span class="comment">## Insert \ into background</span></span><br><span class="line">    background.blit(textleft, textpos)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-comment"># Randomly put / and \</span><br><span class="hljs-comment">## Record of the center of / and \</span><br>x_coor = [<span class="hljs-number">0</span>]<br>y_coor = [<span class="hljs-number">0</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, numofright):<br>    <span class="hljs-comment">## Seperate the \</span><br>    xNotS = <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">while</span> xNotS:<br>        x = randint(<span class="hljs-number">50</span>, <span class="hljs-number">750</span>)<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> x_coor:<br>            <span class="hljs-keyword">if</span> <span class="hljs-built_in">abs</span>(x - j) &lt; separate_distance:<br>                xNotS = <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">else</span>:<br>                xNotS = <span class="hljs-literal">False</span><br>    x_coor.append(x)<br>    yNotS = <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">while</span> yNotS:<br>        y = randint(<span class="hljs-number">100</span>, <span class="hljs-number">750</span>)<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> y_coor:<br>            <span class="hljs-keyword">if</span> <span class="hljs-built_in">abs</span>(y - j) &lt; separate_distance:<br>                yNotS = <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">else</span>:<br>                yNotS = <span class="hljs-literal">False</span><br>    y_coor.append(y)<br>    <span class="hljs-comment">## Put the \ into position</span><br>    center = (x, y)  <span class="hljs-comment"># Position</span><br>    textpos = textright.get_rect(center=center)<br>    <span class="hljs-comment">## Insert \ into background</span><br>    background.blit(textright, textpos)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, numofleft):<br>    <span class="hljs-comment"># Seperate the /</span><br>    xNotS = <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">while</span> xNotS:<br>        x = randint(<span class="hljs-number">50</span>, <span class="hljs-number">750</span>)<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> x_coor:<br>            <span class="hljs-keyword">if</span> <span class="hljs-built_in">abs</span>(x - j) &lt; separate_distance:<br>                xNotS = <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">else</span>:<br>                xNotS = <span class="hljs-literal">False</span><br>    x_coor.append(x)<br>    yNotS = <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">while</span> yNotS:<br>        y = randint(<span class="hljs-number">100</span>, <span class="hljs-number">750</span>)<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> y_coor:<br>            <span class="hljs-keyword">if</span> <span class="hljs-built_in">abs</span>(y - j) &lt; separate_distance:<br>                yNotS = <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">else</span>:<br>                yNotS = <span class="hljs-literal">False</span><br>    y_coor.append(y)<br>    <span class="hljs-comment">## Put the \ into position</span><br>    center = (x, y)  <span class="hljs-comment"># Position</span><br>    textpos = textleft.get_rect(center=center)<br>    <span class="hljs-comment">## Insert \ into background</span><br>    background.blit(textleft, textpos)<br></code></pre></td></tr></table></figure>
 
 <h2 id="3-Plot：将-和-绘制在当前页面上"><a href="#3-Plot：将-和-绘制在当前页面上" class="headerlink" title="3. Plot：将\ 和/绘制在当前页面上"></a>3. Plot：将<code>\ </code>和<code>/</code>绘制在当前页面上</h2><p>将左右斜杠插入到screen之后，再update整个pygame界面。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Display / and \</span></span><br><span class="line"><span class="comment"># Creat \ and / objects</span></span><br><span class="line">font = pygame.font.Font(<span class="literal">None</span>, <span class="number">50</span>)</span><br><span class="line">textright = font.render(<span class="string">&quot;\\&quot;</span>, <span class="number">1</span>, (<span class="number">255</span>, <span class="number">10</span>, <span class="number">10</span>))  <span class="comment"># Color</span></span><br><span class="line">textleft = font.render(<span class="string">&quot;/&quot;</span>, <span class="number">1</span>, (<span class="number">255</span>, <span class="number">10</span>, <span class="number">10</span>))  <span class="comment"># Color</span></span><br><span class="line">    </span><br><span class="line"><span class="comment"># Insert background into the screen</span></span><br><span class="line">screen.blit(background, (<span class="number">0</span>, <span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">pygame.display.update()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">## Display / and \</span><br><span class="hljs-comment"># Creat \ and / objects</span><br>font = pygame.font.Font(<span class="hljs-literal">None</span>, <span class="hljs-number">50</span>)<br>textright = font.render(<span class="hljs-string">&quot;\\&quot;</span>, <span class="hljs-number">1</span>, (<span class="hljs-number">255</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>))  <span class="hljs-comment"># Color</span><br>textleft = font.render(<span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-number">1</span>, (<span class="hljs-number">255</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>))  <span class="hljs-comment"># Color</span><br>    <br><span class="hljs-comment"># Insert background into the screen</span><br>screen.blit(background, (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>))<br><br>pygame.display.update()<br></code></pre></td></tr></table></figure>
 
 <h3 id="4-监测键盘按键"><a href="#4-监测键盘按键" class="headerlink" title="4. 监测键盘按键"></a>4. 监测键盘按键</h3><p>在斜杠的print结束之后，会要求软件暂停等待被试者的指令输入，直到输入之后，才进行下一个循环。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="comment"># Wait, record the answer, analyse the accuracy</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">wait</span>():</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="keyword">for</span> event <span class="keyword">in</span> pygame.event.get():</span><br><span class="line">            <span class="keyword">if</span> event.<span class="built_in">type</span> == QUIT:</span><br><span class="line">                pygame.quit()</span><br><span class="line">                sys.exit()</span><br><span class="line">            <span class="keyword">if</span> current_round == <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            <span class="keyword">if</span> event.<span class="built_in">type</span> == KEYDOWN <span class="keyword">and</span> event.key == K_LEFT:</span><br><span class="line">                directions.append(<span class="string">&quot;Left&quot;</span>)</span><br><span class="line">                <span class="keyword">if</span> numofright &lt; numofleft:</span><br><span class="line">                    accuracy.append(<span class="string">&quot;Correct&quot;</span>)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    accuracy.append(<span class="string">&quot;Wrong&quot;</span>)</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            <span class="keyword">if</span> event.<span class="built_in">type</span> == KEYDOWN <span class="keyword">and</span> event.key == K_RIGHT:</span><br><span class="line">                directions.append(<span class="string">&quot;Right&quot;</span>)</span><br><span class="line">                <span class="keyword">if</span> numofright &gt; numofleft:</span><br><span class="line">                    accuracy.append(<span class="string">&quot;Correct&quot;</span>)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    accuracy.append(<span class="string">&quot;Wrong&quot;</span>)</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Record the respond</span></span><br><span class="line">directions = []</span><br><span class="line"><span class="comment">## Record the accuracy</span></span><br><span class="line">accuracy = []</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys<br><br><span class="hljs-comment"># Wait, record the answer, analyse the accuracy</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">wait</span>():<br>    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>        <span class="hljs-keyword">for</span> event <span class="hljs-keyword">in</span> pygame.event.get():<br>            <span class="hljs-keyword">if</span> event.<span class="hljs-built_in">type</span> == QUIT:<br>                pygame.quit()<br>                sys.exit()<br>            <span class="hljs-keyword">if</span> current_round == <span class="hljs-number">0</span>:<br>                <span class="hljs-keyword">return</span><br>            <span class="hljs-keyword">if</span> event.<span class="hljs-built_in">type</span> == KEYDOWN <span class="hljs-keyword">and</span> event.key == K_LEFT:<br>                directions.append(<span class="hljs-string">&quot;Left&quot;</span>)<br>                <span class="hljs-keyword">if</span> numofright &lt; numofleft:<br>                    accuracy.append(<span class="hljs-string">&quot;Correct&quot;</span>)<br>                <span class="hljs-keyword">else</span>:<br>                    accuracy.append(<span class="hljs-string">&quot;Wrong&quot;</span>)<br>                <span class="hljs-keyword">return</span><br>            <span class="hljs-keyword">if</span> event.<span class="hljs-built_in">type</span> == KEYDOWN <span class="hljs-keyword">and</span> event.key == K_RIGHT:<br>                directions.append(<span class="hljs-string">&quot;Right&quot;</span>)<br>                <span class="hljs-keyword">if</span> numofright &gt; numofleft:<br>                    accuracy.append(<span class="hljs-string">&quot;Correct&quot;</span>)<br>                <span class="hljs-keyword">else</span>:<br>                    accuracy.append(<span class="hljs-string">&quot;Wrong&quot;</span>)<br>                <span class="hljs-keyword">return</span><br><br><span class="hljs-comment">## Record the respond</span><br>directions = []<br><span class="hljs-comment">## Record the accuracy</span><br>accuracy = []<br></code></pre></td></tr></table></figure>
 
 <h2 id="5-检测反应时长"><a href="#5-检测反应时长" class="headerlink" title="5. 检测反应时长"></a>5. 检测反应时长</h2><p>监测反应时长就需要计算整个软件运行的时间，有两个思路：</p>
 <ol>
@@ -78,94 +316,434 @@
 <li>多次新建时钟，在tick之后将当前计时清除（pygame.clock）</li>
 </ol>
 <h2 id="6-GUI"><a href="#6-GUI" class="headerlink" title="6. GUI"></a>6. GUI</h2><p>用Qt Designer来写GUI</p>
-<h3 id="config界面"><a href="#config界面" class="headerlink" title="config界面"></a>config界面</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtCore, QtGui, QtWidgets</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># GUI configuration: Login</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ui_Dialog</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="comment">## The function for clicking &#x27;cancel&#x27; button</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">cancel_clicked</span>(<span class="params">self</span>):</span><br><span class="line">        sys.exit()</span><br><span class="line">        sys.exit(app.exec_())</span><br><span class="line">    <span class="comment">## The function for clicking &#x27;ok&#x27; button</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">ok_clicked</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">global</span> SubjectID_text</span><br><span class="line">        <span class="keyword">global</span> TrialID_text</span><br><span class="line">        <span class="keyword">if</span> self.SubjectID.text() == <span class="string">&quot;&quot;</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            SubjectID_text = self.SubjectID.text()</span><br><span class="line">        <span class="keyword">if</span> self.TrialID.text() == <span class="string">&quot;&quot;</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            TrialID_text = self.TrialID.text()</span><br><span class="line">        <span class="built_in">print</span>(SubjectID_text)</span><br><span class="line">        <span class="built_in">print</span>(TrialID_text)</span><br><span class="line">        widget.close()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">setupUi</span>(<span class="params">self, Dialog</span>):</span><br><span class="line">        <span class="comment"># The main window</span></span><br><span class="line">        Dialog.setObjectName(<span class="string">&quot;Dialog&quot;</span>)</span><br><span class="line">        Dialog.resize(<span class="number">573</span>, <span class="number">300</span>)</span><br><span class="line">        <span class="comment"># The labels</span></span><br><span class="line">        self.Setsubjectid = QtWidgets.QLabel(Dialog)</span><br><span class="line">        self.Setsubjectid.setGeometry(QtCore.QRect(<span class="number">30</span>, <span class="number">140</span>, <span class="number">141</span>, <span class="number">16</span>))</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(<span class="string">&quot;Arial&quot;</span>)</span><br><span class="line">        font.setPointSize(<span class="number">12</span>)</span><br><span class="line">        font.setBold(<span class="literal">False</span>)</span><br><span class="line">        font.setWeight(<span class="number">50</span>)</span><br><span class="line">        self.Setsubjectid.setFont(font)</span><br><span class="line">        self.Setsubjectid.setObjectName(<span class="string">&quot;Setsubjectid&quot;</span>)</span><br><span class="line">        self.SettrialID = QtWidgets.QLabel(Dialog)</span><br><span class="line">        self.SettrialID.setGeometry(QtCore.QRect(<span class="number">60</span>, <span class="number">200</span>, <span class="number">111</span>, <span class="number">16</span>))</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(<span class="string">&quot;Arial&quot;</span>)</span><br><span class="line">        font.setPointSize(<span class="number">12</span>)</span><br><span class="line">        font.setBold(<span class="literal">False</span>)</span><br><span class="line">        font.setWeight(<span class="number">50</span>)</span><br><span class="line">        self.SettrialID.setFont(font)</span><br><span class="line">        self.SettrialID.setObjectName(<span class="string">&quot;SettrialID&quot;</span>)</span><br><span class="line">        self.SubjectID = QtWidgets.QLineEdit(Dialog)</span><br><span class="line">        self.SubjectID.setGeometry(QtCore.QRect(<span class="number">180</span>, <span class="number">130</span>, <span class="number">381</span>, <span class="number">31</span>))</span><br><span class="line">        <span class="comment"># The ID input</span></span><br><span class="line">        self.SubjectID.setObjectName(<span class="string">&quot;SubjectID&quot;</span>)</span><br><span class="line">        self.TrialID = QtWidgets.QLineEdit(Dialog)</span><br><span class="line">        self.TrialID.setGeometry(QtCore.QRect(<span class="number">180</span>, <span class="number">190</span>, <span class="number">381</span>, <span class="number">31</span>))</span><br><span class="line">        self.TrialID.setObjectName(<span class="string">&quot;TrialID&quot;</span>)</span><br><span class="line">        <span class="comment"># The OK button</span></span><br><span class="line">        self.ok = QtWidgets.QPushButton(Dialog)</span><br><span class="line">        self.ok.setGeometry(QtCore.QRect(<span class="number">350</span>, <span class="number">250</span>, <span class="number">93</span>, <span class="number">28</span>))</span><br><span class="line">        self.ok.setObjectName(<span class="string">&quot;ok&quot;</span>)</span><br><span class="line">        self.ok.clicked.connect(self.ok_clicked)</span><br><span class="line">        <span class="comment"># The explain text</span></span><br><span class="line">        self.Explain = QtWidgets.QLabel(Dialog)</span><br><span class="line">        self.Explain.setGeometry(QtCore.QRect(<span class="number">30</span>, <span class="number">30</span>, <span class="number">521</span>, <span class="number">71</span>))</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(<span class="string">&quot;Arial&quot;</span>)</span><br><span class="line">        font.setPointSize(<span class="number">12</span>)</span><br><span class="line">        font.setBold(<span class="literal">False</span>)</span><br><span class="line">        font.setWeight(<span class="number">50</span>)</span><br><span class="line">        self.Explain.setFont(font)</span><br><span class="line">        self.Explain.setWordWrap(<span class="literal">True</span>)</span><br><span class="line">        self.Explain.setObjectName(<span class="string">&quot;Explain&quot;</span>)</span><br><span class="line">        <span class="comment"># The cancel button</span></span><br><span class="line">        self.cancel = QtWidgets.QPushButton(Dialog)</span><br><span class="line">        self.cancel.setGeometry(QtCore.QRect(<span class="number">460</span>, <span class="number">250</span>, <span class="number">93</span>, <span class="number">28</span>))</span><br><span class="line">        self.cancel.setObjectName(<span class="string">&quot;cancel&quot;</span>)</span><br><span class="line">        <span class="comment">## If click the cancel button, then close the whole program</span></span><br><span class="line">        self.cancel.clicked.connect(self.cancel_clicked)</span><br><span class="line"></span><br><span class="line">        self.retranslateUi(Dialog)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(Dialog)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">retranslateUi</span>(<span class="params">self, Dialog</span>):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        Dialog.setWindowTitle(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;Config&quot;</span>))</span><br><span class="line">        self.Setsubjectid.setText(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;Set Subject ID&quot;</span>))</span><br><span class="line">        self.SettrialID.setText(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;Set Trial ID&quot;</span>))</span><br><span class="line">        self.ok.setText(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;OK&quot;</span>))</span><br><span class="line">        self.Explain.setText(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;Before the trial, you can set the sbject ID and trial ID freely. If you do not want to config this, you can just click \&quot;OK\&quot; and will use default setting.&quot;</span>))</span><br><span class="line">        self.cancel.setText(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;Cancel&quot;</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="config界面"><a href="#config界面" class="headerlink" title="config界面"></a>config界面</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> PyQt5 <span class="hljs-keyword">import</span> QtCore, QtGui, QtWidgets<br><span class="hljs-keyword">from</span> PyQt5.QtWidgets <span class="hljs-keyword">import</span> *<br><br><span class="hljs-comment"># GUI configuration: Login</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Ui_Dialog</span>(<span class="hljs-title class_ inherited__">object</span>):<br>    <span class="hljs-comment">## The function for clicking &#x27;cancel&#x27; button</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cancel_clicked</span>(<span class="hljs-params">self</span>):<br>        sys.exit()<br>        sys.exit(app.exec_())<br>    <span class="hljs-comment">## The function for clicking &#x27;ok&#x27; button</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">ok_clicked</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">global</span> SubjectID_text<br>        <span class="hljs-keyword">global</span> TrialID_text<br>        <span class="hljs-keyword">if</span> self.SubjectID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            <span class="hljs-keyword">pass</span><br>        <span class="hljs-keyword">else</span>:<br>            SubjectID_text = self.SubjectID.text()<br>        <span class="hljs-keyword">if</span> self.TrialID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            <span class="hljs-keyword">pass</span><br>        <span class="hljs-keyword">else</span>:<br>            TrialID_text = self.TrialID.text()<br>        <span class="hljs-built_in">print</span>(SubjectID_text)<br>        <span class="hljs-built_in">print</span>(TrialID_text)<br>        widget.close()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">setupUi</span>(<span class="hljs-params">self, Dialog</span>):<br>        <span class="hljs-comment"># The main window</span><br>        Dialog.setObjectName(<span class="hljs-string">&quot;Dialog&quot;</span>)<br>        Dialog.resize(<span class="hljs-number">573</span>, <span class="hljs-number">300</span>)<br>        <span class="hljs-comment"># The labels</span><br>        self.Setsubjectid = QtWidgets.QLabel(Dialog)<br>        self.Setsubjectid.setGeometry(QtCore.QRect(<span class="hljs-number">30</span>, <span class="hljs-number">140</span>, <span class="hljs-number">141</span>, <span class="hljs-number">16</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Setsubjectid.setFont(font)<br>        self.Setsubjectid.setObjectName(<span class="hljs-string">&quot;Setsubjectid&quot;</span>)<br>        self.SettrialID = QtWidgets.QLabel(Dialog)<br>        self.SettrialID.setGeometry(QtCore.QRect(<span class="hljs-number">60</span>, <span class="hljs-number">200</span>, <span class="hljs-number">111</span>, <span class="hljs-number">16</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.SettrialID.setFont(font)<br>        self.SettrialID.setObjectName(<span class="hljs-string">&quot;SettrialID&quot;</span>)<br>        self.SubjectID = QtWidgets.QLineEdit(Dialog)<br>        self.SubjectID.setGeometry(QtCore.QRect(<span class="hljs-number">180</span>, <span class="hljs-number">130</span>, <span class="hljs-number">381</span>, <span class="hljs-number">31</span>))<br>        <span class="hljs-comment"># The ID input</span><br>        self.SubjectID.setObjectName(<span class="hljs-string">&quot;SubjectID&quot;</span>)<br>        self.TrialID = QtWidgets.QLineEdit(Dialog)<br>        self.TrialID.setGeometry(QtCore.QRect(<span class="hljs-number">180</span>, <span class="hljs-number">190</span>, <span class="hljs-number">381</span>, <span class="hljs-number">31</span>))<br>        self.TrialID.setObjectName(<span class="hljs-string">&quot;TrialID&quot;</span>)<br>        <span class="hljs-comment"># The OK button</span><br>        self.ok = QtWidgets.QPushButton(Dialog)<br>        self.ok.setGeometry(QtCore.QRect(<span class="hljs-number">350</span>, <span class="hljs-number">250</span>, <span class="hljs-number">93</span>, <span class="hljs-number">28</span>))<br>        self.ok.setObjectName(<span class="hljs-string">&quot;ok&quot;</span>)<br>        self.ok.clicked.connect(self.ok_clicked)<br>        <span class="hljs-comment"># The explain text</span><br>        self.Explain = QtWidgets.QLabel(Dialog)<br>        self.Explain.setGeometry(QtCore.QRect(<span class="hljs-number">30</span>, <span class="hljs-number">30</span>, <span class="hljs-number">521</span>, <span class="hljs-number">71</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Explain.setFont(font)<br>        self.Explain.setWordWrap(<span class="hljs-literal">True</span>)<br>        self.Explain.setObjectName(<span class="hljs-string">&quot;Explain&quot;</span>)<br>        <span class="hljs-comment"># The cancel button</span><br>        self.cancel = QtWidgets.QPushButton(Dialog)<br>        self.cancel.setGeometry(QtCore.QRect(<span class="hljs-number">460</span>, <span class="hljs-number">250</span>, <span class="hljs-number">93</span>, <span class="hljs-number">28</span>))<br>        self.cancel.setObjectName(<span class="hljs-string">&quot;cancel&quot;</span>)<br>        <span class="hljs-comment">## If click the cancel button, then close the whole program</span><br>        self.cancel.clicked.connect(self.cancel_clicked)<br><br>        self.retranslateUi(Dialog)<br>        QtCore.QMetaObject.connectSlotsByName(Dialog)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">retranslateUi</span>(<span class="hljs-params">self, Dialog</span>):<br>        _translate = QtCore.QCoreApplication.translate<br>        Dialog.setWindowTitle(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Config&quot;</span>))<br>        self.Setsubjectid.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Set Subject ID&quot;</span>))<br>        self.SettrialID.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Set Trial ID&quot;</span>))<br>        self.ok.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;OK&quot;</span>))<br>        self.Explain.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Before the trial, you can set the sbject ID and trial ID freely. If you do not want to config this, you can just click \&quot;OK\&quot; and will use default setting.&quot;</span>))<br>        self.cancel.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Cancel&quot;</span>))<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Machine%20learning%20and%20neural%20engineering/image-20210215123143255.png" alt="image-20210215123143255"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Machine%20learning%20and%20neural%20engineering/image-20210215123143255.png" srcset="/img/loading.gif" lazyload alt="image-20210215123143255"></p>
 <p>其中规定了两个按钮<code>ok</code>和<code>cancel</code>的行为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">cancel_clicked</span>(<span class="params">self</span>):</span><br><span class="line">        sys.exit()</span><br><span class="line">        sys.exit(app.exec_())</span><br><span class="line">    <span class="comment">## The function for clicking &#x27;ok&#x27; button</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">ok_clicked</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">global</span> SubjectID_text</span><br><span class="line">        <span class="keyword">global</span> TrialID_text</span><br><span class="line">        <span class="keyword">if</span> self.SubjectID.text() == <span class="string">&quot;&quot;</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            SubjectID_text = self.SubjectID.text()</span><br><span class="line">        <span class="keyword">if</span> self.TrialID.text() == <span class="string">&quot;&quot;</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            TrialID_text = self.TrialID.text()</span><br><span class="line">        <span class="built_in">print</span>(SubjectID_text)</span><br><span class="line">        <span class="built_in">print</span>(TrialID_text)</span><br><span class="line">        widget.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">cancel_clicked</span>(<span class="hljs-params">self</span>):<br>        sys.exit()<br>        sys.exit(app.exec_())<br>    <span class="hljs-comment">## The function for clicking &#x27;ok&#x27; button</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">ok_clicked</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">global</span> SubjectID_text<br>        <span class="hljs-keyword">global</span> TrialID_text<br>        <span class="hljs-keyword">if</span> self.SubjectID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            <span class="hljs-keyword">pass</span><br>        <span class="hljs-keyword">else</span>:<br>            SubjectID_text = self.SubjectID.text()<br>        <span class="hljs-keyword">if</span> self.TrialID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            <span class="hljs-keyword">pass</span><br>        <span class="hljs-keyword">else</span>:<br>            TrialID_text = self.TrialID.text()<br>        <span class="hljs-built_in">print</span>(SubjectID_text)<br>        <span class="hljs-built_in">print</span>(TrialID_text)<br>        widget.close()<br></code></pre></td></tr></table></figure>
 
 <p>在打开这个GUI的时候需要使用的代码为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Open Login Panel</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    app = QtWidgets.QApplication(sys.argv)</span><br><span class="line">    <span class="comment">### 规定了窗口为widget</span></span><br><span class="line">    widget = QtWidgets.QWidget()</span><br><span class="line">    ui = Ui_Dialog()</span><br><span class="line">    ui.setupUi(widget)</span><br><span class="line">    widget.show()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">## Open Login Panel</span><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    app = QtWidgets.QApplication(sys.argv)<br>    <span class="hljs-comment">### 规定了窗口为widget</span><br>    widget = QtWidgets.QWidget()<br>    ui = Ui_Dialog()<br>    ui.setupUi(widget)<br>    widget.show()<br></code></pre></td></tr></table></figure>
 
 <p>因为这个界面可能多次出现，因此关闭时使用：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">widget.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">widget.close()<br></code></pre></td></tr></table></figure>
 
 <h3 id="结算界面"><a href="#结算界面" class="headerlink" title="结算界面"></a>结算界面</h3><p>同上，使用Qt Designer</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># GUI configuration: Save and restart panel</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ui_save_restart</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">finish_clicked</span>(<span class="params">self</span>):</span><br><span class="line">        savecsv()</span><br><span class="line">        widget2.close()</span><br><span class="line">        pygame.quit()</span><br><span class="line">        sys.exit()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">ok_clicked</span>(<span class="params">self</span>):</span><br><span class="line">        savecsv()</span><br><span class="line">        <span class="keyword">global</span> current_round</span><br><span class="line">        current_round = <span class="number">0</span></span><br><span class="line">        <span class="built_in">print</span>(current_round)</span><br><span class="line">        <span class="keyword">global</span> TrialID_text</span><br><span class="line">        <span class="keyword">if</span> self.TrialID.text() == <span class="string">&quot;&quot;</span>:</span><br><span class="line">            TrialID_text = time.strftime(<span class="string">&quot;%Y-%m-%d_%H-%M-%S&quot;</span>, time.localtime())</span><br><span class="line">        <span class="keyword">global</span> SubjectID_text</span><br><span class="line">        <span class="keyword">if</span> self.SubjectID.text() == <span class="string">&quot;&quot;</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            SubjectID_text = self.SubjectID.text()</span><br><span class="line">        <span class="comment"># Update the placeholder in the save window</span></span><br><span class="line">        self.SubjectID.setPlaceholderText(SubjectID_text)</span><br><span class="line">        self.TrialID.setPlaceholderText(TrialID_text)</span><br><span class="line">        widget2.close()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">filepath_clicked</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">global</span> filepath</span><br><span class="line">        filepath = QFileDialog.getExistingDirectory(<span class="literal">None</span>)</span><br><span class="line">        <span class="built_in">print</span>(filepath)</span><br><span class="line">        self.Filepath.setText(filepath)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">setup_save_restart</span>(<span class="params">self, Dialog</span>):</span><br><span class="line">        <span class="comment"># The tips</span></span><br><span class="line">        Dialog.setObjectName(<span class="string">&quot;Dialog&quot;</span>)</span><br><span class="line">        Dialog.resize(<span class="number">746</span>, <span class="number">612</span>)</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setKerning(<span class="literal">True</span>)</span><br><span class="line">        Dialog.setFont(font)</span><br><span class="line">        self.Tip1 = QtWidgets.QLabel(Dialog)</span><br><span class="line">        self.Tip1.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">20</span>, <span class="number">701</span>, <span class="number">71</span>))</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(<span class="string">&quot;Calibri&quot;</span>)</span><br><span class="line">        font.setPointSize(<span class="number">14</span>)</span><br><span class="line">        font.setBold(<span class="literal">False</span>)</span><br><span class="line">        font.setWeight(<span class="number">50</span>)</span><br><span class="line">        self.Tip1.setFont(font)</span><br><span class="line">        self.Tip1.setWordWrap(<span class="literal">True</span>)</span><br><span class="line">        self.Tip1.setObjectName(<span class="string">&quot;Tip1&quot;</span>)</span><br><span class="line">        self.Tip2 = QtWidgets.QLabel(Dialog)</span><br><span class="line">        self.Tip2.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">90</span>, <span class="number">701</span>, <span class="number">81</span>))</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(<span class="string">&quot;Calibri&quot;</span>)</span><br><span class="line">        font.setPointSize(<span class="number">14</span>)</span><br><span class="line">        font.setBold(<span class="literal">False</span>)</span><br><span class="line">        font.setWeight(<span class="number">50</span>)</span><br><span class="line">        self.Tip2.setFont(font)</span><br><span class="line">        self.Tip2.setWordWrap(<span class="literal">True</span>)</span><br><span class="line">        self.Tip2.setObjectName(<span class="string">&quot;Tip2&quot;</span>)</span><br><span class="line">        self.Tip3 = QtWidgets.QLabel(Dialog)</span><br><span class="line">        self.Tip3.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">170</span>, <span class="number">701</span>, <span class="number">81</span>))</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(<span class="string">&quot;Calibri&quot;</span>)</span><br><span class="line">        font.setPointSize(<span class="number">14</span>)</span><br><span class="line">        font.setBold(<span class="literal">False</span>)</span><br><span class="line">        font.setWeight(<span class="number">50</span>)</span><br><span class="line">        self.Tip3.setFont(font)</span><br><span class="line">        self.Tip3.setWordWrap(<span class="literal">True</span>)</span><br><span class="line">        self.Tip3.setObjectName(<span class="string">&quot;Tip3&quot;</span>)</span><br><span class="line">        self.Tip4 = QtWidgets.QLabel(Dialog)</span><br><span class="line">        self.Tip4.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">260</span>, <span class="number">701</span>, <span class="number">81</span>))</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(<span class="string">&quot;Calibri&quot;</span>)</span><br><span class="line">        font.setPointSize(<span class="number">14</span>)</span><br><span class="line">        font.setBold(<span class="literal">False</span>)</span><br><span class="line">        font.setWeight(<span class="number">50</span>)</span><br><span class="line">        self.Tip4.setFont(font)</span><br><span class="line">        self.Tip4.setWordWrap(<span class="literal">True</span>)</span><br><span class="line">        self.Tip4.setObjectName(<span class="string">&quot;Tip4&quot;</span>)</span><br><span class="line">        <span class="comment"># The subject ID</span></span><br><span class="line">        self.SettrialID_2 = QtWidgets.QLabel(Dialog)</span><br><span class="line">        self.SettrialID_2.setGeometry(QtCore.QRect(<span class="number">100</span>, <span class="number">500</span>, <span class="number">121</span>, <span class="number">20</span>))</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(<span class="string">&quot;Arial&quot;</span>)</span><br><span class="line">        font.setPointSize(<span class="number">12</span>)</span><br><span class="line">        font.setBold(<span class="literal">False</span>)</span><br><span class="line">        font.setWeight(<span class="number">50</span>)</span><br><span class="line">        self.SettrialID_2.setFont(font)</span><br><span class="line">        self.SettrialID_2.setObjectName(<span class="string">&quot;SettrialID_2&quot;</span>)</span><br><span class="line">        self.SubjectID = QtWidgets.QLineEdit(Dialog)</span><br><span class="line">        self.SubjectID.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">370</span>, <span class="number">381</span>, <span class="number">31</span>))</span><br><span class="line">        self.SubjectID.setObjectName(<span class="string">&quot;SubjectID&quot;</span>)</span><br><span class="line">        <span class="keyword">global</span> SubjectID_text</span><br><span class="line">        self.SubjectID.setPlaceholderText(SubjectID_text)</span><br><span class="line">        self.Setsubjectid = QtWidgets.QLabel(Dialog)</span><br><span class="line">        self.Setsubjectid.setGeometry(QtCore.QRect(<span class="number">80</span>, <span class="number">380</span>, <span class="number">141</span>, <span class="number">16</span>))</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(<span class="string">&quot;Arial&quot;</span>)</span><br><span class="line">        font.setPointSize(<span class="number">12</span>)</span><br><span class="line">        font.setBold(<span class="literal">False</span>)</span><br><span class="line">        font.setWeight(<span class="number">50</span>)</span><br><span class="line">        self.Setsubjectid.setFont(font)</span><br><span class="line">        self.Setsubjectid.setObjectName(<span class="string">&quot;Setsubjectid&quot;</span>)</span><br><span class="line">        <span class="comment"># Trial ID</span></span><br><span class="line">        self.SettrialID = QtWidgets.QLabel(Dialog)</span><br><span class="line">        self.SettrialID.setGeometry(QtCore.QRect(<span class="number">110</span>, <span class="number">440</span>, <span class="number">111</span>, <span class="number">16</span>))</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(<span class="string">&quot;Arial&quot;</span>)</span><br><span class="line">        font.setPointSize(<span class="number">12</span>)</span><br><span class="line">        font.setBold(<span class="literal">False</span>)</span><br><span class="line">        font.setWeight(<span class="number">50</span>)</span><br><span class="line">        self.SettrialID.setFont(font)</span><br><span class="line">        self.SettrialID.setObjectName(<span class="string">&quot;SettrialID&quot;</span>)</span><br><span class="line">        self.TrialID = QtWidgets.QLineEdit(Dialog)</span><br><span class="line">        self.TrialID.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">430</span>, <span class="number">381</span>, <span class="number">31</span>))</span><br><span class="line">        self.TrialID.setObjectName(<span class="string">&quot;TrialID&quot;</span>)</span><br><span class="line">        <span class="keyword">global</span> TrialID_text</span><br><span class="line">        self.TrialID.setPlaceholderText(TrialID_text)</span><br><span class="line">        <span class="comment"># Finish button</span></span><br><span class="line">        self.finish = QtWidgets.QPushButton(Dialog)</span><br><span class="line">        self.finish.setGeometry(QtCore.QRect(<span class="number">450</span>, <span class="number">550</span>, <span class="number">131</span>, <span class="number">31</span>))</span><br><span class="line">        self.finish.setObjectName(<span class="string">&quot;finish&quot;</span>)</span><br><span class="line">        self.finish.clicked.connect(self.finish_clicked)</span><br><span class="line">        <span class="comment"># Ok button</span></span><br><span class="line">        self.ok = QtWidgets.QPushButton(Dialog)</span><br><span class="line">        self.ok.setGeometry(QtCore.QRect(<span class="number">180</span>, <span class="number">550</span>, <span class="number">131</span>, <span class="number">31</span>))</span><br><span class="line">        self.ok.setObjectName(<span class="string">&quot;ok&quot;</span>)</span><br><span class="line">        self.ok.clicked.connect(self.ok_clicked)</span><br><span class="line">        <span class="comment"># The filepath input</span></span><br><span class="line">        self.Filepath = QtWidgets.QLineEdit(Dialog)</span><br><span class="line">        self.Filepath.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">490</span>, <span class="number">381</span>, <span class="number">31</span>))</span><br><span class="line">        self.Filepath.setObjectName(<span class="string">&quot;Filepath&quot;</span>)</span><br><span class="line">        self.Filepath.setPlaceholderText(filepath)</span><br><span class="line">        <span class="comment"># The ... filepath setting button</span></span><br><span class="line">        self.set_file_path = QtWidgets.QPushButton(Dialog)</span><br><span class="line">        self.set_file_path.setGeometry(QtCore.QRect(<span class="number">620</span>, <span class="number">490</span>, <span class="number">51</span>, <span class="number">28</span>))</span><br><span class="line">        self.set_file_path.setObjectName(<span class="string">&quot;set_file_path&quot;</span>)</span><br><span class="line">        self.set_file_path.clicked.connect(self.filepath_clicked)</span><br><span class="line"></span><br><span class="line">        self.retranslateUi_save_restart(Dialog)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(Dialog)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">retranslateUi_save_restart</span>(<span class="params">self, Dialog</span>):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        Dialog.setWindowTitle(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;Next Trial？&quot;</span>))</span><br><span class="line">        self.Tip1.setText(_translate(<span class="string">&quot;Dialog&quot;</span>,</span><br><span class="line">                                     <span class="string">&quot;You have completed all the rounds and this is the end of this trial. If you want to quit, then click the \&#x27;Finish\&#x27; button or just close this window.&quot;</span>))</span><br><span class="line">        self.Tip2.setText(_translate(<span class="string">&quot;Dialog&quot;</span>,</span><br><span class="line">                                     <span class="string">&quot;You can reset your Subject ID and Trial ID if necessary. If you do not need to change your Subject ID, just click the \&#x27;OK\&#x27; button.&quot;</span>))</span><br><span class="line">        self.Tip3.setText(_translate(<span class="string">&quot;Dialog&quot;</span>,</span><br><span class="line">                                     <span class="string">&quot;If you want to begin a new trial, you must change your Trial ID. You can just click the \&#x27;OK\&#x27; button to use the default setting.&quot;</span>))</span><br><span class="line">        self.Setsubjectid.setText(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;Set Subject ID&quot;</span>))</span><br><span class="line">        self.SettrialID.setText(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;Set Trial ID&quot;</span>))</span><br><span class="line">        self.finish.setText(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;Finish&quot;</span>))</span><br><span class="line">        self.ok.setText(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;OK&quot;</span>))</span><br><span class="line">        self.SettrialID_2.setText(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;Set file path: &quot;</span>))</span><br><span class="line">        self.set_file_path.setText(_translate(<span class="string">&quot;Dialog&quot;</span>, <span class="string">&quot;...&quot;</span>))</span><br><span class="line">        self.Tip4.setText(_translate(<span class="string">&quot;Dialog&quot;</span>,</span><br><span class="line">                                     <span class="string">&quot;The experiment result will be saved to a .csv file, you can set the filepath. Or the .csv file will be saved to the same path as the .py file. The file will be named as &#x27;Subject ID-Date.csv&#x27;&quot;</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># GUI configuration: Save and restart panel</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Ui_save_restart</span>(<span class="hljs-title class_ inherited__">object</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">finish_clicked</span>(<span class="hljs-params">self</span>):<br>        savecsv()<br>        widget2.close()<br>        pygame.quit()<br>        sys.exit()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">ok_clicked</span>(<span class="hljs-params">self</span>):<br>        savecsv()<br>        <span class="hljs-keyword">global</span> current_round<br>        current_round = <span class="hljs-number">0</span><br>        <span class="hljs-built_in">print</span>(current_round)<br>        <span class="hljs-keyword">global</span> TrialID_text<br>        <span class="hljs-keyword">if</span> self.TrialID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            TrialID_text = time.strftime(<span class="hljs-string">&quot;%Y-%m-%d_%H-%M-%S&quot;</span>, time.localtime())<br>        <span class="hljs-keyword">global</span> SubjectID_text<br>        <span class="hljs-keyword">if</span> self.SubjectID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            <span class="hljs-keyword">pass</span><br>        <span class="hljs-keyword">else</span>:<br>            SubjectID_text = self.SubjectID.text()<br>        <span class="hljs-comment"># Update the placeholder in the save window</span><br>        self.SubjectID.setPlaceholderText(SubjectID_text)<br>        self.TrialID.setPlaceholderText(TrialID_text)<br>        widget2.close()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">filepath_clicked</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">global</span> filepath<br>        filepath = QFileDialog.getExistingDirectory(<span class="hljs-literal">None</span>)<br>        <span class="hljs-built_in">print</span>(filepath)<br>        self.Filepath.setText(filepath)<br>        <span class="hljs-keyword">return</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">setup_save_restart</span>(<span class="hljs-params">self, Dialog</span>):<br>        <span class="hljs-comment"># The tips</span><br>        Dialog.setObjectName(<span class="hljs-string">&quot;Dialog&quot;</span>)<br>        Dialog.resize(<span class="hljs-number">746</span>, <span class="hljs-number">612</span>)<br>        font = QtGui.QFont()<br>        font.setKerning(<span class="hljs-literal">True</span>)<br>        Dialog.setFont(font)<br>        self.Tip1 = QtWidgets.QLabel(Dialog)<br>        self.Tip1.setGeometry(QtCore.QRect(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>, <span class="hljs-number">701</span>, <span class="hljs-number">71</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Calibri&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">14</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Tip1.setFont(font)<br>        self.Tip1.setWordWrap(<span class="hljs-literal">True</span>)<br>        self.Tip1.setObjectName(<span class="hljs-string">&quot;Tip1&quot;</span>)<br>        self.Tip2 = QtWidgets.QLabel(Dialog)<br>        self.Tip2.setGeometry(QtCore.QRect(<span class="hljs-number">20</span>, <span class="hljs-number">90</span>, <span class="hljs-number">701</span>, <span class="hljs-number">81</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Calibri&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">14</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Tip2.setFont(font)<br>        self.Tip2.setWordWrap(<span class="hljs-literal">True</span>)<br>        self.Tip2.setObjectName(<span class="hljs-string">&quot;Tip2&quot;</span>)<br>        self.Tip3 = QtWidgets.QLabel(Dialog)<br>        self.Tip3.setGeometry(QtCore.QRect(<span class="hljs-number">20</span>, <span class="hljs-number">170</span>, <span class="hljs-number">701</span>, <span class="hljs-number">81</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Calibri&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">14</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Tip3.setFont(font)<br>        self.Tip3.setWordWrap(<span class="hljs-literal">True</span>)<br>        self.Tip3.setObjectName(<span class="hljs-string">&quot;Tip3&quot;</span>)<br>        self.Tip4 = QtWidgets.QLabel(Dialog)<br>        self.Tip4.setGeometry(QtCore.QRect(<span class="hljs-number">20</span>, <span class="hljs-number">260</span>, <span class="hljs-number">701</span>, <span class="hljs-number">81</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Calibri&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">14</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Tip4.setFont(font)<br>        self.Tip4.setWordWrap(<span class="hljs-literal">True</span>)<br>        self.Tip4.setObjectName(<span class="hljs-string">&quot;Tip4&quot;</span>)<br>        <span class="hljs-comment"># The subject ID</span><br>        self.SettrialID_2 = QtWidgets.QLabel(Dialog)<br>        self.SettrialID_2.setGeometry(QtCore.QRect(<span class="hljs-number">100</span>, <span class="hljs-number">500</span>, <span class="hljs-number">121</span>, <span class="hljs-number">20</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.SettrialID_2.setFont(font)<br>        self.SettrialID_2.setObjectName(<span class="hljs-string">&quot;SettrialID_2&quot;</span>)<br>        self.SubjectID = QtWidgets.QLineEdit(Dialog)<br>        self.SubjectID.setGeometry(QtCore.QRect(<span class="hljs-number">230</span>, <span class="hljs-number">370</span>, <span class="hljs-number">381</span>, <span class="hljs-number">31</span>))<br>        self.SubjectID.setObjectName(<span class="hljs-string">&quot;SubjectID&quot;</span>)<br>        <span class="hljs-keyword">global</span> SubjectID_text<br>        self.SubjectID.setPlaceholderText(SubjectID_text)<br>        self.Setsubjectid = QtWidgets.QLabel(Dialog)<br>        self.Setsubjectid.setGeometry(QtCore.QRect(<span class="hljs-number">80</span>, <span class="hljs-number">380</span>, <span class="hljs-number">141</span>, <span class="hljs-number">16</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Setsubjectid.setFont(font)<br>        self.Setsubjectid.setObjectName(<span class="hljs-string">&quot;Setsubjectid&quot;</span>)<br>        <span class="hljs-comment"># Trial ID</span><br>        self.SettrialID = QtWidgets.QLabel(Dialog)<br>        self.SettrialID.setGeometry(QtCore.QRect(<span class="hljs-number">110</span>, <span class="hljs-number">440</span>, <span class="hljs-number">111</span>, <span class="hljs-number">16</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.SettrialID.setFont(font)<br>        self.SettrialID.setObjectName(<span class="hljs-string">&quot;SettrialID&quot;</span>)<br>        self.TrialID = QtWidgets.QLineEdit(Dialog)<br>        self.TrialID.setGeometry(QtCore.QRect(<span class="hljs-number">230</span>, <span class="hljs-number">430</span>, <span class="hljs-number">381</span>, <span class="hljs-number">31</span>))<br>        self.TrialID.setObjectName(<span class="hljs-string">&quot;TrialID&quot;</span>)<br>        <span class="hljs-keyword">global</span> TrialID_text<br>        self.TrialID.setPlaceholderText(TrialID_text)<br>        <span class="hljs-comment"># Finish button</span><br>        self.finish = QtWidgets.QPushButton(Dialog)<br>        self.finish.setGeometry(QtCore.QRect(<span class="hljs-number">450</span>, <span class="hljs-number">550</span>, <span class="hljs-number">131</span>, <span class="hljs-number">31</span>))<br>        self.finish.setObjectName(<span class="hljs-string">&quot;finish&quot;</span>)<br>        self.finish.clicked.connect(self.finish_clicked)<br>        <span class="hljs-comment"># Ok button</span><br>        self.ok = QtWidgets.QPushButton(Dialog)<br>        self.ok.setGeometry(QtCore.QRect(<span class="hljs-number">180</span>, <span class="hljs-number">550</span>, <span class="hljs-number">131</span>, <span class="hljs-number">31</span>))<br>        self.ok.setObjectName(<span class="hljs-string">&quot;ok&quot;</span>)<br>        self.ok.clicked.connect(self.ok_clicked)<br>        <span class="hljs-comment"># The filepath input</span><br>        self.Filepath = QtWidgets.QLineEdit(Dialog)<br>        self.Filepath.setGeometry(QtCore.QRect(<span class="hljs-number">230</span>, <span class="hljs-number">490</span>, <span class="hljs-number">381</span>, <span class="hljs-number">31</span>))<br>        self.Filepath.setObjectName(<span class="hljs-string">&quot;Filepath&quot;</span>)<br>        self.Filepath.setPlaceholderText(filepath)<br>        <span class="hljs-comment"># The ... filepath setting button</span><br>        self.set_file_path = QtWidgets.QPushButton(Dialog)<br>        self.set_file_path.setGeometry(QtCore.QRect(<span class="hljs-number">620</span>, <span class="hljs-number">490</span>, <span class="hljs-number">51</span>, <span class="hljs-number">28</span>))<br>        self.set_file_path.setObjectName(<span class="hljs-string">&quot;set_file_path&quot;</span>)<br>        self.set_file_path.clicked.connect(self.filepath_clicked)<br><br>        self.retranslateUi_save_restart(Dialog)<br>        QtCore.QMetaObject.connectSlotsByName(Dialog)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">retranslateUi_save_restart</span>(<span class="hljs-params">self, Dialog</span>):<br>        _translate = QtCore.QCoreApplication.translate<br>        Dialog.setWindowTitle(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Next Trial？&quot;</span>))<br>        self.Tip1.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>,<br>                                     <span class="hljs-string">&quot;You have completed all the rounds and this is the end of this trial. If you want to quit, then click the \&#x27;Finish\&#x27; button or just close this window.&quot;</span>))<br>        self.Tip2.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>,<br>                                     <span class="hljs-string">&quot;You can reset your Subject ID and Trial ID if necessary. If you do not need to change your Subject ID, just click the \&#x27;OK\&#x27; button.&quot;</span>))<br>        self.Tip3.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>,<br>                                     <span class="hljs-string">&quot;If you want to begin a new trial, you must change your Trial ID. You can just click the \&#x27;OK\&#x27; button to use the default setting.&quot;</span>))<br>        self.Setsubjectid.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Set Subject ID&quot;</span>))<br>        self.SettrialID.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Set Trial ID&quot;</span>))<br>        self.finish.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Finish&quot;</span>))<br>        self.ok.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;OK&quot;</span>))<br>        self.SettrialID_2.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Set file path: &quot;</span>))<br>        self.set_file_path.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;...&quot;</span>))<br>        self.Tip4.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>,<br>                                     <span class="hljs-string">&quot;The experiment result will be saved to a .csv file, you can set the filepath. Or the .csv file will be saved to the same path as the .py file. The file will be named as &#x27;Subject ID-Date.csv&#x27;&quot;</span>))<br><br></code></pre></td></tr></table></figure>
 
 <p>规定了三个按钮的行为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">finish_clicked</span>(<span class="params">self</span>):</span><br><span class="line">    savecsv()</span><br><span class="line">    widget2.close()</span><br><span class="line">    pygame.quit()</span><br><span class="line">    sys.exit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">ok_clicked</span>(<span class="params">self</span>):</span><br><span class="line">    savecsv()</span><br><span class="line">    <span class="keyword">global</span> current_round</span><br><span class="line">    current_round = <span class="number">0</span></span><br><span class="line">    <span class="built_in">print</span>(current_round)</span><br><span class="line">    <span class="keyword">global</span> TrialID_text</span><br><span class="line">    <span class="keyword">if</span> self.TrialID.text() == <span class="string">&quot;&quot;</span>:</span><br><span class="line">        TrialID_text = time.strftime(<span class="string">&quot;%Y-%m-%d_%H-%M-%S&quot;</span>, time.localtime())</span><br><span class="line">    <span class="keyword">global</span> SubjectID_text</span><br><span class="line">    <span class="keyword">if</span> self.SubjectID.text() == <span class="string">&quot;&quot;</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        SubjectID_text = self.SubjectID.text()</span><br><span class="line">    <span class="comment"># Update the placeholder in the save window</span></span><br><span class="line">    self.SubjectID.setPlaceholderText(SubjectID_text)</span><br><span class="line">    self.TrialID.setPlaceholderText(TrialID_text)</span><br><span class="line">    widget2.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">filepath_clicked</span>(<span class="params">self</span>):</span><br><span class="line">    <span class="keyword">global</span> filepath</span><br><span class="line">    filepath = QFileDialog.getExistingDirectory(<span class="literal">None</span>)</span><br><span class="line">    <span class="built_in">print</span>(filepath)</span><br><span class="line">    self.Filepath.setText(filepath)</span><br><span class="line">    <span class="keyword">return</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">finish_clicked</span>(<span class="hljs-params">self</span>):<br>    savecsv()<br>    widget2.close()<br>    pygame.quit()<br>    sys.exit()<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">ok_clicked</span>(<span class="hljs-params">self</span>):<br>    savecsv()<br>    <span class="hljs-keyword">global</span> current_round<br>    current_round = <span class="hljs-number">0</span><br>    <span class="hljs-built_in">print</span>(current_round)<br>    <span class="hljs-keyword">global</span> TrialID_text<br>    <span class="hljs-keyword">if</span> self.TrialID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>        TrialID_text = time.strftime(<span class="hljs-string">&quot;%Y-%m-%d_%H-%M-%S&quot;</span>, time.localtime())<br>    <span class="hljs-keyword">global</span> SubjectID_text<br>    <span class="hljs-keyword">if</span> self.SubjectID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>        <span class="hljs-keyword">pass</span><br>    <span class="hljs-keyword">else</span>:<br>        SubjectID_text = self.SubjectID.text()<br>    <span class="hljs-comment"># Update the placeholder in the save window</span><br>    self.SubjectID.setPlaceholderText(SubjectID_text)<br>    self.TrialID.setPlaceholderText(TrialID_text)<br>    widget2.close()<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">filepath_clicked</span>(<span class="hljs-params">self</span>):<br>    <span class="hljs-keyword">global</span> filepath<br>    filepath = QFileDialog.getExistingDirectory(<span class="hljs-literal">None</span>)<br>    <span class="hljs-built_in">print</span>(filepath)<br>    self.Filepath.setText(filepath)<br>    <span class="hljs-keyword">return</span><br></code></pre></td></tr></table></figure>
 
 <p><code>finish</code>：关闭所有窗口，结束运行，并且执行<code>savecsv</code>函数</p>
 <p><code>ok</code>：关闭当前窗口，更新参数，执行<code>savecsv</code>函数</p>
 <p><code>filepath</code>：选择csv文件的保存路径，会传递一个路径string</p>
 <h2 id="7-输出结果为csv"><a href="#7-输出结果为csv" class="headerlink" title="7. 输出结果为csv"></a>7. 输出结果为csv</h2><p>在这个过程当中，使用pandas来进行csv的写入。因此首先需要构建一个dataframe，之后通过函数写入。</p>
 <p>在保存的过程当中会使用到上一步结算界面获得的保存路径，如果没有设置，那么默认的保存路径是当前文件的同目录。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment">## The final path saved csv</span></span><br><span class="line"><span class="keyword">global</span> filepath</span><br><span class="line">filepath = os.path.abspath(__file__)</span><br><span class="line">filepath = os.path.dirname(filepath)</span><br><span class="line"></span><br><span class="line"><span class="comment"># If the trial is ended, then save the result and restart the trial</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">savecsv</span>():</span><br><span class="line">    Subjectid = [SubjectID_text]*<span class="built_in">round</span></span><br><span class="line">    Trialid = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">round</span>):</span><br><span class="line">        Trialid.append(<span class="string">&quot;&#123;0&#125;_&#123;1&#125;&quot;</span>.<span class="built_in">format</span>(i, TrialID_text))</span><br><span class="line">    <span class="keyword">global</span> T_StoR,T_TtoS, T_onset, T_response</span><br><span class="line">    dataframe = []</span><br><span class="line">    dataframe = pd.DataFrame(&#123;<span class="string">&#x27;Subject ID&#x27;</span>: Subjectid, <span class="string">&#x27;Trial ID&#x27;</span>: Trialid, <span class="string">&#x27;Time: Time: onset of stimulus (s)&#x27;</span>: T_onset,</span><br><span class="line">                              <span class="string">&#x27;Time: response is made (s)&#x27;</span>: T_response, <span class="string">&#x27;The number of \\ in the trial&#x27;</span>: T_right,</span><br><span class="line">                              <span class="string">&#x27;The number of / in the trial&#x27;</span>: T_left, <span class="string">&#x27;The response: left or right&#x27;</span>: directions,</span><br><span class="line">                              <span class="string">&#x27;Response time (ms)&#x27;</span>: T_StoR</span><br><span class="line">                              &#125;)</span><br><span class="line">    <span class="keyword">global</span> filepath</span><br><span class="line">    filepath = <span class="string">&quot;&#123;0&#125;\\&#123;1&#125;_&#123;2&#125;.csv&quot;</span>.<span class="built_in">format</span>(filepath, SubjectID_text.replace(<span class="string">&#x27;:&#x27;</span>,<span class="string">&quot;-&quot;</span>), time.strftime(<span class="string">&#x27;%Y%m%d_%H-%M-%S&#x27;</span>))</span><br><span class="line">    filepath = filepath.replace(<span class="string">&#x27;\\&#x27;</span>,<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">    file = <span class="built_in">open</span>(filepath, mode=<span class="string">&#x27;w+&#x27;</span>)</span><br><span class="line">    file = dataframe.to_csv(file)</span><br><span class="line">    <span class="keyword">return</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><br><span class="hljs-comment">## The final path saved csv</span><br><span class="hljs-keyword">global</span> filepath<br>filepath = os.path.abspath(__file__)<br>filepath = os.path.dirname(filepath)<br><br><span class="hljs-comment"># If the trial is ended, then save the result and restart the trial</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">savecsv</span>():<br>    Subjectid = [SubjectID_text]*<span class="hljs-built_in">round</span><br>    Trialid = []<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, <span class="hljs-built_in">round</span>):<br>        Trialid.append(<span class="hljs-string">&quot;&#123;0&#125;_&#123;1&#125;&quot;</span>.<span class="hljs-built_in">format</span>(i, TrialID_text))<br>    <span class="hljs-keyword">global</span> T_StoR,T_TtoS, T_onset, T_response<br>    dataframe = []<br>    dataframe = pd.DataFrame(&#123;<span class="hljs-string">&#x27;Subject ID&#x27;</span>: Subjectid, <span class="hljs-string">&#x27;Trial ID&#x27;</span>: Trialid, <span class="hljs-string">&#x27;Time: Time: onset of stimulus (s)&#x27;</span>: T_onset,<br>                              <span class="hljs-string">&#x27;Time: response is made (s)&#x27;</span>: T_response, <span class="hljs-string">&#x27;The number of \\ in the trial&#x27;</span>: T_right,<br>                              <span class="hljs-string">&#x27;The number of / in the trial&#x27;</span>: T_left, <span class="hljs-string">&#x27;The response: left or right&#x27;</span>: directions,<br>                              <span class="hljs-string">&#x27;Response time (ms)&#x27;</span>: T_StoR<br>                              &#125;)<br>    <span class="hljs-keyword">global</span> filepath<br>    filepath = <span class="hljs-string">&quot;&#123;0&#125;\\&#123;1&#125;_&#123;2&#125;.csv&quot;</span>.<span class="hljs-built_in">format</span>(filepath, SubjectID_text.replace(<span class="hljs-string">&#x27;:&#x27;</span>,<span class="hljs-string">&quot;-&quot;</span>), time.strftime(<span class="hljs-string">&#x27;%Y%m%d_%H-%M-%S&#x27;</span>))<br>    filepath = filepath.replace(<span class="hljs-string">&#x27;\\&#x27;</span>,<span class="hljs-string">&#x27;/&#x27;</span>)<br>    file = <span class="hljs-built_in">open</span>(filepath, mode=<span class="hljs-string">&#x27;w+&#x27;</span>)<br>    file = dataframe.to_csv(file)<br>    <span class="hljs-keyword">return</span><br></code></pre></td></tr></table></figure>
 
 <h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><p><a target="_blank" rel="noopener" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Machine%20learning%20and%20neural%20engineering/Trial_with_GUI.py">完整代码</a></p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>The record of one test program</p><p><a href="https://zhenyumi.github.io/posts/8613a0ca/">https://zhenyumi.github.io/posts/8613a0ca/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-02-15</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-02-15</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Machine-learning-and-neural-engineering/">Machine learning and neural engineering</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/6fba3f19/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">L1 Structure and Organization of Nervous System</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/8205675a/"><span class="level-item">L1 Introdction</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">195</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">27</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-06T11:24:02.000Z">2021-06-06</time></p><p class="title"><a href="/posts/ce78770f/">L10 Synaptic plasticity</a></p><p class="categories"><a href="/categories/Academic-Notebook/">Academic Notebook</a> / <a href="/categories/Academic-Notebook/Neurobiology/">Neurobiology</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
-            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
-                renderMathInElement(element);
-            });
-        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
-            'HTML-CSS': {
-                matchFontHeight: false
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/" class="category-chain-item">Machine learning and neural engineering</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Machine-learning-and-neural-engineering/" class="print-no-link">#Machine learning and neural engineering</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>The record of one test program</div>
+      <div>https://zhenyumi.github.io/posts/8613a0ca/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年2月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/8205675a/" title="L1 Introdction">
+                        <span class="hidden-mobile">L1 Introdction</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
             },
-            SVG: {
-                matchFontHeight: false
+            loader : {
+              load: ['ui/lazy']
             },
-            CommonHTML: {
-                matchFontHeight: false
-            },
-            tex2jax: {
-                inlineMath: [
-                    ['$','$'],
-                    ['\\(','\\)']
-                ]
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
             }
-        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

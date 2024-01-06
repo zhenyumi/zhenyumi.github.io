@@ -1,35 +1,273 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>L21 Apoptosis - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="这一章内容不多真是太好了"><meta property="og:type" content="blog"><meta property="og:title" content="L21 Apoptosis"><meta property="og:url" content="https://zhenyumi.github.io/posts/211e6167/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="这一章内容不多真是太好了"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><meta property="article:published_time" content="2020-07-26T09:47:00.000Z"><meta property="article:modified_time" content="2020-07-26T09:47:00.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="Cell Biology"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/211e6167/"},"headline":"L21 Apoptosis","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"],"datePublished":"2020-07-26T09:47:00.000Z","dateModified":"2020-07-26T09:47:00.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"这一章内容不多真是太好了"}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/211e6167/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<!DOCTYPE html>
+<html lang="zh-CN" >
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png" alt="L21 Apoptosis"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-26T09:47:00.000Z" title="2020/7/26 19:47:00">2020-07-26</time>发表</span><span class="level-item"><time dateTime="2020-07-26T09:47:00.000Z" title="2020/7/26 19:47:00">2020-07-26</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/Academic-Notebook/">Academic Notebook</a><span> / </span><a class="link-muted" href="/categories/Academic-Notebook/Cell-Biology/">Cell Biology</a></span><span class="level-item">24 分钟读完 (大约3556个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">L21 Apoptosis</h1><div class="content"><h1 id="一、Programmed-cell-death"><a href="#一、Programmed-cell-death" class="headerlink" title="一、Programmed cell death"></a>一、Programmed cell death</h1><blockquote>
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="这一章内容不多真是太好了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L21 Apoptosis">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/211e6167/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="这一章内容不多真是太好了">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_01.jpg">
+<meta property="article:published_time" content="2020-07-26T09:47:00.000Z">
+<meta property="article:modified_time" content="2020-07-26T09:47:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Cell Biology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_01.jpg">
+  
+  
+  
+  <title>L21 Apoptosis - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L21 Apoptosis</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-26 17:47" pubdate>
+          2020年7月26日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          554 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L21 Apoptosis</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Programmed-cell-death"><a href="#一、Programmed-cell-death" class="headerlink" title="一、Programmed cell death"></a>一、Programmed cell death</h1><blockquote>
 <p>In most cases, this programmed cell death occurs by a process called <strong>apoptosis</strong></p>
 <p>Cells dying by apoptosis undergo characteristic morphological changes. </p>
 <ol>
@@ -49,7 +287,7 @@
 <li>One form of necrosis, called <strong>necroptosis</strong>, is a form of programmed cell death that is triggered by <u>a specific regulatory signal</u> from other cells, although we are only just beginning to understand the underlying mechanisms.</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515213334246.png" alt="image-20200515213334246"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515213334246.png" srcset="/img/loading.gif" lazyload alt="image-20200515213334246"></p>
 <p>Different types of death: necrosis vs apoptosis </p>
 <ol>
 <li>Necrosis: cells swell and burst, content spillage (溢出；溢出量), can cause inflammation</li>
@@ -62,7 +300,7 @@
 </li>
 </ul>
 <p>Apoptosis is <u>NOT a synonym of programmed cell death or caspase activation</u></p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515213405235.png" alt="image-20200515213405235"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515213405235.png" srcset="/img/loading.gif" lazyload alt="image-20200515213405235"></p>
 <ul>
 <li>Programmed cell death: e.g. apoptosis</li>
 <li>It is a natural part of organism development and maintenance.</li>
@@ -78,14 +316,14 @@
 <li>Cytoskeleton collapses</li>
 <li>Cell surface bleb ⏤ apoptotic bodies</li>
 </ul>
-<h3 id="1-Understanding-apoptosis"><a href="#1-Understanding-apoptosis" class="headerlink" title="1. Understanding apoptosis"></a>1. Understanding apoptosis</h3><h4 id="C-elegans-as-new-model-organism-to-analyze-organ-development"><a href="#C-elegans-as-new-model-organism-to-analyze-organ-development" class="headerlink" title="C. elegans as new model organism to analyze organ development"></a>C. elegans as new model organism to analyze organ development</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515213651889.png" alt="image-20200515213651889"></p>
+<h3 id="1-Understanding-apoptosis"><a href="#1-Understanding-apoptosis" class="headerlink" title="1. Understanding apoptosis"></a>1. Understanding apoptosis</h3><h4 id="C-elegans-as-new-model-organism-to-analyze-organ-development"><a href="#C-elegans-as-new-model-organism-to-analyze-organ-development" class="headerlink" title="C. elegans as new model organism to analyze organ development"></a>C. elegans as new model organism to analyze organ development</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515213651889.png" srcset="/img/loading.gif" lazyload alt="image-20200515213651889"></p>
 <p>Brenner established C. elegans as a novel experimental model organism.</p>
 <p>This provided a unique opportunity to link genetic analysis to cell division, differentiation and organ development – and to follow these processes under the microscope.</p>
-<h4 id="Cell-death-is-part-of-the-normal-differentiation-process"><a href="#Cell-death-is-part-of-the-normal-differentiation-process" class="headerlink" title="Cell death is part of the normal differentiation process"></a>Cell death is part of the normal differentiation process</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515213803499.png" alt="image-20200515213803499"></p>
+<h4 id="Cell-death-is-part-of-the-normal-differentiation-process"><a href="#Cell-death-is-part-of-the-normal-differentiation-process" class="headerlink" title="Cell death is part of the normal differentiation process"></a>Cell death is part of the normal differentiation process</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515213803499.png" srcset="/img/loading.gif" lazyload alt="image-20200515213803499"></p>
 <p>Sulston mapped a cell lineage where every cell division and differentiation could be followed in the development of a tissue in C. elegans. </p>
 <p>He showed that specific cells undergo programmed cell death as an integral part of the normal differentiation process.</p>
 <p>He also identified the first mutation of a gene participating in the cell death process.</p>
-<h4 id="Cell-death-is-controlled-by-genes"><a href="#Cell-death-is-controlled-by-genes" class="headerlink" title="Cell death is controlled by genes"></a>Cell death is controlled by genes</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515213841840.png" alt="image-20200515213841840"></p>
+<h4 id="Cell-death-is-controlled-by-genes"><a href="#Cell-death-is-controlled-by-genes" class="headerlink" title="Cell death is controlled by genes"></a>Cell death is controlled by genes</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515213841840.png" srcset="/img/loading.gif" lazyload alt="image-20200515213841840"></p>
 <p>Horvitz discovered and characterized key genes controlling cell death in C. elegans. </p>
 <p>He has shown how these genes interact with each other in the cell death process and that corresponding genes exist in humans.</p>
 <h1 id="二、The-underlying-mechanisms-of-apoptosis"><a href="#二、The-underlying-mechanisms-of-apoptosis" class="headerlink" title="二、The underlying mechanisms of apoptosis"></a>二、The underlying mechanisms of apoptosis</h1><h2 id="Players-in-apoptosis"><a href="#Players-in-apoptosis" class="headerlink" title="Players in apoptosis"></a>Players in apoptosis</h2><blockquote>
@@ -115,7 +353,7 @@
 <li>“pre-” was adopted as the prefix that means “before N-terminal cleavage during a secretion event”</li>
 <li>“pro-“ was adopted to describe the protein prior to this proteolytic processing event.</li>
 </ul>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214121926.png" alt="image-20200515214121926"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214121926.png" srcset="/img/loading.gif" lazyload alt="image-20200515214121926"></p>
 <p>Apoptosis is triggered by a cascading reaction of initiator and executioner caspases </p>
 <p>Two types of caspases: </p>
 <ul>
@@ -140,7 +378,7 @@
 <li>These include the <strong>nuclear lamins</strong>, the cleavage of which causes the <u>irreversible breakdown of the nuclear lamina</u></li>
 </ul>
 </blockquote>
-<h2 id="Signal-mediated-cascading-activation-of-apoptosis"><a href="#Signal-mediated-cascading-activation-of-apoptosis" class="headerlink" title="Signal-mediated cascading activation of apoptosis"></a>Signal-mediated cascading activation of apoptosis</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214233060.png" alt="image-20200515214233060"></p>
+<h2 id="Signal-mediated-cascading-activation-of-apoptosis"><a href="#Signal-mediated-cascading-activation-of-apoptosis" class="headerlink" title="Signal-mediated cascading activation of apoptosis"></a>Signal-mediated cascading activation of apoptosis</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214233060.png" srcset="/img/loading.gif" lazyload alt="image-20200515214233060"></p>
 <p>Death is dangerous: activity control is a must !!!</p>
 <p>Activation cascade:</p>
 <ol>
@@ -149,21 +387,21 @@
 <li>Activated initiator caspase activates <strong>executioner caspase</strong> by cleavage.</li>
 <li>Activated executioner caspase cleaves multiple substrates, resulting in cell death.</li>
 </ol>
-<h3 id="1-DNA-fragmentation-during-apoptosis"><a href="#1-DNA-fragmentation-during-apoptosis" class="headerlink" title="1. DNA fragmentation during apoptosis"></a>1. DNA fragmentation during apoptosis</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214251617.png" alt="image-20200515214251617"></p>
+<h3 id="1-DNA-fragmentation-during-apoptosis"><a href="#1-DNA-fragmentation-during-apoptosis" class="headerlink" title="1. DNA fragmentation during apoptosis"></a>1. DNA fragmentation during apoptosis</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214251617.png" srcset="/img/loading.gif" lazyload alt="image-20200515214251617"></p>
 <ul>
 <li><font color="EE0000">CAD</font> (Caspase activated deoxymonuclease): <strong>endonuclease</strong></li>
 <li><font color="EE0000">iCAD</font>: inhibitor of the endonuclease CAD</li>
 </ul>
 <p><font color="EE0000">TUNEL</font> (TdT-mediated dUTP nick end labeling) technique: the enzyme <strong>terminal deoxynucleotidyl transferase (TdT)</strong> adds chains of labeled <strong>deoxynucleotide (dUTP)</strong> to the 3ʹ-OH ends of DNA fragments.</p>
-<h3 id="2-The-amplifying-caspase-cascade-the-point-of-no-return"><a href="#2-The-amplifying-caspase-cascade-the-point-of-no-return" class="headerlink" title="2. The amplifying caspase cascade: the point-of-no-return"></a>2. The amplifying caspase cascade: the point-of-no-return</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214346502.png" alt="image-20200515214346502"></p>
+<h3 id="2-The-amplifying-caspase-cascade-the-point-of-no-return"><a href="#2-The-amplifying-caspase-cascade-the-point-of-no-return" class="headerlink" title="2. The amplifying caspase cascade: the point-of-no-return"></a>2. The amplifying caspase cascade: the point-of-no-return</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214346502.png" srcset="/img/loading.gif" lazyload alt="image-20200515214346502"></p>
 <p>A single initiator caspase activates many molecules of executioner caspases.</p>
-<h3 id="3-Human-caspases"><a href="#3-Human-caspases" class="headerlink" title="3. Human caspases"></a>3. Human caspases</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214507858.png" alt="image-20200515214507858"></p>
+<h3 id="3-Human-caspases"><a href="#3-Human-caspases" class="headerlink" title="3. Human caspases"></a>3. Human caspases</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214507858.png" srcset="/img/loading.gif" lazyload alt="image-20200515214507858"></p>
 <ul>
 <li><font color="EE0000">CARD domain</font>: caspase recruiting domain </li>
 <li><font color="EE0000">DED domain</font>: death effector domain</li>
 </ul>
 <p>Initiator caspases recruit adaptor proteins upon stimulations and become activated. Activated initiator caspases cleave each other and cleave effector caspases.</p>
-<h2 id="Extrinsic-apoptosis"><a href="#Extrinsic-apoptosis" class="headerlink" title="Extrinsic apoptosis"></a>Extrinsic apoptosis</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214542420.png" alt="image-20200515214542420" style="zoom:80%;" />
+<h2 id="Extrinsic-apoptosis"><a href="#Extrinsic-apoptosis" class="headerlink" title="Extrinsic apoptosis"></a>Extrinsic apoptosis</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214542420.png" srcset="/img/loading.gif" lazyload alt="image-20200515214542420" style="zoom:80%;" />
 
 <p><strong>Death receptor-triggered</strong> extrinsic pathway of apoptosis:</p>
 <p><font color="EE0000">Fas ligands (FasL)</font>: the first apoptosis signal ligand (cytotoxic T cells)</p>
@@ -203,7 +441,7 @@
 <li>When activated by the binding of <strong>Fas ligand</strong>, the <strong>death domains</strong> on the cytosolic tails of the Fas death receptors bind <strong>intracellular adaptor proteins</strong>, which in turn bind <strong>initiator caspases</strong> (primarily <strong>caspase-8</strong>), forming a <strong>death-inducing signaling complex (DISC)</strong>.</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214646770.png" alt="image-20200515214646770"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214646770.png" srcset="/img/loading.gif" lazyload alt="image-20200515214646770"></p>
 <h3 id="1-Inhibitor-proteins-in-extrinsic-pathway"><a href="#1-Inhibitor-proteins-in-extrinsic-pathway" class="headerlink" title="1. Inhibitor proteins in extrinsic pathway"></a>1. Inhibitor proteins in extrinsic pathway</h3><blockquote>
 <p>In some cells, the <strong>extrinsic pathway</strong> recruits the <strong>intrinsic apoptotic pathway</strong> to <u>amplify</u> the caspase cascade and kill the cell.</p>
 <p>Many cells produce <strong>inhibitory proteins</strong> that act to restrain the extrinsic pathway. For example, some cells produce the protein <font color="EE0000">FLIP</font>, which resembles an initiator caspase but has no protease activity because it lacks the key cysteine in its active site</p>
@@ -217,7 +455,7 @@
 <li>Inhibitor proteins <u>lack the crucial cysteine</u> in their active site.</li>
 <li>Inhibitor proteins <u>dimerize with <strong>caspase-8</strong></u> in <strong>DISC</strong> but are <u>not cleaved and activated</u> → the signaling chain is interrupted</li>
 </ul>
-<h3 id="2-Summary-extrinsic-death-receptor-pathways"><a href="#2-Summary-extrinsic-death-receptor-pathways" class="headerlink" title="2. Summary: extrinsic death receptor pathways"></a>2. Summary: extrinsic death receptor pathways</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214811475.png" alt="image-20200515214811475"></p>
+<h3 id="2-Summary-extrinsic-death-receptor-pathways"><a href="#2-Summary-extrinsic-death-receptor-pathways" class="headerlink" title="2. Summary: extrinsic death receptor pathways"></a>2. Summary: extrinsic death receptor pathways</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214811475.png" srcset="/img/loading.gif" lazyload alt="image-20200515214811475"></p>
 <blockquote>
 <p>How is the initiator caspase first activated in response to an apoptotic signal?</p>
 <ul>
@@ -237,7 +475,7 @@
 <li>The <strong>Apaf1</strong> proteins in the <strong>apoptosome</strong> then <u>recruit</u> <strong><font color="EE0000">initiator caspase-9</font></strong> proteins, which are thought to be activated by proximity in the apoptosome, just as <strong>caspase-8</strong> is activated in the DISC.</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214822185.png" alt="image-20200515214822185"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214822185.png" srcset="/img/loading.gif" lazyload alt="image-20200515214822185"></p>
 <p>The intrinsic apoptosis activation pathway:</p>
 <ul>
 <li>mediated by <strong>mitochondria</strong></li>
@@ -257,7 +495,7 @@
 <li>lack of extracellular survival signals</li>
 <li>…</li>
 </ul>
-<h3 id="1-Apoptosome"><a href="#1-Apoptosome" class="headerlink" title="1. Apoptosome"></a>1. Apoptosome</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214927546.png" alt="image-20200515214927546"></p>
+<h3 id="1-Apoptosome"><a href="#1-Apoptosome" class="headerlink" title="1. Apoptosome"></a>1. Apoptosome</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515214927546.png" srcset="/img/loading.gif" lazyload alt="image-20200515214927546"></p>
 <p><strong>cytochrome c</strong> binds to <strong>Apaf1</strong>, causing oligomerization</p>
 <ul>
 <li>7 Apaf1 molecules form a wheel-like heptamer called apoptosome.</li>
@@ -268,7 +506,7 @@
 <li>activation of <strong>executioner caspases</strong></li>
 </ul>
 <h3 id="2-Release-of-mitochondrial-cytochrome-c-during-apoptosis"><a href="#2-Release-of-mitochondrial-cytochrome-c-during-apoptosis" class="headerlink" title="2. Release of mitochondrial cytochrome c during apoptosis"></a>2. Release of mitochondrial cytochrome c during apoptosis</h3><p>UV-light induced DNA damage triggers release of mitochondrial cytochrome c</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215017734.png" alt="image-20200515215017734" style="zoom:70%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215017734.png" srcset="/img/loading.gif" lazyload alt="image-20200515215017734" style="zoom:70%;" />
 
 
 <p>Human cancer cells expressing a mitochondrial GFP-tagged cytochrome c fusion protein (green)</p>
@@ -287,7 +525,7 @@
 </ul>
 </blockquote>
 <p>The intrinsic pathway of apoptosis is regulated by Bcl2 proteins</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215113513.png" alt="image-20200515215113513"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215113513.png" srcset="/img/loading.gif" lazyload alt="image-20200515215113513"></p>
 <ul>
 <li>Bcl-2 was discovered in chromosome translocation occurred in follicular lymphoma, where under control of <font color="EE0000">IGH promoter</font>, and this results in higher levels of Bcl-2, which causes cancer</li>
 </ul>
@@ -308,7 +546,7 @@
 </li>
 </ul>
 <h4 id="Bcl2-family-protein"><a href="#Bcl2-family-protein" class="headerlink" title="Bcl2 family protein"></a>Bcl2 family protein</h4><p>Domain structures of members of the Bcl2 protein family</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215315286.png" alt="image-20200515215315286"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215315286.png" srcset="/img/loading.gif" lazyload alt="image-20200515215315286"></p>
 <blockquote>
 <p>The <strong>pro-apoptotic Bcl2</strong> family proteins consist of two subfamilies—the <strong>effector Bcl2 family</strong> proteins and the <strong>BH3-only proteins</strong>. The main effector proteins are <strong><font color="EE0000">Bax</font></strong> and <strong><font color="EE0000">Bak</font></strong>, which are structurally similar to Bcl2 but lack the <font color="EE0000">BH4 domain</font>.</p>
 <ul>
@@ -334,12 +572,12 @@
 </ul>
 </blockquote>
 <h3 id="4-Release-of-cytochrome-c-and-IMS-proteins"><a href="#4-Release-of-cytochrome-c-and-IMS-proteins" class="headerlink" title="4. Release of cytochrome c and IMS proteins"></a>4. Release of cytochrome c and IMS proteins</h3><p>The pro-apoptotic effectors <strong>Bax</strong> and <strong>Bak</strong> aggregate (formation of a pore) in the outer membrane of mitochondria to release cytochrome c and IMS (Intermembrane space) proteins (e.g. <strong>endonuclease G</strong>)</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215406409.png" alt="image-20200515215406409"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215406409.png" srcset="/img/loading.gif" lazyload alt="image-20200515215406409"></p>
 <p>Absence of signal: <strong>Bak</strong> is mainly in the outer membrane, while <strong>Bax</strong> is cytosolic.</p>
 <p>Upon signaling: <strong>Bax</strong> <u>relocates to the outer membrane</u> and interacts with <strong>Bak</strong> to <u>trigger the efflux from the IMS peoteins</u></p>
-<h4 id="Anti-apoptotic-Bcl-2-binds-and-inhibits-Bax-and-Bak-aggregation"><a href="#Anti-apoptotic-Bcl-2-binds-and-inhibits-Bax-and-Bak-aggregation" class="headerlink" title="Anti-apoptotic Bcl-2 binds and inhibits Bax and Bak aggregation"></a>Anti-apoptotic Bcl-2 binds and inhibits Bax and Bak aggregation</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215421138.png" alt="image-20200515215421138"></p>
+<h4 id="Anti-apoptotic-Bcl-2-binds-and-inhibits-Bax-and-Bak-aggregation"><a href="#Anti-apoptotic-Bcl-2-binds-and-inhibits-Bax-and-Bak-aggregation" class="headerlink" title="Anti-apoptotic Bcl-2 binds and inhibits Bax and Bak aggregation"></a>Anti-apoptotic Bcl-2 binds and inhibits Bax and Bak aggregation</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215421138.png" srcset="/img/loading.gif" lazyload alt="image-20200515215421138"></p>
 <p>Active anti-apoptotic Bcl2 family proteins prevent aggregation of Bak-Bax at the outer mitochondrial membrane.</p>
-<h4 id="BH3-only-proteins-inhibit-anti-apoptotic-Bcl2-family-proteins"><a href="#BH3-only-proteins-inhibit-anti-apoptotic-Bcl2-family-proteins" class="headerlink" title="BH3-only proteins inhibit anti-apoptotic Bcl2 family proteins"></a>BH3-only proteins inhibit anti-apoptotic Bcl2 family proteins</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215447637.png" alt="image-20200515215447637"></p>
+<h4 id="BH3-only-proteins-inhibit-anti-apoptotic-Bcl2-family-proteins"><a href="#BH3-only-proteins-inhibit-anti-apoptotic-Bcl2-family-proteins" class="headerlink" title="BH3-only proteins inhibit anti-apoptotic Bcl2 family proteins"></a>BH3-only proteins inhibit anti-apoptotic Bcl2 family proteins</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215447637.png" srcset="/img/loading.gif" lazyload alt="image-20200515215447637"></p>
 <p>Inactivation of anti-apoptotic Bcls2 proteins by <strong>BH3-only proteins</strong> allow for Bak&#x2F;Bax aggregation and thus for apoptosis.</p>
 <h4 id="IAPs-inhibitors-of-apoptosis-inhibit-caspases"><a href="#IAPs-inhibitors-of-apoptosis-inhibit-caspases" class="headerlink" title="IAPs (inhibitors of apoptosis) inhibit caspases"></a>IAPs (inhibitors of apoptosis) inhibit caspases</h4><blockquote>
 <p><font color="EE0000">IAPs</font> Help Control Caspases</p>
@@ -353,9 +591,9 @@
 <li>Some IAPs also <strong>polyubiquitylate caspases,</strong> <u>marking the caspases for destruction by proteasomes</u>. In this way, the IAPs set an <strong>inhibitory threshold</strong> that caspases must overcome to trigger apoptosis.</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215513589.png" alt="image-20200515215513589"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215513589.png" srcset="/img/loading.gif" lazyload alt="image-20200515215513589"></p>
 <p>IAPs prevent the action of “accidentally” activated caspases by binding to them.</p>
-<h3 id="5-Summary-intrinsic-mitochondrial-pathways"><a href="#5-Summary-intrinsic-mitochondrial-pathways" class="headerlink" title="5. Summary: intrinsic mitochondrial pathways"></a>5. Summary: intrinsic mitochondrial pathways</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215554531.png" alt="image-20200515215554531"></p>
+<h3 id="5-Summary-intrinsic-mitochondrial-pathways"><a href="#5-Summary-intrinsic-mitochondrial-pathways" class="headerlink" title="5. Summary: intrinsic mitochondrial pathways"></a>5. Summary: intrinsic mitochondrial pathways</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215554531.png" srcset="/img/loading.gif" lazyload alt="image-20200515215554531"></p>
 <p>Signal: assembly of apoptosome - activation of caspases &amp; inactivation of IAPs</p>
 <h2 id="Three-ways-for-survival-factors-to-inhibit-apoptosis"><a href="#Three-ways-for-survival-factors-to-inhibit-apoptosis" class="headerlink" title="Three ways for survival factors to inhibit apoptosis"></a>Three ways for survival factors to inhibit apoptosis</h2><blockquote>
 <p>Extracellular Survival Factors Inhibit Apoptosis in Various Ways</p>
@@ -365,14 +603,14 @@
 <p>Most animal cells require continuous signaling from other cells to avoid apoptosis</p>
 <p><strong>Survival factors</strong> usually bind to <strong>cell-surface receptors</strong>, which activate intracellular signaling pathways that suppress the apoptotic program</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215617906.png" alt="image-20200515215617906"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215617906.png" srcset="/img/loading.gif" lazyload alt="image-20200515215617906"></p>
 <p>There are 3 ways:</p>
 <ol>
 <li>Increased production of anti-apoptotic proteins</li>
 <li>Inactivation of pro-apoptotic protein - BH3-only proteins</li>
 <li>Inactivation of anti-IAPs</li>
 </ol>
-<h3 id="1-The-role-of-survival-factors-and-cell-death-in-adjusting-the-number-of-cells"><a href="#1-The-role-of-survival-factors-and-cell-death-in-adjusting-the-number-of-cells" class="headerlink" title="1. The role of survival factors and cell death in adjusting the number of cells"></a>1. The role of survival factors and cell death in adjusting the number of cells</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215706763.png" alt="image-20200515215706763"></p>
+<h3 id="1-The-role-of-survival-factors-and-cell-death-in-adjusting-the-number-of-cells"><a href="#1-The-role-of-survival-factors-and-cell-death-in-adjusting-the-number-of-cells" class="headerlink" title="1. The role of survival factors and cell death in adjusting the number of cells"></a>1. The role of survival factors and cell death in adjusting the number of cells</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215706763.png" srcset="/img/loading.gif" lazyload alt="image-20200515215706763"></p>
 <p>Apoptosis is indispensable for successful development, and maintenance of homeostasis within multicellular organisms.</p>
 <p>More nerve cells are produced than can be supported by the limited amount of survival factors released by the target cells. </p>
 <p>This strategy of overproduction followed by <strong>culling</strong> (选择；大批物品中剔出劣质货) helps ensure that all target cells are contacted by nerve cells.</p>
@@ -386,7 +624,7 @@
 <p>The external exposure of <strong>phosphatidylserine</strong> is likely to depend on <strong>caspase cleavage</strong> of some protein involved in phospholipid distribution in the membrane.</p>
 <p>Healthy cells express <strong>signal proteins</strong> on their surface that interact with <strong>inhibitory receptors</strong> on <strong>macrophages</strong> that <u>block</u> phagocytosis</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215812428.png" alt="image-20200515215812428" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515215812428.png" srcset="/img/loading.gif" lazyload alt="image-20200515215812428" style="zoom:67%;" />
 
 
 <p>Apoptotic cells are efficiently eaten—or phagocytosed —by <strong>neighboring cells</strong></p>
@@ -399,7 +637,7 @@
 <li>the <strong>phagosome trafficking</strong> in association with microtubules</li>
 <li>The phagosome maturation by a series of fusion and fission events with components of the endocytic pathway culminating in the mature phagolysosome.</li>
 </ul>
-<h2 id="Deregulation-of-apoptosis-causes-disease"><a href="#Deregulation-of-apoptosis-causes-disease" class="headerlink" title="Deregulation of apoptosis causes disease"></a>Deregulation of apoptosis causes disease</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220058376.png" alt="image-20200515220058376" style="zoom:67%;" />
+<h2 id="Deregulation-of-apoptosis-causes-disease"><a href="#Deregulation-of-apoptosis-causes-disease" class="headerlink" title="Deregulation of apoptosis causes disease"></a>Deregulation of apoptosis causes disease</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220058376.png" srcset="/img/loading.gif" lazyload alt="image-20200515220058376" style="zoom:67%;" />
 
 <p>High activity of apoptosis:</p>
 <ul>
@@ -412,7 +650,7 @@
 <li>cancer</li>
 <li>autoimmune disease</li>
 </ol>
-<h3 id="1-Tumor-suppressor-P53-Lecture-1"><a href="#1-Tumor-suppressor-P53-Lecture-1" class="headerlink" title="1. Tumor suppressor: P53 (Lecture 1)"></a>1. Tumor suppressor: P53 (Lecture 1)</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220146425.png" alt="image-20200515220146425" style="zoom: 50%;" />
+<h3 id="1-Tumor-suppressor-P53-Lecture-1"><a href="#1-Tumor-suppressor-P53-Lecture-1" class="headerlink" title="1. Tumor suppressor: P53 (Lecture 1)"></a>1. Tumor suppressor: P53 (Lecture 1)</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220146425.png" srcset="/img/loading.gif" lazyload alt="image-20200515220146425" style="zoom: 50%;" />
 
 <p>How can one single protein protect cells from cancer progression? </p>
 <h3 id="2-Bcl2-inhibitor-ABT-737"><a href="#2-Bcl2-inhibitor-ABT-737" class="headerlink" title="2. Bcl2 inhibitor: ABT-737"></a>2. Bcl2 inhibitor: ABT-737</h3><h1 id="三、Study-apoptosis"><a href="#三、Study-apoptosis" class="headerlink" title="三、Study apoptosis"></a>三、Study apoptosis</h1><ol>
@@ -423,14 +661,14 @@
 <li>Western blot for apoptosis markers</li>
 <li>Cytochrome c translocation ( Caspase 3, PARP, etc)</li>
 </ol>
-<h2 id="Annexin-V-staining-early-apoptosis"><a href="#Annexin-V-staining-early-apoptosis" class="headerlink" title="Annexin V staining ( early apoptosis)"></a>Annexin V staining ( early apoptosis)</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220416942.png" alt="image-20200515220416942" style="zoom:50%;" />
+<h2 id="Annexin-V-staining-early-apoptosis"><a href="#Annexin-V-staining-early-apoptosis" class="headerlink" title="Annexin V staining ( early apoptosis)"></a>Annexin V staining ( early apoptosis)</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220416942.png" srcset="/img/loading.gif" lazyload alt="image-20200515220416942" style="zoom:50%;" />
 
 <p>Phosphatidylserine (PS) is flipped to outer leaflet of plasma membrane and can be detected by annexin V (protein)-conjugate fluorescent dye to indicate early apoptosis</p>
-<h2 id="Cell-cycle-distribution"><a href="#Cell-cycle-distribution" class="headerlink" title="Cell cycle distribution"></a>Cell cycle distribution</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220447726.png" alt="image-20200515220447726"></p>
+<h2 id="Cell-cycle-distribution"><a href="#Cell-cycle-distribution" class="headerlink" title="Cell cycle distribution"></a>Cell cycle distribution</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220447726.png" srcset="/img/loading.gif" lazyload alt="image-20200515220447726"></p>
 <p>Sub-G1 percentage is an indicator for DNA fragmentation due to apoptosis.</p>
-<h2 id="DNA-fragmentation"><a href="#DNA-fragmentation" class="headerlink" title="DNA fragmentation"></a>DNA fragmentation</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220511539.png" alt="image-20200515220511539" style="zoom:67%;" />
+<h2 id="DNA-fragmentation"><a href="#DNA-fragmentation" class="headerlink" title="DNA fragmentation"></a>DNA fragmentation</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220511539.png" srcset="/img/loading.gif" lazyload alt="image-20200515220511539" style="zoom:67%;" />
 
-<h2 id="TUNEL-assay-late-apoptosis"><a href="#TUNEL-assay-late-apoptosis" class="headerlink" title="TUNEL assay (late apoptosis)"></a>TUNEL assay (late apoptosis)</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220533645.png" alt="image-20200515220533645" style="zoom:50%;" />
+<h2 id="TUNEL-assay-late-apoptosis"><a href="#TUNEL-assay-late-apoptosis" class="headerlink" title="TUNEL assay (late apoptosis)"></a>TUNEL assay (late apoptosis)</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220533645.png" srcset="/img/loading.gif" lazyload alt="image-20200515220533645" style="zoom:50%;" />
 
 <p>Terminal dUTP Nick End Labelling (TUNEL) staining is to detect DNA fragmentation (late apoptosis)</p>
 <p>It is another method to detect DNA fragmentation</p>
@@ -439,74 +677,420 @@
 <p>anti-IgD (blue) → B cell follicle</p>
 <p>anti-KI67 (red) → germinal center B cells</p>
 <p>TUNEL (green) → counter-selected B cells that dye in the germinal center by apoptosis (positive for TUNEL stain)</p>
-<h2 id="Apoptosis-marker-for-Western-blotting"><a href="#Apoptosis-marker-for-Western-blotting" class="headerlink" title="Apoptosis marker for Western blotting"></a>Apoptosis marker for Western blotting</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220630597.png" alt="image-20200515220630597"></p>
+<h2 id="Apoptosis-marker-for-Western-blotting"><a href="#Apoptosis-marker-for-Western-blotting" class="headerlink" title="Apoptosis marker for Western blotting"></a>Apoptosis marker for Western blotting</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200515220630597.png" srcset="/img/loading.gif" lazyload alt="image-20200515220630597"></p>
 <p>Commonly used proteins: </p>
 <ul>
 <li>cleaved PARP</li>
 <li>cleaved caspase-3</li>
 </ul>
-</div><div class="article-licensing box"><div class="licensing-title"><p>L21 Apoptosis</p><p><a href="https://zhenyumi.github.io/posts/211e6167/">https://zhenyumi.github.io/posts/211e6167/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-07-26</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-07-26</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Cell-Biology/">Cell Biology</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/3324de5b/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">L22 Cell Morphology</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/1eabe41c/"><span class="level-item">L01 The Scope of Biochemistry</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">195</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">27</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-06T11:24:02.000Z">2021-06-06</time></p><p class="title"><a href="/posts/ce78770f/">L10 Synaptic plasticity</a></p><p class="categories"><a href="/categories/Academic-Notebook/">Academic Notebook</a> / <a href="/categories/Academic-Notebook/Neurobiology/">Neurobiology</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
-            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
-                renderMathInElement(element);
-            });
-        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
-            'HTML-CSS': {
-                matchFontHeight: false
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Cell-Biology/" class="category-chain-item">Cell Biology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Cell-Biology/" class="print-no-link">#Cell Biology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L21 Apoptosis</div>
+      <div>https://zhenyumi.github.io/posts/211e6167/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月26日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/3324de5b/" title="L22 Cell Morphology">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L22 Cell Morphology</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/532649ed/" title="L01 The Science of Genetics">
+                        <span class="hidden-mobile">L01 The Science of Genetics</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
             },
-            SVG: {
-                matchFontHeight: false
+            loader : {
+              load: ['ui/lazy']
             },
-            CommonHTML: {
-                matchFontHeight: false
-            },
-            tex2jax: {
-                inlineMath: [
-                    ['$','$'],
-                    ['\\(','\\)']
-                ]
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
             }
-        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

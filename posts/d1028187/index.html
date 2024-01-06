@@ -1,35 +1,311 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>L3 Construction of neural circuits - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="The neural circuits"><meta property="og:type" content="blog"><meta property="og:title" content="L3 Construction of neural circuits"><meta property="og:url" content="https://zhenyumi.github.io/posts/d1028187/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="The neural circuits"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><meta property="article:published_time" content="2021-04-16T14:42:11.000Z"><meta property="article:modified_time" content="2021-04-16T14:42:11.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="Neurobiology"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/d1028187/"},"headline":"L3 Construction of neural circuits","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"],"datePublished":"2021-04-16T14:42:11.000Z","dateModified":"2021-04-16T14:42:11.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"The neural circuits"}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/d1028187/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<!DOCTYPE html>
+<html lang="zh-CN" >
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png" alt="L3 Construction of neural circuits"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-04-16T14:42:11.000Z" title="2021/4/17 00:42:11">2021-04-16</time>发表</span><span class="level-item"><time dateTime="2021-04-16T14:42:11.000Z" title="2021/4/17 00:42:11">2021-04-16</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/Academic-Notebook/">Academic Notebook</a><span> / </span><a class="link-muted" href="/categories/Academic-Notebook/Neurobiology/">Neurobiology</a></span><span class="level-item">20 分钟读完 (大约3039个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">L3 Construction of neural circuits</h1><div class="content"><h1 id="一、Cell-Polarity"><a href="#一、Cell-Polarity" class="headerlink" title="一、Cell Polarity"></a>一、Cell Polarity</h1><p>Neurons are especially elaborate examples of <strong>polarized epithelial</strong> <strong>cells,</strong> a fundamental cell class found in most tissues.</p>
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="The neural circuits">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L3 Construction of neural circuits">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/d1028187/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="The neural circuits">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127141557921.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142007208.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142221370.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142345169.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142510168.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142637678.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142726848.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142836679.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142726848.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143519953.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143725467.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143841068.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127144302114.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171742632.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171703490.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171709268.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127144604920.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145444139.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145655912.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145636507.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145524537.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171918361.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145839777.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145854248.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304172003320.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150008755.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150053270.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150133245.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150621991.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150630932.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150800634.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151042013.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151104046.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151130887.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151231522.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151252395.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151418038.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151423865.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151452807.png">
+<meta property="article:published_time" content="2021-04-16T14:42:11.000Z">
+<meta property="article:modified_time" content="2021-04-16T14:42:11.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Neurobiology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127141557921.png">
+  
+  
+  
+  <title>L3 Construction of neural circuits - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L3 Construction of neural circuits</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-04-16 22:42" pubdate>
+          2021年4月16日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          566 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L3 Construction of neural circuits</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Cell-Polarity"><a href="#一、Cell-Polarity" class="headerlink" title="一、Cell Polarity"></a>一、Cell Polarity</h1><p>Neurons are especially elaborate examples of <strong>polarized epithelial</strong> <strong>cells,</strong> a fundamental cell class found in most tissues.</p>
 <ul>
 <li><p>The <strong>apical（顶上的） domain</strong> has a distinctive actin cytoskeleton, and membrane extensions (villi) that increase the surface area for taking in and releasing specific molecules</p>
 <ul>
@@ -47,7 +323,7 @@
 </ul>
 </li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127141557921.png" alt="image-20200127141557921" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127141557921.png" srcset="/img/loading.gif" lazyload alt="image-20200127141557921" style="zoom:67%;" />
 
 <h2 id="First-Step-of-Polarization-Is-Neural-Circuit-Formation"><a href="#First-Step-of-Polarization-Is-Neural-Circuit-Formation" class="headerlink" title="First Step of Polarization Is Neural Circuit Formation"></a>First Step of Polarization Is Neural Circuit Formation</h2><p>Neuronal polarization: the first step in neural circuit formation</p>
 <p>Distinguishing the <strong>apical domain</strong> (the eventual <strong>axon</strong>, adapted for secretion) from the <strong>basal domain</strong> (the <strong>dendrites</strong>, which will eventually become specialized for receiving signals).</p>
@@ -57,7 +333,7 @@
 <li>Microtubule and actin components of the cytoskeleton as well as other proteins are redistributed among the neurites so that a single process is identified as the <strong>axon</strong>(the apical domain). </li>
 <li>The remaining processes become <strong>dendrites</strong> (the basal domain).</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142007208.png" alt="image-20200127142007208" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142007208.png" srcset="/img/loading.gif" lazyload alt="image-20200127142007208" style="zoom:50%;" />
 
 <h2 id="Regulation-of-cell-polarity"><a href="#Regulation-of-cell-polarity" class="headerlink" title="Regulation of cell polarity"></a>Regulation of cell polarity</h2><p>Members of the <strong>PAR</strong> family, are distributed preferentially in the nascent axon.</p>
 <ul>
@@ -67,7 +343,7 @@
 </ul>
 </li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142221370.png" alt="image-20200127142221370" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142221370.png" srcset="/img/loading.gif" lazyload alt="image-20200127142221370" style="zoom:80%;" />
 
 <h2 id="Axon"><a href="#Axon" class="headerlink" title="Axon"></a>Axon</h2><h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p><u>Once the <strong>axon</strong> has been specified,</u> it navigates over <u>millimeters</u> or even <u>centimeters</u>, through complex embryonic terrain, to find appropriate synaptic partners. </p>
 <p>“The growing fibers are clearly endowed with <u>considerable energy</u> and have the <u>power</u> to make their way through the solid or semi-solid protoplasm of the cells of the neural tube. But we are at present in the <u>dark</u> with regard to the <u>conditions</u> which guide them to specific points.“ ( **–**Ross G. Harrison, 1910)</p>
@@ -78,7 +354,7 @@
 </blockquote>
 </li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142345169.png" alt="image-20200127142345169" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142345169.png" srcset="/img/loading.gif" lazyload alt="image-20200127142345169" style="zoom:67%;" />
 
 <center>Over 35 minutes, the zebrafish Mauthner neuron axon advances approximately 50 µm.</center>
 
@@ -93,22 +369,22 @@
 </ul>
 </li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142510168.png" alt="image-20200127142510168" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142510168.png" srcset="/img/loading.gif" lazyload alt="image-20200127142510168" style="zoom:80%;" />
 
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142637678.png" alt="image-20200127142637678" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142637678.png" srcset="/img/loading.gif" lazyload alt="image-20200127142637678" style="zoom: 50%;" />
 
 <h2 id="Growth-cone-motility"><a href="#Growth-cone-motility" class="headerlink" title="Growth cone motility"></a>Growth cone motility</h2><p>Growth cone motility reflects rapid, controlled rearrangement of the <strong>cytoskeleton</strong>. </p>
 <p>The force to move the axon is generated by ATP-dependent modification of the <strong>actin</strong> and <strong>microtubule</strong> cytoskeletons. </p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142726848.png" alt="image-20200127142726848" style="zoom: 80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142726848.png" srcset="/img/loading.gif" lazyload alt="image-20200127142726848" style="zoom: 80%;" />
 
 <p><strong>actin cytoskeleton</strong>: regulating changes in lamellipodial and filopodial shape for directed growth.</p>
 <p><strong>microtubule cytoskeleton</strong>: responsible for the elongation of the axon itself</p>
 <h3 id="1-Molecular-basis-of-growth-cone-motility"><a href="#1-Molecular-basis-of-growth-cone-motility" class="headerlink" title="1. Molecular basis of growth cone motility"></a>1. Molecular basis of growth cone motility</h3><p>The molecular composition of both the <strong>actin</strong> and <strong>microtubule</strong> cytoskeletons changes in distinct regions of the growing axon, suggesting a great deal of <strong>dynamism</strong> within growing neural processes.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142836679.png" alt="image-20200127142836679" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142836679.png" srcset="/img/loading.gif" lazyload alt="image-20200127142836679" style="zoom:80%;" />
 
 <h3 id="2-Actin-and-tubulin"><a href="#2-Actin-and-tubulin" class="headerlink" title="2. Actin and tubulin"></a>2. Actin and tubulin</h3><p><strong>Actin</strong> is the primary molecular constituent of a network of cellular <u>filaments</u> found in the lamellipodia and filopodia of growth cones. </p>
 <p><strong>Tubulin</strong> is the primary molecular constituent of the microtubules that run parallel to the axis of the axon and give it both structural integrity and a means for transporting proteins from the nerve cell body to the axon terminal</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142726848.png" alt="image-20200127142726848" style="zoom: 80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142726848.png" srcset="/img/loading.gif" lazyload alt="image-20200127142726848" style="zoom: 80%;" />
 
 <p>Actin and tubulin are found in two forms in the growth cone and axon:</p>
 <ul>
@@ -124,7 +400,7 @@
 <h4 id="Microtubule-binding-proteins"><a href="#Microtubule-binding-proteins" class="headerlink" title="Microtubule-binding proteins"></a>Microtubule-binding proteins</h4><p>More concentrated in the axon shaft.</p>
 <p>Modulate posttranslational modifications of monomeric and polymerized tubulin.</p>
 <p>Other microtubule-binding proteins (“<strong>motors</strong>“) are essential for moving molecules and organelles (“cargo”) up and down neuronal processes.</p>
-<h1 id="二、Mechanisms-regulating-polymerization-and-depolymerization"><a href="#二、Mechanisms-regulating-polymerization-and-depolymerization" class="headerlink" title="二、Mechanisms regulating polymerization and depolymerization"></a>二、Mechanisms regulating polymerization and depolymerization</h1><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143519953.png" alt="image-20200127143519953" style="zoom: 67%;" />
+<h1 id="二、Mechanisms-regulating-polymerization-and-depolymerization"><a href="#二、Mechanisms-regulating-polymerization-and-depolymerization" class="headerlink" title="二、Mechanisms regulating polymerization and depolymerization"></a>二、Mechanisms regulating polymerization and depolymerization</h1><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143519953.png" srcset="/img/loading.gif" lazyload alt="image-20200127143519953" style="zoom: 67%;" />
 
 <ol>
 <li>Adhesion molecules and diffusible signals</li>
@@ -149,7 +425,7 @@
 <li>lntegrins do not have kinase activity or any other direct signaling capacity. </li>
 <li>Triggers a cascade of events-perhaps via interactions between the cytoplasmic domains of integrins with kinases and other signaling molecules, as well as <u>Ca2+ channels-that can stimulate axon growth and elongation.</u></li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143725467.png" alt="image-20200127143725467" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143725467.png" srcset="/img/loading.gif" lazyload alt="image-20200127143725467" style="zoom:80%;" />
 
 <h3 id="2-CAMs-and-cadherins"><a href="#2-CAMs-and-cadherins" class="headerlink" title="2. CAMs and cadherins"></a>2. CAMs and cadherins</h3><p>Found on growing axons and growth cones as well as on surrounding cells and targets.</p>
 <p>Both CAMs and cadherins have dual functions as ligands and receptors, usually via hemophilic (“like with like”) binding. </p>
@@ -157,7 +433,7 @@
 <li><strong>CAMs</strong>, especially the <strong>L1</strong> CAM: bundling, or <em>fasciculation,</em> of groups of axons.</li>
 <li><strong>Cadherins</strong>: important determinants of final target selection in transition from growing axon to synapse.</li>
 </ul>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143841068.png" alt="image-20200127143841068"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143841068.png" srcset="/img/loading.gif" lazyload alt="image-20200127143841068"></p>
 <p>Both CAMs and cadherins rely on a somewhat indirect route of signal transduction.</p>
 <ul>
 <li><p>Ca2+-independent CAMs interact with cytoplasmic kinases to initiate cellular response.</p>
@@ -170,16 +446,16 @@
 <ul>
 <li>Both affect target cell and signal-generating cell</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127144302114.png" alt="image-20200127144302114" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127144302114.png" srcset="/img/loading.gif" lazyload alt="image-20200127144302114" style="zoom:80%;" />
 
-<h3 id="4-Local-translation"><a href="#4-Local-translation" class="headerlink" title="4. Local translation"></a>4. Local translation</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171742632.png" alt="image-20210304171742632" style="zoom: 80%;" />
+<h3 id="4-Local-translation"><a href="#4-Local-translation" class="headerlink" title="4. Local translation"></a>4. Local translation</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171742632.png" srcset="/img/loading.gif" lazyload alt="image-20210304171742632" style="zoom: 80%;" />
 
 <ul>
 <li>what does local means: soma between axon?</li>
 </ul>
-<h3 id="5-m6A-modification-and-axon-growth"><a href="#5-m6A-modification-and-axon-growth" class="headerlink" title="5. m6A modification and axon growth"></a>5. m6A modification and axon growth</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171703490.png" alt="image-20210304171703490" style="zoom:100%;" />
+<h3 id="5-m6A-modification-and-axon-growth"><a href="#5-m6A-modification-and-axon-growth" class="headerlink" title="5. m6A modification and axon growth"></a>5. m6A modification and axon growth</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171703490.png" srcset="/img/loading.gif" lazyload alt="image-20210304171703490" style="zoom:100%;" />
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171709268.png" alt="image-20210304171709268" style="zoom: 50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171709268.png" srcset="/img/loading.gif" lazyload alt="image-20210304171709268" style="zoom: 50%;" />
 
 
 
@@ -194,7 +470,7 @@
 <li><p><strong>chemorepulsion</strong>: opposite to the chemoattraction</p>
 </li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127144604920.png" alt="image-20200127144604920" style="zoom: 80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127144604920.png" srcset="/img/loading.gif" lazyload alt="image-20200127144604920" style="zoom: 80%;" />
 
 
 
@@ -214,17 +490,17 @@
 <li>The <strong>Rho&#x2F;GAP</strong> family of signaling proteins, all of which modulate second messenger-mediated cytoskeletal modification, provide a final step in netrin signaling.</li>
 </ul>
 <p><strong>Slit</strong> and its receptor <strong>robo</strong>: chemorepulsion.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145444139.png" alt="image-20200127145444139" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145444139.png" srcset="/img/loading.gif" lazyload alt="image-20200127145444139" style="zoom:80%;" />
 
-<h3 id="3-Semaphorins（信号素）"><a href="#3-Semaphorins（信号素）" class="headerlink" title="3. Semaphorins（信号素）"></a>3. Semaphorins（信号素）</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145655912.png" alt="image-20200127145655912"></p>
+<h3 id="3-Semaphorins（信号素）"><a href="#3-Semaphorins（信号素）" class="headerlink" title="3. Semaphorins（信号素）"></a>3. Semaphorins（信号素）</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145655912.png" srcset="/img/loading.gif" lazyload alt="image-20200127145655912"></p>
 <p>Semaphorins are bound to cell surfaces or to the extracellular matrix, where they <u>prevent the extension of nearby axons.</u> </p>
 <p>Their receptors are transmembrane proteins (including the <strong>plexins</strong> and a protein called <strong>neuropilin</strong>) whose cytoplasmic domains have no known catalytic activity. </p>
 <p>Semaphorin signaling leads to <u>changes in Ca2+ concentration</u> that presumably activate intercellular kinases and other signaling molecules to modify the growth cone cytoskeleton. </p>
 <p>Semaphorin treatment of cultured neurons results in <strong>growth cone collapse</strong>, which is Ca2+ signaling-dependent.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145636507.png" alt="image-20200127145636507" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145636507.png" srcset="/img/loading.gif" lazyload alt="image-20200127145636507" style="zoom: 67%;" />
 
 <h3 id="4-Commissural（合缝处的）-axon-guidance"><a href="#4-Commissural（合缝处的）-axon-guidance" class="headerlink" title="4. Commissural（合缝处的） axon guidance"></a>4. Commissural（合缝处的） axon guidance</h3><h4 id="Netrin"><a href="#Netrin" class="headerlink" title="Netrin"></a>Netrin</h4><p>mediate the pre-cross attraction</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145524537.png" alt="image-20200127145524537"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145524537.png" srcset="/img/loading.gif" lazyload alt="image-20200127145524537"></p>
 <ul>
 <li>The commissural neurons should firstly attracted to the floorplate</li>
 <li>Then cross the floorplate and leave the floor plate by silencing the netrin attraction and then make neurons insensitive to netrin (Repelled by Slit and semaphorins)</li>
@@ -232,7 +508,7 @@
 <h4 id="Robo3"><a href="#Robo3" class="headerlink" title="Robo3"></a>Robo3</h4><p>Mediate the post-cross repulsion</p>
 <h4 id="Axon-Guidance-Disorder"><a href="#Axon-Guidance-Disorder" class="headerlink" title="Axon Guidance Disorder"></a>Axon Guidance Disorder</h4><p>There is now a “short list” of rare but highly informative <u>mutations in genes</u> known to regulate growth cone pathfinding or axon extension during development.</p>
 <p>These mutations disrupt both CNS axon tracts and peripheral nerves, resulting in mild and specific <u>motor or sensory deficits</u> as well as more <u>global difficulties</u>, including intellectual disability and social and cognitive impairments.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171918361.png" alt="image-20210304171918361" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171918361.png" srcset="/img/loading.gif" lazyload alt="image-20210304171918361" style="zoom:100%;" />
 
 <h2 id="Selective-synapse-formation"><a href="#Selective-synapse-formation" class="headerlink" title="Selective synapse formation"></a>Selective synapse formation</h2><p>Once an axon reaches its target region, additional cell-cell interactions dictate which target cells to innervate from among a variety of potential synaptic partners.</p>
 <h3 id="1-Protocadherins-原钙粘蛋白"><a href="#1-Protocadherins-原钙粘蛋白" class="headerlink" title="1. Protocadherins (原钙粘蛋白)"></a>1. Protocadherins (原钙粘蛋白)</h3><h4 id="Formation-of-protocadherins"><a href="#Formation-of-protocadherins" class="headerlink" title="Formation of protocadherins"></a>Formation of protocadherins</h4><p><strong>protocadherins</strong>: resemble the general cadherin family of cell adhesion molecules</p>
@@ -242,14 +518,14 @@
 <li>a conserved domain encoding the intracellular portion of all protocadherin isoforms. </li>
 <li>Protocadherin isoforms on opposing cells bind to each other with varying affinity based upon their degree of similarity (high binding) or divergence (lower binding).</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145839777.png" alt="image-20200127145839777" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145839777.png" srcset="/img/loading.gif" lazyload alt="image-20200127145839777" style="zoom:67%;" />
 
 <p>protocadherins are not uniformly expressed at neighboring synaptic sites in cultured neurons.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145854248.png" alt="image-20200127145854248" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145854248.png" srcset="/img/loading.gif" lazyload alt="image-20200127145854248" style="zoom:80%;" />
 
 <h4 id="DSCAM1-in-fly"><a href="#DSCAM1-in-fly" class="headerlink" title="DSCAM1 in fly"></a>DSCAM1 in fly</h4><p><strong>DSCAM1</strong>: named for its similarity to the mammalian down syndrome cell adhesion molecule.</p>
 <p><strong>DSCAM1</strong> has 38,000 isoforms based on the numbers of exons in the gene and predicted splicing.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304172003320.png" alt="image-20210304172003320" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304172003320.png" srcset="/img/loading.gif" lazyload alt="image-20210304172003320" style="zoom:100%;" />
 
 <ul>
 <li>Use alternative splicing to generate different proteins</li>
@@ -258,20 +534,20 @@
 <ul>
 <li>Initial accumulation of synaptic vesicles as well as transport vesicles that contain molecular components that contribute to the presynaptic active zone.</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150008755.png" alt="image-20200127150008755" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150008755.png" srcset="/img/loading.gif" lazyload alt="image-20200127150008755" style="zoom:67%;" />
 
 <h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>Additional adhesion molecules such as <strong>SynCAM</strong>, <strong>neurexin</strong> and <strong>neuroligin</strong>, <strong>ephrinB</strong> and <strong>EphB</strong>, are recruited. Adhesive signaling between these molecules initiates differentiation of the presynaptic active zone and the postsynaptic density.</p>
 <ul>
 <li>The presynaptic terminal also releases molecules (e.g., <strong>neuregulin</strong>) that influence the expression and clustering postsynaptic receptors and associated proteins.</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150053270.png" alt="image-20200127150053270" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150053270.png" srcset="/img/loading.gif" lazyload alt="image-20200127150053270" style="zoom:67%;" />
 
 <h4 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h4><p>The interaction of <strong>neurexin（轴突蛋白）</strong> (a presynaptic transmembrane adhesion protein) with <strong>neuroligin（神经连接蛋白）</strong> (a postsynaptic adhesion protein) is central for recruiting and retaining cytoskeletal elements that localize synaptic vesicles to the presynaptic terminal and mediate their fusion.</p>
 <ul>
 <li><strong>Neurexin</strong> have a specialized transmembrane domain that helps localize synaptic vesicles, docking proteins, and fusion molecules contributed by active zone vesicles in the presynaptic terminal. </li>
 <li><strong>Neuroligin</strong>, upon binding neurexin, is essential for localizing neurotransmitter receptors and postsynaptic proteins to the postsynaptic specialization.</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150133245.png" alt="image-20200127150133245" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150133245.png" srcset="/img/loading.gif" lazyload alt="image-20200127150133245" style="zoom: 67%;" />
 
 <h5 id="1-Neurogulin1-Nrg1"><a href="#1-Neurogulin1-Nrg1" class="headerlink" title="(1) Neurogulin1 (Nrg1)"></a>(1) Neurogulin1 (Nrg1)</h5><p><strong>Nrg1</strong> is a transmembrane protein usually made in presynaptic cells and released following proteolytic cleavage of the ectodomain (outside portion) of the protein.</p>
 <p>Neuregulin is released via local proteolytic cleavage and binds to dimeric <strong>ErbB receptor</strong> kinases or to dimeric <strong>ErbB&#x2F;EGF</strong>(epidermal growth factor) receptor kinases.</p>
@@ -293,13 +569,13 @@
 <li>production of an initial surplus of nerve cells (on the order of two- or threefold); the final population is subsequently established by the death of those neurons that fail to interact successfully with their intended targets.</li>
 </ul>
 <h3 id="1-Target-derived-trophic-support-regulates-survival-of-related-neurons"><a href="#1-Target-derived-trophic-support-regulates-survival-of-related-neurons" class="headerlink" title="1. Target-derived trophic support regulates survival of related neurons"></a>1. Target-derived trophic support regulates survival of related neurons</h3><p>The pioneering neuroembryologists Viktor Hamburger and Rita Levi-Montalcini carried a series of studies and showed that targets play a major role in determining the size of the neuronal populations that innervate them:</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150621991.png" alt="image-20200127150621991" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150621991.png" srcset="/img/loading.gif" lazyload alt="image-20200127150621991" style="zoom: 33%;" />
 
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150630932.png" alt="image-20200127150630932" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150630932.png" srcset="/img/loading.gif" lazyload alt="image-20200127150630932" style="zoom: 67%;" />
 
 <h3 id="2-Competitive-interactions-and-formation-of-neuronal-connections-Synaptic-refinement"><a href="#2-Competitive-interactions-and-formation-of-neuronal-connections-Synaptic-refinement" class="headerlink" title="2. Competitive interactions and formation of neuronal connections:Synaptic refinement"></a>2. Competitive interactions and formation of neuronal connections:Synaptic refinement</h3><p>Once the size of a <u>neuronal population</u> is established by trophic regulation, trophic interactions continue to modulate formation of <u>synaptic connections</u>. </p>
 <p>Many fundamental ideas about the ongoing modification of developing brain circuitry have come from simpler, more accessible parts of the nervous system, most notably the vertebrate <strong>neuromuscular junction</strong> and <strong>autonomic ganglion cells</strong>.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150800634.png" alt="image-20200127150800634"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150800634.png" srcset="/img/loading.gif" lazyload alt="image-20200127150800634"></p>
 <p>Adult skeletal muscle fibers and neurons in some classes of autonomic ganglia (parasympathetic neurons) are each innervated by a single axon. </p>
 <ul>
 <li><p>Initially, however, each of these target cells is innervated by axons from several neurons-<strong>–polyneuronal innervation</strong>. </p>
@@ -335,9 +611,9 @@
 <li>Purified as a <strong>protein</strong> from a rich biological source, the salivary glands of the male mouse</li>
 </ul>
 <p><strong>Neurotrophins</strong>: NGF, BDNF, NT-3, NT-4&#x2F;5</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151042013.png" alt="image-20200127151042013" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151042013.png" srcset="/img/loading.gif" lazyload alt="image-20200127151042013" style="zoom:80%;" />
 
-<h4 id="Neurotrophins-have-distinct-effects-on-different-target-neurons"><a href="#Neurotrophins-have-distinct-effects-on-different-target-neurons" class="headerlink" title="Neurotrophins have distinct effects on different target neurons"></a>Neurotrophins have distinct effects on different target neurons</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151104046.png" alt="image-20200127151104046" style="zoom: 67%;" />
+<h4 id="Neurotrophins-have-distinct-effects-on-different-target-neurons"><a href="#Neurotrophins-have-distinct-effects-on-different-target-neurons" class="headerlink" title="Neurotrophins have distinct effects on different target neurons"></a>Neurotrophins have distinct effects on different target neurons</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151104046.png" srcset="/img/loading.gif" lazyload alt="image-20200127151104046" style="zoom: 67%;" />
 
 <p><strong>NG</strong>: nodose ganglia</p>
 <p><strong>SG</strong>: sympathetic ganglia</p>
@@ -345,7 +621,7 @@
 <ul>
 <li>Different neurons express different receptors</li>
 </ul>
-<h4 id="Different-neurotrophins-are-selectively-available-in-different-targets"><a href="#Different-neurotrophins-are-selectively-available-in-different-targets" class="headerlink" title="Different neurotrophins are selectively available in different targets"></a>Different neurotrophins are selectively available in different targets</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151130887.png" alt="image-20200127151130887"></p>
+<h4 id="Different-neurotrophins-are-selectively-available-in-different-targets"><a href="#Different-neurotrophins-are-selectively-available-in-different-targets" class="headerlink" title="Different neurotrophins are selectively available in different targets"></a>Different neurotrophins are selectively available in different targets</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151130887.png" srcset="/img/loading.gif" lazyload alt="image-20200127151130887"></p>
 <h4 id="Secreted-molecules-with-neurotrophic-influences"><a href="#Secreted-molecules-with-neurotrophic-influences" class="headerlink" title="Secreted molecules with neurotrophic influences"></a>Secreted molecules with neurotrophic influences</h4><p><strong>CNTF (ciliary neurotrophic factor)</strong>: cytokine in inflammation and immune responses</p>
 <p><strong>LIF (leukemia inhibitory factor)</strong>: cytokine</p>
 <p><strong>GDNF (glial-derived neurotrophic factors)</strong> and related proteins: kidney development and spermatogenesis</p>
@@ -359,11 +635,11 @@
 <ul>
 <li>“Local” means: relaying the neurotrophic signal from the axon terminal to the cell body</li>
 </ul>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151231522.png" alt="image-20200127151231522"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151231522.png" srcset="/img/loading.gif" lazyload alt="image-20200127151231522"></p>
 <p>Neurotrophins bound to their transmembrane receptors (primarily the Trk subset of receptors) are selectively internalized by assembling a signaling endosome that includes ligand&#x2F;receptor complex with several scaffolding proteins that bind one of three Intracellular effectors. </p>
 <p>This signaling endosome- can also bind molecular motors that engage the microtubule cytoskeleton.</p>
 <p>This signaling endosome is transported back to the cell body to activate downstream targets, including modifying gene expression.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151252395.png" alt="image-20200127151252395" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151252395.png" srcset="/img/loading.gif" lazyload alt="image-20200127151252395" style="zoom:67%;" />
 
 <h3 id="1-Neurotrophin-receptors-and-their-specificity"><a href="#1-Neurotrophin-receptors-and-their-specificity" class="headerlink" title="1. Neurotrophin receptors and their specificity"></a>1. Neurotrophin receptors and their specificity</h3><p>Tyrosine kinase (Trk) receptors: a single transmembrane protein with a cytoplasmic tyrosine kinase domain.</p>
 <ul>
@@ -374,7 +650,7 @@
 </ul>
 </li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151418038.png" alt="image-20200127151418038" style="zoom: 80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151418038.png" srcset="/img/loading.gif" lazyload alt="image-20200127151418038" style="zoom: 80%;" />
 
 <ul>
 <li>Trk receptors have high affinity for processed ligands.</li>
@@ -388,70 +664,416 @@
 <ul>
 <li>selective binding between ligand and receptor likely accounts for some of the specificity of neurotrophic interactions.</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151423865.png" alt="image-20200127151423865" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151423865.png" srcset="/img/loading.gif" lazyload alt="image-20200127151423865" style="zoom:67%;" />
 
-<h3 id="2-Neurotrophin-signaling-process"><a href="#2-Neurotrophin-signaling-process" class="headerlink" title="2. Neurotrophin signaling process"></a>2. Neurotrophin signaling process</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151452807.png" alt="image-20200127151452807" style="zoom: 80%;" /></div><div class="article-licensing box"><div class="licensing-title"><p>L3 Construction of neural circuits</p><p><a href="https://zhenyumi.github.io/posts/d1028187/">https://zhenyumi.github.io/posts/d1028187/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-04-16</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-04-16</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Neurobiology/">Neurobiology</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/6a6958f/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">L4 Modification of neural circuits as a result of experience</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/4e750a8/"><span class="level-item">L2 Nervous System Development and Diseases</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">195</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">27</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-06T11:24:02.000Z">2021-06-06</time></p><p class="title"><a href="/posts/ce78770f/">L10 Synaptic plasticity</a></p><p class="categories"><a href="/categories/Academic-Notebook/">Academic Notebook</a> / <a href="/categories/Academic-Notebook/Neurobiology/">Neurobiology</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
-            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
-                renderMathInElement(element);
-            });
-        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
-            'HTML-CSS': {
-                matchFontHeight: false
+<h3 id="2-Neurotrophin-signaling-process"><a href="#2-Neurotrophin-signaling-process" class="headerlink" title="2. Neurotrophin signaling process"></a>2. Neurotrophin signaling process</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151452807.png" srcset="/img/loading.gif" lazyload alt="image-20200127151452807" style="zoom: 80%;" />
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Neurobiology/" class="category-chain-item">Neurobiology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Neurobiology/" class="print-no-link">#Neurobiology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L3 Construction of neural circuits</div>
+      <div>https://zhenyumi.github.io/posts/d1028187/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年4月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/6a6958f/" title="L4 Modification of neural circuits as a result of experience">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L4 Modification of neural circuits as a result of experience</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/4e750a8/" title="L2 Nervous System Development and Diseases">
+                        <span class="hidden-mobile">L2 Nervous System Development and Diseases</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
             },
-            SVG: {
-                matchFontHeight: false
+            loader : {
+              load: ['ui/lazy']
             },
-            CommonHTML: {
-                matchFontHeight: false
-            },
-            tex2jax: {
-                inlineMath: [
-                    ['$','$'],
-                    ['\\(','\\)']
-                ]
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
             }
-        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

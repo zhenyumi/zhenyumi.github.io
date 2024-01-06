@@ -1,35 +1,275 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>02. R &lt;- 基本绘图Ⅰ - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="包括 Bar chart, Pie chart, Histograms, Box plot, (Two-way) scatter plot, Line graph (Time series data)"><meta property="og:type" content="blog"><meta property="og:title" content="02. R &lt;- 基本绘图Ⅰ"><meta property="og:url" content="https://zhenyumi.github.io/posts/9d6e3895/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="包括 Bar chart, Pie chart, Histograms, Box plot, (Two-way) scatter plot, Line graph (Time series data)"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/notebook_for_R%28cover%29.png"><meta property="article:published_time" content="2020-07-14T12:13:52.000Z"><meta property="article:modified_time" content="2020-08-02T12:22:00.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="速查"><meta property="article:tag" content="R"><meta property="article:tag" content="Statistics"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/notebook_for_R%28cover%29.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/9d6e3895/"},"headline":"02. R <- 基本绘图Ⅰ","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/notebook_for_R%28cover%29.png"],"datePublished":"2020-07-14T12:13:52.000Z","dateModified":"2020-08-02T12:22:00.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"包括 Bar chart, Pie chart, Histograms, Box plot, (Two-way) scatter plot, Line graph (Time series data)"}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/9d6e3895/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<!DOCTYPE html>
+<html lang="zh-CN" >
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/notebook_for_R%28cover%29.png" alt="02. R &lt;- 基本绘图Ⅰ"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-14T12:13:52.000Z" title="2020/7/14 22:13:52">2020-07-14</time>发表</span><span class="level-item"><time dateTime="2020-08-02T12:22:00.000Z" title="2020/8/2 22:22:00">2020-08-02</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a><span> / </span><a class="link-muted" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/">R</a></span><span class="level-item">29 分钟读完 (大约4288个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">02. R &lt;- 基本绘图Ⅰ</h1><div class="content"><p>这篇文章摘录了绘制一些基本图表的方法</p>
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="包括 Bar chart, Pie chart, Histograms, Box plot, (Two-way) scatter plot, Line graph (Time series data)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="02. R &lt;- 基本绘图Ⅰ">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/9d6e3895/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="包括 Bar chart, Pie chart, Histograms, Box plot, (Two-way) scatter plot, Line graph (Time series data)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200720_%E6%B0%B4%E9%8F%A1.png">
+<meta property="article:published_time" content="2020-07-14T12:13:52.000Z">
+<meta property="article:modified_time" content="2020-08-02T12:22:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="速查">
+<meta property="article:tag" content="R">
+<meta property="article:tag" content="Statistics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200720_%E6%B0%B4%E9%8F%A1.png">
+  
+  
+  
+  <title>02. R &lt;- 基本绘图Ⅰ - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200720_%E5%A4%8F%E3%80%80%E6%B5%B7.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">02. R <- 基本绘图Ⅰ</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-14 20:13" pubdate>
+          2020年7月14日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          34 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">02. R &lt;- 基本绘图Ⅰ</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>这篇文章摘录了绘制一些基本图表的方法</p>
 <h1 id="一、条形图-Bar-Chart"><a href="#一、条形图-Bar-Chart" class="headerlink" title="一、条形图 (Bar Chart)"></a>一、条形图 (Bar Chart)</h1><p>在条形图的例子当中使用了随<code>vcd</code>包分发的<code>Arthritis</code>数据框：<code>library(vcd)</code>，可以通过<code>vcd</code>来创建棘状图（spinogram）。</p>
 <h2 id="基本条形图"><a href="#基本条形图" class="headerlink" title="基本条形图"></a>基本条形图</h2><p>使用函数<code>barplot()</code>来创建基本条形图，大多数主要参数与其它图像是通用的，其中需要注意的主要参数有：</p>
 <table>
@@ -50,12 +290,12 @@
 </tbody></table>
 <p>例：</p>
 <p>本例中使用的数据：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#构建数据</span></span><br><span class="line"><span class="operator">&gt;</span> counts <span class="operator">&lt;-</span> table<span class="punctuation">(</span>Arthritis<span class="operator">$</span>Improved<span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> counts</span><br><span class="line"></span><br><span class="line">  None   Some Marked </span><br><span class="line">    <span class="number">42</span>     <span class="number">14</span>     <span class="number">28</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment">#构建数据</span><br><span class="hljs-operator">&gt;</span> counts <span class="hljs-operator">&lt;-</span> table<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-operator">$</span>Improved<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> counts<br><br>  None   Some Marked <br>    <span class="hljs-number">42</span>     <span class="hljs-number">14</span>     <span class="hljs-number">28</span><br></code></pre></td></tr></table></figure>
 
 <p>绘图代码：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#构建数据</span></span><br><span class="line">counts <span class="operator">&lt;-</span> table<span class="punctuation">(</span>Arthritis<span class="operator">$</span>Improved<span class="punctuation">)</span></span><br><span class="line"><span class="comment">#为了方便展示，将两幅图放在同一个绘图区域</span></span><br><span class="line">opar <span class="operator">&lt;-</span> par<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line">par<span class="punctuation">(</span>mfrow<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#绘图</span></span><br><span class="line"><span class="comment">##生成垂直条形图</span></span><br><span class="line">barplot<span class="punctuation">(</span>counts<span class="punctuation">,</span> </span><br><span class="line">        main<span class="operator">=</span><span class="string">&quot;Simple Bar Plot&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        xlab<span class="operator">=</span><span class="string">&quot;Improvement&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        ylab<span class="operator">=</span><span class="string">&quot;Frequency&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">##生成水平条形图</span></span><br><span class="line">barplot<span class="punctuation">(</span>counts<span class="punctuation">,</span> </span><br><span class="line">        main<span class="operator">=</span><span class="string">&quot;Horizontal Bar Plot&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        xlab<span class="operator">=</span><span class="string">&quot;Frequency&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        ylab<span class="operator">=</span><span class="string">&quot;Improvement&quot;</span><span class="punctuation">,</span></span><br><span class="line">        horiz<span class="operator">=</span><span class="literal">TRUE</span><span class="punctuation">)</span> </span><br><span class="line"><span class="comment">#恢复全局设置</span></span><br><span class="line">par<span class="punctuation">(</span>opar<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment">#构建数据</span><br>counts <span class="hljs-operator">&lt;-</span> table<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-operator">$</span>Improved<span class="hljs-punctuation">)</span><br><span class="hljs-comment">#为了方便展示，将两幅图放在同一个绘图区域</span><br>opar <span class="hljs-operator">&lt;-</span> par<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><br>par<span class="hljs-punctuation">(</span>mfrow<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><span class="hljs-comment">#绘图</span><br><span class="hljs-comment">##生成垂直条形图</span><br>barplot<span class="hljs-punctuation">(</span>counts<span class="hljs-punctuation">,</span> <br>        main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Simple Bar Plot&quot;</span><span class="hljs-punctuation">,</span> <br>        xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Improvement&quot;</span><span class="hljs-punctuation">,</span> <br>        ylab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Frequency&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-comment">##生成水平条形图</span><br>barplot<span class="hljs-punctuation">(</span>counts<span class="hljs-punctuation">,</span> <br>        main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Horizontal Bar Plot&quot;</span><span class="hljs-punctuation">,</span> <br>        xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Frequency&quot;</span><span class="hljs-punctuation">,</span> <br>        ylab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Improvement&quot;</span><span class="hljs-punctuation">,</span><br>        horiz<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">)</span> <br><span class="hljs-comment">#恢复全局设置</span><br>par<span class="hljs-punctuation">(</span>opar<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200714203508524.png" alt="image-20200714203508524" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200714203508524.png" srcset="/img/loading.gif" lazyload alt="image-20200714203508524" style="zoom:67%;" />
 
 <h3 id="1-条形图的微调"><a href="#1-条形图的微调" class="headerlink" title="1. 条形图的微调"></a>1. 条形图的微调</h3><p>可以使用参数<code>cex.names</code>来减小字号。将其指定为小于1的值可以缩小标签的大小。可选的参数<code>names.arg</code>允许你指定一个字符向量作为条形的标签名。你同样可以使用图形参数辅助调整文本间隔。</p>
 <table>
@@ -71,9 +311,9 @@
 </tr>
 </tbody></table>
 <p>例：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 调整参数</span></span><br><span class="line">opar <span class="operator">&lt;-</span> par<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line">par<span class="punctuation">(</span>mar<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">5</span><span class="punctuation">,</span><span class="number">8</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="comment"># 增加y边界的大小</span></span><br><span class="line">par<span class="punctuation">(</span>las<span class="operator">=</span><span class="number">2</span><span class="punctuation">)</span> <span class="comment"># 旋转条形的标签</span></span><br><span class="line">counts <span class="operator">&lt;-</span> table<span class="punctuation">(</span>Arthritis<span class="operator">$</span>Improved<span class="punctuation">)</span> </span><br><span class="line">barplot<span class="punctuation">(</span>counts<span class="punctuation">,</span> </span><br><span class="line">        main<span class="operator">=</span><span class="string">&quot;Treatment Outcome&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        horiz<span class="operator">=</span><span class="literal">TRUE</span><span class="punctuation">,</span> </span><br><span class="line">        cex.names<span class="operator">=</span><span class="number">0.8</span><span class="punctuation">,</span> <span class="comment"># 缩小字体大小，让标签更合适</span></span><br><span class="line">        names.arg<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;No Improvement&quot;</span><span class="punctuation">,</span> </span><br><span class="line">                    <span class="string">&quot;Some Improvement&quot;</span><span class="punctuation">,</span> <span class="string">&quot;Marked Improvement&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="comment"># 修改标签文本</span></span><br><span class="line"><span class="comment">#恢复全局设置</span></span><br><span class="line">par<span class="punctuation">(</span>opar<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 调整参数</span><br>opar <span class="hljs-operator">&lt;-</span> par<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><br>par<span class="hljs-punctuation">(</span>mar<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">5</span><span class="hljs-punctuation">,</span><span class="hljs-number">8</span><span class="hljs-punctuation">,</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <span class="hljs-comment"># 增加y边界的大小</span><br>par<span class="hljs-punctuation">(</span>las<span class="hljs-operator">=</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span> <span class="hljs-comment"># 旋转条形的标签</span><br>counts <span class="hljs-operator">&lt;-</span> table<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-operator">$</span>Improved<span class="hljs-punctuation">)</span> <br>barplot<span class="hljs-punctuation">(</span>counts<span class="hljs-punctuation">,</span> <br>        main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Treatment Outcome&quot;</span><span class="hljs-punctuation">,</span> <br>        horiz<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> <br>        cex.names<span class="hljs-operator">=</span><span class="hljs-number">0.8</span><span class="hljs-punctuation">,</span> <span class="hljs-comment"># 缩小字体大小，让标签更合适</span><br>        names.arg<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;No Improvement&quot;</span><span class="hljs-punctuation">,</span> <br>                    <span class="hljs-string">&quot;Some Improvement&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Marked Improvement&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <span class="hljs-comment"># 修改标签文本</span><br><span class="hljs-comment">#恢复全局设置</span><br>par<span class="hljs-punctuation">(</span>opar<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720153243518.png" alt="image-20200720153243518" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720153243518.png" srcset="/img/loading.gif" lazyload alt="image-20200720153243518" style="zoom:67%;" />
 
 <h2 id="堆砌条形图与分组条形图"><a href="#堆砌条形图与分组条形图" class="headerlink" title="堆砌条形图与分组条形图"></a>堆砌条形图与分组条形图</h2><p>如果<code>height</code>是一个矩阵而不是一个向量，则绘图结果将是一幅堆砌条形图或分组条形图。</p>
 <p>堆砌条形图与分组条形图中的重要参数为：</p>
@@ -91,31 +331,31 @@
 </tbody></table>
 <p>例：</p>
 <p>本例中使用的数据：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> counts <span class="operator">&lt;-</span> table<span class="punctuation">(</span>Arthritis<span class="operator">$</span>Improved<span class="punctuation">,</span> Arthritis<span class="operator">$</span>Treatment<span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> counts</span><br><span class="line">        </span><br><span class="line">         Placebo Treated</span><br><span class="line">  None        <span class="number">29</span>      <span class="number">13</span></span><br><span class="line">  Some         <span class="number">7</span>       <span class="number">7</span></span><br><span class="line">  Marked       <span class="number">7</span>      <span class="number">21</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> counts <span class="hljs-operator">&lt;-</span> table<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-operator">$</span>Improved<span class="hljs-punctuation">,</span> Arthritis<span class="hljs-operator">$</span>Treatment<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> counts<br>        <br>         Placebo Treated<br>  None        <span class="hljs-number">29</span>      <span class="hljs-number">13</span><br>  Some         <span class="hljs-number">7</span>       <span class="hljs-number">7</span><br>  Marked       <span class="hljs-number">7</span>      <span class="hljs-number">21</span><br></code></pre></td></tr></table></figure>
 
 <p>绘图代码：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#构建数据</span></span><br><span class="line">counts <span class="operator">&lt;-</span> table<span class="punctuation">(</span>Arthritis<span class="operator">$</span>Improved<span class="punctuation">,</span> Arthritis<span class="operator">$</span>Treatment<span class="punctuation">)</span></span><br><span class="line"><span class="comment">#为了方便展示，将两幅图放在同一个绘图区域</span></span><br><span class="line">opar <span class="operator">&lt;-</span> par<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line">par<span class="punctuation">(</span>mfrow<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#绘图</span></span><br><span class="line"><span class="comment">##堆砌条形图</span></span><br><span class="line">barplot<span class="punctuation">(</span>counts<span class="punctuation">,</span> </span><br><span class="line">        main<span class="operator">=</span><span class="string">&quot;Stacked Bar Plot&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        xlab<span class="operator">=</span><span class="string">&quot;Treatment&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        ylab<span class="operator">=</span><span class="string">&quot;Frequency&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        col<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span> <span class="string">&quot;yellow&quot;</span><span class="punctuation">,</span><span class="string">&quot;green&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">        legend<span class="operator">=</span>rownames<span class="punctuation">(</span>counts<span class="punctuation">)</span><span class="punctuation">)</span> </span><br><span class="line"><span class="comment">##组合条形图</span></span><br><span class="line">barplot<span class="punctuation">(</span>counts<span class="punctuation">,</span> </span><br><span class="line">        main<span class="operator">=</span><span class="string">&quot;Grouped Bar Plot&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        xlab<span class="operator">=</span><span class="string">&quot;Treatment&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        ylab<span class="operator">=</span><span class="string">&quot;Frequency&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        col<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span> <span class="string">&quot;yellow&quot;</span><span class="punctuation">,</span> <span class="string">&quot;green&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">        legend<span class="operator">=</span>rownames<span class="punctuation">(</span>counts<span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">        beside<span class="operator">=</span><span class="literal">TRUE</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#恢复全局设置</span></span><br><span class="line">par<span class="punctuation">(</span>opar<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment">#构建数据</span><br>counts <span class="hljs-operator">&lt;-</span> table<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-operator">$</span>Improved<span class="hljs-punctuation">,</span> Arthritis<span class="hljs-operator">$</span>Treatment<span class="hljs-punctuation">)</span><br><span class="hljs-comment">#为了方便展示，将两幅图放在同一个绘图区域</span><br>opar <span class="hljs-operator">&lt;-</span> par<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><br>par<span class="hljs-punctuation">(</span>mfrow<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><span class="hljs-comment">#绘图</span><br><span class="hljs-comment">##堆砌条形图</span><br>barplot<span class="hljs-punctuation">(</span>counts<span class="hljs-punctuation">,</span> <br>        main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Stacked Bar Plot&quot;</span><span class="hljs-punctuation">,</span> <br>        xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Treatment&quot;</span><span class="hljs-punctuation">,</span> <br>        ylab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Frequency&quot;</span><span class="hljs-punctuation">,</span> <br>        col<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;red&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;yellow&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;green&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>        legend<span class="hljs-operator">=</span>rownames<span class="hljs-punctuation">(</span>counts<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <br><span class="hljs-comment">##组合条形图</span><br>barplot<span class="hljs-punctuation">(</span>counts<span class="hljs-punctuation">,</span> <br>        main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Grouped Bar Plot&quot;</span><span class="hljs-punctuation">,</span> <br>        xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Treatment&quot;</span><span class="hljs-punctuation">,</span> <br>        ylab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Frequency&quot;</span><span class="hljs-punctuation">,</span> <br>        col<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;red&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;yellow&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;green&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>        legend<span class="hljs-operator">=</span>rownames<span class="hljs-punctuation">(</span>counts<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>        beside<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">)</span><br><span class="hljs-comment">#恢复全局设置</span><br>par<span class="hljs-punctuation">(</span>opar<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200714204252633.png" alt="image-20200714204252633" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200714204252633.png" srcset="/img/loading.gif" lazyload alt="image-20200714204252633" style="zoom: 67%;" />
 
 <h2 id="均值条形图"><a href="#均值条形图" class="headerlink" title="均值条形图"></a>均值条形图</h2><p>条形图并不一定要基于计数数据或频率数据。可以使用数据整合函数并将结果传递给<code>barplot()</code>函数，来创建表示均值、中位数、标准差等的条形图。</p>
 <p>本例中使用的数据：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> frame <span class="operator">&lt;-</span> data.frame<span class="punctuation">(</span>Arthritis<span class="operator">$</span>Treatment<span class="punctuation">,</span>Arthritis<span class="operator">$</span>Age<span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> means <span class="operator">&lt;-</span> aggregate<span class="punctuation">(</span>frame<span class="operator">$</span>Arthritis.Age<span class="punctuation">,</span> </span><br><span class="line">                     by <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span>frame<span class="operator">$</span>Arthritis.Treatment<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                     FUN <span class="operator">=</span> mean<span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> means</span><br><span class="line">  Group.1        x</span><br><span class="line"><span class="number">1</span> Placebo <span class="number">52.18605</span></span><br><span class="line"><span class="number">2</span> Treated <span class="number">54.58537</span></span><br><span class="line"><span class="operator">&gt;</span> means <span class="operator">&lt;-</span> means<span class="punctuation">[</span>order<span class="punctuation">(</span>means<span class="operator">$</span>x<span class="punctuation">)</span><span class="punctuation">,</span><span class="punctuation">]</span> <span class="comment"># 将均值从小到大排序</span></span><br><span class="line"><span class="operator">&gt;</span> means</span><br><span class="line">  Group.1        x</span><br><span class="line"><span class="number">1</span> Placebo <span class="number">52.18605</span></span><br><span class="line"><span class="number">2</span> Treated <span class="number">54.58537</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> frame <span class="hljs-operator">&lt;-</span> data.frame<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-operator">$</span>Treatment<span class="hljs-punctuation">,</span>Arthritis<span class="hljs-operator">$</span>Age<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> means <span class="hljs-operator">&lt;-</span> aggregate<span class="hljs-punctuation">(</span>frame<span class="hljs-operator">$</span>Arthritis.Age<span class="hljs-punctuation">,</span> <br>                     by <span class="hljs-operator">=</span> <span class="hljs-built_in">list</span><span class="hljs-punctuation">(</span>frame<span class="hljs-operator">$</span>Arthritis.Treatment<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>                     FUN <span class="hljs-operator">=</span> mean<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> means<br>  Group.1        x<br><span class="hljs-number">1</span> Placebo <span class="hljs-number">52.18605</span><br><span class="hljs-number">2</span> Treated <span class="hljs-number">54.58537</span><br><span class="hljs-operator">&gt;</span> means <span class="hljs-operator">&lt;-</span> means<span class="hljs-punctuation">[</span>order<span class="hljs-punctuation">(</span>means<span class="hljs-operator">$</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><span class="hljs-punctuation">]</span> <span class="hljs-comment"># 将均值从小到大排序</span><br><span class="hljs-operator">&gt;</span> means<br>  Group.1        x<br><span class="hljs-number">1</span> Placebo <span class="hljs-number">52.18605</span><br><span class="hljs-number">2</span> Treated <span class="hljs-number">54.58537</span><br></code></pre></td></tr></table></figure>
 
 <p>绘图代码：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建数据</span></span><br><span class="line">frame <span class="operator">&lt;-</span> data.frame<span class="punctuation">(</span>Arthritis<span class="operator">$</span>Treatment<span class="punctuation">,</span>Arthritis<span class="operator">$</span>Age<span class="punctuation">)</span></span><br><span class="line">means <span class="operator">&lt;-</span> aggregate<span class="punctuation">(</span>frame<span class="operator">$</span>Arthritis.Age<span class="punctuation">,</span> </span><br><span class="line">                     by <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span>frame<span class="operator">$</span>Arthritis.Treatment<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                     FUN <span class="operator">=</span> mean<span class="punctuation">)</span></span><br><span class="line">means <span class="operator">&lt;-</span> means<span class="punctuation">[</span>order<span class="punctuation">(</span>means<span class="operator">$</span>x<span class="punctuation">)</span><span class="punctuation">,</span><span class="punctuation">]</span> <span class="comment"># 将均值从小到大排序</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line">barplot<span class="punctuation">(</span>means<span class="operator">$</span>x<span class="punctuation">,</span> names.arg<span class="operator">=</span>means<span class="operator">$</span>Group.1<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 构建数据</span><br>frame <span class="hljs-operator">&lt;-</span> data.frame<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-operator">$</span>Treatment<span class="hljs-punctuation">,</span>Arthritis<span class="hljs-operator">$</span>Age<span class="hljs-punctuation">)</span><br>means <span class="hljs-operator">&lt;-</span> aggregate<span class="hljs-punctuation">(</span>frame<span class="hljs-operator">$</span>Arthritis.Age<span class="hljs-punctuation">,</span> <br>                     by <span class="hljs-operator">=</span> <span class="hljs-built_in">list</span><span class="hljs-punctuation">(</span>frame<span class="hljs-operator">$</span>Arthritis.Treatment<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>                     FUN <span class="hljs-operator">=</span> mean<span class="hljs-punctuation">)</span><br>means <span class="hljs-operator">&lt;-</span> means<span class="hljs-punctuation">[</span>order<span class="hljs-punctuation">(</span>means<span class="hljs-operator">$</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><span class="hljs-punctuation">]</span> <span class="hljs-comment"># 将均值从小到大排序</span><br><br><span class="hljs-comment"># 绘图</span><br>barplot<span class="hljs-punctuation">(</span>means<span class="hljs-operator">$</span>x<span class="hljs-punctuation">,</span> names.arg<span class="hljs-operator">=</span>means<span class="hljs-operator">$</span>Group.1<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720152848007.png" alt="image-20200720152848007" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720152848007.png" srcset="/img/loading.gif" lazyload alt="image-20200720152848007" style="zoom:50%;" />
 
 <h2 id="棘状图"><a href="#棘状图" class="headerlink" title="棘状图"></a>棘状图</h2><p>棘状图对堆砌条形图进行了重缩放，这样每个条形的高度均为1，每一段的高度即表示比例。棘状图可由vcd包中的函数<code>spine()</code>绘制。</p>
 <p>例：</p>
 <p>使用的数据：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> library<span class="punctuation">(</span>vcd<span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> attach<span class="punctuation">(</span>Arthritis<span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> counts <span class="operator">&lt;-</span> table<span class="punctuation">(</span>Treatment<span class="punctuation">,</span> Improved<span class="punctuation">)</span></span><br><span class="line">         Improved</span><br><span class="line">Treatment None Some Marked</span><br><span class="line">  Placebo   <span class="number">29</span>    <span class="number">7</span>      <span class="number">7</span></span><br><span class="line">  Treated   <span class="number">13</span>    <span class="number">7</span>     <span class="number">21</span></span><br><span class="line"><span class="operator">&gt;</span> detach<span class="punctuation">(</span>Arthritis<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>vcd<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> attach<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> counts <span class="hljs-operator">&lt;-</span> table<span class="hljs-punctuation">(</span>Treatment<span class="hljs-punctuation">,</span> Improved<span class="hljs-punctuation">)</span><br>         Improved<br>Treatment None Some Marked<br>  Placebo   <span class="hljs-number">29</span>    <span class="hljs-number">7</span>      <span class="hljs-number">7</span><br>  Treated   <span class="hljs-number">13</span>    <span class="hljs-number">7</span>     <span class="hljs-number">21</span><br><span class="hljs-operator">&gt;</span> detach<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
 <p>绘图代码：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span>vcd<span class="punctuation">)</span> </span><br><span class="line">attach<span class="punctuation">(</span>Arthritis<span class="punctuation">)</span> </span><br><span class="line">counts <span class="operator">&lt;-</span> table<span class="punctuation">(</span>Treatment<span class="punctuation">,</span> Improved<span class="punctuation">)</span> </span><br><span class="line">spine<span class="punctuation">(</span>counts<span class="punctuation">,</span> main<span class="operator">=</span><span class="string">&quot;Spinogram Example&quot;</span><span class="punctuation">)</span> </span><br><span class="line">detach<span class="punctuation">(</span>Arthritis<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs R">library<span class="hljs-punctuation">(</span>vcd<span class="hljs-punctuation">)</span> <br>attach<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-punctuation">)</span> <br>counts <span class="hljs-operator">&lt;-</span> table<span class="hljs-punctuation">(</span>Treatment<span class="hljs-punctuation">,</span> Improved<span class="hljs-punctuation">)</span> <br>spine<span class="hljs-punctuation">(</span>counts<span class="hljs-punctuation">,</span> main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Spinogram Example&quot;</span><span class="hljs-punctuation">)</span> <br>detach<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720153857731.png" alt="image-20200720153857731" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720153857731.png" srcset="/img/loading.gif" lazyload alt="image-20200720153857731" style="zoom:67%;" />
 
 <h1 id="二、饼图-（Pie-Chart）"><a href="#二、饼图-（Pie-Chart）" class="headerlink" title="二、饼图 （Pie Chart）"></a>二、饼图 （Pie Chart）</h1><h2 id="经典饼图"><a href="#经典饼图" class="headerlink" title="经典饼图"></a>经典饼图</h2><p>饼图的绘图函数是 <code>pie(x, labels)</code>，当绘制3D饼图的时候，需要使用 <code>plotrix</code> 包中的 <code>pie3D()</code> 函数</p>
 <table>
@@ -136,18 +376,18 @@
 </tbody></table>
 <p>例：</p>
 <p>使用的数据：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> slices <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">10</span><span class="punctuation">,</span> <span class="number">12</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">,</span> <span class="number">16</span><span class="punctuation">,</span> <span class="number">8</span><span class="punctuation">)</span> </span><br><span class="line"><span class="operator">&gt;</span> lbls <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;US&quot;</span><span class="punctuation">,</span> <span class="string">&quot;UK&quot;</span><span class="punctuation">,</span> <span class="string">&quot;Australia&quot;</span><span class="punctuation">,</span> <span class="string">&quot;Germany&quot;</span><span class="punctuation">,</span> <span class="string">&quot;France&quot;</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="operator">&gt;</span> mytable <span class="operator">&lt;-</span> table<span class="punctuation">(</span>Arthritis<span class="operator">$</span>Treatment<span class="punctuation">)</span></span><br><span class="line"><span class="operator">&gt;</span> mytable</span><br><span class="line">Placebo Treated </span><br><span class="line">     <span class="number">43</span>      <span class="number">41</span> </span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> slices <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">10</span><span class="hljs-punctuation">,</span> <span class="hljs-number">12</span><span class="hljs-punctuation">,</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span> <span class="hljs-number">16</span><span class="hljs-punctuation">,</span> <span class="hljs-number">8</span><span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> lbls <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;US&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;UK&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Australia&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Germany&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;France&quot;</span><span class="hljs-punctuation">)</span><br><br><span class="hljs-operator">&gt;</span> mytable <span class="hljs-operator">&lt;-</span> table<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-operator">$</span>Treatment<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> mytable<br>Placebo Treated <br>     <span class="hljs-number">43</span>      <span class="hljs-number">41</span> <br></code></pre></td></tr></table></figure>
 
 <p>绘图参数：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">opar <span class="operator">&lt;-</span> par<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line">par<span class="punctuation">(</span>mfrow<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="comment"># 绘制2X2图像，方便展示</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建数据</span></span><br><span class="line">slices <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">10</span><span class="punctuation">,</span> <span class="number">12</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">,</span> <span class="number">16</span><span class="punctuation">,</span> <span class="number">8</span><span class="punctuation">)</span> </span><br><span class="line">lbls <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;US&quot;</span><span class="punctuation">,</span> <span class="string">&quot;UK&quot;</span><span class="punctuation">,</span> <span class="string">&quot;Australia&quot;</span><span class="punctuation">,</span> <span class="string">&quot;Germany&quot;</span><span class="punctuation">,</span> <span class="string">&quot;France&quot;</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line"><span class="comment">## 简单条形图</span></span><br><span class="line">pie<span class="punctuation">(</span>slices<span class="punctuation">,</span> </span><br><span class="line">    labels <span class="operator">=</span> lbls<span class="punctuation">,</span> </span><br><span class="line">    main<span class="operator">=</span><span class="string">&quot;Simple Pie Chart&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">## 添加比例数值，通过修改label参数完成</span></span><br><span class="line">pct <span class="operator">&lt;-</span> <span class="built_in">round</span><span class="punctuation">(</span>slices<span class="operator">/</span><span class="built_in">sum</span><span class="punctuation">(</span>slices<span class="punctuation">)</span><span class="operator">*</span><span class="number">100</span><span class="punctuation">)</span> </span><br><span class="line">lbls2 <span class="operator">&lt;-</span> paste<span class="punctuation">(</span>lbls<span class="punctuation">,</span> <span class="string">&quot; &quot;</span><span class="punctuation">,</span> pct<span class="punctuation">,</span> <span class="string">&quot;%&quot;</span><span class="punctuation">,</span> sep<span class="operator">=</span><span class="string">&quot;&quot;</span><span class="punctuation">)</span> </span><br><span class="line">pie<span class="punctuation">(</span>slices<span class="punctuation">,</span> labels<span class="operator">=</span>lbls2<span class="punctuation">,</span> col<span class="operator">=</span>rainbow<span class="punctuation">(</span><span class="built_in">length</span><span class="punctuation">(</span>lbls2<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">    main<span class="operator">=</span><span class="string">&quot;Pie Chart with Percentages&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">## 3D饼图</span></span><br><span class="line">library<span class="punctuation">(</span>plotrix<span class="punctuation">)</span></span><br><span class="line">pie3D<span class="punctuation">(</span>slices<span class="punctuation">,</span> labels<span class="operator">=</span>lbls<span class="punctuation">,</span>explode<span class="operator">=</span><span class="number">0.1</span><span class="punctuation">,</span> </span><br><span class="line">      main<span class="operator">=</span><span class="string">&quot;3D Pie Chart &quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">## 从表格创建饼图</span></span><br><span class="line">mytable <span class="operator">&lt;-</span> table<span class="punctuation">(</span>Arthritis<span class="operator">$</span>Treatment<span class="punctuation">)</span></span><br><span class="line">lbls3 <span class="operator">&lt;-</span> paste<span class="punctuation">(</span><span class="built_in">names</span><span class="punctuation">(</span>mytable<span class="punctuation">)</span><span class="punctuation">,</span> <span class="string">&quot;\n&quot;</span><span class="punctuation">,</span> mytable<span class="punctuation">,</span> sep<span class="operator">=</span><span class="string">&quot;&quot;</span><span class="punctuation">)</span> </span><br><span class="line">pie<span class="punctuation">(</span>mytable<span class="punctuation">,</span> labels <span class="operator">=</span> lbls3<span class="punctuation">,</span> </span><br><span class="line">    main<span class="operator">=</span><span class="string">&quot;Pie Chart from a Table\n (with sample sizes)&quot;</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复全局参数</span></span><br><span class="line">par<span class="punctuation">(</span>opar<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs R">opar <span class="hljs-operator">&lt;-</span> par<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><br>par<span class="hljs-punctuation">(</span>mfrow<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <span class="hljs-comment"># 绘制2X2图像，方便展示</span><br><br><span class="hljs-comment"># 构建数据</span><br>slices <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">10</span><span class="hljs-punctuation">,</span> <span class="hljs-number">12</span><span class="hljs-punctuation">,</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span> <span class="hljs-number">16</span><span class="hljs-punctuation">,</span> <span class="hljs-number">8</span><span class="hljs-punctuation">)</span> <br>lbls <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;US&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;UK&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Australia&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Germany&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;France&quot;</span><span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 绘图</span><br><span class="hljs-comment">## 简单条形图</span><br>pie<span class="hljs-punctuation">(</span>slices<span class="hljs-punctuation">,</span> <br>    labels <span class="hljs-operator">=</span> lbls<span class="hljs-punctuation">,</span> <br>    main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Simple Pie Chart&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-comment">## 添加比例数值，通过修改label参数完成</span><br>pct <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">round</span><span class="hljs-punctuation">(</span>slices<span class="hljs-operator">/</span><span class="hljs-built_in">sum</span><span class="hljs-punctuation">(</span>slices<span class="hljs-punctuation">)</span><span class="hljs-operator">*</span><span class="hljs-number">100</span><span class="hljs-punctuation">)</span> <br>lbls2 <span class="hljs-operator">&lt;-</span> paste<span class="hljs-punctuation">(</span>lbls<span class="hljs-punctuation">,</span> <span class="hljs-string">&quot; &quot;</span><span class="hljs-punctuation">,</span> pct<span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;%&quot;</span><span class="hljs-punctuation">,</span> sep<span class="hljs-operator">=</span><span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">)</span> <br>pie<span class="hljs-punctuation">(</span>slices<span class="hljs-punctuation">,</span> labels<span class="hljs-operator">=</span>lbls2<span class="hljs-punctuation">,</span> col<span class="hljs-operator">=</span>rainbow<span class="hljs-punctuation">(</span><span class="hljs-built_in">length</span><span class="hljs-punctuation">(</span>lbls2<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>    main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Pie Chart with Percentages&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-comment">## 3D饼图</span><br>library<span class="hljs-punctuation">(</span>plotrix<span class="hljs-punctuation">)</span><br>pie3D<span class="hljs-punctuation">(</span>slices<span class="hljs-punctuation">,</span> labels<span class="hljs-operator">=</span>lbls<span class="hljs-punctuation">,</span>explode<span class="hljs-operator">=</span><span class="hljs-number">0.1</span><span class="hljs-punctuation">,</span> <br>      main<span class="hljs-operator">=</span><span class="hljs-string">&quot;3D Pie Chart &quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-comment">## 从表格创建饼图</span><br>mytable <span class="hljs-operator">&lt;-</span> table<span class="hljs-punctuation">(</span>Arthritis<span class="hljs-operator">$</span>Treatment<span class="hljs-punctuation">)</span><br>lbls3 <span class="hljs-operator">&lt;-</span> paste<span class="hljs-punctuation">(</span><span class="hljs-built_in">names</span><span class="hljs-punctuation">(</span>mytable<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;\n&quot;</span><span class="hljs-punctuation">,</span> mytable<span class="hljs-punctuation">,</span> sep<span class="hljs-operator">=</span><span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">)</span> <br>pie<span class="hljs-punctuation">(</span>mytable<span class="hljs-punctuation">,</span> labels <span class="hljs-operator">=</span> lbls3<span class="hljs-punctuation">,</span> <br>    main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Pie Chart from a Table\n (with sample sizes)&quot;</span><span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 恢复全局参数</span><br>par<span class="hljs-punctuation">(</span>opar<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720155126672.png" alt="image-20200720155126672" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720155126672.png" srcset="/img/loading.gif" lazyload alt="image-20200720155126672" style="zoom: 67%;" />
 
 <h2 id="扇形图"><a href="#扇形图" class="headerlink" title="扇形图"></a>扇形图</h2><p>扇形图（fan plot）是饼图的变种。扇形图提供了一种同时展示相对数量和相互差异的方法。在R中，扇形图是通过<code>plotrix</code>包中的<code>fan.plot()</code>函数实现的。</p>
 <p>例：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span>plotrix<span class="punctuation">)</span> </span><br><span class="line">slices <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">10</span><span class="punctuation">,</span> <span class="number">12</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">,</span> <span class="number">16</span><span class="punctuation">,</span> <span class="number">8</span><span class="punctuation">)</span> </span><br><span class="line">lbls <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;US&quot;</span><span class="punctuation">,</span> <span class="string">&quot;UK&quot;</span><span class="punctuation">,</span> <span class="string">&quot;Australia&quot;</span><span class="punctuation">,</span> <span class="string">&quot;Germany&quot;</span><span class="punctuation">,</span> <span class="string">&quot;France&quot;</span><span class="punctuation">)</span> </span><br><span class="line">fan.plot<span class="punctuation">(</span>slices<span class="punctuation">,</span> labels <span class="operator">=</span> lbls<span class="punctuation">,</span> main<span class="operator">=</span><span class="string">&quot;Fan Plot&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs R">library<span class="hljs-punctuation">(</span>plotrix<span class="hljs-punctuation">)</span> <br>slices <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">10</span><span class="hljs-punctuation">,</span> <span class="hljs-number">12</span><span class="hljs-punctuation">,</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span> <span class="hljs-number">16</span><span class="hljs-punctuation">,</span> <span class="hljs-number">8</span><span class="hljs-punctuation">)</span> <br>lbls <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;US&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;UK&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Australia&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Germany&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;France&quot;</span><span class="hljs-punctuation">)</span> <br>fan.plot<span class="hljs-punctuation">(</span>slices<span class="hljs-punctuation">,</span> labels <span class="hljs-operator">=</span> lbls<span class="hljs-punctuation">,</span> main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Fan Plot&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720155316328.png" alt="image-20200720155316328" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720155316328.png" srcset="/img/loading.gif" lazyload alt="image-20200720155316328" style="zoom:67%;" />
 
 <h1 id="三、直方图-Histogram"><a href="#三、直方图-Histogram" class="headerlink" title="三、直方图 (Histogram)"></a>三、直方图 (Histogram)</h1><p>直方图通过在<em>x</em>轴上将值域分割为一定数量的组，在<em>y</em>轴上显示相应值的频数，展示了连续型变量的分布。可以使用如下函数创建直方图：<code>hist(x)</code></p>
 <table>
@@ -308,9 +548,9 @@
 </tr>
 </tbody></table>
 <h3 id="3-直方图-（轴须图，正态密度曲线）"><a href="#3-直方图-（轴须图，正态密度曲线）" class="headerlink" title="3. 直方图 + （轴须图，正态密度曲线）"></a>3. 直方图 + （轴须图，正态密度曲线）</h3><p>例:</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">opar <span class="operator">&lt;-</span> par<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">par<span class="punctuation">(</span>mfrow<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="comment"># 绘制2X2的图像，方便展示</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line"><span class="comment">## 简单直方图</span></span><br><span class="line">hist<span class="punctuation">(</span>mtcars<span class="operator">$</span>mpg<span class="punctuation">)</span></span><br><span class="line"><span class="comment">## 指定组数和颜色</span></span><br><span class="line">hist<span class="punctuation">(</span>mtcars<span class="operator">$</span>mpg<span class="punctuation">,</span> </span><br><span class="line">     breaks<span class="operator">=</span><span class="number">12</span><span class="punctuation">,</span> </span><br><span class="line">     col<span class="operator">=</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span> </span><br><span class="line">     xlab<span class="operator">=</span><span class="string">&quot;Miles Per Gallon&quot;</span><span class="punctuation">,</span> </span><br><span class="line">     main<span class="operator">=</span><span class="string">&quot;Colored histogram with 12 bins&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">## 添加轴须图</span></span><br><span class="line">hist<span class="punctuation">(</span>mtcars<span class="operator">$</span>mpg<span class="punctuation">,</span> </span><br><span class="line">     freq<span class="operator">=</span><span class="literal">FALSE</span><span class="punctuation">,</span> </span><br><span class="line">     breaks<span class="operator">=</span><span class="number">12</span><span class="punctuation">,</span> </span><br><span class="line">     col<span class="operator">=</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span> </span><br><span class="line">     xlab<span class="operator">=</span><span class="string">&quot;Miles Per Gallon&quot;</span><span class="punctuation">,</span> </span><br><span class="line">     main<span class="operator">=</span><span class="string">&quot;Histogram, rug plot, density curve&quot;</span><span class="punctuation">)</span></span><br><span class="line">rug<span class="punctuation">(</span>jitter<span class="punctuation">(</span>mtcars<span class="operator">$</span>mpg<span class="punctuation">)</span><span class="punctuation">)</span> </span><br><span class="line">lines<span class="punctuation">(</span>density<span class="punctuation">(</span>mtcars<span class="operator">$</span>mpg<span class="punctuation">)</span><span class="punctuation">,</span> col<span class="operator">=</span><span class="string">&quot;blue&quot;</span><span class="punctuation">,</span> lwd<span class="operator">=</span><span class="number">2</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">## 添加正态密度曲线和外框</span></span><br><span class="line">x <span class="operator">&lt;-</span> mtcars<span class="operator">$</span>mpg </span><br><span class="line">h <span class="operator">&lt;-</span> hist<span class="punctuation">(</span>x<span class="punctuation">,</span> </span><br><span class="line">        breaks<span class="operator">=</span><span class="number">12</span><span class="punctuation">,</span> </span><br><span class="line">        col<span class="operator">=</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        xlab<span class="operator">=</span><span class="string">&quot;Miles Per Gallon&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        main<span class="operator">=</span><span class="string">&quot;Histogram with normal curve and box&quot;</span><span class="punctuation">)</span> </span><br><span class="line">xfit<span class="operator">&lt;-</span>seq<span class="punctuation">(</span><span class="built_in">min</span><span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">,</span> <span class="built_in">max</span><span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">,</span> <span class="built_in">length</span><span class="operator">=</span><span class="number">40</span><span class="punctuation">)</span> <span class="comment"># 构建正态曲线的x坐标</span></span><br><span class="line">yfit<span class="operator">&lt;-</span>dnorm<span class="punctuation">(</span>xfit<span class="punctuation">,</span> mean<span class="operator">=</span>mean<span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">,</span> sd<span class="operator">=</span>sd<span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">)</span> <span class="comment"># 构建正态曲线的y坐标</span></span><br><span class="line">yfit <span class="operator">&lt;-</span> yfit<span class="operator">*</span>diff<span class="punctuation">(</span>h<span class="operator">$</span>mids<span class="punctuation">[</span><span class="number">1</span><span class="operator">:</span><span class="number">2</span><span class="punctuation">]</span><span class="punctuation">)</span><span class="operator">*</span><span class="built_in">length</span><span class="punctuation">(</span>x<span class="punctuation">)</span> <span class="comment"># 对每一个点乘频数和原来直方图中的间距，以得到好的拟合的效果。</span></span><br><span class="line">lines<span class="punctuation">(</span>xfit<span class="punctuation">,</span> yfit<span class="punctuation">,</span> col<span class="operator">=</span><span class="string">&quot;blue&quot;</span><span class="punctuation">,</span> lwd<span class="operator">=</span><span class="number">2</span><span class="punctuation">)</span> </span><br><span class="line">box<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">par<span class="punctuation">(</span>opar<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs R">opar <span class="hljs-operator">&lt;-</span> par<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><br><br>par<span class="hljs-punctuation">(</span>mfrow<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">2</span><span class="hljs-punctuation">,</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <span class="hljs-comment"># 绘制2X2的图像，方便展示</span><br><br><span class="hljs-comment"># 绘图</span><br><span class="hljs-comment">## 简单直方图</span><br>hist<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">)</span><br><span class="hljs-comment">## 指定组数和颜色</span><br>hist<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">,</span> <br>     breaks<span class="hljs-operator">=</span><span class="hljs-number">12</span><span class="hljs-punctuation">,</span> <br>     col<span class="hljs-operator">=</span><span class="hljs-string">&quot;red&quot;</span><span class="hljs-punctuation">,</span> <br>     xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Miles Per Gallon&quot;</span><span class="hljs-punctuation">,</span> <br>     main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Colored histogram with 12 bins&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-comment">## 添加轴须图</span><br>hist<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">,</span> <br>     freq<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> <br>     breaks<span class="hljs-operator">=</span><span class="hljs-number">12</span><span class="hljs-punctuation">,</span> <br>     col<span class="hljs-operator">=</span><span class="hljs-string">&quot;red&quot;</span><span class="hljs-punctuation">,</span> <br>     xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Miles Per Gallon&quot;</span><span class="hljs-punctuation">,</span> <br>     main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Histogram, rug plot, density curve&quot;</span><span class="hljs-punctuation">)</span><br>rug<span class="hljs-punctuation">(</span>jitter<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <br>lines<span class="hljs-punctuation">(</span>density<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> col<span class="hljs-operator">=</span><span class="hljs-string">&quot;blue&quot;</span><span class="hljs-punctuation">,</span> lwd<span class="hljs-operator">=</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span><br><span class="hljs-comment">## 添加正态密度曲线和外框</span><br>x <span class="hljs-operator">&lt;-</span> mtcars<span class="hljs-operator">$</span>mpg <br>h <span class="hljs-operator">&lt;-</span> hist<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> <br>        breaks<span class="hljs-operator">=</span><span class="hljs-number">12</span><span class="hljs-punctuation">,</span> <br>        col<span class="hljs-operator">=</span><span class="hljs-string">&quot;red&quot;</span><span class="hljs-punctuation">,</span> <br>        xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Miles Per Gallon&quot;</span><span class="hljs-punctuation">,</span> <br>        main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Histogram with normal curve and box&quot;</span><span class="hljs-punctuation">)</span> <br>xfit<span class="hljs-operator">&lt;-</span>seq<span class="hljs-punctuation">(</span><span class="hljs-built_in">min</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <span class="hljs-built_in">max</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <span class="hljs-built_in">length</span><span class="hljs-operator">=</span><span class="hljs-number">40</span><span class="hljs-punctuation">)</span> <span class="hljs-comment"># 构建正态曲线的x坐标</span><br>yfit<span class="hljs-operator">&lt;-</span>dnorm<span class="hljs-punctuation">(</span>xfit<span class="hljs-punctuation">,</span> mean<span class="hljs-operator">=</span>mean<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> sd<span class="hljs-operator">=</span>sd<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <span class="hljs-comment"># 构建正态曲线的y坐标</span><br>yfit <span class="hljs-operator">&lt;-</span> yfit<span class="hljs-operator">*</span>diff<span class="hljs-punctuation">(</span>h<span class="hljs-operator">$</span>mids<span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-operator">:</span><span class="hljs-number">2</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">)</span><span class="hljs-operator">*</span><span class="hljs-built_in">length</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span> <span class="hljs-comment"># 对每一个点乘频数和原来直方图中的间距，以得到好的拟合的效果。</span><br>lines<span class="hljs-punctuation">(</span>xfit<span class="hljs-punctuation">,</span> yfit<span class="hljs-punctuation">,</span> col<span class="hljs-operator">=</span><span class="hljs-string">&quot;blue&quot;</span><span class="hljs-punctuation">,</span> lwd<span class="hljs-operator">=</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span> <br>box<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><br><br>par<span class="hljs-punctuation">(</span>opar<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720161143177.png" alt="image-20200720161143177" style="zoom:80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720161143177.png" srcset="/img/loading.gif" lazyload alt="image-20200720161143177" style="zoom:80%;" />
 
 <h1 id="四、核密度图"><a href="#四、核密度图" class="headerlink" title="四、核密度图"></a>四、核密度图</h1><p>这部分不涉及使用 <code>ggplot2</code> 的情况</p>
 <h2 id="绘制核密度图"><a href="#绘制核密度图" class="headerlink" title="绘制核密度图"></a>绘制核密度图</h2><p>核密度曲线类似于概率密度曲线，其曲线下的面积是1，因此其y轴上的单位通常是小于1的核密度分布值。对这个核密度曲线求积分的结果为1，也就是其曲线下的面积为1。</p>
@@ -319,9 +559,9 @@
 <li>其中的<code>x</code>是一个数值型向量。由于<code>plot()</code>函数会创建一幅新的图形，所以要向一幅已经存在的图形上叠加一条密度曲线，可以使用<code>lines()</code>函数</li>
 </ul>
 <p>例：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">opar <span class="operator">&lt;-</span> par<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建数据与参数调整</span></span><br><span class="line">par<span class="punctuation">(</span>mfrow<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">)</span> </span><br><span class="line">d <span class="operator">&lt;-</span> density<span class="punctuation">(</span>mtcars<span class="operator">$</span>mpg<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line"><span class="comment">## 默认配置绘制</span></span><br><span class="line">plot<span class="punctuation">(</span>d<span class="punctuation">)</span></span><br><span class="line"><span class="comment">## 修改其它参数后绘制</span></span><br><span class="line">d <span class="operator">&lt;-</span> density<span class="punctuation">(</span>mtcars<span class="operator">$</span>mpg<span class="punctuation">)</span></span><br><span class="line">plot<span class="punctuation">(</span>d<span class="punctuation">,</span> main<span class="operator">=</span><span class="string">&quot;Kernel Density of Miles Per Gallon&quot;</span><span class="punctuation">)</span></span><br><span class="line">polygon<span class="punctuation">(</span>d<span class="punctuation">,</span> col<span class="operator">=</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span> border<span class="operator">=</span><span class="string">&quot;blue&quot;</span><span class="punctuation">)</span> <span class="comment"># 曲线修改为蓝色，使用实心的红色填充曲线下方区域</span></span><br><span class="line">rug<span class="punctuation">(</span>mtcars<span class="operator">$</span>mpg<span class="punctuation">,</span> col<span class="operator">=</span><span class="string">&quot;brown&quot;</span><span class="punctuation">)</span><span class="comment"># 添加棕色的轴须图</span></span><br><span class="line"></span><br><span class="line">par<span class="punctuation">(</span>opar<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs R">opar <span class="hljs-operator">&lt;-</span> par<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 构建数据与参数调整</span><br>par<span class="hljs-punctuation">(</span>mfrow<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">2</span><span class="hljs-punctuation">,</span><span class="hljs-number">1</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <br>d <span class="hljs-operator">&lt;-</span> density<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 绘图</span><br><span class="hljs-comment">## 默认配置绘制</span><br>plot<span class="hljs-punctuation">(</span>d<span class="hljs-punctuation">)</span><br><span class="hljs-comment">## 修改其它参数后绘制</span><br>d <span class="hljs-operator">&lt;-</span> density<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">)</span><br>plot<span class="hljs-punctuation">(</span>d<span class="hljs-punctuation">,</span> main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Kernel Density of Miles Per Gallon&quot;</span><span class="hljs-punctuation">)</span><br>polygon<span class="hljs-punctuation">(</span>d<span class="hljs-punctuation">,</span> col<span class="hljs-operator">=</span><span class="hljs-string">&quot;red&quot;</span><span class="hljs-punctuation">,</span> border<span class="hljs-operator">=</span><span class="hljs-string">&quot;blue&quot;</span><span class="hljs-punctuation">)</span> <span class="hljs-comment"># 曲线修改为蓝色，使用实心的红色填充曲线下方区域</span><br>rug<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">,</span> col<span class="hljs-operator">=</span><span class="hljs-string">&quot;brown&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-comment"># 添加棕色的轴须图</span><br><br>par<span class="hljs-punctuation">(</span>opar<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720164323785.png" alt="image-20200720164323785" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720164323785.png" srcset="/img/loading.gif" lazyload alt="image-20200720164323785" style="zoom:67%;" />
 
 <ul>
 <li><code>polygon()</code>函数根据顶点的<em>x</em>和<em>y</em>坐标（本例中由<code>density()</code>函数提供）绘制了多边形。</li>
@@ -353,15 +593,15 @@
 </tr>
 </tbody></table>
 <p>例：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">opar <span class="operator">&lt;-</span> par<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置参数及构建数据</span></span><br><span class="line">library<span class="punctuation">(</span>sm<span class="punctuation">)</span> </span><br><span class="line">attach<span class="punctuation">(</span>mtcars<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line"><span class="comment">## 创建分组因子</span></span><br><span class="line"><span class="comment">## 变量cyl是一个以4、6或8编码的数值型变量。为了向图形提供值的标签，这里cyl转换为名为cyl.f的因子。</span></span><br><span class="line">cyl.f <span class="operator">&lt;-</span> factor<span class="punctuation">(</span>cyl<span class="punctuation">,</span> levels<span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">4</span><span class="punctuation">,</span><span class="number">6</span><span class="punctuation">,</span><span class="number">8</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">                labels <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;4 cylinder&quot;</span><span class="punctuation">,</span> <span class="string">&quot;6 cylinder&quot;</span><span class="punctuation">,</span></span><br><span class="line">                           <span class="string">&quot;8 cylinder&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span> </span><br><span class="line"><span class="comment">## 绘制密度图</span></span><br><span class="line">sm.density.compare<span class="punctuation">(</span>mpg<span class="punctuation">,</span> cyl<span class="punctuation">,</span> xlab<span class="operator">=</span><span class="string">&quot;Miles Per Gallon&quot;</span><span class="punctuation">)</span> </span><br><span class="line">title<span class="punctuation">(</span>main<span class="operator">=</span><span class="string">&quot;MPG Distribution by Car Cylinders&quot;</span><span class="punctuation">)</span> </span><br><span class="line"><span class="comment">## 通过鼠标单击添加图例</span></span><br><span class="line">colfill<span class="operator">&lt;-</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">2</span><span class="operator">:</span><span class="punctuation">(</span><span class="number">1</span><span class="operator">+</span><span class="built_in">length</span><span class="punctuation">(</span>levels<span class="punctuation">(</span>cyl.f<span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span> </span><br><span class="line">legend<span class="punctuation">(</span>locator<span class="punctuation">(</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">,</span> levels<span class="punctuation">(</span>cyl.f<span class="punctuation">)</span><span class="punctuation">,</span> fill<span class="operator">=</span>colfill<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">detach<span class="punctuation">(</span>mtcars<span class="punctuation">)</span></span><br><span class="line">par<span class="punctuation">(</span>opar<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs R">opar <span class="hljs-operator">&lt;-</span> par<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 设置参数及构建数据</span><br>library<span class="hljs-punctuation">(</span>sm<span class="hljs-punctuation">)</span> <br>attach<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 绘图</span><br><span class="hljs-comment">## 创建分组因子</span><br><span class="hljs-comment">## 变量cyl是一个以4、6或8编码的数值型变量。为了向图形提供值的标签，这里cyl转换为名为cyl.f的因子。</span><br>cyl.f <span class="hljs-operator">&lt;-</span> factor<span class="hljs-punctuation">(</span>cyl<span class="hljs-punctuation">,</span> levels<span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span><span class="hljs-number">6</span><span class="hljs-punctuation">,</span><span class="hljs-number">8</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>                labels <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;4 cylinder&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;6 cylinder&quot;</span><span class="hljs-punctuation">,</span><br>                           <span class="hljs-string">&quot;8 cylinder&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <br><span class="hljs-comment">## 绘制密度图</span><br>sm.density.compare<span class="hljs-punctuation">(</span>mpg<span class="hljs-punctuation">,</span> cyl<span class="hljs-punctuation">,</span> xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Miles Per Gallon&quot;</span><span class="hljs-punctuation">)</span> <br>title<span class="hljs-punctuation">(</span>main<span class="hljs-operator">=</span><span class="hljs-string">&quot;MPG Distribution by Car Cylinders&quot;</span><span class="hljs-punctuation">)</span> <br><span class="hljs-comment">## 通过鼠标单击添加图例</span><br>colfill<span class="hljs-operator">&lt;-</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">2</span><span class="hljs-operator">:</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-operator">+</span><span class="hljs-built_in">length</span><span class="hljs-punctuation">(</span>levels<span class="hljs-punctuation">(</span>cyl.f<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <br>legend<span class="hljs-punctuation">(</span>locator<span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> levels<span class="hljs-punctuation">(</span>cyl.f<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> fill<span class="hljs-operator">=</span>colfill<span class="hljs-punctuation">)</span><br><br>detach<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><br>par<span class="hljs-punctuation">(</span>opar<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>对图例部分的说明：首先创建的是一个颜色向量，这里的<code>colfill</code>值为c(2, 3, 4)。然后通过<code>legend()</code>函数向图形上添加一个图例。第一个参数值<code>locator(1)</code>表示用鼠标点击想让图例出现的位置来交互式地放置这个图例。第二个参数值则是由标签组成的字符向量。第三个参数值使用向量<code>colfill</code>为<code>cyl.f</code>的每一个水平指定了一种颜色。</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720172619012.png" alt="image-20200720172619012" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720172619012.png" srcset="/img/loading.gif" lazyload alt="image-20200720172619012" style="zoom: 67%;" />
 
 <h1 id="五、箱线图-Box-Plot"><a href="#五、箱线图-Box-Plot" class="headerlink" title="五、箱线图 (Box Plot)"></a>五、箱线图 (Box Plot)</h1><h2 id="箱线图的标注"><a href="#箱线图的标注" class="headerlink" title="箱线图的标注"></a>箱线图的标注</h2><p>箱线图（又称盒须图）通过绘制连续型变量的五数总括，即最小值、下四分位数（第25百分位数）、中位数（第50百分位数）、上四分位数（第75百分位数）以及最大值，描述了连续型变量的分布。箱线图能够显示出可能为离群点（范围 ±1.5*IQR 以外的值，IQR表示四分位距，即上四分位数与下四分位数的差值）的观测。例如：<code>boxplot(mtcars$mpg, main=&quot;Box plot&quot;, ylab=&quot;Miles per Gallon&quot;) </code></p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720165954929.png" alt="image-20200720165954929"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720165954929.png" srcset="/img/loading.gif" lazyload alt="image-20200720165954929"></p>
 <ul>
 <li>默认情况下，两条须的延伸极限不会超过盒型各端加1.5倍四分位距的范围。此范围以外的值将以点 (outlier) 来表示</li>
 </ul>
@@ -435,25 +675,25 @@
 <li>公式<code>y ~ A*B</code>则将为类别型变量A和B所有水平的两两组合生成数值型变量y的箱线图</li>
 </ul>
 <p>例：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x <span class="operator">&lt;-</span> Arthritis<span class="operator">$</span>Sex</span><br><span class="line">x <span class="operator">&lt;-</span> factor<span class="punctuation">(</span>x<span class="punctuation">)</span></span><br><span class="line">f <span class="operator">&lt;-</span> Arthritis<span class="operator">$</span>Age</span><br><span class="line">boxplot<span class="punctuation">(</span>f<span class="operator">~</span>x<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs R">x <span class="hljs-operator">&lt;-</span> Arthritis<span class="hljs-operator">$</span>Sex<br>x <span class="hljs-operator">&lt;-</span> factor<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><br>f <span class="hljs-operator">&lt;-</span> Arthritis<span class="hljs-operator">$</span>Age<br>boxplot<span class="hljs-punctuation">(</span>f<span class="hljs-operator">~</span>x<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
 
 
 <h3 id="1-单组箱线图"><a href="#1-单组箱线图" class="headerlink" title="1. 单组箱线图"></a>1. 单组箱线图</h3><p>直接使用 <code>boxplot(x)</code> 实现：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">144</span><span class="punctuation">,</span><span class="number">166</span><span class="punctuation">,</span><span class="number">163</span><span class="punctuation">,</span><span class="number">143</span><span class="punctuation">,</span><span class="number">152</span><span class="punctuation">,</span><span class="number">169</span><span class="punctuation">,</span><span class="number">130</span><span class="punctuation">,</span><span class="number">159</span><span class="punctuation">,</span><span class="number">160</span><span class="punctuation">,</span><span class="number">175</span><span class="punctuation">,</span><span class="number">161</span><span class="punctuation">,</span><span class="number">170</span><span class="punctuation">,</span> <span class="number">146</span><span class="punctuation">,</span><span class="number">159</span><span class="punctuation">,</span><span class="number">150</span><span class="punctuation">,</span><span class="number">183</span><span class="punctuation">,</span><span class="number">165</span><span class="punctuation">,</span><span class="number">146</span><span class="punctuation">,</span><span class="number">169</span><span class="punctuation">)</span></span><br><span class="line">boxplot<span class="punctuation">(</span>x<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs R">x <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">144</span><span class="hljs-punctuation">,</span><span class="hljs-number">166</span><span class="hljs-punctuation">,</span><span class="hljs-number">163</span><span class="hljs-punctuation">,</span><span class="hljs-number">143</span><span class="hljs-punctuation">,</span><span class="hljs-number">152</span><span class="hljs-punctuation">,</span><span class="hljs-number">169</span><span class="hljs-punctuation">,</span><span class="hljs-number">130</span><span class="hljs-punctuation">,</span><span class="hljs-number">159</span><span class="hljs-punctuation">,</span><span class="hljs-number">160</span><span class="hljs-punctuation">,</span><span class="hljs-number">175</span><span class="hljs-punctuation">,</span><span class="hljs-number">161</span><span class="hljs-punctuation">,</span><span class="hljs-number">170</span><span class="hljs-punctuation">,</span> <span class="hljs-number">146</span><span class="hljs-punctuation">,</span><span class="hljs-number">159</span><span class="hljs-punctuation">,</span><span class="hljs-number">150</span><span class="hljs-punctuation">,</span><span class="hljs-number">183</span><span class="hljs-punctuation">,</span><span class="hljs-number">165</span><span class="hljs-punctuation">,</span><span class="hljs-number">146</span><span class="hljs-punctuation">,</span><span class="hljs-number">169</span><span class="hljs-punctuation">)</span><br>boxplot<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720171215247.png" alt="image-20200720171215247" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720171215247.png" srcset="/img/loading.gif" lazyload alt="image-20200720171215247" style="zoom:50%;" />
 
 <h3 id="2-多组箱线图"><a href="#2-多组箱线图" class="headerlink" title="2. 多组箱线图"></a>2. 多组箱线图</h3><h4 id="单交叉因子和凹槽"><a href="#单交叉因子和凹槽" class="headerlink" title="单交叉因子和凹槽"></a>单交叉因子和凹槽</h4><p>需要设置 <code>boxplot</code> 中的 <code>formula</code>, <code>data</code> 等参数：</p>
 <p>当 <code>notch = TRUE</code> 的时候，箱线图含凹槽</p>
 <p>绘图代码：使用了预设数据集 <code>mtcars</code> 中的 <code>mpg</code> , <code>cyl</code></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 经典箱线图</span></span><br><span class="line">boxplot<span class="punctuation">(</span>mpg <span class="operator">~</span> cyl<span class="punctuation">,</span> data<span class="operator">=</span>mtcars<span class="punctuation">,</span> </span><br><span class="line">        main<span class="operator">=</span><span class="string">&quot;Car Mileage Data&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        xlab<span class="operator">=</span><span class="string">&quot;Number of Cylinders&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        ylab<span class="operator">=</span><span class="string">&quot;Miles Per Gallon&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment"># 含凹槽的箱线图</span></span><br><span class="line">boxplot<span class="punctuation">(</span>mpg <span class="operator">~</span> cyl<span class="punctuation">,</span> data<span class="operator">=</span>mtcars<span class="punctuation">,</span> </span><br><span class="line">        notch<span class="operator">=</span><span class="literal">TRUE</span><span class="punctuation">,</span> </span><br><span class="line">        varwidth<span class="operator">=</span><span class="literal">TRUE</span><span class="punctuation">,</span> </span><br><span class="line">        col<span class="operator">=</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        main<span class="operator">=</span><span class="string">&quot;Car Mileage Data&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        xlab<span class="operator">=</span><span class="string">&quot;Number of Cylinders&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        ylab<span class="operator">=</span><span class="string">&quot;Miles Per Gallon&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 经典箱线图</span><br>boxplot<span class="hljs-punctuation">(</span>mpg <span class="hljs-operator">~</span> cyl<span class="hljs-punctuation">,</span> data<span class="hljs-operator">=</span>mtcars<span class="hljs-punctuation">,</span> <br>        main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Car Mileage Data&quot;</span><span class="hljs-punctuation">,</span> <br>        xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Number of Cylinders&quot;</span><span class="hljs-punctuation">,</span> <br>        ylab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Miles Per Gallon&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-comment"># 含凹槽的箱线图</span><br>boxplot<span class="hljs-punctuation">(</span>mpg <span class="hljs-operator">~</span> cyl<span class="hljs-punctuation">,</span> data<span class="hljs-operator">=</span>mtcars<span class="hljs-punctuation">,</span> <br>        notch<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> <br>        varwidth<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> <br>        col<span class="hljs-operator">=</span><span class="hljs-string">&quot;red&quot;</span><span class="hljs-punctuation">,</span> <br>        main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Car Mileage Data&quot;</span><span class="hljs-punctuation">,</span> <br>        xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Number of Cylinders&quot;</span><span class="hljs-punctuation">,</span> <br>        ylab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Miles Per Gallon&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720173458422.png" alt="image-20200720173458422"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720173458422.png" srcset="/img/loading.gif" lazyload alt="image-20200720173458422"></p>
 <h4 id="多交叉因子"><a href="#多交叉因子" class="headerlink" title="多交叉因子"></a>多交叉因子</h4><p>绘图代码：使用了预设数据集 <code>mtcars</code> 中的 <code>mpg</code> , <code>cyl</code> 和 <code>am</code></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建汽缸数量的因子</span></span><br><span class="line">mtcars<span class="operator">$</span>cyl.f <span class="operator">&lt;-</span> factor<span class="punctuation">(</span>mtcars<span class="operator">$</span>cyl<span class="punctuation">,</span> </span><br><span class="line">                       levels<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">4</span><span class="punctuation">,</span><span class="number">6</span><span class="punctuation">,</span><span class="number">8</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">                       labels<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;4&quot;</span><span class="punctuation">,</span><span class="string">&quot;6&quot;</span><span class="punctuation">,</span><span class="string">&quot;8&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span> </span><br><span class="line"><span class="comment"># 创建变速箱类型的因子</span></span><br><span class="line">mtcars<span class="operator">$</span>am.f <span class="operator">&lt;-</span> factor<span class="punctuation">(</span>mtcars<span class="operator">$</span>am<span class="punctuation">,</span> </span><br><span class="line">                      levels<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">                      labels<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;auto&quot;</span><span class="punctuation">,</span> <span class="string">&quot;standard&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment"># 生成箱线图</span></span><br><span class="line">boxplot<span class="punctuation">(</span>mpg <span class="operator">~</span> am.f <span class="operator">*</span>cyl.f<span class="punctuation">,</span> </span><br><span class="line">        data<span class="operator">=</span>mtcars<span class="punctuation">,</span> </span><br><span class="line">        varwidth<span class="operator">=</span><span class="literal">TRUE</span><span class="punctuation">,</span> </span><br><span class="line">        col<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;gold&quot;</span><span class="punctuation">,</span><span class="string">&quot;darkgreen&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">        main<span class="operator">=</span><span class="string">&quot;MPG Distribution by Auto Type&quot;</span><span class="punctuation">,</span> </span><br><span class="line">        xlab<span class="operator">=</span><span class="string">&quot;Auto Type&quot;</span><span class="punctuation">,</span> ylab<span class="operator">=</span><span class="string">&quot;Miles Per Gallon&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 创建汽缸数量的因子</span><br>mtcars<span class="hljs-operator">$</span>cyl.f <span class="hljs-operator">&lt;-</span> factor<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>cyl<span class="hljs-punctuation">,</span> <br>                       levels<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span><span class="hljs-number">6</span><span class="hljs-punctuation">,</span><span class="hljs-number">8</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>                       labels<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;4&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;6&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;8&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <br><span class="hljs-comment"># 创建变速箱类型的因子</span><br>mtcars<span class="hljs-operator">$</span>am.f <span class="hljs-operator">&lt;-</span> factor<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>am<span class="hljs-punctuation">,</span> <br>                      levels<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">0</span><span class="hljs-punctuation">,</span><span class="hljs-number">1</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>                      labels<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;auto&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;standard&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><span class="hljs-comment"># 生成箱线图</span><br>boxplot<span class="hljs-punctuation">(</span>mpg <span class="hljs-operator">~</span> am.f <span class="hljs-operator">*</span>cyl.f<span class="hljs-punctuation">,</span> <br>        data<span class="hljs-operator">=</span>mtcars<span class="hljs-punctuation">,</span> <br>        varwidth<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> <br>        col<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;gold&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;darkgreen&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>        main<span class="hljs-operator">=</span><span class="hljs-string">&quot;MPG Distribution by Auto Type&quot;</span><span class="hljs-punctuation">,</span> <br>        xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Auto Type&quot;</span><span class="hljs-punctuation">,</span> ylab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Miles Per Gallon&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720173736995.png" alt="image-20200720173736995" style="zoom:80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720173736995.png" srcset="/img/loading.gif" lazyload alt="image-20200720173736995" style="zoom:80%;" />
 
 <h1 id="六、点图-Point-Plot-Dot-Chart"><a href="#六、点图-Point-Plot-Dot-Chart" class="headerlink" title="六、点图 (Point Plot, Dot Chart)"></a>六、点图 (Point Plot, Dot Chart)</h1><h2 id="绘制经典点图"><a href="#绘制经典点图" class="headerlink" title="绘制经典点图"></a>绘制经典点图</h2><p>点图提供了一种在简单水平刻度上绘制大量有标签值的方法。你可以使用<code>dotchart()</code>函数创建点图，格式为：<code>dotchart(x, labels=)</code></p>
 <table>
@@ -477,80 +717,435 @@
 </tr>
 </tbody></table>
 <p>例：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dotchart<span class="punctuation">(</span>mtcars<span class="operator">$</span>mpg<span class="punctuation">,</span> labels<span class="operator">=</span>row.names<span class="punctuation">(</span>mtcars<span class="punctuation">)</span><span class="punctuation">,</span> cex<span class="operator">=</span><span class="number">.7</span><span class="punctuation">,</span> </span><br><span class="line">         main<span class="operator">=</span><span class="string">&quot;Gas Mileage for Car Models&quot;</span><span class="punctuation">,</span> </span><br><span class="line">         xlab<span class="operator">=</span><span class="string">&quot;Miles Per Gallon&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R">dotchart<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">,</span> labels<span class="hljs-operator">=</span>row.names<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> cex<span class="hljs-operator">=</span><span class="hljs-number">.7</span><span class="hljs-punctuation">,</span> <br>         main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Gas Mileage for Car Models&quot;</span><span class="hljs-punctuation">,</span> <br>         xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Miles Per Gallon&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720175338024.png" alt="image-20200720175338024"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720175338024.png" srcset="/img/loading.gif" lazyload alt="image-20200720175338024"></p>
 <h2 id="分组、排序、着色后的点图"><a href="#分组、排序、着色后的点图" class="headerlink" title="分组、排序、着色后的点图"></a>分组、排序、着色后的点图</h2><p>例：</p>
 <p>涉及的数据：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&gt;</span> x <span class="operator">&lt;-</span> mtcars<span class="punctuation">[</span>order<span class="punctuation">(</span>mtcars<span class="operator">$</span>mpg<span class="punctuation">)</span><span class="punctuation">,</span><span class="punctuation">]</span></span><br><span class="line"><span class="operator">&gt;</span> x</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> x <span class="hljs-operator">&lt;-</span> mtcars<span class="hljs-punctuation">[</span>order<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><span class="hljs-punctuation">]</span><br><span class="hljs-operator">&gt;</span> x<br></code></pre></td></tr></table></figure>
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720175808166.png" alt="image-20200720175808166" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720175808166.png" srcset="/img/loading.gif" lazyload alt="image-20200720175808166" style="zoom:67%;" />
 
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 根据每加仑汽油行驶英里数（从最低到最高）对数据框mtcars进行排序，结果保存为数据框x</span></span><br><span class="line">x <span class="operator">&lt;-</span> mtcars<span class="punctuation">[</span>order<span class="punctuation">(</span>mtcars<span class="operator">$</span>mpg<span class="punctuation">)</span><span class="punctuation">,</span><span class="punctuation">]</span> </span><br><span class="line"><span class="comment"># 将x中的数值向量cyl转换为一个因子</span></span><br><span class="line">x<span class="operator">$</span>cyl <span class="operator">&lt;-</span> factor<span class="punctuation">(</span>x<span class="operator">$</span>cyl<span class="punctuation">)</span></span><br><span class="line"><span class="comment"># 添加一个字符型向量（color）到数据框x中，根据cyl的值，它所含的值为&quot;red&quot;、&quot;blue&quot;或&quot;darkgreen&quot;</span></span><br><span class="line">x<span class="operator">$</span>color<span class="punctuation">[</span>x<span class="operator">$</span>cyl<span class="operator">==</span><span class="number">4</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;red&quot;</span> </span><br><span class="line">x<span class="operator">$</span>color<span class="punctuation">[</span>x<span class="operator">$</span>cyl<span class="operator">==</span><span class="number">6</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;blue&quot;</span> </span><br><span class="line">x<span class="operator">$</span>color<span class="punctuation">[</span>x<span class="operator">$</span>cyl<span class="operator">==</span><span class="number">8</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="string">&quot;darkgreen&quot;</span> </span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line">dotchart<span class="punctuation">(</span>x<span class="operator">$</span>mpg<span class="punctuation">,</span> </span><br><span class="line">         labels <span class="operator">=</span> row.names<span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">,</span> <span class="comment"># 各数据点的标签取自数据框的行名（车辆型号）</span></span><br><span class="line">         cex<span class="operator">=</span><span class="number">.7</span><span class="punctuation">,</span> </span><br><span class="line">         groups <span class="operator">=</span> x<span class="operator">$</span>cyl<span class="punctuation">,</span>  <span class="comment"># 数据点根据汽缸数量分组</span></span><br><span class="line">         gcolor <span class="operator">=</span> <span class="string">&quot;black&quot;</span><span class="punctuation">,</span>  <span class="comment"># 数字4、6和8以黑色显示</span></span><br><span class="line">         color <span class="operator">=</span> x<span class="operator">$</span>color<span class="punctuation">,</span> <span class="comment"># 点和标签的颜色来自向量color</span></span><br><span class="line">         pch<span class="operator">=</span><span class="number">19</span><span class="punctuation">,</span> </span><br><span class="line">         main <span class="operator">=</span> <span class="string">&quot;Gas Mileage for Car Models\ngrouped by cylinder&quot;</span><span class="punctuation">,</span> </span><br><span class="line">         xlab <span class="operator">=</span> <span class="string">&quot;Miles Per Gallon&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 根据每加仑汽油行驶英里数（从最低到最高）对数据框mtcars进行排序，结果保存为数据框x</span><br>x <span class="hljs-operator">&lt;-</span> mtcars<span class="hljs-punctuation">[</span>order<span class="hljs-punctuation">(</span>mtcars<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><span class="hljs-punctuation">]</span> <br><span class="hljs-comment"># 将x中的数值向量cyl转换为一个因子</span><br>x<span class="hljs-operator">$</span>cyl <span class="hljs-operator">&lt;-</span> factor<span class="hljs-punctuation">(</span>x<span class="hljs-operator">$</span>cyl<span class="hljs-punctuation">)</span><br><span class="hljs-comment"># 添加一个字符型向量（color）到数据框x中，根据cyl的值，它所含的值为&quot;red&quot;、&quot;blue&quot;或&quot;darkgreen&quot;</span><br>x<span class="hljs-operator">$</span>color<span class="hljs-punctuation">[</span>x<span class="hljs-operator">$</span>cyl<span class="hljs-operator">==</span><span class="hljs-number">4</span><span class="hljs-punctuation">]</span> <span class="hljs-operator">&lt;-</span> <span class="hljs-string">&quot;red&quot;</span> <br>x<span class="hljs-operator">$</span>color<span class="hljs-punctuation">[</span>x<span class="hljs-operator">$</span>cyl<span class="hljs-operator">==</span><span class="hljs-number">6</span><span class="hljs-punctuation">]</span> <span class="hljs-operator">&lt;-</span> <span class="hljs-string">&quot;blue&quot;</span> <br>x<span class="hljs-operator">$</span>color<span class="hljs-punctuation">[</span>x<span class="hljs-operator">$</span>cyl<span class="hljs-operator">==</span><span class="hljs-number">8</span><span class="hljs-punctuation">]</span> <span class="hljs-operator">&lt;-</span> <span class="hljs-string">&quot;darkgreen&quot;</span> <br><span class="hljs-comment"># 绘图</span><br>dotchart<span class="hljs-punctuation">(</span>x<span class="hljs-operator">$</span>mpg<span class="hljs-punctuation">,</span> <br>         labels <span class="hljs-operator">=</span> row.names<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <span class="hljs-comment"># 各数据点的标签取自数据框的行名（车辆型号）</span><br>         cex<span class="hljs-operator">=</span><span class="hljs-number">.7</span><span class="hljs-punctuation">,</span> <br>         groups <span class="hljs-operator">=</span> x<span class="hljs-operator">$</span>cyl<span class="hljs-punctuation">,</span>  <span class="hljs-comment"># 数据点根据汽缸数量分组</span><br>         gcolor <span class="hljs-operator">=</span> <span class="hljs-string">&quot;black&quot;</span><span class="hljs-punctuation">,</span>  <span class="hljs-comment"># 数字4、6和8以黑色显示</span><br>         color <span class="hljs-operator">=</span> x<span class="hljs-operator">$</span>color<span class="hljs-punctuation">,</span> <span class="hljs-comment"># 点和标签的颜色来自向量color</span><br>         pch<span class="hljs-operator">=</span><span class="hljs-number">19</span><span class="hljs-punctuation">,</span> <br>         main <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Gas Mileage for Car Models\ngrouped by cylinder&quot;</span><span class="hljs-punctuation">,</span> <br>         xlab <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Miles Per Gallon&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720180038375.png" alt="image-20200720180038375"></p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>02. R &lt;- 基本绘图Ⅰ</p><p><a href="https://zhenyumi.github.io/posts/9d6e3895/">https://zhenyumi.github.io/posts/9d6e3895/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-07-14</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-08-02</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E9%80%9F%E6%9F%A5/">速查</a><a class="link-muted mr-2" rel="tag" href="/tags/R/">R</a><a class="link-muted mr-2" rel="tag" href="/tags/Statistics/">Statistics</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/d44c2e21/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">L16 Cell communication via G-protein coupled receptor</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/a3d86d96/"><span class="level-item">常用颜色代码</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">195</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">27</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-06T11:24:02.000Z">2021-06-06</time></p><p class="title"><a href="/posts/ce78770f/">L10 Synaptic plasticity</a></p><p class="categories"><a href="/categories/Academic-Notebook/">Academic Notebook</a> / <a href="/categories/Academic-Notebook/Neurobiology/">Neurobiology</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
-            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
-                renderMathInElement(element);
-            });
-        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
-            'HTML-CSS': {
-                matchFontHeight: false
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720180038375.png" srcset="/img/loading.gif" lazyload alt="image-20200720180038375"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" class="category-chain-item">软件使用总结</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/" class="category-chain-item">R</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E9%80%9F%E6%9F%A5/" class="print-no-link">#速查</a>
+      
+        <a href="/tags/R/" class="print-no-link">#R</a>
+      
+        <a href="/tags/Statistics/" class="print-no-link">#Statistics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>02. R &lt;- 基本绘图Ⅰ</div>
+      <div>https://zhenyumi.github.io/posts/9d6e3895/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月14日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2020年8月2日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/d44c2e21/" title="L16 Cell communication via G-protein coupled receptor">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L16 Cell communication via G-protein coupled receptor</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/a3d86d96/" title="常用颜色代码">
+                        <span class="hidden-mobile">常用颜色代码</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
             },
-            SVG: {
-                matchFontHeight: false
+            loader : {
+              load: ['ui/lazy']
             },
-            CommonHTML: {
-                matchFontHeight: false
-            },
-            tex2jax: {
-                inlineMath: [
-                    ['$','$'],
-                    ['\\(','\\)']
-                ]
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
             }
-        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

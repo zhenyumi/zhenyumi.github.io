@@ -1,50 +1,375 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>L8 Synaptic transmission - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Synaptic transmission, neurotransmitters and so on."><meta property="og:type" content="blog"><meta property="og:title" content="L8 Synaptic transmission"><meta property="og:url" content="https://zhenyumi.github.io/posts/ad950dfa/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="Synaptic transmission, neurotransmitters and so on."><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><meta property="article:published_time" content="2021-04-16T14:42:19.000Z"><meta property="article:modified_time" content="2021-04-16T14:42:19.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="Neurobiology"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/ad950dfa/"},"headline":"L8 Synaptic transmission","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"],"datePublished":"2021-04-16T14:42:19.000Z","dateModified":"2021-04-16T14:42:19.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"Synaptic transmission, neurotransmitters and so on."}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/ad950dfa/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<!DOCTYPE html>
+<html lang="zh-CN" >
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png" alt="L8 Synaptic transmission"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-04-16T14:42:19.000Z" title="2021/4/17 00:42:19">2021-04-16</time>发表</span><span class="level-item"><time dateTime="2021-04-16T14:42:19.000Z" title="2021/4/17 00:42:19">2021-04-16</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/Academic-Notebook/">Academic Notebook</a><span> / </span><a class="link-muted" href="/categories/Academic-Notebook/Neurobiology/">Neurobiology</a></span><span class="level-item">1 小时读完 (大约8718个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">L8 Synaptic transmission</h1><div class="content"><h1 id="一、Electrical-synapses"><a href="#一、Electrical-synapses" class="headerlink" title="一、Electrical synapses"></a>一、Electrical synapses</h1><p>The many kinds of synapses within the human brain fall into two general classes: <strong>electrical synapses</strong> and <strong>chemical synapses</strong>. </p>
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Synaptic transmission, neurotransmitters and so on.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L8 Synaptic transmission">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/ad950dfa/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Synaptic transmission, neurotransmitters and so on.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160420798.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160504583.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160510206.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160534107.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160648707.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160827019.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160922153.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160922153.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161638416.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161704676.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161936190.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161951712.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162208807.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162219622.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162309210.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162328449.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162437952.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162442735.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162500750.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163341198.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163401311.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163426597.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163434272.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163512833.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163551568.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163558953.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163612163.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163640146.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164251189.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164326635.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164415132.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164441562.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164527809.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164532280.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164613383.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164618483.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165006151.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165046759.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165123419.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165340560.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165357864.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165420790.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416143456358.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407181618905.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407181822679.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407181822679.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407185438440.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000357830.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000531310.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000558590.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000717107.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000821466.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001034436.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001432508.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001558213.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001631624.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001703193.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002139131.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416145850996.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416145943600.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002225416.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002302654.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002712904.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002748097.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002800838.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408003831754.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150143685.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150652720.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150714801.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150950618.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151102385.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151110551.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151346671.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151518324.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151657785.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151755144.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416152501622.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416152534014.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416153543481.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416153606652.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416153656716.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416202029544.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416202112148.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416202131329.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203402531.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203546049.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203631803.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203807538.png">
+<meta property="article:published_time" content="2021-04-16T14:42:19.000Z">
+<meta property="article:modified_time" content="2021-04-16T14:42:19.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Neurobiology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160420798.png">
+  
+  
+  
+  <title>L8 Synaptic transmission - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L8 Synaptic transmission</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-04-16 22:42" pubdate>
+          2021年4月16日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          10 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L8 Synaptic transmission</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Electrical-synapses"><a href="#一、Electrical-synapses" class="headerlink" title="一、Electrical synapses"></a>一、Electrical synapses</h1><p>The many kinds of synapses within the human brain fall into two general classes: <strong>electrical synapses</strong> and <strong>chemical synapses</strong>. </p>
 <p>Although they are a distinct minority, electrical synapses are found in all nervous systems and permit direct, passive flow of electrical current from one neuron to another.</p>
 <p>The membranes of the two communicating neurons (<strong>presynaptic</strong> and <strong>postsynaptic</strong>) come extremely close at the synapse and are actually linked together by an intercellular specialization called a <strong>gap junction</strong>.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160420798.png" alt="image-20200203160420798" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160420798.png" srcset="/img/loading.gif" lazyload alt="image-20200203160420798" style="zoom:50%;" />
 
 <h2 id="Structure-of-electrical-synapses"><a href="#Structure-of-electrical-synapses" class="headerlink" title="Structure of electrical synapses"></a>Structure of electrical synapses</h2><p>Gap junctions contain precisely aligned, paired channels called <strong>connexons</strong>（接合质）.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160504583.png" alt="image-20200203160504583" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160504583.png" srcset="/img/loading.gif" lazyload alt="image-20200203160504583" style="zoom:50%;" />
 
 <p>Connexons are present in the membranes of both the pre- and postsynaptic neurons.</p>
 <p>Six presynaptic <strong>connexins</strong> align with six postsynaptic connexins to form a pore that connects the two cells.</p>
 <p>The pore of a connexon channel is much larger than the pores of the voltage-gated, which permits ATP and other important intracellular metabolites, such as second messengers, to be transferred between neurons.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160510206.png" alt="image-20200203160510206" style="zoom: 55%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160510206.png" srcset="/img/loading.gif" lazyload alt="image-20200203160510206" style="zoom: 55%;" />
 
 <p>Connexons are composed of a special family of ion channel proteins, the <strong>connexins</strong>. </p>
 <p>There are several different types of connexins, found in different cell types and yielding gap junctions with diverse physiological properties.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160534107.png" alt="image-20200203160534107" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160534107.png" srcset="/img/loading.gif" lazyload alt="image-20200203160534107" style="zoom:50%;" />
 
 <h2 id="Function-of-electrical-synapses"><a href="#Function-of-electrical-synapses" class="headerlink" title="Function of electrical synapses"></a>Function of electrical synapses</h2><p>Electrical synapses work by allowing ionic current to flow passively through the gap junction pores from one neuron to another.</p>
 <p>The usual source of this current is the potential difference generated locally by the presynaptic action potential.</p>
@@ -60,7 +385,7 @@
 </ul>
 </li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160648707.png" alt="image-20200203160648707" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160648707.png" srcset="/img/loading.gif" lazyload alt="image-20200203160648707" style="zoom:50%;" />
 
 <p>A more general purpose of electrical synapses is to synchronize electrical activity among populations of neurons.</p>
 <ul>
@@ -68,12 +393,12 @@
 <li>Electrical synapses allow synchronization of electrical activity in hippocampal interneurons.</li>
 <li>Electrical transmission between certain hormone-secreting neurons within the hypothalamus ensures that all cells fire action potentials at about the same time, thus facilitating a burst of hormone secretion into the circulation.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160827019.png" alt="image-20200203160827019" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160827019.png" srcset="/img/loading.gif" lazyload alt="image-20200203160827019" style="zoom:50%;" />
 
 <h1 id="二、Chemical-synapses"><a href="#二、Chemical-synapses" class="headerlink" title="二、Chemical synapses"></a>二、Chemical synapses</h1><p>In a <strong>chemical synapse</strong>, the space between the pre- and postsynaptic neurons is substantially greater than at electrical synapses and is called the <strong>synaptic cleft</strong>. </p>
 <p>The key feature of all chemical synapses is the presence of small, membranebounded organelles called <strong>synaptic vesicles</strong> within the presynaptic terminal.</p>
 <p>The synaptic vesicles are filled with one or more <strong>neurotransmitters</strong>, which are secreted from the presynaptic neuron, and act as messengers between the communicating neurons.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160922153.png" alt="image-20200203160922153" style="zoom: 80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160922153.png" srcset="/img/loading.gif" lazyload alt="image-20200203160922153" style="zoom: 80%;" />
 
 <hr>
 <p>Structure of chemical synapses</p>
@@ -91,7 +416,7 @@
 <li>Removal of neurotransmitter by glial uptake or enzymatic degradation</li>
 <li>Retrieval of vesicular membrane from plasma membrane</li>
 </ol>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160922153.png" alt="image-20200203160922153" style="zoom: 80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203160922153.png" srcset="/img/loading.gif" lazyload alt="image-20200203160922153" style="zoom: 80%;" />
 
 <h2 id="Chemical-neurotransmission"><a href="#Chemical-neurotransmission" class="headerlink" title="Chemical neurotransmission"></a>Chemical neurotransmission</h2><p>Can electrical information be transferred from one neuron to the next by means of chemical signaling？ </p>
 <p>In 1926, the German physiologist <strong>Otto Loewi</strong> performed a key experiment that supported this idea, which earned for him the Nobel Prize in Physiology or Medicine in 1936.</p>
@@ -103,7 +428,7 @@
 <li>Remarkably, even though the vagus nerve of the second heart had not been stimulated, its beat also slowed when exposed to the perfusate from the first heart.</li>
 </ul>
 <p>The vagus nerve regulates the heart rate by releasing a chemical that accumulates in the perfusate: “vagus substance,” later shown to be <strong>acetylcholine</strong> (ACh)–a neurotransmitter.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161638416.png" alt="image-20200203161638416"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161638416.png" srcset="/img/loading.gif" lazyload alt="image-20200203161638416"></p>
 <h2 id="Criteria-that-define-a-neurotransmitter"><a href="#Criteria-that-define-a-neurotransmitter" class="headerlink" title="Criteria that define a neurotransmitter"></a>Criteria that define a neurotransmitter</h2><ol>
 <li><p>The substance must be present within the presynaptic neuron.</p>
 </li>
@@ -112,7 +437,7 @@
 <li><p>Specific receptors for the substance must be present on the postsynaptic cell.</p>
 </li>
 </ol>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161704676.png" alt="image-20200203161704676"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161704676.png" srcset="/img/loading.gif" lazyload alt="image-20200203161704676"></p>
 <h2 id="Neurotransmitter"><a href="#Neurotransmitter" class="headerlink" title="Neurotransmitter"></a>Neurotransmitter</h2><p>These have led to the identification of more than 100 different neurotransmitters, which can be classified into two broad categories: <strong>small-molecule</strong> <strong>neurotransmitters</strong> and <strong>neuropeptides</strong>. </p>
 <p>In general, small-molecule neurotransmitters mediate rapid synaptic actions, whereas neuropeptides tend to modulate slower, ongoing synaptic functions.</p>
 <p>Until relatively recently, it was believed that a given neuron produced only a single type of neurotransmitter.</p>
@@ -127,9 +452,9 @@
 <ul>
 <li>Most small-molecule neurotransmitters are packaged in vesicles 40–60 nm in diameter, the centers of which appear <u>clear</u> in electron micrographs; accordingly these vesicles are referred to as <strong>small clear-core vesicles</strong>.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161936190.png" alt="image-20200203161936190" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161936190.png" srcset="/img/loading.gif" lazyload alt="image-20200203161936190" style="zoom:50%;" />
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161951712.png" alt="image-20200203161951712" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203161951712.png" srcset="/img/loading.gif" lazyload alt="image-20200203161951712" style="zoom:50%;" />
 
 <h3 id="2-Metabolism-of-peptide-transmitters"><a href="#2-Metabolism-of-peptide-transmitters" class="headerlink" title="2. Metabolism of peptide transmitters"></a>2. Metabolism of peptide transmitters</h3><ol>
 <li><p>Peptide neurotransmitters, as well as the enzymes that modify their precursors, are synthesized in the cell body. Enzymes and propeptides are packaged into vesicles in the Golgi apparatus</p>
@@ -147,9 +472,9 @@
 <ul>
 <li>Neuropeptides are packaged into synaptic vesicles that range from 90–250 nm in diameter. Because the center of these vesicles appear <u>electron-dense</u> in electron micrographs, they are referred to as <strong>large dense-core vesicles</strong>.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162208807.png" alt="image-20200203162208807" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162208807.png" srcset="/img/loading.gif" lazyload alt="image-20200203162208807" style="zoom:50%;" />
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162219622.png" alt="image-20200203162219622" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162219622.png" srcset="/img/loading.gif" lazyload alt="image-20200203162219622" style="zoom:50%;" />
 
 <h2 id="Molecular-mechanisms-of-synaptic-vesicle-cycling"><a href="#Molecular-mechanisms-of-synaptic-vesicle-cycling" class="headerlink" title="Molecular mechanisms of synaptic vesicle cycling"></a>Molecular mechanisms of synaptic vesicle cycling</h2><p>Precisely how an increase in presynaptic Ca2+ concentration goes on to trigger vesicle fusion and neurotransmitter release is not understood.</p>
 <p>However, many important insights have come from molecular studies that have identified and characterized the proteins found on synaptic vesicles.</p>
@@ -157,53 +482,53 @@
 <li>Model of the molecular organization of a synaptic vesicle. </li>
 <li>The cytoplasmic surface of the vesicle membrane is densely covered by proteins, only 70% of which are shown here.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162309210.png" alt="image-20200203162309210" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162309210.png" srcset="/img/loading.gif" lazyload alt="image-20200203162309210" style="zoom:50%;" />
 
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162328449.png" alt="image-20200203162328449"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162328449.png" srcset="/img/loading.gif" lazyload alt="image-20200203162328449"></p>
 <p>the protein <u>synapsin</u>, which reversibly binds to synaptic vesicles, may keep these vesicles tethered within the reserve pool by crosslink vesicles to each other and to **actin **filaments in the cytoskeleton. </p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162437952.png" alt="image-20200203162437952"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162437952.png" srcset="/img/loading.gif" lazyload alt="image-20200203162437952"></p>
 <p><u>Mobilization</u> of these reserve pool vesicles is caused by phosphorylation of synapsin by proteins kinases, most notably the Ca2+ calmodulin-dependent protein kinase, <strong>type II</strong> (<strong>CaMKII</strong>), which allows synapsin to dissociate from the vesicles. </p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162442735.png" alt="image-20200203162442735"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162442735.png" srcset="/img/loading.gif" lazyload alt="image-20200203162442735"></p>
 <p>Once vesicles are free from their reserve pool tethers, they make their way to the plasma membrane and are then attached to this membrane by poorly understood <u>docking</u> reactions. </p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162500750.png" alt="image-20200203162500750"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203162500750.png" srcset="/img/loading.gif" lazyload alt="image-20200203162500750"></p>
 <p>A series of <u><strong>priming</strong> (a process of cleaning and preparing equipment)</u> reactions then prepares the vesicular and plasma membranes for fusion. A large number of proteins are involved in priming. </p>
 <ul>
 <li>the ATPase <strong>NSF</strong> (NEM-sensitive fusion protein) and <strong>SNAPs</strong>(soluble NSF attachment proteins).</li>
 <li>These two proteins work by regulating the assembly of other proteins that are called <strong>SNAREs</strong> (SNAP receptors).</li>
 <li>Many of the other proteins involved in priming—such as munc-13, nSec-1, complexin, snapin, syntaphilin, and tomosyn—also interact with the SNAREs</li>
 </ul>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163341198.png" alt="image-20200203163341198"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163341198.png" srcset="/img/loading.gif" lazyload alt="image-20200203163341198"></p>
 <p>One of the main purposes of priming seems to organize SNARE proteins into the correct conformation for membrane <u>fusion</u>. </p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163401311.png" alt="image-20200203163401311" style="zoom: 80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163401311.png" srcset="/img/loading.gif" lazyload alt="image-20200203163401311" style="zoom: 80%;" />
 
 <p>One of the SNARE proteins, <strong>synaptobrevin</strong>, is in the membrane of synaptic vesicles, while two other SNARE proteins called <strong>syntaxin</strong> and <strong>SNAP-25</strong> are found primarily on theplasma membrane. </p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163426597.png" alt="image-20200203163426597" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163426597.png" srcset="/img/loading.gif" lazyload alt="image-20200203163426597" style="zoom:67%;" />
 
 <p>These SNARE proteins can form a macromolecular complex that spans the two membranes, thus bringing them into close apposition. </p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163434272.png" alt="image-20200203163434272" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163434272.png" srcset="/img/loading.gif" lazyload alt="image-20200203163434272" style="zoom: 67%;" />
 
 <p>Ca2+ regulation of neurotransmitter release is conferred by <strong>synaptotagmin</strong>, a protein found in the membrane of synaptic vesicles. </p>
 <p>Synaptotagmin acts as a Ca2+ sensor, signaling the elevation of Ca2+ within the terminal and thus triggering vesicle fusion. </p>
 <p>How Ca2+ binding to synaptotagmin leads to exocytosis is not yet clear. </p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163512833.png" alt="image-20200203163512833" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163512833.png" srcset="/img/loading.gif" lazyload alt="image-20200203163512833" style="zoom:67%;" />
 
 <p><u>A model for Ca2+-triggered vesicle fusion.</u> SNARE proteins on the synaptic vesicle and plasma membranes form a complex that brings together the two membranes. Ca2+ then binds to synaptotagmin, causing the cytoplasmic region of this protein to catalyze membrane fusion by binding to SNAREs and inserting into the plasma membrane. </p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163551568.png" alt="image-20200203163551568" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163551568.png" srcset="/img/loading.gif" lazyload alt="image-20200203163551568" style="zoom:50%;" />
 
 <p>The most important protein involved in endocytoticbudding of vesicles from the plasma membrane is <strong>clathrin</strong>. </p>
 <ul>
 <li>Clathrin has a unique structure that is called a triskelion because of its three-legged appearance</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163558953.png" alt="image-20200203163558953" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163558953.png" srcset="/img/loading.gif" lazyload alt="image-20200203163558953" style="zoom:50%;" />
 
 <p>During endocytosis, clathrin triskelia attach to the vesicular membrane that is to beretrieved. </p>
 <p>A number of adaptor proteins, such as <strong>AP-2</strong> and <strong>AP180</strong>, connect clathrin to the proteinsand lipids of this membrane. </p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163612163.png" alt="image-20200203163612163"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163612163.png" srcset="/img/loading.gif" lazyload alt="image-20200203163612163"></p>
 <p>Such dome-like structures form coated pits that initiate membrane budding, increasing the curvature of the budding membrane until it forms a coated vesicle-like structure. </p>
 <p>Another protein, called <strong>dynamin</strong>, causes the final pinching-off of membrane that completes the production of coated vesicles. </p>
 <p>The clathrin coats then are removed by an ATPase, <strong>Hsc70</strong>, with another protein, <strong>auxilin</strong>, serving as a co-factor that recruits Hsc70 to the coated vesicle. Other proteins, such as <strong>synaptojanin</strong>, are also important for vesicle <u>uncoating</u>. </p>
 <p>Uncoated vesicles can then continue their journey through the recycling process, eventually becoming refilled with neurotransmitter due to the actions of neurotransmitter transporters in the vesicle membrane. </p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163640146.png" alt="image-20200203163640146"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203163640146.png" srcset="/img/loading.gif" lazyload alt="image-20200203163640146"></p>
 <h2 id="Neurotransmitter-receptors"><a href="#Neurotransmitter-receptors" class="headerlink" title="Neurotransmitter receptors"></a>Neurotransmitter receptors</h2><p><strong>Neurotransmitter receptors</strong> are proteins that are embedded in the plasma membrane of postsynaptic cells and have an extracellular neurotransmitter binding site that detects the presence of neurotransmitters in the synaptic cleft.</p>
 <p>There are two broad families of receptor proteins that differ in their mechanism of transducing transmitter binding into postsynaptic responses.</p>
 <ol>
@@ -212,41 +537,41 @@
 <ul>
 <li>These receptors combine <u>transmitter-binding</u> and <u>channel functions</u> into a single molecular entity and thus are called <strong>ionotropic receptors</strong> (the Greek <em>tropos</em> means to move in response to a stimulus) or <strong>ligand-gated ion channels</strong>.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164251189.png" alt="image-20200203164251189" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164251189.png" srcset="/img/loading.gif" lazyload alt="image-20200203164251189" style="zoom:50%;" />
 
 <p><strong>2. Metabotropic receptors</strong>: the eventual movement of ions through a channel depends on intervening metabolic steps.</p>
 <p>These receptors do not have ion channels as part of their structure; instead, they have an intracellular domain that indirectly affects channels though the activation of intermediate molecules called <strong>G-proteins</strong>. </p>
 <p>Neurotransmitter binding to these receptors activates G-proteins, which then dissociate from the receptor and interact directly with ion channels or bind to other effector proteins, such as enzymes, that make intracellular messengers that open or close ion channels.</p>
 <p>G-proteins can be thought of as transducers that couple neurotransmitter binding to the regulation of postsynaptic ion channels. For this reason, metabotropic receptors are also called <strong>G-protein-coupled receptors</strong>.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164326635.png" alt="image-20200203164326635" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164326635.png" srcset="/img/loading.gif" lazyload alt="image-20200203164326635" style="zoom:50%;" />
 
 <p>Ionotropic receptors generally mediate rapid postsynaptic effects.</p>
 <p>The activation of metabotropic receptors typically produces much slower responses, ranging from hundreds of milliseconds to minutes or even longer.</p>
 <p>A given transmitter may activate both ionotropic and metabotropic receptors to produce both fast and slow <strong>postsynaptic potential</strong> (PSP) at the same synapse.</p>
 <h1 id="三、End-plate-current"><a href="#三、End-plate-current" class="headerlink" title="三、End plate current"></a>三、End plate current</h1><p><u>Neuromuscular synapses</u> are valuable for understanding the mechanisms that allow neurotransmitter receptors to generate postsynaptic signals..</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164415132.png" alt="image-20200203164415132" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164415132.png" srcset="/img/loading.gif" lazyload alt="image-20200203164415132" style="zoom: 67%;" />
 
 <p>The binding of ACh to postsynaptic receptors opens ion channels in the muscle fiber membrane, which generate the minute postsynaptic currents.</p>
 <p>Exposure of the extracellular surface of a patch of postsynaptic membrane to ACh causes single-channel currents to flow for a few milliseconds.</p>
 <p>The electrical actions of ACh are greatly multiplied when an action potential in a presynaptic motor neuron causes the release of millions of molecules of ACh into the synaptic cleft.</p>
 <p>Although individual ACh receptors only open briefly, the opening of a large number of channels is synchronized by the brief duration during which ACh is secreted from presynaptic terminals. </p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164441562.png" alt="image-20200203164441562" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164441562.png" srcset="/img/loading.gif" lazyload alt="image-20200203164441562" style="zoom: 67%;" />
 
 <h2 id="End-plate-potential"><a href="#End-plate-potential" class="headerlink" title="End plate potential"></a>End plate potential</h2><p>The macroscopic current resulting from the summed opening of many ion channels is called the <strong>end plate current</strong>, or <strong>EPC</strong>.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164527809.png" alt="image-20200203164527809" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164527809.png" srcset="/img/loading.gif" lazyload alt="image-20200203164527809" style="zoom:50%;" />
 
 <p>Because the current flowing during the EPC is normally inward, it causes the postsynaptic membrane potential to depolarize. This depolarizing change in potential is the <strong>EPP</strong>, which typically triggers a postsynaptic action potential by opening voltage-gated Na+ and K+channels.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164532280.png" alt="image-20200203164532280" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164532280.png" srcset="/img/loading.gif" lazyload alt="image-20200203164532280" style="zoom:50%;" />
 
 <h2 id="Reversal-potentials"><a href="#Reversal-potentials" class="headerlink" title="Reversal potentials"></a>Reversal potentials</h2><p>When the potential of the postsynaptic muscle cell is controlled by the voltage clamp method, the magnitude of the membrane potential clearly affects the amplitude and polarity of EPCs</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164613383.png" alt="image-20200203164613383" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164613383.png" srcset="/img/loading.gif" lazyload alt="image-20200203164613383" style="zoom:50%;" />
 
 <ul>
 <li>When the postsynaptic membrane potential is made more negative than the resting potential, the amplitude of the EPC becomes larger, whereas this current is reduced when the membrane potential is made more positive.</li>
 <li>At approximately 0 mV, no EPC is detected, and at even more positive potentials, the current reverses its polarity, becoming outward rather than inward.</li>
 <li>The potential where the EPC reverses, about 0 mV in the case of the neuromuscular junction, is called the <strong>reversal potential</strong>.</li>
 </ul>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164618483.png" alt="image-20200203164618483"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203164618483.png" srcset="/img/loading.gif" lazyload alt="image-20200203164618483"></p>
 <h2 id="Postsynaptic-current-and-potential"><a href="#Postsynaptic-current-and-potential" class="headerlink" title="Postsynaptic current and potential"></a>Postsynaptic current and potential</h2><p>Although this discussion has focused on the neuromuscular junction, similar mechanisms generate postsynaptic responses at all chemical synapses.</p>
 <p>The general principle is that transmitter binding to postsynaptic receptors produces a postsynaptic conductance change as ion channels are opened (or sometimes closed).</p>
 <p>The postsynaptic conductance is increased if—as at the neuromuscular junction— channels are opened, and decreased if channels are closed.</p>
@@ -262,27 +587,27 @@
 <p>When these glutamate receptors are activated, both Na+ and K+ flow across the postsynaptic membrane, yielding an Erev of approximately 0 mV for the resulting postsynaptic current. </p>
 <p>If the resting potential of the postsynaptic neuron is –40 mV, the resulting EPSP will depolarize by bringing the postsynaptic membrane potential toward 0 mV. </p>
 <p>Thus, a glutamate-induced EPSP will increase the probability that this neuron produces an action potential, defining the synapse as excitatory.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165006151.png" alt="image-20200203165006151"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165006151.png" srcset="/img/loading.gif" lazyload alt="image-20200203165006151"></p>
 <h3 id="2-Inhibitory-postsynaptic-potentials"><a href="#2-Inhibitory-postsynaptic-potentials" class="headerlink" title="2. Inhibitory postsynaptic potentials"></a>2. Inhibitory postsynaptic potentials</h3><p>As an example of inhibitory postsynaptic action, consider a neuronal synapse that uses GABA as its transmitter. </p>
 <p>At such synapses, the GABA receptors typically open channels that are selectively permeable to Cl–, and the action of GABA causes Cl– to flow across the postsynaptic membrane into the cell and produce a hyperpolarizing IPSP. </p>
 <p>This hyperpolarizing IPSP will take the postsynaptic membrane away from the action potential threshold of –40 mV, clearly inhibiting the postsynaptic cell.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165046759.png" alt="image-20200203165046759"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165046759.png" srcset="/img/loading.gif" lazyload alt="image-20200203165046759"></p>
 <hr>
 <p>A simple rule distinguishes postsynaptic excitation from inhibition: An EPSP has a <u>reversal potential</u> more positive than the action potential <u>threshold</u>, whereas an IPSP has a reversal potential more negative than threshold.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165123419.png" alt="image-20200203165123419"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165123419.png" srcset="/img/loading.gif" lazyload alt="image-20200203165123419"></p>
 <h2 id="Summation-of-Synaptic-Potentials"><a href="#Summation-of-Synaptic-Potentials" class="headerlink" title="Summation of Synaptic Potentials"></a>Summation of Synaptic Potentials</h2><p>The PSPs produced at most synapses in the brain are much smaller than those at the neuromuscular junction; indeed, EPSPs produced by individual excitatory synapses may be only a fraction of a millivolt and are usually well below the threshold for generating postsynaptic action potentials. </p>
 <p>How then, can such synapses transmit information if their PSPs are subthreshold?</p>
 <p>The answer is that neurons in the central nervous system are typically innervated by thousands of synapses, and the PSPs produced by each active synapse can <em>sum together</em>—in space and in time—to determine the behavior of the postsynaptic neuron.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165340560.png" alt="image-20200203165340560" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165340560.png" srcset="/img/loading.gif" lazyload alt="image-20200203165340560" style="zoom: 67%;" />
 
 <p>A microelectrode records the postsynaptic potentials produced by the activity of two excitatory synapses (E1 and E2) and an inhibitory synapse (I).</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165357864.png" alt="image-20200203165357864" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165357864.png" srcset="/img/loading.gif" lazyload alt="image-20200203165357864" style="zoom:67%;" />
 
 <p>activation of either one of the excitatory synapses alone (E1 or E2) produces a subthreshold EPSP.</p>
 <p>activation of both excitatory synapses at about the same time causes the two EPSPs to sum together.</p>
 <p>If the sum of the two EPSPs (E1 + E2) depolarizes the postsynaptic neuron sufficiently to reach the threshold potential, a postsynaptic action potential results.</p>
 <p>Summation thus allows subthreshold EPSPs to influence action potential production.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165420790.png" alt="image-20200203165420790" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200203165420790.png" srcset="/img/loading.gif" lazyload alt="image-20200203165420790" style="zoom:67%;" />
 
 <p>Likewise, an IPSP generated by an inhibitory synapse (I) can sum (algebraically speaking) with a subthreshold EPSP to reduce its amplitude (E1 + I) or can sum with suprathreshold EPSPs to prevent the postsynaptic neuron from reaching threshold (E1 + I + E2).</p>
 <p>In short, the summation of EPSPs and IPSPs by a postsynaptic neuron permits a neuron to integrate the electrical information provided by all the inhibitory and excitatory synapses acting on it at any moment. </p>
@@ -290,7 +615,7 @@
 <p>Normally, the balance between EPSPs and IPSPs changes continually over time, depending on the number of excitatory and inhibitory synapses active at a given moment and the magnitude of the current at each active synapse.</p>
 <hr>
 <p>Summary:</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416143456358.png" alt="image-20210416143456358" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416143456358.png" srcset="/img/loading.gif" lazyload alt="image-20210416143456358" style="zoom: 67%;" />
 
 <h1 id="四、Neurotransmitters-and-Their-Receptors"><a href="#四、Neurotransmitters-and-Their-Receptors" class="headerlink" title="四、Neurotransmitters and Their Receptors"></a>四、Neurotransmitters and Their Receptors</h1><h2 id="Categories-of-Neurotransmitters"><a href="#Categories-of-Neurotransmitters" class="headerlink" title="Categories of Neurotransmitters"></a>Categories of Neurotransmitters</h2><p><strong>Small-molecule transmitters</strong></p>
 <ul>
@@ -300,7 +625,7 @@
 <li>biogenic amines</li>
 </ul>
 <p><strong>Neuropeptides</strong>: more than 100 peptides, usu. 3~36 a.a. long</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407181618905.png" alt="image-20210407181618905" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407181618905.png" srcset="/img/loading.gif" lazyload alt="image-20210407181618905" style="zoom:100%;" />
 
 <h2 id="Small-molecule-Neurotransmitters"><a href="#Small-molecule-Neurotransmitters" class="headerlink" title="Small-molecule Neurotransmitters"></a>Small-molecule Neurotransmitters</h2><h3 id="1-Acetylcholine"><a href="#1-Acetylcholine" class="headerlink" title="1. Acetylcholine"></a>1. Acetylcholine</h3><p>Acetylcholine (ACh) was the first substance identified as a neurotransmitter</p>
 <ul>
@@ -308,17 +633,17 @@
 </ul>
 <p>ACh serves as a transmitter at skeletal neuromuscular junctions, neuromuscular synapse between the vagus nerve and cardiac muscle fibers, synapses in the ganglia of the visceral motor system, and <u>in the central nervous system (actions not well understood).</u></p>
 <p>Acetylcholine is synthesized in nerve terminals from the precursors acetyl coenzyme A (acetyl CoA, which is synthesized from glucose) and choline, in a reaction catalyzed by choline acetyltransferase (CAT)</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407181822679.png" alt="image-20210407181822679" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407181822679.png" srcset="/img/loading.gif" lazyload alt="image-20210407181822679" style="zoom:100%;" />
 
 <p>After synthesis in the cytoplasm of the neuron, a vesicular ACh transporter (VAChT) loads approximately 10,000 molecules of ACh into each cholinergic vesicle.</p>
 <p>The postsynaptic actions of ACh at many cholinergic synapses (the neuromuscular junction in particular) is not terminated by reuptake but by a powerful hydrolytic enzyme, <strong>acetylcholinesterase</strong> (<strong>AChE</strong>)</p>
 <p>This enzyme is concentrated in the synaptic cleft, ensuring a rapid decrease in ACh concentration after its release from the presynaptic terminal.</p>
 <p>AChE has a very high catalytic activity (about5000 molecules of ACh per AChE molecule per second) and rapidly hydrolyzes ACh into acetate and choline.</p>
 <p>The choline produced by ACh hydrolysis is recycled by being transported back into nerve terminals, where it is used to resynthesize ACh. By a high-affinity, Na+-dependent choline co-transporter (ChT).</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407181822679.png" alt="image-20210407181822679" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407181822679.png" srcset="/img/loading.gif" lazyload alt="image-20210407181822679" style="zoom:100%;" />
 
 <h4 id="Drugs-Interacting-with-Cholinergic-Enzymes"><a href="#Drugs-Interacting-with-Cholinergic-Enzymes" class="headerlink" title="Drugs Interacting with Cholinergic Enzymes"></a>Drugs Interacting with Cholinergic Enzymes</h4><p>Organophosphates: including some potent chemical warfare agents such as “Sarin”, which has been classified as a <u>weapon of mass destruction.</u></p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407185438440.png" alt="image-20210407185438440" style="zoom:80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210407185438440.png" srcset="/img/loading.gif" lazyload alt="image-20210407185438440" style="zoom:80%;" />
 
 <p>Sarin was made notorious in 1995 when a group of terrorists released this nerve gas in Tokyo’s underground rail system. </p>
 <p>Organophosphates can be lethal because they inhibit AChE, allowing ACh to accumulate at cholinergic synapses. This buildup of ACh depolarizes the postsynaptic cell and renders it refractory to subsequent ACh release, causing neuromuscular paralysis and other effects.</p>
@@ -340,23 +665,23 @@
 </ul>
 <h4 id="Structure-of-the-nACh-receptor"><a href="#Structure-of-the-nACh-receptor" class="headerlink" title="Structure of the nACh receptor"></a>Structure of the nACh receptor</h4><p>Each subunit of the receptor contains a large extracellular region (which in α subunits contains the ACh binding site) as well as four membrane-spanning domains.</p>
 <p>The transmembrane domains of the five individual subunits together form a channel with a central membrane-spanning pore</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000357830.png" alt="image-20210408000357830" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000357830.png" srcset="/img/loading.gif" lazyload alt="image-20210408000357830" style="zoom:100%;" />
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000531310.png" alt="image-20210408000531310" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000531310.png" srcset="/img/loading.gif" lazyload alt="image-20210408000531310" style="zoom:100%;" />
 
 <p>The width of this pore is substantially larger than that of the pores of voltage-gated ion channels, consistent with the relatively poor ability of nACh receptors to discriminate between different cations. Within this pore is a constriction that may represent the gate of the receptor.</p>
 <p>Binding of ACh to the α subunits is thought to cause a conformational change that rearranges the receptor transmembrane domains, thereby opening the gate and permitting ions to diffuse through the channel pore.</p>
-<h4 id="Subunits-forming-ionotropic-neurotransmitter-receptors"><a href="#Subunits-forming-ionotropic-neurotransmitter-receptors" class="headerlink" title="Subunits forming ionotropic neurotransmitter receptors"></a>Subunits forming ionotropic neurotransmitter receptors</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000558590.png" alt="image-20210408000558590" style="zoom:100%;" />
+<h4 id="Subunits-forming-ionotropic-neurotransmitter-receptors"><a href="#Subunits-forming-ionotropic-neurotransmitter-receptors" class="headerlink" title="Subunits forming ionotropic neurotransmitter receptors"></a>Subunits forming ionotropic neurotransmitter receptors</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000558590.png" srcset="/img/loading.gif" lazyload alt="image-20210408000558590" style="zoom:100%;" />
 
 <h4 id="Muscarinic-ACh-receptors-mAChRs"><a href="#Muscarinic-ACh-receptors-mAChRs" class="headerlink" title="Muscarinic ACh receptors (mAChRs)"></a>Muscarinic ACh receptors (mAChRs)</h4><p>A second class of ACh receptors is activated by muscarine, a poisonous alkaloid found in some mushrooms, and thus they are referred to as <strong>muscarinic ACh</strong> <strong>receptors (mAChRs)</strong></p>
 <p>mAChRs are metabotropic and mediate most of the effects of ACh in the brain.</p>
 <p>Like other metabotropic receptors, mAChRs have seven helical membrane-spanning domains.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000717107.png" alt="image-20210408000717107" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000717107.png" srcset="/img/loading.gif" lazyload alt="image-20210408000717107" style="zoom:100%;" />
 
 <p>ACh binds to a single binding site on the extracellular surface of the mAChR; this binding site is within a deep channel that is formed by several of the transmembrane helices.</p>
 <p>Binding of ACh to this site causes a conformational change that permits G-proteins to bind to the cytoplasmic domain of the mAChR.</p>
 <p>Five subtypes of mAChR are known and are coupled to different types of Gproteins, thereby causing a variety of slow postsynaptic responses</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000821466.png" alt="image-20210408000821466" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408000821466.png" srcset="/img/loading.gif" lazyload alt="image-20210408000821466" style="zoom:100%;" />
 
 <p>Muscarinic ACh receptors are highly expressed in the striatum and various other forebrain regions, where they activate inward rectifier K+ channels or Ca2+activated K+ channels, thereby exerting an inhibitory influence on dopamine-mediated motor effects</p>
 <p>In other parts of the brain, such as the hippocampus, mAChRs are excitatory and act by closing KCNQ-type K+ channels</p>
@@ -370,7 +695,7 @@
 <p>Glutamate synthesized in the presynaptic cytoplasm is packaged into synaptic vesicles by vesicular glutamate transporters (VGLUTs, at least three)</p>
 <p>Once released, glutamate is removed from the synaptic cleft by the excitatory amino acid transporters (EAATs)</p>
 <p>Some EAATs are present in glial cells and others in presynaptic terminals.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001034436.png" alt="image-20210408001034436" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001034436.png" srcset="/img/loading.gif" lazyload alt="image-20210408001034436" style="zoom:100%;" />
 
 <p>Glutamate transported into glial cells via EAATs is converted into glutamine by the enzyme glutamine synthetase.</p>
 <p>Glutamine is then transported out of the glial cells by a different transporter, the system N transporter 1 (SN1), and transported into nerve terminals via SAT2</p>
@@ -388,11 +713,11 @@
 <li>In some cases, these receptors are found on <u>presynaptic</u> terminals and serve as a feedback mechanism to regulate glutamate release.</li>
 <li>When found on <u>postsynaptic</u> cells, kainate receptors generate EPSCs that rise quickly but decay more slowly than those mediated by AMPA receptors</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001432508.png" alt="image-20210408001432508" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001432508.png" srcset="/img/loading.gif" lazyload alt="image-20210408001432508" style="zoom:100%;" />
 
 <h5 id="1-AMPA-Receptors"><a href="#1-AMPA-Receptors" class="headerlink" title="(1) AMPA Receptors"></a>(1) AMPA Receptors</h5><p>Like all ionotropic receptors, AMPA receptors are composed of multiple subunits. The four different AMPA receptor subunits are designated GluA1 to GluA4.</p>
 <p>Each subunit has several different domains, including an <u>extracellular ligand-binding domain</u> that is responsible for binding glutamate, and a transmembrane domain that forms part of the ion channel.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001558213.png" alt="image-20210408001558213" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001558213.png" srcset="/img/loading.gif" lazyload alt="image-20210408001558213" style="zoom:100%;" />
 
 <p>Four different AMPA receptor subunits (GluA1 to GluA4) are organized into the tetrameric structure</p>
 <p>The extracellular structure of AMPA receptors is asymmetrical and therefore looks different when viewed from its front and side surfaces</p>
@@ -400,14 +725,14 @@
 <li>The AMPA receptor is Y-shaped, with the large extracellular domains of the subunits narrowing down as the receptor passes through the plasma membrane</li>
 <li>After rotating the receptor by 90 degrees, the extracellular ligand-binding domains have a characteristic “clamshell” shape, with glutamate and other ligands binding within the opening of the clamshell</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001631624.png" alt="image-20210408001631624" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001631624.png" srcset="/img/loading.gif" lazyload alt="image-20210408001631624" style="zoom:100%;" />
 
 <p>The transmembrane domain consists of helices that form both the channel pore and a gate that occludes the pore when glutamate is not bound to the receptor</p>
 <ul>
 <li>Binding of glutamate causes the clamshell structure to “shut”</li>
 <li>This movement then causes the gate helices within the transmembrane domain to move and thereby open the channel pore.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001703193.png" alt="image-20210408001703193" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408001703193.png" srcset="/img/loading.gif" lazyload alt="image-20210408001703193" style="zoom:100%;" />
 
 <h5 id="2-NMDA-Receptors"><a href="#2-NMDA-Receptors" class="headerlink" title="(2) NMDA Receptors"></a>(2) NMDA Receptors</h5><p>NMDA receptors have physiological properties that set them apart from the other ionotropic glutamate receptors.</p>
 <ul>
@@ -418,7 +743,7 @@
 </li>
 <li>Another unusual feature of NMDA receptors is that their gating requires a co-agonist—the amino acid glycine, which is present in the ambient extracellular environment of the brain</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002139131.png" alt="image-20210408002139131" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002139131.png" srcset="/img/loading.gif" lazyload alt="image-20210408002139131" style="zoom: 67%;" />
 
 <h3 id="3-GABA-and-Glycine"><a href="#3-GABA-and-Glycine" class="headerlink" title="3. GABA and Glycine"></a>3. GABA and Glycine</h3><h4 id="Glycine"><a href="#Glycine" class="headerlink" title="Glycine"></a>Glycine</h4><h5 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="(1) Introduction"></a>(1) Introduction</h5><p>About <u>half of the inhibitory synapses</u> in the spinal cord use glycine; most other  inhibitory synapses use GABA.</p>
 <p>Glycine is synthesized from serine by the mitochondrial isoform of serine  hydroxymethyltransferase</p>
@@ -427,7 +752,7 @@
 <ul>
 <li>Mutations in the genes coding for  some of these transporters result  in hyperglycinemia, a devastating  neonatal disease characterized by  lethargy, seizures, and mental  retardation.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416145850996.png" alt="image-20210416145850996" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416145850996.png" srcset="/img/loading.gif" lazyload alt="image-20210416145850996" style="zoom: 67%;" />
 
 <h5 id="2-Glycine-Receptors"><a href="#2-Glycine-Receptors" class="headerlink" title="(2) Glycine Receptors"></a>(2) Glycine Receptors</h5><p>Glycine receptors are ligand-gated Cl– channels whose general structure closely  mirrors that of the GABA<del>A</del> receptors.</p>
 <p>Glycine receptors are pentamers consisting of mixtures of four types of α subunits,  along with an accessory β subunit.</p>
@@ -437,14 +762,14 @@
 <li>This Cl– flux inhibits the  postsynaptic neuron</li>
 <li>Blocking these receptors, by binding  of strychnine to the same ligandbinding site, closes the pore.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416145943600.png" alt="image-20210416145943600" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416145943600.png" srcset="/img/loading.gif" lazyload alt="image-20210416145943600" style="zoom:100%;" />
 
 <hr>
 <p><strong>Most inhibitory synapses</strong> in the brain and spinal cord use either γ-aminobutyric acid (GABA) or glycine as neurotransmitters.</p>
 <p>As many as <u>a third of the synapses</u> in the brain use GABA as their inhibitory neurotransmitter, and GABA is most commonly found in local circuit interneurons.</p>
 <p>The predominant precursor for <strong>GABA</strong> synthesis is glucose, which is metabolized to glutamate by the tricarboxylic acid cycle enzymes</p>
 <p>The enzyme glutamic acid decarboxylase (GAD), which is found almost exclusively in GABAergic neurons, catalyzes the conversion of glutamate to GABA</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002225416.png" alt="image-20210408002225416" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002225416.png" srcset="/img/loading.gif" lazyload alt="image-20210408002225416" style="zoom: 67%;" />
 
 <h4 id="GABA"><a href="#GABA" class="headerlink" title="GABA"></a>GABA</h4><p>GAD requires a co-factor, pyridoxal phosphate, for activity</p>
 <ul>
@@ -452,7 +777,7 @@
 <li>The significance of this fact became clear after a disastrous series of infant deaths was linked to the omission of vitamin B6 from infant formula.</li>
 <li>The absence of vitamin B6 greatly reduced the GABA content of the brain, and the subsequent loss of synaptic inhibition caused seizures that in some cases were fatal.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002302654.png" alt="image-20210408002302654" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002302654.png" srcset="/img/loading.gif" lazyload alt="image-20210408002302654" style="zoom: 67%;" />
 
 <p>Once GABA is synthesized, it is transported into synaptic vesicles via a vesicular inhibitory amino acid transporter (VIAAT)</p>
 <p>The mechanism of GABA removal is similar to that for glutamate: Both neurons and glia contain high-affinity Na+-dependent co-transporters for GABA which are termed GATs</p>
@@ -470,16 +795,16 @@
 <ul>
 <li>Activation of these GABA<del>A</del> receptors causes an influx of negatively charged Cl– that inhibits postsynaptic cells.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002712904.png" alt="image-20210408002712904" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002712904.png" srcset="/img/loading.gif" lazyload alt="image-20210408002712904" style="zoom:100%;" />
 
 <h4 id="GABAA-Receptors"><a href="#GABAA-Receptors" class="headerlink" title="GABAA Receptors"></a>GABA<del>A</del> Receptors</h4><p>Like nACh receptors, GABA<del>A</del> receptors are pentamers. The five GABA<del>A</del> receptor subunits are assembled into a structure quite similar to that of the nAChR</p>
 <ul>
 <li>The transmembrane domains of the subunits form a central pore that includes a ring of positive charges that presumably serve as the binding site for Cl–.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002748097.png" alt="image-20210408002748097" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002748097.png" srcset="/img/loading.gif" lazyload alt="image-20210408002748097" style="zoom:100%;" />
 
 <p>GABA<del>A</del> receptors: binding sites for numerous ligands</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002800838.png" alt="image-20210408002800838" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408002800838.png" srcset="/img/loading.gif" lazyload alt="image-20210408002800838" style="zoom:100%;" />
 
 <ul>
 <li>GABA binds in pockets found at the interface between the extracellular domains of the subunits; many other types of ligands also bind to these sites<ul>
@@ -500,7 +825,7 @@
 <li>A second action of GABA<del>B</del> receptors is to block Ca2+ channels, which also inhibits postsynaptic cells.</li>
 </ul>
 <p>The structure of GABA<del>B</del> receptors is similar to that of other metabotropic receptors, although GABA<del>B</del> receptors assemble as heterodimers of B1 and B2 subunits</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408003831754.png" alt="image-20210408003831754" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210408003831754.png" srcset="/img/loading.gif" lazyload alt="image-20210408003831754" style="zoom:100%;" />
 
 <h3 id="4-Biogenic-Amines"><a href="#4-Biogenic-Amines" class="headerlink" title="4. Biogenic Amines"></a>4. Biogenic Amines</h3><p>Biogenic amine transmitters regulate many brain functions and are also active in  the peripheral nervous system.</p>
 <p>Because biogenic amines are implicated in such a wide variety of behaviors  (ranging from central homeostatic functions to cognitive phenomena such as  attention), it is not surprising that defects in biogenic amine function are  implicated in <u>most psychiatric disorders</u></p>
@@ -516,7 +841,7 @@
 <li><strong>histamine</strong></li>
 <li><strong>serotonin</strong></li>
 </ul>
-<h4 id="Catecholamines"><a href="#Catecholamines" class="headerlink" title="Catecholamines"></a>Catecholamines</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150143685.png" alt="image-20210416150143685" style="zoom:100%;" />
+<h4 id="Catecholamines"><a href="#Catecholamines" class="headerlink" title="Catecholamines"></a>Catecholamines</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150143685.png" srcset="/img/loading.gif" lazyload alt="image-20210416150143685" style="zoom:100%;" />
 
 <ul>
 <li>All the catecholamines (so named because they share the  catechol moiety) are derived from a common precursor,  the amino acid tyrosine.</li>
@@ -527,8 +852,8 @@
 <li>In <strong>Parkinson’s disease</strong>, for instance, the dopaminergic neurons of the substantia nigra degenerate, leading to a characteristic motor dysfunction</li>
 <li>Dopamine is also believed to be involved in motivation, reward, and reinforcement and  many drugs of abuse work by affecting dopaminergic circuitry in the CNS.</li>
 </ul>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150652720.png" alt="image-20210416150652720"></p>
-<h5 id="2-Drugs-affecting-dopamine-pathway"><a href="#2-Drugs-affecting-dopamine-pathway" class="headerlink" title="(2) Drugs affecting dopamine pathway"></a>(2) Drugs affecting dopamine pathway</h5><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150714801.png" alt="image-20210416150714801" style="zoom:100%;" />
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150652720.png" srcset="/img/loading.gif" lazyload alt="image-20210416150652720"></p>
+<h5 id="2-Drugs-affecting-dopamine-pathway"><a href="#2-Drugs-affecting-dopamine-pathway" class="headerlink" title="(2) Drugs affecting dopamine pathway"></a>(2) Drugs affecting dopamine pathway</h5><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150714801.png" srcset="/img/loading.gif" lazyload alt="image-20210416150714801" style="zoom:100%;" />
 
 <p>Dopamine is produced by the action of DOPA decarboxylase  on DOPA</p>
 <p>Following its synthesis in the cytoplasm of presynaptic  terminals, dopamine is loaded into synaptic vesicles via a  vesicular monoamine transporter (VMAT).</p>
@@ -543,16 +868,16 @@
 </ul>
 <h5 id="3-Dopamine-Receptors"><a href="#3-Dopamine-Receptors" class="headerlink" title="(3) Dopamine Receptors"></a>(3) Dopamine Receptors</h5><p>Once released, dopamine acts exclusively by activating <u>G-protein-coupled  receptors</u>.</p>
 <p>The structure of this kind of receptors, such as the D<del>3</del> dopamine receptor, closely  parallels that of other metabotropic receptors</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150950618.png" alt="image-20210416150950618" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416150950618.png" srcset="/img/loading.gif" lazyload alt="image-20210416150950618" style="zoom:100%;" />
 
 <p>Activation of these receptors generally  contributes to complex behaviors; for example,  administration of dopamine receptor agonists  causes hyperactivity and repetitive, stereotyped  behavior in laboratory animals.</p>
 <p>Activation of another type of dopamine receptor  in the medulla inhibits vomiting. Thus,  antagonists of these receptors are used as  emetics to induce vomiting after poisoning or a  drug overdose.</p>
 <h4 id="Norepinephrine-Noradrenaline"><a href="#Norepinephrine-Noradrenaline" class="headerlink" title="Norepinephrine (Noradrenaline)"></a>Norepinephrine (Noradrenaline)</h4><p>Norepinephrine is used as a neurotransmitter in the locus coeruleus, a brainstem  nucleus that projects diffusely to a variety of forebrain targets and influences  sleep and wakefulness, attention, and feeding behavior.</p>
 <p>Norepinephrine synthesis requires dopamine β-hydroxylase, which catalyzes the  production of norepinephrine from dopamine.</p>
 <p>Norepinephrine is then loaded into synaptic vesicles via the same VMAT involved  in vesicular dopamine transport.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151102385.png" alt="image-20210416151102385" style="zoom: 50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151102385.png" srcset="/img/loading.gif" lazyload alt="image-20210416151102385" style="zoom: 50%;" />
 
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151110551.png" alt="image-20210416151110551" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151110551.png" srcset="/img/loading.gif" lazyload alt="image-20210416151110551" style="zoom:67%;" />
 
 <p>Norepinephrine is cleared from the synaptic cleft by the norepinephrine  transporter (NET), a Na+-dependent co-transporter that also is capable of taking  up dopamine</p>
 <ul>
@@ -567,13 +892,13 @@
 <p>Epinephrine-containing neurons in CNS are primarily in the lateral tegmental system and in the medulla and project to the hypothalamus and thalamus.</p>
 <p>The enzyme that synthesizes epinephrine, <strong>phenylethanolamine-N-methyltransferase</strong>, is present only in epinephrine-secreting neurons.</p>
 <p>The metabolism and receptors of epinephrine are very similar to those of norepinephrine</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151346671.png" alt="image-20210416151346671" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151346671.png" srcset="/img/loading.gif" lazyload alt="image-20210416151346671" style="zoom:100%;" />
 
 <h4 id="Histamine"><a href="#Histamine" class="headerlink" title="Histamine"></a>Histamine</h4><h5 id="1-Introduction-2"><a href="#1-Introduction-2" class="headerlink" title="(1) Introduction"></a>(1) Introduction</h5><p>Histamine is found in neurons in the hypothalamus that send sparse but  widespread projections to almost all regions of the brain and spinal cord.</p>
 <p>The central histamine projections mediate arousal and attention, similar to central  Ach and norepinephrine projections. Histamine also controls the reactivity of the  vestibular system.</p>
 <p>Allergic reactions or tissue damage cause release of histamine from mast cells in  the bloodstream</p>
 <p>Histamine is produced from the amino acid histidine by a histidine decarboxylase  and is transported into vesicles via the same VMAT as the catecholamines</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151518324.png" alt="image-20210416151518324"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151518324.png" srcset="/img/loading.gif" lazyload alt="image-20210416151518324"></p>
 <h5 id="2-Histamine-receptors"><a href="#2-Histamine-receptors" class="headerlink" title="(2) Histamine receptors"></a>(2) Histamine receptors</h5><p>The four known histamine receptors are all metabotropic receptors. Histamine receptors </p>
 <p>Antihistamines that cross the blood-brain barrier, such as diphenhydramine  (Benadryl®), act as sedatives by interfering with the roles of histamine in CNS  arousal. </p>
 <p>Antagonists of the H1 receptor also are used to prevent motion sickness, perhaps  because of the role of histamine in controlling vestibular function. </p>
@@ -581,11 +906,11 @@
 <h4 id="Serotonin"><a href="#Serotonin" class="headerlink" title="Serotonin"></a>Serotonin</h4><h5 id="1-Introduction-3"><a href="#1-Introduction-3" class="headerlink" title="(1) Introduction"></a>(1) Introduction</h5><p>Serotonin, or 5-hydroxytryptamine (5-HT), was initially thought to increase  vascular tone by virtue of its presence in blood serum (hence the name  serotonin)</p>
 <p>Serotonin is found primarily in groups of neurons in the raphe region of the pons  and upper brainstem, which have widespread projections to the forebrain, and  regulate sleep and wakefulness.</p>
 <p>5-HT occupies a place of prominence in neuropharmacology because a large  number of antipsychotic drugs that are valuable in the treatment of depression  and anxiety act on serotonergic pathways.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151657785.png" alt="image-20210416151657785" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151657785.png" srcset="/img/loading.gif" lazyload alt="image-20210416151657785" style="zoom: 67%;" />
 
 <p>5-HT is synthesized from the amino acid tryptophan, which is an essential dietary  requirement.</p>
 <p>Tryptophan is taken up into neurons by a plasma membrane transporter and  hydroxylated in a reaction catalyzed by the enzyme tryptophan-5-hydroxylase, <u>the  rate-limiting step for 5-HT synthesis.</u></p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151755144.png" alt="image-20210416151755144" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416151755144.png" srcset="/img/loading.gif" lazyload alt="image-20210416151755144" style="zoom: 67%;" />
 
 <p>The synaptic effects of serotonin are terminated by  transport back into nerve terminals via a specific  serotonin transporter (SERT) that is present in the  presynaptic plasma membrane and is encoded by the  5HTT gene.</p>
 <p>Many antidepressant drugs are <strong>selective serotonin</strong> <strong>reuptake inhibitors (SSRIs)</strong> that inhibit transport of 5-HT by SERT</p>
@@ -613,14 +938,14 @@
 </ul>
 </li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416152501622.png" alt="image-20210416152501622" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416152501622.png" srcset="/img/loading.gif" lazyload alt="image-20210416152501622" style="zoom:100%;" />
 
 <p>The other two classes of purinergic receptors are G-protein-coupled metabotropic  receptors.</p>
 <ul>
 <li>The two classes differ in their sensitivity to agonists–one type is preferentially stimulated by  adenosine, whereas the other is preferentially activated by ATP</li>
 <li>Structure of a metabotropic A~2A ~adenosine receptor</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416152534014.png" alt="image-20210416152534014" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416152534014.png" srcset="/img/loading.gif" lazyload alt="image-20210416152534014" style="zoom:100%;" />
 
 <h4 id="Peptide-Neurotransmitters"><a href="#Peptide-Neurotransmitters" class="headerlink" title="Peptide Neurotransmitters"></a>Peptide Neurotransmitters</h4><p>Many peptides known to be hormones also act as neurotransmitters</p>
 <p>Some peptide transmitters have been implicated in modulating emotions</p>
@@ -632,13 +957,13 @@
 <p>Pre-propeptides are synthesized in the rough endoplasmic reticulum, where the  signal is removed.</p>
 <p>The remaining polypeptide, called a <strong>propeptide</strong>, then traverses the Golgi apparatus and is packaged into vesicles in the <em>trans</em>-Golgi network.</p>
 <p>The final stages of peptide neurotransmitter processing occur after packaging into  vesicles and involve proteolytic cleavage, modification of the ends of the peptide,  glycosylation, phosphorylation, and disulfide bond formation.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416153543481.png" alt="image-20210416153543481" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416153543481.png" srcset="/img/loading.gif" lazyload alt="image-20210416153543481" style="zoom: 67%;" />
 
 <p>Propeptide precursors can give rise to more than one species of neuropeptide,  which means that multiple neuroactive peptides can be released from a single  vesicle</p>
 <p>In addition, neuropeptides often  are co-released with small-molecule neurotransmitters.</p>
 <p>Thus, peptidergic synapses often  elicit complex postsynaptic  responses.</p>
 <p>Peptides are catabolized into  inactive amino acid fragments by  enzymes called peptidases,  usually located on the  extracellular surface of the  plasma membrane.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416153606652.png" alt="image-20210416153606652" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416153606652.png" srcset="/img/loading.gif" lazyload alt="image-20210416153606652" style="zoom:67%;" />
 
 <p>The biological activity of the peptide neurotransmitters depends on their amino  acid sequence.</p>
 <p>Based on their sequences, neuropeptide transmitters have been loosely grouped  into five categories:</p>
@@ -649,23 +974,23 @@
 <li>hypothalamic releasing hormones;  </li>
 <li>a catch-all category containing other, not easily classified, peptides</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416153656716.png" alt="image-20210416153656716" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416153656716.png" srcset="/img/loading.gif" lazyload alt="image-20210416153656716" style="zoom:100%;" />
 
 <h5 id="1-Substance-P"><a href="#1-Substance-P" class="headerlink" title="(1) Substance P"></a>(1) Substance P</h5><p>The study of neuropeptides began more than 60 years ago with the accidental  discovery of <strong>substance P</strong>, a powerful hypotensive agent and an example of the  first category of peptide.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416202029544.png" alt="image-20210416202029544" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416202029544.png" srcset="/img/loading.gif" lazyload alt="image-20210416202029544" style="zoom:100%;" />
 
 <p>The peculiar name derives from the fact that this molecule was an unidentified  component of <font color="FF0000">p</font>owder extracts from brain and intestine.</p>
 <p>Substance P is an 11-amino-acid peptide present in high concentrations in the  human hippocampus, neocortex, and also in the gastrointestinal tract; hence its  classification as a brain&#x2F;gut peptide</p>
 <p>It is also released from C fibers, the small-diameter afferents in peripheral nerves  that convey information about pain and temperature (as well as postganglionic  autonomic signals)</p>
 <p>Substance P is a sensory neurotransmitter in the spinal cord, where its release can  be inhibited by opioid peptides released from spinal cord interneurons, resulting  in the suppression of pain .</p>
 <h5 id="2-Opioid-Peptides"><a href="#2-Opioid-Peptides" class="headerlink" title="(2) Opioid Peptides"></a>(2) Opioid Peptides</h5><p>An especially important category of peptide neurotransmitters is the family of  opioids, so named because they bind to the same postsynaptic receptors that are  activated by opium.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416202112148.png" alt="image-20210416202112148" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416202112148.png" srcset="/img/loading.gif" lazyload alt="image-20210416202112148" style="zoom:100%;" />
 
 <p>The active ingredients in opium are a variety of plant alkaloids, predominantly  morphine</p>
 <p>Morphine, named for Morpheus, the Greek god of dreams, is still in use today and  is one of the most effective analgesics, despite its addictive potential.</p>
 <p>The opioid peptides were discovered in the 1970s during a search for endorphins-endogenous compounds that mimicked the actions of morphine</p>
 <p>The endogenous ligands of the opioid receptors have now been identified as a  family of more than 20 opioid peptides that fall into three classes:</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416202131329.png" alt="image-20210416202131329" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416202131329.png" srcset="/img/loading.gif" lazyload alt="image-20210416202131329" style="zoom:100%;" />
 
 <p>Opioid peptides are widely distributed throughout brain and are often co-localized  with other small-molecule neurotransmitters, such as GABA, 5-HT.</p>
 <p>In general, the opioids tend to be depressants. When injected intracerebrally in  experimental animals, they act as analgesics</p>
@@ -682,10 +1007,10 @@
 </ul>
 <h4 id="Endocannabinoids"><a href="#Endocannabinoids" class="headerlink" title="Endocannabinoids"></a>Endocannabinoids</h4><p>Endocannabinoids are a family of related endogenous signals that interact with  <strong>cannabinoid receptors</strong></p>
 <p>These receptors are the molecular targets of Δ^9^-tetrahydrocannabinol, the  psychoactive component of the marijuana plant, Cannabis</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203402531.png" alt="image-20210416203402531" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203402531.png" srcset="/img/loading.gif" lazyload alt="image-20210416203402531" style="zoom:100%;" />
 
 <p>Anandamide and 2-arachidonoylglycerol (2-AG) have been established as  endocannabinoids.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203546049.png" alt="image-20210416203546049" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203546049.png" srcset="/img/loading.gif" lazyload alt="image-20210416203546049" style="zoom:100%;" />
 
 <p>These signals are unsaturated fatty acids with polar head groups and are produced  by enzymatic degradation of membrane lipids</p>
 <p>Production of endocannabinoids is stimulated by a second messenger within  <u>postsynaptic</u> neurons, typically a rise in postsynaptic Ca2+ concentration, allowing  these hydrophobic signals to diffuse through the postsynaptic membrane to reach  cannabinoid receptors on other nearby cells.</p>
@@ -694,7 +1019,7 @@
 <ul>
 <li>The CB<del>1</del> receptor is a G-protein-coupled receptor related to  the metabotropic receptors for ACh, glutamate, and other  conventional neurotransmitters.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203631803.png" alt="image-20210416203631803" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203631803.png" srcset="/img/loading.gif" lazyload alt="image-20210416203631803" style="zoom:100%;" />
 
 <p>The best-documented action of endocannabinoids is the inhibition of  communication between presynaptic inputs and their postsynaptic target cells.</p>
 <p>In both the hippocampus and the cerebellum (among other brain regions),  endocannabinoids serve as <u>retrograde signals</u> that regulate GABA release at  certain inhibitory synapses</p>
@@ -706,7 +1031,7 @@
 <h4 id="Nitric-oxide-NO"><a href="#Nitric-oxide-NO" class="headerlink" title="Nitric oxide (NO)"></a>Nitric oxide (NO)</h4><p>It is a gas produced by the action of nitric oxide synthase, an enzyme that converts  the amino acid arginine into a metabolite (citrulline) and simultaneously  generates NO.</p>
 <p>Within neurons, NO synthase is regulated by Ca2+ binding to the Ca2+ sensor  protein calmodulin</p>
 <p>Once produced, NO can permeate the plasma membrane, meaning that NO  generated inside one cell can travel through the extracellular medium and act  inside nearby cells.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203807538.png" alt="image-20210416203807538" style="zoom:100%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210416203807538.png" srcset="/img/loading.gif" lazyload alt="image-20210416203807538" style="zoom:100%;" />
 
 <p>This property makes NO a potentially useful agent for coordinating the activities of  multiple cells in a localized region and may mediate certain forms of synaptic  plasticity that spread within small networks of neurons.</p>
 <p>All of the known actions of NO are mediated within its cellular targets; for this  reason, NO often is considered a <u>second messenger</u> rather than a  neurotransmitter.</p>
@@ -720,68 +1045,408 @@
 <p><u>Ionotropic or ligand-gated ion channels</u> combine the neurotransmitter  receptor and ion channel in one molecular entity, and therefore give rise to  rapid postsynaptic electrical responses</p>
 <p><u>Metabotropic receptors</u> regulate the activity of postsynaptic ion channels  indirectly, usually via G-proteins, and induce slower and longer-lasting  electrical responses.</p>
 <p>The postsynaptic response at a given synapse is determined by the  combination of receptor subtypes, G-protein subtypes, and ion channels  that are expressed in the postsynaptic cell.</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>L8 Synaptic transmission</p><p><a href="https://zhenyumi.github.io/posts/ad950dfa/">https://zhenyumi.github.io/posts/ad950dfa/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-04-16</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-04-16</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Neurobiology/">Neurobiology</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/bdf8ab92/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">L13 Antiseizures And Drugs for Parkinson’s</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/8fe7dbb3/"><span class="level-item">L7  Ion channels and transporters</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">195</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">27</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-06T11:24:02.000Z">2021-06-06</time></p><p class="title"><a href="/posts/ce78770f/">L10 Synaptic plasticity</a></p><p class="categories"><a href="/categories/Academic-Notebook/">Academic Notebook</a> / <a href="/categories/Academic-Notebook/Neurobiology/">Neurobiology</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
-            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
-                renderMathInElement(element);
-            });
-        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
-            'HTML-CSS': {
-                matchFontHeight: false
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Neurobiology/" class="category-chain-item">Neurobiology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Neurobiology/" class="print-no-link">#Neurobiology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L8 Synaptic transmission</div>
+      <div>https://zhenyumi.github.io/posts/ad950dfa/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年4月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/8fe7dbb3/" title="L7  Ion channels and transporters">
+                        <span class="hidden-mobile">L7  Ion channels and transporters</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
             },
-            SVG: {
-                matchFontHeight: false
+            loader : {
+              load: ['ui/lazy']
             },
-            CommonHTML: {
-                matchFontHeight: false
-            },
-            tex2jax: {
-                inlineMath: [
-                    ['$','$'],
-                    ['\\(','\\)']
-                ]
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
             }
-        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

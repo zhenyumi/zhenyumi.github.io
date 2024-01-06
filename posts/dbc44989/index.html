@@ -1,35 +1,300 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>L6 Electrical signals of nerve cells - 鹘横海</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="鹘横海"><meta name="msapplication-TileImage" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="鹘横海"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="The electricity in nervous system"><meta property="og:type" content="blog"><meta property="og:title" content="L6 Electrical signals of nerve cells"><meta property="og:url" content="https://zhenyumi.github.io/posts/dbc44989/"><meta property="og:site_name" content="鹘横海"><meta property="og:description" content="The electricity in nervous system"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><meta property="article:published_time" content="2021-04-16T14:42:15.000Z"><meta property="article:modified_time" content="2021-04-16T14:42:15.000Z"><meta property="article:author" content="向海"><meta property="article:tag" content="Neurobiology"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zhenyumi.github.io/posts/dbc44989/"},"headline":"L6 Electrical signals of nerve cells","image":["https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png"],"datePublished":"2021-04-16T14:42:15.000Z","dateModified":"2021-04-16T14:42:15.000Z","author":{"@type":"Person","name":"向海"},"publisher":{"@type":"Organization","name":"鹘横海","logo":{"@type":"ImageObject","url":"https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"}},"description":"The electricity in nervous system"}</script><link rel="canonical" href="https://zhenyumi.github.io/posts/dbc44989/"><link rel="icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<!DOCTYPE html>
+<html lang="zh-CN" >
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Pictures/theme_butterfly/cover_and_top/lecture_notes%28cover%29_with_img.png" alt="L6 Electrical signals of nerve cells"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-04-16T14:42:15.000Z" title="2021/4/17 00:42:15">2021-04-16</time>发表</span><span class="level-item"><time dateTime="2021-04-16T14:42:15.000Z" title="2021/4/17 00:42:15">2021-04-16</time>更新</span><span class="level-item"> 向海 </span><span class="level-item"><a class="link-muted" href="/categories/Academic-Notebook/">Academic Notebook</a><span> / </span><a class="link-muted" href="/categories/Academic-Notebook/Neurobiology/">Neurobiology</a></span><span class="level-item">20 分钟读完 (大约3018个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">L6 Electrical signals of nerve cells</h1><div class="content"><h1 id="一、Electrical-signals-of-nerve-cells"><a href="#一、Electrical-signals-of-nerve-cells" class="headerlink" title="一、Electrical signals of nerve cells"></a>一、Electrical signals of nerve cells</h1><h3 id="1-Electrophysiological-recording"><a href="#1-Electrophysiological-recording" class="headerlink" title="1. Electrophysiological recording"></a>1. Electrophysiological recording</h3><p><strong>Electrophysiological recording</strong>: measuring the electrical activity of a nerve cell.</p>
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="The electricity in nervous system">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L6 Electrical signals of nerve cells">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/dbc44989/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="The electricity in nervous system">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131170012603.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171241269.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171312148.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171351396.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171436782.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171601613.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171601613.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171918118.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131172036390.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131173812751.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131174523133.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131175652416.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131175856556.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180358815.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180423270.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180542418.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180620135.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180633568.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180702000.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180718192.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180728793.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180735344.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180751291.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180754740.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180728793.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180735344.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131181540566.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131181637383.png">
+<meta property="article:published_time" content="2021-04-16T14:42:15.000Z">
+<meta property="article:modified_time" content="2021-04-16T14:42:15.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Neurobiology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131170012603.png">
+  
+  
+  
+  <title>L6 Electrical signals of nerve cells - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L6 Electrical signals of nerve cells</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-04-16 22:42" pubdate>
+          2021年4月16日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          545 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L6 Electrical signals of nerve cells</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Electrical-signals-of-nerve-cells"><a href="#一、Electrical-signals-of-nerve-cells" class="headerlink" title="一、Electrical signals of nerve cells"></a>一、Electrical signals of nerve cells</h1><h3 id="1-Electrophysiological-recording"><a href="#1-Electrophysiological-recording" class="headerlink" title="1. Electrophysiological recording"></a>1. Electrophysiological recording</h3><p><strong>Electrophysiological recording</strong>: measuring the electrical activity of a nerve cell.</p>
 <h4 id="Microelectrode-微电极"><a href="#Microelectrode-微电极" class="headerlink" title="Microelectrode 微电极"></a>Microelectrode 微电极</h4><p>Microelectrode: a piece of glass tubing pulled to a very fine point (with an opening less than 1 µm in diameter) and filled with a good electrical conductor, such as a concentrated salt solution.</p>
 <p>This conductive core can then be connected to a voltmeter, typically a computer, that records the transmembrane voltage of the nerve cell</p>
 <blockquote>
@@ -47,7 +312,7 @@
 <p>Neurons employ <u>several different types</u> of <u>electrical signals</u> to encode and transfer information.</p>
 <h2 id="Resting-membrane-potential"><a href="#Resting-membrane-potential" class="headerlink" title="Resting membrane potential"></a>Resting membrane potential</h2><p>As soon as a microelectrode is inserted through the membrane of the neuron, the microelectrode reports a <u>negative potential</u>, indicating that neurons have a means of generating a constant voltage across their membranes when at rest.</p>
 <p><strong>Resting membrane potential</strong>: <u>-40 to -90 mV</u>, depending on the type of neuron being examined</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131170012603.png" alt="image-20200131170012603" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131170012603.png" srcset="/img/loading.gif" lazyload alt="image-20200131170012603" style="zoom:67%;" />
 
 <h2 id="Receptor-potential"><a href="#Receptor-potential" class="headerlink" title="Receptor potential"></a>Receptor potential</h2><p><strong>Receptor potentials</strong> are due to the activation of <u>sensory neurons</u> by external stimuli, such as light, sound or heat.</p>
 <ul>
@@ -58,27 +323,27 @@
 <li><p>These transient changes in potential are the first step in generating the sensation of vibrations (or “tickles”) of the skin in the somatic sensory system</p>
 </li>
 </ul>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171241269.png" alt="image-20200131171241269"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171241269.png" srcset="/img/loading.gif" lazyload alt="image-20200131171241269"></p>
 <h2 id="Synaptic-potential"><a href="#Synaptic-potential" class="headerlink" title="Synaptic potential"></a>Synaptic potential</h2><p>Associated with communication between neurons at synaptic contacts.</p>
 <p><strong>The central events:</strong> Activation of these synapses generates <strong>synaptic potentials</strong>, which allow transmission of information from one neuron to another. (Transmission from pre-neuron to post-neurons)</p>
 <ul>
 <li>Activation of a synaptic terminal innervating a hippocampal pyramidal neuron causes a very brief change in the resting membrane potential in the pyramidal neuron.</li>
 <li>Synaptic potentials serve as the means of exchanging information in complex neural circuits in both the central and peripheral nervous systems.</li>
 </ul>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171312148.png" alt="image-20200131171312148"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171312148.png" srcset="/img/loading.gif" lazyload alt="image-20200131171312148"></p>
 <h2 id="Action-potential"><a href="#Action-potential" class="headerlink" title="Action potential"></a>Action potential</h2><p>Neurons generate a special type of electrical signal that travels along their long axons.</p>
 <p><strong>Action potentials</strong>: “spikes” or “impulses”</p>
 <p>Action potentials are responsible for <u>long-range transmission</u> of information within the nervous system and allow the nervous system to transmit information to its target organs, such as muscle.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171351396.png" alt="image-20200131171351396"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171351396.png" srcset="/img/loading.gif" lazyload alt="image-20200131171351396"></p>
 <p>One way to elicit an action potential is to pass <u>electrical current</u> across the membrane of the neuron.</p>
 <p>In normal circumstances, this current would be generated by <u>receptor potentials</u> or by <u>synaptic potentials</u>. </p>
 <p>In the laboratory, electrical current suitable for initiating an action potential can be readily produced by inserting a <u>second microelectrode</u> into the same neuron and then connecting the electrode to a battery</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171436782.png" alt="image-20200131171436782" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171436782.png" srcset="/img/loading.gif" lazyload alt="image-20200131171436782" style="zoom: 67%;" />
 
 <p><strong>Action potential</strong> is an active response generated by the neuron and typically is a brief (about 1 ms) change from negative to positive in the transmembrane potential.</p>
 <p>The <u>amplitude</u> of the action potential is <u>independent</u> of the magnitude of the current used to evoke it; that is, larger currents do not elicit larger action potentials.</p>
 <p>The action potentials of a given neuron are therefore said to be <em>all-or-none</em>–that is, they occur fully or not at all.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171601613.png" alt="image-20200131171601613" style="zoom: 50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171601613.png" srcset="/img/loading.gif" lazyload alt="image-20200131171601613" style="zoom: 50%;" />
 
 <p>If the amplitude or duration of the stimulus current is increased sufficiently, <u>multiple</u> action potentials occur.</p>
 <p>The intensity of a stimulus is encoded in the <u>frequency</u> of action potentials rather than in their amplitude.</p>
@@ -90,18 +355,18 @@
 <p>Nothing very dramatic happens. </p>
 <p>The membrane potential simply changes in proportion to the magnitude of the injected current.</p>
 <p>Such hyperpolarizing responses do not require any unique property of neurons and are therefore called <strong>passive electrical responses</strong>.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171601613.png" alt="image-20200131171601613" style="zoom: 50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171601613.png" srcset="/img/loading.gif" lazyload alt="image-20200131171601613" style="zoom: 50%;" />
 
 <h4 id="Depolarization"><a href="#Depolarization" class="headerlink" title="Depolarization"></a>Depolarization</h4><p><strong>Depolarization</strong>: current of the opposite polarity is delivered, so that the membrane potential of the nerve cell becomes more positive than the resting potential.</p>
 <p>At a certain level of membrane potential, called the <strong>threshold potential</strong>, action potentials occur.</p>
 <ul>
 <li>Larger current can generate more frequent action potential but not higher action potential.</li>
 </ul>
-<h1 id="二、Passive-and-active-current-flow-in-axon"><a href="#二、Passive-and-active-current-flow-in-axon" class="headerlink" title="二、Passive and active current flow in axon"></a>二、Passive and active current flow in axon</h1><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171918118.png" alt="image-20200131171918118"></p>
+<h1 id="二、Passive-and-active-current-flow-in-axon"><a href="#二、Passive-and-active-current-flow-in-axon" class="headerlink" title="二、Passive and active current flow in axon"></a>二、Passive and active current flow in axon</h1><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131171918118.png" srcset="/img/loading.gif" lazyload alt="image-20200131171918118"></p>
 <p>A current-passing electrode produces a current that yields a <u>subthreshold (阈下的,低于最低限度的,不足以引起反应的)</u> change in membrane potential, which spreads passively along the axon.</p>
 <p>Potential responses are recorded at the positions indicated by microelectrodes.</p>
 <p>With increasing distance from the site of current injection, the <u>amplitude</u> of the potential change is attenuated as current leaks out of the axon.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131172036390.png" alt="image-20200131172036390"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131172036390.png" srcset="/img/loading.gif" lazyload alt="image-20200131172036390"></p>
 <p>If the experiment is repeated with a <u>suprathreshold (阈上的,超阈值的)</u> current, an active response, the action potential, is evoked.</p>
 <p>Action potentials are recorded at the positions indicated by microelectrodes. </p>
 <p>The <u>amplitude</u> of the action potential is constant along the length of the axon, although the time of appearance of the action potential is delayed with increasing distance.</p>
@@ -124,13 +389,13 @@
 </ul>
 <h2 id="Electrochemical-equilibrium"><a href="#Electrochemical-equilibrium" class="headerlink" title="Electrochemical equilibrium"></a>Electrochemical equilibrium</h2><p>A membrane permeable only to K+ separates the inside and outside compartments, which contain the indicated concentrations of KCI.</p>
 <p>If the concentration of K+ on each side of this membrane is equal, then no electrical potential will be measured across it. </p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131173812751.png" alt="image-20200131173812751" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131173812751.png" srcset="/img/loading.gif" lazyload alt="image-20200131173812751" style="zoom:50%;" />
 
 <p><u>Initial conditions</u>: increasing the KCI concentration of the inside compartment to 10 mM initially causes a small movement of K^+^ into the outside compartment</p>
 <p>As K+ moves from the inside compartment to the outside, a potential is generated that tends to impede further flow of K+.</p>
 <p>This impediment results from the fact that the potential gradient across the membrane tends to repel the positive K+ ions that would otherwise move across the membrane.</p>
 <p>As the outside becomes positive relative to the inside, the increasing positivity makes the outside less attractive to the positively charged K+.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131174523133.png" alt="image-20200131174523133" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131174523133.png" srcset="/img/loading.gif" lazyload alt="image-20200131174523133" style="zoom: 67%;" />
 
 <p>The net movement (or flux) of K+ will stop at the point (“at <u>equilibrium</u>”) where the <u>potential change</u> across the membrane (the relative positivity of the outside compartment) exactly offsets the <u>concentration gradient</u> (the tenfold excess of K+in the inside compartment)</p>
 <p>There is an exact balance between two opposing forces:</p>
@@ -161,7 +426,7 @@
 <h3 id="2-Electrochemical-equilibrium-in-an-environment-with-more-than-one-permeant-ion"><a href="#2-Electrochemical-equilibrium-in-an-environment-with-more-than-one-permeant-ion" class="headerlink" title="2. Electrochemical equilibrium in an environment with more than one permeant ion"></a>2. Electrochemical equilibrium in an environment with more than one permeant ion</h3><p><strong>Nernst equation</strong> considers only the simple case of a single permeant ion species. </p>
 <p>A more elaborate equation is needed, which takes into account both the concentration gradients of the permeant ions and the relative permeability of the membrane to each permeant species.</p>
 <p><strong>Goldman equation</strong> (David Goldman, 1943):</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131175652416.png" alt="image-20200131175652416" style="zoom:65.5%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131175652416.png" srcset="/img/loading.gif" lazyload alt="image-20200131175652416" style="zoom:65.5%;" />
 
 <ul>
 <li>V: the voltage across the membrane</li>
@@ -171,16 +436,16 @@
 <p>At rest, neuronal membranes are more permeable to K+ than to Na+; accordingly, the resting membrane potential is negative and approaches the equilibrium potential for K+ , E<del>K</del>. </p>
 <p>During an action potential, the membrane becomes very permeable to Na+; thus the membrane potential becomes positive and approaches the equilibrium potential for Na+ , E<del>Na</del>. </p>
 <p>The rise in Na+ permeability is transient, so that the membrane again becomes primarily permeable to K+, causing the potential to return to its negative resting value.</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131175856556.png" alt="image-20200131175856556" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131175856556.png" srcset="/img/loading.gif" lazyload alt="image-20200131175856556" style="zoom:67%;" />
 
 <h2 id="Ionic-basis-of-the-resting-membrane-potential"><a href="#Ionic-basis-of-the-resting-membrane-potential" class="headerlink" title="Ionic basis of the resting membrane potential"></a>Ionic basis of the resting membrane potential</h2><p>The action of ion transporters creates substantial transmembrane gradients for most ions</p>
 <ul>
 <li>Such measurements are the basis for stating that there is much more K+ inside the neuron than out, and much more Na+ outside than inside.</li>
 </ul>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180358815.png" alt="image-20200131180358815" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180358815.png" srcset="/img/loading.gif" lazyload alt="image-20200131180358815" style="zoom:50%;" />
 
 <h2 id="The-remarkable-giant-nerve-cells-of-squid"><a href="#The-remarkable-giant-nerve-cells-of-squid" class="headerlink" title="The remarkable giant nerve cells of squid"></a>The remarkable giant nerve cells of squid</h2><p>Many of the initial insights into how ion concentration gradients and changes in membrane permeability produce electrical signals came from experiments performed on the extraordinarily large nerve cells of the <strong>squid</strong></p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180423270.png" alt="image-20200131180423270" style="zoom: 50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180423270.png" srcset="/img/loading.gif" lazyload alt="image-20200131180423270" style="zoom: 50%;" />
 
 <ul>
 <li>The first- and second-level neurons originate in the brain.</li>
@@ -191,28 +456,28 @@
 <li>The relative ease of this approach yielded the first intracellular recordings of action potentials from nerve cells and the first experimental measurements of the ion currents that produce action potentials. – John Z. Young at University College London, 1939</li>
 </ul>
 <h3 id="1-The-phases-of-an-action-potential-of-the-squid-giant-axon"><a href="#1-The-phases-of-an-action-potential-of-the-squid-giant-axon" class="headerlink" title="1. The phases of an action potential of the squid giant axon"></a>1. The phases of an action potential of the squid giant axon</h3><p>While the <strong>resting</strong> neuronal membrane is only slightly permeable to Na+, the membrane becomes extraordinarily permeable to Na+ during the **rising phase **and the <strong>overshoot phase</strong> of an action potential. </p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180542418.png" alt="image-20200131180542418"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180542418.png" srcset="/img/loading.gif" lazyload alt="image-20200131180542418"></p>
 <p>The length of time the membrane potential lingers near ENa (about +58 mV) during the overshoot phase of an action potential is <u>brief</u> because the increased membrane permeability to Na+ itself is short-lived.</p>
 <p>During the <strong>undershoot</strong>, the membrane potential is transiently hyperpolarized because K+ permeability becomes even greater than it is at rest.</p>
 <p>The action potential ends when this phase of enhanced K+ permeability subsides, and the membrane potential thus returns to its normal resting level.</p>
-<h2 id="Long-distance-signaling-by-means-of-action-potentials"><a href="#Long-distance-signaling-by-means-of-action-potentials" class="headerlink" title="Long-distance signaling by means of action potentials"></a>Long-distance signaling by means of action potentials</h2><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180620135.png" alt="image-20200131180620135"></p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180633568.png" alt="image-20200131180633568"></p>
+<h2 id="Long-distance-signaling-by-means-of-action-potentials"><a href="#Long-distance-signaling-by-means-of-action-potentials" class="headerlink" title="Long-distance signaling by means of action potentials"></a>Long-distance signaling by means of action potentials</h2><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180620135.png" srcset="/img/loading.gif" lazyload alt="image-20200131180620135"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180633568.png" srcset="/img/loading.gif" lazyload alt="image-20200131180633568"></p>
 <p>A depolarizing stimulus–a synaptic potential or a receptor potential in an intact neuron, or an injected current pulse in an experiment–locally depolarizes the axon, thus opening the voltage-sensitive Na+ channels in that region. </p>
 <p>The opening of Na+ channels causes inward movement of Na+, and the resultant depolarization of the membrane potential generates an action potential at that site. </p>
 <p>Some of the local current generated by the action potential will then flow passively down the axon.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180702000.png" alt="image-20200131180702000"></p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180718192.png" alt="image-20200131180718192"></p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180728793.png" alt="image-20200131180728793"></p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180735344.png" alt="image-20200131180735344"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180702000.png" srcset="/img/loading.gif" lazyload alt="image-20200131180702000"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180718192.png" srcset="/img/loading.gif" lazyload alt="image-20200131180718192"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180728793.png" srcset="/img/loading.gif" lazyload alt="image-20200131180728793"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180735344.png" srcset="/img/loading.gif" lazyload alt="image-20200131180735344"></p>
 <p>This <u>passive current flow</u> depolarizes the membrane potential in the adjacent region of the axon, thus opening the Na+ channels in the neighboring membrane. </p>
 <p>The local depolarization triggers an <u>action potential</u> in this region.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180751291.png" alt="image-20200131180751291"></p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180754740.png" alt="image-20200131180754740"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180751291.png" srcset="/img/loading.gif" lazyload alt="image-20200131180751291"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180754740.png" srcset="/img/loading.gif" lazyload alt="image-20200131180754740"></p>
 <p>Action potential then spreads again in a continuing cycle until the action potential reaches the end of the axon.</p>
 <p>Action potential propagation requires the coordinated action of two forms of current flow: <u>the passive flow of current</u> as well as <u>active currents</u> flowing through voltage-dependent ion channels. </p>
 <p>The regenerative properties of Na+ channel opening allow action potentials to propagate in an <u>all-or-none</u> fashion by acting as a <u>booster</u> at each point along the axon, thus ensuring the long-distance transmission of electrical signals</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180728793.png" alt="image-20200131180728793"></p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180735344.png" alt="image-20200131180735344"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180728793.png" srcset="/img/loading.gif" lazyload alt="image-20200131180728793"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131180735344.png" srcset="/img/loading.gif" lazyload alt="image-20200131180735344"></p>
 <p>As the action potential spreads, the membrane potential <u>repolarizes</u> due to K+channel opening and Na+ channel inactivation, leaving a “<u>wake</u>” of refractoriness behind the action potential that prevents its backward propagation. </p>
 <p>The <u>refractory period</u> arises because the depolarization that produces Na+ channel opening also causes <u>delayed</u> activation of K+ channels and Na+ channel inactivation, which temporarily makes it more difficult for the axon to produce another action potential. </p>
 <p>This important feature prevents action potentials from propagating <u>backward</u>, toward their point of initiation, as they travel along an axon. </p>
@@ -229,74 +494,420 @@
 </li>
 </ol>
 <p><strong>Myelination (髓鞘形成) of axons</strong>: oligodendrocytes in the central nervous system (and Schwann cells in the peripheral nervous system) wrap the axon in <u>myelin</u>, which consists of multiple layers of closely opposed glial membranes.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131181540566.png" alt="image-20200131181540566"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131181540566.png" srcset="/img/loading.gif" lazyload alt="image-20200131181540566"></p>
 <h3 id="2-Myelin-increases-action-potential-conduction-speed"><a href="#2-Myelin-increases-action-potential-conduction-speed" class="headerlink" title="2. Myelin increases action potential conduction speed"></a>2. Myelin increases action potential conduction speed</h3><p>By acting as an electrical insulator, myelin greatly <u>speeds up</u> action potential conduction.</p>
 <p>The major reason underlying this marked increase in speed is that the timeconsuming process of action potential generation occurs only at specific points along the axon, called <strong>nodes of Ranvier</strong>, where there is a gap in the myelin wrapping.</p>
 <p>An action potential generated at one node of Ranvier elicits current that flows passively within the myelinated segment until the next node is reached.</p>
 <p>This type of propagation is called <strong>saltatory</strong>, meaning that the action potential <u>jumps</u> from node to node.</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131181637383.png" alt="image-20200131181637383"></p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>L6 Electrical signals of nerve cells</p><p><a href="https://zhenyumi.github.io/posts/dbc44989/">https://zhenyumi.github.io/posts/dbc44989/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>向海</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-04-16</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-04-16</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Neurobiology/">Neurobiology</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/8fe7dbb3/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">L7  Ion channels and transporters</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/823380e7/"><span class="level-item">L5 Repair and regeneration in the nervous system</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png" alt="TMerura"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">TMerura</p><p class="is-size-6 is-block">I want to be a Dr</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">195</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">27</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://orcid.org/0000-0001-7608-0703" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:zhenyumi@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Telegram" href="https://t.me/Awateatori"><i class="fab fa-telegram"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Academic-Notebook/"><span class="level-start"><span class="level-item">Academic Notebook</span></span><span class="level-end"><span class="level-item tag">168</span></span></a><ul><li><a class="level is-mobile" href="/categories/Academic-Notebook/Animal-Physiology/"><span class="level-start"><span class="level-item">Animal Physiology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/"><span class="level-start"><span class="level-item">Biochemistry I (Macromolecules)</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/"><span class="level-start"><span class="level-item">Biochemistry II (Metabolism)</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Biopsychology/"><span class="level-start"><span class="level-item">Biopsychology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetic-Engineering/"><span class="level-start"><span class="level-item">Genetic Engineering</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/"><span class="level-start"><span class="level-item">Machine learning and neural engineering</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Microbiology/"><span class="level-start"><span class="level-item">Microbiology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Biology/"><span class="level-start"><span class="level-item">Molecular Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Molecular-Pharmacology/"><span class="level-start"><span class="level-item">Molecular Pharmacology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/Neurobiology/"><span class="level-start"><span class="level-item">Neurobiology</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Academic-Notebook/%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E7%B1%BB/"><span class="level-start"><span class="level-item">人文社科类</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/GRE/"><span class="level-start"><span class="level-item">GRE</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Lab/Lab-Protocols/"><span class="level-start"><span class="level-item">Lab Protocols</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/"><span class="level-start"><span class="level-item">云下日记</span></span><span class="level-end"><span class="level-item tag">98</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%9D%91/"><span class="level-start"><span class="level-item">坑</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"><span class="level-start"><span class="level-item">软件使用总结</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/LaTeX/"><span class="level-start"><span class="level-item">LaTeX</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/"><span class="level-start"><span class="level-item">Typora</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/"><span class="level-start"><span class="level-item">速查</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-18T07:33:32.000Z">2022-09-18</time></p><p class="title"><a href="/posts/ad194525/">Animal Perfusion Fixation for Mice</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-29T10:18:52.000Z">2022-01-29</time></p><p class="title"><a href="/posts/489d189b/">常用数学公式代码</a></p><p class="categories"><a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a> / <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/%E9%80%9F%E6%9F%A5/">速查</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-17T09:59:32.000Z">2022-01-17</time></p><p class="title"><a href="/posts/e62f727a/">Fourier Transform and Power/Phase analysis</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-04T07:10:29.000Z">2021-08-04</time></p><p class="title"><a href="/posts/8350c993/">Column based DNA purification and Genotyping</a></p><p class="categories"><a href="/categories/Lab/">Lab</a> / <a href="/categories/Lab/Lab-Protocols/">Lab Protocols</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-06T11:24:02.000Z">2021-06-06</time></p><p class="title"><a href="/posts/ce78770f/">L10 Synaptic plasticity</a></p><p class="categories"><a href="/categories/Academic-Notebook/">Academic Notebook</a> / <a href="/categories/Academic-Notebook/Neurobiology/">Neurobiology</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">153</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Animal-Physiology/"><span class="tag">Animal Physiology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-I-Macromolecules/"><span class="tag">Biochemistry I (Macromolecules)</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry-II-Metabolism/"><span class="tag">Biochemistry II (Metabolism)</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopsychology/"><span class="tag">Biopsychology</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">22</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" alt="鹘横海" height="28"></a><p class="is-size-7"><span>&copy; 2023 向海</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2020</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
-            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
-                renderMathInElement(element);
-            });
-        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
-            'HTML-CSS': {
-                matchFontHeight: false
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200131181637383.png" srcset="/img/loading.gif" lazyload alt="image-20200131181637383"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Neurobiology/" class="category-chain-item">Neurobiology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Neurobiology/" class="print-no-link">#Neurobiology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L6 Electrical signals of nerve cells</div>
+      <div>https://zhenyumi.github.io/posts/dbc44989/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年4月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/8fe7dbb3/" title="L7  Ion channels and transporters">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L7  Ion channels and transporters</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/823380e7/" title="L5 Repair and regeneration in the nervous system">
+                        <span class="hidden-mobile">L5 Repair and regeneration in the nervous system</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
             },
-            SVG: {
-                matchFontHeight: false
+            loader : {
+              load: ['ui/lazy']
             },
-            CommonHTML: {
-                matchFontHeight: false
-            },
-            tex2jax: {
-                inlineMath: [
-                    ['$','$'],
-                    ['\\(','\\)']
-                ]
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
             }
-        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
