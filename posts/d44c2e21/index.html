@@ -1,0 +1,1097 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="一、Structure of GPCRs and G-proteins Trimeric G Proteins Relay Signals From GPCRs G-protein-coupled receptors (GPCRs) form the largest family of cell-surface receptors, and they mediate most responses">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L16 Cell communication via G-protein coupled receptor">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/d44c2e21/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="一、Structure of GPCRs and G-proteins Trimeric G Proteins Relay Signals From GPCRs G-protein-coupled receptors (GPCRs) form the largest family of cell-surface receptors, and they mediate most responses">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_01.jpg">
+<meta property="article:published_time" content="2020-07-15T09:12:00.000Z">
+<meta property="article:modified_time" content="2020-07-17T13:36:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Cell Biology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_01.jpg">
+  
+  
+  
+  <title>L16 Cell communication via G-protein coupled receptor - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L16 Cell communication via G-protein coupled receptor</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-15 17:12" pubdate>
+          2020年7月15日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          840 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L16 Cell communication via G-protein coupled receptor</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Structure-of-GPCRs-and-G-proteins"><a href="#一、Structure-of-GPCRs-and-G-proteins" class="headerlink" title="一、Structure of GPCRs and G-proteins"></a>一、Structure of GPCRs and G-proteins</h1><blockquote>
+<p>Trimeric G Proteins Relay Signals From GPCRs</p>
+<p><font color ="EE0000"><strong>G-protein-coupled receptors (GPCRs)</strong></font> form the largest family of cell-surface receptors, and they mediate most responses to signals from the external world, as well as signals from other cells, including <strong>hormones</strong>, <strong>neurotransmitters</strong>, and <strong>local mediators</strong></p>
+<p><strong>All GPCRs have a similar structure</strong>. They consist of a single polypeptide chain that <u>threads back and forth across the lipid bilayer <strong>seven</strong> times</u>, forming a <strong>cylindrical structure</strong>, often with a deep ligand-binding site at its center (Figure 15–21). In addition to their characteristic orientation in the plasma membrane,  they all use <strong>G proteins</strong> to relay the signal into the cell interior.</p>
+<ul>
+<li>G proteins are composed of three protein subunits—<strong>α, β, and γ.</strong> In the <strong>unstimulated state</strong>, the <strong>α subunit</strong> has <u>GDP bound</u> and the G protein is <strong>inactive</strong> (Figure 15–22). </li>
+<li>When a GPCR is activated, it acts like a <strong>guanine nucleotide exchange factor (GEF)</strong> and induces the <strong>α subunit</strong> to release its bound GDP, allowing GTP to bind in its place. </li>
+<li>GTP binding then causes an activating conformational change in the Gα subunit, releasing the G protein from the receptor and triggering dissociation of the GTP-bound Gα subunit from the <strong>Gβγ pair</strong>—both of which then interact with various targets, such as <u>enzymes</u> and <u>ion channels</u> in the plasma membrane,  which relay the signal onward</li>
+</ul>
+<p><strong>regulator of G protein signaling (RGS)</strong>. RGS proteins act as α-subunit-specific GTPase-activating proteins (<strong>GAPs</strong>) (see Figure 15–8), and they help shut off G-protein-mediated responses in all eukaryotes.</p>
+</blockquote>
+<p>~ 50% of known drugs are working with GPCRs</p>
+<p>They are seven-pass transmembrane proteins structurally similar to bacteriorhodopsin</p>
+<ul>
+<li>One single polypeptide, <u>7-pass transmembrane</u> in a serpentine（像蛇般蜷曲的,蜿蜒的） manner</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417220030363.png" srcset="/img/loading.gif" lazyload alt="image-20200417220030363" style="zoom:80%;" />
+
+<p>The largest cell surface receptor family with &gt;800 GPCRs in humans.</p>
+<ul>
+<li>The receptors that respond to sight, smell, taste, and neurotransmitters, etc.</li>
+</ul>
+<p>~ 150 GPCR known ligands</p>
+<p>All GPCRs need trimeric GTP-binding proteins to relay signals</p>
+<h2 id="Trimeric-G-protein"><a href="#Trimeric-G-protein" class="headerlink" title="Trimeric G-protein"></a>Trimeric G-protein</h2><p>Subunit $\alpha$ binds to GTP&#x2F;GDP and has <strong>GTPase activity</strong></p>
+<ul>
+<li>β subunit is bound by α and γ</li>
+<li><u>β and γ form a functional subunit</u></li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417220139541.png" srcset="/img/loading.gif" lazyload alt="image-20200417220139541"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417220159150.png" srcset="/img/loading.gif" lazyload alt="image-20200417220159150"></p>
+<h1 id="二、GPCR-activation-and-deactivation"><a href="#二、GPCR-activation-and-deactivation" class="headerlink" title="二、GPCR activation and deactivation"></a>二、GPCR activation and deactivation</h1><h2 id="Activation-of-a-trimeric-G-protein-by-stimulating-GPCRs"><a href="#Activation-of-a-trimeric-G-protein-by-stimulating-GPCRs" class="headerlink" title="Activation of a trimeric G-protein by stimulating GPCRs"></a>Activation of a trimeric G-protein by stimulating GPCRs</h2><p>Ligand binding activates GPCR, which then acts as a GEF to exchange GDP for GTP and thus activates the G-protein</p>
+<ul>
+<li>“Activated trimeric G-proteins” dissociate into an active GTP-bound $\alpha$ subunit and an active β-γ complex.</li>
+</ul>
+<p>α subunit <strong><u>and&#x2F;or</u></strong> the β-γ complex bind to target proteins (effectors)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417220353964.png" srcset="/img/loading.gif" lazyload alt="image-20200417220353964" style="zoom: 40%;" />
+
+<h2 id="Deactivation-of-a-G-protein-by-GTP-hydrolysis"><a href="#Deactivation-of-a-G-protein-by-GTP-hydrolysis" class="headerlink" title="Deactivation of a G-protein by GTP hydrolysis"></a>Deactivation of a G-protein by GTP hydrolysis</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417220422621.png" srcset="/img/loading.gif" lazyload alt="image-20200417220422621" style="zoom:67%;" />
+
+<p>α subunit hydrolyzes GTP and deactivate itself and the β-γ complex.</p>
+<p><strong>RGS</strong> (regulator of G-protein signaling) acts as α-subunit-specific GTPase activating protein (<strong>GAP</strong>) to <u>promote GTP hydrolysis.</u></p>
+<h2 id="Activated-G-protein-relays-GPCR-signal-via-small-second-messenger-molecules"><a href="#Activated-G-protein-relays-GPCR-signal-via-small-second-messenger-molecules" class="headerlink" title="Activated G protein relays GPCR signal via small second messenger molecules"></a>Activated G protein relays GPCR signal via small second messenger molecules</h2><p>“First messengers”: signaling molecules that activate the receptor</p>
+<p>“Second messengers”: small molecules that are produced by the activated enzymes.</p>
+<p>Small molecules rapidly diffuse away from their source, thereby amplifying and spreading the intracellular signal </p>
+<p>Small messengers:</p>
+<ol>
+<li><font color="EE0000">cAMP</font> (produced by adenylyl cyclase)</li>
+<li><font color="EE0000">DAG</font> (diacylglycerol) and <font color="EE0000">IP<del>3</del> </font>(inositol 1,4,5 triphosphate) (produced by phospholipase C-β)</li>
+<li><font color="EE0000">Ca2+</font> (levels are controlled by gated channels)</li>
+<li><font color="EE0000">cAMP&#x2F;cGMP</font> (to trigger <strong>gated ion channels</strong> in smell and vision)</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417221020169.png" srcset="/img/loading.gif" lazyload alt="image-20200417221020169" style="zoom: 33%;" />
+
+<blockquote>
+<p>Some G Proteins Regulate the Production of Cyclic AMP</p>
+<p><font color="EE0000"><strong>Cyclic AMP (cAMP)</strong></font> acts as a second messenger in some signaling pathways. </p>
+</blockquote>
+<blockquote>
+<p>Second Messengers and Enzymatic Cascades Amplify Signals</p>
+<p>Despite the differences in molecular details, the different intracellular signaling pathways that GPCRs trigger <u>share certain features and obey similar general principles.</u> </p>
+<ul>
+<li>They depend on <strong>relay chains</strong> of intracellular signaling proteins and second messengers. These <strong>relay chains</strong> provide numerous opportunities for <u>amplifying the responses</u> to extracellular signals</li>
+</ul>
+<p>Any such amplifying cascade of stimulatory signals requires <strong>counterbalancing mechanisms</strong>（平衡机制） at every step of the cascade to <u>restore the system to its resting state</u> when stimulation ceases.</p>
+</blockquote>
+<h3 id="1-Summary-stimulation-of-GPCRs"><a href="#1-Summary-stimulation-of-GPCRs" class="headerlink" title="1. Summary: stimulation of GPCRs"></a>1. Summary: stimulation of GPCRs</h3><p>Subunit α binds to GTP&#x2F;GDP and has GTPase activity</p>
+<p>β subunit is bound by α and γ </p>
+<ul>
+<li>β and γ form α functional subunit</li>
+</ul>
+<p>Signal facilitate <strong>conformational change</strong> of receptor</p>
+<p>Receptor will activate G protein</p>
+<ul>
+<li>In activated G protein, α subunit binds GTP, other two form β-γ complex</li>
+<li>α and β-γ &#x2F;or β-γ bind to target protein</li>
+<li>α subunit will finally hydrolyze GTP and deactivate itself plus complex</li>
+</ul>
+<h1 id="三、GPCR-signaling-via-different-mediators"><a href="#三、GPCR-signaling-via-different-mediators" class="headerlink" title="三、GPCR signaling via different mediators"></a>三、GPCR signaling via different mediators</h1><p>G-protein may activate either <strong>adenylyl cyclase</strong>, or <strong>phospholipase C</strong></p>
+<p>Both are enzymes producing small molecules—second messengers</p>
+<ul>
+<li><strong>Adenylyl cyclase</strong> produces <font color="EE0000">cAMP</font></li>
+<li><strong>Phospholipase C</strong> produces <font color="EE0000">inositol triphosphate and diacylglycerol</font></li>
+</ul>
+<h2 id="cAMP"><a href="#cAMP" class="headerlink" title="cAMP"></a>cAMP</h2><blockquote>
+<p>Cyclic AMP is synthesized <u>from ATP</u> by an enzyme called adenylyl cyclase, and it is rapidly and continuously <u>destroyed</u> by <strong>cyclic AMP  phosphodiesterases</strong> (Figure 15–25). </p>
+<ul>
+<li><strong>Adenylyl cyclase</strong> is a large, <u>multipass transmembrane protein</u> with its <u>catalytic domain on the cytosolic side</u> of the plasma membrane.</li>
+</ul>
+<p>Many extracellular signals work by increasing cAMP concentrations inside the cell. These signals activate GPCRs that are coupled to a <font color="EE0000">stimulatory G protein  (G<del>s</del>)</font></p>
+<p>Other extracellular signals, acting through different GPCRs, reduce cAMP levels  by activating an <font color="EE0000">inhibitory G protein (G<del>i</del>)</font></p>
+</blockquote>
+<p>Two different G-proteins influence cAMP synthesis: </p>
+<ul>
+<li><font color="EE0000">G<del>s</del> (stimulatory G-protein)</font> activates adenylyl cyclase</li>
+<li><font color="EE0000">G<del>i</del> (inhibitory G-protein)</font> inhibits adenylyl cyclase<ul>
+<li>α-subunits of G<del>s</del> and G<del>i</del> are target of the <strong>cholera toxin</strong>（霍乱毒素）</li>
+<li>α-subunits of G<del>i</del> is target of the <strong>pertussis toxin</strong>（百日咳毒素）</li>
+</ul>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417222550187.png" srcset="/img/loading.gif" lazyload alt="image-20200417222550187" style="zoom: 33%;" />
+
+<h3 id="1-Mechanism-of-cholera-toxin-prolonged-elevation-of-cAMP-concentrations-Keep-Activated"><a href="#1-Mechanism-of-cholera-toxin-prolonged-elevation-of-cAMP-concentrations-Keep-Activated" class="headerlink" title="1. Mechanism of cholera toxin: prolonged elevation of cAMP concentrations (Keep Activated)"></a>1. Mechanism of cholera toxin: prolonged elevation of cAMP concentrations (Keep Activated)</h3><p>Cholera toxin stops deactivation of particular G-protein; as a result, water and ions will not be absorbed in gut</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417222726698.png" srcset="/img/loading.gif" lazyload alt="image-20200417222726698" style="zoom: 25%;" />
+
+<p>Catalyzes the transfer of <strong>ADP ribose</strong> from intracellular NAD+ to the $\alpha$ subunit of G<del>s</del>. </p>
+<ul>
+<li>ADP ribosylation alters the $\alpha$ subunit so that it can <u>no longer hydrolyze its bound GTP.</u></li>
+<li>It remains in an constitutively active state.</li>
+<li>This indefinitely stimulates the <strong>adenylyl cyclase.</strong></li>
+</ul>
+<p>The prolonged elevation in cAMP concentration causes influx of <font color="EE0000">Cl-</font> and <font color="EE0000">water</font> from intestinal epithelial cells into the gut, thereby causing the severe <strong>diarrhea</strong>（腹泻，痢疾） that characterizes cholera.</p>
+<h3 id="2-The-opposite-is-true-for-the-mechanism-of-pertussis-toxin-permanent-inactivation-of-G-proteins-Inhibit-Inactivated"><a href="#2-The-opposite-is-true-for-the-mechanism-of-pertussis-toxin-permanent-inactivation-of-G-proteins-Inhibit-Inactivated" class="headerlink" title="2. The opposite is true for the mechanism of pertussis toxin: permanent inactivation of G-proteins (Inhibit Inactivated)"></a>2. The opposite is true for the mechanism of pertussis toxin: permanent inactivation of G-proteins (Inhibit Inactivated)</h3><p>Catalyzes ADP ribosylation of $\alpha$ subunit of inhibitory G-protein (G<del>i</del>), preventing the protein from interacting with the receptor.</p>
+<p>G<del>i</del> is <strong>constitutively inactive</strong> and is unable to regulate the target proteins. </p>
+<p>Pertussis toxin <u>stops activation</u> of G<del>i</del>, resulting in a cough.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200707193114255.png" srcset="/img/loading.gif" lazyload alt="image-20200707193114255"></p>
+<h2 id="GPCR-signaling-via-cAMP-PKA"><a href="#GPCR-signaling-via-cAMP-PKA" class="headerlink" title="GPCR signaling via cAMP-PKA"></a>GPCR signaling via cAMP-PKA</h2><blockquote>
+<p><font color="FF4500"><strong>Cyclic-AMP-Dependent Protein Kinase (PKA)</strong></font> Mediates Most of the Effects of Cyclic AMP</p>
+<p>In most animal cells, cAMP exerts its effects mainly by activating <strong>cyclic-AMP-dependent protein kinase (PKA)</strong>. This kinase phosphorylates specific <strong>serines</strong> or <strong>threonines</strong> on selected target proteins, including <strong>intracellular signaling proteins</strong> and <strong>effector proteins</strong>, thereby regulating their activity</p>
+<ul>
+<li>In the <strong>inactive state</strong>, PKA consists of a complex of <strong>two catalytic subunits</strong> and <strong>two regulatory subunits.</strong> The binding of cAMP to the regulatory subunits alters their conformation, causing them to <u>dissociate from the complex</u>. The released catalytic subunits are thereby activated to phosphorylate specific target proteins</li>
+<li>The <strong>regulatory subunits</strong> of PKA (also called <font color="FF4500">A-kinase</font>) are important for localizing the kinase inside the cell: special <font color="FF4500"><strong>A-kinase anchoring proteins (AKAPs)</strong></font> bind both to the regulatory subunits and to a component of the cytoskeleton or a membrane of an organelle, thereby <u>tethering the enzyme complex to a particular subcellular compartment</u><ul>
+<li>An AKAP located around the <strong>nucleus of heart muscle cells</strong>, for example, binds both <strong>PKA</strong> and a <strong>phosphodiesterase</strong> that  hydrolyzes cAMP.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417222907816.png" srcset="/img/loading.gif" lazyload alt="image-20200417222907816"></p>
+<p>PKA (cAMP-dependent protein kinase) mediates most of the effects of cAMP, which can trigger fast and slow responses. </p>
+<ul>
+<li>PKA is a serine&#x2F;threonine protein kinase. By phosphorylation of substrates (protein modification), PKA mediates GPCR signaling in a fast manner&#x2F;response.</li>
+<li>PKA also phosphorylates <font color="FF4500">CREB (CRE-binding protein)</font>, which then recruits <font color="FFA500">CBP (CREB-binding protein)</font> and activates <strong>gene transcription (gene regulation)</strong> in a slow manner&#x2F;response</li>
+</ul>
+<h3 id="1-Activated-PKA-triggers-fast-responses-Adrenaline-肾上腺素"><a href="#1-Activated-PKA-triggers-fast-responses-Adrenaline-肾上腺素" class="headerlink" title="1. Activated PKA triggers fast responses: (Adrenaline, 肾上腺素)"></a>1. Activated PKA triggers fast responses: (Adrenaline, 肾上腺素)</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417223502983.png" srcset="/img/loading.gif" lazyload alt="image-20200417223502983" style="zoom:50%;" />
+
+<p>Adrenaline-induced glycogen breakdown</p>
+<ul>
+<li>In skeletal muscle, glycogen breakdown occurs within seconds of adrenaline binding to its receptor (activated by the second messenger (<strong>cAMP</strong>)</li>
+<li>Receptor activates <strong>adenylyl cyclase</strong> to produce cAMP</li>
+<li>cAMP activates PKA</li>
+<li>Activated PKA phosphorylates the <strong>glycogen phosphorylase kinase</strong></li>
+<li><strong>Glycogen phosphorylase</strong> kinase phosphorylates <strong>glycogen phosphorylase</strong> which in turn triggers glycogen breakdown</li>
+</ul>
+<h3 id="2-Activated-PKA-triggers-slow-responses-transcription-regulation"><a href="#2-Activated-PKA-triggers-slow-responses-transcription-regulation" class="headerlink" title="2. Activated PKA triggers slow responses (transcription regulation)"></a>2. Activated PKA triggers slow responses (transcription regulation)</h3><blockquote>
+<p>In cells that secrete the peptide hormone <strong>somatostatin</strong>, cAMP activates the gene that encodes this hormone. </p>
+<p>The regulatory region of the <strong>somatostatin（生长激素抑制素） gene</strong> contains a short cis-regulatory sequence, called the <font color="FF4500"><strong>cyclic AMP response element (CRE)</strong></font>, which is also found in the regulatory region of many other genes activated by cAMP.</p>
+<p>A specific transcription regulator called <font color="FF4500"><strong>CRE-binding (CREB)</strong> protein</font> recognizes this sequence. </p>
+<ul>
+<li>When PKA is activated by cAMP, it <u>phosphorylates CREB</u> on a single <strong>serine</strong>; </li>
+<li>phosphorylated CREB then recruits a <strong>transcriptional coactivator</strong> called <font color="FFA500">CREB-binding protein (CBP)</font>,  which stimulates the transcription of the target genes</li>
+</ul>
+<p>Thus, CREB can transform a <strong>short cAMP signal</strong> into a long-term change in a cell, a process that, in the brain, is thought to play an important part in some forms of learning and memory.</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417223603048.png" srcset="/img/loading.gif" lazyload alt="image-20200417223603048" style="zoom: 50%;" />
+
+<p>An increase in cAMP level can alter gene transcription!</p>
+<p>How a rise in intracellular cyclic AMP concentration can alter gene transcription?</p>
+<p>Transcription regulation by PKA:</p>
+<ul>
+<li>activation of PKA by cAMP.</li>
+<li>active PKA moves into the nucleus and phosphorylates CREB (cAMP response element (CRE)-binding protein), which then recruits CBP (CREB-binding protein) and activates gene transcription (gene regulation) in a slow manner&#x2F;response.</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417223702123.png" srcset="/img/loading.gif" lazyload alt="image-20200417223702123"></p>
+<h2 id="Signaling-via-inositol-phospholipid"><a href="#Signaling-via-inositol-phospholipid" class="headerlink" title="Signaling via inositol phospholipid"></a>Signaling via inositol phospholipid</h2><blockquote>
+<p>Many GPCRs exert their effects through G proteins that activate the plasma-membrane-bound enzyme <font color="EE0000"><strong>phospholipase C-β (PLCβ)</strong></font></p>
+<p>Receptors that activate this <strong>inositol phospholipid signaling pathway</strong> mainly do so via a <strong>G protein</strong> called <font color="EE0000">G<del>q</del> </font>,  which <u>activates</u> phospholipase C-β in much the same way that <font color="EE0000">G<del>s</del> </font>activates adenylyl cyclase. </p>
+<p>The activated <strong>phospholipase</strong> then cleaves the <font color="800000">PI(4,5)P2</font> to generate two products: <font color="EE0000">inositol 1,4,5-trisphosphate (IP<del>3</del>)</font> and <font color="EE0000"><strong>diacylglycerol</strong></font></p>
+<ul>
+<li>IP<del>3</del> is a <u>water-soluble</u> molecule that <u>leaves the plasma membrane</u> and diffuses rapidly through the <u>cytosol</u>. When it reaches the endoplasmic reticulum (ER), it  binds to and opens <font color="EE0000"><strong>IP<del>3</del>-gated Ca2+-release channels</strong></font> (also called <font color="EE0000"><strong>IP<del>3</del> receptors</strong></font>)  in the <strong>ER membrane</strong></li>
+<li>At the same time that the IP<del>3</del> produced by the hydrolysis of PI(4,5)P2 is increasing the concentration of Ca2+ in the cytosol, the other cleavage product of the PI(4,5)P2, <strong>diacylglycerol</strong>, is exerting different effects. It also acts as a second messenger, but it remains <u>embedded in the plasma membrane</u>, where it has several potential signaling roles. One of its major functions is to activate a protein kinase called <font color="FF4500"><strong>protein kinase C (PKC)</strong></font>, so named because it is Ca2+-dependent<ul>
+<li><strong>Diacylglycerol</strong> can be further cleaved to release <font color="FF4500"><strong>arachidonic acid（花生四烯酸）</strong></font>, which can either act as a signal in its own right or be used in the synthesis of other small lipid signal molecules called <strong>eicosanoids（类花生酸）</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>GPCR-mediated signals</strong> described earlier, act primarily through <strong>IP<del>3</del> receptors</strong> to stimulate Ca2+ release from intracellular stores in the ER</p>
+<ul>
+<li>The ER membrane also contains a second type of regulated Ca2+ channel called the <strong>ryanodine receptor</strong> (so called because it is sensitive to the plant alkaloid ryanodine), which opens in response to rising Ca2+ levels and thereby amplifies the Ca2+ signal</li>
+</ul>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417223720730.png" srcset="/img/loading.gif" lazyload alt="image-20200417223720730"></p>
+<p>Instead of adenylyl cyclase, some G proteins activate phospholipase C(PLC)-β. </p>
+<ul>
+<li>Phospholipase C-β cleaves inositol </li>
+<li>phospholipid present in the inner layer of membrane.</li>
+<li>Substrates for PLC-β is PI(4,5)P2<ul>
+<li>Cleavage of PIP<del>2</del> results in production of the two second messengers <strong>1,4,5-triphosphate (IP<del>3</del>)</strong> and <strong>diacylglycerol (DAG)</strong>.<ul>
+<li>IP3 activates Ca2+ channels in ER</li>
+<li>DAG activates protein kinase C (Ca2+ is needed)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Both Ca2+ and PKC are signals to other proteins</p>
+<h3 id="1-Signals-that-activate-phospholipase-C-β"><a href="#1-Signals-that-activate-phospholipase-C-β" class="headerlink" title="1. Signals that activate phospholipase C-β"></a>1. Signals that activate phospholipase C-β</h3><p>Vasopressin, acetylcholine and trombin（加压素，乙酰胆碱和伸缩蛋白） activate this pathway</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417223825686.png" srcset="/img/loading.gif" lazyload alt="image-20200417223825686"></p>
+<h3 id="2-IP3-DAG-Ca2-and-PKC-signal"><a href="#2-IP3-DAG-Ca2-and-PKC-signal" class="headerlink" title="2. IP3, DAG, Ca2+ and PKC signal"></a>2. IP3, DAG, Ca2+ and PKC signal</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417224159953.png" srcset="/img/loading.gif" lazyload alt="image-20200417224159953" style="zoom: 45%;" />
+
+<p>Ca2+ is a frequent intracellular signal which signals egg to divide, muscle cell to contract etc.</p>
+<p>Normally, Ca2+ concentration is high both in ER and outer space.</p>
+<ul>
+<li>Free [Ca2+]<del>out</del> &#x3D; 1 mM</li>
+<li>Free [Ca2+]<del>in</del> &#x3D; 0.1 µM</li>
+</ul>
+<p>IP<del>3</del> triggers Ca2+ release from Ca2+ channels (IP<del>3</del> receptor and ryanodine receptor) in the ER membrane</p>
+<p>DAG activates protein kinase C (Ca2+ is needed)</p>
+<ul>
+<li>Together, Ca2+ and DAG activate the protein kinase C (PKC)</li>
+</ul>
+<p>Ca2+ can work separately through <font color="EE0000">CaM kinases</font>. </p>
+<p>Both Ca2+ and PKC are signals to other proteins</p>
+<h4 id="Effects-of-Ca2-signaling"><a href="#Effects-of-Ca2-signaling" class="headerlink" title="Effects of Ca2+ signaling"></a>Effects of Ca2+ signaling</h4><ol>
+<li>Rise in Ca2+ in fertilized egg cytosol initiates <u>embryonic development</u> (and prevents entry of other sperm cells)</li>
+<li>Muscle contraction</li>
+<li>Release of secretory vesicle</li>
+</ol>
+<h4 id="Ca2-oscillation-in-response-to-stimuli-as-consequence-of-long-delay-of-negative-feedback"><a href="#Ca2-oscillation-in-response-to-stimuli-as-consequence-of-long-delay-of-negative-feedback" class="headerlink" title="Ca2+ oscillation in response to stimuli as consequence of long delay of negative feedback"></a>Ca2+ oscillation in response to stimuli as consequence of long delay of negative feedback</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417224351768.png" srcset="/img/loading.gif" lazyload alt="image-20200417224351768" style="zoom: 33%;" />
+
+<p>Initial release of Ca2+ from <strong>IP<del>3</del> receptor</strong>, which triggers further release from <strong>ryanodine receptor</strong> (positive feedback)</p>
+<blockquote>
+<p>Another important property of IP<del>3</del> receptors and ryanodine receptors is that they are inhibited, after some delay, by high Ca2+ concentrations (a form of negative feedback).</p>
+<p>As in other cases of delayed negative feedback (see Figure 15–18), the result is an oscillation in the Ca2+ concentration.  These oscillations persist for as long as receptors are activated at the cell surface,  and their <u>frequency</u> reflects the strength of the <strong>extracellular stimulus</strong></p>
+<ul>
+<li>The <u>frequency of Ca2+ oscillations</u> can be translated into a <u>frequency-dependent cell response</u></li>
+</ul>
+<p>cells sense the frequency of Ca2+ spikes and change their response accordingly? </p>
+<ul>
+<li>The mechanism presumably depends on  Ca2+-sensitive proteins that change their activity as <u>a function of Ca2+-spike frequency.</u></li>
+</ul>
+</blockquote>
+<p>At high concentrations, Ca2+ inhibits further release (long delay negative feedback), which allow reactivation of Ca2+ release channel, resulting in [Ca2+] oscillation as long as the receptors are activated on the cell surface.</p>
+<h4 id="Vasopressin-induces-Ca2-oscillation"><a href="#Vasopressin-induces-Ca2-oscillation" class="headerlink" title="Vasopressin induces Ca2+ oscillation"></a>Vasopressin induces Ca2+ oscillation</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417224426495.png" srcset="/img/loading.gif" lazyload alt="image-20200417224426495" style="zoom: 33%;" />
+
+<p>The peptide signal molecule vasopressin activates a GPCR and thereby PLCβ triggers Ca2+ release.</p>
+<p>Noted that only the frequency of the Ca2+ spikes increases with increasing concentration of vasopressin but the amplitude of the spikes is not affected.</p>
+<ul>
+<li>The frequency, amplitude, and breadth oscillations can also be modulated by other signaling mechanisms, such as phosphorylation, which influence the Ca2+ sensitivity of Ca2+ channels or affect other components in the signaling system.</li>
+</ul>
+<h4 id="Calmodulin"><a href="#Calmodulin" class="headerlink" title="Calmodulin"></a>Calmodulin</h4><blockquote>
+<p>Ca2+&#x2F;Calmodulin-Dependent Protein Kinases Mediate Many Responses to Ca2+ Signals</p>
+<p><font color="FF4500"><strong>Calmodulin</strong></font> functions as a multipurpose intracellular Ca2+ receptor, governing many Ca2+-regulated processes.</p>
+<ul>
+<li>the protein displays a sigmoidal response to increasing concentrations of Ca2+</li>
+<li>Ca2+&#x2F;calmodulin has <u>no enzymatic activity</u>  itself but instead acts by <u>binding to and activating other proteins.</u></li>
+</ul>
+</blockquote>
+<p>Calmodulin is an abundant <strong>Ca2+ responsive protein</strong> (1% of total cell protein mass) in all eukaryotes. </p>
+<ul>
+<li>A single polypepetide with 4 <strong>Ca2+binding sites</strong>.</li>
+<li>It binds to 4 Ca2+ and changes conformation,</li>
+</ul>
+<h5 id="1-Functions"><a href="#1-Functions" class="headerlink" title="(1) Functions"></a>(1) Functions</h5><blockquote>
+<p>Many effects of Ca2+, however, are more indirect and are mediated by <strong>protein phosphorylations</strong> catalyzed by a family of protein kinases called <font color="FF4500"><strong>Ca2+&#x2F;calmodulin-dependent kinases</strong></font> (<font color="FF4500">CaM-kinases</font>)</p>
+</blockquote>
+<p>Calmodulin can be permeant regulatory subunit of an enzyme complex</p>
+<ul>
+<li>Through binding to Ca2+, calmodulin can wrap around the target proteins and changes conformation, e.g., Ca2+ pump in the PM</li>
+</ul>
+<p>Ca2+&#x2F;calmodulin-dependent protein kinases (CaM-kinases) are <u>activated by <strong>calmodulin</strong></u> and in turn start to phosphorylate other proteins: transcription factors</p>
+<ul>
+<li>Some CaM-kinases are probably responsible for learning and memory.</li>
+</ul>
+<h4 id="CaM-kinase-II"><a href="#CaM-kinase-II" class="headerlink" title="CaM-kinase II"></a>CaM-kinase II</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417225009936.png" srcset="/img/loading.gif" lazyload alt="image-20200417225009936" style="zoom:80%;" />
+
+<blockquote>
+<p><strong>CaM-kinase II</strong>, which is found in most animal cells but is especially enriched in the nervous system.</p>
+<p>Adjacent kinase subunits can phosphorylate each other (a process called <strong>autophosphorylation</strong>) when Ca2+&#x2F;calmodulin activates them (Figure  15–34). </p>
+<ul>
+<li>Once a kinase subunit is <strong>autophosphorylated</strong>, it remains active even in the absence of Ca2+, thereby prolonging the duration of the kinase activity beyond that of the initial activating Ca2+ signal. </li>
+<li>The enzyme maintains this activity until a <strong>protein phosphatase</strong> removes the autophosphorylation and shuts the kinase off.</li>
+</ul>
+<p>Another remarkable property of <font color="FF4500">CaM-kinase II</font> is that the enzyme can use its  <strong>intrinsic memory mechanism</strong> to <strong>decode the frequency</strong> of Ca2+ oscillations.</p>
+</blockquote>
+<p>CaM-kinase II is abundant in nervous system (up to 2% protein mass in some region of brain)</p>
+<ul>
+<li>Ca2+&#x2F;calmodulin –dependent activation (autophosphorylation)</li>
+<li>Ca2+&#x2F;calmodulin-independent activation even in the absence of Ca2+ until phosphatase-mediated dephosphorylation</li>
+</ul>
+<h5 id="CaM-kinase-II-is-a-frequency-decoder-of-Ca2-oscillations"><a href="#CaM-kinase-II-is-a-frequency-decoder-of-Ca2-oscillations" class="headerlink" title="CaM-kinase II is a frequency decoder of Ca2+ oscillations"></a>CaM-kinase II is a frequency decoder of Ca2+ oscillations</h5><p>Changes in intracellular Ca2+ levels in a postsynaptic cell as a result of neural activity can lead to long-term changes in the subsequent effectiveness of that synapse (Lecture 8) </p>
+<p>Progressive increase in enzyme activity continues until the enzyme is autophosphorylated on all subunits and is therefore maximally activated.</p>
+<p>The binding of Ca2+&#x2F;calmodulin to the enzyme is enhanced by the CaM-kinase II autophosphorylation (an additional form of positive feedback),</p>
+<p>Together, a more switch-like response to repeated Ca2+ spikes is generated.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417225114392.png" srcset="/img/loading.gif" lazyload alt="image-20200417225114392" style="zoom: 33%;" />
+
+<p>5 ways to keep cytosolic Ca2+ concentrations low:</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417225155797.png" srcset="/img/loading.gif" lazyload alt="image-20200417225155797"></p>
+<h3 id="3-GPCRs-for-smell-and-vision"><a href="#3-GPCRs-for-smell-and-vision" class="headerlink" title="3. GPCRs for smell and vision"></a>3. GPCRs for smell and vision</h3><blockquote>
+<p>Smell and Vision Depend on GPCRs That Regulate Ion Channels</p>
+<p>Humans can distinguish more than 10,000 distinct smells, which they detect using specialized olfactory receptor neurons in the lining of the nose. These cells use specific GPCRs called <strong>olfactory receptors</strong> to recognize odors; the receptors are displayed on the surface of the <strong>modified cilia</strong> that extend from each cell</p>
+<ul>
+<li>The receptors act through cAMP. When stimulated by odorant (有气味的东西) binding they activate an <font color="EE0000">olfactory-specific G protein</font> (known as <font color="EE0000">G<del>olf</del> </font>), which in turn activates <strong>adenylyl cyclase</strong>.</li>
+</ul>
+<p>The resulting increase in cAMP opens <strong>cyclic-AMP-gated cation channels</strong>, thereby allowing an influx of Na+, which depolarizes the olfactory receptor neuron and <u>initiates</u> a nerve impulse that travels along its axon to the brain.</p>
+<ul>
+<li>Each olfactory receptor neuron produces only one of these receptors;</li>
+</ul>
+<p>Vertebrate <strong>vision</strong> employs a similarly elaborate, highly sensitive, signal-detection process. Cyclic-nucleotide-gated ion channels are also involved, but the crucial cyclic nucleotide is <font color="EE0000">cyclic GMP (cGMP)</font> (Figure 15–37) rather than cAMP</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200417225219099.png" srcset="/img/loading.gif" lazyload alt="image-20200417225219099"></p>
+<ul>
+<li>Over 10,000 smells can be differentiated by ~ 350 distinct receptors for human.</li>
+<li>Rod photoreceptor cell senses black and white; while cone photoreceptor cells sense color</li>
+</ul>
+<h4 id="Response-of-a-rod-photoreceptor-cell-to-light"><a href="#Response-of-a-rod-photoreceptor-cell-to-light" class="headerlink" title="Response of a rod photoreceptor cell to light"></a>Response of a rod photoreceptor cell to light</h4><blockquote>
+<p>The phototransduction apparatus is in the outer segment of the rod, which contains a stack of discs, each formed by a closed sac of membrane that is densely  packed with photosensitive rhodopsin molecules.</p>
+<ul>
+<li>The plasma membrane surrounding the outer segment contains <strong>cyclic-GMP-gated cation channels</strong>.</li>
+</ul>
+<p><strong>Rhodopsin</strong> is a member of the GPCR family, but the activating extracellular signal is not a molecule but <strong>a photon of light.</strong></p>
+<ul>
+<li>The isomerization alters the shape of the retinal, forcing a conformational change in the protein (<strong>opsin</strong>). The activated rhodopsin molecule then alters the conformation of the G protein transducin (<font color="EE0000">G<del>t</del> </font>), causing the <strong>transducin α subunit</strong> to activate <strong>cyclic GMP phosphodiesterase</strong>.</li>
+</ul>
+<p>Rods use several negative feedback loops to allow the cells to revert quickly to a resting</p>
+<ul>
+<li>A rhodopsin-specific protein kinase called <font color="EE0000">rhodopsin  kinase (RK)</font> phosphorylates the cytosolic tail of activated rhodopsin on multiple  <strong>serines</strong>, partially inhibiting the ability of the rhodopsin to activate transducin.</li>
+<li>An  inhibitory protein called <font color="EE0000">arrestin</font> (discussed later) then binds to the <strong>phosphorylated rhodopsin</strong>, further inhibiting rhodopsin’s activity.</li>
+</ul>
+<p><strong>Negative feedback</strong> mechanisms do more than just return the rod to its resting state after a transient light flash; they also help the rod to <strong>adapt</strong>, stepping down the response <u>when the rod is exposed to light continuously.</u></p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200421144334906.png" srcset="/img/loading.gif" lazyload alt="image-20200421144334906" style="zoom:50%;" />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200421144356855.png" srcset="/img/loading.gif" lazyload alt="image-20200421144356855"></p>
+<h3 id="4-Some-G-proteins-directly-regulate-ion-channels"><a href="#4-Some-G-proteins-directly-regulate-ion-channels" class="headerlink" title="4. Some G proteins directly regulate ion channels"></a>4. Some G proteins directly regulate ion channels</h3><blockquote>
+<p>The  α subunit of one type of G protein (called <font color="EE0000">G<del>12</del> </font>), for example, activates a <strong>guanine nucleotide exchange factor</strong> (<strong>GEF</strong>) that activates a monomeric GTPase of the <font color="EE0000">Rho  family</font> (discussed later and in Chapter 16), which regulates the actin cytoskeleton.</p>
+<p>In some other cases, G proteins directly <strong>activate or inactivate ion channels</strong> in the plasma membrane of the target cell, thereby altering the ion permeability</p>
+<p>Other G proteins regulate the activity of ion channels <u>less directly</u>, either by stimulating channel phosphorylation (by <font color="EE0000">PKA</font>, <font color="EE0000">PKC</font>, or <font color="EE0000">CaM-kinase</font>, for example)  or by causing the <strong>production or destruction</strong> of cyclic nucleotides that <u>directly activate</u> or inactivate ion channels</p>
+</blockquote>
+<p>Cyclic nucleotide-gated ion channels downstream of GPCRs operate in smell and vision.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200421144211450.png" srcset="/img/loading.gif" lazyload alt="image-20200421144211450"></p>
+<h3 id="5-GPCR-signaling-via-NO-gas"><a href="#5-GPCR-signaling-via-NO-gas" class="headerlink" title="5. GPCR signaling via NO gas"></a>5. GPCR signaling via NO gas</h3><blockquote>
+<p>Nitric Oxide Is a Gaseous Signaling Mediator That Passes Between Cells</p>
+<p>In mammals, one of NO’s many functions is to <u>relax smooth muscle</u> in the walls of blood vessels.</p>
+<p>The activated receptor triggers <font color="EE0000">IP<del>3</del> </font> synthesis and <font color="EE0000">Ca2+</font> release (see  Figure 15–29), leading to stimulation of an enzyme that synthesizes NO</p>
+<ul>
+<li>dissolved NO <u>passes readily across membranes,</u> it diffuses out of the cell where it  is produced and into neighboring smooth muscle cells, where it causes <u>muscle relaxation</u> and thereby <u>vessel dilation</u></li>
+</ul>
+<p>NO is made by the deamination of the amino acid <strong>arginine</strong>, catalyzed by  enzymes called <strong>NO synthases (NOS)</strong></p>
+<ul>
+<li>The NOS in endothelial cells is called <strong>eNOS</strong>, while that in nerve and muscle cells is called <strong>nNOS</strong>. <ul>
+<li>Both  eNOS and nNOS are stimulated by <strong>Ca2+</strong>.</li>
+</ul>
+</li>
+<li>Macrophages, by contrast, make yet another NOS, called inducible NOS (<strong>iNOS</strong>), that is constitutively active but synthesized only when the cells are activated, usually in response to an infection.</li>
+</ul>
+</blockquote>
+<p>GPCR signaling via NO gas in smooth muscle relaxation in blood vessels</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200421145112442.png" srcset="/img/loading.gif" lazyload alt="image-20200421145112442"></p>
+<p>The neurotransmitter <strong>acetylcholine</strong> activates a GPCR which in turn activates NO synthase in endothelial cell (eNOS) to produce NO. </p>
+<p>NO diffuses into smooth muscle cell and activates guanylyl cyclase to produce cyclic GMP (cGMP), which triggers muscle relaxation and thus the dilation of the blood vessel </p>
+<p>Smooth and heart muscle cells will relax, blood vessels will dilate</p>
+<h4 id="Mechanism-of-nitroglycerin-in-treating-angina-pectoris"><a href="#Mechanism-of-nitroglycerin-in-treating-angina-pectoris" class="headerlink" title="Mechanism of nitroglycerin in treating angina pectoris"></a>Mechanism of nitroglycerin in treating angina pectoris</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200421145238000.png" srcset="/img/loading.gif" lazyload alt="image-20200421145238000"></p>
+<h4 id="Mechanism-of-Sildenafil-西地那非-commercial-name-Viagra-万艾可"><a href="#Mechanism-of-Sildenafil-西地那非-commercial-name-Viagra-万艾可" class="headerlink" title="Mechanism of Sildenafil (西地那非) (commercial name Viagra (万艾可))"></a>Mechanism of Sildenafil (西地那非) (commercial name Viagra (万艾可))</h4><p>Viagra drug activates cyclic GMP synthesis and dilation of vessels responsible for erection</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200424211233277.png" srcset="/img/loading.gif" lazyload alt="image-20200424211233277"></p>
+<h3 id="5-GPCRs-as-ion-channels-regulators-in-heart-muscle-cells"><a href="#5-GPCRs-as-ion-channels-regulators-in-heart-muscle-cells" class="headerlink" title="5. GPCRs as ion channels regulators in heart muscle cells"></a>5. GPCRs as ion channels regulators in heart muscle cells</h3><p>Heart: ion-channel coupled muscarinic acetylcholine receptors</p>
+<p>Smooth muscle and nerve: ion-channel-coupled receptors nicotinic acetylcholine receptors</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200424212039284.png" srcset="/img/loading.gif" lazyload alt="image-20200424212039284"></p>
+<p>​	(A) Binding of acetylcholine to its GPCR on the heart cells activates the G-protein, <font color="EE0000">G<del>i</del> </font>.</p>
+<p>​	(B) The activated $\beta \gamma$ complex directly opens a <strong>K+ channel</strong> in the plasma membrane, increasing its permeability to K+ and thereby making the membrane harder to activate and slowing the heart rate.</p>
+<p>​	(C)  Inactivation of the α-subunit by GTP hydrolysis inactivates the G-protein, the channel closes</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200424212046264.png" srcset="/img/loading.gif" lazyload alt="image-20200424212046264" style="zoom: 67%;" />
+
+<h1 id="五、GPCR-desensitization"><a href="#五、GPCR-desensitization" class="headerlink" title="五、GPCR desensitization"></a>五、GPCR desensitization</h1><blockquote>
+<p>GPCR Desensitization Depends on Receptor <strong>Phosphorylation</strong> </p>
+<p>when target cells are exposed to a high concentration of a stimulating ligand for a prolonged period, they can become <strong>desensitized</strong>, or  <strong>adapted</strong></p>
+<p>For GPCRs, there are three general modes of adaptation (see Figure 15–20):  </p>
+<ol>
+<li>In <strong>receptor sequestration (受体隔离)</strong>, they are temporarily <u>moved to the interior of the cell</u> (internalized) so that they no longer have access to their ligand. </li>
+<li>In <strong>receptor down-regulation (受体下调)</strong>, they are <u>destroyed in lysosomes</u> after internalization. </li>
+<li>In <strong>receptor inactivation (受体去活)</strong>, they become altered so that they can no longer interact with G proteins</li>
+</ol>
+<p>In each case, the desensitization of the GPCRs depends on their <strong>phosphorylation</strong> by <font color="EE0000">PKA</font>, <font color="EE0000">PKC</font>, or a member of the family of <font color="EE0000">GPCR kinases (GRKs)</font></p>
+<ul>
+<li>The <strong>GRKs</strong> phosphorylate multiple <u>serines and threonines</u> on a GPCR, but they do so only <u>after ligand binding</u> has activated the  receptor, because it is the <u>activated receptor that allosterically activates the GRK.</u></li>
+<li>As with rhodopsin, once a receptor has been phosphorylated by a GRK, it binds with high affinity to a member of the <font color="EE0000"><strong>arrestin</strong></font> family of proteins. The bound <strong>arrestin</strong> can contribute to the desensitization process in at least two ways. <ol>
+<li>First, it prevents the <u>activated receptor</u> from interacting with G proteins (<strong>receptor inactivation</strong>). </li>
+<li>Second, it serves as an <strong>adaptor protein</strong> to help couple the receptor to the <strong>clathrin-dependent endocytosis machinery</strong> (discussed in Chapter 13), inducing receptor-mediated endocytosis.</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<p>Four strategies to terminate&#x2F;desensitize the GPCR signaling:</p>
+<ol>
+<li><strong>Down-regulation of Receptor</strong></li>
+</ol>
+<ul>
+<li>Receptor sequestration (endocytosis)</li>
+<li>Receptor elimination<ul>
+<li>GPCRs are phosphorylated by GPCR kinases, triggering arrestin binding, uncoupling receptors from G proteins and promotes their endocytosis.</li>
+</ul>
+</li>
+<li>Receptor deactivation</li>
+</ul>
+<ol start="2">
+<li><strong>Deactivation of G protein:</strong><ul>
+<li>G-protein $\alpha$-subunit is stimulated by its target protein or RGS to hydrolyse GTP into GDP.</li>
+</ul>
+</li>
+<li><strong>Elimination of second messenger</strong></li>
+</ol>
+<ul>
+<li>IP<del>3</del> is dephosphorylated by lipid phosphatase or phosphorylated by lipase kinase.</li>
+<li>cAMP&#x2F;cGMP is hydrolyzed by activated phosphodiesterases. </li>
+<li>Ca2+ is pumped out of cytosol.</li>
+</ul>
+<ol start="4">
+<li><strong>Elimination of mediator</strong> <ul>
+<li>Phosphorylated protein is dephosphorylated by phosphatases.</li>
+</ul>
+</li>
+</ol>
+<h2 id="GPCR-kinases-GRKs-and-arrestin-mediated-GPCR-desensitization"><a href="#GPCR-kinases-GRKs-and-arrestin-mediated-GPCR-desensitization" class="headerlink" title="GPCR kinases (GRKs) and arrestin-mediated GPCR desensitization"></a>GPCR kinases (GRKs) and arrestin-mediated GPCR desensitization</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200424212226332.png" srcset="/img/loading.gif" lazyload alt="image-20200424212226332"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200424212233498.png" srcset="/img/loading.gif" lazyload alt="image-20200424212233498"></p>
+<hr>
+<h2 id="Summary-the-GPRC-mediated-signaling"><a href="#Summary-the-GPRC-mediated-signaling" class="headerlink" title="Summary: the GPRC-mediated signaling"></a>Summary: the GPRC-mediated signaling</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200424212302066.png" srcset="/img/loading.gif" lazyload alt="image-20200424212302066"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Cell-Biology/" class="category-chain-item">Cell Biology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Cell-Biology/" class="print-no-link">#Cell Biology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L16 Cell communication via G-protein coupled receptor</div>
+      <div>https://zhenyumi.github.io/posts/d44c2e21/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/510fc34b/" title="(Academic) Notebook Index">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">(Academic) Notebook Index</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/9d6e3895/" title="02. R &lt;- 基本绘图Ⅰ">
+                        <span class="hidden-mobile">02. R &lt;- 基本绘图Ⅰ</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

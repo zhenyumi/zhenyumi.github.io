@@ -1,0 +1,794 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="No such things">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L13 Organelles">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/41af4a93/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="No such things">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_%EC%BA%AC%EB%A3%A8%ED%83%88%EC%B6%9C.png">
+<meta property="article:published_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:modified_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Molecular Biology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_%EC%BA%AC%EB%A3%A8%ED%83%88%EC%B6%9C.png">
+  
+  
+  
+  <title>L13 Organelles - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_Sunlight%281%29.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L13 Organelles</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-24 17:20" pubdate>
+          2020年7月24日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          356 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          3 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L13 Organelles</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="The-Origin-of-Eukaryotic-Organelles"><a href="#The-Origin-of-Eukaryotic-Organelles" class="headerlink" title="The Origin of Eukaryotic Organelles"></a>The Origin of Eukaryotic Organelles</h2><p>A vast body of evidence from molecular and cell biology supports the endosymbiont hypothesis of organelle origin. </p>
+<p>Plastids and mitochondria evolved from separate endosymbiotic events in which the endosymbionts became highly specialized to perform the processes of photosynthesis and respiration, respectively. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228133443061.png" srcset="/img/loading.gif" lazyload alt="image-20191228133443061" style="zoom: 120%;" />
+
+<h1 id="一、Organelles"><a href="#一、Organelles" class="headerlink" title="一、Organelles"></a>一、Organelles</h1><h2 id="Chloroplast-Function"><a href="#Chloroplast-Function" class="headerlink" title="Chloroplast Function"></a>Chloroplast Function</h2><p>Chloroplast Function: Havesting energy (ATP) from light</p>
+<p>The chloroplast is the chlorophyll-containing organelle that carries out photosynthesis and starch-grain formation in plants. </p>
+<p>Chloroplasts are referred to as plastids before chlorophyll develops</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228133615899.png" srcset="/img/loading.gif" lazyload alt="image-20191228133615899" style="zoom:67%;" />
+
+<h1 id="二、Organelle-Gene"><a href="#二、Organelle-Gene" class="headerlink" title="二、Organelle Gene"></a>二、Organelle Gene</h1><h2 id="Plant-Plastid"><a href="#Plant-Plastid" class="headerlink" title="Plant Plastid"></a>Plant Plastid</h2><h3 id="1-Plastid-色素体"><a href="#1-Plastid-色素体" class="headerlink" title="1. Plastid 色素体"></a>1. Plastid 色素体</h3><p>色素体（英语：plastid），又称质粒体或质体，是植物、藻类、光合营性细菌中所含有的一种囊泡，与光合作用有关。囊泡中含有菌绿素与类胡萝卜素。在紫细菌中，如紫螺菌，色素体的膜上天生就拥有捕光蛋白。而绿硫菌的色素体则拥有一种特殊的天线复合体，这种色素体被称为绿色体。</p>
+<h3 id="2-Plant-Plastid-Genome"><a href="#2-Plant-Plastid-Genome" class="headerlink" title="2. Plant Plastid Genome"></a>2. Plant Plastid Genome</h3><p>Plant plastid genomes are typically organized into operons similar to those of prokaryotes. This is a “polycistronic” transcriptional unit in which clusters of two or more genes are transcribed by RNA polymerase from a single promoter. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228133810184.png" srcset="/img/loading.gif" lazyload alt="image-20191228133810184"></p>
+<p>Some of these polycistronic transcripts encode functionally distinct proteins. Often, the mRNA will be produced, but not the protein for one or more of the genes in the operon. This indicates that post-transcriptional regulation is important.</p>
+<h3 id="3-Biosynthesis-of-Plastid-Proteins"><a href="#3-Biosynthesis-of-Plastid-Proteins" class="headerlink" title="3. Biosynthesis of Plastid Proteins"></a>3. Biosynthesis of Plastid Proteins</h3><p>Chloroplast proteins may be encoded in the nucleus or in the chloroplast. </p>
+<p>Translation of the mRNAs is performed by different ribosomes, the 80S in the cytoplasm for nuclear transcripts, or 70S ribosomes for chloroplast encoded-mRNAs. </p>
+<p>Proteins made in the cytoplasm may be targeted to the chloroplast.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228135928480.png" srcset="/img/loading.gif" lazyload alt="image-20191228135928480" style="zoom: 40%;" />
+
+<h3 id="3-Multiple-RNA-Pol-Function-in-Plastid-Genomes"><a href="#3-Multiple-RNA-Pol-Function-in-Plastid-Genomes" class="headerlink" title="3. Multiple RNA Pol Function in Plastid Genomes"></a>3. Multiple RNA Pol Function in Plastid Genomes</h3><p>Plant chloroplasts have two types of RNApolymerases. Plastid genes encode proteins similar to E. coli RNA polymerase, suggesting the presence of a prokaryotic-type chloroplast RNA polymerase. Genes for similar subunits have been identified in the nuclear genomes of many plants, indicating that <u>both plastid and nuclear genomes cooperate in the regulation of chloroplast transcription.</u></p>
+<p>The plastid-encoded RNA polymerase recognizes chloroplast promoters that contain typical “-10” and “-35” prokaryotic consensus sequences. </p>
+<p>When specific inhibitors of translation are used to block translation in the chloroplast, the nuclear-encoded RNA polymerase activity continues to transcribe chloroplast genes. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228140221681.png" srcset="/img/loading.gif" lazyload alt="image-20191228140221681" style="zoom: 33%;" />
+
+<h3 id="4-Prokaryotic-Attributes-of-Plastid-Genomes"><a href="#4-Prokaryotic-Attributes-of-Plastid-Genomes" class="headerlink" title="4. Prokaryotic Attributes of Plastid Genomes"></a>4. Prokaryotic Attributes of Plastid Genomes</h3><p>A prokaryotic-like chloroplast RNA polymerase recognizes chloroplast promoters thatcontain “-10” and “-35” consensus sequences typical of prokaryotes.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228141003492.png" srcset="/img/loading.gif" lazyload alt="image-20191228141003492"></p>
+<p>A prokaryotic-like chloroplast RNA polymerase recognizes chloroplast promoters that contain “-10” and “-35” consensus sequences typical of prokaryotes.</p>
+<p>A comparison of plastid 23S ribosomal RNA sequences shows that the plant plastid-encoded 23S rRNAs are quite similar to that of E. coli.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228141039920.png" srcset="/img/loading.gif" lazyload alt="image-20191228141039920" style="zoom: 50%;" />
+
+<h4 id="Regulation-of-Gene-Expression-in-Plastids"><a href="#Regulation-of-Gene-Expression-in-Plastids" class="headerlink" title="Regulation of Gene Expression in Plastids"></a>Regulation of Gene Expression in Plastids</h4><p>Chloroplast promoters: Transcription in some ways resembles that of prokaryotes. </p>
+<ol>
+<li><p>Transcripts usually polycistronic</p>
+</li>
+<li><p>Promoter regions are homologous</p>
+</li>
+<li><p>Terminators homologous to prokaryotic terminators</p>
+</li>
+<li><p>E. coli RNA polymerase can initiate accurate transcription of ct genes in vivo and in vitro</p>
+</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228141154913.png" srcset="/img/loading.gif" lazyload alt="image-20191228141154913"></p>
+<p>Multiple promoters direct transcription of the atpB-atpE gene cluster in tobacco chloroplasts. There are five transcriptional initiation sites indicated by red arrows, four of which have the -10 and -35 consensus sequences. Use of several promoters allows fine-tuning of transcriptional regulation. (Nuclear genes typically have one promoter.)</p>
+<h3 id="5-Processing-of-Polycistronic-多顺反子-Plastid-RNAs"><a href="#5-Processing-of-Polycistronic-多顺反子-Plastid-RNAs" class="headerlink" title="5. Processing of Polycistronic (多顺反子) Plastid RNAs"></a>5. Processing of Polycistronic (多顺反子) Plastid RNAs</h3><p>Chloroplast pre-RNAs molecules are processed. Unlike the nuclear-encoded rRNA molecules, the chloroplast rRNA operon also encodes two tRNAs in the spacer regions that separate the 16S and 23S rRNA. The tRNAs contain introns, and the entire pre-mRNA is processed to form separate RNA molecules.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228141544059.png" srcset="/img/loading.gif" lazyload alt="image-20191228141544059"></p>
+<p>The transcript from the psbB operon in plant plastids is a typical example of the complex processing and splicing reactions that are required to cleave the polycistronic mRNA precursor into mature monocistronic mRNAs that can be translated into proteins. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228141749641.png" srcset="/img/loading.gif" lazyload alt="image-20191228141749641"></p>
+<p>Land plant chloroplast genomes contain ∼20 group II introns and a single group I intron. </p>
+<ul>
+<li><p>Group I introns are large self-splicing ribozymes.</p>
+</li>
+<li><p>Group II catalytic introns are found in rRNA, tRNA, and mRNA of organelles </p>
+<ul>
+<li>(chloroplasts and mitochondria) in fungi, plants, and protists, and also in mRNA in bacteria. They are large self-splicing ribozymes and have 6 structural domains.</li>
+</ul>
+</li>
+</ul>
+<p>These introns are derivatives of self-splicing ribozymes that have become dependent upon proteins for their splicing. </p>
+<h2 id="The-Chloroplast-Genome"><a href="#The-Chloroplast-Genome" class="headerlink" title="The Chloroplast Genome"></a>The Chloroplast Genome</h2><h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p>Chloroplasts contain multiple copies of a circular genome and ribosomes that synthesize organelle-encoded proteins. </p>
+<p>The chloroplast genome is circular and 120,000 to 160,000 bp depending on the species. </p>
+<p>It includes ~120 genes, of which ~60 are involved in transcription and translation. </p>
+<p>About 20 genes are involved in photosynthesis. </p>
+<p>The RNA polymerases and ribosomal proteins are similar to those of bacteria.</p>
+<p>Comparisons across plant species show variation: some proteins are encoded in the chloroplast or the nucleus. But all chloroplasts contain similar sets of proteins. Therefore, some exchange of genes occurs between the chloroplast and nucleus.</p>
+<h3 id="2-Organization"><a href="#2-Organization" class="headerlink" title="2. Organization"></a>2. Organization</h3><p>Plant chloroplast genomes have a typical structure that includes a small and a large single copy region that is separated by two inverted repeats. The length of the inverted repeat varies widely among different plant species. </p>
+<p>Origins of replication are located in the long inverted repeats (blue).</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228134032737.png" srcset="/img/loading.gif" lazyload alt="image-20191228134032737" style="zoom: 30%;" />
+
+<h3 id="3-Model-For-Replication-of-Chloroplast-Genome"><a href="#3-Model-For-Replication-of-Chloroplast-Genome" class="headerlink" title="3. Model For Replication of Chloroplast Genome"></a>3. Model For Replication of Chloroplast Genome</h3><p>Each chloroplast contains many copies of the chloroplast genome (~150?), but this copy number can vary with the developmental stage, light, etc. </p>
+<p>High copy number may result from need for large amount of proteins involved in photosynthesis.</p>
+<p>Replication is proposed to take place via a “double rolling-circle mechanism”. The key point of this mechanism is that it generates long concatameric DNA fragments: many copies of the same DNA attached in a linear order. Monomeric genomes can be processed out of this concatameric molecule by recombination.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228134151557.png" srcset="/img/loading.gif" lazyload alt="image-20191228134151557" style="zoom: 40%;" />
+
+<h3 id="4-Engineering-of-Chloroplast-Genome"><a href="#4-Engineering-of-Chloroplast-Genome" class="headerlink" title="4. Engineering of Chloroplast Genome"></a>4. Engineering of Chloroplast Genome</h3><p>The genetic transformation of organelle genomes requires converting the entire set of organelle genomes within a cell to the transformed genotype (&#x3D; homoplasmy). Initially, only one or a few of the DNA molecules within the plastid will be transformed, so the plant cell will be heteroplasmic.</p>
+<p>Biolistic transformation of plastids is usual (the gene gun).</p>
+<p>The most common selection system for plastid transformation is spectinomycin, a chemical that inhibits activity of bacterial ribosomes. Plastid ribosomes are much more susceptible to spectinomycin than are cytosolic ribosomes. </p>
+<p>Transformed sectors are identified as those that are green under those conditions (due to plastid gene expression). Plants are regenerated from the green sectors. </p>
+<p>In contrast to plant nuclear genome transformation, plastid transformation occurs by homologous recombination.</p>
+<p>One advantage is the high copy of the chloroplast genome makes it easier to produce large quantities of a specific protein (like a pharmaceutical product).</p>
+<p>Plastid genes do not undergo silencing often observed with nuclear transgenes.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228134657997.png" srcset="/img/loading.gif" lazyload alt="image-20191228134657997"></p>
+<h2 id="Mitochondrial-Genome"><a href="#Mitochondrial-Genome" class="headerlink" title="Mitochondrial Genome"></a>Mitochondrial Genome</h2><h3 id="1-Introduction-1"><a href="#1-Introduction-1" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p>At mitosis, each daughter cell receives approximately the same number of mitochondria. </p>
+<p>Each mitochondria contains multiple copies of the genome.</p>
+<p>Therefore, the amount of mtDNA per cell depends on the number of mitochondria, the number of genomes per mitochondria, and the size of the mitochondrial genome.</p>
+<p>To date, plant mitochondrial genomes have not been successfully transformed. Selection is a particular challenge because these organelles are essential for life.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228134828177.png" srcset="/img/loading.gif" lazyload alt="image-20191228134828177" style="zoom:50%;" />
+
+<p>Cells contain multiple copies of the mtDNA. The yellow dots above mark the prescence of the mtDNA –at least 30 are visible in this cell.</p>
+<p>Plant mitochondrial genomes vary from 200 kb to 2600 kb and are thus highly variable. This is the result of the accumulation of an unusually large amount of non-coding RNA between genes. This is non-repetitive sequence (compare to nuclear genome!).</p>
+<p>In Arabidopsis, coding regions make up less than 10% of the 367 kb genome.</p>
+<p>The genome at right from maize is hypothetical, because repeated sequences recombine to produce subgenomic circles.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228134909353.png" srcset="/img/loading.gif" lazyload alt="image-20191228134909353" style="zoom: 33%;" />
+
+<h3 id="2-Subgenomic-Circles"><a href="#2-Subgenomic-Circles" class="headerlink" title="2. Subgenomic Circles"></a>2. Subgenomic Circles</h3><p>Subgenomic circles : A fragmented mitochondrial genome due to homologous recombination</p>
+<p>Plant mitochondrial genomes often exist as variably sized DNA circles. The combined DNA content of the smaller circles accounts for the entire mitochondrial genome. These subgenomic circles likely result from frequent homologous recombination events that break apart the master circle. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228135153383.png" srcset="/img/loading.gif" lazyload alt="image-20191228135153383"></p>
+<h3 id="3-Chlamydomonas-Mitochondria-Genome"><a href="#3-Chlamydomonas-Mitochondria-Genome" class="headerlink" title="3. Chlamydomonas Mitochondria Genome"></a>3. Chlamydomonas Mitochondria Genome</h3><p>This is an unusual linear genome that apparently does not form the subgenomic circles; the genetic information is essentially the same. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228135237222.png" srcset="/img/loading.gif" lazyload alt="image-20191228135237222"></p>
+<p>Most of the genes in the mitochondrial genome participate in oxidative respiration, ATP synthesis or mitochondrial translation. Enzymes required for DNA replication, transcription and translation are encoded in the nuclear genome.</p>
+<h3 id="4-Others"><a href="#4-Others" class="headerlink" title="4. Others"></a>4. Others</h3><p>The arabidopsis nuclear genome also contains most of the mitochondrial genome</p>
+<h3 id="5-Mitochondroal-Genetic-Code"><a href="#5-Mitochondroal-Genetic-Code" class="headerlink" title="5. Mitochondroal Genetic Code"></a>5. Mitochondroal Genetic Code</h3><p>The mitochondrial genetic code is different from the standard genetic code. This code even differs between different species, but the reason for the differences is unknown.</p>
+<p>Analysis of mitochondrial proteins indicated that CGG could code for either arganine (the standard amino acid for this codon) or tryptophan. This apparent non-specificity was highly unusual, and it turned out that editing of RNA transcripts was altering the CGG to UGG</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228140856790.png" srcset="/img/loading.gif" lazyload alt="image-20191228140856790"></p>
+<h2 id="Mitochondrial-Genome-VS-Chloroplast-Genome"><a href="#Mitochondrial-Genome-VS-Chloroplast-Genome" class="headerlink" title="Mitochondrial Genome VS. Chloroplast Genome"></a>Mitochondrial Genome VS. Chloroplast Genome</h2><p>Mitochondrial Genome and Chloroplast Genome reveals extensive movement of DNA between genomes</p>
+<p>Mitochondrial vs. chloroplast DNA from rice. The colored triangles and boxes shown on the rice chloroplast genome (inner circle) represent DNA sequences transferred to the mitochondria and inserted at different sites. </p>
+<p>Note that mitochondrial DNA sequences have not been found in the chloroplast genome, suggesting that DNA transfer may be unidirectional or that the chloroplast may have an effective mechanism to protect itself against invading DNA molecules.</p>
+<h2 id="Organelle-mRNAs"><a href="#Organelle-mRNAs" class="headerlink" title="Organelle mRNAs"></a>Organelle mRNAs</h2><p>Organelle mRNAs are not polyadenylated (polyadenylated)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228140727173.png" srcset="/img/loading.gif" lazyload alt="image-20191228140727173" style="zoom:50%;" />
+
+<p>Structure of a mature nuclear-encoded plant mRNA, complete with cap, 5’UTR, translational start and termination, 3’UTR and poly(A) tail.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228140748681.png" srcset="/img/loading.gif" lazyload alt="image-20191228140748681" style="zoom: 50%;" />
+
+<p>Structure of a typical mature chloroplast mRNA. Chloroplast mRNAs resemble prokaryotic mRNAs and are not modified at the 5’ end. The 3’ end has a stem-loop structure rather than a poly(A) tail, and this is important for RNA stability. In contrast to nuclear mRNAs, 3’ polyadenylation results in decay of plastid mRNA molecules.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Molecular-Biology/" class="category-chain-item">Molecular Biology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Molecular-Biology/" class="print-no-link">#Molecular Biology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L13 Organelles</div>
+      <div>https://zhenyumi.github.io/posts/41af4a93/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/37de4c75/" title="L12 Plant Transformation">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L12 Plant Transformation</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/9d8ef79d/" title="L14 Plant Reproduction">
+                        <span class="hidden-mobile">L14 Plant Reproduction</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

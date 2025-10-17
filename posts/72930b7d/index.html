@@ -1,0 +1,869 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L05 Non‐Mendelian Inheritance">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/72930b7d/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+  
+  
+  
+  <title>L05 Non‐Mendelian Inheritance - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L05 Non‐Mendelian Inheritance</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          10 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L05 Non‐Mendelian Inheritance</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="Maternal-Effect-母体效应"><a href="#Maternal-Effect-母体效应" class="headerlink" title="Maternal Effect 母体效应"></a>Maternal Effect 母体效应</h2><p>A maternal effect is a situation where <u>the phenotype of an organism is determined not only by the environment it experiences and its genotype, but also by the environment and genotype of its mother.</u></p>
+<ul>
+<li>Involve genes in the nucleus </li>
+<li>Genotype of offspring does not directly govern phenotype as predicted by Mendel</li>
+</ul>
+<p>Maternal effect refers to an inheritance pattern for certain nuclear genes in which the <strong>genotype（基因型） of the mother</strong> directly determines the <strong>phenotype（表型） of her offspring</strong></p>
+<p>Surprisingly, the <strong>genotypes of the father</strong> and offspring themselves <u>do not affect</u> the phenotype of the offspring</p>
+<p><u>This phenomenon is due to the accumulation of gene products that the mother provides to her developing eggs</u></p>
+<h3 id="1-Example-of-Snail-coiling-inheritance-pattern"><a href="#1-Example-of-Snail-coiling-inheritance-pattern" class="headerlink" title="1. Example of Snail coiling inheritance pattern"></a>1. Example of Snail coiling inheritance pattern</h3><ul>
+<li>Right‐handed (dextral) ,The dextral orientation is more common and dominant</li>
+<li>Left‐handed (sinistral)</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571295993534.png" srcset="/img/loading.gif" lazyload alt="1571295993534" style="zoom:40%;" />
+
+<p>Maternal effect refers to an inheritance pattern for certain nuclear genes in which the genotype of <u>the mother directly determines the phenotype of her offspring</u> </p>
+<p>并不是亲本雌性的表现型决定了子代的形状，本质上仍然是母本的基因型决定子代性状。</p>
+<p>This phenomenon is due to the accumulation of <u>gene products</u> that <u>the mother provides to her developing eggs</u> </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571296862797.png" srcset="/img/loading.gif" lazyload alt="1571296862797" style="zoom: 33%;" />
+
+<h3 id="2-Mechanism-of-maternal-effect-in-snail-coiling"><a href="#2-Mechanism-of-maternal-effect-in-snail-coiling" class="headerlink" title="2. Mechanism of maternal effect in snail coiling"></a>2. Mechanism of maternal effect in snail coiling</h3><p>The gene products are a reflection of the genotype of the mother<br>They are transported to the cytoplasm of the oocyte where they persist for a significant time after the egg has been fertilized<br>Thus <u>influencing the early developmental stages of the embryo</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571296988120.png" srcset="/img/loading.gif" lazyload alt="1571296988120" style="zoom:38%;" />
+
+<h2 id="Epigenetic（表观遗传学）-inheritance"><a href="#Epigenetic（表观遗传学）-inheritance" class="headerlink" title="Epigenetic（表观遗传学） inheritance"></a>Epigenetic（表观遗传学） inheritance</h2><p>Epigenetic inheritance refers to a pattern in which a <u>modification</u> occurs to a nuclear gene or chromosome that <u>alters gene expression</u></p>
+<p>However, the expression is not permanently changed over the course of many generations. That is because the <u>DNA sequence does not change</u> </p>
+<p><u><font color="000099">Epigenetic changes are caused by DNA and chromosomal modifications </font></u></p>
+<p>These can occur during oogenesis, spermatogenesis or early embryonic development </p>
+<p>表征遗传现象包括DNA、RNA干扰、组蛋白修饰等。与经典遗传学以研究基因序列影响生物学功能为核心相比，表征遗传学主要研究这些“表征遗传现象”建立和维持的机制。其研究内容主要包括两类，一类为基因选择性转录表达的调控，有DNA甲基化、基因印记、组蛋白共价修饰和染色质重塑；另一类为基因转录后的调控，包括基因组中非编码RNA、微小RNA、反义RNA、内含子及核糖开关等。 </p>
+<h3 id="1-DNA-Methylation"><a href="#1-DNA-Methylation" class="headerlink" title="1. DNA Methylation"></a>1. DNA Methylation</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571298021083.png" srcset="/img/loading.gif" lazyload alt="1571298021083" style="zoom:50%;" />
+
+<p>核苷酸可以通过一定的修饰，影响基因的表达，而修饰过的核苷酸同样可以正常配对。</p>
+<p>Cytosine methylation occurs predominantly at CpG dinucleotides which are palindromic（胞嘧啶甲基化主要发生在回文的CpG二核苷酸上）</p>
+<p>基因组某些区域的甲基化较多，甲基化较高的区域通过不完全清楚的机制使得转录的活力减小。甲基化的胞核嘧啶也可以从父母一方的生殖细胞保留在受精卵中，标记染色体遗传自双亲（遗传印记）。</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571298254572.png" srcset="/img/loading.gif" lazyload alt="1571298254572" style="zoom: 33%;" />
+
+<h3 id="2-Dosage-compensation-（计量补偿（效应））"><a href="#2-Dosage-compensation-（计量补偿（效应））" class="headerlink" title="2.  Dosage compensation （计量补偿（效应））"></a>2.  Dosage compensation （计量补偿（效应））</h3><p>Dosage Compensation is the <u>equalization of gene expression between the males and females of a species</u>. <u>Because sex chromosomes contain different numbers of genes</u>, different species of organisms have developed different mechanisms to <u>cope with this inequality.</u></p>
+<h4 id="Discovery"><a href="#Discovery" class="headerlink" title="Discovery"></a>Discovery</h4><ol>
+<li><p>In 1949, Murray Barr and Ewart Bertram identified a <strong>highly condensed structure</strong> in the interphase nuclei of somatic cells in female cats but not in male cats.         </p>
+<p>This structure became known as the <strong>Barr body</strong>（巴尔小体）——具有两个以上X染色体（或Z染色体）的细胞中，其中一条X或Z染色体去活化而成的紧密结构，如此会使该染色体上的基因不至于过度表现</p>
+</li>
+<li><p>In 1960, Susumu Ohno proposed that the Barr body is a <strong>highly condensed X chromosome</strong>.</p>
+</li>
+<li><p>In 1961, Mary Lyon proposed that dosage compensation in mammals occurs by the <strong>inactivation of a single X chromosome in females.</strong></p>
+</li>
+</ol>
+<h4 id="Offset"><a href="#Offset" class="headerlink" title="Offset"></a>Offset</h4><p>The purpose of dosage compensation is to <u>offset（补偿） differences in the number of active sex chromosomes</u> </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571298685753.png" srcset="/img/loading.gif" lazyload alt="1571298685753" style="zoom:33%;" />
+
+<h4 id="X‐inactivation-in-Calico-cats"><a href="#X‐inactivation-in-Calico-cats" class="headerlink" title="X‐inactivation in Calico cats"></a>X‐inactivation in Calico cats</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571298837895.png" srcset="/img/loading.gif" lazyload alt="1571298837895" style="zoom:50%;" />
+
+<p>三色猫的斑驳毛色是巴尔氏体的表现，“黑色皮毛”与“橙色皮毛”的等位基因位于不同的X染色体上。由于去活化的对象是随机选择，因此不同部位，会依保留活性之染色体的不同，而有不同的毛色。</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571298819356.png" srcset="/img/loading.gif" lazyload alt="1571298819356" style="zoom:33%;" />
+
+<p>Inactivation of a single X chromosome in early embryo ：</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571298915965.png" srcset="/img/loading.gif" lazyload alt="1571298915965" style="zoom:50%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571299014963.png" srcset="/img/loading.gif" lazyload alt="1571299014963" style="zoom:33%;" />
+
+<h4 id="Potential-mechanism-of-X-chromosome-inactivation"><a href="#Potential-mechanism-of-X-chromosome-inactivation" class="headerlink" title="Potential mechanism of X chromosome inactivation"></a>Potential mechanism of X chromosome inactivation</h4><p>失活的X染色体（Xi）由其上的某个点开始往两头产生皱缩，直到染色体的末端，这个开始产生皱缩的点被称为“X失活中心”（英语：X inactivation center, Xic），X失活中心共含有12个基因，其中7个编码蛋白质，另外5个则编码<strong>Xist</strong>（X-inactive specific transcript，意为失活X染色体特定转录）和<strong>Tsix</strong>（Xist的反义序列）等长链非编码RNA</p>
+<p>Xist是执行X染色体去活化的基因，其转录出的RNA会把Xi包围，介导修饰染色体的酵素与其结合，以进行组蛋白甲基化（例如由多梳家族蛋白（PRC2）造成的H3K27me3、H3K9me3）、组蛋白泛素化、CpG位点的DNA甲基化等修饰，达到基因沉默的效果，最终使Xi皱缩成巴尔氏体，其上多数基因都无法表现</p>
+<p>Tsix基因是Xist的反义序列，是Xist的负向调节因子（a sequence of DNA that represses the expression of certain genes），可与Xist结合后，使其被Dicer（人体内由DICER1基因编码，是一种在RNA干扰中扮演着重要角色的RNA酶，属于III型RNA酶（RNase III））降解。</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571299477598.png" srcset="/img/loading.gif" lazyload alt="1571299477598" style="zoom:40%;" />
+
+<p>在X染色体去活化发生之前，两个X染色体都会均会表现Xist和Tsix，当去活化开始时，Xi将停止表现Tsix，使Xist的表现量增加；Xa则保持Tsix的表现，使Xist的表现量维持在较低水平</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571299382185.png" srcset="/img/loading.gif" lazyload alt="1571299382185" style="zoom:40%;" />
+
+<h4 id="Formation-of-Barr-Body"><a href="#Formation-of-Barr-Body" class="headerlink" title="Formation of Barr Body"></a>Formation of Barr Body</h4><ol>
+<li><strong>Initiation</strong>: Occurs during embryonic development. One of the X chromosome remains active and the other is targeted for inactivation.</li>
+<li><strong>Spreading</strong>: Occurs during embryonic development. It begins at the <strong>XIC (X chromosomal controlling element)</strong> and progresses toward both ends until the entire chromosome is inactivated. <strong>The Xist gene (present within the XIC)</strong> encodes an RNA that coats the X chromosome and recruits proteins that promote its compaction into a Barr body.</li>
+<li>Maintenance: Occurs from embryonic development through adult life. The inactivated X chromosome is maintained as such during subsequent cell divisions.</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191117153138145.png" srcset="/img/loading.gif" lazyload alt="image-20191117153138145" style="zoom:50%;" />
+
+<h3 id="3-Genomic-genetic-imprinting-基因印记"><a href="#3-Genomic-genetic-imprinting-基因印记" class="headerlink" title="3. Genomic&#x2F;genetic imprinting 基因印记"></a>3. Genomic&#x2F;genetic imprinting 基因印记</h3><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>Genomic imprinting （基因印记或遗传印记）is a phenomenon in which expression of a gene depends on whether it is inherited from the male or the female parent</p>
+<p>Forms of genomic imprinting have been demonstrated in fungi, plants and animals（ mammals, insects and flowering plants）.</p>
+<p>Imprinted genes follow a non‐Mendelian pattern of inheritance      </p>
+<ul>
+<li><p>Depending on how the genes are “marked”, the offspring expresses either the maternally‐inherited or the paternally-inherited allele      </p>
+</li>
+<li><p>This is termed <u>monoallelic expression （单等位基因表达）</u></p>
+</li>
+</ul>
+<p><font color="000099">基因印记是母本与父本基因”竞争“的过程，因为一些性状对于母本有利，有些性状对于父本有利。母本与父本通过基因印记选择某些基因的表达与否。</font></p>
+<p>Thus genomic imprinting is permanent in the somatic cells of an animal </p>
+<ul>
+<li>However, the marking of alleles can be altered from generation to generation</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571300970799.png" srcset="/img/loading.gif" lazyload alt="1571300970799" style="zoom:50%;" />
+
+<p>Genomic imprinting occurs in several species including mammals, insects and flowering plants</p>
+<p> It may involve:</p>
+<ol>
+<li>A single gene</li>
+<li>A part of a chromosome</li>
+<li>An entire chromosome</li>
+<li>Even all the chromosomes from one parent</li>
+</ol>
+<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><h5 id="（1）lgf2-gene"><a href="#（1）lgf2-gene" class="headerlink" title="（1）lgf2 gene"></a>（1）lgf2 gene</h5><p>The <strong>Igf2 gene</strong> encodes a growth hormone called insulin‐like growth factor 2</p>
+<ul>
+<li>A functional Igf2 gene is necessary for a normal size</li>
+</ul>
+<p>Imprinting results in the expression of the paternal but not the maternal allele </p>
+<ul>
+<li><p>The paternal (父亲的) allele is transcribed into RNA </p>
+</li>
+<li><p>The maternal (母亲的) allele is not transcribed</p>
+</li>
+</ul>
+<p>$Igf2^{-}$ is a <strong>loss‐of‐function allele</strong> that does not express a functional Igf2 protein</p>
+<ul>
+<li>This may cause a mouse to be dwarf depending on whether it inherits the mutant allele from its father or from its mother</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571301642943.png" srcset="/img/loading.gif" lazyload alt="1571301642943"></p>
+<ol>
+<li><strong>Establishment of the imprint</strong>: In this example, imprinting occurs during gametogenesis in the Igf2 gene, which exists in the Igf2 allele from the male and the $Igf2^{-}$ allele from the female. This imprinting occurs so that only the paternal allele is expressed.</li>
+<li><strong>Maintenance of the imprint</strong>: After fertilization, the imprint pattern is maintained throughout development. In this example, the maternal $Igf2^{-}$ allele will not be expressed in the somatic cells. Note that the offspring on the left is a female and the one on the right is a male; both are normal in size.</li>
+<li><strong>Erasure and reestablishment</strong>: <u>During gametogenesis, the imprint is erased</u>. The female mouse produces eggs in which the gene is silenced. The male produces sperm in which the gene can be transcribed into mRNA.</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191117154026309.png" srcset="/img/loading.gif" lazyload alt="image-20191117154026309" style="zoom:67%;" />
+
+<h5 id="（2）Human-diseases-that-involve-imprinted-genes"><a href="#（2）Human-diseases-that-involve-imprinted-genes" class="headerlink" title="（2）Human diseases that involve imprinted genes"></a>（2）Human diseases that involve imprinted genes</h5><ol>
+<li><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571302770913.png" srcset="/img/loading.gif" lazyload alt="1571302770913" style="zoom:43%;" />
+</li>
+<li><p>Besides Imprinting does play a role in the inheritance of certain human diseases such as <strong>Prader‐Willi syndrome (PWS)</strong> and <strong>Angelman syndrome (AS, 快乐木偶综合症， 又称天使综合征)</strong></p>
+<p> PWS is characterized by </p>
+<ul>
+<li><p>Reduced motor function </p>
+</li>
+<li><p>Obesity </p>
+</li>
+<li><p>Mental deficiencies</p>
+</li>
+</ul>
+<p>AS is characterized by </p>
+<ul>
+<li>Hyperactivity </li>
+<li>Unusual seizures (癫痫，痉挛)</li>
+<li>Repetitive symmetrical muscle movements </li>
+<li>Mental deficiencies</li>
+</ul>
+<p>Most commonly, <strong>PWS and AS involve a small deletion in chromosome 15</strong>        </p>
+<ul>
+<li>If it is inherited from the mother, it leads to AS        </li>
+<li>If it is inherited from the father, it leads to PWS</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191117155155305.png" srcset="/img/loading.gif" lazyload alt="image-20191117155155305"></p>
+<h4 id="Imprinting-and-DNA-Methylation"><a href="#Imprinting-and-DNA-Methylation" class="headerlink" title="Imprinting and DNA Methylation"></a>Imprinting and DNA Methylation</h4><p><u>Genomic imprinting must involve a marking process</u> </p>
+<p>At the molecular level, the imprinting of several genes is known to involve an <strong>imprinting control region (ICR； 印记控制区)</strong> located near the imprinted gene. </p>
+<p>The ICR contains <u>binding sites for one or more transcription factors</u> that regulate the imprinted gene </p>
+<p>A portion of the DNA in this region is called the <strong>differentially methylated domain (DMD； 差异性甲基化区域)</strong> </p>
+<p>The DMD is methylated either in the oocyte or sperm —— <font color="990000">Not both</font>   </p>
+<h4 id="DNA-Methylation-Functions"><a href="#DNA-Methylation-Functions" class="headerlink" title="DNA Methylation Functions"></a>DNA Methylation Functions</h4><h5 id="1-Silencing"><a href="#1-Silencing" class="headerlink" title="(1) Silencing"></a>(1) Silencing</h5><p>For most genes, methylation at a DMD results in inhibition of gene expression</p>
+<p>Methylation could:</p>
+<ul>
+<li><u>Enhance (提高，加强) the binding of proteins that inhibit transcription</u> <font color="990000">and&#x2F;or</font> <u>Inhibit the binding of proteins that enhance transcription</u></li>
+</ul>
+<p>Because of this, imprinting is usually described as a process that silences gene expression by preventing transcription </p>
+<ul>
+<li>However, this is not always the case</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571302689122.png" srcset="/img/loading.gif" lazyload alt="1571302689122" style="zoom:67%;" />
+
+<h5 id="2-Enhancement"><a href="#2-Enhancement" class="headerlink" title="(2) Enhancement"></a>(2) Enhancement</h5><p>Consider two imprinted genes in humans, H19 and Igf2     </p>
+<ol>
+<li><p>They lie close to each other on human chromosome 11      </p>
+</li>
+<li><p>Appear to <u>be controlled by the same ICR</u></p>
+</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571302417842.png" srcset="/img/loading.gif" lazyload alt="1571302417842"></p>
+<p>This ICR  </p>
+<ul>
+<li><p>Is ~ 52,000 bp </p>
+</li>
+<li><p>Contains binding sites for proteins that regulate the transcription of both genes  </p>
+</li>
+<li><p>Is highly methylated on the paternally inherited chromosome but not on the maternally inherited chromosome</p>
+</li>
+</ul>
+<h2 id="Extranuclear-inheritance-核外遗传"><a href="#Extranuclear-inheritance-核外遗传" class="headerlink" title="Extranuclear inheritance 核外遗传"></a>Extranuclear inheritance 核外遗传</h2><ul>
+<li>Involves genes in <u>organelles other than the nucleus</u> <ul>
+<li>Mitochondria </li>
+<li>Chloroplasts</li>
+</ul>
+</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetics/" class="category-chain-item">Genetics</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetics/" class="print-no-link">#Genetics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L05 Non‐Mendelian Inheritance</div>
+      <div>https://zhenyumi.github.io/posts/72930b7d/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/4edbb233/" title="L05 Amino Acids">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L05 Amino Acids</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/aa716d78/" title="L06 Variation in Chromosomes Structure and Number reversed version">
+                        <span class="hidden-mobile">L06 Variation in Chromosomes Structure and Number reversed version</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

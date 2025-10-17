@@ -1,0 +1,880 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Gene Therapy - CRISPR and AAV">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L14 The application of Genetic Engineering">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/1e1174e2/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Gene Therapy - CRISPR and AAV">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105014519853.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105014747219.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105014755008.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105014953469.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015556651.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015604731.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015701755.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015708957.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015820098.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015845187.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015855016.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020757789.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020818794.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020840835.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020854503.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020918341.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020945682.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105021159042.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105021248445.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105021356610.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105021428951.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105021442305.png">
+<meta property="article:published_time" content="2021-01-08T10:37:06.000Z">
+<meta property="article:modified_time" content="2021-01-08T10:37:06.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetic Engineering">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105014519853.png">
+  
+  
+  
+  <title>L14 The application of Genetic Engineering - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L14 The application of Genetic Engineering</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-01-08 18:37" pubdate>
+          2021年1月8日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          221 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          2 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L14 The application of Genetic Engineering</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Genome-Editing-–-The-principle-of-CRISPR-system"><a href="#一、Genome-Editing-–-The-principle-of-CRISPR-system" class="headerlink" title="一、Genome Editing – The principle of CRISPR system"></a>一、Genome Editing – The principle of CRISPR system</h1><p>Genome editing pre-CRISPR: The development</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105014519853.png" srcset="/img/loading.gif" lazyload alt="image-20210105014519853" style="zoom:100%;" />
+
+<h2 id="General-principles"><a href="#General-principles" class="headerlink" title="General principles"></a>General principles</h2><p>Editing the genome using</p>
+<ul>
+<li>Homology directed Repair(HDR) 同源定向修复</li>
+<li>Non Homologous End Joining (NHEJ) 非同源端链接</li>
+<li>Early approaches（早期方法）: modifying genetic sequences using only homologous recombination.</li>
+</ul>
+<h2 id="NHEJ-HDR"><a href="#NHEJ-HDR" class="headerlink" title="NHEJ &amp; HDR"></a>NHEJ &amp; HDR</h2><h3 id="1-Homology-directed-repair-HDR"><a href="#1-Homology-directed-repair-HDR" class="headerlink" title="1. Homology directed repair (HDR)"></a>1. Homology directed repair (HDR)</h3><p>Mechanism in cells to repair <strong>double strand DNA lesions</strong></p>
+<ul>
+<li>The most common form homologous recombination</li>
+<li>Only used by the cell when there is a homologue piece of DNA present in the nucleus<br>Mostly in G2 and late S phase</li>
+<li>Important for suppressing cancer</li>
+</ul>
+<p>maintains genomic stability by repairing broken DNA strands</p>
+<ul>
+<li>Assumed to be error free because of the use of a template</li>
+</ul>
+<h3 id="2-Non-homologous-end-joining-NHEJ"><a href="#2-Non-homologous-end-joining-NHEJ" class="headerlink" title="2. Non-homologous end joining (NHEJ)"></a>2. Non-homologous end joining (<strong>NHEJ</strong>)</h3><p>Repairs double-strand breaks in DNA in the absence of homologous templates</p>
+<ul>
+<li>Occurs in G0&#x2F;G1 and early S-phases</li>
+</ul>
+<p>non-homologous: the break ends directly ligated</p>
+<blockquote>
+<p>non-homologous end joining: Moore and Haber(1996)</p>
+<p>utilizes short homologous DNA sequences called microhomologies to guide repair</p>
+<ul>
+<li>Imprecise repair when the overhangs are not compatible</li>
+</ul>
+</blockquote>
+<p>Lead to translocations and telomere fusion: hallmarks of tumor cells</p>
+<hr>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105014747219.png" srcset="/img/loading.gif" lazyload alt="image-20210105014747219" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105014755008.png" srcset="/img/loading.gif" lazyload alt="image-20210105014755008" style="zoom:100%;" />
+
+<h2 id="CRISPRs"><a href="#CRISPRs" class="headerlink" title="CRISPRs"></a>CRISPRs</h2><p>Clustered Regularly Interspaced Short Palindromic Repeats</p>
+<p>Genetic elements that bacteria use as a kind of acquired immunity to protect against viruses</p>
+<h3 id="1-How-CRISPRs-Works"><a href="#1-How-CRISPRs-Works" class="headerlink" title="1. How CRISPRs Works ?"></a>1. How CRISPRs Works ?</h3><h4 id="STAGE-1-Foreign-DNA-acquisition"><a href="#STAGE-1-Foreign-DNA-acquisition" class="headerlink" title="STAGE 1: Foreign DNA acquisition"></a>STAGE 1: Foreign DNA acquisition</h4><p>Foreign nucleic acids are recognized by <strong>Cas proteins</strong>, and short fragments (30–50 base pairs) of invading DNA, called <strong>protospacers</strong>, <u>are inserted into the host’s CRISPR locus</u> as spacer sequences, <u>separated by repeat sequences.</u> </p>
+<p><u>In type I and II systems, protospacers are selected from regions of invading DNA that are flanked by a 2–5 nucleotide (nt) motif called a PAM (protospacer adjacent motif) (Sorek et al., 2013).</u> </p>
+<p>Protospacers are generally incorporated at one end of the CRISPR locus, referred to as the leader, by a mechanism that involves Cas1, Cas2, and free 3’ hydroxyls on the protospacer (Nuñez et al., 2015). </p>
+<ul>
+<li>Protospacer integration is accompanied by the duplication of the leader-terminal repeat sequence, which may involve host polymerases and DNA repair machinery</li>
+</ul>
+<p><strong>Protospacer &amp; PAM</strong> (sequence that being selected from invader phage genome). </p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105014953469.png" srcset="/img/loading.gif" lazyload alt="image-20210105014953469" style="zoom:100%;" />
+
+<h4 id="Stage-2-crRNA-Biogenesis"><a href="#Stage-2-crRNA-Biogenesis" class="headerlink" title="Stage 2. crRNA Biogenesis"></a>Stage 2. crRNA Biogenesis</h4><p>CRISPR RNA biogenesis starts with transcription, followed by processing of the primary transcript (pre-crRNA) into a library of short <strong>CRISPR-derived RNAs (crRNAs)</strong> that each contains a sequence complementary to a previously encountered foreign DNA</p>
+<p>The <u>crRNA-guide sequence is flanked by regions</u> of the adjacent repeats. CRISPR RNA processing in type II systems relies on <strong>a trans-acting crRNA (tracrRNA)</strong>, <u>which contains a sequence that is complementary to the repeat sequences</u>. These double-stranded regions are processed by RNase III while in the presence of Cas9.</p>
+<p>In <strong>type II systems</strong>, both the tracrRNA and the crRNA are required for target interference. <u>The two RNAs from this system have been fused into a single-guide RNA (sgRNA),</u> and Cas9 has become a powerful tool for targeted genome engineering in a wide variety of cell types and multicellular organisms.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015556651.png" srcset="/img/loading.gif" lazyload alt="image-20210105015556651" style="zoom: 50%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015604731.png" srcset="/img/loading.gif" lazyload alt="image-20210105015604731" style="zoom:100%;" />
+
+<h4 id="Stage-3-Target-Interference"><a href="#Stage-3-Target-Interference" class="headerlink" title="Stage 3. Target Interference"></a>Stage 3. Target Interference</h4><p>The mature crRNAs guide Cas proteins to complementary targets. </p>
+<p>Target sequences are degraded by dedicated Cas nucleases, but the mechanisms of target degradation are diverse</p>
+<p>Type I and II systems both target dsDNA substrates that contain a PAM and a complementary protospacer sequence.</p>
+<p>Target cleavage in type II systems is performed by a single protein (Cas9) and two RNAs.</p>
+<p>Type I &amp; Type III systems rely on multi-subunit surveillance complexes that bind and cut the dsDNA substrates.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015701755.png" srcset="/img/loading.gif" lazyload alt="image-20210105015701755" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015708957.png" srcset="/img/loading.gif" lazyload alt="image-20210105015708957" style="zoom:100%;" />
+
+<p>Principles</p>
+<ul>
+<li>R-loop formation between target DNA and sgRNA which is bound by Cas9</li>
+<li>Cas9 mediated formation of DNA double stranded break.</li>
+<li>DSB is healed by NHEJ pathway, accompanied with high chance of error formation (short insertion or deletion, INDELs)</li>
+<li>In the presence of homologous DNA, HDR mediated repair (homologous recombination) can happen.</li>
+</ul>
+<p>Problem: </p>
+<ul>
+<li>High off-target rate</li>
+<li>High rate of unwanted mutation in the target gene.</li>
+</ul>
+<p>Cas9 base editors – an example with increased precision of editing:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015820098.png" srcset="/img/loading.gif" lazyload alt="image-20210105015820098" style="zoom:100%;" />
+
+<ul>
+<li>This is the simplest version, additional elements enable increased efficiency</li>
+</ul>
+<p>High efficiency precision editing with base editing:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015845187.png" srcset="/img/loading.gif" lazyload alt="image-20210105015845187" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105015855016.png" srcset="/img/loading.gif" lazyload alt="image-20210105015855016" style="zoom:100%;" />
+
+<h1 id="二、Gene-Therapy-–-AAV-mediated-Gene-Therapy"><a href="#二、Gene-Therapy-–-AAV-mediated-Gene-Therapy" class="headerlink" title="二、Gene Therapy – AAV mediated Gene Therapy"></a>二、Gene Therapy – AAV mediated Gene Therapy</h1><h2 id="Do-we-have-the-right-to-change-ourselves"><a href="#Do-we-have-the-right-to-change-ourselves" class="headerlink" title="Do we have the right to change ourselves ?"></a>Do we have the right to change ourselves ?</h2><p>In 1991, James Watson declared that “many people say they are worried about the changes in our genetic instructions. But these (genetic instructions) are merely a product of evolution, shaped so we can adapt to certain conditions which might no longer exist. We all know how imperfect we are. Why not become a little better apt to survive?”</p>
+<h2 id="The-Development-of-Gene-Therapy"><a href="#The-Development-of-Gene-Therapy" class="headerlink" title="The Development of Gene Therapy"></a>The Development of Gene Therapy</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020757789.png" srcset="/img/loading.gif" lazyload alt="image-20210105020757789" style="zoom:100%;" />
+
+<p>In vivo &amp; Ex vivo:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020818794.png" srcset="/img/loading.gif" lazyload alt="image-20210105020818794" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020840835.png" srcset="/img/loading.gif" lazyload alt="image-20210105020840835" style="zoom:100%;" />
+
+<p>Viral-based System:</p>
+<ol>
+<li>Retrovirus<ul>
+<li>RNA genome, usually used with cDNA. requires proliferating cells for incorporation of the transgene into the nuclear material Not specific for one cell type and can activate cellular oncogenes.</li>
+</ul>
+</li>
+<li>Adenoviruses<ul>
+<li>Double-stranded DNA genome, virus infects respiratory and gastrointestinal tract cells. thus effective in non-or slowly dividing cells, Generally provokes a strong immune response</li>
+</ul>
+</li>
+<li>Adeno-associated viruses<ul>
+<li>Replication-defective, thus requires helper virus. Some benefits over adenoviral systems: may show chromosome-specific integration of transgene</li>
+</ul>
+</li>
+</ol>
+<p>Non-viral based system:</p>
+<ol>
+<li>Liposomes<ul>
+<li>System based on lipid micelles that encapsulate the DNA. Some problems with size, as micelles are generally small and may restrict the amount of DNA encapsulated Inefficient compared to viral systems.</li>
+</ul>
+</li>
+<li>Lipoplexes<ul>
+<li>Benefits over liposomes include increased efficiency due to charged groups present on the constituent lipids. Nonimmunogenic, so benefits compared to viral Systems</li>
+</ul>
+</li>
+<li>Naked DNA<ul>
+<li>Inefficient uptake but may be useful in certain Cases</li>
+</ul>
+</li>
+</ol>
+<p>Tragedy motivates shift toward safer delivery:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020854503.png" srcset="/img/loading.gif" lazyload alt="image-20210105020854503" style="zoom:100%;" />
+
+<h2 id="Adeno-Associated-Virus-AAV"><a href="#Adeno-Associated-Virus-AAV" class="headerlink" title="Adeno-Associated Virus (AAV)"></a>Adeno-Associated Virus (AAV)</h2><p>Adeno-Associated Virus is a small non-replicative virus (dependovirus genus)</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020918341.png" srcset="/img/loading.gif" lazyload alt="image-20210105020918341" style="zoom:100%;" />
+
+<ul>
+<li>They are small (20 nm) replication-defective, nonenveloped viruses and have linear single-stranded DNA (ssDNA) genome of approximately 4.8 kilobases (kb).</li>
+</ul>
+<h2 id="Adapting-AAV-for-gene-delivery"><a href="#Adapting-AAV-for-gene-delivery" class="headerlink" title="Adapting AAV for gene delivery"></a>Adapting AAV for gene delivery</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105020945682.png" srcset="/img/loading.gif" lazyload alt="image-20210105020945682" style="zoom:100%;" />
+
+<h2 id="Advantages-and-drawbacks-of-using-AAV-in-Gene-therapy"><a href="#Advantages-and-drawbacks-of-using-AAV-in-Gene-therapy" class="headerlink" title="Advantages and drawbacks of using AAV in Gene therapy"></a>Advantages and drawbacks of using AAV in Gene therapy</h2><p>• AAV is currently most promising vector for human gene therapy (In-vivo).</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Lack of pathogenicity and very low immunogenicity</li>
+<li>Can infect both dividing and non-dividing cells with high efficiency</li>
+<li>Has the ability to integrate into specific site – Chromosome 19. </li>
+<li>When used in gene therapy, the integrative capacity of AAV is often removed.<ul>
+<li>After infection, AAV can form concatemer which can stably exist and express containing gene for the whole life cycle of the infected cell.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Drawbacks:</strong></p>
+<ul>
+<li>The cloning capacity of the vector is relatively limited</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105021159042.png" srcset="/img/loading.gif" lazyload alt="image-20210105021159042" style="zoom:100%;" />
+
+<h2 id="Gene-therapy-for-Leber’s-Congenital-Amaurosis-LCA"><a href="#Gene-therapy-for-Leber’s-Congenital-Amaurosis-LCA" class="headerlink" title="Gene therapy for Leber’s Congenital Amaurosis (LCA)"></a>Gene therapy for Leber’s Congenital Amaurosis (LCA)</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105021248445.png" srcset="/img/loading.gif" lazyload alt="image-20210105021248445" style="zoom: 50%;" />
+
+<p>Payload: RPE65 (Retinoid somerohydrolase, makes retinol</p>
+<p>Results in loss of vision then blindness during childhood</p>
+<ul>
+<li>Prevalence: 1 in 200.000</li>
+</ul>
+<p>Subretinal AAV2 delivery</p>
+<ul>
+<li>Dose: 1.5el1vgeye in 0. 3ml rednisone 3 days prior and 7 days after iniection</li>
+<li>Spark Therapeutics,</li>
+<li>850,000 USD per treatment</li>
+</ul>
+<h2 id="Selected-AAV-trials"><a href="#Selected-AAV-trials" class="headerlink" title="Selected AAV trials"></a>Selected AAV trials</h2><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105021356610.png" srcset="/img/loading.gif" lazyload alt="image-20210105021356610"></p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105021428951.png" srcset="/img/loading.gif" lazyload alt="image-20210105021428951" style="zoom:100%;" />
+
+<p>In vivo genome editing with AAV:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105021442305.png" srcset="/img/loading.gif" lazyload alt="image-20210105021442305" style="zoom:100%;" />
+
+<h2 id="SUMMARY"><a href="#SUMMARY" class="headerlink" title="SUMMARY"></a>SUMMARY</h2><p>In vivo gene therapy delivers a genetic payload into your body’s cells</p>
+<p>Viral capsids are efficient machines for <em>in vivo</em> delivery</p>
+<p>AAV capsids enables <em>in vivo</em> disease treatment</p>
+<ul>
+<li>LCA, SMA, DMD, and many more…</li>
+</ul>
+<p>Gene therapy field has consolidated around AAV technology</p>
+<p>Early gene therapies are a roadmap for translation of in vivo genome editing therapies</p>
+<ul>
+<li>With innovations on payloads and delivery, <u>curing all genetic diseases is within reach in our lifetime</u></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetic-Engineering/" class="category-chain-item">Genetic Engineering</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetic-Engineering/" class="print-no-link">#Genetic Engineering</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L14 The application of Genetic Engineering</div>
+      <div>https://zhenyumi.github.io/posts/1e1174e2/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年1月8日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/fa12efce/" title="L13 Functional analysis of genes">
+                        <span class="hidden-mobile">L13 Functional analysis of genes</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

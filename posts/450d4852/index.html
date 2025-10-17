@@ -1,0 +1,812 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="No such things">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L09 Transposons And Retrotransposons">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/450d4852/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="No such things">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_%EC%BA%AC%EB%A3%A8%ED%83%88%EC%B6%9C.png">
+<meta property="article:published_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:modified_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Molecular Biology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_%EC%BA%AC%EB%A3%A8%ED%83%88%EC%B6%9C.png">
+  
+  
+  
+  <title>L09 Transposons And Retrotransposons - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_Sunlight%281%29.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L09 Transposons And Retrotransposons</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-24 17:20" pubdate>
+          2020年7月24日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          349 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          3 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L09 Transposons And Retrotransposons</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="Transposons-VS-Retrotransposons"><a href="#Transposons-VS-Retrotransposons" class="headerlink" title="Transposons VS. Retrotransposons"></a>Transposons VS. Retrotransposons</h2><ul>
+<li><p>Eukaryotic DNA transposons move via a DNA intermediate, which is excised from the donor site.</p>
+</li>
+<li><p>Retrotransposons are first transcribed into an RNA molecule, which is then reverse-transcribed into a double-stranded DNA.</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110182845535.png" srcset="/img/loading.gif" lazyload alt="image-20191110182845535" style="zoom:50%;" />
+
+<p>In both cases, the double-stranded DNA intermediate is integrated into the target site DNA to complete the  movement. Thus, <u>DNA transposons move by a cut-and-paste mechanisms, whereas retrotransposons（反转录转座子，RNA介导） move by a copy-and-paste mechanism.</u></p>
+<h2 id="Transposable-Elements"><a href="#Transposable-Elements" class="headerlink" title="Transposable Elements"></a>Transposable Elements</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110183256691.png" srcset="/img/loading.gif" lazyload alt="image-20191110183256691" style="zoom: 67%;" />
+
+<h1 id="一、Transposons"><a href="#一、Transposons" class="headerlink" title="一、Transposons"></a>一、Transposons</h1><p>Transposable elements are pieces of DNA that can move into new locations in chromosomes &#x3D; mobile DNA.  </p>
+<p>Since uncontrolled movement could wreak havoc on genomes, their transposition has evolved to be regulated.  </p>
+<p>Their transposition is useful for genetic analysis and gene isolation. </p>
+<p>They are essentially opportunistic DNA sequences. </p>
+<p>Transposons are found in bacteria, but play an important role in plant biology</p>
+<p>Often have no phenotype themselves, but <u>insertion has effect by knocking out genes.</u></p>
+<p><u>DNA transposons mobilize via CUT &amp; PASTE mechanism</u></p>
+<h2 id="Structure-And-Mechanism"><a href="#Structure-And-Mechanism" class="headerlink" title="Structure And Mechanism"></a>Structure And Mechanism</h2><p>A common feature of transposable elements is the <u>flanking of the element by short inverted repeat sequences.</u> (通过短的反向重复序列将元件侧接)</p>
+<p>A model for transposition suggests that the enzyme <strong>transposase</strong> (转座酶) recognizes these sequences, creates a <u>stem&#x2F;loop structure</u>, and then excises the loop from that region of the genome. The excised loop can then be inserted into another region of the genome.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110183753872.png" srcset="/img/loading.gif" lazyload alt="image-20191110183753872" style="zoom: 33%;" />
+
+<h3 id="1-Transposase"><a href="#1-Transposase" class="headerlink" title="1. Transposase"></a>1. Transposase</h3><p>DNA transposons mobilize via CUT &amp; PASTE mechanism</p>
+<p>The transposase cleaves the element, stays with the fragment, and reintegrates it at a new site.<br>This mechanism <u>maintains a relatively low copy number in the genome.</u></p>
+<p>Insertion of transposons <u>causes duplication of the target site</u>, due to the staggered（错列） cut at the target sequence, which is repaired by DNA polymerase.（<u>这种错列将会由DNA聚合酶进行修理</u>）</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191227204345856.png" srcset="/img/loading.gif" lazyload alt="image-20191227204345856"></p>
+<h2 id="The-Technological-Use-of-Transposons"><a href="#The-Technological-Use-of-Transposons" class="headerlink" title="The Technological Use of Transposons"></a>The Technological Use of Transposons</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110184408594.png" srcset="/img/loading.gif" lazyload alt="image-20191110184408594" style="zoom:80%;" />
+
+<p>在PCR技术中，通过transposons直接插入primers，跳过fragmentation与Add primer的步骤，缩短实验时间</p>
+<h2 id="Transposons-–-Source-of-Mutation"><a href="#Transposons-–-Source-of-Mutation" class="headerlink" title="Transposons – Source of Mutation"></a>Transposons – Source of Mutation</h2><p>Amplification of DNA units and flanking transposon ends could create multiple transposase binding sites.</p>
+<p>（DNA单元和转座子末端的扩增可能会产生多个转座酶结合位点。）</p>
+<p>These could catalyze genomic rearrangements.</p>
+<p><u>Transposons can cause inactive or unstable alleles.</u></p>
+<p>Naturally occurring transposons are a source of genetic variation</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110185132185.png" srcset="/img/loading.gif" lazyload alt="image-20191110185132185" style="zoom: 67%;" />
+
+<h2 id="Transposons-Excision-Can-Alter-Gene-Expressions"><a href="#Transposons-Excision-Can-Alter-Gene-Expressions" class="headerlink" title="Transposons Excision Can Alter Gene Expressions"></a>Transposons Excision Can Alter Gene Expressions</h2><h3 id="1-In-Maize-玉米"><a href="#1-In-Maize-玉米" class="headerlink" title="1. In Maize 玉米"></a>1. In Maize 玉米</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110185324777.png" srcset="/img/loading.gif" lazyload alt="image-20191110185324777" style="zoom: 80%;" />
+
+<h4 id="Maize-Ac-Ds-Transposons"><a href="#Maize-Ac-Ds-Transposons" class="headerlink" title="Maize Ac&#x2F;Ds Transposons"></a>Maize Ac&#x2F;Ds Transposons</h4><p>Transposable elements may be autonomous or non-autonomous.</p>
+<p>Maize transposable elements of the <strong>“Ac” (Activator)</strong> type transpose <u>regardless of the genetic background they are in. They belong to the class of autonomous elements.</u></p>
+<p>Maize transposable elements of the <strong>Ds (Dissociation</strong>) type <u>do not transpose unless one or more copies of Ac are also present in the genome</u>. Therefore, Ds is a non-autonomous element. </p>
+<blockquote>
+<p> Barbara McClintock’s Study:</p>
+<ul>
+<li>Ac: Can Transport by itself<ul>
+<li>Autonomous elements encode a factor that can act in “trans” to move co-resident non-autonomous elements.</li>
+</ul>
+</li>
+<li>Ds: Cannot transport by itself<ul>
+<li>Non-autonomous elements do not encode a “cis-acting” factor (probably a transposase) needed for transposition. </li>
+<li>Non-autonomous elements may derive from autonomous elements by deletion of internal segments, thus inactivating their ability to program transposition. </li>
+<li>Alternatively, non-autonomous elements may arise when two sequences arise in proximity by mutation to be sufficiently similar to the element’s inverted repeat termini.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><em>Ds</em> (<em>Dissociation</em>) factor causes tendency toward chromosome breakage, but only if the individual also has <em>Ac</em> (<em>Activator</em>). </p>
+<p><em>Ds</em> could not be mapped – it seemed to occur in different places in the genome in different lines, and could move to a new place in different progeny; Barbara McClintock called this <strong>transposition</strong>. </p>
+<p><em>Ds</em> can cause <strong>unstable</strong> mutations, that frequently revert back to wild-type, but only if <em>Ac</em> is present. </p>
+<p><em>Ds</em> is a <strong>transposable element</strong>; it is <strong>non-autonomous</strong>, because it requires <em>Ac</em> to be present. </p>
+<p><em>Ac</em> encodes the <strong>transposase</strong>, the enzyme that catalyzes transposition.</p>
+<h4 id="Autonomous-or-Non-Autonomous"><a href="#Autonomous-or-Non-Autonomous" class="headerlink" title="Autonomous or Non-Autonomous"></a>Autonomous or Non-Autonomous</h4><p>Transposable elements may be autonomous or non-autonomous.</p>
+<p>Interpretations</p>
+<p>Non-autonomous elements do not encode a “cis-acting” factor (probably a transposase) needed for transposition. </p>
+<p>Autonomous elements encode a factor that can act in “trans” to move co-resident non-autonomous elements. </p>
+<p>Non-autonomous elements may derive from autonomous elements by deletion of internal segments, thus inactivating their ability to program transposition. </p>
+<p>Alternatively, non-autonomous elements may arise when two sequences arise in proximity by mutation to be sufficiently similar to the element’s inverted repeat termini.</p>
+<h4 id="Maize-Transposons-Acts-In-Arabidopsis"><a href="#Maize-Transposons-Acts-In-Arabidopsis" class="headerlink" title="Maize Transposons Acts In Arabidopsis."></a>Maize Transposons Acts In Arabidopsis.</h4><p>The maize Ac element also functions in Arabidopsis. </p>
+<p>Plants were transformed with a streptomycin-resistance gene interrupted by an Ac element and cultured to regenerate plantlets. So when this gene is interrupted, the plants are white due to loss of chlorophyll caused by streptomycin.</p>
+<p>Excision of Ac from some cells yields streptomycin-resistant green sectors (i.e., restores chloroplast function) in a streptomycin-sensitive (white) background, shown in (A) and (B). This indicates that the Ac element has moved out of the streptomycin gene – and it is happening randomly in normal tissues.</p>
+<h3 id="2-Cause-Gene-Unstable-or-Inactive"><a href="#2-Cause-Gene-Unstable-or-Inactive" class="headerlink" title="2. Cause Gene Unstable or Inactive"></a>2. Cause Gene Unstable or Inactive</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110185500144.png" srcset="/img/loading.gif" lazyload alt="image-20191110185500144" style="zoom: 33%;" />
+
+<h3 id="3-Influence-Neighboring-Genes"><a href="#3-Influence-Neighboring-Genes" class="headerlink" title="3. Influence Neighboring Genes"></a>3. Influence Neighboring Genes</h3><p>“epigenetic” variation can arise due to quantitative effects of silencing on transposons that happen to be associated with genes due solely to their proximity（接近，附近） – which is a random effect. </p>
+<p>In this example, a transposon in the promoter can cause flower color variation.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110185835649.png" srcset="/img/loading.gif" lazyload alt="image-20191110185835649" style="zoom:67%;" />
+
+<p>Same situation in mice – coat color is regulated by the methylation status of a retrotransposon in a “pseudoexon”. This element has a cryptic promoter that causes constitutive expression of the gene.</p>
+<h1 id="二、Retrotransposons"><a href="#二、Retrotransposons" class="headerlink" title="二、Retrotransposons"></a>二、Retrotransposons</h1><p><u>Retrotransposons mobilize via a COPY &amp; PASTE mechanism</u></p>
+<p>Reverse transcriptase makes DNA from RNA produced from the retroelement.</p>
+<p>This can permit substantial increases in the total copy number of the element. </p>
+<p>Most plant genomes expand via exactly this mechanism.</p>
+<h2 id="Retrotransposon-Movement"><a href="#Retrotransposon-Movement" class="headerlink" title="Retrotransposon Movement"></a>Retrotransposon Movement</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110192411928.png" srcset="/img/loading.gif" lazyload alt="image-20191110192411928" style="zoom: 50%;" />
+
+<p>Retrotransposons transpose by a different means of transferring a section of DNA from one point to another compared to transposons. In this case, the element to be transposed is copied in place, through creation of an RNA intermediate, after which the duplicate copy is inserted into a new location.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191227204833962.png" srcset="/img/loading.gif" lazyload alt="image-20191227204833962"></p>
+<h2 id="Overview-of-Retrotransposons"><a href="#Overview-of-Retrotransposons" class="headerlink" title="Overview of Retrotransposons"></a>Overview of Retrotransposons</h2><h3 id="1-Phylogeny"><a href="#1-Phylogeny" class="headerlink" title="1. Phylogeny"></a>1. Phylogeny</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110192822405.png" srcset="/img/loading.gif" lazyload alt="image-20191110192822405" style="zoom: 50%;" />
+
+<h2 id="LTR-Retrotransposons"><a href="#LTR-Retrotransposons" class="headerlink" title="LTR Retrotransposons"></a>LTR Retrotransposons</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110192907189.png" srcset="/img/loading.gif" lazyload alt="image-20191110192907189" style="zoom: 50%;" />
+
+<p><strong>LTR retrotransposons</strong> are similar in structure and action to retroviruses, but never leave cell.</p>
+<p>LTR &#x3D; Long term repeat</p>
+<p>Transcription starts within 5’ LTR, goes into 3’ LTR. The element may include genes that encode these proteins: </p>
+<ul>
+<li><p>protease (<em>gag</em>) </p>
+</li>
+<li><p>reverse transcriptase (<em>pol</em>) </p>
+</li>
+<li><p>integrase (<em>int</em>) </p>
+</li>
+<li><p>viral coat protein (<em>env</em>)</p>
+</li>
+</ul>
+<p><strong>Eukaryotic retrotransposons move via an RNA intermediate:</strong></p>
+<ol>
+<li>The <strong>Transposase (TE)</strong> is transcribed by RNA polymerase </li>
+<li>A DNA copy is made from the RNA by the enzyme <strong>reverse transcriptase (RT)</strong> </li>
+<li>The DNA copy gets integrated into a new site in the genome by an integrase.</li>
+</ol>
+<p>RT is encoded by the retrotransposon, not the host genome. The polymerase (“pol”)-like open reading frame is probably the gene for a reverse transcriptase that transcribes processed RNA into DNA. </p>
+<h2 id="Retrotransposons-LINE-and-SINE-Transposons"><a href="#Retrotransposons-LINE-and-SINE-Transposons" class="headerlink" title="Retrotransposons (LINE and SINE Transposons)"></a>Retrotransposons (LINE and SINE Transposons)</h2><p><strong>Non-viral retrotransposons</strong> do not have LTRs; most common TE in human genome <u>(most are inactive and cannot move)</u></p>
+<h3 id="1-LINE"><a href="#1-LINE" class="headerlink" title="1. LINE"></a>1. LINE</h3><p><strong>LINE</strong> &#x3D; <strong>l</strong>ong <strong>in</strong>terspersed <strong>e</strong>lement</p>
+<p>Nick genomic DNA, and use DNA end to prime RT, which is often <u>incomplete <strong>autonomous</strong> elements have both genes and promoter</u></p>
+<p>Example: human L1, present in 100,000 copies per genome</p>
+<h3 id="2-SINE"><a href="#2-SINE" class="headerlink" title="2. SINE"></a>2. SINE</h3><p><strong>SINE</strong> &#x3D; <strong>s</strong>hort <strong>in</strong>terspersed <strong>e</strong>lement</p>
+<p>promoter derived from tRNA or another RNA gene </p>
+<ul>
+<li>no genes encoded; <u>uses LINE machinery to move, therefore <strong>non-autonomous</strong></u></li>
+</ul>
+<p>Example: human Alu element, present in &gt;106 copies (5% of our DNA) </p>
+<p>In plants, similar elements called MITEs – 100 to 600 bp, form secondary structures.</p>
+<h1 id="三、Nucleotide-Sequence-Content-of-Genome"><a href="#三、Nucleotide-Sequence-Content-of-Genome" class="headerlink" title="三、Nucleotide Sequence Content of Genome"></a>三、Nucleotide Sequence Content of Genome</h1><h2 id="Human-Genome"><a href="#Human-Genome" class="headerlink" title="Human Genome"></a>Human Genome</h2><p>Representation of nucleotide sequence content of human genome</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110193715967.png" srcset="/img/loading.gif" lazyload alt="image-20191110193715967"></p>
+<h2 id="Plants-Genome-Size-Are-Different"><a href="#Plants-Genome-Size-Are-Different" class="headerlink" title="Plants Genome Size Are Different"></a>Plants Genome Size Are Different</h2><p>Classical measurements of DNA content showed that plants vary considerably in genome size. Even among closely related species like grasses.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110193805683.png" srcset="/img/loading.gif" lazyload alt="image-20191110193805683" style="zoom: 33%;" />
+
+<h3 id="1-The-Maize-Genome"><a href="#1-The-Maize-Genome" class="headerlink" title="1. The Maize Genome"></a>1. The Maize Genome</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110193833605.png" srcset="/img/loading.gif" lazyload alt="image-20191110193833605" style="zoom:67%;" />
+
+<h3 id="2-Arabidopsis"><a href="#2-Arabidopsis" class="headerlink" title="2. Arabidopsis"></a>2. Arabidopsis</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110193907271.png" srcset="/img/loading.gif" lazyload alt="image-20191110193907271"></p>
+<h3 id="3-Barley-大麦"><a href="#3-Barley-大麦" class="headerlink" title="3. Barley 大麦"></a>3. Barley 大麦</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110193947252.png" srcset="/img/loading.gif" lazyload alt="image-20191110193947252" style="zoom:50%;" />
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Molecular-Biology/" class="category-chain-item">Molecular Biology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Molecular-Biology/" class="print-no-link">#Molecular Biology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L09 Transposons And Retrotransposons</div>
+      <div>https://zhenyumi.github.io/posts/450d4852/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/53ddf4cb/" title="L08 Epigenetics">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L08 Epigenetics</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/9f8d10d6/" title="L10 Forward And Reverse Genetics">
+                        <span class="hidden-mobile">L10 Forward And Reverse Genetics</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,982 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Wed Nov 11 2020 08:33:54 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L5 DNA sequencing">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/dd37126d/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Wed Nov 11 2020 08:33:54 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223125457.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223150034.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223318547.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223340198.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223438541.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223913668.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224105596.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223125457.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224116198.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224126346.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224150565.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224746747.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224908875.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225644070.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225653363.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225711008.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225715887.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225729395.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225826446.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225908181.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225925017.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225930245.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021230120169.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021230620472.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021230627490.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231035921.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231103479.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231121500.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231238834.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231255177.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231309373.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231325388.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231359331.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231407182.png">
+<meta property="article:published_time" content="2020-11-11T00:33:51.000Z">
+<meta property="article:modified_time" content="2020-11-11T00:33:54.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetic Engineering">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223125457.png">
+  
+  
+  
+  <title>L5 DNA sequencing - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L5 DNA sequencing</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-11-11 08:33" pubdate>
+          2020年11月11日 早上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          330 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          3 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L5 DNA sequencing</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>First generation sequencing</p>
+<ol>
+<li>Maxam &amp; Gilbert Sequencing</li>
+<li>Sanger Sequencing</li>
+</ol>
+<p>Next-generation sequencing&#x2F;high-through put sequencing </p>
+<ol>
+<li>Illumina (Solexa) sequencing</li>
+<li>Roche 454 sequencing</li>
+<li>Ion torrent: Proton &#x2F; PGM sequencing </li>
+<li>SOLiD sequencing</li>
+</ol>
+<p>Third&#x2F;Fourth generation sequencing </p>
+<ol>
+<li>PACBIO sequencing</li>
+<li>Nanopore sequencing</li>
+</ol>
+<h1 id="一、Maxam-Gilbert-Sequencing"><a href="#一、Maxam-Gilbert-Sequencing" class="headerlink" title="一、Maxam-Gilbert Sequencing"></a>一、Maxam-Gilbert Sequencing</h1><p>It is a method by which the sequence of a DNA <strong>fragment</strong> is identified by using chemicals, which means cut DNA at specific points. </p>
+<ul>
+<li>Also called <strong>Chemical degradation</strong> method of DNA sequencing</li>
+</ul>
+<h2 id="Procedure"><a href="#Procedure" class="headerlink" title="Procedure"></a>Procedure</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223125457.png" srcset="/img/loading.gif" lazyload alt="image-20201021223125457" style="zoom:67%;" />
+
+<ul>
+<li>E.g it is a fragment of double stranded DNA, and you do not know its sequence</li>
+</ul>
+<p><strong>Step:1, Alkaline denaturation of dsDNA</strong></p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223150034.png" srcset="/img/loading.gif" lazyload alt="image-20201021223150034" style="zoom:67%;" />
+
+<ul>
+<li>At first, the double stranded fragment is separated into two single strands by applying <strong>high Temperature</strong> or <strong>high PH</strong>.</li>
+</ul>
+<hr>
+<p><strong>Step :2 Separate two strand on gel</strong> </p>
+<p>Run the single stranded fragments on gel. </p>
+<ul>
+<li>As lighter fragment band will move further than the heavy fragment band</li>
+</ul>
+<p><strong>How will we know which one is the lighter</strong> <strong>band?</strong></p>
+<ul>
+<li>The band having larger number of purines (A,G) would be heavier.</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223318547.png" srcset="/img/loading.gif" lazyload alt="image-20201021223318547" style="zoom:67%;" />
+
+<ul>
+<li><strong>Fig: Single stranded DNA fragments in Gel Electrophoresis gel.</strong></li>
+</ul>
+<hr>
+<p><strong>Step :3, Radioactive end labeling of ssDNA</strong></p>
+<p>Take one of fragment band from the gel</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223340198.png" srcset="/img/loading.gif" lazyload alt="image-20201021223340198"></p>
+<p>Remove the Phosphate at 5′ end and incorporate radioactive 32-PO4 enzymatically.</p>
+<hr>
+<p><strong>Step 4: Chemical Degradation</strong></p>
+<p>Now let’s put isolated and end-labelled ssDNA into four tubes</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223438541.png" srcset="/img/loading.gif" lazyload alt="image-20201021223438541" style="zoom: 50%;" />
+
+<ul>
+<li><strong>Tube 1</strong> : Increase Temperature and PH(by adding NAOH), that would cause fragments to break down. Dimethyl sulfate will be added that would make cuts at <strong>Adenine</strong> and <strong>Guanine</strong> positions.</li>
+<li><strong>Tube 2</strong>: Dimethyl sulfate and dilute HCL will be added that would cuts the fragment at <strong>Adenine</strong> position</li>
+<li><strong>Tube 3</strong>: Reagents Hydrazine and Piperidine are added that would cuts the fragment at position <strong>Cytocine</strong> and <strong>Thymine</strong></li>
+<li><strong>Tube 4</strong>: In the last tube, Hydrazine, Piperdine and NACL is added that would cuts the fragment at <strong>Cytocine</strong> position</li>
+</ul>
+<p>After chemical degradation, we would get following radioactively labelled fragments from each tube</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223913668.png" srcset="/img/loading.gif" lazyload alt="image-20201021223913668" style="zoom:50%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224105596.png" srcset="/img/loading.gif" lazyload alt="image-20201021224105596" style="zoom:50%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223125457.png" srcset="/img/loading.gif" lazyload alt="image-20201021223125457" style="zoom:67%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224116198.png" srcset="/img/loading.gif" lazyload alt="image-20201021224116198" style="zoom: 33%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224126346.png" srcset="/img/loading.gif" lazyload alt="image-20201021224126346" style="zoom:50%;" />
+
+<hr>
+<p><strong>Step 5: Gel electrophoresis</strong></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224150565.png" srcset="/img/loading.gif" lazyload alt="image-20201021224150565"></p>
+<ul>
+<li>All of the fragments from each four tubes are pour in Gel. </li>
+<li>Four wells will be make on Gel with each tube of the samples running into one well. </li>
+<li>Fragments would separate on Gel according to size. </li>
+<li>After placing X ray film on top of gel, radioactive labelled fragments would emit a band at their position</li>
+</ul>
+<h2 id="Advantages"><a href="#Advantages" class="headerlink" title="Advantages"></a>Advantages</h2><ol>
+<li>Directly read purified DNA.</li>
+<li>Used sequence heterogenous DNA as well as Homopolymeric sequences.</li>
+<li>used to analyze DNA-Protein interaction.</li>
+<li>Used to analyze Epigenetic modification and nucleic acid structure.</li>
+</ol>
+<h2 id="Disadvantages"><a href="#Disadvantages" class="headerlink" title="Disadvantages"></a>Disadvantages</h2><ol>
+<li>Use of toxic chemicals and extensive use of radioactive isotopes. highly poisonous and unstable</li>
+<li>Cannot read more than 500bp</li>
+<li>Setup is quite complex. (Chemical digestion, Gel running, radioisotope, time consuming)</li>
+<li>It is difficult to make Maxam-Gilbert DNA sequencing kit. (Hard to commercialize)</li>
+<li>Read size decrease with incomplete cleavage reactions.</li>
+</ol>
+<p>Why Maxam-Gilbert sequencing is now extinct ?</p>
+<ul>
+<li>Even though Sanger sequencing is still widespread, Maxam-Gilbert sequencing has been forgotten. So, you may be surprised to know that when both methods were discovered, <u>Maxam-Gilbert was the most popular. This was because scientists could use purified DNA directly, while the initial Sanger method required cloning for the start of each read</u></li>
+<li>This method, although based on very simple principles, came with a whole lot of trouble. First, it was time consuming. And that was supposing that everything went well on the first try. <u>A lot of steps in the method could cause problems</u>: the radioactive labeling process, the cleavage reactions, the gel set up, the electrophoresis, and the X-ray film developer. Using this method you could only confirm about 200–300 bases of DNA every few days!</li>
+<li>Maxam-Gilbert sequencing also required working with large amounts of radioactive material and working closely with <u>hydrazine, which is a known neurotoxin</u>. The development of other techniques, and the simplification of Sanger sequencing, caused chemical sequencing to lose its appeal. With the birth of next-generation sequencing, Maxam-Gilbert sequencing is almost extinct and many are claiming the same will happen to Sanger sequencing.</li>
+</ul>
+<h1 id="二、Sanger-Sequencing"><a href="#二、Sanger-Sequencing" class="headerlink" title="二、Sanger Sequencing"></a>二、Sanger Sequencing</h1><h2 id="Principles"><a href="#Principles" class="headerlink" title="Principles"></a>Principles</h2><p>Sanger sequencing: <u>Chain-terminating method</u> of DNA sequencing</p>
+<p><strong>Dideoxy nucleotide</strong> mediated chain-terminating method</p>
+<ul>
+<li>2’,3’-dideoxynucleotide triphosphate (<strong>ddNTPs</strong>)</li>
+</ul>
+<center><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224746747.png" srcset="/img/loading.gif" lazyload alt="image-20201021224746747" style="zoom:80%;" /> <img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224908875.png" srcset="/img/loading.gif" lazyload alt="image-20201021224908875" style="zoom:100%;" /> </center> 
+
+<p>They terminate DNA chain elongation as…</p>
+<ul>
+<li><u>Cannot form a phosphodiester bond with the next deoxynucleotide</u></li>
+<li>ddNTPs are the terminator molecules…</li>
+</ul>
+<p>Each ddNTP has label for different color fluorescence</p>
+<h3 id="1-Ingredients-for-Sanger-Sequencing"><a href="#1-Ingredients-for-Sanger-Sequencing" class="headerlink" title="1. Ingredients for Sanger Sequencing"></a>1. Ingredients for Sanger Sequencing</h3><ol>
+<li>The <u><strong>template</strong></u> DNA to be sequenced</li>
+<li>A <strong><u>DNA polymerase</u></strong> enzyme – A thermo stable form of DNA polymerase, enable doing cycles of reaction in PCR machine.</li>
+<li>The <strong><u>primer</u></strong>, which is a short piece of single-stranded DNA that binds to the template DNA and acts as a “starter” for the polymerase </li>
+<li>The four <strong><u>DNA nucleotides</u></strong> (dATP, dTTP, dCTP, dGTP)</li>
+<li>Dideoxy, or <strong><u>chain-terminating</u></strong>, versions of all four nucleotides (<u>ddATP, ddTTP, ddCTP, ddGTP</u>), each labeled with a different color of dye</li>
+<li>Proportion of the dNTPs and ddNTPs is <strong><u>100 : 1, Why?</u></strong><ul>
+<li>Means that 1% of the ddNTPs are fluorescence labeled terminator molecules</li>
+<li>If more ddNTPs are included into the reaction, the majority of the growing DNA chain would terminate quickly, reduce the ability to get signal <u>from long enough reads.</u><ul>
+<li>About 500 bp is maximal</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-The-Machine-Used-in-Sanger-Sequencing"><a href="#2-The-Machine-Used-in-Sanger-Sequencing" class="headerlink" title="2. The Machine Used in Sanger Sequencing"></a>2. The Machine Used in Sanger Sequencing</h3><p>ABI377:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225644070.png" srcset="/img/loading.gif" lazyload alt="image-20201021225644070" style="zoom: 25%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225653363.png" srcset="/img/loading.gif" lazyload alt="image-20201021225653363" style="zoom: 50%;" />
+
+<p><strong>ABI3730, high-throughput Sanger sequencing</strong> :</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225711008.png" srcset="/img/loading.gif" lazyload alt="image-20201021225711008"></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225715887.png" srcset="/img/loading.gif" lazyload alt="image-20201021225715887"></p>
+<p>Many Systems for Sanger Automation:</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225729395.png" srcset="/img/loading.gif" lazyload alt="image-20201021225729395"></p>
+<h1 id="一、Next-Generation-Sequencing"><a href="#一、Next-Generation-Sequencing" class="headerlink" title="一、Next Generation Sequencing"></a>一、Next Generation Sequencing</h1><h2 id="Illumina"><a href="#Illumina" class="headerlink" title="Illumina"></a>Illumina</h2><p>Typical Illumina Setup:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225826446.png" srcset="/img/loading.gif" lazyload alt="image-20201021225826446" style="zoom: 33%;" />
+
+<p>Illumina Outline: The key steps</p>
+<ol>
+<li>Making a sequencing Library</li>
+<li>Cluster generation</li>
+<li>Sequence by synthesis (SBS)</li>
+<li>Data analysis</li>
+</ol>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225908181.png" srcset="/img/loading.gif" lazyload alt="image-20201021225908181"></p>
+<h2 id="Key-Steps"><a href="#Key-Steps" class="headerlink" title="Key Steps"></a>Key Steps</h2><h3 id="1-Making-a-Sequencing-library"><a href="#1-Making-a-Sequencing-library" class="headerlink" title="1. Making a Sequencing library"></a>1. Making a Sequencing library</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225925017.png" srcset="/img/loading.gif" lazyload alt="image-20201021225925017" style="zoom: 50%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225930245.png" srcset="/img/loading.gif" lazyload alt="image-20201021225930245" style="zoom: 67%;" />
+
+<p>Making a sequencing Library: The key steps</p>
+<ol>
+<li>Add sequencing adaptors to the both end of insert DNA (target DNA).</li>
+<li>The sequencing adaptor enables PCR amplification of the library.</li>
+<li>The sequencing adaptor enables anchoring of the library to the flow cell and the following cluster generation</li>
+</ol>
+<h3 id="2-Cluster-generation"><a href="#2-Cluster-generation" class="headerlink" title="2. Cluster generation"></a>2. Cluster generation</h3><ol>
+<li>Apply the library to the flowcell.</li>
+<li>Cluster generation by solid phase PCR (bridge amplification)</li>
+<li>Each single molecule of DNA in the original sequencing library form a “cluster” on the surface of the flowcell through amplification. (1 million copy of original copy)</li>
+</ol>
+<h3 id="3-Sequence-by-synthesis-SBS"><a href="#3-Sequence-by-synthesis-SBS" class="headerlink" title="3. Sequence by synthesis (SBS)"></a>3. Sequence by synthesis (SBS)</h3><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021230120169.png" srcset="/img/loading.gif" lazyload alt="image-20201021230120169"></p>
+<ol>
+<li>Fluorescent labeled Reversible terminators are incorporated into the growing DNA chain</li>
+<li>Only a single fluorescent color is used, so each of the four bases must be added in a separate cycle of DNA synthesis and imaging</li>
+<li>Imaging to record the signal</li>
+<li>Next nucleotide is then being added.</li>
+</ol>
+<h3 id="4-Data-analysis"><a href="#4-Data-analysis" class="headerlink" title="4. Data analysis"></a>4. Data analysis</h3><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021230620472.png" srcset="/img/loading.gif" lazyload alt="image-20201021230620472"></p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021230627490.png" srcset="/img/loading.gif" lazyload alt="image-20201021230627490" style="zoom: 25%;" />
+
+<ul>
+<li>Initial Data QC</li>
+<li>Processing of raw data (remove low quality reads and trim adaptor, remove PCR duplicate, etc)</li>
+<li>Mapping to the reference genome</li>
+<li>Downstream analysis</li>
+</ul>
+<h2 id="Comparison-to-Sanger-Sequencing"><a href="#Comparison-to-Sanger-Sequencing" class="headerlink" title="Comparison to Sanger Sequencing"></a>Comparison to Sanger Sequencing</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>Sanger Sequencing</th>
+<th>NGS (Next Generation Sequencing)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Benefits</strong></td>
+<td>1. Fast, cost-effective sequencing for low numbers of targets (1–20 targets)<br />2. Custom friendly<br />3. Accurate<br />4. Long read length (500bp)</td>
+<td>1. Higher sequencing depth enables higher sensitivity (down to 1%)<br />2. Higher mutation resolution<br />3. More data produced with the same amount of input DNA<br />4. Higher sample throughput</td>
+</tr>
+<tr>
+<td><strong>Challenges</strong></td>
+<td>1. Low sensitivity (limit of detection ~15–20%)<br />2. Not as cost-effective for high numbers of targets (&gt; 20 targets)<br />3. Low scalability due to increasing sample input requirements</td>
+<td>1. Less cost-effective for sequencing low numbers of targets (1–20 targets)<br />2. Time-consuming for sequencing low numbers of targets (1–20 targets)</td>
+</tr>
+</tbody></table>
+<h1 id="四、Third-Generation-Sequencing-Long-Read-Sequencing"><a href="#四、Third-Generation-Sequencing-Long-Read-Sequencing" class="headerlink" title="四、Third Generation Sequencing - Long Read Sequencing"></a>四、Third Generation Sequencing - Long Read Sequencing</h1><p>Third generation sequencing- long read sequencing</p>
+<p>Third-generation sequencing (also known as long-read sequencing) is a class of <u>DNA sequencing</u> methods currently under active developments</p>
+<p>Since eukaryotic genomes contain many <u>repetitive regions</u>, a major limitation to sanger or illumina sequencing methods is the length of reads it produces.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231035921.png" srcset="/img/loading.gif" lazyload alt="image-20201021231035921" style="zoom: 25%;" />
+
+<h2 id="PACBIO-Pacific-Bioscience-sequencing"><a href="#PACBIO-Pacific-Bioscience-sequencing" class="headerlink" title="PACBIO: Pacific Bioscience sequencing"></a>PACBIO: Pacific Bioscience sequencing</h2><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231103479.png" srcset="/img/loading.gif" lazyload alt="image-20201021231103479"></p>
+<ul>
+<li>SMRT(Single-Molecule Real Time Sequencing)</li>
+</ul>
+<p>Zero-mode waveguides:</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231121500.png" srcset="/img/loading.gif" lazyload alt="image-20201021231121500"></p>
+<p>SMRT flow cell, there are thousands of tiny pores called zero-mode waveguides (ZMWs)</p>
+<p>Each ZMW represents one reaction chamber and at the bottom of the chamber sits (immobilized) the DNA polymerase machinery.</p>
+<p>The pore size (~70nm in diameter, 100nm in depth) is too small for light to pass through easily, thus creating an observation volume that is small enough to observe only a single nucleotide being incorporated and each base is added</p>
+<p>Sequence by synthesize. The fluorescent tags are cleaved-off after the incorporation of the nucleotide</p>
+<p>work like a giant microscope that can literally “see” DNA synthesis in real time! 1000bp&#x2F;sec</p>
+<p>Can read 20kb long reads. But with lower input and more expensive</p>
+<ul>
+<li>80Gbp (20kb&#x2F;read) &#x3D; 4x10^6 reads &#x3D; 4 million reads for the whole flow cell.</li>
+<li>120Gbp (200bp&#x2F;read) &#x3D; 120X10^9&#x2F; 2x10^2 &#x3D; 600 Million reads for the whole flow cell</li>
+</ul>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231238834.png" srcset="/img/loading.gif" lazyload alt="image-20201021231238834"></p>
+<h2 id="Nanopore-Sequencing"><a href="#Nanopore-Sequencing" class="headerlink" title="Nanopore Sequencing"></a>Nanopore Sequencing</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231255177.png" srcset="/img/loading.gif" lazyload alt="image-20201021231255177" style="zoom:67%;" />
+
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231309373.png" srcset="/img/loading.gif" lazyload alt="image-20201021231309373"></p>
+<ul>
+<li>A protein nanopore is set in an electrically resistant polymer membrane. An ionic current is passed through the nanopore by setting a voltage across this membrane. If an analyte passes through the pore or near its aperture, this event creates a characteristic disruption in current (as shown in the diagram below). Measurement of that current makes it possible to identify the molecule in question</li>
+</ul>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231325388.png" srcset="/img/loading.gif" lazyload alt="image-20201021231325388"></p>
+<p><strong>Nanopore</strong></p>
+<ul>
+<li>A protein nanopore is set in an electrically-resistant polymer membrane</li>
+</ul>
+<p><strong>Array of microscaffolds</strong></p>
+<ul>
+<li>Each microscaffold supports a membrane and embedded nanopore. The array keeps the multiple nanopores stable during shipping and usage</li>
+</ul>
+<p><strong>Sensor chip</strong></p>
+<ul>
+<li>Each microscaffold corresponds to its own electrode that is connected to a channel in the sensor array chip. Sensor arrays may be manufactured with any number of channels</li>
+</ul>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231359331.png" srcset="/img/loading.gif" lazyload alt="image-20201021231359331"></p>
+<p>The idea of sample multiplexing:</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231407182.png" srcset="/img/loading.gif" lazyload alt="image-20201021231407182"></p>
+<p>Multiplex Sequencing Highlights</p>
+<ul>
+<li><strong>Fast High-Throughput</strong> <strong>Strategy:</strong> Large sample numbers can be simultaneously sequenced during a single experiment</li>
+<li><strong>Cost-Effective Method:</strong> Sample pooling improves productivity by reducing time and reagent use</li>
+<li><strong>Simplified Analysis:</strong> Automatic sample identification with “barcodes” using Illumina data analysis softwares</li>
+</ul>
+<h1 id="Comparing-different-sequencing-strategies"><a href="#Comparing-different-sequencing-strategies" class="headerlink" title="Comparing different sequencing strategies"></a>Comparing different sequencing strategies</h1><table>
+<thead>
+<tr>
+<th>Sanger Sequencing First generation</th>
+<th>Illumina sequencing Second generation</th>
+<th>PACBIO sequencing Third generation</th>
+<th>Nanopore sequencing Fourth generation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. Dideoxy chain termination<br />2. Accurate<br />3. No signal amplification<br />4. Long read length 500bp<br />5. Cheap and practical for normal gene cloning</td>
+<td>1. Sequencing by synthesis (Cluster generation&#x2F;reversible Terminator&#x2F;imaging are innovations)<br />2. Involve amplification, accurate at bulk level (not accurate on individual reads)<br />3. Highest through-put so far<br />4. Relatively short read length (100-300bp)<br />5. Ideal for genomic studies</td>
+<td>1. Sequencing by synthesis<br />2. Anchor the DNA polymerase on chip<br />3. Long read length (20Kb) due to no amplification, improved imaging technique and rolling cycle sequencing of same molecule<br />4. Not as high through-put but can provide valuable information<br />5. Often combined with illumina-seq</td>
+<td>1. Direct sequencing DNA or RNA molecule<br />2. In theory no limit on DNA length<br />3. Smallest instrument<br />4. Lowest instrument cost<br />5. Highest error rates<br />6. Often combined with illumina-seq</td>
+</tr>
+</tbody></table>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetic-Engineering/" class="category-chain-item">Genetic Engineering</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetic-Engineering/" class="print-no-link">#Genetic Engineering</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L5 DNA sequencing</div>
+      <div>https://zhenyumi.github.io/posts/dd37126d/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年11月11日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/44583cb1/" title="L4 Qualification and Quantification of DNA&amp;RNA">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L4 Qualification and Quantification of DNA&amp;RNA</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/75868b02/" title="L6 PCR">
+                        <span class="hidden-mobile">L6 PCR</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

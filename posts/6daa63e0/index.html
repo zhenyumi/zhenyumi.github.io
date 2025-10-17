@@ -1,0 +1,914 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L06 peptide and protein structure">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/6daa63e0/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Biochemistry I (Macromolecules)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+  
+  
+  
+  <title>L06 peptide and protein structure - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-10_21-07-00.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L06 peptide and protein structure</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L06 peptide and protein structure</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Peptides-and-Peptide-bond"><a href="#Peptides-and-Peptide-bond" class="headerlink" title="Peptides and Peptide bond"></a>Peptides and Peptide bond</h1><h2 id="Peptides"><a href="#Peptides" class="headerlink" title="Peptides"></a>Peptides</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571056301635.png" srcset="/img/loading.gif" lazyload alt="1571056301635" style="zoom: 50%;" />
+
+<p>The portion of each amino acid remaining in the chain is called an <em><strong>amino acid residue</strong>（氨基酸残基）</em></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571056532181.png" srcset="/img/loading.gif" lazyload alt="1571056532181" style="zoom: 50%;" />
+
+<p>When specifying an amino acid residue in a peptide, the suffix <strong>–yl</strong> may be used to replace <strong>–ine or –ate</strong> in the name of the amino acid (e.g., glycyl for glycine, aspartyl for aspartate; tryptophanyl and cysteinyl are exceptions to this general rule). Thus, the alanyl residue in the tetrapeptide in Figure 5.11 is：</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571056548411.png" srcset="/img/loading.gif" lazyload alt="1571056548411" style="zoom:67%;" />
+
+<h3 id="1-Residue-number-influence-the-name"><a href="#1-Residue-number-influence-the-name" class="headerlink" title="1. Residue number influence the name"></a>1. Residue number influence the name</h3><ol>
+<li>Chains containing <strong>only a few amino acid</strong> residues (like a tetrapeptide) are collectively referred to as <strong>oligopeptides</strong>. </li>
+<li>If the chain is longer <strong>(&gt;~15–20 residues)</strong>, it is called a <strong>polypeptide</strong>. </li>
+<li>Polypeptides <strong>greater than 50 residues</strong> are generally referred to as <strong>proteins</strong>.</li>
+</ol>
+<p>As shown in Figure 5.11, most oligopeptides and polypeptides retain an unreacted amino group at one end (called <strong>the amino terminus or N-terminus</strong>) and an unreacted carboxylic acid group at the other end (<strong>the</strong> <strong>carboxyl terminus or C-terminus</strong>).</p>
+<p>In addition, many proteins have N-termini blocked by N-formyl or N-acetyl groups, and a few have C-terminal carboxylates that have been modified to amides (Figure 5.12).</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571057499554.png" srcset="/img/loading.gif" lazyload alt="1571057499554" style="zoom:33%;" />
+
+<h2 id="Polypeptides-as-Polyampholytes（两性电解质）"><a href="#Polypeptides-as-Polyampholytes（两性电解质）" class="headerlink" title="Polypeptides as Polyampholytes（两性电解质）"></a>Polypeptides as Polyampholytes（两性电解质）</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571101350727.png" srcset="/img/loading.gif" lazyload alt="1571101350727"></p>
+<p>polypeptides usually contain some amino acids that have ionizable groups on their side chains, these groups have a wide range of pK<del>a</del>, <u>but are all weakly acidic or weakly basic groups</u>.</p>
+<p>amino acid side chains display a range of pK<del>a</del> values in different proteins due to differences in the local electrostatic environment around a given amino acid.</p>
+<p>For example, an aspartic acid side chain near another negatively charged group (i.e., Glu or another Asp) will likely have a higher value than an aspartic acid near a positively charged group (i.e., Lys, His, or Arg).</p>
+<h3 id="1-Polypeptides-as-polyampholytes-–-isoelectric-point"><a href="#1-Polypeptides-as-polyampholytes-–-isoelectric-point" class="headerlink" title="1. Polypeptides as polyampholytes – isoelectric point"></a>1. Polypeptides as polyampholytes – isoelectric point</h3><p>Example；the titration of an oligopeptide or a polypeptide is exemplified by the tetrapeptide (Glu-Gly-Ala-Lys)，如下图</p>
+<p>在初始条件下（PH&#x3D;0），所有的可电离残基都处于它们的protonated forms，因此带电量为+2</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571103118680.png" srcset="/img/loading.gif" lazyload alt="1571103118680" style="zoom:50%;" />
+
+<p>As more base is added, the molecule becomes increasingly negatively charged, ultimately reaching a net charge of at very high pH.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571110591323.png" srcset="/img/loading.gif" lazyload alt="1571110591323" style="zoom:40%;" />
+
+<p>改变PH环境对于蛋白质具有重要影响：</p>
+<ol>
+<li>small shift in pH can alter the constellation of charges displayed on the surface, or in the active site, of a protein and will thereby significantly affect its stability and&#x2F;or functional properties.</li>
+<li>the <strong>solubility</strong> of many proteins is <u>minimal</u> at the isoelectric point because the molecules no longer repel one another when their net charge is zero</li>
+</ol>
+<h2 id="Peptide-Bond"><a href="#Peptide-Bond" class="headerlink" title="Peptide Bond"></a>Peptide Bond</h2><p>the blue-shaded portion contains the peptide bond. This substituted amide bond, which is found between every pair of residues in a protein, has properties that are important for defining the structures of proteins.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571112111169.png" srcset="/img/loading.gif" lazyload alt="1571112111169" style="zoom: 35%;" />
+
+<ul>
+<li><p>The amide carbonyl and amide bonds are nearly parallel </p>
+</li>
+<li><p>The six atoms shown in the blue rectangle in usually coplanar. </p>
+</li>
+<li><p>There is little twisting possible around the peptide bond because the bond has a <u>substantial fraction（很大的一部分）</u> of double-bond character.</p>
+</li>
+</ul>
+<p><font color="990000">肽键C–N之间的距离为1.33$\AA$ </font></p>
+<h4 id="Amino-acid-residue"><a href="#Amino-acid-residue" class="headerlink" title="Amino acid residue"></a>Amino acid residue</h4><p>Include:</p>
+<ol>
+<li><u>Mainchain</u> (peptide backbone) </li>
+<li><u>Sidechain</u></li>
+</ol>
+<h4 id="Directional-linkage"><a href="#Directional-linkage" class="headerlink" title="Directional linkage"></a>Directional linkage</h4><p>Amino group $\rarr C_{\alpha}\rarr$Carbonyl group</p>
+<p>Amino group is the N-terminus (amino terminus) and Carbonyl group is the C-terminus (carboxyl terminus)</p>
+<h4 id="Rotation"><a href="#Rotation" class="headerlink" title="Rotation"></a>Rotation</h4><p>Rotation around peptide bond is restricted </p>
+<h4 id="Conformation（构造）of-peptide-bond"><a href="#Conformation（构造）of-peptide-bond" class="headerlink" title="Conformation（构造）of peptide bond"></a>Conformation（构造）of peptide bond</h4><h5 id="1-Backbone"><a href="#1-Backbone" class="headerlink" title="(1) Backbone"></a>(1) Backbone</h5><p>-[N-$C_\alpha$-C]-</p>
+<h5 id="2-Dihedral-angles-二面角"><a href="#2-Dihedral-angles-二面角" class="headerlink" title="(2) Dihedral angles 二面角"></a>(2) Dihedral angles 二面角</h5><p>Rotation about both the N-$C_\alpha$ ($\phi$) and $C_{\alpha}-C$($\psi$) bonds is possible </p>
+<h3 id="1-resonance-hybrid"><a href="#1-resonance-hybrid" class="headerlink" title="1. resonance hybrid"></a>1. resonance hybrid</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571111756618.png" srcset="/img/loading.gif" lazyload alt="1571111756618" style="zoom: 50%;" />
+
+<p>如上图所示，这六个原子常常是共平面的，并且可以形成两种形式的 resonance hybrid</p>
+<h3 id="2-Trans（反式）-and-Cis（顺式）"><a href="#2-Trans（反式）-and-Cis（顺式）" class="headerlink" title="2. Trans（反式） and Cis（顺式）"></a>2. Trans（反式） and Cis（顺式）</h3><p>由于共平面的关系，肽键不能随意旋转，只能旋转180°，因此形成了trans和cis两种结构：</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571112021195.png" srcset="/img/loading.gif" lazyload alt="1571112021195" style="zoom: 50%;" />
+
+<p>trans的结构更加常见(or say more favored)，因为在cis结构里面，相邻氨基酸的R基团相邻更近，<strong>空间位阻</strong>(steric hindrance) 更大，因此更加不稳定</p>
+<p>一个例外是X–Pro结构，因为脯氨酸的R基比较特殊，无论是trans还是cis，它们的空间位阻都比较大</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102195226004.png" srcset="/img/loading.gif" lazyload alt="image-20191102195226004" style="zoom: 33%;" />
+
+<p>因此cis的比例相较于其他组合更高。但是trans与cis的比例仍然约为4：1.</p>
+<h3 id="3-Stability-and-Formation-of-the-Peptide-Bond"><a href="#3-Stability-and-Formation-of-the-Peptide-Bond" class="headerlink" title="3. Stability and Formation of the Peptide Bond"></a>3. Stability and Formation of the Peptide Bond</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571112403358.png" srcset="/img/loading.gif" lazyload alt="1571112403358" style="zoom:50%;" />
+
+<p>peptide bond could be formed by the elimination of a water molecule between two amino acids.</p>
+<p>In fact, in an aqueous environment peptide bond formation is thermodynamically <strong>unfavored</strong>. The free energy change for peptide bond formation at room temperature in aqueous solution is about +10kJ&#x2F;mol，therefore <u>the favored reaction under these conditions is the <strong>hydrolysis（水解）</strong> of the peptide bond.</u></p>
+<p>every amino acid must be activated by an ATP-driven reaction before it can be incorporated into proteins.</p>
+<h4 id="Peptide-bond-hydrolysis"><a href="#Peptide-bond-hydrolysis" class="headerlink" title="Peptide bond hydrolysis"></a>Peptide bond hydrolysis</h4><ul>
+<li>Strong <u>mineral acid（无机酸）</u> (e.g., 6 M HCl) <u>cleaves all peptide bonds</u> (including the Asn and Gln amide bonds) </li>
+<li>Chemicals that cleave at specific sites (e.g., <strong>CNBr（溴化氰, Cyanogen bromide</strong>） cleaves at Met)</li>
+<li>Proteolytic（蛋白水解的） enzymes (proteases，蛋白酶) that cleave at specific sites</li>
+</ul>
+<h3 id="4-dihedral-angles-二面角"><a href="#4-dihedral-angles-二面角" class="headerlink" title="4. dihedral angles 二面角"></a>4. dihedral angles 二面角</h3><p>Conformation of a polypeptide chain can be solely described by $\phi$ and $\psi$ angles</p>
+<p><strong>Ramachandran plots</strong> of $\phi$ and $\psi$ show permissible angles for polypeptide chains</p>
+<p>Some $\phi$ and $\psi$ angles are not allowed because of <u>steric hindrance</u> </p>
+<p>Conformations of several types of secondary structures fall within permissible areas</p>
+<p>The protein strand is -[-N–C<del>α</del>–C]<del>n</del>-的不断重复，由于肽键所相关的六个原子共平面共享电子，因此C<del>α</del>两旁存在两个平面，这两个平面可以以N–C<del>α</del>或C<del>α</del>–C为轴旋转，形成二面角</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571217600031.png" srcset="/img/loading.gif" lazyload alt="1571217600031" style="zoom:50%;" />
+
+<p>其中：</p>
+<ol>
+<li><strong>$\phi$ (phi)</strong>: Angle of rotation of N–C<del>α</del> plane</li>
+<li>**$\Psi$(psi): ** Angle of rotation of C<del>α</del>–C plane</li>
+</ol>
+<h4 id="初始状态（phi与psi均为0°）"><a href="#初始状态（phi与psi均为0°）" class="headerlink" title="初始状态（phi与psi均为0°）"></a>初始状态（phi与psi均为0°）</h4><p>计算psi与phi的时候，需要定义它们何时为0°</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571406079512.png" srcset="/img/loading.gif" lazyload alt="1571406079512" style="zoom:40%;" />
+
+<p>由C<del>αn</del>向N<del>1</del>观察，顺时针旋转C<del>α</del>—N<del>1</del>，得到的$\phi$角为正值，反之为负值</p>
+<p>由C<del>αn</del>向C<del>2</del>观察，顺时针旋转C<del>α</del>—C<del>2</del>，得到的$\psi$角为正值，反之为负值</p>
+<p>理论上psi和phi角可以是-180°~180°的任意值，但是由于主链上的原子和R group之间存在空间位阻（steric hindrance），因此有些角度是不允许的，例如phi和psi不为0°</p>
+<h1 id="Four-levels-of-protein-structure"><a href="#Four-levels-of-protein-structure" class="headerlink" title="Four levels of protein structure"></a>Four levels of protein structure</h1><ol>
+<li><strong>Primary</strong> structure the amino acid sequence  </li>
+<li><strong>Secondary</strong> structure local folding into regularly repeating units </li>
+<li><strong>Tertiary</strong> structure overall folding of a monomeric protein or subunit </li>
+<li><strong>Quaternary</strong> structure subunit association</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571218032789.png" srcset="/img/loading.gif" lazyload alt="1571218032789" style="zoom:75%;" />
+
+<h2 id="Primary-Structure"><a href="#Primary-Structure" class="headerlink" title="Primary Structure"></a>Primary Structure</h2><h3 id="1-The-conformation-of-primary-structure"><a href="#1-The-conformation-of-primary-structure" class="headerlink" title="1. The conformation of primary structure"></a>1. The conformation of primary structure</h3><p>Primary structure, the  sequence of amino acids in a protein, is like the <strong>order of letters in a long word</strong> </p>
+<p>Primary structure is <u>determined by inherited  genetic information</u> </p>
+<p>Each protein has its unique primary structure</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102201210434.png" srcset="/img/loading.gif" lazyload alt="image-20191102201210434" style="zoom: 50%;" />
+
+<h3 id="2-Nomenclature-of-protein-sequence"><a href="#2-Nomenclature-of-protein-sequence" class="headerlink" title="2. Nomenclature of protein sequence"></a>2. Nomenclature of protein sequence</h3><ol>
+<li>Residue number</li>
+<li>Sequence Homology <ul>
+<li>Sequence identity (percentage of identical residues) </li>
+<li>Sequence similarity (percentage of similar residues)</li>
+</ul>
+</li>
+<li>Amino acid conservation</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102202403328.png" srcset="/img/loading.gif" lazyload alt="image-20191102202403328"></p>
+<h2 id="Secondary-structure"><a href="#Secondary-structure" class="headerlink" title="Secondary structure"></a>Secondary structure</h2><p><font size="5"><font color="990000">  H-bond is the key factor of secondary structure. </font></font ></p>
+<h3 id="Regular-Ways-to-Fold-the-Polypeptide-Chain"><a href="#Regular-Ways-to-Fold-the-Polypeptide-Chain" class="headerlink" title="Regular Ways to Fold the Polypeptide Chain"></a>Regular Ways to Fold the Polypeptide Chain</h3><p>Regular Ways to Fold the Polypeptide Chain by <strong>Linus Pauling</strong></p>
+<ul>
+<li><p>The bond lengths and bond angles should be distorted as little as possible from those found through X-ray diffraction  studies of amino acids and peptides.  </p>
+</li>
+<li><p>No two atoms should approach one another more closely than is allowed by their <strong>van der Waals radii.</strong> </p>
+</li>
+<li><p>The amide group must remain planar and in the trans configuration. Consequently, rotation is possible only about the two bonds adjacent to the $\alpha$-carbon in each amino acid residue. </p>
+</li>
+<li><p>Some kind of noncovalent bonding is necessary to stabilize a regular folding. The most obvious possibility is <u>hydrogen bonding between amide protons and carbonyl oxygens</u></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102203203175.png" srcset="/img/loading.gif" lazyload alt="image-20191102203203175" style="zoom:50%;" /><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102203232313.png" srcset="/img/loading.gif" lazyload alt="image-20191102203232313"></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102203232313.png" srcset="/img/loading.gif" lazyload alt="image-20191102203232313" style="zoom: 33%;" /></li>
+</ul>
+<h3 id="1-alpha-Helix"><a href="#1-alpha-Helix" class="headerlink" title="1. $\alpha$ Helix"></a>1. $\alpha$ Helix</h3><p><u><strong>Each C&#x3D;O (residue n)  forms a hydrogen bond  with the amide hydrogen of  residue n+4</strong></u> </p>
+<p><font color="990000">3.6 amino acid residues per turn （$\frac{5.4}{1.5} &#x3D; 3.6$） </font></p>
+<p><strong>Right‐handed</strong></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571221897059.png" srcset="/img/loading.gif" lazyload alt="1571221897059" style="zoom:50%;" />
+
+<h4 id="Axis"><a href="#Axis" class="headerlink" title="Axis"></a>Axis</h4><p>a helix has an axis that is a central line of symmetry running through it. </p>
+<h4 id="Pitch-p"><a href="#Pitch-p" class="headerlink" title="Pitch (p)"></a>Pitch (p)</h4><p>the spacing distance  between individual adjacent coils of the helix. </p>
+<p><font color="990000">For $\alpha$ helix, the p&#x3D;5.4 Å&#x2F;turn</font></p>
+<h4 id="Rise-h"><a href="#Rise-h" class="headerlink" title="Rise (h)"></a>Rise (h)</h4><p>the distance the helix “rises” between adjacent polymer units. </p>
+<p>&lt;font color &#x3D; “990000”&gt;For $\alpha$ Helix, 1.5 Å&#x2F;residue</font></p>
+<h4 id="Characteristics"><a href="#Characteristics" class="headerlink" title="Characteristics"></a>Characteristics</h4><ol>
+<li>All side chains project <strong>outward from helix axis</strong> </li>
+<li>Side chains (C<del>α</del>‐C<del>β</del>) point to the <strong>N‐terminus of helix</strong> </li>
+<li>Carbonyl groups (C&#x3D;O)  <strong>point to the C‐terminus of helix</strong></li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571407579724.png" srcset="/img/loading.gif" lazyload alt="1571407579724" style="zoom:40%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571407602400.png" srcset="/img/loading.gif" lazyload alt="1571407602400" style="zoom:50%;" />
+
+<h4 id="Other-types-of-helices"><a href="#Other-types-of-helices" class="headerlink" title="Other types of helices"></a>Other types of helices</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571407679627.png" srcset="/img/loading.gif" lazyload alt="1571407679627"></p>
+<h5 id="（1）3-10-helix"><a href="#（1）3-10-helix" class="headerlink" title="（1）3-10 helix"></a>（1）3-10 helix</h5><p>3-10 helix每圈的残基数 (n) 为3.0，每个肽键的C&#x3D;O与前面的第2个肽基的N–H形成氢键，构成10圆环。</p>
+<p>每个残基高度为0.2nm，螺距0.6nm，螺旋直径约为0.4nm。$\phi$ and $\psi$在-49°~26°左右</p>
+<p>3-10 helix比α helix紧密，相邻螺圈中的C在一条直线上。但是由于3-10 helix中的氢键几何结构以及非键合相互作用并不处于最佳状态，所以在蛋白质结构中一般很短，通常作为α helix末端的最后一圈存在</p>
+<h5 id="（2）-pi-helix"><a href="#（2）-pi-helix" class="headerlink" title="（2） $\pi$ helix"></a>（2） $\pi$ helix</h5><p>The $\pi$ helix is also called as an “$\alpha$ bulge” or  “$\alpha$ aneurism” or “$\pi$ bulge”</p>
+<p>pi-helix 的n &#x3D; 4.4，h &#x3D; 0.12nm，p &#x3D; 0.52nm，螺圈直径约为0.6nm。</p>
+<p>每个肽键的C&#x3D;O与前面第四个肽基的N-H形成氢键，并构成16圆环。</p>
+<p>由于$\pi$ helix 不稳定，因此在蛋白质结构中存在较少，但是这种结构的分布很广泛</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571409639971.png" srcset="/img/loading.gif" lazyload alt="1571409639971" style="zoom:50%;" />
+
+<p>$\pi$ helix的形成一般是一个aa的插入，使得$\alpha$ helix原有的H-bonding被打破，两个或多个残基与n+5的残基进行氢键链接</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571461750747.png" srcset="/img/loading.gif" lazyload alt="1571461750747" style="zoom:50%;" />
+
+<h5 id="（3）Polyproline-II-helix"><a href="#（3）Polyproline-II-helix" class="headerlink" title="（3）Polyproline II helix"></a>（3）Polyproline II helix</h5><p>PolyprolineII helix </p>
+<ol>
+<li><strong>Contains 1&#x2F;3 proline residues</strong> </li>
+<li><strong>No H‐bonds</strong> for main chain groups </li>
+<li><strong>Left‐handed</strong> </li>
+<li>Polyglycinealso（聚甘氨酸） adopts this conformation</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571409666332.png" srcset="/img/loading.gif" lazyload alt="1571409666332" style="zoom:25%;" />
+
+<h4 id="Helix-dipole"><a href="#Helix-dipole" class="headerlink" title="Helix dipole"></a>Helix dipole</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571409795932.png" srcset="/img/loading.gif" lazyload alt="1571409795932" style="zoom:40%;" />
+
+<p>Aligned dipoles through hydrogen bonds （通过氢键排列的偶极子）</p>
+<p><strong>Increase with helix length</strong> </p>
+<p>Negatively charged residues are located near the N‐terminus of the helix，N-terminus带正电</p>
+<p>Positively charged residues  are located near the C-terminus of the helix，C-terminus带负电</p>
+<h4 id="Constraints-affect-the-helix-formation"><a href="#Constraints-affect-the-helix-formation" class="headerlink" title="Constraints affect the helix formation"></a>Constraints affect the helix formation</h4><ol>
+<li><strong>Intrinsic（固有的） propensity of residues</strong> to form an helix </li>
+<li>The <strong>interactions between side chains</strong> </li>
+<li>Spaced 3‐4 residues apart </li>
+<li>The bulkiness（庞大） of adjacent side chains </li>
+<li>The interactions between residues at the ends of an helix </li>
+<li>The occurrence of <strong>Pro and  Glyresidues</strong>：<ul>
+<li>proline and gly rarely appears in helix:</li>
+<li><ol>
+<li>proline: <strong>no free -H to form H-bonds</strong>，proline一般出现在N-端，而不是middle或C-端</li>
+<li>glycine: no side chain，structure is <strong>flexible</strong></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-β-Strands-and-β-Sheets"><a href="#2-β-Strands-and-β-Sheets" class="headerlink" title="2. β Strands and β Sheets"></a>2. β Strands and β Sheets</h3><p>β Strands ‐polypeptide chains that are almost fully extended </p>
+<p>β Sheets ‐multiple β strands arranged side‐by‐side </p>
+<p>β Strands are stabilized  by hydrogen bonds  between C&#x3D;O and ‐NH  on adjacent strands</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571410618421.png" srcset="/img/loading.gif" lazyload alt="1571410618421" style="zoom:50%;" />
+
+<p>β Sheet side chains project <u>alternately above and below</u> the plane of the β strands </p>
+<p><u>One surface of a β-sheet may consist of hydrophobic side chains that can interact with other hydrophobic residues in protein interior</u></p>
+<ol>
+<li><p>Antiparallel β Sheets：</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571411283972.png" srcset="/img/loading.gif" lazyload alt="1571411283972" style="zoom:33%;" />
+</li>
+<li><p>Parallel β Sheets：</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571411322338.png" srcset="/img/loading.gif" lazyload alt="1571411322338" style="zoom:33%;" /></li>
+</ol>
+<h4 id="Twisted-β-Strand"><a href="#Twisted-β-Strand" class="headerlink" title="Twisted β Strand"></a>Twisted β Strand</h4><p>The twist of the βsheet is due to the <strong>intrinsic twist of the polypeptide backbone.</strong></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571411410705.png" srcset="/img/loading.gif" lazyload alt="1571411410705" style="zoom:33%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571411532337.png" srcset="/img/loading.gif" lazyload alt="1571411532337" style="zoom: 50%;" />
+
+<h3 id="3-Loops-and-Turns"><a href="#3-Loops-and-Turns" class="headerlink" title="3. Loops and Turns"></a>3. Loops and Turns</h3><p>Loops and turns connect helices and strands and allow  a peptide chain to fold back on itself to make a  compact structure </p>
+<ol>
+<li><p>Loops ‐often <u>contain hydrophilic residues</u> and are <u>found on protein surfaces</u>  </p>
+</li>
+<li><p>Turns ‐loops containing 5 residues or less</p>
+</li>
+</ol>
+<h4 id="β-turns"><a href="#β-turns" class="headerlink" title="β turns"></a>β turns</h4><p>In beta turns, <strong>Type I involves proline</strong>, this type is less flexible. <strong>Type II involves glycine</strong>, more flexible.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571411733442.png" srcset="/img/loading.gif" lazyload alt="1571411733442" style="zoom: 50%;" />
+
+<h3 id="4-Dihedral-angles-and-Ramachandran-plot"><a href="#4-Dihedral-angles-and-Ramachandran-plot" class="headerlink" title="4. Dihedral angles and Ramachandran plot"></a>4. Dihedral angles and Ramachandran plot</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571411780766.png" srcset="/img/loading.gif" lazyload alt="1571411780766" style="zoom:50%;" />  Ramachandran 图：表示了允许存在的（phi,psi）情况:</p>
+<ul>
+<li>颜色深的more stable</li>
+<li>颜色浅的allowed</li>
+<li>无颜色的not allowed</li>
+</ul>
+<h3 id="5-Circular-Dichroism-CD-圆二色性"><a href="#5-Circular-Dichroism-CD-圆二色性" class="headerlink" title="5. Circular Dichroism(CD) 圆二色性"></a>5. Circular Dichroism(CD) 圆二色性</h3><p>一般而言，生物分子大多都具有手征性，也就是说它们在结构上有其他分子式相同但结构式不同的对映异构体(分为L型和D型)，除此之外它们在光学特征上也有所差异。<br>通常光源在未经特殊处理前，其偏振方向通常是呈各种方向散射，经过起偏器偏振化后，光波会变为偏振方向单一的光波（称为线性偏振光）。当此平面偏振光通过手征性生物分子后，会分成左旋和右旋两道圆偏振光，最后再经过一道偏光镜使其重合为一线性偏光。<br>由于手征性生物分子结构上的影响，而使得左旋与右旋圆偏振光在折射率上有所差异，因此在重合后会产生附加的相位差，从而使得射出的合成线偏光在角度上产生偏转。</p>
+<p>因为生物分子皆会在某一特殊光波长下有吸收光，它们除了对左旋与右旋的吸收度不同外，振幅也不同。因此随着时间的，左、右旋两道圆偏光重合后的行进方式将由原来的圆型变为椭圆型。由行进速度不同振幅也不同的左、右旋圆偏光叠加重合后所产生的不再是线性偏振光，而是椭圆偏振光，这种特性即称为圆二色性。 </p>
+<p>For proteins, spectra are  obtained in the far UV region (190 to 250 nm)  peptide bonds</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571412392006.png" srcset="/img/loading.gif" lazyload alt="1571412392006" style="zoom: 50%;" />
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/" class="category-chain-item">Biochemistry I (Macromolecules)</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Biochemistry-I-Macromolecules/" class="print-no-link">#Biochemistry I (Macromolecules)</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L06 peptide and protein structure</div>
+      <div>https://zhenyumi.github.io/posts/6daa63e0/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/aa716d78/" title="L06 Variation in Chromosomes Structure and Number reversed version">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L06 Variation in Chromosomes Structure and Number reversed version</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/7af3b442/" title="L07 Linkage, Crossing Over, and Chromosome Mapping">
+                        <span class="hidden-mobile">L07 Linkage, Crossing Over, and Chromosome Mapping</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,1077 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="从不同来源读取数据，常用数据处理，生成报告">
+<meta property="og:type" content="article">
+<meta property="og:title" content="08. R &lt;- 输入、读取、标注数据与创建报告">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/ec4dd8b1/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="从不同来源读取数据，常用数据处理，生成报告">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200810-photo_2020-07-11_18-38-52.jpg">
+<meta property="article:published_time" content="2020-08-10T10:14:21.000Z">
+<meta property="article:modified_time" content="2020-08-10T12:34:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="速查">
+<meta property="article:tag" content="R">
+<meta property="article:tag" content="Statistics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200810-photo_2020-07-11_18-38-52.jpg">
+  
+  
+  
+  <title>08. R &lt;- 输入、读取、标注数据与创建报告 - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200810-photo_2020-07-08_20-07-31.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">08. R <- 输入、读取、标注数据与创建报告</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-08-10 18:14" pubdate>
+          2020年8月10日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          27 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">08. R &lt;- 输入、读取、标注数据与创建报告</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、输入与读取数据"><a href="#一、输入与读取数据" class="headerlink" title="一、输入与读取数据"></a>一、输入与读取数据</h1><p>R可从键盘、文本文件、Microsoft Excel和Access、流行的统计软件、特殊格式的文件、多种关系型数据库管理系统、专业数据库、网站和在线服务中导入数据。</p>
+<h2 id="从键盘输入"><a href="#从键盘输入" class="headerlink" title="从键盘输入"></a>从键盘输入</h2><p>从键盘输入数据有两种方式：</p>
+<ol>
+<li>使用R内置的文本编辑器</li>
+<li>从代码中输入</li>
+</ol>
+<p>这部分的演示使用R Studio，它可以极大地方便使用R的过程。</p>
+<h3 id="1-文本编辑器"><a href="#1-文本编辑器" class="headerlink" title="1. 文本编辑器"></a>1. 文本编辑器</h3><p>R中的函数<code>edit()</code>会自动调用一个允许手动输入数据的文本编辑器。具体步骤如下：</p>
+<ol>
+<li>创建一个空数据框（或矩阵），其中变量名和变量的模式需与理想中的最终数据集一致；</li>
+<li>针对这个数据对象调用文本编辑器，输入你的数据，并将结果保存回此数据对象中。</li>
+</ol>
+<p>在创建一个数据集的开始，可以首先规定一些变量名以及变量类型：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 规定一些变量名以及变量类型</span><br>mydata <span class="hljs-operator">&lt;-</span> data.frame<span class="hljs-punctuation">(</span>age<span class="hljs-operator">=</span>numeric<span class="hljs-punctuation">(</span><span class="hljs-number">0</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>                     gender<span class="hljs-operator">=</span>character<span class="hljs-punctuation">(</span><span class="hljs-number">0</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>                     weight<span class="hljs-operator">=</span>numeric<span class="hljs-punctuation">(</span><span class="hljs-number">0</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 键入数据，保存结果</span><br>mydata <span class="hljs-operator">&lt;-</span> edit<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>如在这个例子当中，创建一个名为<code>mydata</code>的数据框，它含有三个变量：age（数值型）、gender（字符型）和weight（数值型）。然后你将调用文本编辑器，键入数据，最后保存结果。</p>
+<ul>
+<li><code>age=numeric(0)</code>的赋值语句将创建一个指定模式但不含实际数据的变量</li>
+<li>语句<code>mydata &lt;- edit(mydata)</code>的一种简捷的等价写法是<code>fix(mydata)</code></li>
+</ul>
+<p>编辑器关闭后，结果会保存到之前赋值的对象中</p>
+<ul>
+<li>函数<code>edit()</code>事实上是在对象的一个副本上进行操作的。如果你不将其赋值到一个目标，你的所有修改将会全部丢失</li>
+</ul>
+<h3 id="2-从代码输入"><a href="#2-从代码输入" class="headerlink" title="2. 从代码输入"></a>2. 从代码输入</h3><p>与首先规定变量名相对的，也可以直接通过代码来输入：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs R">mydatatxt <span class="hljs-operator">&lt;-</span> <span class="hljs-string">&quot; </span><br><span class="hljs-string">age gender weight </span><br><span class="hljs-string">25 m 166 </span><br><span class="hljs-string">30 f 115 </span><br><span class="hljs-string">18 f 120 </span><br><span class="hljs-string">&quot;</span> <br>mydata <span class="hljs-operator">&lt;-</span> read.table<span class="hljs-punctuation">(</span>header<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> text<span class="hljs-operator">=</span>mydatatxt<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="从带分隔符的文本文件导入数据"><a href="#从带分隔符的文本文件导入数据" class="headerlink" title="从带分隔符的文本文件导入数据"></a>从带分隔符的文本文件导入数据</h2><p>可以使用<code>read.table()</code>从带分隔符的文本文件中导入数据。此函数可读入一个表格格式的文件并将其保存为一个数据框。表格的每一行分别出现在文件中每一行。其语法如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs R">mydataframe <span class="hljs-operator">&lt;-</span> read.table<span class="hljs-punctuation">(</span>file<span class="hljs-punctuation">,</span> options<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>其中，<code>file</code>是一个带分隔符的ASCII文本文件，<code>options</code>是控制如何处理数据的选项: </p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>file</td>
+<td>文件名(包在””内，或使用一个字符型变量)，可能需要全路径<br />在R中，路径的分割符号使用 <code>/</code> 而不是 <code>\</code></td>
+</tr>
+<tr>
+<td>header</td>
+<td>一个逻辑值(FALSE或TRUE)，用来反映这个文件的第一行是否包含变量名</td>
+</tr>
+<tr>
+<td>sep</td>
+<td>文件中的字段分离符</td>
+</tr>
+<tr>
+<td>quote</td>
+<td>指定用于包围字符型数据的字符</td>
+</tr>
+<tr>
+<td>dec</td>
+<td>用来表示小数点的字符</td>
+</tr>
+<tr>
+<td>row.names</td>
+<td>保存着行名的向量，或文件中一个变量的序号或名字，缺省时行号取为1，2，3，……</td>
+</tr>
+<tr>
+<td>col.names</td>
+<td>指定列名的字符向量</td>
+</tr>
+<tr>
+<td>as.is</td>
+<td>控制是否将字符型变量转化为引子型变量(如果值为FALSE)，或者仍将其保留为字符型(TRUE)。As.is可以说逻辑型，数值型或者字符向量，用来判断变量是否被保留为字符</td>
+</tr>
+<tr>
+<td>na.strings</td>
+<td>代表确实数据的值(转化为NA)</td>
+</tr>
+<tr>
+<td>colClasses</td>
+<td>指定各列的数据类型的一个字符型向量</td>
+</tr>
+<tr>
+<td>nrows</td>
+<td>可以读取的最大行数(忽略负值)</td>
+</tr>
+<tr>
+<td>skip</td>
+<td>在读取数据前跳过的行数</td>
+</tr>
+<tr>
+<td>check.names</td>
+<td>如果为TRUE，则检查变量名是否在R中有效</td>
+</tr>
+<tr>
+<td>fill</td>
+<td>如果为TRUE且非所有的行中变量数目相同，则用空白填补</td>
+</tr>
+<tr>
+<td>strip.white</td>
+<td>在<code>sep</code>已指定的情况下，如果为TRUE，则删除字符型变量前后多余的空格</td>
+</tr>
+<tr>
+<td>blank.lines.skip</td>
+<td>如果为TRUE，忽略空白行</td>
+</tr>
+<tr>
+<td>comment.char</td>
+<td>一个字符用来在数据文件中写注释，以这个字符开头的行被忽略</td>
+</tr>
+</tbody></table>
+<p>考虑一个名为studentgrades.csv的文本文件，它包含了学生在数学、科学、和社会学习的分数。文件中每一行表示一个学生，第一行包含了变量名，用逗号分隔。每一个单独的行都包含了学生的信息，它们也是用逗号进行分隔的。文件的前几行如下：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">StudentID</span>,First,Last,Math,Science,Social Studies <br><span class="hljs-attribute">011</span>,Bob,Smith,<span class="hljs-number">90</span>,<span class="hljs-number">80</span>,<span class="hljs-number">67</span> <br><span class="hljs-attribute">012</span>,Jane,Weary,<span class="hljs-number">75</span>,,<span class="hljs-number">80</span> <br><span class="hljs-attribute">010</span>,Dan,<span class="hljs-string">&quot;Thornton, III&quot;</span>,<span class="hljs-number">65</span>,<span class="hljs-number">75</span>,<span class="hljs-number">70</span> <br><span class="hljs-attribute">040</span>,Mary,<span class="hljs-string">&quot;O&#x27;Leary&quot;</span>,<span class="hljs-number">90</span>,<span class="hljs-number">95</span>,<span class="hljs-number">92</span><br></code></pre></td></tr></table></figure>
+
+<p>这个文件可以用以下语句来读入成一个数据框：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs R">grades <span class="hljs-operator">&lt;-</span> read.table<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;studentgrades.csv&quot;</span><span class="hljs-punctuation">,</span> header<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> <br>                     row.names<span class="hljs-operator">=</span><span class="hljs-string">&quot;StudentID&quot;</span><span class="hljs-punctuation">,</span> sep<span class="hljs-operator">=</span><span class="hljs-string">&quot;,&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> grades<br>   First          Last Math Science Social.Studies<br><span class="hljs-number">11</span>   Bob         Smith   <span class="hljs-number">90</span>      <span class="hljs-number">80</span>             <span class="hljs-number">67</span><br><span class="hljs-number">12</span>  Jane         Weary   <span class="hljs-number">75</span>      <span class="hljs-literal">NA</span>             <span class="hljs-number">80</span><br><span class="hljs-number">10</span>   Dan Thornton<span class="hljs-punctuation">,</span> III   <span class="hljs-number">65</span>      <span class="hljs-number">75</span>             <span class="hljs-number">70</span><br><span class="hljs-number">40</span>  Mary       O<span class="hljs-string">&#x27;Leary   90      95             92</span><br><span class="hljs-string"></span><br><span class="hljs-string">&gt; str(grades)</span><br><span class="hljs-string">&#x27;</span>data.frame<span class="hljs-string">&#x27;:	4 obs. of  5 variables:</span><br><span class="hljs-string"> $ First         : chr  &quot;Bob&quot; &quot;Jane&quot; &quot;Dan&quot; &quot;Mary&quot;</span><br><span class="hljs-string"> $ Last          : chr  &quot;Smith&quot; &quot;Weary&quot; &quot;Thornton, III&quot; &quot;O&#x27;</span>Leary<span class="hljs-string">&quot;</span><br><span class="hljs-string"> $ Math          : int  90 75 65 90</span><br><span class="hljs-string"> $ Science       : int  80 NA 75 95</span><br><span class="hljs-string"> $ Social.Studies: num  67 80 70 92</span><br></code></pre></td></tr></table></figure>
+
+<p>默认地，<code>read.table()</code>把字符变量转化为因子，这并不一定都是我们想要的情况。</p>
+<p>加上选项<code>stringsAsFactors=FALSE</code>可以对所有的字符变量都去掉这个行为。</p>
+<p>可以用<code>colClasses</code>选项去对每一列都指定一个类（比如说，逻辑型、数值型、字符型或因子型）:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs R">grades <span class="hljs-operator">&lt;-</span> read.table<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;studentgrades.csv&quot;</span><span class="hljs-punctuation">,</span> header<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> <br>                     row.names<span class="hljs-operator">=</span><span class="hljs-string">&quot;StudentID&quot;</span><span class="hljs-punctuation">,</span> sep<span class="hljs-operator">=</span><span class="hljs-string">&quot;,&quot;</span><span class="hljs-punctuation">,</span> <br>                     colClasses<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;character&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;character&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;character&quot;</span><span class="hljs-punctuation">,</span> <br>                                  <span class="hljs-string">&quot;numeric&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;numeric&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;numeric&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> grades<br>    First          Last Math Science Social.Studies<br><span class="hljs-number">011</span>   Bob         Smith   <span class="hljs-number">90</span>      <span class="hljs-number">80</span>             <span class="hljs-number">67</span><br><span class="hljs-number">012</span>  Jane         Weary   <span class="hljs-number">75</span>      <span class="hljs-literal">NA</span>             <span class="hljs-number">80</span><br><span class="hljs-number">010</span>   Dan Thornton<span class="hljs-punctuation">,</span> III   <span class="hljs-number">65</span>      <span class="hljs-number">75</span>             <span class="hljs-number">70</span><br><span class="hljs-number">040</span>  Mary       O<span class="hljs-string">&#x27;Leary   90      95             92</span><br><span class="hljs-string"></span><br><span class="hljs-string">&gt; str(grades)</span><br><span class="hljs-string">&#x27;</span>data.frame<span class="hljs-string">&#x27;:	4 obs. of  5 variables:</span><br><span class="hljs-string"> $ First         : chr  &quot;Bob&quot; &quot;Jane&quot; &quot;Dan&quot; &quot;Mary&quot;</span><br><span class="hljs-string"> $ Last          : chr  &quot;Smith&quot; &quot;Weary&quot; &quot;Thornton, III&quot; &quot;O&#x27;</span>Leary<span class="hljs-string">&quot;</span><br><span class="hljs-string"> $ Math          : num  90 75 65 90</span><br><span class="hljs-string"> $ Science       : num  80 NA 75 95</span><br><span class="hljs-string"> $ Social.Studies: num  67 80 70 92</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="导入-Excel-数据"><a href="#导入-Excel-数据" class="headerlink" title="导入 Excel 数据"></a>导入 Excel 数据</h2><p>读取一个Excel文件的最好方式，就是在Excel中将其导出为一个逗号分隔文件（csv），并使用前文描述的方式将其导入R中。此外，也可以用<code>xlsx</code>包直接地导入Excel工作表。</p>
+<p><code>xlsx</code>包可以用来对Excel 97&#x2F;2000&#x2F;XP&#x2F;2003&#x2F;2007文件进行读取、写入和格式转换。</p>
+<p>函数<code>read.xlsx()</code>导入一个工作表到一个数据框中。最简单的格式是<code>read.xlsx(file, n)</code>，其中<code>file</code>是Excel工作簿的所在路径，<code>n</code>则为要导入的工作表序号。</p>
+<ul>
+<li>在R中，路径的分割符号使用 <code>/</code> 而不是 <code>\</code></li>
+</ul>
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>xlsx<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> workbook <span class="hljs-operator">&lt;-</span> <span class="hljs-string">&quot;c:/myworkbook.xlsx&quot;</span> <br><span class="hljs-operator">&gt;</span> mydataframe <span class="hljs-operator">&lt;-</span> read.xlsx<span class="hljs-punctuation">(</span>workbook<span class="hljs-punctuation">,</span> <span class="hljs-number">1</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>此外，函数<code>read.xlsx2</code>也可以用来读取xlsx文件。它使用到了Java，有时候可以获得更加优秀的读取结果。</p>
+<p>关于这两个函数的完成用法如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs R">read.xlsx<span class="hljs-punctuation">(</span><br>  file<span class="hljs-punctuation">,</span><br>  sheetIndex<span class="hljs-punctuation">,</span><br>  sheetName <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>  rowIndex <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>  startRow <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>  endRow <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>  colIndex <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>  as.data.frame <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span><br>  header <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span><br>  colClasses <span class="hljs-operator">=</span> <span class="hljs-literal">NA</span><span class="hljs-punctuation">,</span><br>  keepFormulas <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span><br>  encoding <span class="hljs-operator">=</span> <span class="hljs-string">&quot;unknown&quot;</span><span class="hljs-punctuation">,</span><br>  password <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>  ...<br><span class="hljs-punctuation">)</span><br><br>read.xlsx2<span class="hljs-punctuation">(</span><br>  file<span class="hljs-punctuation">,</span><br>  sheetIndex<span class="hljs-punctuation">,</span><br>  sheetName <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>  startRow <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>  colIndex <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>  endRow <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>  as.data.frame <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span><br>  header <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span><br>  colClasses <span class="hljs-operator">=</span> <span class="hljs-string">&quot;character&quot;</span><span class="hljs-punctuation">,</span><br>  password <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>  ...<br><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>相关参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>file</td>
+<td>the path to the file to read.</td>
+</tr>
+<tr>
+<td>sheetIndex</td>
+<td>a number representing the sheet index in the workbook.</td>
+</tr>
+<tr>
+<td>sheetName</td>
+<td>a character string with the sheet name.</td>
+</tr>
+<tr>
+<td>rowIndex</td>
+<td>a numeric vector indicating the rows you want to extract. If NULL, all rows found will be extracted, unless <code>startRow</code> or <code>endRow</code> are specified.</td>
+</tr>
+<tr>
+<td>startRow</td>
+<td>a number specifying the index of starting row. <br /><u>For <code>read.xlsx</code> this argument is active only if <code>rowIndex</code> is NULL.</u></td>
+</tr>
+<tr>
+<td>endRow</td>
+<td>a number specifying the index of the last row to pull. If NULL, read all the rows in the sheet. <br /><u>For <code>read.xlsx</code> this argument is active only if <code>rowIndex</code> is NULL.</u></td>
+</tr>
+<tr>
+<td>colIndex</td>
+<td>a numeric vector indicating the cols you want to extract. If NULL, all columns found will be extracted.</td>
+</tr>
+<tr>
+<td>as.data.frame</td>
+<td>a logical value indicating if the result should be coerced into a <code>data.frame</code>. If FALSE, the result is a list with one element for each column.</td>
+</tr>
+<tr>
+<td>header</td>
+<td>a logical value indicating whether the first row corresponding to the first element of the <code>rowIndex</code> vector contains the names of the variables.</td>
+</tr>
+<tr>
+<td>colClasses</td>
+<td>For <code>read.xlsx</code> a character vector that represent the class of each column. Recycled as necessary, or if the character vector is named, unspecified values are taken to be <code>NA</code>. For <code>read.xlsx2</code> see <code>readColumns</code>.</td>
+</tr>
+<tr>
+<td>keepFormulas</td>
+<td>a logical value indicating if Excel formulas should be shown as text in and not evaluated before bringing them in.</td>
+</tr>
+<tr>
+<td>encoding</td>
+<td>encoding to be assumed for input strings. See <code>read.table</code>.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>a String with the password.</td>
+</tr>
+</tbody></table>
+<p>以下参数继承自<code>data.frame</code>：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>row.names</td>
+<td>NULL or a single integer or character string specifying a column to be used as row names, or a character or integer vector giving the row names for the data frame.</td>
+</tr>
+<tr>
+<td>check.rows</td>
+<td>if TRUE then the rows are checked for consistency of length and names.</td>
+</tr>
+<tr>
+<td>check.names</td>
+<td>logical. If TRUE then the names of the variables in the data frame are checked to ensure that they are syntactically valid variable names and are not duplicated. If necessary they are adjusted (by <code>make.names</code>) so that they are.</td>
+</tr>
+<tr>
+<td>fix.empty.names</td>
+<td>logical indicating if arguments which are “unnamed” (in the sense of not being formally called as <code>someName = arg</code>) get an automatically constructed name or rather name “”. Needs to be set to FALSE even when <code>check.names</code> is false if “” names should be kept.</td>
+</tr>
+<tr>
+<td>stringsAsFactors</td>
+<td>logical: should character vectors be converted to factors? The ‘factory-fresh’ default has been TRUE previously but has been changed to FALSE for R 4.0.0. Only as short time workaround, you can revert by setting options(<code>stringsAsFactors = TRUE</code>) which now warns about its deprecation.</td>
+</tr>
+</tbody></table>
+<h1 id="二、数据集的标注"><a href="#二、数据集的标注" class="headerlink" title="二、数据集的标注"></a>二、数据集的标注</h1><p>为了使结果更易解读，数据分析人员通常会对数据集进行标注。这种标注包括为变量名添加描述性的标签，以及为类别型变量中的编码添加值标签。例如，对于变量<code>age</code>，你可能想附加一个描述更详细的标签<code>“Age at hospitalization (in years)”</code>（入院年龄）。对于编码为<code>1</code>或<code>2</code>的性别变量<code>gender</code>，你可能想将其关联到标签<code>“male”</code>和<code>“female”</code>上。</p>
+<h2 id="变量标签（名称）的修改"><a href="#变量标签（名称）的修改" class="headerlink" title="变量标签（名称）的修改"></a>变量标签（名称）的修改</h2><p>可以将变量标签作为变量名，然后通过位置下标来访问这个变量。</p>
+<h3 id="1-获得标签（名称）"><a href="#1-获得标签（名称）" class="headerlink" title="1. 获得标签（名称）"></a>1. 获得标签（名称）</h3><h4 id="对象名称"><a href="#对象名称" class="headerlink" title="对象名称"></a>对象名称</h4><p>函数<code>names()</code>可以获得或设定某个对象的名称：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># Usage</span><br><span class="hljs-built_in">names</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><br><span class="hljs-built_in">names</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span> <span class="hljs-operator">&lt;-</span> value<br><br><span class="hljs-comment"># x: an R object.</span><br><br><span class="hljs-comment"># value: a character vector of up to the same length as x, or NULL.</span><br></code></pre></td></tr></table></figure>
+
+<p>例,修改某一行或一列的名称（标签）：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> grades<br>    First          Last Math Science Social.Studies<br><span class="hljs-number">011</span>   Bob         Smith   <span class="hljs-number">90</span>      <span class="hljs-number">80</span>             <span class="hljs-number">67</span><br><span class="hljs-number">012</span>  Jane         Weary   <span class="hljs-number">75</span>      <span class="hljs-literal">NA</span>             <span class="hljs-number">80</span><br><span class="hljs-number">010</span>   Dan Thornton<span class="hljs-punctuation">,</span> III   <span class="hljs-number">65</span>      <span class="hljs-number">75</span>             <span class="hljs-number">70</span><br><span class="hljs-number">040</span>  Mary       O<span class="hljs-string">&#x27;Leary   90      95             92</span><br><span class="hljs-string"></span><br><span class="hljs-string">&gt; names(grades)[1]</span><br><span class="hljs-string">[1] &quot;First&quot;</span><br><span class="hljs-string"></span><br><span class="hljs-string">&gt; names(grades)[1] &lt;- &quot;First Name&quot;</span><br><span class="hljs-string"></span><br><span class="hljs-string">&gt; grades</span><br><span class="hljs-string">    First Name          Last Math Science Social.Studies</span><br><span class="hljs-string">011        Bob         Smith   90      80             67</span><br><span class="hljs-string">012       Jane         Weary   75      NA             80</span><br><span class="hljs-string">010        Dan Thornton, III   65      75             70</span><br><span class="hljs-string">040       Mary       O&#x27;</span>Leary   <span class="hljs-number">90</span>      <span class="hljs-number">95</span>             <span class="hljs-number">92</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="行、列名称"><a href="#行、列名称" class="headerlink" title="行、列名称"></a>行、列名称</h4><p>使用函数<code>row.names()</code>与<code>colnames()</code>可以获得某个数据框的行、列名称：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> grades<br>    First Name          Last Math Science Social.Studies<br><span class="hljs-number">011</span>        Bob         Smith   <span class="hljs-number">90</span>      <span class="hljs-number">80</span>             <span class="hljs-number">67</span><br><span class="hljs-number">012</span>       Jane         Weary   <span class="hljs-number">75</span>      <span class="hljs-literal">NA</span>             <span class="hljs-number">80</span><br><span class="hljs-number">010</span>        Dan Thornton<span class="hljs-punctuation">,</span> III   <span class="hljs-number">65</span>      <span class="hljs-number">75</span>             <span class="hljs-number">70</span><br><span class="hljs-number">040</span>       Mary       O<span class="hljs-string">&#x27;Leary   90      95             92</span><br><span class="hljs-string"></span><br><span class="hljs-string">&gt; colnames(grades)</span><br><span class="hljs-string">[1] &quot;First Name&quot;     &quot;Last&quot;           &quot;Math&quot;           &quot;Science&quot;        &quot;Social.Studies&quot;</span><br><span class="hljs-string"></span><br><span class="hljs-string">&gt; row.names(grades)</span><br><span class="hljs-string">[1] &quot;011&quot; &quot;012&quot; &quot;010&quot; &quot;040&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>之后可以使用序号的索引对标签进行修改：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> colnames<span class="hljs-punctuation">(</span>grades<span class="hljs-punctuation">)</span><span class="hljs-punctuation">[</span><span class="hljs-number">2</span><span class="hljs-punctuation">]</span> <span class="hljs-operator">&lt;-</span> <span class="hljs-string">&quot;Last Name&quot;</span><br><span class="hljs-operator">&gt;</span> row.names<span class="hljs-punctuation">(</span>grades<span class="hljs-punctuation">)</span><span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">]</span> <span class="hljs-operator">&lt;-</span> <span class="hljs-string">&quot;Row 1&quot;</span><br><span class="hljs-operator">&gt;</span> row.names<span class="hljs-punctuation">(</span>grades<span class="hljs-punctuation">)</span><span class="hljs-punctuation">[</span><span class="hljs-number">2</span><span class="hljs-operator">:</span><span class="hljs-number">4</span><span class="hljs-punctuation">]</span> <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;Row 2&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Row 3&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Row 4&quot;</span><span class="hljs-punctuation">)</span><br><br><span class="hljs-operator">&gt;</span> grades<br>      First Name     Last Name Math Science Social.Studies<br>Row <span class="hljs-number">1</span>        Bob         Smith   <span class="hljs-number">90</span>      <span class="hljs-number">80</span>             <span class="hljs-number">67</span><br>Row <span class="hljs-number">2</span>       Jane         Weary   <span class="hljs-number">75</span>      <span class="hljs-literal">NA</span>             <span class="hljs-number">80</span><br>Row <span class="hljs-number">3</span>        Dan Thornton<span class="hljs-punctuation">,</span> III   <span class="hljs-number">65</span>      <span class="hljs-number">75</span>             <span class="hljs-number">70</span><br>Row <span class="hljs-number">4</span>       Mary       O<span class="hljs-string">&#x27;Leary   90      95             92</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-值标签的获得与修改"><a href="#2-值标签的获得与修改" class="headerlink" title="2. 值标签的获得与修改"></a>2. 值标签的获得与修改</h3><p>函数<code>factor()</code>可为类别型变量创建值标签。继续上例，假设你有一个名为<code>gender</code>的变量，其中<code>1</code>表示男性，<code>2</code>表示女性。你可以使用以下代码来创建值标签：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R">patientdata<span class="hljs-operator">$</span>gender <span class="hljs-operator">&lt;-</span> factor<span class="hljs-punctuation">(</span>patientdata<span class="hljs-operator">$</span>gender<span class="hljs-punctuation">,</span> <br> levels <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br> labels <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;male&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;female&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>这里<code>levels</code>代表变量的实际值，而<code>labels</code>表示包含了理想值标签的字符型向量。</p>
+<h2 id="处理数据对象的常用函数"><a href="#处理数据对象的常用函数" class="headerlink" title="处理数据对象的常用函数"></a>处理数据对象的常用函数</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>length(object)</td>
+<td>显示对象&#x2F;元素数量、向量等数据类型长度</td>
+</tr>
+<tr>
+<td>dim(object)</td>
+<td>显示某个对象的维度，其中也包含数据类型的长度</td>
+</tr>
+<tr>
+<td>str(object)</td>
+<td>显示某个对象的结构</td>
+</tr>
+<tr>
+<td>class(object)</td>
+<td>显示某个对象的类或类型，整体的类型</td>
+</tr>
+<tr>
+<td>mode(object)</td>
+<td>显示某个对象的模式，个体类型，如每一列</td>
+</tr>
+<tr>
+<td>names(object)</td>
+<td>显示某对象中各成分的名称</td>
+</tr>
+<tr>
+<td>c(ob1,ob2)</td>
+<td>将对象合并入一个向量</td>
+</tr>
+<tr>
+<td>cbind(ob1,ob2)</td>
+<td>按列合并对象</td>
+</tr>
+<tr>
+<td>rbind(ob1,ob2)</td>
+<td>按行合并对象</td>
+</tr>
+<tr>
+<td>object</td>
+<td>输出某个对象</td>
+</tr>
+<tr>
+<td>head(object)</td>
+<td>列出某个对象的开始部分，默认前六行</td>
+</tr>
+<tr>
+<td>tail(object)</td>
+<td>列出某个对象的最后部分，默认后六行</td>
+</tr>
+<tr>
+<td>ls()</td>
+<td>显示当前的对象列表</td>
+</tr>
+<tr>
+<td>rm()</td>
+<td>删除一个或多个对象</td>
+</tr>
+<tr>
+<td>edit(object)</td>
+<td>编辑对象</td>
+</tr>
+<tr>
+<td>fix(object)</td>
+<td>直接编辑对象</td>
+</tr>
+</tbody></table>
+<h1 id="三、创建报告"><a href="#三、创建报告" class="headerlink" title="三、创建报告"></a>三、创建报告</h1><p>这部分需要使用到R Studio。</p>
+<p>使用模板生成报告：</p>
+<p>从模板生成报告即报告从一个模版文件开始创建。这份模版包括了报告文字、格式化语法和R代码块。</p>
+<p>基本的流程为：读取模版文件，运行R代码，应用格式化指令，生成一个报告。</p>
+<p>模版文件（<code>xxx.Rmd</code>）是一个纯文本文档这种文本文件使用扩展名.Rmd，包含以下三个部分。</p>
+<ul>
+<li>报告文字：所有解释性的语句和文字。</li>
+<li>格式化语法（formatting syntax）：控制报告格式化方式的标签。（具体语法下面有简要的补充。）</li>
+<li>R代码：要运行的R语句。在R Markdown文档中，R代码块被 <code>```&#123;r&#125; 以及</code> <code> </code> &#96;&#96;&#96; 所包围。</li>
+</ul>
+<p>最后，模版文件被作为参数传递到 <code>rmarkdown</code> 包的 <code>render()</code> 函数中，然后创建出一个网页文件<code>example.html</code>，此网页包含了报告文字和R结果。</p>
+<p>本章主要学习四种模版：R Markdown模版、ODT模版、DOCX模版和LaTeX模版。</p>
+<ul>
+<li>R Markdown模版能够用来生成HTML、PDF和Microsoft Word文档。</li>
+<li>ODT和DOCX模版分别用于生成Open Document和Microsoft Word文档。</li>
+<li>LaTeX模版则能生成出版水平的PDF文档，包括报告、 文章和图书。</li>
+</ul>
+<h2 id="用-R-和-Markdown-创建动态报告"><a href="#用-R-和-Markdown-创建动态报告" class="headerlink" title="用 R 和 Markdown 创建动态报告"></a>用 R 和 Markdown 创建动态报告</h2><p>这部分需要进行一些准备工作：</p>
+<ol>
+<li>安装 <code>rmarkdown</code> 包（ <code>install.packages(“rmarkdown”) </code>）</li>
+<li>安装 <code>xtable</code>包（ <code>install.packages(“xtable”) </code>）</li>
+<li>安装<code>Pandoc</code></li>
+<li>安装LaTeX编译器（如果想生成PDF文档）。一套LaTeX编译器能够把一个LaTeX文件转换成一个高质量排版的PDF文档。<ul>
+<li>注意，安装了最新版<code>Rstudio</code>则可跳过第1和4步。</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-创建报告文件"><a href="#1-创建报告文件" class="headerlink" title="1. 创建报告文件"></a>1. 创建报告文件</h3><p>在R studio中，从GUI菜单中选择“File”→“New File”→“R Markdown”，可以可视化地创建Markdown文件。之后就会出现GUI界面，进行选择与设置。</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184245881.png" srcset="/img/loading.gif" lazyload alt="image-20200810184245881" style="zoom:67%;" />
+
+<p>在完成设置之后，就进入到了编辑界面：</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184337931.png" srcset="/img/loading.gif" lazyload alt="image-20200810184337931"></p>
+<p>在这里，就可以进行相关代码的编辑了。</p>
+<h3 id="2-报告文件语法"><a href="#2-报告文件语法" class="headerlink" title="2. 报告文件语法"></a>2. 报告文件语法</h3><p>这部分的语法也就是Markdown的语法，就不多赘述了。</p>
+<p>有一些值得注意的代码块选项是：</p>
+<table>
+<thead>
+<tr>
+<th>选项（参数）</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>echo</td>
+<td>是否在输出中包含R源代码（TRUE或FALSE）</td>
+</tr>
+<tr>
+<td>results</td>
+<td>是否输出原生结果（asis或hide）</td>
+</tr>
+<tr>
+<td>warning</td>
+<td>是否在输出中包含警告（TRUE或FALSE）</td>
+</tr>
+<tr>
+<td>message</td>
+<td>是否在输出中包含参考的信息（TRUE或FALSE）</td>
+</tr>
+<tr>
+<td>error</td>
+<td>是否在输出中包含错误信息（TRUE或FALSE）</td>
+</tr>
+<tr>
+<td>fig.width</td>
+<td>图片宽度（英寸）</td>
+</tr>
+<tr>
+<td>fig.height</td>
+<td>图片高度（英寸）</td>
+</tr>
+</tbody></table>
+<p>例如：</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204656466.png" srcset="/img/loading.gif" lazyload alt="image-20200810204656466"></p>
+<p>例2：</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204715481.png" srcset="/img/loading.gif" lazyload alt="image-20200810204715481"></p>
+<h3 id="3-文件输出"><a href="#3-文件输出" class="headerlink" title="3. 文件输出"></a>3. 文件输出</h3><p>使用R Studio可以很方便地实现文件的编辑和输出。</p>
+<p>在GUI中创建完成报告文件之后，就可以在R Studio中的一个Pane中进行代码的编辑。</p>
+<p>而输出的话则需要从<code>Knit</code>下拉菜单当中选取目标输出格式，之后在<code>Viewer</code> Pane中预览，可以在下拉菜单中选择保存的目标路径等。</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184758166.png" srcset="/img/loading.gif" lazyload alt="image-20200810184758166"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" class="category-chain-item">软件使用总结</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/" class="category-chain-item">R</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E9%80%9F%E6%9F%A5/" class="print-no-link">#速查</a>
+      
+        <a href="/tags/R/" class="print-no-link">#R</a>
+      
+        <a href="/tags/Statistics/" class="print-no-link">#Statistics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>08. R &lt;- 输入、读取、标注数据与创建报告</div>
+      <div>https://zhenyumi.github.io/posts/ec4dd8b1/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年8月10日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/b93b47fd/" title="07. R &lt;- ggplot2语法概述及基本图片操作">
+                        <span class="hidden-mobile">07. R &lt;- ggplot2语法概述及基本图片操作</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

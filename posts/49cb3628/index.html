@@ -1,0 +1,937 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L10 Replication of DNA">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/49cb3628/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+  
+  
+  
+  <title>L10 Replication of DNA - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L10 Replication of DNA</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          619 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          6 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L10 Replication of DNA</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Overview-of-DNA-Replication"><a href="#一、Overview-of-DNA-Replication" class="headerlink" title="一、Overview of DNA Replication"></a>一、Overview of DNA Replication</h1><p>DNA replication goal ‐ make an exact copy of DNA</p>
+<p>Must occur </p>
+<ul>
+<li>Very <strong>quickly</strong> – millions to billons of bases in minutes to hours </li>
+<li>Very <strong>accurately</strong> – few to no mutations (could be deleterious to daughter cells) </li>
+<li>At <strong>appropriate time</strong> in the life of the cell</li>
+</ul>
+<h2 id="Proposed-Models-of-DNA-Replication"><a href="#Proposed-Models-of-DNA-Replication" class="headerlink" title="Proposed Models of DNA Replication"></a>Proposed Models of DNA Replication</h2><h3 id="1-Conservative-model-全保留复制模型"><a href="#1-Conservative-model-全保留复制模型" class="headerlink" title="1. Conservative model 全保留复制模型"></a>1. Conservative model 全保留复制模型</h3><p>Both parental strands stay together after DNA replication</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129202937951.png" srcset="/img/loading.gif" lazyload alt="image-20191129202937951" style="zoom:40%;" />
+
+<h3 id="2-Dispersive-model-分散模型"><a href="#2-Dispersive-model-分散模型" class="headerlink" title="2. Dispersive model 分散模型"></a>2. Dispersive model 分散模型</h3><p>Parental and daughter DNA are interspersed in both strands following replication</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129203117801.png" srcset="/img/loading.gif" lazyload alt="image-20191129203117801" style="zoom:40%;" />
+
+<h3 id="3-Semiconservative-model-半保留复制模型"><a href="#3-Semiconservative-model-半保留复制模型" class="headerlink" title="3. Semiconservative model 半保留复制模型"></a>3. Semiconservative model 半保留复制模型</h3><p>The double-stranded DNA contains one parental and one daughter strand following replication</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129203252057.png" srcset="/img/loading.gif" lazyload alt="image-20191129203252057" style="zoom:40%;" />
+
+<h2 id="Meselson–Stahl-experiment"><a href="#Meselson–Stahl-experiment" class="headerlink" title="Meselson–Stahl experiment"></a>Meselson–Stahl experiment</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129203433529.png" srcset="/img/loading.gif" lazyload alt="image-20191129203433529"  />
+
+ 
+
+<h2 id="The-Characteristic-of-DNA-Replication"><a href="#The-Characteristic-of-DNA-Replication" class="headerlink" title="The Characteristic of DNA Replication"></a>The Characteristic of DNA Replication</h2><p>DNA replication relies on the complementarity of DNA strands</p>
+<ul>
+<li>The AT&#x2F;GC rule (<strong>Chargaff’s rule</strong>)</li>
+</ul>
+<p>The process can be summarized as such：</p>
+<ul>
+<li>The two DNA strands come apart</li>
+<li>Each serves as a template strand for the synthesis of new strands</li>
+<li>The two newly-made strands &#x3D; daughter strands</li>
+<li>The two original ones &#x3D; parental strands</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129210039611.png" srcset="/img/loading.gif" lazyload alt="image-20191129210039611" style="zoom: 50%;" />
+
+<h1 id="二、DNA-Replication-in-Molecular-Level"><a href="#二、DNA-Replication-in-Molecular-Level" class="headerlink" title="二、DNA Replication in Molecular Level"></a>二、DNA Replication in Molecular Level</h1><h3 id="1-DNA-replication-requires"><a href="#1-DNA-replication-requires" class="headerlink" title="1. DNA replication requires"></a>1. DNA replication requires</h3><ol>
+<li><p>Coordination with cell division </p>
+</li>
+<li><p>A special DNA sequence termed the <strong>Origin of Replication</strong> </p>
+<ul>
+<li>Origin of Replication is site of synthesis initiation and point of control for whole process</li>
+</ul>
+</li>
+<li><p><strong>DNA polymerases</strong> - enzymes to synthesize actual DNA molecule</p>
+</li>
+<li><p><strong>Accessory enzymes</strong> (gyrases, helicases, ligases etc.)</p>
+</li>
+</ol>
+<h3 id="2-DNA-replication-occurs-in-three-stages"><a href="#2-DNA-replication-occurs-in-three-stages" class="headerlink" title="2. DNA replication occurs in three stages"></a>2. DNA replication occurs in three stages</h3><ol>
+<li>Initiation</li>
+<li>Elongation</li>
+<li>Termination</li>
+</ol>
+<h3 id="3-Different-Strand"><a href="#3-Different-Strand" class="headerlink" title="3. Different Strand"></a>3. Different Strand</h3><table>
+<thead>
+<tr>
+<th>Lagging Strand</th>
+<th>Discontinuous Replicate</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Leading Strand</td>
+<td>Continuous Replicate</td>
+</tr>
+</tbody></table>
+<h2 id="DNA-replication-Initiation"><a href="#DNA-replication-Initiation" class="headerlink" title="DNA replication: Initiation"></a>DNA replication: Initiation</h2><h3 id="1-Origins-of-Replication"><a href="#1-Origins-of-Replication" class="headerlink" title="1. Origins of Replication"></a>1. Origins of Replication</h3><h4 id="E-coli"><a href="#E-coli" class="headerlink" title="E.coli"></a>E.coli</h4><p><u>Only one origin of replication in E. coli</u> (but many in eukaryotes)</p>
+<p>The origin of replication in E. coli is termed <strong>oriC</strong></p>
+<ul>
+<li>origin of Chromosomal replication</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129212702302.png" srcset="/img/loading.gif" lazyload alt="image-20191129212702302" style="zoom: 50%;" />
+
+<p>E.coli的复制是双向的（Bidirectional）</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129211808402.png" srcset="/img/loading.gif" lazyload alt="image-20191129211808402" style="zoom: 67%;" />
+
+<p>The characteristic of this replication is called <strong>θ replication</strong></p>
+<ul>
+<li>因为复制的时候形成了类似θ的结构</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129212023201.png" srcset="/img/loading.gif" lazyload alt="image-20191129212023201" style="zoom: 50%;" />
+
+<h3 id="2-Proof-of-Bidirectional-Replication"><a href="#2-Proof-of-Bidirectional-Replication" class="headerlink" title="2. Proof of Bidirectional Replication"></a>2. Proof of Bidirectional Replication</h3><p>Expose to pH 11.05 for 10 minutes AT-rich clusters denature to form <strong>denaturation bubbles</strong></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129212452794.png" srcset="/img/loading.gif" lazyload alt="image-20191129212452794"></p>
+<h3 id="3-DNA-Unwinding-解旋"><a href="#3-DNA-Unwinding-解旋" class="headerlink" title="3. DNA Unwinding 解旋"></a>3. DNA Unwinding 解旋</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129212620997.png" srcset="/img/loading.gif" lazyload alt="image-20191129212620997" style="zoom: 80%;" />
+
+<ol>
+<li><p><strong>DnaA proteins</strong> bind to <strong>DnaA boxes</strong> and to each other. Additional proteins that cause the DNA to bend also bind (not shown). </p>
+<p>This causes the region to wrap（缠绕） around the DnaA proteins and separates theAT-rich region.</p>
+</li>
+<li><p><strong>DNA helicase（DNA 解旋酶）</strong> (<strong>DnaB protein</strong>) binds to the origin. <strong>DnaC protein</strong> (not shown) assists this process.</p>
+</li>
+<li><p>DNA helicase separates the DNA in both directions, creating 2 replication forks.</p>
+</li>
+</ol>
+<p>The DNA helicase <u>travels from 5’ to 3’ position in bacteria DNA</u>, this is bidirectional replication.</p>
+<h4 id="DNA-Helicase"><a href="#DNA-Helicase" class="headerlink" title="DNA Helicase"></a>DNA Helicase</h4><p>They are motor proteins that move directionally along a nucleic acid phosphodiester backbone, separating two annealed nucleic acid strands (i.e., DNA, RNA, or RNA-DNA hybrid) using energy derived from ATP hvdrolysis.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129213335503.png" srcset="/img/loading.gif" lazyload alt="image-20191129213335503" style="zoom: 50%;" />
+
+<h5 id="2-Structure-And-Moving-Direction-in-Different-Species"><a href="#2-Structure-And-Moving-Direction-in-Different-Species" class="headerlink" title="(2) Structure And Moving Direction in Different Species"></a>(2) Structure And Moving Direction in Different Species</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129213444636.png" srcset="/img/loading.gif" lazyload alt="image-20191129213444636" style="zoom: 33%;" />
+
+<table>
+<thead>
+<tr>
+<th>Eukaryote</th>
+<th>3’ to 5’</th>
+<th>6 different subunit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Archaea</td>
+<td>3’ to 5’</td>
+<td>6 same subunit</td>
+</tr>
+<tr>
+<td>Bacteria</td>
+<td>5’ to 3’</td>
+<td>6 same subunit</td>
+</tr>
+</tbody></table>
+<h4 id="Single-Strand-DNA-Binding-SSB-Protein"><a href="#Single-Strand-DNA-Binding-SSB-Protein" class="headerlink" title="Single-Strand DNA Binding (SSB) Protein"></a>Single-Strand DNA Binding (SSB) Protein</h4><p>Single-strand DNA-binding (SSB) protein keeps the unwound strands in an extended form for replication</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129213859155.png" srcset="/img/loading.gif" lazyload alt="image-20191129213859155" style="zoom: 50%;" />
+
+<h5 id="1-SSB-protein"><a href="#1-SSB-protein" class="headerlink" title="(1) SSB protein"></a>(1) SSB protein</h5><p><strong>SSB are essential proteins found in all domains of life.</strong></p>
+<p>First, ssDNA is thermodynamically less stable than dsDNA, which leads to spontaneous formation of duplex secondary structures that impede genome maintenance processes. </p>
+<p>Second, relative to dsDNA, ssDNA is hypersensitive to chemical and nucleolytic attacks that can cause damage to the genome.</p>
+<h4 id="Supercoiling"><a href="#Supercoiling" class="headerlink" title="Supercoiling"></a>Supercoiling</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129214306302.png" srcset="/img/loading.gif" lazyload alt="image-20191129214306302"></p>
+<p>(a) To unwind the template strands in E. coli, the DNA helix in front of the replication fork must spin at 3000 rpm.</p>
+<p>(b) Without a swivel or axis of rotation, the unwinding process would produce positive supercoils in front of tlra replication fork.</p>
+<h4 id="DNA-topoisomerases-Gyrase"><a href="#DNA-topoisomerases-Gyrase" class="headerlink" title="DNA topoisomerases (Gyrase)"></a>DNA topoisomerases (Gyrase)</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129214426308.png" srcset="/img/loading.gif" lazyload alt="image-20191129214426308" style="zoom: 50%;" />
+
+<h2 id="DNA-replication-Elongation"><a href="#DNA-replication-Elongation" class="headerlink" title="DNA replication: Elongation"></a>DNA replication: Elongation</h2><p>Enzymes that catalyze the formation of the phosphodiester bond between nucleotides</p>
+<p><u>Unidirectional</u> 5’ to 3’</p>
+<p>Requires a nucleotide primer with a free 3’-OH</p>
+<p>Processive 一 do not repeatedly leave and come back to strand</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129214623285.png" srcset="/img/loading.gif" lazyload alt="image-20191129214623285"  />
+
+<h3 id="1-Discontinuous-and-Continuous-Synthesis"><a href="#1-Discontinuous-and-Continuous-Synthesis" class="headerlink" title="1. Discontinuous and Continuous Synthesis"></a>1. Discontinuous and Continuous Synthesis</h3><p> <img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129214703794.png" srcset="/img/loading.gif" lazyload alt="image-20191129214703794"></p>
+<p>Relatively low-resolution techniques such as autoradiography and electron microscopy show that at the macromolecular level both nascent DNA chains are extended in the same overall direction at each replication fork.</p>
+<p>High-resolution biochemical techniques such as pulse- labeling and density-gradient analysis show that replication of the lagging strand is discontinuous—short fragments are synthesized in the 5’— 3’ direction and subsequently joined by DNA ligase.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191129214906103.png" srcset="/img/loading.gif" lazyload alt="image-20191129214906103"></p>
+<p>DNA pol: Need primer</p>
+<p>RNA pol: Doesn’t need primer</p>
+<h3 id="2-Initiation-of-DNA-Chains-with-RNA-Primers"><a href="#2-Initiation-of-DNA-Chains-with-RNA-Primers" class="headerlink" title="2. Initiation of DNA Chains with RNA Primers"></a>2. Initiation of DNA Chains with RNA Primers</h3><p>Primase creates a <u>short RNA primer</u> to which the DNA polymerase can then add more deoxynucleotide triphosphates (dNTPs)</p>
+<p>DNA primase creates primers for both strands</p>
+<ul>
+<li>One primer for strand being synthesized into the fork - leading strand</li>
+<li>Multiple primers for strand being synthesized away from the fork - <strong>Lagging strand</strong></li>
+<li>Many short RNA-DNA molecules on lagging strand known as <strong>Okazaki fragments</strong></li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130132700184.png" srcset="/img/loading.gif" lazyload alt="image-20191130132700184" style="zoom:50%;" />
+
+<h3 id="3-DNA-Polymerases"><a href="#3-DNA-Polymerases" class="headerlink" title="3. DNA Polymerases"></a>3. DNA Polymerases</h3><h4 id="DNA-Polymerases-Ⅲ"><a href="#DNA-Polymerases-Ⅲ" class="headerlink" title="DNA Polymerases Ⅲ"></a>DNA Polymerases Ⅲ</h4><p>DNA Polymerase III synthesizes the DNA using these primers on both leading and lagging strands.</p>
+<p>But can not remove RNA primer from Okazaki fragments</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130132925071.png" srcset="/img/loading.gif" lazyload alt="image-20191130132925071" style="zoom: 50%;" />
+
+<p><u>Only the DNA pol III is the replicase</u></p>
+<p>The others participate in repair of damaged DNA.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130133018477.png" srcset="/img/loading.gif" lazyload alt="image-20191130133018477" style="zoom:50%;" />
+
+<h5 id="1-Structure-of-DNA-pol-III-in-E-coli"><a href="#1-Structure-of-DNA-pol-III-in-E-coli" class="headerlink" title="(1) Structure of DNA pol III in E.coli"></a>(1) Structure of DNA pol III in E.coli</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130133155999.png" srcset="/img/loading.gif" lazyload alt="image-20191130133155999" style="zoom: 80%;" />
+
+<h4 id="DNA-Polymerases-Ⅰ"><a href="#DNA-Polymerases-Ⅰ" class="headerlink" title="DNA Polymerases Ⅰ"></a>DNA Polymerases Ⅰ</h4><p>DNA polymerase I</p>
+<ul>
+<li>Also has 5’ to 3’ exonuclease（核酸外切酶） activity</li>
+<li><u>Primarily acts on only the lagging strand</u> to remove RNA from Okazaki fragments</li>
+<li><u>Uses 5’-3‘ polymerase activity</u> to <u>replace RNA with DNA</u></li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130133623842.png" srcset="/img/loading.gif" lazyload alt="image-20191130133623842" style="zoom:150%;" />
+
+<h4 id="Eukaryotes-Contain-Several-Different-DNA-Polymerases"><a href="#Eukaryotes-Contain-Several-Different-DNA-Polymerases" class="headerlink" title="Eukaryotes Contain Several Different DNA Polymerases"></a>Eukaryotes Contain Several Different DNA Polymerases</h4><p>Mammalian cells contain well over a dozen different DNA polymerases</p>
+<p>Four: <u>alpha (α), delta (δ), epsilon (ε) and gamma (γ)</u> have the primary function of replicating DNA</p>
+<ul>
+<li><p>α, δ and ε → Nuclear DNA</p>
+</li>
+<li><p>γ → Mitochondrial DNA</p>
+</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130144223501.png" srcset="/img/loading.gif" lazyload alt="image-20191130144223501"></p>
+<p>DNA pol α is the only polymerase to associate with primase</p>
+<ul>
+<li>The DNA pol α&#x2F;primase complex synthesizes a short RNA-DNA hybrid</li>
+<li>This is used by DNA pol δ or ε for the processive elongation of the leading and lagging strands</li>
+</ul>
+<p>The exchange of DNA pol α, δ and ε is called a <u><strong>polymerase switch</strong></u></p>
+<ul>
+<li>It occurs only after the RNA-DNA hybrid is made</li>
+</ul>
+<h3 id="4-DNA-Ligase"><a href="#4-DNA-Ligase" class="headerlink" title="4.  DNA Ligase"></a>4.  DNA Ligase</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130133704537.png" srcset="/img/loading.gif" lazyload alt="image-20191130133704537" style="zoom: 67%;" />
+
+<h3 id="5-Summary-of-Elongation"><a href="#5-Summary-of-Elongation" class="headerlink" title="5. Summary of Elongation"></a>5. Summary of Elongation</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130133832207.png" srcset="/img/loading.gif" lazyload alt="image-20191130133832207"></p>
+<ul>
+<li><strong>DNA helicase</strong> breaks the hydrogen bonds between the DNA strands.</li>
+<li><strong>Topoisomerase</strong> alleviates positive supercoiling.</li>
+<li><strong>Single-strand binding proteins</strong> keep the parental strands apart.</li>
+<li><strong>Primase</strong> synthesizes an RNA primer.</li>
+<li><strong>DNA polymerase III</strong> synthesizes a daughter strand of DNA. </li>
+<li><strong>DNA polymerase I</strong> excises the RNA primers and fills in with DNA (not shown).</li>
+<li><strong>DNA ligase</strong> covalently links the Okazaki fragments together</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130134055167.png" srcset="/img/loading.gif" lazyload alt="image-20191130134055167" style="zoom: 67%;" />
+
+<h2 id="DNA-Replication-Complexes"><a href="#DNA-Replication-Complexes" class="headerlink" title="DNA Replication Complexes"></a>DNA Replication Complexes</h2><p>DNA helicase and primase are physically bound to each other to form a complex called the <strong>primosome（引发体）</strong></p>
+<blockquote>
+<p>引发体（Primosome）是在DNA复制过程当中，引发合成各个冈崎片段时所需要的多蛋白复合物（<u>DNA复制过程中合成RNA引物的多种蛋白质复合体</u>）。主要是由引物酶和DNA解旋酶等成份组成。引发体沿着不连续合成的DNA的那一条链（复制叉）移动，移动过程需要三磷酸腺苷（ATP）供能，移动方向与RNA及DNA的合成方向相反。</p>
+</blockquote>
+<ul>
+<li>This complex leads the way at the <u>replication fork</u></li>
+</ul>
+<p>The primosome is physically associated with the DNA polymerase holoenzyme forming the <strong>replisome（复制体）</strong></p>
+<blockquote>
+<p>复制体（英语：Replisome）是参与DNA复制的蛋白质复合物（<u>执行DNA复制功能的多种蛋白质复合体</u>），其中至少含有DNA聚合酶及引发体（primosome，引发酶与其他分子的复合物）。以大肠杆菌为例，此类细菌的复合体包含两组DNA聚合酶III全酶（DNA polymerase III holoenzyme）、引发酶与螺旋酶。</p>
+<p>复制体作用时位于复制叉附近，沿着复制叉开启的方向移动，合成DNA。</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130134726821.png" srcset="/img/loading.gif" lazyload alt="image-20191130134726821"></p>
+<p>Two DNA pol III proteins act in concert to replicate both the leading and lagging strands</p>
+<ul>
+<li>The two proteins form a dimeric DNA polymerase that moves as a unit toward the replication fork</li>
+</ul>
+<h2 id="DNA-replication-Termination"><a href="#DNA-replication-Termination" class="headerlink" title="DNA replication: Termination"></a>DNA replication: Termination</h2><p>In E. coli, opposite to <strong>oriC</strong> is a pair of termination sequences called <strong>ter</strong> sequences. These are designated T1 and T2,</p>
+<ul>
+<li>T1 stops counterclockwise forks, T2 stops clockwise</li>
+</ul>
+<p>The protein <strong>tus</strong> (**<u>t</u>**ermination **<u>u</u>**tilization **<u>s</u>**ubstance) binds to these sequences</p>
+<ul>
+<li>It can then stop the movement of the replication forks</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130135106563.png" srcset="/img/loading.gif" lazyload alt="image-20191130135106563" style="zoom: 50%;" />
+
+<p>DNA replication <u>ends when oppositely advancing forks meet</u> (usually at T1 or 72)</p>
+<p>DNA replication often results in two <u>intertwined（纠缠；编结）</u> molecules</p>
+<ul>
+<li>Intertwined circular molecules are termed <strong>catenanes（索烃）</strong></li>
+</ul>
+<blockquote>
+<p>索烃是一个机械互锁分子，包含有两个或两个以上互锁的大环分子。除非环分子内部的共价键断裂，否则互锁的环不能够分开。索烃的英文名（Catenane）源自拉丁文的Catena，意思是“链”。索烃和其他机械互锁分子有着概念上的联系，例如：轮烷、分子扭结和分子博洛米尼结。</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130135406448.png" srcset="/img/loading.gif" lazyload alt="image-20191130135406448" style="zoom:67%;" />
+
+<ul>
+<li>These are separated by the action of <strong>topoisomerases（拓扑异构酶）</strong></li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130135506253.png" srcset="/img/loading.gif" lazyload alt="image-20191130135506253" style="zoom: 33%;" />
+
+<h2 id="Proofreading-校正"><a href="#Proofreading-校正" class="headerlink" title="Proofreading 校正"></a>Proofreading 校正</h2><p>Proofreading activity carry out by the <u>3’ -5’ exonuclease activities of DNA polymerase</u></p>
+<p>DNA polymerase I of E. coli has build in 3’-5’ exonuclease activities</p>
+<p>DNA polymerase III of E coli requires s subunit to carry out 3’-5’exonuclease activities</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130140918355.png" srcset="/img/loading.gif" lazyload alt="image-20191130140918355" style="zoom:50%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130141401089.png" srcset="/img/loading.gif" lazyload alt="image-20191130141401089" style="zoom:50%;" />
+
+<h2 id="Multiple-Origins-of-Replication"><a href="#Multiple-Origins-of-Replication" class="headerlink" title="Multiple Origins of Replication"></a>Multiple Origins of Replication</h2><p>Eukaryotes have long linear chromosomes</p>
+<ul>
+<li>They therefore require multiple origins of replication, To ensure that the DNA can be replicated in a reasonable time.</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130141657573.png" srcset="/img/loading.gif" lazyload alt="image-20191130141657573" style="zoom:50%;" />
+
+<h2 id="Nucleosomes-Assembly"><a href="#Nucleosomes-Assembly" class="headerlink" title="Nucleosomes Assembly"></a>Nucleosomes Assembly</h2><p>Nucleosomes Assembly happens during DNA Replication</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130144837224.png" srcset="/img/loading.gif" lazyload alt="image-20191130144837224" style="zoom: 50%;" />
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetics/" class="category-chain-item">Genetics</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetics/" class="print-no-link">#Genetics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L10 Replication of DNA</div>
+      <div>https://zhenyumi.github.io/posts/49cb3628/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/a007f9ca/" title="L10 Contractile proteins and molecular motors">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L10 Contractile proteins and molecular motors</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/5d442000/" title="L11 Biological Catalysts">
+                        <span class="hidden-mobile">L11 Biological Catalysts</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

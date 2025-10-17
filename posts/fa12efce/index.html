@@ -1,0 +1,978 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Analysis of gene expression and other characteristics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L13 Functional analysis of genes">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/fa12efce/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Analysis of gene expression and other characteristics">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105220005780.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105220853489.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105220926767.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221016548.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221045246.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221338184.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221448404.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221455467.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221529254.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221549110.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221602453.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105224231326.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105224254800.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105224305204.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105224451850.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105224532823.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105225116989.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105225200666.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105225242397.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105225311175.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105225316693.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230340447.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230358675.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230550935.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230656990.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230709264.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230736926.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230812163.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230826171.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230901502.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230921329.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230936175.png">
+<meta property="article:published_time" content="2021-01-08T10:35:40.000Z">
+<meta property="article:modified_time" content="2021-01-08T10:35:40.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetic Engineering">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105220005780.png">
+  
+  
+  
+  <title>L13 Functional analysis of genes - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L13 Functional analysis of genes</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-01-08 18:35" pubdate>
+          2021年1月8日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          402 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          4 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L13 Functional analysis of genes</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Understanding-the-expression-of-a-gene-with-spatial-and-temporal-resolution"><a href="#一、Understanding-the-expression-of-a-gene-with-spatial-and-temporal-resolution" class="headerlink" title="一、Understanding the expression of a gene with spatial and temporal resolution"></a>一、Understanding the expression of a gene with spatial and temporal resolution</h1><p><strong>Why It Matters ? Gene Expression</strong></p>
+<p>The central dogma – gene expression is one of the major contributing factor of protein expression, which finally makes a cell “the living cell”.</p>
+<p>What causes disease ? What are the basis of cell differentiation ? What determines the quality of the rice that you eat every day ?</p>
+<p>These questions almost inevitably links to the gene expression pattern and the underlying regulation mechanisms.</p>
+<p><strong>What are the common ways to investigate gene expression ?</strong></p>
+<ul>
+<li>Northern Blot</li>
+<li>Reverse-transcription quantitative PCR (RT-qPCR)</li>
+<li>Gene-CHIP</li>
+<li>Next generation sequencing</li>
+<li>Third generation sequencing</li>
+</ul>
+<p>How to obtain gene expression information with spatial and temporal resolution ?</p>
+<ul>
+<li>Reporter Gene fusion</li>
+<li>In-situ hybridization</li>
+<li>Immunostaining</li>
+<li>Single Cell sequencing</li>
+</ul>
+<h2 id="Reporter-Gene-fusion"><a href="#Reporter-Gene-fusion" class="headerlink" title="Reporter Gene fusion"></a>Reporter Gene fusion</h2><h3 id="1-Reporter-Gene-fusion-GFP-target-gene-fusion"><a href="#1-Reporter-Gene-fusion-GFP-target-gene-fusion" class="headerlink" title="1. Reporter Gene fusion: GFP-target gene fusion"></a>1. Reporter Gene fusion: GFP-target gene fusion</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105220005780.png" srcset="/img/loading.gif" lazyload alt="image-20210105220005780" style="zoom:100%;" />
+
+<ul>
+<li>Why make a GFP fusion ?</li>
+</ul>
+<p>To track and quantify proteins (with subcellular resolution)</p>
+<p>To watch protein-protein interactions</p>
+<p>To describe biological events and signals in a cell</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105220853489.png" srcset="/img/loading.gif" lazyload alt="image-20210105220853489" style="zoom:100%;" />
+
+<ul>
+<li>GFP Was discovered by Osamu Shimomura in 1961</li>
+<li>GFP gene was cloned in 1992 by Douglas Prasher. In 1995, by changing a single amino acid, Roger Tsien engineered the first improved mutant of GFP with increased fluorescence and photostability、</li>
+<li>Today, many more derivatives have been created from GFP and dsRed (a red fluorescent protein)</li>
+</ul>
+<h3 id="2-Histochemical-GUS-assay"><a href="#2-Histochemical-GUS-assay" class="headerlink" title="2. Histochemical GUS assay"></a>2. Histochemical GUS assay</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105220926767.png" srcset="/img/loading.gif" lazyload alt="image-20210105220926767" style="zoom:100%;" />
+
+<ul>
+<li>GUS is short for <strong>β-Glucuronidase</strong>, a gene from Escherichia coli (E.coli) that encodes a sugar consuming enzyme–Glucuronidase. As there is <u>no detectable GUS gene expression in plants</u>, and the bacterial GUS gene does not interfere with plant intrinsic gene expressions, GUS provides an ideal reporter, being orthogonal to native genetic machinery, for gene expression in the plant system. <u>By fusing the promoter of genes of interest to the GUS</u> coding region, <u>the expression patterns of plant genes can be reflected by the activation of GUS</u></li>
+</ul>
+<p>X-Gluc (5-bromo-4-chloro-3-indolyl glucuronide) —–<strong>Beta-glucuronidase</strong></p>
+<p>X-Gal (5-bromo-4-chloro-3-indolyl-β-D-galactopyranoside) —–<strong>Beta-galactosidase</strong></p>
+<h2 id="In-situ-hybridization"><a href="#In-situ-hybridization" class="headerlink" title="In-situ hybridization"></a>In-situ hybridization</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221016548.png" srcset="/img/loading.gif" lazyload alt="image-20210105221016548" style="zoom:100%;" />
+
+<p>In situ hybridization enables the detection and precise localization of a specific nucleic acid sequence within an individual cell.</p>
+<p>The nucleic acid sequence is bound specifically in a tissue section by complementary base pairing, that is, hybridization, with a detectable nucleic acid segment called a probe</p>
+<p>In situ hybridization (ISH) combines three main advantages: great sensitivity, precise anatomical localization, and the possibility of quantification.</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221045246.png" srcset="/img/loading.gif" lazyload alt="image-20210105221045246"></p>
+<p>Single-molecule fluorescence in situ hybridization (smFISH)</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221338184.png" srcset="/img/loading.gif" lazyload alt="image-20210105221338184" style="zoom:67%;" />
+
+<ul>
+<li>smFISH was developed to maximize both sensitivity and specificity by using <u>multiple singly labelled probes to visualize RNA molecules as discrete spots of fluorescence</u></li>
+<li>A recent version of this method uses <u>48 fluorescently labeled DNA oligonucleotides (20mers)</u> to hybridize to different portions of each transcript</li>
+<li>Preserves the <strong>spatial</strong> information of the cellular mRNA content with subcellular resolution within tissues.</li>
+</ul>
+<h2 id="Immunostaining"><a href="#Immunostaining" class="headerlink" title="Immunostaining"></a>Immunostaining</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221448404.png" srcset="/img/loading.gif" lazyload alt="image-20210105221448404" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221455467.png" srcset="/img/loading.gif" lazyload alt="image-20210105221455467" style="zoom: 50%;" />
+
+<ul>
+<li>Immunostaining uses antibodies to detect an antigen in cells or tissue.</li>
+<li>The major benefit of immunostaining in immunohistochemistry (IHC) is the ability to see the desired target in a tissue sample while maintaining the spatial context and tissue architecture.</li>
+</ul>
+<h2 id="Single-Cell-sequencing"><a href="#Single-Cell-sequencing" class="headerlink" title="Single Cell sequencing"></a>Single Cell sequencing</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221529254.png" srcset="/img/loading.gif" lazyload alt="image-20210105221529254" style="zoom:100%;" />
+
+<ul>
+<li>Single cell sequencing examines the s equence information from individual c ells with optimized next-generation sequencing (NGS) technol ogies, providing a higher resolution of cellular differences and a better und erstanding of the function of an indiv idual cell in the context of its microe nvironment.</li>
+<li>In-situ RNA sequencing ?</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221549110.png" srcset="/img/loading.gif" lazyload alt="image-20210105221549110" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105221602453.png" srcset="/img/loading.gif" lazyload alt="image-20210105221602453" style="zoom: 50%;" />
+
+<ul>
+<li>In situ sequencing techniques detect individual gene transcripts (colored dots) in preserved mouse brain tissue. This approach allows researchers to identify and characterize different cell types in their native context with unprecedented detail. Xiaoyan Qian&#x2F;Stockholm University</li>
+</ul>
+<h1 id="二、Build-up-a-link-between-genotype-and-phenotype"><a href="#二、Build-up-a-link-between-genotype-and-phenotype" class="headerlink" title="二、Build up a link between genotype and phenotype"></a>二、Build up a link between genotype and phenotype</h1><h2 id="Principle-of-Genetic-mapping"><a href="#Principle-of-Genetic-mapping" class="headerlink" title="Principle of Genetic mapping"></a>Principle of Genetic mapping</h2><p>How to identify the gene responsible for a certain phenotype ? </p>
+<p><strong>Genetic mapping</strong> is based on the use of genetic techniques to construct maps <u>showing the positions of genes</u> and other sequence features on a genome</p>
+<p>Genetic techniques include <strong>cross-breeding experiments</strong> or, Case of humans, the <u>examination of family histories</u> (pedigrees).</p>
+<p><strong>Map-based cloning</strong>, also called positional cloning, is the process of identifying the genetic basis of a mutant phenotype by looking for linkage to markers whose physical location in the genome is known.</p>
+<ul>
+<li>Marker连接到多态性位点（Polymorphism），通过分析后代linkage的情况得知marker的相对位置</li>
+</ul>
+<p>分析两个基因的linkage情况（WT和Mutant亲代纯合）：</p>
+<ul>
+<li>在F2代，PCR后跑胶的结果A、B基因会分别显示1：2：1的情况</li>
+<li>若A与B连锁（linkage），那么出现A纯合（只有300bp）的情况下一定会伴随纯的400bp条带</li>
+</ul>
+<p>Genetic Map</p>
+<ul>
+<li>A genetic map is a type of chromosome map that shows the relative locations of genes and other important features.</li>
+<li>The map is based on the idea of linkage. </li>
+<li>The distance between two markers on the genetic map indicate the probability that they will be inherited together, which means that the closer two genes are to each other on the chromosome, the greater the probability that they will be inherited together.</li>
+<li>By following inheritance patterns, the relative locations of genes along the chromosome are established</li>
+</ul>
+<p>Physical Map</p>
+<ul>
+<li>A physical map of a chromosome or a genome that shows the physical locations of genes and other DNA sequences of interest.</li>
+<li>Physical maps are used to help scientists identify and isolate genes by positional cloning</li>
+</ul>
+<p>Genetic Markers</p>
+<ul>
+<li>A genetic marker is a DNA sequence with a known physical location on a chromosome</li>
+<li>Genetic markers are used to track the inheritance of a nearby gene that has not yet been identified, but whose approximate location is known.</li>
+<li>The genetic marker itself may be a part of a gene or may have no known function</li>
+</ul>
+<p>A example of genetic marker: Restriction fragment length polymorphisms (RFLP)</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105224231326.png" srcset="/img/loading.gif" lazyload alt="image-20210105224231326" style="zoom:100%;" />
+
+<h3 id="1-The-procedure-of-map-based-cloning"><a href="#1-The-procedure-of-map-based-cloning" class="headerlink" title="1. The procedure of map-based cloning"></a>1. The procedure of map-based cloning</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105224254800.png" srcset="/img/loading.gif" lazyload alt="image-20210105224254800" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105224305204.png" srcset="/img/loading.gif" lazyload alt="image-20210105224305204" style="zoom:100%;" />
+
+<ul>
+<li>A genetic marker that far away from the target gene would segregate according to the “law of segregation”</li>
+<li>A genetic marker that adjacent to the target gene would strictly inherent marker from subspecies A, with absence of the marker from subspecies B</li>
+<li>Therefore, we can sequence the region close to that genetic marker to identify the gene of our interest</li>
+</ul>
+<h2 id="Gene-Knock-out-and-Gene-Knock-in"><a href="#Gene-Knock-out-and-Gene-Knock-in" class="headerlink" title="Gene Knock-out and Gene Knock-in"></a>Gene Knock-out and Gene Knock-in</h2><p>After you cloned a gene through mapped based cloning, how can you be sure that you indeed isolated the gene that responsible for the phenotype ?</p>
+<p><strong>There are often</strong> <strong>two ways</strong></p>
+<ul>
+<li>One can i<u>ntroduce a functional copy of the candidate gene</u> and see if the phenotype has been complimented. this is known as complementation test<ul>
+<li>The action that artificially introduce a (foreign) gene into the cell is known as <strong>Gene Knock-in</strong></li>
+</ul>
+</li>
+<li>Alternatively, by using a wild-type organism, one can try to deplete or inactivate the gene of interest, the phenotype should be reproduced through this way.<ul>
+<li>The action that a gene is completed being inactivated or depleted is known as Gene <strong>knock-out</strong></li>
+</ul>
+</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105224451850.png" srcset="/img/loading.gif" lazyload alt="image-20210105224451850" style="zoom:100%;" />
+
+<p>Different strategies for creating transgenic mice</p>
+<ol>
+<li>(A) retroviral approach, which is not routinely used;</li>
+<li>(B) standard transgene approach, in which the DNA is inserted into the genome in an unspecific manner; </li>
+<li>(C) gene-targeted transgene approach, which is an approach that is routinely used to create conventional knockout transgenic mice, usually with a constitutive loss-of-function mutation.</li>
+</ol>
+<p>Gene Knock-out and Gene Knock-in has been absolutely important for modern biology</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105224532823.png" srcset="/img/loading.gif" lazyload alt="image-20210105224532823" style="zoom:100%;" />
+
+<h3 id="1-Principle-of-making-a-knock-out-Mice"><a href="#1-Principle-of-making-a-knock-out-Mice" class="headerlink" title="1. Principle of making a knock-out Mice"></a>1. Principle of making a knock-out Mice</h3><p>Which method is better ?</p>
+<p><strong>Gene Targeting</strong> - Adv. - if the DNA sequence of the target gene is known, researchers can precisely knock out the gene at a high rate of efficiency</p>
+<p><strong>Gene Trapping</strong> – Adv. researchers do not need to know the DNA sequences of specific genes in order to knock them out. Also, a single Vector can be used to knock out various genes</p>
+<ul>
+<li>基因陷阱：随机敲击，后鉴定</li>
+</ul>
+<p><strong>Disadv</strong>. not every successful insertion of artificial DNA into a gene leads to a loss of function. Also considerable time must be spent conducting tests to identify ES cells in which gene(s) actually have been knocked out</p>
+<ul>
+<li>So Gene Targeting (by homologous recombination) is widely used.</li>
+</ul>
+<h4 id="Production-of-knockout-mice-by-Gene-Targeting"><a href="#Production-of-knockout-mice-by-Gene-Targeting" class="headerlink" title="Production of knockout mice (by Gene Targeting)"></a>Production of knockout mice (by Gene Targeting)</h4><ol>
+<li>Harvesting of Embryonic stem cells from a mouse blastocyst.</li>
+<li>Introducing the artificial DNA into the ES cells in the culture.</li>
+<li>Screen ES cells and select those whose DNA includes the new gene</li>
+<li>Implant selected cells into normal mouse embryos, making “chimeras“</li>
+<li>Implant chimeric embryos in pseudopregnant females.</li>
+<li>Females give birth to chimeric offspring, which are subsequently bred to verify transmission of the new gene, producing a mutant mouse line.</li>
+</ol>
+<h5 id="1-Positive-selection"><a href="#1-Positive-selection" class="headerlink" title="(1) Positive selection"></a>(1) Positive selection</h5><p>筛选出发生了重组的细胞</p>
+<ul>
+<li>It involves the isolation of a target cell population by using an antibody that specifically binds that population.</li>
+<li>Positive selection markers are used to enrich for recombination events</li>
+<li>Eg. Encoding Antibiotic resistance gene Neomycin</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105225116989.png" srcset="/img/loading.gif" lazyload alt="image-20210105225116989" style="zoom:100%;" />
+
+<ul>
+<li>Flanked by two arms of homologous sequence</li>
+<li>Enrich recombination events through <u>Neomycin selection.</u></li>
+<li>Fragment outside of homologous arm won’t be inserted into host genome.</li>
+</ul>
+<h5 id="2-Negative-selection"><a href="#2-Negative-selection" class="headerlink" title="(2) Negative selection"></a>(2) Negative selection</h5><p>筛选出没有发生变化的细胞</p>
+<ul>
+<li>It involves the depletion of all cell types except your cell type of interest</li>
+<li>Negative selection markers used to enrich for homologous recombination events over random insertions</li>
+<li>Eg. Use of Herpes Simplex Virus (HSV) Thymidine Kinase (TK) gene coupled with gancyclovir treatment</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105225200666.png" srcset="/img/loading.gif" lazyload alt="image-20210105225200666" style="zoom:100%;" />
+
+<ul>
+<li>In case the fragment from vector insert into genome randomly.</li>
+<li>Negative selection kill these cells</li>
+<li>Thymidine Kinase sit outside the homologous arm</li>
+<li>The presence of Thymidine Kinase (TK, from Herpes Simplex Virus) gene coupled with ganciclovir treatment kills the cell.</li>
+</ul>
+<h5 id="3-The-overall-selection-procedure"><a href="#3-The-overall-selection-procedure" class="headerlink" title="(3) The overall selection procedure"></a>(3) The overall selection procedure</h5><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105225242397.png" srcset="/img/loading.gif" lazyload alt="image-20210105225242397" style="zoom:100%;" />
+
+<h3 id="2-Conditional-Knockout-Mouse-–-A-more-accurate-choice-of-gene-knockout"><a href="#2-Conditional-Knockout-Mouse-–-A-more-accurate-choice-of-gene-knockout" class="headerlink" title="2. Conditional Knockout Mouse – A more accurate choice of gene knockout"></a>2. Conditional Knockout Mouse – A more accurate choice of gene knockout</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105225311175.png" srcset="/img/loading.gif" lazyload alt="image-20210105225311175" style="zoom:80%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105225316693.png" srcset="/img/loading.gif" lazyload alt="image-20210105225316693" style="zoom: 50%;" />
+
+<p>GDF8 (Myostatin) knockout mouse:</p>
+<ul>
+<li>More than twice the muscle mass of a wildtype mouse</li>
+</ul>
+<p>FGF5 knockout mouse:</p>
+<ul>
+<li>It has long, angora-like hair</li>
+</ul>
+<h2 id="Gene-Knock-out-and-Gene-Knock-in-in-Plant"><a href="#Gene-Knock-out-and-Gene-Knock-in-in-Plant" class="headerlink" title="Gene Knock-out and Gene Knock-in in Plant"></a>Gene Knock-out and Gene Knock-in in Plant</h2><p>Unlike the situation in mammalian cells, homologous recombination has poor efficiency in plant cell. There are two ways to introduce a foreign gene into plant cell.</p>
+<ul>
+<li>Mechanical force mediated transformation</li>
+<li><strong>Agrobacterium tumefaciens</strong> mediated transformation</li>
+</ul>
+<h3 id="1-Microinjection"><a href="#1-Microinjection" class="headerlink" title="1. Microinjection"></a>1. Microinjection</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230340447.png" srcset="/img/loading.gif" lazyload alt="image-20210105230340447" style="zoom:100%;" />
+
+<p>Biolistic Particle Delivery: Gene Guns or Biolistic Bombardment</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230358675.png" srcset="/img/loading.gif" lazyload alt="image-20210105230358675" style="zoom:100%;" />
+
+<ul>
+<li>Particles (e.g. gold) are coated with DNA (vector) and accelerated to a very high speed, and therefore the DNA is able to go into the host cell when the particle penetrate the plant tissue.</li>
+</ul>
+<p>Gene Knock-out and Gene Knock-in in Plant</p>
+<ul>
+<li>Agrobacterium tumefaciens – pathogen and useful tool</li>
+</ul>
+<p>Crown gall disease and the tumor-inducing principle</p>
+<ul>
+<li>1907: Crown gall is caused by a bacterium</li>
+<li>Agrobacterium-induced galls do not require bacterial persistence</li>
+</ul>
+<p>Gall tissues can grow indefinitely without exogenous phytohormones</p>
+<h3 id="2-Structure-and-function-analysis-of-the-Ti-plasmid"><a href="#2-Structure-and-function-analysis-of-the-Ti-plasmid" class="headerlink" title="2. Structure and function analysis of the Ti plasmid"></a>2. Structure and function analysis of the Ti plasmid</h3><p>Some DNA from the Ti plasmid is transferred into the plant cells (1977)</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230550935.png" srcset="/img/loading.gif" lazyload alt="image-20210105230550935" style="zoom:100%;" />
+
+<ul>
+<li>Transfer DNA (T-DNA) moves into the plant cell nucleus. It is flanked by two direct 25 bp repeat border sequences, shown as yellow triangles</li>
+<li>The virulence (vir) genes are required for T-DNA movement into the plant cell (more on them later)</li>
+<li>The organization of Ti plasmids varies between isolates, but all carry one or more T-DNA region and one vir region</li>
+</ul>
+<p>The T-DNA region: tumor-inducing genes and opine synthesis genes</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230656990.png" srcset="/img/loading.gif" lazyload alt="image-20210105230656990" style="zoom:80%;" />
+
+<p>The Ti plasmid can be used to introduce any gene into plants</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230709264.png" srcset="/img/loading.gif" lazyload alt="image-20210105230709264" style="zoom:50%;" />
+
+<ul>
+<li>The discovery that T-DNA was inserted into the plant genome raised the possibility that “any gene” could be transferred into plants</li>
+<li>Tumor-inducing and opine synthesis genes on T-DNA can be replaced by a “gene of interest” and selectable marker</li>
+</ul>
+<p>Development of binary vectors that separate T-DNA and vir genes</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230736926.png" srcset="/img/loading.gif" lazyload alt="image-20210105230736926" style="zoom:100%;" />
+
+<ul>
+<li>T-DNA and the vir genes can be located on separate plasmids or replicons, making cloning easier</li>
+<li>Because the Ti plasmid is so large, a binary system was developed to allow gene cloning into a smaller plasmid</li>
+<li>The smaller plasmid is introduced into Agrobacterium carrying a helper plasmid with the vir genes</li>
+</ul>
+<h3 id="3-Regeneration-of-transgenic-plants-from-transformed-cells"><a href="#3-Regeneration-of-transgenic-plants-from-transformed-cells" class="headerlink" title="3. Regeneration of transgenic plants from transformed cells"></a>3. Regeneration of transgenic plants from transformed cells</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230812163.png" srcset="/img/loading.gif" lazyload alt="image-20210105230812163" style="zoom:100%;" />
+
+<ul>
+<li>Methods had been developed earlier by which to regenerate whole plants from single cells</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230826171.png" srcset="/img/loading.gif" lazyload alt="image-20210105230826171" style="zoom:100%;" />
+
+<h3 id="4-Agrobacterium-mediated-transformation-has-other-uses"><a href="#4-Agrobacterium-mediated-transformation-has-other-uses" class="headerlink" title="4. Agrobacterium-mediated transformation has other uses"></a>4. <em>Agrobacterium</em>-mediated transformation has other uses</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230901502.png" srcset="/img/loading.gif" lazyload alt="image-20210105230901502" style="zoom:67%;" />
+
+<p><strong>Transient expression studies:</strong></p>
+<ul>
+<li>Short-term expression of T-DNA genes gives results faster than generating transgenic plants</li>
+</ul>
+<p>Random insertion of T-DNA create a chance for the isolation of Knock-out mutant of one third of genes in Arabidopsis</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230921329.png" srcset="/img/loading.gif" lazyload alt="image-20210105230921329"></p>
+<p>Epigenetic gene silencing was discovered in transformed plants</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105230936175.png" srcset="/img/loading.gif" lazyload alt="image-20210105230936175" style="zoom:100%;" />
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetic-Engineering/" class="category-chain-item">Genetic Engineering</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetic-Engineering/" class="print-no-link">#Genetic Engineering</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L13 Functional analysis of genes</div>
+      <div>https://zhenyumi.github.io/posts/fa12efce/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年1月8日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/1e1174e2/" title="L14 The application of Genetic Engineering">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L14 The application of Genetic Engineering</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/aaa82678/" title="L12 Different Methods for Gene Cloning">
+                        <span class="hidden-mobile">L12 Different Methods for Gene Cloning</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

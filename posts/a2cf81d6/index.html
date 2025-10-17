@@ -1,0 +1,893 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L13 Enzyme inhibition">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/a2cf81d6/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Biochemistry I (Macromolecules)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+  
+  
+  
+  <title>L13 Enzyme inhibition - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-10_21-07-00.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L13 Enzyme inhibition</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L13 Enzyme inhibition</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Enzyme-Inhibition"><a href="#一、Enzyme-Inhibition" class="headerlink" title="一、Enzyme Inhibition"></a>一、Enzyme Inhibition</h1><p>Why we needs enzyme inhibition:</p>
+<p>One reaction cannot be constantly precessed.</p>
+<p>Inhibition of enzymes can be either <strong>reversible inhibitors</strong> and <strong>irreversible inhibitors</strong>. </p>
+<h2 id="Reversible-Inhibition"><a href="#Reversible-Inhibition" class="headerlink" title="Reversible Inhibition"></a>Reversible Inhibition</h2><p>Reversible inhibition involves <u>noncovalent binding</u> of the inhibitor and can always be reversed, at least in principle, by removal of the inhibitor.</p>
+<p>They differ in the mechanisms by which they decrease the enzyme’s activity and in how they affect the kinetics of the reaction.</p>
+<h3 id="1-Competitive-Inhibition"><a href="#1-Competitive-Inhibition" class="headerlink" title="1. Competitive Inhibition"></a>1. Competitive Inhibition</h3><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>A <strong>competitive inhibitor</strong> competes with substrate for the enzyme active site.  It <u>increases</u> the $K_{M}$</p>
+<blockquote>
+<p>It competes with the substrate for binding to the same site on the enzyme. </p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130641324.png" srcset="/img/loading.gif" lazyload alt="image-20191127130641324" style="zoom: 50%;" />
+
+<p>Both substrate and inhibitor can fit the active site. Substrate can be processed by the enzyme, but inhibitor cannot.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130835870.png" srcset="/img/loading.gif" lazyload alt="image-20191127130835870" style="zoom:50%;" />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130905714.png" srcset="/img/loading.gif" lazyload alt="image-20191127130905714"></p>
+<p>Upon analysis of this case, the expression for <em>v</em> is found to be <u>equation 11.35a</u></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130956464.png" srcset="/img/loading.gif" lazyload alt="image-20191127130956464"></p>
+<h4 id="v-equation-Deduction"><a href="#v-equation-Deduction" class="headerlink" title="v equation Deduction"></a>v equation Deduction</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130835870.png" srcset="/img/loading.gif" lazyload alt="image-20191127130835870" style="zoom:50%;" />
+
+<p>Define: $[I]$ is the concentration of inhibitor and $K_{I}$<br>$$<br>K_{I} &#x3D; [E] [I] &#x2F; [EI]<br>$$</p>
+<p>$$<br>\because [E]<em>{t} &#x3D; [E] + [ES] + [EI] \ K</em>{M} &#x3D; \frac{[E] [S]}{[ES]} \ K_{I} &#x3D; \frac{[E] [I]}{[EI]}<br>$$</p>
+<p>$$<br>\therefore [E]<em>{t} &#x3D; [E] + [ES] + \frac{[E] [I]}{K</em>{I}}<br>$$</p>
+<p>$$<br>\therefore [E]<em>{t} - [ES] &#x3D; [E] (1 + \frac{[I]}{K</em>{I}})<br>$$</p>
+<p>$$<br>\because K_{M} [ES]  &#x3D; [E][S] &#x3D; \frac{[E]<em>{t} - [ES]}{1 + \frac{[I]}{K</em>{I}}} \cdot [S]<br>$$</p>
+<p>$$<br>\therefore K_{M} [ES] (1 + \frac{[I]}{K_{I}}) &#x3D; [E]_{t} [S] - [ES] [S]<br>$$</p>
+<p>$$<br>\therefore v &#x3D; k_{cat} [ES] &#x3D; \frac{k_{cat} [E]<em>{t} [S]} {(1 + \frac{[I]}{K</em>{I}}) K_{M} + [S]} &#x3D; \frac{V_{max} [S]}{\alpha K_{M} + [S]} &#x3D; \frac{V_{max} [S]}{K_{M}^{app} + [S]}<br>$$</p>
+<p>Then we get <u>equation 11.36</u><br>$$<br>K_{M}^{app} &#x3D; \alpha K_{M} &#x3D; (1 + \frac{[I]}{K_{I}}) K_{M} &#x3D; K_{M} + \frac{K_{M}}{K_{I}} [I]<br>$$</p>
+<h4 id="Effects-of-competitive-inhibition-on-enzyme-kinetics"><a href="#Effects-of-competitive-inhibition-on-enzyme-kinetics" class="headerlink" title="Effects of competitive inhibition on enzyme kinetics"></a>Effects of competitive inhibition on enzyme kinetics</h4><p><strong>(a)</strong> The effect of a competitive inhibitor (I) on reaction velocity at different substrate concentrations. Two sets of substrate-velocity experiments were carried out, one with (red line) and one without (blue line) inhibitor present. </p>
+<p>Addition of the inhibitor decreases the velocity but not the $V_{max}$.  For competitive inhibition the maximum velocity is unchanged because as [S] becomes very large, <em>v</em> approaches $V_{max}$ <u>(just as in the absence of inhibition</u>), </p>
+<p>and $V_{max} &#x3D; k_{cat} [E]_{t}$</p>
+<p>The apparent $K_{M} $ is higher in the presence of inhibitor.</p>
+<p>As predicted, increasing [I] causes an increase $K_{M}$ in the apparent</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127132421965.png" srcset="/img/loading.gif" lazyload alt="image-20191127132421965" style="zoom:50%;" />
+
+<p><strong>(b)</strong> Figure(b) is the Lineweaver–Burk plots of the reactions shown in (a). </p>
+<p><u>The lines cross the 1&#x2F;<em>v</em> axis at the same $V_{max}$, showing that I is a competitive inhibitor.</u> </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127132531469.png" srcset="/img/loading.gif" lazyload alt="image-20191127132531469" style="zoom: 50%;" />
+
+<p><strong>(c)</strong> Determination of KM and KI . If the measurement of is repeated at different concentrations of I, KI can be determined from the slope of the line, and the true KM from the line’s intercept where <u>(see Equation 11.36).</u></p>
+<p>通常使用线性拟合来确定最终的slope，提升accuracy，缩小$K_{M}$的fit domain</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127184258077.png" srcset="/img/loading.gif" lazyload alt="image-20191127184258077" style="zoom: 67%;" />
+
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><p>A clear example of a competitive inhibitor is shown in <u>Figure 11.31</u>. </p>
+<p>The dinucleotide <strong>UpA</strong> is an excellent substrate for the enzyme <strong>ribonuclease（核糖核酸酶）,</strong> which catalyzes hydrolysis of the phosphodiester bond between the two nucleotides. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127184809462.png" srcset="/img/loading.gif" lazyload alt="image-20191127184809462" style="zoom:67%;" />
+
+<p>The substrate <strong>UpA</strong> and the structurally similar molecule <strong>UpcA</strong> are competitors for the enzyme ribonuclease, which <u>catalyzes hydrolysis of the phosphodiester bond between the two nucleotides.</u> </p>
+<p>But if the <u>oxygen atom</u> at the cleavage site in UpA is replaced by a <u>$CH_{2}$ group</u>, the molecule becomes the <em>phosphonate</em> analog <strong>UpcA</strong>, a strong competitive inhibitor. </p>
+<p>The single difference between the substrate and the inhibitor is shown in magenta（品红）.</p>
+<h3 id="2-Uncompetitive-inhibition"><a href="#2-Uncompetitive-inhibition" class="headerlink" title="2. Uncompetitive inhibition"></a>2. Uncompetitive inhibition</h3><h4 id="Introduction-1"><a href="#Introduction-1" class="headerlink" title="Introduction"></a>Introduction</h4><p>An <strong>uncompetitive inhibitor</strong> does not compete for the active site but affects the catalytic event. （改变了反应路径）</p>
+<p>This form of inhibition occurs when a molecule or an ion can bind to a <em>second</em> site on an enzyme surface (not the active site) in such a way that it modifies $k_{cat}$</p>
+<p>The simplest case to consider is one in which <u>the inhibitor molecule binds only to the ES complex</u> and <u>does not interfere in any way with substrate binding, but completely prevents the catalytic step</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127195710241.png" srcset="/img/loading.gif" lazyload alt="image-20191127195710241" style="zoom: 50%;" />
+
+<p>Here we <u>distinguish the equilibrium constant for inhibitor binding to free enzyme</u>, $K_{I} \text{ and } K’<em>{I}$, the equilibrium constant for inhibitor binding to the ES complex.<br>$$<br>K’</em>{I} &#x3D; \frac{[ES] [I]}{[EIS]}<br>$$<br><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127201747282.png" srcset="/img/loading.gif" lazyload alt="image-20191127201747282" style="zoom:50%;" /></p>
+<h4 id="Deduction"><a href="#Deduction" class="headerlink" title="Deduction"></a>Deduction</h4><p>$$<br>\because [E]<em>{t} &#x3D; [E] + [ES] + [ESI] \<br>k</em>{1} [E] [S] &#x3D; k_{-1} [ES] + k_{cat} [ES] \<br>K’_{I} &#x3D; \frac{[ES] [I]}{[EIS]}<br>$$</p>
+<p>$$<br>\therefore [E]<em>{t} &#x3D; [E] + [ES] + \frac{[ES][I]}{K’</em>{I}}<br>$$</p>
+<p>$$<br>\therefore [E]<em>{t} - [ES] (1 + \frac{[I]}{K’</em>{I}}) &#x3D; [E]<br>$$</p>
+<p>$$<br>\therefore [E][S] &#x3D; K_{M} [ES] &#x3D; [E]<em>{t} [S] - [ES] [S] (1 + \frac{[I]}{K’</em>{I}})<br>$$</p>
+<p>$$<br>\therefore [ES] (K_{M} + (1 + \frac{[I]}{[K’<em>{I}]}) [S] ) &#x3D; [E]</em>{t} [S]<br>$$</p>
+<p>$$<br>\therefore v &#x3D; k_{cat} [ES] &#x3D; \frac{k_{cat} [E]<em>{t} [S]}{K</em>{M} + (1 + \frac{[I]}{[K’<em>{I}]}) [S] } &#x3D; \frac{V</em>{max} [S]}{K_{M} + \alpha ‘ [S]} &#x3D; \frac{V_{max}^{app} [S]}{K_{M}^{app} + [S]}<br>$$</p>
+<p>Where<br>$$<br>\alpha ‘ &#x3D; 1 + \frac{[I]}{[K’_{I}]}<br>$$</p>
+<p>$$<br>V_{M}^{app} &#x3D; \frac{V_{max}}{\alpha ‘}<br>$$</p>
+<p>$$<br>K_{M} &#x3D; \frac{K_{M}}{\alpha ‘}<br>$$</p>
+<h4 id="Effects-of-uncompetitive-inhibition-on-enzyme-kinetics"><a href="#Effects-of-uncompetitive-inhibition-on-enzyme-kinetics" class="headerlink" title="Effects of uncompetitive inhibition on enzyme kinetics"></a>Effects of uncompetitive inhibition on enzyme kinetics</h4><p>In the presence of an uncompetitive inhibitor both $V_{max}^{app}$ and $K_{M}^{app}$ appear to be <em>reduced</em> by a factor of $1&#x2F;\alpha ‘$（<u>More complex, less free enzyme</u>）</p>
+<p><u>Figure 11.33 (a)</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127202617201.png" srcset="/img/loading.gif" lazyload alt="image-20191127202617201" style="zoom:67%;" />
+
+<p>At $[S] &lt; K_{M}$ the effect of the inhibitor is minimal because as [S] decreases, <em>v</em> approaches $V_{max}[S]&#x2F;K_{M}$. </p>
+<p>在最开始的时候，$\alpha ‘ [S] + K_{M} \approx K_{M}$，因此两条曲线overlap</p>
+<p>At $[S] &gt; K_{M}$, the effect of the inhibitor on reducing $V_{max}$ is apparent because as [S] increases, <em>v</em> approaches $V_{max} &#x2F; \alpha ‘$. (<u>These effects cannot be reversed by increasing [S].</u>)</p>
+<p>Thus, as shown in <u>Figure 11.33a</u>, the <em>v</em> vs. [S] plots overlap at low [S] but diverge at higher [S].</p>
+<p>Uncompetitive inhibition is distinguished from competitive inhibition by two observations: </p>
+<ol>
+<li><p>uncompetitive inhibition cannot be reversed by increasing [S] </p>
+</li>
+<li><p>as shown in <u>Figure 11.33b</u>, the Lineweaver–Burk plot yields parallel rather than intersecting lines (because the factor drops out of the ratio to give a slope  &#x3D; $K_{M}&#x2F;V_{max}$ for all values of $\alpha ‘$).</p>
+</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127202632249.png" srcset="/img/loading.gif" lazyload alt="image-20191127202632249" style="zoom: 50%;" />
+
+<h4 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h4><p>This Uncompetitive inhibition behavior is found in the inhibition of acetylcholinesterase (see Chapter 23) by tertiary amines（书胺） $R_{3} N$</p>
+<h3 id="3-Mixed-Inhibition"><a href="#3-Mixed-Inhibition" class="headerlink" title="3. Mixed Inhibition"></a>3. Mixed Inhibition</h3><h4 id="Introduction-2"><a href="#Introduction-2" class="headerlink" title="Introduction"></a>Introduction</h4><ul>
+<li>The inhibitor binds at a site on the enzyme surface different from that of the substrate.  </li>
+<li>In this simplified example, the inhibitor binds to both free enzyme and the ES complex.  </li>
+<li>EI has reduced substrate binding affinity compared to free enzyme.  </li>
+<li>The EIS complex cannot carry out the catalytic event.</li>
+</ul>
+<p>This form of inhibition occurs when a molecule or an ion can bind to both the free enzyme and the ES complex (see <u>Figure 11.34</u>):</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127203116514.png" srcset="/img/loading.gif" lazyload alt="image-20191127203116514" style="zoom: 67%;" />
+
+<p>Again, we distinguish the equilibrium constants $K_{I}$ and $K’_{I}$ respectively, for inhibitor binding to E and ES.</p>
+<p>Substrate binding to the EI complex (green arrows in the scheme above) is typically significantly reduced compared to that for binding to free enzyme. </p>
+<p>Thus, the process $EI + S \leftrightarrows EIS$ <u>will not be considered here</u>, although it is part of a complete thermodynamic analysis; in doing so, the derivation of the Michaelis–Menten equation for mixed inhibition is greatly simplified without significantly altering the conclusions of the analysis. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127215329974.png" srcset="/img/loading.gif" lazyload alt="image-20191127215329974" style="zoom: 50%;" />
+
+<p>For this simplified case: </p>
+<p><u>equation 11.38</u><br>$$<br>v &#x3D; \frac{V_{max}^{app } [S]}{K_{M}^{app} + [S]} &#x3D; \frac{V_{max}[S]}{\alpha K_{M} + \alpha ‘ [S]}<br>$$<br>此时<br>$$<br>V_{max}^{app} &#x3D; \frac{V_{max}}{\alpha’} \<br>V_{max}^{app} \text{ decreased }<br>$$</p>
+<p>$$<br>K_{M}^{app} &#x3D; \frac{\alpha K_{M}}{\alpha’} &#x3D; \frac{1 + \frac{[I]}{K_{I}}}{1 + \frac{I}{K’<em>{I}}}K</em>{M} \<br>K_{M}^{app} \text{ change depends on }K_{I} \text{ and } K’_{I}<br>$$</p>
+<p>In most cases, the inhibitor has a greater affinity for the free enzyme than for the ES complex; thus, $\alpha $ is typically greater than $\alpha’$</p>
+<p><u>Figure 11.35</u></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127214803787.png" srcset="/img/loading.gif" lazyload alt="image-20191127214803787"></p>
+<p><u>Figure 11.35</u> shows that the Lineweaver–Burk plot for mixed inhibition reflects this decreased $V_{max}$ and increased  $K_{M}$ and is distinct from similar plots for competitive and uncompetitive modes of inhibition. </p>
+<p>Finally, mixed inhibitors effectively reduce <em>v</em> at low and high values of [S].</p>
+<ul>
+<li>At $[S] &lt; K_{M}$, <em>v</em> approaches $V_{max} [S] &#x2F; \alpha K_{M}$</li>
+<li>At $[S] &gt; K_{M}$, <em>v</em> approaches $V_{max} &#x2F; \alpha’  $</li>
+</ul>
+<p>Thus, $V_{max}^{app}$ will be less than $V_{max }$ for all values of [S].</p>
+<h4 id="noncompetitive-inhibition"><a href="#noncompetitive-inhibition" class="headerlink" title="noncompetitive inhibition"></a>noncompetitive inhibition</h4><p>If $\alpha &#x3D; \alpha’$, then it is a <u>noncompetitive inhibition</u></p>
+<p>Substrate binding doesn’t affect inhibitor binding.</p>
+<p>此时<br>$$<br>K_{M}^{app} &#x3D; K_{M}<br>$$</p>
+<p>$$<br>V_{max}^{app} &lt; V_{max}<br>$$</p>
+<h2 id="Irreversible-Inhibition"><a href="#Irreversible-Inhibition" class="headerlink" title="Irreversible Inhibition"></a>Irreversible Inhibition</h2><p>Some substances combine <strong>covalently</strong> with enzymes to inactivate them irreversibly.</p>
+<blockquote>
+<p>Because the covalent binding is too strong, so this kind of inhibition is irreversible</p>
+</blockquote>
+<p>In most cases, such substances react with some functional group in the active site to leave it catalytically inactive or to block substrate binding.</p>
+<h3 id="1-Example"><a href="#1-Example" class="headerlink" title="1. Example"></a>1. Example</h3><h4 id="DFP"><a href="#DFP" class="headerlink" title="DFP"></a>DFP</h4><p><strong>Irreversible inhibition by adduct formation:</strong></p>
+<p><u>Diisopropyl fluorophosphate (DFP)</u> reacts with a serine group on a protein to form a covalent adduct.  (<u>Figure 11.36</u>)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127221014962.png" srcset="/img/loading.gif" lazyload alt="image-20191127221014962" style="zoom: 33%;" />
+
+<p>The covalent bond renders the catalytically important serine ineffective in catalysis.  </p>
+<p>The adduct also may block substrate binding to the active site. </p>
+<p>For such irreversible inhibitors to react selectively with a critical residue, they must bind strongly to the active site. Many do so because they are <u>transition state analogs</u>.</p>
+<h4 id="TPCK"><a href="#TPCK" class="headerlink" title="TPCK"></a>TPCK</h4><p><em>N-tosyl-<em>L</em>-phenylalaninechloromethyl ketone</em> (<em>TPCK</em>) (see Table 11.7)</p>
+<p>TPCK is an excellent inhibitor for chymotrypsin <u>because the phenyl group fits nicely</u> into the active site pocket, positioning the chlorine for nucleophilic displacement by a nitrogen of the imidazole ring of His 57.</p>
+<h5 id="1-Use-of-TPCK"><a href="#1-Use-of-TPCK" class="headerlink" title="(1) Use of TPCK"></a>(1) Use of TPCK</h5><ol>
+<li>A biochemist who is using chymotrypsin to hydrolyze a protein can stop the reaction instantly at any point by simply adding TPCK</li>
+<li>Another use for such substances is to <u>label active site residues of an enzyme</u> specifically to aid in their identification. When irreversible inhibitors are used in this way, they are often called <strong>affinity labels</strong>.</li>
+</ol>
+<p>In some cases an affinity label is unreactive until it is acted on by the enzyme, at which point it binds irreversibly.</p>
+<p>Such substances are called <strong>suicide inhibitors</strong> because the enzyme “kills” itself by processing the inhibitor from a benign to a reactive form.</p>
+<blockquote>
+<p>In biochemistry, suicide inhibition, also known as suicide inactivation or mechanism-based inhibition, is an irreversible form of enzyme inhibition that occurs when an enzyme binds a substrate analog and forms an irreversible complex with it through a covalent bond during the normal catalysis reaction. The inhibitor binds to the active site where it is modified by the enzyme to produce a reactive group that reacts irreversibly to form a stable inhibitor-enzyme complex. </p>
+</blockquote>
+<p>Example: Penicillin</p>
+<h4 id="Natural-Toxins"><a href="#Natural-Toxins" class="headerlink" title="Natural Toxins"></a>Natural Toxins</h4><p>Many natural toxins are irreversible enzyme inhibitors. </p>
+<p>The alkaloid <em><strong>physostigmine</strong></em> (see Table 11.7), which is contained in calabar beans, is toxic because it is a potent inhibitor of acetylcholinesterase (乙酰胆碱酯酶).</p>
+<p>The <em><strong>penicillin</strong></em> antibiotics also act as irreversible inhibitors of serine-containing enzymes used in bacterial cell wall synthesis </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128131737263.png" srcset="/img/loading.gif" lazyload alt="image-20191128131737263"></p>
+<h1 id="二、Cofactors-Vitamins-and-Essential-Metals"><a href="#二、Cofactors-Vitamins-and-Essential-Metals" class="headerlink" title="二、Cofactors, Vitamins, and Essential Metals"></a>二、Cofactors, Vitamins, and Essential Metals</h1><p>For some kinds of biological processes, the chemical potential of amino acid side chains alone is not sufficient.</p>
+<p>A protein may require the help of some other small molecule or ion to carry out the reaction. The ions or molecules that are bound to enzymes for this purpose are called <strong>cofactors</strong> or <strong>coenzymes</strong>. </p>
+<p>Like enzymes, cofactors are not irreversibly changed during catalysis; they are either unmodified or regenerated, as discussed above in the case of <strong>dihydrofolate reductase</strong>, which uses the <strong>NADPH cofactor</strong>.</p>
+<p>Cofactors and coenzymes can be </p>
+<ol>
+<li><strong>Essential ions</strong> (mostly metal ions)  </li>
+<li><strong>Small molecules</strong> (organic compounds)</li>
+</ol>
+<p>$$<br>\text{Apoenzyme(protein only, inactive) + Cofactor &#x3D; Holoenzyme(active)}<br>$$</p>
+<h2 id="Vitamins"><a href="#Vitamins" class="headerlink" title="Vitamins"></a>Vitamins</h2><h3 id="1-Functions"><a href="#1-Functions" class="headerlink" title="1. Functions"></a>1. Functions</h3><p>Cofactors often have complex organic structures that cannot be synthesized by some organisms—mammals in particular. The water-soluble vitamins, those usually referred to as the <strong>vitamin-B</strong> complex, are <u>metabolic precursors （前体） of several cofactors.</u> </p>
+<p>This is why such vitamins are so important in metabolism.</p>
+<blockquote>
+<p><u>Table 11.8</u> lists a number of important enzyme cofactors, together with their related vitamins, the kinds of reactions they are associated with, and where in this textbook you will find detailed descriptions and discussion.</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128133726035.png" srcset="/img/loading.gif" lazyload alt="image-20191128133726035"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134506167.png" srcset="/img/loading.gif" lazyload alt="image-20191128134506167"></p>
+<h3 id="2-Example-niacin-and-nicotinamide-adenine-dinucleotide-NAD"><a href="#2-Example-niacin-and-nicotinamide-adenine-dinucleotide-NAD" class="headerlink" title="2. Example:  niacin and nicotinamide adenine dinucleotide (NAD+)"></a>2. Example:  niacin and nicotinamide adenine dinucleotide (NAD+)</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134518448.png" srcset="/img/loading.gif" lazyload alt="image-20191128134518448" style="zoom: 50%;" />
+
+<p>The <strong>nicotinamide（烟碱）</strong> portion is the metabolically relevant part of $NAD^{+}$, because it is capable of being reduced and thus can serve as an <em>oxidizing</em> agent to which two electrons and a proton are added to the nicotinamide ring：<br>$$<br>NAD^{+} + 2e^{-} + H^{+} \rightarrow NADH<br>$$<br>The reaction is reversible (i.e., NADH acts as a <em>reducing</em> agent in several reactions) and is formally a <strong>hydride ion</strong> transfer:<br>$$<br>NAD^{+} + H^{-} \rightleftarrows NADH<br>$$<br><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134533490.png" srcset="/img/loading.gif" lazyload alt="image-20191128134533490" style="zoom:67%;" /></p>
+<blockquote>
+<p>Here, R stands for the remainder of the molecule. </p>
+</blockquote>
+<p>A typical reaction in which $NAD^{+}$ acts as an oxidizing agent is the conversion of alcohols to aldehydes（乙醛） or ketones （酮类）(for example, by the <em>alcohol dehydrogenase</em> of liver): </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134923574.png" srcset="/img/loading.gif" lazyload alt="image-20191128134923574" style="zoom: 50%;" />
+
+<h3 id="3-Stereospecific-立体化学特异性"><a href="#3-Stereospecific-立体化学特异性" class="headerlink" title="3. Stereospecific 立体化学特异性"></a>3. Stereospecific 立体化学特异性</h3><h4 id="Introduction-3"><a href="#Introduction-3" class="headerlink" title="Introduction"></a>Introduction</h4><p>Simple catalyst催化形成的产物可能是多种立体异构体，但是酶催化的反应产物大多具有特定的立体结构</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128135651962.png" srcset="/img/loading.gif" lazyload alt="image-20191128135651962" style="zoom:80%;" />
+
+<p>This figure shows how the asymmetric surface of an enzyme can confer stereospecificity in the reaction of a symmetric substrate.</p>
+<ul>
+<li><p>The asymmetric surface of an enzyme can confer stereospecificity in the  reaction of a symmetric substrate.  </p>
+</li>
+<li><p>If the substrate molecule $X_{2} CYZ$ makes at least make three contacts with unique  complementary groups on the enzyme, its two X atoms are no longer equivalent.</p>
+</li>
+</ul>
+<p>Only a specific one of the two X atoms can contact the surface properly. </p>
+<h4 id="Example-UDP-galactose-4-epimerase"><a href="#Example-UDP-galactose-4-epimerase" class="headerlink" title="Example: UDP-galactose 4-epimerase"></a>Example: UDP-galactose 4-epimerase</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128142343785.png" srcset="/img/loading.gif" lazyload alt="image-20191128142343785" style="zoom: 50%;" />
+
+<p><strong>Proposed mechanism for UDP-galactose epimerase:</strong></p>
+<ol>
+<li>UDP-galactose is bound to the enzyme, which carries the coenzyme NAD+ .  </li>
+<li>Hydride is transferred to NAD+ from C4 of the galactose ring to produce the carbonyl intermediate. </li>
+<li>Hydride is then transferred back to C4 to give the opposite stereochemistry.  </li>
+<li>The product, UDP-glucose, is released.</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128142551231.png" srcset="/img/loading.gif" lazyload alt="image-20191128142551231" style="zoom: 80%;" />
+
+<h2 id="Metal-Ions-in-Enzymes"><a href="#Metal-Ions-in-Enzymes" class="headerlink" title="Metal Ions in Enzymes"></a>Metal Ions in Enzymes</h2><h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p>Many enzymes contain one or more metal ions, usually held by coordinate covalent bonds from amino acid side chains, but sometimes bound by a prosthetic group like <u>heme</u>.</p>
+<p>Such enzymes are called <strong>metalloenzymes（金属酶）</strong></p>
+<p>The bound ion acts in much the same way as a coenzyme, conferring on the metalloenzyme a property it would not possess in its absence. </p>
+<p>As Table 11.9 shows, the roles these ions play are diverse.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128160729219.png" srcset="/img/loading.gif" lazyload alt="image-20191128160729219" style="zoom:67%;" />
+
+<h3 id="2-Example-carboxypeptidease-A"><a href="#2-Example-carboxypeptidease-A" class="headerlink" title="2. Example: carboxypeptidease A."></a>2. Example: carboxypeptidease A.</h3><p>The zinc ion in <em>carboxypeptidase A</em> <u>binds the water molecule</u> that attacks the carbonyl of the scissile bond and also acts as an <u>electrostatic catalyst</u> (Figure 11.39)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128161157369.png" srcset="/img/loading.gif" lazyload alt="image-20191128161157369" style="zoom: 67%;" />
+
+<p>The zinc ion stabilizes the tetrahedral oxyanion in the transition state and the intermediate state, in much the same way as the oxyanion hole serves this function in chymotrypsin (see Figure 11.19 for comparison).</p>
+<p><strong>Carboxypeptidase A</strong> usually refers to the <u>pancreatic exopeptidase</u>（胰外肽酶） which hydrolyzes  </p>
+<p>peptide bonds of C-terminal residues with <u>aromatic or aliphatic（ 脂肪族的）</u> side chains.</p>
+<h3 id="3-Example-Catalase"><a href="#3-Example-Catalase" class="headerlink" title="3. Example: Catalase"></a>3. Example: Catalase</h3><p>In other cases, the metal in a metalloenzyme serves as a redox reagent. We have mentioned the example of the heme-iron–containing enzyme <em>catalase</em>, which catalyzes the breakdown of hydrogen peroxide, a potentially destructive agent in cells. </p>
+<p>Because the reaction involves both reduction and oxidation of $H_{2} O_{2}$, the $Fe^{2+}$ is reversibly oxidized and reduced, acting as an <strong>electron exchanger</strong>.</p>
+<h1 id="三、The-Diversity-of-Enzymatic-Function"><a href="#三、The-Diversity-of-Enzymatic-Function" class="headerlink" title="三、The Diversity of Enzymatic Function"></a>三、The Diversity of Enzymatic Function</h1><h2 id="Classification-of-Protein-Enzymes"><a href="#Classification-of-Protein-Enzymes" class="headerlink" title="Classification of Protein Enzymes"></a>Classification of Protein Enzymes</h2><p>A rational naming and numbering system has been devised by the Enzyme Commission of the International Union of Biochemistry and Molecular Biology (IUBMB). </p>
+<p>Enzymes are divided into six major classes as follows:<br>1.	<strong>Oxidoreductases</strong> catalyze oxidation-reduction reactions.<br>2.	<strong>Transferases</strong> catalyze transfer of functional groups from one molecule to<br>another.<br>3.	<strong>Hydrolases</strong> catalyze hydrolytic cleavage.<br>4.	<strong>Lyases</strong> catalyze removal of a group from or addition of a group to a double<br>bond, or other cleavages involving electron rearrangement.<br>5.	<strong>Isomerases</strong> catalyze intramolecular rearrangement.<br>6.	<strong>Ligases</strong> catalyze reactions in which two molecules are joined.</p>
+<p>The IUBMB Enzyme Commission (EC) has given each enzyme a number with four parts, such as: EC 3.4.21.5. The first three numbers define major class, subclass, and sub-subclass, respectively.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128162737888.png" srcset="/img/loading.gif" lazyload alt="image-20191128162737888"></p>
+<h2 id="Nonprotein-Biocatalysts-Catalytic-Nucleic-Acids"><a href="#Nonprotein-Biocatalysts-Catalytic-Nucleic-Acids" class="headerlink" title="Nonprotein Biocatalysts: Catalytic Nucleic Acids"></a><strong>Nonprotein Biocatalysts: Catalytic Nucleic Acids</strong></h2><p>Some RNA molecules, called <strong>ribozymes</strong>, can act as enzymes. </p>
+<p>The production of tRNA from pre-tRNA is catalyzed by an RNA–protein complex called <strong>ribonuclease P</strong>. </p>
+<p>The RNA portion of ribonuclease P can by itself catalyze the hydrolysis of the specific phosphodiester bond indicated by the red wedge. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128163052939.png" srcset="/img/loading.gif" lazyload alt="image-20191128163052939" style="zoom:67%;" />
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/" class="category-chain-item">Biochemistry I (Macromolecules)</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Biochemistry-I-Macromolecules/" class="print-no-link">#Biochemistry I (Macromolecules)</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L13 Enzyme inhibition</div>
+      <div>https://zhenyumi.github.io/posts/a2cf81d6/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/1581bec0/" title="L12 The Kinetics of Enzymatic Catalysis">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L12 The Kinetics of Enzymatic Catalysis</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/cac6ceaa/" title="L13 The Techniques of Molecular Genetics">
+                        <span class="hidden-mobile">L13 The Techniques of Molecular Genetics</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

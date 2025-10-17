@@ -1,0 +1,1081 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="The neural circuits">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L3 Construction of neural circuits">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/d1028187/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="The neural circuits">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127141557921.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142007208.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142221370.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142345169.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142510168.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142637678.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142726848.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142836679.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142726848.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143519953.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143725467.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143841068.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127144302114.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171742632.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171703490.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171709268.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127144604920.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145444139.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145655912.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145636507.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145524537.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171918361.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145839777.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145854248.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304172003320.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150008755.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150053270.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150133245.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150621991.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150630932.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150800634.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151042013.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151104046.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151130887.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151231522.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151252395.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151418038.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151423865.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151452807.png">
+<meta property="article:published_time" content="2021-04-16T14:42:11.000Z">
+<meta property="article:modified_time" content="2021-04-16T14:42:11.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Neurobiology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127141557921.png">
+  
+  
+  
+  <title>L3 Construction of neural circuits - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L3 Construction of neural circuits</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-04-16 22:42" pubdate>
+          2021年4月16日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          566 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L3 Construction of neural circuits</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Cell-Polarity"><a href="#一、Cell-Polarity" class="headerlink" title="一、Cell Polarity"></a>一、Cell Polarity</h1><p>Neurons are especially elaborate examples of <strong>polarized epithelial</strong> <strong>cells,</strong> a fundamental cell class found in most tissues.</p>
+<ul>
+<li><p>The <strong>apical（顶上的） domain</strong> has a distinctive actin cytoskeleton, and membrane extensions (villi) that increase the surface area for taking in and releasing specific molecules</p>
+<ul>
+<li><p>There are tight junctions. </p>
+</li>
+<li><p>The Golgi apparatus is oriented toward the apical membrane.</p>
+</li>
+</ul>
+</li>
+<li><p>The <strong>basolateral（基底外侧） domain</strong> makes contact with the extracellular matrix</p>
+<ul>
+<li>It has specialized adhesion contacts. </li>
+<li>The plus ends of microtubules are oriented toward the basal membrane. </li>
+<li>Its surface is specialized for intercellular communication.</li>
+</ul>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127141557921.png" srcset="/img/loading.gif" lazyload alt="image-20200127141557921" style="zoom:67%;" />
+
+<h2 id="First-Step-of-Polarization-Is-Neural-Circuit-Formation"><a href="#First-Step-of-Polarization-Is-Neural-Circuit-Formation" class="headerlink" title="First Step of Polarization Is Neural Circuit Formation"></a>First Step of Polarization Is Neural Circuit Formation</h2><p>Neuronal polarization: the first step in neural circuit formation</p>
+<p>Distinguishing the <strong>apical domain</strong> (the eventual <strong>axon</strong>, adapted for secretion) from the <strong>basal domain</strong> (the <strong>dendrites</strong>, which will eventually become specialized for receiving signals).</p>
+<ul>
+<li>Once neurogenesis is complete, outgrowth of neuronal processes begins.</li>
+<li>Initially, a number of apparently equivalent small extensions (referred to as <strong>neurites（神经突）</strong>, since at first they have neither axonal nor dendritic identities) protrude from the immature neuron. </li>
+<li>Microtubule and actin components of the cytoskeleton as well as other proteins are redistributed among the neurites so that a single process is identified as the <strong>axon</strong>(the apical domain). </li>
+<li>The remaining processes become <strong>dendrites</strong> (the basal domain).</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142007208.png" srcset="/img/loading.gif" lazyload alt="image-20200127142007208" style="zoom:50%;" />
+
+<h2 id="Regulation-of-cell-polarity"><a href="#Regulation-of-cell-polarity" class="headerlink" title="Regulation of cell polarity"></a>Regulation of cell polarity</h2><p>Members of the <strong>PAR</strong> family, are distributed preferentially in the nascent axon.</p>
+<ul>
+<li><strong>PAR proteins</strong> interact with cytoskeletal elements and signaling molecules, including <font color="FF0000">Rho</font> and other protein kinases; signal transduction molecules activated by secreted Wnts; neurotrophins（神经营养因子）; and cell surface-bound cell adhesion molecules.</li>
+<li>When the function of PAR proteins or related signaling molecules is disrupted, the specification of a single axon does not occur.<ul>
+<li>Multiple axons</li>
+</ul>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142221370.png" srcset="/img/loading.gif" lazyload alt="image-20200127142221370" style="zoom:80%;" />
+
+<h2 id="Axon"><a href="#Axon" class="headerlink" title="Axon"></a>Axon</h2><h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p><u>Once the <strong>axon</strong> has been specified,</u> it navigates over <u>millimeters</u> or even <u>centimeters</u>, through complex embryonic terrain, to find appropriate synaptic partners. </p>
+<p>“The growing fibers are clearly endowed with <u>considerable energy</u> and have the <u>power</u> to make their way through the solid or semi-solid protoplasm of the cells of the neural tube. But we are at present in the <u>dark</u> with regard to the <u>conditions</u> which guide them to specific points.“ ( **–**Ross G. Harrison, 1910)</p>
+<ul>
+<li><blockquote>
+<p>Harrison got his BA and PhD from Johns Hopkins.</p>
+<p>He was considered for a Nobel prize for his work on nerve-cell outgrowth.</p>
+</blockquote>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142345169.png" srcset="/img/loading.gif" lazyload alt="image-20200127142345169" style="zoom:67%;" />
+
+<center>Over 35 minutes, the zebrafish Mauthner neuron axon advances approximately 50 µm.</center>
+
+
+<h3 id="2-Axon-growth-cones"><a href="#2-Axon-growth-cones" class="headerlink" title="2. Axon growth cones"></a>2. Axon growth cones</h3><p>Axon growth cone: a specialized structure at tip of extending axon.</p>
+<ul>
+<li>Growth cones are highly motile. </li>
+<li>They explore the extracellular environment, determine the direction of growth, and then guide the extension of the axon in that direction. </li>
+<li><strong>Lamellipodium</strong> (片状脂质体): a sheetlike expansion of the growing axon at its tip. </li>
+<li><strong>Filopodia</strong> (丝状伪足): numerous fine processes that extend from each lamellipodium. <ul>
+<li>Filopodia rapidly form and disappear from the terminal expansion, like fingers reaching out to sense the environment.</li>
+</ul>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142510168.png" srcset="/img/loading.gif" lazyload alt="image-20200127142510168" style="zoom:80%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142637678.png" srcset="/img/loading.gif" lazyload alt="image-20200127142637678" style="zoom: 50%;" />
+
+<h2 id="Growth-cone-motility"><a href="#Growth-cone-motility" class="headerlink" title="Growth cone motility"></a>Growth cone motility</h2><p>Growth cone motility reflects rapid, controlled rearrangement of the <strong>cytoskeleton</strong>. </p>
+<p>The force to move the axon is generated by ATP-dependent modification of the <strong>actin</strong> and <strong>microtubule</strong> cytoskeletons. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142726848.png" srcset="/img/loading.gif" lazyload alt="image-20200127142726848" style="zoom: 80%;" />
+
+<p><strong>actin cytoskeleton</strong>: regulating changes in lamellipodial and filopodial shape for directed growth.</p>
+<p><strong>microtubule cytoskeleton</strong>: responsible for the elongation of the axon itself</p>
+<h3 id="1-Molecular-basis-of-growth-cone-motility"><a href="#1-Molecular-basis-of-growth-cone-motility" class="headerlink" title="1. Molecular basis of growth cone motility"></a>1. Molecular basis of growth cone motility</h3><p>The molecular composition of both the <strong>actin</strong> and <strong>microtubule</strong> cytoskeletons changes in distinct regions of the growing axon, suggesting a great deal of <strong>dynamism</strong> within growing neural processes.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142836679.png" srcset="/img/loading.gif" lazyload alt="image-20200127142836679" style="zoom:80%;" />
+
+<h3 id="2-Actin-and-tubulin"><a href="#2-Actin-and-tubulin" class="headerlink" title="2. Actin and tubulin"></a>2. Actin and tubulin</h3><p><strong>Actin</strong> is the primary molecular constituent of a network of cellular <u>filaments</u> found in the lamellipodia and filopodia of growth cones. </p>
+<p><strong>Tubulin</strong> is the primary molecular constituent of the microtubules that run parallel to the axis of the axon and give it both structural integrity and a means for transporting proteins from the nerve cell body to the axon terminal</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127142726848.png" srcset="/img/loading.gif" lazyload alt="image-20200127142726848" style="zoom: 80%;" />
+
+<p>Actin and tubulin are found in two forms in the growth cone and axon:</p>
+<ul>
+<li>freely soluble <strong>monomers</strong> in the cytoplasm.</li>
+<li><strong>polymers</strong> that form filaments (actin) or microtubules (tubulin).</li>
+</ul>
+<h2 id="Polymerization-and-depolymerization"><a href="#Polymerization-and-depolymerization" class="headerlink" title="Polymerization and depolymerization"></a>Polymerization and depolymerization</h2><p>The dynamic polymerization and depolymerization of <strong>actin</strong> at the membrane of the lamellipodiurn, as well as within the filopodium sets the direction of <u>growth cone movement</u>, in part by generating local forces that orient the growth cone toward or away from substrates. </p>
+<p>The <em>polymerization</em> and <em>depolymerization</em> of <strong>tubulin</strong> into microtubules consolidates the direction of <u>movement of the growth cone</u> by stabilizing the axon shaft.</p>
+<p>The <u>interface</u> between the actin and microtubule cytoskeletons regulates the balance of active growth versus stability.</p>
+<h3 id="1-Proteins-regulating-polymerization-and-depolymerization"><a href="#1-Proteins-regulating-polymerization-and-depolymerization" class="headerlink" title="1. Proteins regulating polymerization and depolymerization"></a>1. Proteins regulating polymerization and depolymerization</h3><p>Binding to these molecules and catalyzing posttranslational modifications, or by recruiting enzymes that modify the primary molecular elements of the cytoskeleton.</p>
+<h4 id="Actin-binding-proteins"><a href="#Actin-binding-proteins" class="headerlink" title="Actin-binding proteins"></a>Actin-binding proteins</h4><p>Found throughout the growth cone cytoplasm.inside</p>
+<p>Either bind actin directly, or modify actin monomers by phosphorylation and other posttranslational modifications.</p>
+<h4 id="Microtubule-binding-proteins"><a href="#Microtubule-binding-proteins" class="headerlink" title="Microtubule-binding proteins"></a>Microtubule-binding proteins</h4><p>More concentrated in the axon shaft.</p>
+<p>Modulate posttranslational modifications of monomeric and polymerized tubulin.</p>
+<p>Other microtubule-binding proteins (“<strong>motors</strong>“) are essential for moving molecules and organelles (“cargo”) up and down neuronal processes.</p>
+<h1 id="二、Mechanisms-regulating-polymerization-and-depolymerization"><a href="#二、Mechanisms-regulating-polymerization-and-depolymerization" class="headerlink" title="二、Mechanisms regulating polymerization and depolymerization"></a>二、Mechanisms regulating polymerization and depolymerization</h1><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143519953.png" srcset="/img/loading.gif" lazyload alt="image-20200127143519953" style="zoom: 67%;" />
+
+<ol>
+<li>Adhesion molecules and diffusible signals</li>
+<li>Voltage-regulated Ca2+ channels; transient receptor potential (TRP) channels activated by second messengers; Second messenger pathways that mobilize intracellular Ca2+ stores</li>
+<li>Regulation of intracellular levels for Ca2+, an intracellular messenger</li>
+<li>The constant flux between monomeric actin and tubulin versus the polymerized actin filaments and microtubules</li>
+</ol>
+<h2 id="Non-diffusible-signals-for-axon-guidance"><a href="#Non-diffusible-signals-for-axon-guidance" class="headerlink" title="Non-diffusible signals for axon guidance"></a>Non-diffusible signals for axon guidance</h2><ul>
+<li>the extracellular matrix molecules and their integrin receptors</li>
+<li>the Ca2+ -independent cell adhesion molecules (CAMs) </li>
+<li>the Ca2+-dependent cell adhesion molecules, or cadherins（钙粘蛋白）</li>
+<li>the ephrins（麻黄素） and Eph receptors</li>
+</ul>
+<h3 id="1-Extracellular-matrix-cell-adhesion-molecules"><a href="#1-Extracellular-matrix-cell-adhesion-molecules" class="headerlink" title="1. Extracellular matrix cell adhesion molecules"></a>1. Extracellular matrix cell adhesion molecules</h3><p>the first to be associated with axon growth</p>
+<p><strong>laminins</strong>, <strong>collagens</strong>, and <strong>fibronectin</strong>（层粘连蛋白，胶原，纤连蛋白）</p>
+<ul>
+<li>Secreted by the cell itself or by its neighbors</li>
+<li>Forming polymers and creating a durable local extracellular substance, rather than diffusing away from the cell after secretion.</li>
+</ul>
+<p>Cell surface <strong>receptors</strong>: <strong>integrins</strong>（整合素）</p>
+<ul>
+<li>lntegrins do not have kinase activity or any other direct signaling capacity. </li>
+<li>Triggers a cascade of events-perhaps via interactions between the cytoplasmic domains of integrins with kinases and other signaling molecules, as well as <u>Ca2+ channels-that can stimulate axon growth and elongation.</u></li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143725467.png" srcset="/img/loading.gif" lazyload alt="image-20200127143725467" style="zoom:80%;" />
+
+<h3 id="2-CAMs-and-cadherins"><a href="#2-CAMs-and-cadherins" class="headerlink" title="2. CAMs and cadherins"></a>2. CAMs and cadherins</h3><p>Found on growing axons and growth cones as well as on surrounding cells and targets.</p>
+<p>Both CAMs and cadherins have dual functions as ligands and receptors, usually via hemophilic (“like with like”) binding. </p>
+<ul>
+<li><strong>CAMs</strong>, especially the <strong>L1</strong> CAM: bundling, or <em>fasciculation,</em> of groups of axons.</li>
+<li><strong>Cadherins</strong>: important determinants of final target selection in transition from growing axon to synapse.</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127143841068.png" srcset="/img/loading.gif" lazyload alt="image-20200127143841068"></p>
+<p>Both CAMs and cadherins rely on a somewhat indirect route of signal transduction.</p>
+<ul>
+<li><p>Ca2+-independent CAMs interact with cytoplasmic kinases to initiate cellular response.</p>
+</li>
+<li><p>Ca2+-dependent cadherins engage the APC&#x2F;β-catenin pathway</p>
+</li>
+</ul>
+<h3 id="3-ephrins"><a href="#3-ephrins" class="headerlink" title="3. ephrins"></a>3. ephrins</h3><p><strong>Ephrin</strong> ligands and their tyrosine kinas receptors (<strong>Eph receptors</strong>, or <strong>Ephs</strong>).</p>
+<p>Bidirectional signaling.</p>
+<ul>
+<li>Both affect target cell and signal-generating cell</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127144302114.png" srcset="/img/loading.gif" lazyload alt="image-20200127144302114" style="zoom:80%;" />
+
+<h3 id="4-Local-translation"><a href="#4-Local-translation" class="headerlink" title="4. Local translation"></a>4. Local translation</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171742632.png" srcset="/img/loading.gif" lazyload alt="image-20210304171742632" style="zoom: 80%;" />
+
+<ul>
+<li>what does local means: soma between axon?</li>
+</ul>
+<h3 id="5-m6A-modification-and-axon-growth"><a href="#5-m6A-modification-and-axon-growth" class="headerlink" title="5. m6A modification and axon growth"></a>5. m6A modification and axon growth</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171703490.png" srcset="/img/loading.gif" lazyload alt="image-20210304171703490" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171709268.png" srcset="/img/loading.gif" lazyload alt="image-20210304171709268" style="zoom: 50%;" />
+
+
+
+<h2 id="Human-developmental-or-neurological-disorders-related-to-adhesive-interactions-and-signal-transduction"><a href="#Human-developmental-or-neurological-disorders-related-to-adhesive-interactions-and-signal-transduction" class="headerlink" title="Human developmental or neurological disorders related to adhesive interactions and signal transduction"></a>Human developmental or neurological disorders related to adhesive interactions and signal transduction</h2><p>X-linked hydrocephalus. 脑积水</p>
+<p>MASA (an acronym for <em>m</em>ental retardation, <em>a</em>phasia, <em>s</em>huffling gait, and <em>a</em>dducted thumbs). </p>
+<p>Kallman’s syndrome (which compromises reproductive and chemosensory function). </p>
+<p>X-linked spastic paraplegia. 半身不遂</p>
+<h2 id="Chemoattraction-and-chemorepulsion"><a href="#Chemoattraction-and-chemorepulsion" class="headerlink" title="Chemoattraction and chemorepulsion"></a>Chemoattraction and chemorepulsion</h2><p>A growing axon must eventually find an appropriate target while avoiding inappropriate ones. </p>
+<ul>
+<li><p><strong>Ramon Cajal</strong> proposed that target-derived signals, most likely released by the target cells themselves, selectively attract growth cones to useful destinations—<strong>chemoattraction</strong>. </p>
+</li>
+<li><p><strong>chemorepulsion</strong>: opposite to the chemoattraction</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127144604920.png" srcset="/img/loading.gif" lazyload alt="image-20200127144604920" style="zoom: 80%;" />
+
+
+
+<h3 id="1-Difficulties-in-identifying-chemoattractive-and-chemorepulsive-signals"><a href="#1-Difficulties-in-identifying-chemoattractive-and-chemorepulsive-signals" class="headerlink" title="1. Difficulties in identifying chemoattractive and chemorepulsive signals"></a>1. Difficulties in identifying chemoattractive and chemorepulsive signals</h3><p>Small amounts of such factors expressed in the developing embryo. </p>
+<p>Difficulties in distinguishing <strong><em>tropic</em> molecules</strong> (which <u><em><font color="0000FF">guide</font></em> growing axons toward a source</u>) from <em>trophic</em>（营养的,有关营养的） molecules (which <u><em><font color="0000FF">support</font></em> the survival and growth of neurons and their processes once an appropriate target has been contacted</u>). </p>
+<p>Solved by laborious biochemical purification and analysis of attractive or repulsive activities from vertebrate (chick) embryos and genetic analysis of axon growth in both <em>Drosophila</em> and C. <em>elegans</em>.</p>
+<h3 id="2-Netrins-Slits"><a href="#2-Netrins-Slits" class="headerlink" title="2. Netrins &amp; Slits"></a>2. Netrins &amp; Slits</h3><p>Sanskrit, ‘’to guide“: One of the first families of chemoattractant molecules to be identified.</p>
+<ul>
+<li><strong>Chick</strong>: proteins with chemoattractant activity following biochemical purification.</li>
+<li><strong>C.</strong> <strong>elegans</strong>: influenced axon growth and guidance.</li>
+</ul>
+<p><strong>Unc</strong>: “uncoordinated,“ which describes the behavioral phenotype of the mutant worms. </p>
+<p><strong>DCC</strong> (<em>d</em>eleted in <em>c</em>olorectal <em>c</em>ancer) receptor mediates netrin-dependent chemoattraction. </p>
+<p><strong>Unc5</strong> receptor mediates netrin–dependent chemorepulsion. </p>
+<ul>
+<li>Netrin receptors have <strong>repeated amino acid motifs</strong> in their extracellular domains; a <strong>transmembrane domain</strong>; and an <strong>intracellular</strong> <strong>domain</strong> with no known enzymatic activity. </li>
+<li>The <strong>Rho&#x2F;GAP</strong> family of signaling proteins, all of which modulate second messenger-mediated cytoskeletal modification, provide a final step in netrin signaling.</li>
+</ul>
+<p><strong>Slit</strong> and its receptor <strong>robo</strong>: chemorepulsion.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145444139.png" srcset="/img/loading.gif" lazyload alt="image-20200127145444139" style="zoom:80%;" />
+
+<h3 id="3-Semaphorins（信号素）"><a href="#3-Semaphorins（信号素）" class="headerlink" title="3. Semaphorins（信号素）"></a>3. Semaphorins（信号素）</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145655912.png" srcset="/img/loading.gif" lazyload alt="image-20200127145655912"></p>
+<p>Semaphorins are bound to cell surfaces or to the extracellular matrix, where they <u>prevent the extension of nearby axons.</u> </p>
+<p>Their receptors are transmembrane proteins (including the <strong>plexins</strong> and a protein called <strong>neuropilin</strong>) whose cytoplasmic domains have no known catalytic activity. </p>
+<p>Semaphorin signaling leads to <u>changes in Ca2+ concentration</u> that presumably activate intercellular kinases and other signaling molecules to modify the growth cone cytoskeleton. </p>
+<p>Semaphorin treatment of cultured neurons results in <strong>growth cone collapse</strong>, which is Ca2+ signaling-dependent.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145636507.png" srcset="/img/loading.gif" lazyload alt="image-20200127145636507" style="zoom: 67%;" />
+
+<h3 id="4-Commissural（合缝处的）-axon-guidance"><a href="#4-Commissural（合缝处的）-axon-guidance" class="headerlink" title="4. Commissural（合缝处的） axon guidance"></a>4. Commissural（合缝处的） axon guidance</h3><h4 id="Netrin"><a href="#Netrin" class="headerlink" title="Netrin"></a>Netrin</h4><p>mediate the pre-cross attraction</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145524537.png" srcset="/img/loading.gif" lazyload alt="image-20200127145524537"></p>
+<ul>
+<li>The commissural neurons should firstly attracted to the floorplate</li>
+<li>Then cross the floorplate and leave the floor plate by silencing the netrin attraction and then make neurons insensitive to netrin (Repelled by Slit and semaphorins)</li>
+</ul>
+<h4 id="Robo3"><a href="#Robo3" class="headerlink" title="Robo3"></a>Robo3</h4><p>Mediate the post-cross repulsion</p>
+<h4 id="Axon-Guidance-Disorder"><a href="#Axon-Guidance-Disorder" class="headerlink" title="Axon Guidance Disorder"></a>Axon Guidance Disorder</h4><p>There is now a “short list” of rare but highly informative <u>mutations in genes</u> known to regulate growth cone pathfinding or axon extension during development.</p>
+<p>These mutations disrupt both CNS axon tracts and peripheral nerves, resulting in mild and specific <u>motor or sensory deficits</u> as well as more <u>global difficulties</u>, including intellectual disability and social and cognitive impairments.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304171918361.png" srcset="/img/loading.gif" lazyload alt="image-20210304171918361" style="zoom:100%;" />
+
+<h2 id="Selective-synapse-formation"><a href="#Selective-synapse-formation" class="headerlink" title="Selective synapse formation"></a>Selective synapse formation</h2><p>Once an axon reaches its target region, additional cell-cell interactions dictate which target cells to innervate from among a variety of potential synaptic partners.</p>
+<h3 id="1-Protocadherins-原钙粘蛋白"><a href="#1-Protocadherins-原钙粘蛋白" class="headerlink" title="1. Protocadherins (原钙粘蛋白)"></a>1. Protocadherins (原钙粘蛋白)</h3><h4 id="Formation-of-protocadherins"><a href="#Formation-of-protocadherins" class="headerlink" title="Formation of protocadherins"></a>Formation of protocadherins</h4><p><strong>protocadherins</strong>: resemble the general cadherin family of cell adhesion molecules</p>
+<ul>
+<li>single gene encodes a large number of protocadherins. </li>
+<li>three regions (α, β, γ) consisting of multiple alternatively spliced exons that encode the extracellular and transmembrane domains of individual protocadherinvariants (there are total 58).</li>
+<li>a conserved domain encoding the intracellular portion of all protocadherin isoforms. </li>
+<li>Protocadherin isoforms on opposing cells bind to each other with varying affinity based upon their degree of similarity (high binding) or divergence (lower binding).</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145839777.png" srcset="/img/loading.gif" lazyload alt="image-20200127145839777" style="zoom:67%;" />
+
+<p>protocadherins are not uniformly expressed at neighboring synaptic sites in cultured neurons.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127145854248.png" srcset="/img/loading.gif" lazyload alt="image-20200127145854248" style="zoom:80%;" />
+
+<h4 id="DSCAM1-in-fly"><a href="#DSCAM1-in-fly" class="headerlink" title="DSCAM1 in fly"></a>DSCAM1 in fly</h4><p><strong>DSCAM1</strong>: named for its similarity to the mammalian down syndrome cell adhesion molecule.</p>
+<p><strong>DSCAM1</strong> has 38,000 isoforms based on the numbers of exons in the gene and predicted splicing.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210304172003320.png" srcset="/img/loading.gif" lazyload alt="image-20210304172003320" style="zoom:100%;" />
+
+<ul>
+<li>Use alternative splicing to generate different proteins</li>
+</ul>
+<h3 id="2-Molecular-mechanisms-involved-in-synapse-formation"><a href="#2-Molecular-mechanisms-involved-in-synapse-formation" class="headerlink" title="2. Molecular mechanisms involved in synapse formation"></a>2. Molecular mechanisms involved in synapse formation</h3><h4 id="Step-1-Initiation"><a href="#Step-1-Initiation" class="headerlink" title="Step 1: Initiation"></a>Step 1: Initiation</h4><p><strong>Initiation</strong>: local regulation between the presumptive pre- and postsynaptic membranes mediated by members of the <strong>cadherin</strong> and <strong>protocadherin</strong> family of Ca2+ cell adhesion molecules.</p>
+<ul>
+<li>Initial accumulation of synaptic vesicles as well as transport vesicles that contain molecular components that contribute to the presynaptic active zone.</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150008755.png" srcset="/img/loading.gif" lazyload alt="image-20200127150008755" style="zoom:67%;" />
+
+<h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>Additional adhesion molecules such as <strong>SynCAM</strong>, <strong>neurexin</strong> and <strong>neuroligin</strong>, <strong>ephrinB</strong> and <strong>EphB</strong>, are recruited. Adhesive signaling between these molecules initiates differentiation of the presynaptic active zone and the postsynaptic density.</p>
+<ul>
+<li>The presynaptic terminal also releases molecules (e.g., <strong>neuregulin</strong>) that influence the expression and clustering postsynaptic receptors and associated proteins.</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150053270.png" srcset="/img/loading.gif" lazyload alt="image-20200127150053270" style="zoom:67%;" />
+
+<h4 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h4><p>The interaction of <strong>neurexin（轴突蛋白）</strong> (a presynaptic transmembrane adhesion protein) with <strong>neuroligin（神经连接蛋白）</strong> (a postsynaptic adhesion protein) is central for recruiting and retaining cytoskeletal elements that localize synaptic vesicles to the presynaptic terminal and mediate their fusion.</p>
+<ul>
+<li><strong>Neurexin</strong> have a specialized transmembrane domain that helps localize synaptic vesicles, docking proteins, and fusion molecules contributed by active zone vesicles in the presynaptic terminal. </li>
+<li><strong>Neuroligin</strong>, upon binding neurexin, is essential for localizing neurotransmitter receptors and postsynaptic proteins to the postsynaptic specialization.</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150133245.png" srcset="/img/loading.gif" lazyload alt="image-20200127150133245" style="zoom: 67%;" />
+
+<h5 id="1-Neurogulin1-Nrg1"><a href="#1-Neurogulin1-Nrg1" class="headerlink" title="(1) Neurogulin1 (Nrg1)"></a>(1) Neurogulin1 (Nrg1)</h5><p><strong>Nrg1</strong> is a transmembrane protein usually made in presynaptic cells and released following proteolytic cleavage of the ectodomain (outside portion) of the protein.</p>
+<p>Neuregulin is released via local proteolytic cleavage and binds to dimeric <strong>ErbB receptor</strong> kinases or to dimeric <strong>ErbB&#x2F;EGF</strong>(epidermal growth factor) receptor kinases.</p>
+<p>Nrgl signaling is thought to elicit increased synthesis and insertion of neurotransmitter receptors at a nascent postsynaptic site.</p>
+<h2 id="Regulation-of-neuronal-connections-by-trophic-interactions"><a href="#Regulation-of-neuronal-connections-by-trophic-interactions" class="headerlink" title="Regulation of neuronal connections by trophic interactions"></a>Regulation of neuronal connections by trophic interactions</h2><p><strong>Trophic interaction</strong> (Greek <em>trophe,</em> meaning, “nourishment”): long-term dependency between neurons and their targets.</p>
+<ul>
+<li>Once synaptic contacts are established and the initial distribution of synapses is set, neurons become dependent on the presence of their targets for continued survival as well as the further growth and differentiation of axons and dendrites.</li>
+<li><u>In the absence of synaptic partners, the axons and dendrites of developing neurons typically atrophy and often die.</u> <ul>
+<li>This mechanism is used to make sure a <strong>efficient formation</strong> of synapse.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Neurotrophic factors</strong> (also called <strong>neurotrophins</strong>): signaling molecules provided by target cells. </p>
+<ul>
+<li>expression is limited to neurons and a few non-neural neuronal targets such as muscles.</li>
+</ul>
+<p>Why do developing neurons depend so strongly on their targets?</p>
+<ul>
+<li>production of an initial surplus of nerve cells (on the order of two- or threefold); the final population is subsequently established by the death of those neurons that fail to interact successfully with their intended targets.</li>
+</ul>
+<h3 id="1-Target-derived-trophic-support-regulates-survival-of-related-neurons"><a href="#1-Target-derived-trophic-support-regulates-survival-of-related-neurons" class="headerlink" title="1. Target-derived trophic support regulates survival of related neurons"></a>1. Target-derived trophic support regulates survival of related neurons</h3><p>The pioneering neuroembryologists Viktor Hamburger and Rita Levi-Montalcini carried a series of studies and showed that targets play a major role in determining the size of the neuronal populations that innervate them:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150621991.png" srcset="/img/loading.gif" lazyload alt="image-20200127150621991" style="zoom: 33%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150630932.png" srcset="/img/loading.gif" lazyload alt="image-20200127150630932" style="zoom: 67%;" />
+
+<h3 id="2-Competitive-interactions-and-formation-of-neuronal-connections-Synaptic-refinement"><a href="#2-Competitive-interactions-and-formation-of-neuronal-connections-Synaptic-refinement" class="headerlink" title="2. Competitive interactions and formation of neuronal connections:Synaptic refinement"></a>2. Competitive interactions and formation of neuronal connections:Synaptic refinement</h3><p>Once the size of a <u>neuronal population</u> is established by trophic regulation, trophic interactions continue to modulate formation of <u>synaptic connections</u>. </p>
+<p>Many fundamental ideas about the ongoing modification of developing brain circuitry have come from simpler, more accessible parts of the nervous system, most notably the vertebrate <strong>neuromuscular junction</strong> and <strong>autonomic ganglion cells</strong>.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127150800634.png" srcset="/img/loading.gif" lazyload alt="image-20200127150800634"></p>
+<p>Adult skeletal muscle fibers and neurons in some classes of autonomic ganglia (parasympathetic neurons) are each innervated by a single axon. </p>
+<ul>
+<li><p>Initially, however, each of these target cells is innervated by axons from several neurons-<strong>–polyneuronal innervation</strong>. </p>
+</li>
+<li><p>inputs are gradually lost during early postnatal development until only one remains—<strong>synapse elimination</strong>. </p>
+<ul>
+<li>overall number of synaptic contacts in the peripheral nervous system increases steadily during the course of development.</li>
+</ul>
+</li>
+<li><p><font color="FF0000">尽管innervation在发育的过程中减少，但是总体的synaptic connection增加</font></p>
+</li>
+<li><p>Patterns of electrical activity in the pre- and postsynaptic partners are thought to influence this competition for target space and neurotrophic support. </p>
+<ul>
+<li>acetylcholine receptors (AChR): curare (箭毒马鞍子,箭毒)</li>
+<li>presynaptic action potentials: TTX</li>
+</ul>
+</li>
+</ul>
+<p><strong>Convergence</strong>: every target cell is innervated-and continues to be innervated-by the right number of inputs and synapses. </p>
+<p><strong>Divergence</strong>: every innervating axon contacts the right number of target cells with an appropriate number of synaptic endings.</p>
+<ul>
+<li>This regulation of convergence (the number of inputs to a target cell) and divergence (the number of connections made by a neuron) in the developing nervous system is another key consequence of trophic interactions among neurons and their targets.</li>
+</ul>
+<h3 id="3-Molecular-basis-of-trophic-interactions"><a href="#3-Molecular-basis-of-trophic-interactions" class="headerlink" title="3. Molecular basis of trophic interactions"></a>3. Molecular basis of trophic interactions</h3><p>Trophic interactions regulate three essential steps in the formation of mature neural circuits:</p>
+<ul>
+<li>Survival of a subset of neurons from a considerably larger population. </li>
+<li>Formation and maintenance of appropriate numbers of connections. </li>
+<li>Elaboration of axonal and dendritic branches to support these connections.</li>
+</ul>
+<p>Neurotrophic protein: <strong>NGF</strong> as a model system</p>
+<ul>
+<li>NGF was discovered by <strong>Levi-Montalcini</strong> as an “activity“ that elicited robust growth of neuronal processes both in the animal and in cell culture. </li>
+<li>Purified as a <strong>protein</strong> from a rich biological source, the salivary glands of the male mouse</li>
+</ul>
+<p><strong>Neurotrophins</strong>: NGF, BDNF, NT-3, NT-4&#x2F;5</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151042013.png" srcset="/img/loading.gif" lazyload alt="image-20200127151042013" style="zoom:80%;" />
+
+<h4 id="Neurotrophins-have-distinct-effects-on-different-target-neurons"><a href="#Neurotrophins-have-distinct-effects-on-different-target-neurons" class="headerlink" title="Neurotrophins have distinct effects on different target neurons"></a>Neurotrophins have distinct effects on different target neurons</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151104046.png" srcset="/img/loading.gif" lazyload alt="image-20200127151104046" style="zoom: 67%;" />
+
+<p><strong>NG</strong>: nodose ganglia</p>
+<p><strong>SG</strong>: sympathetic ganglia</p>
+<p>Why different neurotrophins has different effects? And why different neurons respond differently to different neurotrophins?</p>
+<ul>
+<li>Different neurons express different receptors</li>
+</ul>
+<h4 id="Different-neurotrophins-are-selectively-available-in-different-targets"><a href="#Different-neurotrophins-are-selectively-available-in-different-targets" class="headerlink" title="Different neurotrophins are selectively available in different targets"></a>Different neurotrophins are selectively available in different targets</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151130887.png" srcset="/img/loading.gif" lazyload alt="image-20200127151130887"></p>
+<h4 id="Secreted-molecules-with-neurotrophic-influences"><a href="#Secreted-molecules-with-neurotrophic-influences" class="headerlink" title="Secreted molecules with neurotrophic influences"></a>Secreted molecules with neurotrophic influences</h4><p><strong>CNTF (ciliary neurotrophic factor)</strong>: cytokine in inflammation and immune responses</p>
+<p><strong>LIF (leukemia inhibitory factor)</strong>: cytokine</p>
+<p><strong>GDNF (glial-derived neurotrophic factors)</strong> and related proteins: kidney development and spermatogenesis</p>
+<h2 id="Neurotrophin-signaling"><a href="#Neurotrophin-signaling" class="headerlink" title="Neurotrophin signaling"></a>Neurotrophin signaling</h2><p>Neurotrophic factors are key regulators for three distinct cellular mechanisms: </p>
+<ul>
+<li>neural process growth&#x2F;retraction</li>
+<li>synapse stabilization&#x2F;elimination</li>
+<li>cell survival&#x2F;death</li>
+</ul>
+<p>NGF acts <font color="FF0000">locally</font> to stimulate neurite growth: </p>
+<ul>
+<li>“Local” means: relaying the neurotrophic signal from the axon terminal to the cell body</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151231522.png" srcset="/img/loading.gif" lazyload alt="image-20200127151231522"></p>
+<p>Neurotrophins bound to their transmembrane receptors (primarily the Trk subset of receptors) are selectively internalized by assembling a signaling endosome that includes ligand&#x2F;receptor complex with several scaffolding proteins that bind one of three Intracellular effectors. </p>
+<p>This signaling endosome- can also bind molecular motors that engage the microtubule cytoskeleton.</p>
+<p>This signaling endosome is transported back to the cell body to activate downstream targets, including modifying gene expression.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151252395.png" srcset="/img/loading.gif" lazyload alt="image-20200127151252395" style="zoom:67%;" />
+
+<h3 id="1-Neurotrophin-receptors-and-their-specificity"><a href="#1-Neurotrophin-receptors-and-their-specificity" class="headerlink" title="1. Neurotrophin receptors and their specificity"></a>1. Neurotrophin receptors and their specificity</h3><p>Tyrosine kinase (Trk) receptors: a single transmembrane protein with a cytoplasmic tyrosine kinase domain.</p>
+<ul>
+<li>TrkA: NGF.</li>
+<li>TrkB: BDNF and NT-4&#x2F;5.</li>
+<li>TrkC: NT-3 <ul>
+<li>some degree of cross-activation between factors and receptors: NT-3 to TrkB.</li>
+</ul>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151418038.png" srcset="/img/loading.gif" lazyload alt="image-20200127151418038" style="zoom: 80%;" />
+
+<ul>
+<li>Trk receptors have high affinity for processed ligands.</li>
+</ul>
+<p>p75 receptors: activated by all neurotrophins. </p>
+<ul>
+<li>receptor has high affinity for unprocessed neurotrophinsbut low affinity for the processed ligands.</li>
+</ul>
+<p>All neurotrophins are secreted in an unprocessed form that undergoes subsequent proteolytic cleavage. </p>
+<p>Trk and p75 receptors are expressed only in subsets of neurons, and neurotrophins are available from different classes of targets.</p>
+<ul>
+<li>selective binding between ligand and receptor likely accounts for some of the specificity of neurotrophic interactions.</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151423865.png" srcset="/img/loading.gif" lazyload alt="image-20200127151423865" style="zoom:67%;" />
+
+<h3 id="2-Neurotrophin-signaling-process"><a href="#2-Neurotrophin-signaling-process" class="headerlink" title="2. Neurotrophin signaling process"></a>2. Neurotrophin signaling process</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200127151452807.png" srcset="/img/loading.gif" lazyload alt="image-20200127151452807" style="zoom: 80%;" />
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Neurobiology/" class="category-chain-item">Neurobiology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Neurobiology/" class="print-no-link">#Neurobiology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L3 Construction of neural circuits</div>
+      <div>https://zhenyumi.github.io/posts/d1028187/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年4月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/6a6958f/" title="L4 Modification of neural circuits as a result of experience">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L4 Modification of neural circuits as a result of experience</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/4e750a8/" title="L2 Nervous System Development and Diseases">
+                        <span class="hidden-mobile">L2 Nervous System Development and Diseases</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

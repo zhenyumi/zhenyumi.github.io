@@ -1,0 +1,804 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L12 The Kinetics of Enzymatic Catalysis">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/1581bec0/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Biochemistry I (Macromolecules)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+  
+  
+  
+  <title>L12 The Kinetics of Enzymatic Catalysis - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-10_21-07-00.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L12 The Kinetics of Enzymatic Catalysis</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          892 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L12 The Kinetics of Enzymatic Catalysis</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Michaelis-Menten-kinetics"><a href="#一、Michaelis-Menten-kinetics" class="headerlink" title="一、Michaelis-Menten kinetics"></a>一、Michaelis-Menten kinetics</h1><p>Michaelis-Menten kinetics is about <u>Reaction Rate for a Simple Enzyme-Catalyzed Reaction</u></p>
+<h2 id="The-relationship-of-k’s"><a href="#The-relationship-of-k’s" class="headerlink" title="The relationship of k’s"></a>The relationship of k’s</h2><p>An expression for a simple reaction involving a single substrate and product was shown as: </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125100002866.png" srcset="/img/loading.gif" lazyload alt="image-20191125100002866"></p>
+<ol>
+<li>$k_{1} \text{ and } k_{-1} &gt;&gt; k_{2}$: Binding process is reversible</li>
+<li>$k_{2} &gt;&gt; k_{-2}$: Conversion ES to EP <u>lie far to the right</u></li>
+<li>$K_{3} &gt;&gt; k_{-2}$: Rapid release of product</li>
+</ol>
+<p>If we analyze the <strong>initial rate</strong> of an enzyme-catalyzed reaction (i.e., before a significant concentration of P appears) and <u>we <strong>assume</strong> that $k_{1} , k_{-1} \text{ and } k_{3} &gt;&gt; k_{2}$,</u> and Equation 11.12 simplifies to the following: </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125100019986.png" srcset="/img/loading.gif" lazyload alt="image-20191125100019986"></p>
+<p>The catalytic formation of the product, with enzyme regeneration, will then be a <strong>simple first-order reaction</strong>, and its rate will be determined solely by the concentration of ES and the value of $ k_{cat}$</p>
+<blockquote>
+<ol start="11">
+<li>12 公式简化为11.13 公式的形式是在特定假设下的</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>$k_{cat }$ is the apparent rate constant for the rate-determining conversion of substrate to product</p>
+</li>
+<li><p>$k_{cat} $ is an aggregate rate constant &#x3D; $k_{2} k_{3}&#x2F;(k_{2} + k_{3})$. In the limiting case where $k_{3} &gt;&gt; k_{2}$, $k_{cat} \approx k_{2}$</p>
+</li>
+<li><p>Initial reaction conditions are such that the reverse reaction between E and P is negligible.</p>
+</li>
+</ul>
+<p>Therefore, the reaction rate, or velocity, defined as the observed rate of formation of products, can be expressed as <u>equation 11.14</u>:<br>$$<br>v &#x3D; k_{cat} [ES]<br>$$<br>[ES] is difficult to measure in kinetics experiments. The easily measured parameters are substrate (or product) concentration and the total concentration of enzyme, which must be the sum of free enzyme and enzyme bound to substrate: <u>equation 11.15</u><br>$$<br>[E]<em>{t} &#x3D; [E] + [ES]<br>\<br>\text{Total Enzyme &#x3D; Free Enzyme + Enzyme in ES complex}<br>$$<br>The way we have written Equation 11.13 suggests that E and S should be in equilibrium with ES, with an equilibrium dissociation constant $K</em>{s}$: <u>Equation 11.16</u><br>$$<br>K_{s} &#x3D; \frac{k_{-1}}{k_{1}} &#x3D; \frac{[E][S]}{[ES]}<br>$$<br><font color="DD0000">这个对于$K_{s}$的方程式在特定条件下才成立的（This is usually an incorrect assumption, but under certain circumstances ）：</font>  It doesn’t apply in general because E, S, and ES are <u>not truly in equilibrium</u></p>
+<ol>
+<li>$k_{cat} &lt;&lt; k_{-1}$ this approximation is valid.</li>
+</ol>
+<h2 id="Steady-State"><a href="#Steady-State" class="headerlink" title="Steady State"></a>Steady State</h2><p>when the reaction is started by mixing enzymes and substrates, the ES concentration builds up at first, but quickly reaches a <strong>steady state</strong>, in which it remains almost constant. This steady state will persist until almost all of the substrate has been consumed</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125105245133.png" srcset="/img/loading.gif" lazyload alt="image-20191125105245133" style="zoom:50%;" />
+
+<blockquote>
+<p><strong>The steady state in enzyme kinetics</strong>. The figure shows how the concentrations of <u>substrate [S], free enzyme [E], enzyme–substrate complex [ES], and product [P]</u> vary with time for a simple enzyme-catalyzed reaction</p>
+</blockquote>
+<blockquote>
+<p>Described by $E + S \rightleftharpoons ES \rarr E + P$ After a very brief initial period, [ES] reaches a steady state in which ES is consumed approximately as rapidly as it is formed, so $d[ES]&#x2F;dt \approx 0$. The amounts of E and ES are greatly exaggerated for clarity. Note that $[E] + [ES] &#x3D; [E]_{t}$, or total enzyme concentration, and that [ES] actually falls very slowly as substrate is consumed, while [E] accordingly rises.</p>
+</blockquote>
+<p>In the steady state, the rates of formation and breakdown of ES are equal. Therefore gives <u>equation 11.17</u><br>$$<br>k_{1} [E][S] &#x3D; k_{-1} [ES] + k_{cat}[ES] \<br>\text{Formation of ES complex &#x3D; Disociation of ES complex + Breakdown to E + P}<br>$$<br>which can be rearranged to give <u>Equation 11.18</u><br>$$<br>[ES] &#x3D; (\frac{k_{1}}{k_{-1} + k_{cat}}) [E][S]<br>$$<br>Combining the ratio of rate constants in Equation 11.17 gives a single constant, $K_{M}$ <u>equation 11.19</u><br>$$<br>K_{M} &#x3D; \frac{k_{-1} + k_{cat}}{k_{1}}<br>$$<br><u>Equation 11.18</u> can now be rewritten as <u>equation 11.20</u><br>$$<br>K_{M} [ES] &#x3D; [E][S]<br>$$<br>At this point, [ES] is expressed in terms of [E] and [S]. To get $[E]<em>{t}$ into the equation, rather than [E], recall from Equation 11.15 that $[E]</em>{t} &#x3D; [E] + [ES]$ Putting this into Equation 11.20 yields<br>$$<br>K_{M} [ES] &#x3D; [E]<em>{t}[S]-[ES][S]<br>$$<br>This rearranges to <u>equation 11.22</u><br>$$<br>[ES] &#x3D; \frac{[E]</em>{t} [S]}{K_{M} + [S]}<br>$$<br>Finally, inserting this result into <u>Equation 11.14</u> gives an expression for <em>v</em> in terms of $[E]<em>{t} $ and [S]: <u>equation 11.23</u><br>$$<br>v &#x3D; \frac{k</em>{cat} [E]<em>{t} [S]}{K</em>{M} + [S]}<br>$$</p>
+<h2 id="Michaelis–Menten-equation"><a href="#Michaelis–Menten-equation" class="headerlink" title="Michaelis–Menten equation"></a>Michaelis–Menten equation</h2><p><u>Equation 11.23</u> is called the <strong>Michaelis–Menten equation</strong>, and $K_{M}$ is the <strong>Michaelis constant</strong>,</p>
+<ol>
+<li>$K_{M}$ is a ratio of the rate constants for a specific reaction (see <u>Equation 11.19</u>), it is a characteristic of that reaction.</li>
+<li>$K_{M}$ has units of concentration.</li>
+</ol>
+<h2 id="Velocity"><a href="#Velocity" class="headerlink" title="Velocity"></a>Velocity</h2><p>Consider the graph of <em>v</em> versus [S] shown in Figure 11.23.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125112502048.png" srcset="/img/loading.gif" lazyload alt="image-20191125112502048" style="zoom: 50%;" />
+
+<p>This graph shows the variation of reaction velocity with substrate concentration according to the Michaelis–Menten model of enzyme kinetics.</p>
+<p>The values of <em>v</em> plotted here are determined from <strong>the initial rates</strong> of the reaction. </p>
+<p><u>At the point where [S] &#x3D; $K_{M }$ the reaction has exactly half its maximum velocity.</u> </p>
+<p>Note that $V_{max}$ is approached asymptotically (渐进的）.</p>
+<p>At high substrate concentrations, where [S] is much greater than $K_{M}$, the reaction approaches a <strong>maximum velocity</strong> $V_{max}$.</p>
+<p>When $[S] &gt;&gt; K_{M}, K_{M} + [S] \approx [S]$, so <u>equation 11.23</u> can be simplified to <u>equation 11.24</u> :<br>$$<br>V_{max} &#x3D; k_{cat} [E]<em>{t}<br>$$<br>The Michaelis–Menten rate equation is <u>equation 11.25</u>:<br>$$<br>v &#x3D; \frac{V</em>{max} [S]}{K_{M} + [S]}<br>$$<br>This is the most familiar form of the Michaelis–Menten equation.</p>
+<p>Reaction velocity as a function of substrate concentration. This graph, a plot of Equation 11.25, shows the variation of reaction velocity with substrate concentration according to the Michaelis–Menten model of enzyme kinetics. The values of v plotted here are determined from the initial rates of the reaction (see Figure 11.24). At the point where the reaction has exactly half its maximum velocity. Note that is approached asymptotically.</p>
+<h2 id="Significance-of-K-M-k-cat-V-max"><a href="#Significance-of-K-M-k-cat-V-max" class="headerlink" title="Significance of $K_{M}$, $k_{cat}$, $V_{max}$"></a>Significance of $K_{M}$, $k_{cat}$, $V_{max}$</h2><p>$K_{M} $ is often associated with the <u>affinity of enzyme</u> for substrate. </p>
+<p><u>**However, this relationship is only true in the limiting case: a two-step reaction in which $k_{cat} &lt;&lt; k_{1}$**</u></p>
+<p>So <u>equation 11.19</u> then yields<br>$$<br>K_{M} \approx [k_{-1}][k_{1}] &#x3D; K_{S}<br>$$<br>the equilibrium constant defined in <u>Equation 11.16</u></p>
+<h3 id="1-Michaelis-constant-K-M"><a href="#1-Michaelis-constant-K-M" class="headerlink" title="1. Michaelis constant $K_{M}$"></a>1. Michaelis constant $K_{M}$</h3><p>Thus, <u>$K_{M}$ is a measure of the substrate concentration required for effective catalysis to occur.</u> </p>
+<p>$K_{M}$ is a equilibrium constant.</p>
+<p><em>An enzyme with a high</em> $K_{M}$ <em>requires a higher substrate concentration to achieve a given reaction velocity than</em> <em>an enzyme with a low</em> $K_{M}$ but the same $k_{cat}$ </p>
+<p><u>Table 11.4</u> lists values for a number of important enzymes.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125114423690.png" srcset="/img/loading.gif" lazyload alt="image-20191125114423690"></p>
+<p>Higher $K_{M}$, the lower ability to bind substrate.</p>
+<p>The steady-state assumption proposes that the concentration of enzyme–substrate complex remains nearly constant through much of the reaction. </p>
+<p>The <strong>Michaelis constant</strong>, $K_{M}$ , indicates the substrate concentration at which the reaction rate is ½ <em>V</em>max. </p>
+<h3 id="2-The-Turnover-Number-k-cat"><a href="#2-The-Turnover-Number-k-cat" class="headerlink" title="2. The Turnover Number $k_{cat}$"></a>2. The Turnover Number $k_{cat}$</h3><p>The <strong>turnover number</strong>, $k_{cat} $ , measures <u>the rate of the catalytic process.</u> Some typical turnover numbers are listed in <u>Table 11.4.</u> </p>
+<p>$k_{cat}$ is a rate constant.</p>
+<p>$k_{cat}$ gives a direct measure of the <u>rate of product formation under optimum conditions (saturated enzyme).</u> </p>
+<p>The unit of $k_{cat}$ is always $s^{-1}$</p>
+<h3 id="3-The-Ratio-k-cat-K-M"><a href="#3-The-Ratio-k-cat-K-M" class="headerlink" title="3. The Ratio $k_{cat}&#x2F;K_{M}$"></a>3. The Ratio $k_{cat}&#x2F;K_{M}$</h3><p>The ratio $k_{cat}&#x2F;K_{M}$ is a convenient measure of <strong>enzyme efficiency.</strong></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125161047106.png" srcset="/img/loading.gif" lazyload alt="image-20191125161047106"></p>
+<p>Note that either a large value of $k_{cat}$ (i.e., rapid turnover) or a small value of $K_{M}$ (i.e., $1&#x2F;2 \ V_{max}$ occurs at relatively low [S]) will make $k_{cat}&#x2F;K_{M}$ large. </p>
+<p>We can gain another insight into the meaning of $k_{cat}&#x2F;K_{M}$ by considering the situation <u>at very low substrate concentrations.</u></p>
+<p>In this case, $[s] &lt;&lt; K_{M}$, so most of the enzyme is free, so $[E]<em>{t} \approx [E]$. Then the <u>equation 11.23</u> becomes <u>equation 11.26</u>:<br>$$<br>v &#x3D; \frac{k</em>{cat}}{K_{M}} [E][S]<br>$$<br>Therefore, under these circumstances, the ratio $k_{cat}&#x2F;K_{M}$ behaves as a <u>second-order rate constant for the reaction between substrate and free enzyme</u>, and it <u>provides a direct measure of enzyme <strong>efficiency and specificity.</strong></u></p>
+<p>Suppose an enzyme has a choice of two substrates, A or B, present at equal concentrations. Then under conditions in which both substrates are dilute and are competing for the enzyme</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125162751774.png" srcset="/img/loading.gif" lazyload alt="image-20191125162751774"></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125162922809.png" srcset="/img/loading.gif" lazyload alt="image-20191125162922809" style="zoom:50%;" />
+
+<p>We have just seen that the ratio $k_{cat}&#x2F;K_{M}$ corresponds to the second-order rate constant for enzyme–substrate combination under circumstances of <u>low substrate concentration.</u> </p>
+<h1 id="二、Analysis-of-Kinetic-Data-Testing-the-Michaelis–Menten-Equation"><a href="#二、Analysis-of-Kinetic-Data-Testing-the-Michaelis–Menten-Equation" class="headerlink" title="二、Analysis of Kinetic Data: Testing the Michaelis–Menten Equation"></a>二、Analysis of Kinetic Data: Testing the Michaelis–Menten Equation</h1><p>The measurement of reaction velocity as a function of substrate concentration is <u>used to determine whether an enzyme-catalyzed reaction follows the Michaelis–Menten model</u>  <u>(equation 11.25)</u><br>$$<br>v &#x3D; \frac{V_{max} [S]}{K_{M} + [S]}<br>$$<br> and, if so, to determine the constants $K_{M} \text{ and } k_{cat}$</p>
+<h2 id="Analysis-of-initial-rates"><a href="#Analysis-of-initial-rates" class="headerlink" title="Analysis of initial rates"></a>Analysis of initial rates</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125164047431.png" srcset="/img/loading.gif" lazyload alt="image-20191125164047431" style="zoom: 80%;" />
+
+<p>Several reactions are performed with <strong>varying concentrations</strong> of substrate and the values of the initial rates are determined from the slopes of the curves in the early phase for each reaction. </p>
+<p>Initial rate data, determined as described in panel A, are plotted as a function of the substrate concentration.  </p>
+<p>The enzyme appears to obey the Michaelis–Menten kinetic model.</p>
+<h2 id="Lineweaver–Burk-plot-莱恩威弗-伯克作图"><a href="#Lineweaver–Burk-plot-莱恩威弗-伯克作图" class="headerlink" title="Lineweaver–Burk plot 莱恩威弗-伯克作图"></a>Lineweaver–Burk plot 莱恩威弗-伯克作图</h2><h3 id="1-Deduction"><a href="#1-Deduction" class="headerlink" title="1. Deduction"></a>1. Deduction</h3><p><strong>Lineweaver–Burk plot</strong> is also called  <strong>double reciprocal plot</strong> (双倒数图)</p>
+<p>A Lineweaver–Burk plot provides a quick test for adherence to Michaelis–Menten kinetics and allows easy evaluation of the critical constants.<br>$$<br>\because v &#x3D; \frac{V_{max} [S]}{K_{M} + [S]}<br>$$</p>
+<p>$$<br>\text{两边取倒数得：}\frac{1}{v} &#x3D; \frac{K_{M} + [S]}{V_{max} [S]}<br>$$</p>
+<p>$$<br>\therefore \frac{K_{M} + [S]}{V_{max} [S]} &#x3D; \frac{K_{M}}{V_{max} [S]} + \frac{1}{V_{max}}<br>$$</p>
+<p>$$<br>\therefore \frac{1}{v} &#x3D; (\frac{K_{M}}{V_{max}}) \frac{1}{[S]} + \frac{1}{V_{max}}<br>$$</p>
+<p>Figure 11.25:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125164337402.png" srcset="/img/loading.gif" lazyload alt="image-20191125164337402" style="zoom: 50%;" />
+
+<p> At 1&#x2F;[S] &#x3D; 0, [S] is infinitely large and the reaction velocity is at its maximum.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125165627357.png" srcset="/img/loading.gif" lazyload alt="image-20191125165627357"></p>
+<p>where denotes the value of $[S]_{0}$ at We then obtain from Equation 11.29:</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125165701750.png" srcset="/img/loading.gif" lazyload alt="image-20191125165701750"></p>
+<h3 id="2-Disadvantages"><a href="#2-Disadvantages" class="headerlink" title="2. Disadvantages"></a>2. Disadvantages</h3><p>A disadvantage of a Lineweaver–Burk plot is that a long extrapolation（外推） is often required to determine $K_{M} $, which <u>introduces corresponding uncertainty in the result.</u> </p>
+<h2 id="Eadie–Hofstee-plot"><a href="#Eadie–Hofstee-plot" class="headerlink" title="Eadie–Hofstee plot"></a>Eadie–Hofstee plot</h2><h3 id="1-Deduction-1"><a href="#1-Deduction-1" class="headerlink" title="1. Deduction"></a>1. Deduction</h3><p>$$<br>\text{Get from equation 11.25: }v &#x3D; \frac{V_{max} [S]}{K_{M} + [S]}<br>$$</p>
+<p>$$<br>\text{将右端算式的分母左乘：} v K_{M} + v [S] &#x3D; V_{max} [S]<br>$$</p>
+<p>$$<br>\text{左右同除[S]: } \frac{v K_{M}}{[S]} + v &#x3D; V_{max}<br>$$</p>
+<p>$$<br>\therefore v &#x3D; V_{max} - \frac{v K_{M}}{[S]}<br>$$</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125170645357.png" srcset="/img/loading.gif" lazyload alt="image-20191125170645357" style="zoom:50%;" />
+
+<p>These linear plots provide useful methods for recognizing modes of inhibition; however, they suffer from unequal weighting of the data. </p>
+<p>Performing nonlinear curve fitting to the raw data with readily available software is now preferred. </p>
+<p>The observed effects of an amino acid mutation in an enzyme active site on $K_{M}$ and $k_{cat}$ can be used to identify the role of the amino acid in substrate binding ($K_{M}$ effects) and transition-state stabilization ($k_{cat}$ effects).</p>
+<h1 id="三、Multisubstrate-Reactions"><a href="#三、Multisubstrate-Reactions" class="headerlink" title="三、Multisubstrate Reactions"></a>三、Multisubstrate Reactions</h1><p>An example we have already discussed is proteolysis, which involves two substrates (the polypeptide and water) and two products (the two fragments of the cleaved polypeptide chain). Phosphorylation of glucose, as catalyzed by hexokinase, is another such case: The two substrates are glucose and ATP, and the products are glucose-6-phosphate and ADP. </p>
+<p><u>When an enzyme binds two or more substrates and releases multiple products, the order of the steps becomes an important feature of the enzyme mechanism.</u></p>
+<p>We shall illustrate them with examples using two substrates, S1 and S2, and two products, P1 and P2.</p>
+<h2 id="Random-Substrate-Binding"><a href="#Random-Substrate-Binding" class="headerlink" title="Random Substrate Binding"></a>Random Substrate Binding</h2><p>In random substrate binding, either substrate can be bound first, <u>although in many cases one substrate will be favored for initial binding, and its binding may promote the binding of the other.</u> </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125171732828.png" srcset="/img/loading.gif" lazyload alt="image-20191125171732828"></p>
+<p>Example：</p>
+<p>The <u>phosphorylation</u> of glucose by ATP, with <u>hexokinase</u> as the enzyme, appears to follow such a mechanism, although there is some tendency for glucose to bind first. </p>
+<h2 id="Ordered-Substrate-Binding"><a href="#Ordered-Substrate-Binding" class="headerlink" title="Ordered Substrate Binding"></a>Ordered Substrate Binding</h2><p>In some cases, one substrate <em>must</em> bind before a second substrate can bind significantly:</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125172058212.png" srcset="/img/loading.gif" lazyload alt="image-20191125172058212"></p>
+<p>Example：</p>
+<p>This mechanism is often observed in oxidations of substrates by the cofactor $NAD^{+}$ which is related to the cofactor $NADP^{+}$ discussed above in the dihydrofolate reductase mechanism.</p>
+<h2 id="The-Ping-Pong-Mechanism"><a href="#The-Ping-Pong-Mechanism" class="headerlink" title="The Ping-Pong Mechanism"></a>The Ping-Pong Mechanism</h2><p>Sometimes the sequence of events in catalysis goes like this: One substrate is bound, one product is released, a second substrate comes in, and a second product is released. This is called a “ping-pong” reaction: </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125172321913.png" srcset="/img/loading.gif" lazyload alt="image-20191125172321913" style="zoom:55%;" />
+
+<p>Here E* is a modified form of the enzyme, often carrying a fragment of S1.</p>
+<p>A good  example is the cleavage of a polypeptide chain by a serine protease such as trypsin or chymotrypsin.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125172415681.png" srcset="/img/loading.gif" lazyload alt="image-20191125172415681" style="zoom:50%;" />
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/" class="category-chain-item">Biochemistry I (Macromolecules)</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Biochemistry-I-Macromolecules/" class="print-no-link">#Biochemistry I (Macromolecules)</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L12 The Kinetics of Enzymatic Catalysis</div>
+      <div>https://zhenyumi.github.io/posts/1581bec0/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/11af9c4a/" title="L12 Introduction of the Transposable Elements">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L12 Introduction of the Transposable Elements</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/a2cf81d6/" title="L13 Enzyme inhibition">
+                        <span class="hidden-mobile">L13 Enzyme inhibition</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

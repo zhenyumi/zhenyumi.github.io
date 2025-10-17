@@ -1,0 +1,827 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="No such things">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L04 Recombinat DNA">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/29f349b4/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="No such things">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_%EC%BA%AC%EB%A3%A8%ED%83%88%EC%B6%9C.png">
+<meta property="article:published_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:modified_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Molecular Biology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_%EC%BA%AC%EB%A3%A8%ED%83%88%EC%B6%9C.png">
+  
+  
+  
+  <title>L04 Recombinat DNA - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_Sunlight%281%29.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L04 Recombinat DNA</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-24 17:20" pubdate>
+          2020年7月24日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          592 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L04 Recombinat DNA</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Phage"><a href="#一、Phage" class="headerlink" title="一、Phage"></a>一、Phage</h1><h2 id="Structure-of-phages"><a href="#Structure-of-phages" class="headerlink" title="Structure of phages"></a>Structure of phages</h2><p>Phage are relatively simple bacterial parasites that can only reproduce within a  bacterial cell. They use ribosomes and other host factors during the stage  within the cell, but encode relatively few genes of their own.</p>
+<p><u>Most commonly, phage are linear  dsDNA, but can be circular,  single stranded, or RNA.</u> </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224222332090.png" srcset="/img/loading.gif" lazyload alt="image-20191224222332090" style="zoom:67%;" />
+
+<h2 id="The-Life-Cycle"><a href="#The-Life-Cycle" class="headerlink" title="The Life Cycle"></a>The Life Cycle</h2><ol>
+<li>Phage <u>attaches</u> to a specific host bacterium</li>
+<li><u>injects</u> its DNA</li>
+<li><u>disrupts</u> the bacterial genome and killing the bacterium</li>
+<li><u>takes over</u> the bacterial DNA and protein synthesmachinery to make phage parts.</li>
+<li>The process culminates with the <u>assembly</u> of new phage</li>
+<li>the lysis of the bacterial cell wall to <u>release</u> 100’s of new copies of the input phage into the environment.</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104161055351.png" srcset="/img/loading.gif" lazyload alt="image-20191104161055351" style="zoom: 60%;" />
+
+<h2 id="Restriction-and-Modification-Systems"><a href="#Restriction-and-Modification-Systems" class="headerlink" title="Restriction and Modification Systems"></a>Restriction and Modification Systems</h2><p>The bacterial cell uses the restriction enzyme to cut the invading DNA of the phage  at the specific recognition site of the enzyme. <u>This prevents the virus from taking  over the cellular metabolism for its own replication.</u>  </p>
+<p>The genes encoding this system are often carried on plasmids, and provide advantages to hosts.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224222411500.png" srcset="/img/loading.gif" lazyload alt="image-20191224222411500"></p>
+<p>The restriction-modification system is used to protect bacteria from invasion by phage. Bacterial DNA also contains sites cleavable by the restriction enzyme, but is <u>protected by a methylase</u> which recognizes the same target site adds a methyl group to that site. </p>
+<p><u>Methylated sites are not substrates for the restriction enzyme.</u>  </p>
+<p>The bacterial DNA is methylated <u>immediately</u> following replication so it will not be a  suitable substrate for restriction endonuclease cleavage. </p>
+<h3 id="1-Nucleases"><a href="#1-Nucleases" class="headerlink" title="1. Nucleases"></a>1. Nucleases</h3><p>Nucleases are enzymes that degrade nucleic acids, the opposite function of  polymerases.  </p>
+<p><u>They hydrolyze, or break, an ester bond in a phosphodiester linkage.</u> </p>
+<h3 id="2-Restriction-Enzyme"><a href="#2-Restriction-Enzyme" class="headerlink" title="2. Restriction Enzyme"></a>2. Restriction Enzyme</h3><p>Restriction enzymes are proteins that cut at specific sites</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224222533897.png" srcset="/img/loading.gif" lazyload alt="image-20191224222533897" style="zoom: 25%;" />
+
+<p>EcoRI was one of the first enzymes isolated. Target sequences areusually short <u>palindromes.</u>（回文的）</p>
+<p>These can leave <u>blunt or  “sticky” ends</u>, with either 5’ or  3’ overhangs resulting from  the symmetrical recognition  sites. </p>
+<p>Enzymes scan DNA to recognize  target. Recognition causes  conformational change of the enzyme  and DNA, leading to catalysis  (cleavage) and DNA release.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224222625677.png" srcset="/img/loading.gif" lazyload alt="image-20191224222625677" style="zoom:60%;" />
+
+<p>Different enzymes recognize different sequences, usually palindromic (and therefore 4, 6, or even 8 bp recognition sites…why an even number?).</p>
+<p>These can leave blunt or “sticky” ends, with either 5’ or 3’ overhangs resulting from the symmetrical recognition sites.</p>
+<p>The 1978 Nobel prize was awarded for the discovery and use of restriction enzymes.</p>
+<h4 id="Steps-Involved-In-Cleavage-By-Type-II-Restriction-Enzyme"><a href="#Steps-Involved-In-Cleavage-By-Type-II-Restriction-Enzyme" class="headerlink" title="Steps Involved In Cleavage By Type II Restriction Enzyme"></a>Steps Involved In Cleavage By Type II Restriction Enzyme</h4><p>Enzymes scan DNA to recognize target. Recognition causes conformational change of the enzyme and DNA, leading to catalysis (cleavage) and DNA release.</p>
+<h3 id="3-Ligase"><a href="#3-Ligase" class="headerlink" title="3. Ligase"></a>3. Ligase</h3><p>Ligases are used to <u>seal cuts</u> in  the DNA strands. </p>
+<p>A “vector（载体）” is a molecule that can replicate in a host cell-like a small circle of DNA in a  bacterial cell. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224224350255.png" srcset="/img/loading.gif" lazyload alt="image-20191224224350255" style="zoom:50%;" />
+
+<h4 id="Blunt-End-Ligations（平末端）"><a href="#Blunt-End-Ligations（平末端）" class="headerlink" title="Blunt End Ligations（平末端）"></a>Blunt End Ligations（平末端）</h4><p>Ligation of blunt ends has efficiency, but can be  increased by adding  complementary tails of  poly(dA) and poly(dT). </p>
+<p>These can then be covalently linked by DNA ligase.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224224418139.png" srcset="/img/loading.gif" lazyload alt="image-20191224224418139" style="zoom:67%;" />
+
+<h1 id="二、Techniques-about-Recombination-DNA"><a href="#二、Techniques-about-Recombination-DNA" class="headerlink" title="二、Techniques about Recombination DNA"></a>二、Techniques about Recombination DNA</h1><h2 id="Vectors"><a href="#Vectors" class="headerlink" title="Vectors"></a>Vectors</h2><table>
+<thead>
+<tr>
+<th>Vector</th>
+<th>Features</th>
+<th>Isolation of DNA</th>
+<th>DNA limit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Plasmid</td>
+<td>High copy number</td>
+<td>Physical</td>
+<td>10 kb</td>
+</tr>
+<tr>
+<td>Phage</td>
+<td>Infects bacteria</td>
+<td>Via phage packaging</td>
+<td>20 kb</td>
+</tr>
+<tr>
+<td>Cosmid</td>
+<td>High copy number</td>
+<td>Via phage packaging</td>
+<td>48 kb</td>
+</tr>
+<tr>
+<td>BAG</td>
+<td>Based on F plasmid</td>
+<td>Physical</td>
+<td>300 kb</td>
+</tr>
+<tr>
+<td>YAC</td>
+<td>Origin + centromere + telomere</td>
+<td>Physical</td>
+<td>3000 kb</td>
+</tr>
+</tbody></table>
+<ol>
+<li><strong>Plasmid</strong> 质粒 - an extrachromosomal <u>circular DNA molecule</u> that autonomously  <u>replicates inside the bacterial cell</u>; cloning limit: 100 base pairs to 10 kb </li>
+<li><strong>Phage</strong> 噬菌体- derivatives of bacteriophage lambda; <u>linear DNA molecules</u>, whose  region can be replaced with foreign DNA without disrupting its life cycle;  cloning limit: 8 to 20 kb  </li>
+<li><strong>Cosmids</strong> 黏质体、粘粒- an extrachromosomal <u>circular DNA molecule</u> that <u>combines  features of plasmids and phage</u>; cloning limit: 35 to 50 kb  </li>
+<li><strong>Bacterial Artificial Chromosomes</strong> (BAC，细菌人工染色体) - based on bacterial mini-F plasmids.  cloning limit: 75 to 200 kb  </li>
+<li><strong>Yeast Artificial Chromosomes</strong> (YAC，酵母人工染色体) - an artificial chromosome that <u>contains  telomeres, origin of replication, a yeast centromere, and a selectable marker  for identification in yeast cells</u>; cloning limit: 100 to 1000 kb</li>
+</ol>
+<h3 id="1-Plasmids"><a href="#1-Plasmids" class="headerlink" title="1. Plasmids"></a>1. Plasmids</h3><p>A plasmid is an independent, circular, self-replicating DNA molecule that carries only a few genes, and these have been found in many organisms (bacteria to plants and animals).  </p>
+<p>The number of plasmids in a cell generally remains constant from generation to generation.  </p>
+<p>Plasmids are autonomous molecules and exist in cells as extrachromosomal genomes, although some plasmids can be inserted into a bacterial chromosome, where they become a permanent part of the bacterial genome. </p>
+<p>These molecules often confer selective advantage, but may be genetically dispensible. </p>
+<p>Plasmids provide great functionality in molecular biology.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104164244243.png" srcset="/img/loading.gif" lazyload alt="image-20191104164244243" style="zoom: 43%;" />
+
+<p>Plasmid structure: usually negatively supercoiled circular dsDNA.</p>
+<p>Naturally occurring plasmids were named for phenotypes they conferred (F for fertility, R for antibiotic resistance, etc.)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224225231720.png" srcset="/img/loading.gif" lazyload alt="image-20191224225231720" style="zoom:67%;" />
+
+<blockquote>
+<p>Artificially constructed plasmids are usually given the designation “p” for plasmid, “XY” the initials of the person or team that constructed the plasmid, and “nnn,” its serial number. Thus pBR322 was the serial number 322 plasmid constructed by Bolivar and Rodriquez.</p>
+</blockquote>
+<h4 id="Use-Plasmids-to-do-molecular-cloning"><a href="#Use-Plasmids-to-do-molecular-cloning" class="headerlink" title="Use Plasmids to do molecular cloning"></a>Use Plasmids to do molecular cloning</h4><p>Vector + DNA  fragment → Recombinant DNA → Replication of  recombinant DNA  within host cells → Isolation, sequencing,  and manipulation of  purified DNA fragment</p>
+<h4 id="Marker-Genes"><a href="#Marker-Genes" class="headerlink" title="Marker Genes"></a>Marker Genes</h4><p>In nuclear biology and molecular biology, a marker gene is a gene used to determine if a nucleic acid sequence has been successfully inserted into an organism’s DNA. In particular, there are two sub-types of these marker genes: a selectable marker and a marker for screening.</p>
+<p>Plasmids that express  the <strong>lacZ</strong> 5’ end can be  used in E. coli  expressing the lacZ 3’  end.  </p>
+<blockquote>
+<p>The protein fragments  form a functional  enzyme that cleaves  the colorless X-gal (5- bromo-4-chloro-3- indolyl- beta-D-galactoside) into a blue colored product. </p>
+</blockquote>
+<h3 id="2-Phage"><a href="#2-Phage" class="headerlink" title="2. Phage"></a>2. Phage</h3><p>Bacteriophage Lambda as a cloning vector:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224225921604.png" srcset="/img/loading.gif" lazyload alt="image-20191224225921604" style="zoom:67%;" />
+
+<h3 id="3-YAC"><a href="#3-YAC" class="headerlink" title="3. YAC"></a>3. YAC</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225202551181.png" srcset="/img/loading.gif" lazyload alt="image-20191225202551181" style="zoom:67%;" />
+
+<h2 id="mRNA-can-be-turned-to-DNA-and-the-cloned"><a href="#mRNA-can-be-turned-to-DNA-and-the-cloned" class="headerlink" title="mRNA can be turned to DNA and the cloned"></a>mRNA can be turned to DNA and the cloned</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104170358266.png" srcset="/img/loading.gif" lazyload alt="image-20191104170358266" style="zoom:80%;" />
+
+<h2 id="“Gateway”-Cloning"><a href="#“Gateway”-Cloning" class="headerlink" title="“Gateway” Cloning"></a>“Gateway” Cloning</h2><p>Use site specific recombinases</p>
+<h2 id="Probes-and-Labeling-of-Molecules"><a href="#Probes-and-Labeling-of-Molecules" class="headerlink" title="Probes and Labeling of Molecules"></a>Probes and Labeling of Molecules</h2><p>Searching for a particular DNA sequence in a library of molecules requires a  specific “probe”.  </p>
+<p>“labels” to track the probe can be added to the end (“end-labelled”) or  incorporated internally during replication </p>
+<p>DNA probes can be made from synthetic oligonucleotides, cloned DNA fragments, or RNA probes (riboprobes). </p>
+<p>DNA must be denatured prior to use as a probe, but RNA is already single-stranded. </p>
+<p>Heterologous probes are similar to the target but not an exact match. Homologous probes are exactly complementary.</p>
+<h2 id="Methods-Labeling-Nucleic-Acids"><a href="#Methods-Labeling-Nucleic-Acids" class="headerlink" title="Methods Labeling Nucleic Acids"></a>Methods Labeling Nucleic Acids</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104174318319.png" srcset="/img/loading.gif" lazyload alt="image-20191104174318319" style="zoom:67%;" />
+
+<p>Two methods of uniform labeling and one method  of end labeling – all  require nucleic acid  synthesis.</p>
+<h2 id="Agarose-Gel-Electrophoresis"><a href="#Agarose-Gel-Electrophoresis" class="headerlink" title="Agarose Gel Electrophoresis"></a>Agarose Gel Electrophoresis</h2><p>DNA size can be determined by Gel Electrophoresis</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225210637349.png" srcset="/img/loading.gif" lazyload alt="image-20191225210637349"></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225210648746.png" srcset="/img/loading.gif" lazyload alt="image-20191225210648746" style="zoom:67%;" />
+
+<h3 id="1-Southern-Blots"><a href="#1-Southern-Blots" class="headerlink" title="1. Southern Blots"></a>1. Southern Blots</h3><p>DNA is separated,  transferred to a  nylon membrane  (maintaining the relative position of fragments in the  agarose gel). </p>
+<p>The size of a  specific piece of  DNA is checked  using a labelled probe.</p>
+<p>Steps:</p>
+<ol>
+<li>Digest ONA with restriction endonucleases</li>
+<li>Perform agarose gel electrophoresis on the DNA fragments from different digests</li>
+<li>DNA fragments fractionated by size (visible under UV light if gel is soaked in ethidium bromide)</li>
+<li>Transfer (blot) gel to nitrocellulose or nylon membrane using Southern blot technique</li>
+<li>DNA fragments are bound to the membrane in positions identical to those on the gel</li>
+<li>Hybridize membrane with radioactively labeled probe</li>
+<li>Expose membrane to X-ray film. Resulting autoradiograph shows hybridized DNA fragments</li>
+</ol>
+<h4 id="Autoradiograph-自体放射造影照片"><a href="#Autoradiograph-自体放射造影照片" class="headerlink" title="Autoradiograph 自体放射造影照片"></a>Autoradiograph 自体放射造影照片</h4><p>An autoradiograph of a gel to check for specific sequences</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225211616229.png" srcset="/img/loading.gif" lazyload alt="image-20191225211616229"></p>
+<h2 id="Western-Blot"><a href="#Western-Blot" class="headerlink" title="Western Blot"></a>Western Blot</h2><p>西方墨点法（英语：Western blot）或称「蛋白质转渍法」、「免疫墨点法」（immunoblot）或「西式吸印杂交」，是分子生物学、生物化学和免疫遗传学中常用的一种实验方法，也是HIV检测的方法之一。<br>利用特定抗体能够专一结合其抗原蛋白质的原理来对样品进行着色，通过分析着色的位置和着色深度获得特定蛋白质在所分析的细胞或组织中的表达情况的信息，来分析检测特定蛋白质的生物学检测技术。</p>
+<p>Western Blot与Southern或Northern杂交方法类似，但Western Blot采用的是聚丙烯酰胺凝胶电泳，被检测物是蛋白质，“探针”是抗体，“显色”用标记的二抗。经过PAGE分离的蛋白质样品，转移到固相载体（例如硝酸纤维素薄膜）上，固相载体以非共价键形式吸附蛋白质，且能保持电泳分离的多肽类型及其生物学活性不变。以固相载体上的蛋白质或多肽作为抗原，与对应的抗体起免疫反应，再与酶或同位素标记的第二抗体起反应，经过底物显色或放射自显影以检测电泳分离的特异性目的基因表达的蛋白成分。该技术也广泛应用于检测蛋白水平的表达。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Molecular-Biology/" class="category-chain-item">Molecular Biology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Molecular-Biology/" class="print-no-link">#Molecular Biology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L04 Recombinat DNA</div>
+      <div>https://zhenyumi.github.io/posts/29f349b4/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/c1c8f6e7/" title="L03 RNA and Protein">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L03 RNA and Protein</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/52351e2/" title="L05 Bioinformatics">
+                        <span class="hidden-mobile">L05 Bioinformatics</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

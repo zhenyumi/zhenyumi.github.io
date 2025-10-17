@@ -1,0 +1,952 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L08 Genetics of Bacteria and Bacteriophages">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/904e407c/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+  
+  
+  
+  <title>L08 Genetics of Bacteria and Bacteriophages - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L08 Genetics of Bacteria and Bacteriophages</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          392 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          4 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L08 Genetics of Bacteria and Bacteriophages</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、The-Bacteria-And-Virus"><a href="#一、The-Bacteria-And-Virus" class="headerlink" title="一、The Bacteria And Virus"></a>一、The Bacteria And Virus</h1><h2 id="The-Similarities-of-Bacteria-and-Viruses"><a href="#The-Similarities-of-Bacteria-and-Viruses" class="headerlink" title="The Similarities of Bacteria and Viruses"></a>The Similarities of Bacteria and Viruses</h2><ol>
+<li>Small size </li>
+<li>Short generation time </li>
+<li>Selective media (e.g. antibiotics) </li>
+<li>Simple structures and physiology </li>
+<li>Usually haploid – what is the advantage? </li>
+<li>Genetic variability </li>
+<li>Complete genome sequences</li>
+</ol>
+<h2 id="Virus"><a href="#Virus" class="headerlink" title="Virus"></a>Virus</h2><ol>
+<li><strong>Non‐living particles</strong> </li>
+<li>Medically important – cause many diseases </li>
+<li>Nucleic acid genomes </li>
+<li>Both prokaryotic and eukaryotic cells are infected </li>
+<li>Rely on living cells to replicate </li>
+<li>Size of genome quite variable </li>
+<li>Circular or linear</li>
+</ol>
+<h3 id="1-Bacteriophage-T4-Phage-T4"><a href="#1-Bacteriophage-T4-Phage-T4" class="headerlink" title="1. Bacteriophage T4 (Phage T4)"></a>1. Bacteriophage T4 (Phage T4)</h3><h4 id="Structure-And-Characristic"><a href="#Structure-And-Characristic" class="headerlink" title="Structure And Characristic"></a>Structure And Characristic</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113163622894.png" srcset="/img/loading.gif" lazyload alt="image-20191113163622894" style="zoom:50%;" />
+
+<ul>
+<li>Double‐stranded DNA genome </li>
+<li>Virulent phage: Use the metabolic machinery of the host cell to produce progeny virus and kill the host in the process </li>
+<li>Lytic phage</li>
+</ul>
+<h4 id="Life-Cycle"><a href="#Life-Cycle" class="headerlink" title="Life Cycle"></a>Life Cycle</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113163723322.png" srcset="/img/loading.gif" lazyload alt="image-20191113163723322" style="zoom:67%;" />
+
+<h4 id="Genetics-Mapping-in-Phage-T4"><a href="#Genetics-Mapping-in-Phage-T4" class="headerlink" title="Genetics Mapping in Phage T4"></a>Genetics Mapping in Phage T4</h4><p>Use a type of genetic mapping known as <strong>intragenic (基因内的)</strong> or <strong>fine structure mapping</strong></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113171625932.png" srcset="/img/loading.gif" lazyload alt="image-20191113171625932"></p>
+<p>To test if the mutations causing differences in plaque morphology are <strong>in the same gene or different genes</strong>（检测引起斑块形态差异的突变是否来自同一基因或不同基因）, a <strong>complementation test</strong> can be performed</p>
+<ul>
+<li>Use two mutant strains to infect the same cell<ul>
+<li>If no wild‐type plaques are obtained it indicates that the mutations are in the same gene – <strong>noncomplementation</strong> </li>
+<li>If wild‐type plaques are obtained it indicates that the mutations from each strain are in different genes –<strong>complementation</strong></li>
+</ul>
+</li>
+</ul>
+<h5 id="1-Noncomplementation"><a href="#1-Noncomplementation" class="headerlink" title="(1) Noncomplementation"></a>(1) Noncomplementation</h5><p>The phage mutations are in the same gene</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113172606835.png" srcset="/img/loading.gif" lazyload alt="image-20191113172606835" style="zoom: 33%;" />
+
+<p>No complementation occurs, because the <u>coinfected cell is unable to make the normal product of gene A.</u> </p>
+<p>The coinfected cell <u>will not produce viral particles</u>, thus no bacterial cell lysis and no plaque formation.</p>
+<h5 id="2-Complementation"><a href="#2-Complementation" class="headerlink" title="(2) Complementation"></a>(2) Complementation</h5><p>The phage mutations are in different gene</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113172825296.png" srcset="/img/loading.gif" lazyload alt="image-20191113172825296" style="zoom:33%;" />
+
+<p>Complementation occurs, because the coinfected cell is able to make normal products of gene A and gene B. The coinfected bacterial cell will produce viral particles that lyse the cell, resulting in the appearance of clear plaques.</p>
+<h5 id="3-The-Recombination-Test"><a href="#3-The-Recombination-Test" class="headerlink" title="(3) The Recombination Test"></a>(3) The Recombination Test</h5><p><strong>Seymour Benzer</strong> decided to find out </p>
+<p>Could wild-type virus be formed by recombination between mutations within the same gene? (是否可以通过同一基因内突变之间的重组形成野生型)</p>
+<h6 id="The-Recombination"><a href="#The-Recombination" class="headerlink" title="The Recombination"></a>The Recombination</h6><ol>
+<li>the recombination frequency between different genes is low (on the order of 10-2 ).  </li>
+<li>One would expect that recombination frequencies between mutations in a single gene would be far lower (10-4 or less).</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113173712074.png" srcset="/img/loading.gif" lazyload alt="image-20191113173712074" style="zoom: 50%;" />
+
+<p>He conducted a detailed type of genetic mapping known as <strong>intragenic (基因外的) or fine structure mapping</strong></p>
+<ul>
+<li>The difference between intragenic and intergenic mapping is:</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113173856860.png" srcset="/img/loading.gif" lazyload alt="image-20191113173856860" style="zoom:33%;" />
+
+<h6 id="Recombination-Test"><a href="#Recombination-Test" class="headerlink" title="Recombination Test"></a>Recombination Test</h6><p>Recombination Frequency &#x3D; 2 × number of wild-type plaques (strain K plaques) ÷ total number of plaques (on strain B).</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113174032743.png" srcset="/img/loading.gif" lazyload alt="image-20191113174032743"></p>
+<ul>
+<li>Benzer had tested 2,400 different mutations in the rII gene. The recombination frequency between some pairs of these was as low as 0.02%.</li>
+</ul>
+<ol>
+<li>The T4 genome has 160,000 base pairs of DNA extending over ~l,600 centimorgans (cM).</li>
+<li>So 1 cM $\cong$ 100 base pairs</li>
+<li>So 0.02 cM represents a pair of adjacent nucleotides.</li>
+</ol>
+<p>From these data, Benzer concluded that <strong>the smallest unit of mutation and the smallest unit of recombination was a single base pair of DNA.</strong> </p>
+<p>In other words, </p>
+<ul>
+<li><p>these mutations represent a change in a single base pair — we call these point mutations. </p>
+</li>
+<li><p>Recombination between two molecules of DNA can occur at any pair of nucleotides.</p>
+</li>
+</ul>
+<h3 id="2-Bacteriophage-Lambda-Phage-lambda"><a href="#2-Bacteriophage-Lambda-Phage-lambda" class="headerlink" title="2. Bacteriophage Lambda (Phage $\lambda$)"></a>2. Bacteriophage Lambda (Phage $\lambda$)</h3><h4 id="Structure-And-Characteristic"><a href="#Structure-And-Characteristic" class="headerlink" title="Structure And Characteristic"></a>Structure And Characteristic</h4><ul>
+<li><p>Double‐stranded DNA genome </p>
+</li>
+<li><p>Temperate viruses: 2 phases </p>
+<ul>
+<li><strong>Lytic phase</strong>: cause lysis of cells; </li>
+<li><strong>Lysogenic phase</strong>: integrate into host chromosome as prophage ($\lambda$ chromosome) . Do not lyse cell. Can leave genome and enter lytic phase.</li>
+</ul>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113164339493.png" srcset="/img/loading.gif" lazyload alt="image-20191113164339493" style="zoom: 67%;" />
+
+<h4 id="Life-Cycle-1"><a href="#Life-Cycle-1" class="headerlink" title="Life Cycle"></a>Life Cycle</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113164403101.png" srcset="/img/loading.gif" lazyload alt="image-20191113164403101" style="zoom:67%;" />
+
+<h4 id="lambda-DNA-Insert-E-coli-Bacteria-DNA"><a href="#lambda-DNA-Insert-E-coli-Bacteria-DNA" class="headerlink" title="$\lambda$ DNA Insert E.coli Bacteria DNA"></a>$\lambda$ DNA Insert E.coli Bacteria DNA</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113164954402.png" srcset="/img/loading.gif" lazyload alt="image-20191113164954402" style="zoom:67%;" />
+
+<h3 id="3-Plaque-Formation"><a href="#3-Plaque-Formation" class="headerlink" title="3. Plaque Formation"></a>3. Plaque Formation</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113165059100.png" srcset="/img/loading.gif" lazyload alt="image-20191113165059100" style="zoom:67%;" />
+
+<h3 id="4-Phage-T2-Genetics-Mapping"><a href="#4-Phage-T2-Genetics-Mapping" class="headerlink" title="4. Phage T2 Genetics Mapping"></a>4. Phage T2 Genetics Mapping</h3><h4 id="h-Mutant"><a href="#h-Mutant" class="headerlink" title="h Mutant"></a>h Mutant</h4><p>When plated on a lawn containing both <strong><em>E. coli</em> B</strong> and <strong><em>E. coli</em> B&#x2F;2</strong>, the mutant (<em>h</em>) viruses can <u>lyze both strains of <em>E. coli</em>,</u> producing clear plaques, while </p>
+<p>the wild-type ($h^{+}$) viruses can <u>only lyze <em>E. coli</em> B</u> producing turbid (浑浊的) plaques. </p>
+<h4 id="r-Mutant"><a href="#r-Mutant" class="headerlink" title="r Mutant"></a>r Mutant</h4><p>The mutation occurs in a gene designated <em>r</em> (for “rapid lysis”). It reveals itself by the extra-large plaques that it forms. </p>
+<p>The wild-type gene, producing a normal time of lysis, is designated <u>$r^{+}$. It forms normal-size plaques.</u></p>
+<h4 id="Mapping"><a href="#Mapping" class="headerlink" title="Mapping"></a>Mapping</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113170542323.png" srcset="/img/loading.gif" lazyload alt="image-20191113170542323" style="zoom: 33%;" />
+
+<h2 id="Gene-And-Chromosome"><a href="#Gene-And-Chromosome" class="headerlink" title="Gene And Chromosome"></a>Gene And Chromosome</h2><p>Genes like beads on a chromosome</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113173132804.png" srcset="/img/loading.gif" lazyload alt="image-20191113173132804" style="zoom:50%;" />
+
+<h2 id="Bacteria"><a href="#Bacteria" class="headerlink" title="Bacteria"></a>Bacteria</h2><h3 id="1-Characterics"><a href="#1-Characterics" class="headerlink" title="1. Characterics"></a>1. Characterics</h3><ul>
+<li>Living organisms</li>
+<li>A single main chromosome within a few thousand genes</li>
+<li>Plasmids and episomes (Extrachromosomal element)</li>
+<li>Plasmids: Circular (or infrequently linear) piece of DNA<ul>
+<li>F Factor (Fertility Factor)</li>
+<li>R Plasmids (Resistance Plasmids)</li>
+<li>Col Plasmids (synthesize compounds that kill sensitive cells)</li>
+<li>Episomes: Circular piece of DNA that can exist as an extrachromosomal element or can integrate into chromosome of host</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-Genetic-Transfer-in-Bacteria"><a href="#2-Genetic-Transfer-in-Bacteria" class="headerlink" title="2. Genetic Transfer in Bacteria"></a>2. Genetic Transfer in Bacteria</h3><p>Transfer of genetic material from one bacterium to another can occur in three ways:</p>
+<ol>
+<li><strong>Conjugation (接合)</strong>: Involves direct transfer from one cell to another</li>
+<li><strong>Transduction (转导)</strong>: <u>Viruses</u> transfer DNA between bacteria cells <ul>
+<li>Transduction mediated by phage.</li>
+</ul>
+</li>
+<li><strong>Transformation (转化)</strong>: <ul>
+<li>Involves uptake of DNA from the environment</li>
+<li>Gene transfer in bacteria is unidirectional—from donor cells to recipient cells.</li>
+</ul>
+</li>
+</ol>
+<p>This is kind of <strong>Parasexual processes (类有性生殖)</strong></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114145615892.png" srcset="/img/loading.gif" lazyload alt="image-20191114145615892"></p>
+<h4 id="The-Differece-Between-The-Three-Kinds-of-Parasexual-Process"><a href="#The-Differece-Between-The-Three-Kinds-of-Parasexual-Process" class="headerlink" title="The Differece Between The Three Kinds of Parasexual Process"></a>The Differece Between The Three Kinds of Parasexual Process</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114151135168.png" srcset="/img/loading.gif" lazyload alt="image-20191114151135168" style="zoom: 50%;" />
+
+<p>Cell Contact means <u>Direct cell contect</u></p>
+<h4 id="Recombinations-in-bacteria"><a href="#Recombinations-in-bacteria" class="headerlink" title="Recombinations in bacteria"></a>Recombinations in bacteria</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114151624909.png" srcset="/img/loading.gif" lazyload alt="image-20191114151624909"></p>
+<p>The one crossover is unstable, because originally the bacteria chromosome exists in circular form, but after the one crossover the circular chromosome become linear.</p>
+<h3 id="3-Transformation"><a href="#3-Transformation" class="headerlink" title="3. Transformation"></a>3. Transformation</h3><p>Transformation is the process that a bacterium <u>take up of free extracellular DNA.</u><br>1.	<strong>Natural transformation:</strong> DNA uptake occurs without outside help<br>2.	<strong>Artificial transformatio</strong>n: DNA uptake occurs with the help of special techniques (热激，电激)</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114152103518.png" srcset="/img/loading.gif" lazyload alt="image-20191114152103518"></p>
+<h4 id="Discovery-of-Transformation"><a href="#Discovery-of-Transformation" class="headerlink" title="Discovery of Transformation"></a>Discovery of Transformation</h4><p>Discovered by Frederick Griffith in 1928 while working with strains of Streptococcus pneumoniae (pneumococcus)</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114165244411.png" srcset="/img/loading.gif" lazyload alt="image-20191114165244411"></p>
+<ul>
+<li>Type S: Encapsulated, virulent, large and smooth colonies in blood agar medium</li>
+<li>Type R: Mutated nonencapsulated, avirulent, small and rough colonies in blood agar medium</li>
+<li>Type II &amp; III: Produce different types of antigens</li>
+</ul>
+<p>Different type &#x3D; Different polysaccharide in the capsule</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114170600184.png" srcset="/img/loading.gif" lazyload alt="image-20191114170600184" style="zoom:67%;" />
+
+<h4 id="Natural-Transformation"><a href="#Natural-Transformation" class="headerlink" title="Natural Transformation"></a>Natural Transformation</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114170625575.png" srcset="/img/loading.gif" lazyload alt="image-20191114170625575"></p>
+<ol>
+<li><p>A <u>competent (处于感受态的)</u> bacterium can bind exogenous DNA and transport it into the cell.</p>
+</li>
+<li><p>Exogenous DNA is bound to the receptor complex by the competence proteins ComEA and ComG. As the DNA is pulled through the channel composed of protein ComEC in the membrane by the ComFA DNA translocase, one strand of DNA is degraded by a deoxyribonuclease. The surviving strand of DNA is stabilized by single-strand DNA-binding protein and RecA protein.</p>
+</li>
+<li><p>The single strand of donor DNA is integrated into the chromosome of the recipient cell producing a DNA heteroduplex with different alleles in the two strands.</p>
+</li>
+</ol>
+<h4 id="Artificial-Transformation"><a href="#Artificial-Transformation" class="headerlink" title="Artificial Transformation"></a>Artificial Transformation</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114171409150.png" srcset="/img/loading.gif" lazyload alt="image-20191114171409150"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114171415635.png" srcset="/img/loading.gif" lazyload alt="image-20191114171415635"></p>
+<h3 id="4-Conjugation"><a href="#4-Conjugation" class="headerlink" title="4. Conjugation"></a>4. Conjugation</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114171602843.png" srcset="/img/loading.gif" lazyload alt="image-20191114171602843" style="zoom: 67%;" />
+
+<p>Genetic transfer in bacteria was discovered in 1946 by Joshua Lederberg and Edward Tatum</p>
+<p>They were studying strains of <em>Escherichia coli</em> that had different nutritional growth requirements</p>
+<ul>
+<li><strong>Auxotrophs</strong> (营养缺陷型) cannot synthesize a needed nutrient </li>
+<li><strong>Prototrophs</strong> (原养型) make all their nutrients from basic components (Carbon resource or the Nitrogen resource)</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114172321203.png" srcset="/img/loading.gif" lazyload alt="image-20191114172321203" style="zoom:50%;" />
+
+<p>证明两种E.coli之间发生了遗传物质交换</p>
+<p>This conjugation needs direct contact:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114172800865.png" srcset="/img/loading.gif" lazyload alt="image-20191114172800865" style="zoom: 50%;" />
+
+<ul>
+<li>Conjugation refers to the transfer of DNA from one bacterium to another following direct cell-to cell contact</li>
+</ul>
+<p>Many, but not all, species of bacteria can conjugate</p>
+<p>Only certain strains of a bacterium can act as donor cells</p>
+<ul>
+<li>Contain a small circular piece of DNA termed the F factor (for Fertility factor)<br>•	Strains containing the F factor are designated as F+<br>•	Those lacking it are $F^{-}$</li>
+</ul>
+<h4 id="F-Fertility-Factor"><a href="#F-Fertility-Factor" class="headerlink" title="F (Fertility) Factor"></a>F (Fertility) Factor</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114173659959.png" srcset="/img/loading.gif" lazyload alt="image-20191114173659959" style="zoom: 67%;" />
+
+<h4 id="The-Conjugation-Process"><a href="#The-Conjugation-Process" class="headerlink" title="The Conjugation Process"></a>The Conjugation Process</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114173727949.png" srcset="/img/loading.gif" lazyload alt="image-20191114173727949" style="zoom:67%;" />
+
+<h4 id="Rolling-Circle-Replication"><a href="#Rolling-Circle-Replication" class="headerlink" title="Rolling-Circle Replication"></a>Rolling-Circle Replication</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114174743048.png" srcset="/img/loading.gif" lazyload alt="image-20191114174743048" style="zoom:67%;" />
+
+<p>Primer: 在反应中可以添加3’–OH的物质</p>
+<h4 id="Integration-of-F-Factor-to-form-Hfr-cell"><a href="#Integration-of-F-Factor-to-form-Hfr-cell" class="headerlink" title="Integration of F Factor to form Hfr cell"></a>Integration of F Factor to form Hfr cell</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114175346412.png" srcset="/img/loading.gif" lazyload alt="image-20191114175346412" style="zoom: 50%;" />
+
+<p>The F factor integrated to different site, then form different kinds of hfr cells</p>
+<p>Different integration sites:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114175509480.png" srcset="/img/loading.gif" lazyload alt="image-20191114175509480" style="zoom: 50%;" />
+
+<h4 id="Formation-of-F’-factor"><a href="#Formation-of-F’-factor" class="headerlink" title="Formation of F’ factor"></a>Formation of F’ factor</h4><p>In some cases, the integrated F factor is excised in an imprecise fashion</p>
+<ul>
+<li>may carry genes that were once found on the bacterial chromosome</li>
+<li>These types of F factors are called F’ factors</li>
+</ul>
+<p>F‘ factors can be transferred through conjugation</p>
+<p>This may introduce new genes into the recipient cell and thereby alter its genotype </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115190848183.png" srcset="/img/loading.gif" lazyload alt="image-20191115190848183" style="zoom:50%;" />
+
+<p>Excise part of the original gene – form F’ Factor</p>
+<h4 id="Conjugation-between-Hfr-cell-and-F-‐-cell"><a href="#Conjugation-between-Hfr-cell-and-F-‐-cell" class="headerlink" title="Conjugation between Hfr cell and $F^{‐}$ cell"></a>Conjugation between Hfr cell and $F^{‐}$ cell</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115191044804.png" srcset="/img/loading.gif" lazyload alt="image-20191115191044804"></p>
+<p>Transfer 从 F Factor 的 Origin 开始，并且如果时间足够长，有可能将整个Hfr Genome转移过去</p>
+<p>Entire Hfr chromosome can be transferred in about 90 – 120 minutes but most matings do not last that long</p>
+<ul>
+<li>Only a portion of the Hfr chromosome gets into the $ F^{-}$ cell</li>
+<li>Since the nick is internal to the integrated F factor; only part of the F factor is transferred</li>
+</ul>
+<p>The $ F^{-}$ cell receives chromosomal DNA</p>
+<ul>
+<li>This DNA can recombine with the homologous region on the chromosome of the recipient cell</li>
+<li>May provide the recipient cell with new alleles</li>
+</ul>
+<h5 id="1-Interrupted-Mating-to-Map-Order-of-Genes-along-E-coli-Chromosome"><a href="#1-Interrupted-Mating-to-Map-Order-of-Genes-along-E-coli-Chromosome" class="headerlink" title="(1) Interrupted Mating to Map Order of Genes along E. coli Chromosome"></a>(1) Interrupted Mating to Map Order of Genes along E. coli Chromosome</h5><p>Developed by Elie Wollman and Frangois Jacob in the 1950s</p>
+<p>The order of genes along the chromosome can be deduced by determining how long it takes for the genes to be transferred during an Hfr mating</p>
+<ul>
+<li>Interrupting mating at different times would result in recipient cells receiving different lengths of DNA</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192215426.png" srcset="/img/loading.gif" lazyload alt="image-20191115192215426" style="zoom: 50%;" />
+
+<p>The donor (Hfr) strain had the following genetic composition</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192341389.png" srcset="/img/loading.gif" lazyload alt="image-20191115192341389" style="zoom: 33%;" />
+
+<p>The recipient ($ F^{-}$) strain had the opposite genotype</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192656032.png" srcset="/img/loading.gif" lazyload alt="image-20191115192656032" style="zoom:33%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192712193.png" srcset="/img/loading.gif" lazyload alt="image-20191115192712193" style="zoom:67%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192721856.png" srcset="/img/loading.gif" lazyload alt="image-20191115192721856" style="zoom:67%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192730247.png" srcset="/img/loading.gif" lazyload alt="image-20191115192730247" style="zoom: 50%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192737440.png" srcset="/img/loading.gif" lazyload alt="image-20191115192737440" style="zoom:67%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192750801.png" srcset="/img/loading.gif" lazyload alt="image-20191115192750801" style="zoom:67%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193103080.png" srcset="/img/loading.gif" lazyload alt="image-20191115193103080" style="zoom:50%;" />
+
+<h3 id="5-Transduction"><a href="#5-Transduction" class="headerlink" title="5. Transduction"></a>5. Transduction</h3><p>In transduction, a bacteriophage transfers DNA from a donor cell to a recipient cell.</p>
+<p>In generalized transduction, a random fragment of bacterial DNA is packaged in the phage head in place of the<br>phage DNA. </p>
+<p>In Specialized transduction, only particular bacterial genes are transferred to recipient cells</p>
+<ul>
+<li>Viral DNA integrates into the bacterial chromosome a specific site</li>
+<li>When viral DNA is excised, it picks up a piece of chromosomal DNA by accident</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193316484.png" srcset="/img/loading.gif" lazyload alt="image-20191115193316484" style="zoom:50%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193617225.png" srcset="/img/loading.gif" lazyload alt="image-20191115193617225" style="zoom: 50%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193625528.png" srcset="/img/loading.gif" lazyload alt="image-20191115193625528" style="zoom:50%;" />
+
+<p>Therefore, some agent was being transferred from LA-2 to LA-22 through the filter</p>
+<p>Norton and Zinder conducted the same experiment with filters of different pore sizes</p>
+<ul>
+<li>They found out that the filterable agent was less then 0.1mm in diameter and insensitive to DNase</li>
+<li>They correctly concluded that the filterable agent was a bacteriophage</li>
+</ul>
+<h5 id="1-Generalized-Transduction-普遍性转导；普通性传导"><a href="#1-Generalized-Transduction-普遍性转导；普通性传导" class="headerlink" title="(1) Generalized Transduction 普遍性转导；普通性传导"></a>(1) Generalized Transduction 普遍性转导；普通性传导</h5><p>Phages that can transfer bacterial DNA include</p>
+<ul>
+<li>P22, which infects Salmonella typhimurium</li>
+<li>Pl, which infects Escherichia coli</li>
+</ul>
+<h5 id="2-Specialized-Transduction-局限性转导-特异性转导"><a href="#2-Specialized-Transduction-局限性转导-特异性转导" class="headerlink" title="(2) Specialized Transduction 局限性转导; 特异性转导"></a>(2) Specialized Transduction 局限性转导; 特异性转导</h5><p> Phage λ</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115194026445.png" srcset="/img/loading.gif" lazyload alt="image-20191115194026445" style="zoom:80%;" />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115194034921.png" srcset="/img/loading.gif" lazyload alt="image-20191115194034921"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetics/" class="category-chain-item">Genetics</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetics/" class="print-no-link">#Genetics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L08 Genetics of Bacteria and Bacteriophages</div>
+      <div>https://zhenyumi.github.io/posts/904e407c/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/b247f43c/" title="L07 Proteins Tertiary Structure">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L07 Proteins Tertiary Structure</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/26fcd038/" title="L08 protein quaternary structure and Protein-Protein interactions">
+                        <span class="hidden-mobile">L08 protein quaternary structure and Protein-Protein interactions</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

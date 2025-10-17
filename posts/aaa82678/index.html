@@ -1,0 +1,961 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Fri Jan 08 2021 18:34:30 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L12 Different Methods for Gene Cloning">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/aaa82678/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Fri Jan 08 2021 18:34:30 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105205913877.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105210148443.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105210218072.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105210311690.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105210954280.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211030401.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211124392.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211311230.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211422769.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211435390.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211536190.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211543517.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211552369.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211716017.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211857777.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211924556.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212057747.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212154456.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212213963.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212221688.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212256691.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212318244.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212639629.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212850937.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212908142.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212918586.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105213024732.png">
+<meta property="article:published_time" content="2021-01-08T10:34:30.000Z">
+<meta property="article:modified_time" content="2021-01-08T10:34:30.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetic Engineering">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105205913877.png">
+  
+  
+  
+  <title>L12 Different Methods for Gene Cloning - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L12 Different Methods for Gene Cloning</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-01-08 18:34" pubdate>
+          2021年1月8日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          290 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          3 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L12 Different Methods for Gene Cloning</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>General considerations for gene cloning.</p>
+<ul>
+<li>Clone a single gene or making a library ?</li>
+<li>Cloning from DNA or RNA ?</li>
+<li>How to make a cDNA library ?</li>
+<li>How to get full length double-stranded cDNA ?</li>
+<li>End repair of target DNA or RNA</li>
+</ul>
+<p>Different systems of cloning</p>
+<ol>
+<li>Restriction-ligation</li>
+<li>Recombinational cloning：Topo Cloning and Gateway cloning</li>
+<li>Seamless Cloning: Gibson Assembly and Golden gate cloning.</li>
+</ol>
+<h1 id="一、Clone-a-single-gene-or-to-make-a-DNA-library"><a href="#一、Clone-a-single-gene-or-to-make-a-DNA-library" class="headerlink" title="一、Clone a single gene or to make a DNA library ?"></a>一、Clone a single gene or to make a DNA library ?</h1><p>Possible reason to clone a single gene :</p>
+<ul>
+<li>Expression&#x2F;purification of a protein</li>
+<li>To study the gene’s function</li>
+<li>To make a mutant</li>
+<li>To complement the phenotype,</li>
+<li>To over-express a gene,</li>
+<li>To make a fusion protein (e.g. To investigate subcellular localization of a protein through fusing with GFP)</li>
+</ul>
+<p>Possible reason to make a DNA library:</p>
+<ul>
+<li>To facilitate genome sequencing – think about human genome project, BAC and YAC vectors are developed for this purpose.</li>
+<li>To screening for protein-protein or protein-DNA interaction,<ul>
+<li>Yeast two hybrid – Protein-Protein interaction</li>
+<li>Yeast one hybrid – Protein-DNA interaction</li>
+</ul>
+</li>
+<li>To identify a gene of your interest from the DNA library</li>
+</ul>
+<h1 id="二、Clone-From-DNA-or-RNA"><a href="#二、Clone-From-DNA-or-RNA" class="headerlink" title="二、Clone From DNA or RNA"></a>二、Clone From DNA or RNA</h1><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105205913877.png" srcset="/img/loading.gif" lazyload alt="image-20210105205913877" style="zoom:100%;" />
+
+<h1 id="三、How-to-make-a-cDNA-Library"><a href="#三、How-to-make-a-cDNA-Library" class="headerlink" title="三、How to make a cDNA Library"></a>三、How to make a cDNA Library</h1><p>Consideration of making cDNA library.</p>
+<ul>
+<li>Capture enough diversity of RNAs.- a few RNA species account for majority of RNA pools.</li>
+<li>Capture the full length of RNA</li>
+<li>RNA integrity</li>
+<li>RNA need to be transformed into dsDNA before it can be cloned as normal DNA library.<ul>
+<li>Efficient reverse transcription, second strand synthesis</li>
+<li>Protect the RNA 5’ end</li>
+</ul>
+</li>
+</ul>
+<h2 id="Two-typical-strategies-for-preparing-cDNA-library"><a href="#Two-typical-strategies-for-preparing-cDNA-library" class="headerlink" title="Two typical strategies for preparing cDNA library"></a>Two typical strategies for preparing cDNA library</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105210148443.png" srcset="/img/loading.gif" lazyload alt="image-20210105210148443" style="zoom: 50%;" />
+
+<ol>
+<li>Reverse Transcription</li>
+<li>Alkaline hydrolysis of RNA template</li>
+<li>A ds harpin loop may form at 3’ end of cDNA.</li>
+<li>A DNA polymerase can use ds harpin loop as primer to synthesize the second strand cDNA.</li>
+</ol>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105210218072.png" srcset="/img/loading.gif" lazyload alt="image-20210105210218072" style="zoom: 50%;" />
+
+<ol>
+<li>Reverse Transcription</li>
+<li>TdT + dCTP to do C-tailing on the 3’ end of cDNA.</li>
+<li>Alkaline hydrolysis of RNA template</li>
+<li>Poly G are used as primer to synthesize second strand cDNA.</li>
+</ol>
+<p>Disadvantage for these strategies? </p>
+<ul>
+<li>Relatively low efficiency, 5’ end is unprotected. Hard to get full length cDNA.</li>
+</ul>
+<h2 id="How-to-make-sure-the-full-length-transcript-cDNA-is-enriched"><a href="#How-to-make-sure-the-full-length-transcript-cDNA-is-enriched" class="headerlink" title="How to make sure the full-length transcript (cDNA) is enriched ?"></a>How to make sure the full-length transcript (cDNA) is enriched ?</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105210311690.png" srcset="/img/loading.gif" lazyload alt="image-20210105210311690" style="zoom:100%;" />
+
+<p><strong>MMLV-RT</strong> has a unique property when it finish transcribing the template</p>
+<ul>
+<li>只有当完成全段转录之后，才会加上三个C，因此确定获得了转录了完成的序列<ul>
+<li>MMLV Reverse Transcriptase has terminal transferase activity.</li>
+<li>MMLV <u>add three C deoxyribonucleotide at 3’ end of cDNA</u> (template independent)</li>
+<li>This can be used to anneal with G tailed adaptor.</li>
+</ul>
+</li>
+<li>Reverse transcriptase <u>switch the template</u> and synthesize the second strand</li>
+<li>This process can largely make sure full length cDNAs are enriched.</li>
+<li>The protocol is very useful in long reads sequencing (PACBIO or Nanopore)</li>
+</ul>
+<h2 id="A-few-screening-methods-of-DNA-library"><a href="#A-few-screening-methods-of-DNA-library" class="headerlink" title="A few screening methods of DNA library"></a>A few screening methods of DNA library</h2><h3 id="1-Screen-the-library-by-dot-blot"><a href="#1-Screen-the-library-by-dot-blot" class="headerlink" title="1. Screen the library by dot-blot"></a>1. Screen the library by dot-blot</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105210954280.png" srcset="/img/loading.gif" lazyload alt="image-20210105210954280" style="zoom:100%;" />
+
+<p>Screen the library by dot-blot</p>
+<ol>
+<li>Making labeled probe of your target</li>
+<li>Filter replica the plate</li>
+<li>Hybridization</li>
+<li>Find the colony or plaque</li>
+</ol>
+<h3 id="2-Plus-minus-Screening"><a href="#2-Plus-minus-Screening" class="headerlink" title="2. Plus&#x2F;minus Screening"></a>2. Plus&#x2F;minus Screening</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211030401.png" srcset="/img/loading.gif" lazyload alt="image-20210105211030401" style="zoom:100%;" />
+
+<p>Plus&#x2F;minus Screening</p>
+<ul>
+<li>To identify gene of interest that only expressed under certain condition</li>
+<li>Assuming you want to identify a gene that only express in condition A.<ul>
+<li>to label : put redioactive sub stances during the transcript ion</li>
+</ul>
+</li>
+<li><strong>Plus probe</strong>: labeled cDNA that made from condition A.</li>
+<li><strong>Minus probe</strong>: labeled cDNA from condition B.</li>
+</ul>
+<h3 id="3-Yeast-two-hybrid"><a href="#3-Yeast-two-hybrid" class="headerlink" title="3. Yeast two-hybrid"></a>3. Yeast two-hybrid</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211124392.png" srcset="/img/loading.gif" lazyload alt="image-20210105211124392" style="zoom:100%;" />
+
+<ul>
+<li>To identify the interaction partner of the protein of interest</li>
+<li>The connection between GAL4 DNA-binding domain (BD) and GAL4 activation domain (AD) through the interaction between Bait protein and Prey protein activate reporter gene</li>
+<li>cDNA library are often made as AD fusion.</li>
+</ul>
+<h2 id="Typical-methods-of-generating-the-target-fragment-from-DNA-or-RNA-template"><a href="#Typical-methods-of-generating-the-target-fragment-from-DNA-or-RNA-template" class="headerlink" title="Typical methods of generating the target fragment from DNA or RNA template."></a>Typical methods of generating the target fragment from DNA or RNA template.</h2><p>PCR – for individual gene cloning</p>
+<p>Mechanic force – e.g. sonication</p>
+<p>Enzymatic cut – Restriction Enzyme, Dnase I, MNase, RNase etc.</p>
+<p>Direct synthesis</p>
+<p>Reverse-transcription (For RNA, the rest is the same as for DNA)</p>
+<h2 id="End-repair-of-target-DNA-or-RNA"><a href="#End-repair-of-target-DNA-or-RNA" class="headerlink" title="End repair of target DNA or RNA"></a>End repair of target DNA or RNA</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211311230.png" srcset="/img/loading.gif" lazyload alt="image-20210105211311230" style="zoom:67%;" />
+
+<p>How to put the DNA fragment into vector ?</p>
+<ul>
+<li>most reliable&#x2F;classical way is ligation.</li>
+</ul>
+<p>There are few steps may be needed before we do the ligations</p>
+<p>End repair Add or Remove OH or PO4 group</p>
+<ol>
+<li>T4 PNK and Alkaline phosphatase</li>
+<li>MNase cut generate terminal 3’-phosphates</li>
+<li>To prevent self-ligation</li>
+</ol>
+<p><strong>Blunting</strong> – remove 3’ overhang and filling 5’ over hang (T4 DNA Pol)</p>
+<p><strong>Homopolymer Tailing</strong> – TdT (Terminal Deoxynucleotidyl Transferase ).</p>
+<p><strong>Linker&#x2F;adaptor addition</strong> to facilitate ligation with vector or prevent the cutting of fragment(mostly used in cDNA library).s</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211422769.png" srcset="/img/loading.gif" lazyload alt="image-20210105211422769" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211435390.png" srcset="/img/loading.gif" lazyload alt="image-20210105211435390" style="zoom:100%;" />
+
+<h1 id="四、Different-systems-of-cloning"><a href="#四、Different-systems-of-cloning" class="headerlink" title="四、Different systems of cloning"></a>四、Different systems of cloning</h1><h2 id="Recombinational-cloning"><a href="#Recombinational-cloning" class="headerlink" title="Recombinational cloning"></a>Recombinational cloning</h2><p>These systems use a site-specific recombinase. DNA is recombined with each other through specific sequences that is added at both end of the fragment or vector. Typical system now available is <strong>Gateway cloning system</strong>.</p>
+<p>This recombination reactions are <strong>facilitated by</strong> the <strong>recombination of attachment sites</strong> from the <strong>phage (attP)</strong> and the <strong>bacteria (attB).</strong></p>
+<p>The recombined site called <strong>attL (left)</strong> and <strong>att R(right)</strong>.</p>
+<p><strong>att B1</strong> fragment <strong>attB2</strong> + <strong>attP1</strong> -ccdB-<strong>att P2</strong> &#x3D; <strong>att L1</strong> fragment <strong>att L2 + att R1</strong> ccdB + <strong>att R2</strong></p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211536190.png" srcset="/img/loading.gif" lazyload alt="image-20210105211536190" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211543517.png" srcset="/img/loading.gif" lazyload alt="image-20210105211543517" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211552369.png" srcset="/img/loading.gif" lazyload alt="image-20210105211552369" style="zoom:100%;" />
+
+<ul>
+<li>Donor vector</li>
+<li>Entry vector</li>
+<li>Destination vector</li>
+<li>BP clonase and LR clonase</li>
+</ul>
+<h2 id="Pros-and-Cons-of-Gateway-cloning-system"><a href="#Pros-and-Cons-of-Gateway-cloning-system" class="headerlink" title="Pros and Cons of Gateway cloning system"></a>Pros and Cons of Gateway cloning system</h2><p><strong>Advantage:</strong></p>
+<ul>
+<li>LR and BP reaction are highly accurate.</li>
+<li>Many different choice of destination vector available.</li>
+</ul>
+<p><strong>Disadvantage</strong>:</p>
+<ul>
+<li>Very expensive</li>
+<li>Depends on the availability of destination vector.</li>
+</ul>
+<h2 id="Topo-Cloning"><a href="#Topo-Cloning" class="headerlink" title="Topo Cloning"></a>Topo Cloning</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211716017.png" srcset="/img/loading.gif" lazyload alt="image-20210105211716017" style="zoom:80%;" />
+
+<ul>
+<li>The TOPO technique specifically uses Vaccinia <strong>virus-isolated topoisomerase I.</strong></li>
+<li>Apart from topoisomerase activity, this enzyme recognizes the DNA sequence 5´(C&#x2F;T)CCTT-3‘ and digests double stranded DNA at this sequence. </li>
+<li>The energy from this breakage is stored as a covalent bond between the cleaved 3′ DNA strand and a tyrosyl residue <strong>(Tyr 274)</strong> of topoisomerase I.</li>
+<li>If a <strong>5′ hydroxyl group</strong> from a different DNA strand comes along, it can attack this covalent bond thus joining the two DNA strands and releasing topoisomerase.</li>
+</ul>
+<p><strong>Advantage:</strong></p>
+<ul>
+<li>No post PCR procedure is needed.</li>
+<li>Can be directional</li>
+</ul>
+<p><strong>Disadvantage:</strong></p>
+<ul>
+<li>Expensive</li>
+<li>Low efficiency when dealing with fragment &gt;3 kb.</li>
+</ul>
+<h2 id="Seamless-Cloning-Gibson-Assembly"><a href="#Seamless-Cloning-Gibson-Assembly" class="headerlink" title="Seamless Cloning: Gibson Assembly"></a>Seamless Cloning: Gibson Assembly</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211857777.png" srcset="/img/loading.gif" lazyload alt="image-20210105211857777" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105211924556.png" srcset="/img/loading.gif" lazyload alt="image-20210105211924556" style="zoom: 50%;" />
+
+<ol>
+<li>Exonuclease degrade 5’ to 3’ and create 3’ overhang</li>
+<li>Overhang between fragment form double stranded region. </li>
+<li>DNA polymerase fills the gap created by exonuclease. </li>
+<li>DNA ligase seal the nick.</li>
+</ol>
+<p><strong>Drawbacks:</strong></p>
+<ul>
+<li>The original method is inefficient in cloning fragment shorter than 50bp, due to the activity of exonuclease. Cloning efficiency can be reduced if there is complicated secondary structure in the overhang region</li>
+</ul>
+<p>3’ to 5’ Exonuclease can also be used in Seamless cloning</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212057747.png" srcset="/img/loading.gif" lazyload alt="image-20210105212057747" style="zoom:50%;" />
+
+<p>Exonuclease: The exonuclease activity defines which strand (if any) gets digested to expose complementary overhangs:</p>
+<ul>
+<li><strong>5’ exonuclease</strong> (Gibson &amp; GeneArt® Seamless Cloning): The enzyme chews back bases from the 5’ end to expose complementary overhangs. GeneArt® Seamless Cloning recommends a 15 bp overhang, while to perform a Gibson assembly a longer overhang of 25 to 40 bp is used in many protocols.</li>
+<li><strong>3’ exonucleas</strong>e (SLIC &amp; In-Fusion® Cloning): The enzyme chews back bases from the 3’ end to expose complementary overhangs. A 15 bp overhang is recommended for In-Fusion® Cloning, while for SLIC a 25 bp overhang is recommended.</li>
+</ul>
+<p>Do we really need DNA polymerase and DNA ligase ?</p>
+<ul>
+<li>Seems not!</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212154456.png" srcset="/img/loading.gif" lazyload alt="image-20210105212154456" style="zoom: 33%;" />
+
+<p><strong>TEDA</strong></p>
+<ul>
+<li>(T5 exonuclease DNA assembly)</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212213963.png" srcset="/img/loading.gif" lazyload alt="image-20210105212213963" style="zoom: 50%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212221688.png" srcset="/img/loading.gif" lazyload alt="image-20210105212221688" style="zoom: 50%;" />
+
+<p>T5 Exonuclease degrades DNA in the 5´ to 3´ direction.</p>
+<p>3´ direction. T5 Exonuclease is able to initiate nucleotide removal from the 5´ termini or at gaps and nicks of linear or circular dsDNA. However, the enzyme does not degrade supercoiled dsDNA</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212256691.png" srcset="/img/loading.gif" lazyload alt="image-20210105212256691" style="zoom: 50%;" />
+
+<h2 id="Seamless-Cloning-Golden-gate-cloning"><a href="#Seamless-Cloning-Golden-gate-cloning" class="headerlink" title="Seamless Cloning: Golden gate cloning"></a>Seamless Cloning: Golden gate cloning</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212318244.png" srcset="/img/loading.gif" lazyload alt="image-20210105212318244" style="zoom: 67%;" />
+
+<p><strong>Type II S restriction enzyme:</strong></p>
+<ul>
+<li>Type IIS restriction enzymes recognize asymmetric DNA sequences and cleave outside of their recognition sequence</li>
+</ul>
+<p>BSA I and BPI I</p>
+<ol>
+<li>The overhang sequence created is not dictated by the REase, and therefore no scar sequence is introduced</li>
+<li>The fragment-specific sequence of the overhangs allows orderly assembly of multiple fragments simultaneously</li>
+<li>The restriction site is eliminated from the ligated product, so digestion and ligation can be carried out simultaneously</li>
+</ol>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212639629.png" srcset="/img/loading.gif" lazyload alt="image-20210105212639629" style="zoom:100%;" />
+
+<ol>
+<li>P1, P2, P3, P4 are overhang that generated by BsaI cut, which can be designed as you want.</li>
+<li>The generated compatible overhang can be ligated by DNA ligase</li>
+<li>Once ligated, it can not be cleaved again by BsaI.</li>
+<li>Cycles of BsaI digestion and DNA ligation are often performed.</li>
+<li>By this end of several cycle, there will be quite a lot of ligated products</li>
+</ol>
+<h3 id="1-Typical-protocol-for-Golden-Gate-Cloning"><a href="#1-Typical-protocol-for-Golden-Gate-Cloning" class="headerlink" title="1. Typical protocol for Golden Gate Cloning"></a>1. Typical protocol for Golden Gate Cloning</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212850937.png" srcset="/img/loading.gif" lazyload alt="image-20210105212850937" style="zoom:100%;" />
+
+<ul>
+<li>why the cycles of restriction cut and ligation is required ?</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212908142.png" srcset="/img/loading.gif" lazyload alt="image-20210105212908142" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105212918586.png" srcset="/img/loading.gif" lazyload alt="**image-20210105212918586**" style="zoom:100%;" />
+
+<ul>
+<li>BsaI cutting and ligation, different fragments are connected and inserted into the Vector</li>
+<li>Bpi I cut enables further subclone of the entire fragment into another vector or assembled with additional module</li>
+</ul>
+<h3 id="2-Advantages-of-the-Golden-Gate-cloning"><a href="#2-Advantages-of-the-Golden-Gate-cloning" class="headerlink" title="2. Advantages of the Golden Gate cloning"></a>2. Advantages of the Golden Gate cloning</h3><p>The Golden Gate ligation process is close to 100% efficient thanks to re-digestion mechanisms. Also, re-ligation is prevented, because cleaving outside of restriction enzymes sites removes them from the product. Good to make an array of repeat sequences, TALEN.</p>
+<h3 id="3-Disadvantage"><a href="#3-Disadvantage" class="headerlink" title="3. Disadvantage"></a>3. Disadvantage</h3><p>Much more sequence dependent than other method, there should be no BsaI site within the sequence. This may be less of a problem when you directly synthesize the fragment as you can mutate the sequence.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105213024732.png" srcset="/img/loading.gif" lazyload alt="image-20210105213024732" style="zoom:100%;" />
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetic-Engineering/" class="category-chain-item">Genetic Engineering</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetic-Engineering/" class="print-no-link">#Genetic Engineering</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L12 Different Methods for Gene Cloning</div>
+      <div>https://zhenyumi.github.io/posts/aaa82678/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年1月8日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/fa12efce/" title="L13 Functional analysis of genes">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L13 Functional analysis of genes</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/5cda9bd9/" title="L11 Cloning Vectors and Host cells">
+                        <span class="hidden-mobile">L11 Cloning Vectors and Host cells</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,898 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L14 Enzyme regulation">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/c6ce20f8/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Biochemistry I (Macromolecules)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+  
+  
+  
+  <title>L14 Enzyme regulation - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-10_21-07-00.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L14 Enzyme regulation</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          10 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L14 Enzyme regulation</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>If all of the reactions were running at top speed, massive problems would soon arise. Intermediate products would pile up in some assembly lines, and certain parts of the finished product would be produced in vast excess. </p>
+<h1 id="一、Substrate-Level-Control-底物水平的控制"><a href="#一、Substrate-Level-Control-底物水平的控制" class="headerlink" title="一、Substrate-Level Control 底物水平的控制"></a>一、Substrate-Level Control 底物水平的控制</h1><p>R<u>egulation of enzyme activity is essential for the efficient and ordered flow of metabolism.</u></p>
+<p>Some enzyme regulation occurs in a simple way, through direct interaction of the substrates and products of each enzyme-catalyzed reaction with the enzyme itself. </p>
+<p>This is referred to as <strong>substrate-level control</strong>. </p>
+<p>Conversely, high levels of product, which can also bind to the enzyme, tend to inhibit the conversion of substrate to product. </p>
+<p>Insofar as the metabolically desired reaction is concerned, the product can act as an inhibitor.（就代谢所需的反应而言，该产物可以充当抑制剂。）</p>
+<p>Substrate-level control is not sufficient for the regulation of many metabolic pathways. In many instances, it is advantageous <u>to have an enzyme regulated by some substance quite different from the substrate or immediate product.</u>（Not sufficient的原因是<u>在许多情况下，使酶受到与底物或直接产物截然不同的物质的调节是有利的。</u>）</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>As an example, consider the first step in <strong>glycolysis (醣酵解)</strong> (see Chapter 13)—the phosphorylation of glucose to yield glucose-6-phosphate (G6P):</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201205257902.png" srcset="/img/loading.gif" lazyload alt="image-20191201205257902"></p>
+<p>The enzyme <strong>hexokinase（己糖激酶）</strong>, which catalyzes this reaction, is inhibited by its product, <strong>G6P</strong></p>
+<p>If subsequent steps in glycolysis are blocked for any reason, G6P will accumulate and <u>bind to hexokinase</u>. This results in inhibition of hexokinase and slows down further production of G6P from glucose. </p>
+<p>In many cases the reaction product <u>binds the enzyme active site</u> and therefore acts as a competitive inhibitor.</p>
+<p>Hexokinase is an interesting example because its product, G6P, can act <strong>both</strong> as a <u>competitive inhibitor</u> (by binding to the active site), as well as an <u>uncompetitive inhibitor</u> (by binding at another site).</p>
+<h1 id="二、Feedback-Control-反馈调节"><a href="#二、Feedback-Control-反馈调节" class="headerlink" title="二、Feedback Control 反馈调节"></a>二、Feedback Control 反馈调节</h1><p><u>Regulation of enzyme activity is essential for the efficient and ordered flow of metabolism.</u></p>
+<p><u>Feedback control is important in the efficient regulation of complex metabolic pathways.</u></p>
+<p>We have emphasized that most metabolic pathways resemble assembly lines. The simplest metabolic assembly line looks like this:</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201210953763.png" srcset="/img/loading.gif" lazyload alt="image-20191201210953763"></p>
+<p>where A is the initial reactant or raw material; B, C, and D are intermediate products; and E is the final product.</p>
+<blockquote>
+<p>The final product of this pathway, E, will probably be used in some other pathway. Similarly, the “raw material,” A, may also participate in some other set of processes. Suppose the utilization of E suddenly slows down. If everything kept going as before, E would accumulate, and consumption of A would continue. But this process is inefficient. A more efficient process would solve this problem by closely monitoring the concentration of E and, as E accumulated, sending a signal back to inhibit its production.</p>
+</blockquote>
+<p>The cell can control generation of the final product through <u>activation</u> or <u>inhibition</u> of a key step in the pathway. <u>It would be most efficient to slow the <em>first step</em>—the conversion of A to B.</u> </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201211918248.png" srcset="/img/loading.gif" lazyload alt="image-20191201211918248"></p>
+<p>This type of <strong>feedback control</strong> is called <strong>feedback inhibition</strong> because an <em>increase</em> in the concentration of E leads to a <em>decrease</em> in its rate of production. Note that by inhibiting the first step, we prevent both unwanted utilization of A and accumulation of E. </p>
+<h2 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h2><p>consider a slightly more complex case, in which A is fed into two pathways, which lead to two products needed in roughly equivalent amounts. Then a scheme like the following emerges:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201212552042.png" srcset="/img/loading.gif" lazyload alt="image-20191201212552042" style="zoom:67%;" />
+
+<p>To control the pathways so that <u>G and N keep in balance</u>, high concentrations of G might <em>inhibit</em> the C →D enzyme and&#x2F;or <em>activate</em> the C → K enzyme.</p>
+<p>Conversely, N might inhibit the C → K enzyme and&#x2F;or activate the C → D enzyme.</p>
+<p>Furthermore, control of pathways by their end products means that the necessary inhibitions and activations must be produced by molecules that come from far down the assembly line and therefore bear little or no resemblance to either the substrates or the direct products of the enzymes to be regulated</p>
+<blockquote>
+<p>此外，通过其最终产物控制途径意味着必须由来自”组装线”以下的分子产生必要的抑制和激活，因此与底物或要调节的酶的直接产物几乎没有相似之处。 </p>
+</blockquote>
+<p>None of the kinds of regulation we have discussed up to this point will satisfy these needs. To attain this kind of control, organisms have evolved a special class of enzymes, capable of <strong>allosteric regulation</strong>. </p>
+<h1 id="三、Allosteric-Enzymes-Regulation"><a href="#三、Allosteric-Enzymes-Regulation" class="headerlink" title="三、Allosteric Enzymes&#x2F;Regulation"></a>三、Allosteric Enzymes&#x2F;Regulation</h1><p>The term <em>allosteric</em> is derived from Greek words meaning “other structure,” emphasizing that structures of regulators need not resemble substrate or direct product.</p>
+<p>Allosteric enzymes are frequently multisubunit proteins, with multiple active sites. </p>
+<p>They exhibit <u>cooperativity in substrate binding</u> (<strong>homoallostery (同构)</strong>) and <u>regulation of their activity by other, effector molecules</u> (<strong>heteroallostery (异构)</strong>).</p>
+<p>The example of allosteric regulation is the <strong>hemoglobin</strong> we mentioned before, but hemoglobin is not enzyme</p>
+<p><u>The effectors binds to the <strong>remote site</strong> not the active site.</u></p>
+<h2 id="Homoallostery"><a href="#Homoallostery" class="headerlink" title="Homoallostery"></a>Homoallostery</h2><p> homoallosteric effects : cooperative substrate binding</p>
+<ul>
+<li>An enzyme that binds substrate cooperatively will behave, at low substrate concentration, as if it were poor at substrate binding (that is, as if it had a large $K_{M}$). </li>
+<li>But as the substrate levels are increased and more substrate is bound, the enzyme becomes more and more effective because it binds substrate more avidly in the last sites to be filled (see <u>Figure 11.44b</u>).</li>
+</ul>
+<h3 id="1-Effect-of-cooperative-substrate-binding-on-enzyme-kinetics"><a href="#1-Effect-of-cooperative-substrate-binding-on-enzyme-kinetics" class="headerlink" title="1. Effect of cooperative substrate binding on enzyme kinetics:"></a>1. Effect of cooperative substrate binding on enzyme kinetics:</h3><p>We imagine this happening, as with hemoglobin, because <u>as more substrate is bound, the enzyme undergoes a transition from a lower affinity state (T state) to a higher affinity state (R state).</u></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201214436182.png" srcset="/img/loading.gif" lazyload alt="image-20191201214436182"></p>
+<p>(a) Comparison of v vs. [S] curves for a noncooperative enzyme and an allosteric enzyme with cooperative binding. The two enzymes are assumed to have the same $V_{max}$</p>
+<p>(b) Lineweaver-Burk Plot. The T state has a high $K_{M}$  ($V_{max}$ is achieved at higher [S]). As more S is bound, the equilibrium shifts toward the R state, which has a lower $K_{M} $.</p>
+<h3 id="2-Effect-of-extreme-homoallostery"><a href="#2-Effect-of-extreme-homoallostery" class="headerlink" title="2. Effect of extreme homoallostery"></a>2. Effect of extreme homoallostery</h3><p>In extreme cases, enzymes obeying sigmoidal kinetics can regulate substrate levels to quite constant values. </p>
+<p>Substrate can easily accumulate up to the <strong>critical level</strong> $[S]_{c}$</p>
+<p>The enzyme is essentially inactive at lower [S], allowing [S] to increase up to $[S]_{c }$.</p>
+<p>However, <u>any further increase leads to a greatly increased enzyme activity so that the substrate will be more rapidly consumed and its concentration will be maintained near the value</u></p>
+<p><strong>[S] control the “switch” on and off</strong></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201215134335.png" srcset="/img/loading.gif" lazyload alt="image-20191201215134335" style="zoom: 80%;" />
+
+<p>The <u>vertical blue line</u> in the figure represents the <u>homeostatic concentration</u> range for S.</p>
+<p>The v vs. [S] curve is shown for a hypothetical enzyme with extreme positive cooperativity in substrate binding.</p>
+<p>At concentrations below the enzyme is almost inactive; above this concentration, it is very active.</p>
+<p>Substrate can easily accumulate to the level but at higher concentrations it will be processed rapidly.</p>
+<p>Multisubunit enzymes may help to maintain the <strong>homeostasis（稳态）</strong> of a dynamic system.</p>
+<p><u>In other words, homoallostery enhances substrate-level control.</u></p>
+<h2 id="Heteroallostery"><a href="#Heteroallostery" class="headerlink" title="Heteroallostery"></a>Heteroallostery</h2><p>The major advantage of allosteric control is found in the role of <strong>heteroallosteric</strong> <strong>effectors</strong>, which may be either inhibitors or activators. </p>
+<p>The <strong>enzyme kinetics</strong> can be controlled by any other substance that, in binding to  the protein, <u>alters the T to R equilibrium</u></p>
+<p><u>Allosteric inhibitors shift the equilibrium toward T, and activators shift it toward R</u></p>
+<p>Allosteric enzymes show cooperative substrate binding and can respond to a variety of inhibitors and activators.</p>
+<p>In the absence of activation or inhibitors, the v vs. [S] curve is sigmoidal.</p>
+<p>Activators shift the system toward the R state. Inhibitors stabilize the T state. $[S]_{c}$ represents the homeostatic concentration range for S.</p>
+<p>Note that effectors significantly alter the activity of the enzyme over this range of [S].</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201220756361.png" srcset="/img/loading.gif" lazyload alt="image-20191201220756361"></p>
+<h2 id="Example-Aspartate-Carbamoyltransferase"><a href="#Example-Aspartate-Carbamoyltransferase" class="headerlink" title="Example: Aspartate Carbamoyltransferase"></a>Example: Aspartate Carbamoyltransferase</h2><h3 id="1-Regulation"><a href="#1-Regulation" class="headerlink" title="1. Regulation"></a>1. Regulation</h3><p>An excellent example of allosteric regulation is provided by the enzyme <strong>aspartate</strong> <strong>carbamoyltransferase</strong> (also known as aspartate transcarbamoylase, or ATCase), a key enzyme in pyrimidine synthesis</p>
+<blockquote>
+<p>天冬氨酸转氨甲酰酶简称为ATCase）是嘧啶核苷酸从头合成中很重要的一个酶，它催化的是天冬氨酸与氨甲酰磷酸生成氨甲酰天冬氨酸和磷酸的反应。</p>
+</blockquote>
+<p>Glutamine, glutamate, and aspartate are also used in protein synthesis; but once aspartate has been carbamoylated to form <strong>N-carbamoyl-L-aspartate (CAA, N-氨基甲酰基-L-天冬氨酸)</strong>, the molecule is committed to <u>pyrimidine synthesis</u>. </p>
+<p>Thus, the enzyme that controls this step must be sensitive to pyrimidine need. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201221335516.png" srcset="/img/loading.gif" lazyload alt="image-20191201221335516"></p>
+<p>This enzyme, as shown in <u>Figure 11.48</u>, is inhibited by <strong>cytidine triphosphate (CTP)</strong> and <strong>activated by ATP</strong>. </p>
+<p>Both responses make physiological sense; when CTP levels are already high, more pyrimidines are not needed. </p>
+<p>On the other hand, high ATP signals both a purine-rich state (signaling a need for increased pyrimidine synthesis) and an energy-rich cell condition under which DNA and RNA synthesis will be active.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201221428524.png" srcset="/img/loading.gif" lazyload alt="image-20191201221428524" style="zoom: 80%;" />
+
+<h3 id="2-Structure"><a href="#2-Structure" class="headerlink" title="2. Structure"></a>2. Structure</h3><p>Figure 11.49a. There are six <strong><em>catalytic</em> subunits</strong>, in two tiers of three, held together by six <strong><em>regulatory</em> subunits</strong>. Pairs of regulatory subunits appear to connect catalytic subunits in the two tiers.</p>
+<p>The <u>catalytic subunit comprises two domains</u>, one binding aspartate and the other <u>carbamoyl phosphate (氨甲酰磷酸)</u>, and the active site lies between them. The regulatory subunit is likewise of two parts; the so-called <strong>zinc domain</strong> and the <strong>allosteric domain</strong>. </p>
+<p>The former <u>binds a structurally necessary <strong>zinc</strong> atom</u>; the latter contains the <u>ATP&#x2F;CTP binding site</u>. ATP and CTP thus compete for the same site so that the activity of ATCase is regulated by the <em>ratio</em> of ATP to CTP in the cell.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201221613033.png" srcset="/img/loading.gif" lazyload alt="image-20191201221613033" style="zoom: 80%;" />
+
+<p>As in the case of hemoglobin, the allosteric regulation of ATCase i<u>nvolves changes in the quaternary structure of the molecule.</u></p>
+<p>Conformations of the R and T states have been determined by X-ray diffraction. As Figure 11.49b shows, a major rearrangement of subunit positions occurs in the T → R transition.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201222236050.png" srcset="/img/loading.gif" lazyload alt="image-20191201222236050" style="zoom:67%;" />
+
+<p>The transition involves a rotation of the regulatory  subunits, which pushes the two tiers of catalytic subunits apart and rotates them slightly about the three-fold axis</p>
+<blockquote>
+<p>Recently, examples of single subunit proteins under allosteric control have been described. Here, dynamics is thought to be of critical importance. In this model for allostery, the enzyme samples different conformational states, corresponding to higher (“R-like”) and lower (“T-like”) activities, and the effector binds to a particular conformation and stabilizes it. A positive effector binds the higher activity conformation, whereas a negative effector binds the lower activity conformation. This model suggests that any dynamic protein could, in principle, be subject to allosteric regulation.</p>
+</blockquote>
+<h1 id="四、Covalent-Modifications"><a href="#四、Covalent-Modifications" class="headerlink" title="四、Covalent Modifications"></a>四、Covalent Modifications</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Some enzyme undergo <strong>covalent modification</strong> and then begin to function. In some cases such modification acts in the opposite direction, to inactivate otherwise active enzymes. Some such modifications can be reversed; others cannot.</p>
+<p>A number of kinds of covalent modification are commonly used to regulate enzyme activity (Figure 11.51).</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201222803590.png" srcset="/img/loading.gif" lazyload alt="image-20191201222803590"></p>
+<p>The most widespread is <strong>phosphorylation (磷酸化作用)</strong> or <strong>dephosphorylation (脱磷酸作用;去磷作用)</strong> of various amino acid side chains (serine, threonine, tyrosine, and histidine, for example).</p>
+<p>Other covalent modifications include</p>
+<ul>
+<li><strong>adenylylation（腺苷酰化(作用)）</strong>, the transfer of an adenylate moiety from ATP; </li>
+<li><strong>ADP-ribosylation（ADP核糖基化）</strong>, the transfer of an ADP-ribosyl moiety from $NAD^{+}$ and </li>
+<li><strong>acetylation（乙酰化作用）</strong>, the transfer of an acetyl group from acetyl-coenzyme A (see Table 11.5).</li>
+</ul>
+<h2 id="Protein-kinases"><a href="#Protein-kinases" class="headerlink" title="Protein kinases"></a>Protein kinases</h2><p>The majority of enzymes, and their associated metabolic and signaling pathways, are regulated by reversible phosphorylation. <strong>Protein kinases</strong> are ATPdependent enzymes that add a phosphoryl group to the -OH group of a Tyr, Ser, or Thr on some target protein (Figure 11.52)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201223409454.png" srcset="/img/loading.gif" lazyload alt="image-20191201223409454" style="zoom: 67%;" />
+
+<ul>
+<li><p>The target residues for ATP-dependent phosphorylation  by <strong>kinases</strong> are serine,  threonine, or tyrosine. </p>
+</li>
+<li><p>The phosphoprotein is dephosphorylated by a <strong>phosphatase</strong>-catalyzed hydrolysis reaction.</p>
+</li>
+</ul>
+<p>This process is made reversible by a second class of enzymes, called <strong>phosphatases</strong>, which hydrolyze the resulting side chain phosphate esters, releasing $P_{i}$</p>
+<p>In addition, several protein kinases have been found to be <strong>oncogene</strong> (cancer-causing gene) products. </p>
+<h2 id="Pancreatic-Proteases-Activation-by-Cleavage"><a href="#Pancreatic-Proteases-Activation-by-Cleavage" class="headerlink" title="Pancreatic Proteases: Activation by Cleavage"></a>Pancreatic Proteases: Activation by Cleavage</h2><h3 id="1-Process"><a href="#1-Process" class="headerlink" title="1.  Process"></a>1.  Process</h3><p>An important example of covalent enzyme activation, <strong>proteolytic cleavage (蛋白水解裂解)</strong>, is found in the maturation of <strong>pancreatic proteases</strong> (胰蛋白酶). </p>
+<p>Some enzymes, such as pancreatic proteases, are irreversibly switched on  by proteolytic cleavage</p>
+<p>They are secreted through the pancreatic duct into the duodenum of the small intestine in response to a hormone signal generated when food passes from the stomach.</p>
+<blockquote>
+<p>They are not, however, synthesized in their final, active form because a battery of potent proteases free in the pancreas would digest the pancreatic tissue. Rather, they are made as slightly longer, catalytically inactive molecules, called <strong>zymogens</strong>.</p>
+</blockquote>
+<p><strong>Zymogens (酶原)</strong> are activated by proteolytic cleavage. </p>
+<blockquote>
+<p>有些酶在刚分泌时时没有催化活性的，这种没有活性的前体物称为酶原。一般生物体会通过肽键的剪切改变酶的构象使酶的活性中心形成或暴露出来而使酶具有活性。酶原的生理意思使为了避免酶消化细胞自身。</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201224150957.png" srcset="/img/loading.gif" lazyload alt="image-20191201224150957"></p>
+<p>Some enzymes, such as pancreatic proteases, are irreversibly switched on by proteolytic cleavage.</p>
+<ol>
+<li><p>The first step is the activation of trypsin in the duodenum</p>
+<p>A hexapeptide is removed from the N-terminal end of trypsinogen by <em>enteropeptidase (肠肽酶)</em>, a protease secreted by duodenal cells.</p>
+<p>This action yields the active <strong>trypsin (胰岛素、胰蛋白酶)</strong></p>
+</li>
+<li><p>Trypsin then activates the other zymogens by specific proteolytic cleavages. </p>
+<p>In fact, once some active trypsin is present, it will activate other <strong>trypsinogen (胰蛋白酶原)</strong> molecules to make more trypsin; thus its activation is <em>autocatalytic</em> (自身催化的)</p>
+<p>This is an example of the kind of <strong>cascade</strong> process frequently observed when enzymes are activated by covalent modification.</p>
+<p>In effect, an enzyme cascade <u>amplifies the original signal</u> (e.g., hormone binding to the sur</p>
+<p>face of a cell) and mounts a rapid, overwhelming response to that signal.</p>
+</li>
+<li><ul>
+<li>Activation of <strong>chymotrypsinogen(胰凝乳蛋白酶原,糜蛋白酶原)</strong> to <strong>chymotrypsin (胰凝乳蛋白酶,糜蛋白酶)</strong>   <img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201224831550.png" srcset="/img/loading.gif" lazyload alt="image-20191201224831550" style="zoom: 80%;" /></li>
+</ul>
+<p>  In the first step, trypsin cleaves the bond between arginine 15 and isoleucine 16. The N-terminal peptide remains attached to the rest of the molecule because of the disulfide bond between residues 1 and 122. The product, called<em>π-chymotrypsin</em>, is an active enzyme.</p>
+<p>  π-Chymotrypsin is not the most active form of chymotrypsin. More autocatalytic cleavages remove residues 14-15 and 147-148 from the molecule, to produce the final α-chymotrypsin, which is the principal and fully active form found in the digestive tract.</p>
+</li>
+</ol>
+<p>This battery of enzymes, <strong>trypsin</strong>, <strong>chymotrypsin</strong>, <strong>elastase (弹性蛋白酶；胰肽酶E)</strong>, and <strong>carboxypeptidase (羧肽酶)</strong>, together with the <em>pepsin</em> of the stomach and other proteases secreted by the intestinal wall cells, is capable of ultimately digesting most ingested proteins into free amino acids, which can be absorbed by the intestinal epithelium. </p>
+<h3 id="2-Danger"><a href="#2-Danger" class="headerlink" title="2. Danger"></a>2. Danger</h3><p>Even inactive zymogens are a potential source of danger to the pancreas. Because trypsin activation can be <u>autocatalytic</u>.</p>
+<p>Therefore the pancreas protects itself further by synthesizing a protein called the <em>secretory pancreatic trypsin inhibitor</em> (to be distinguished from the pancreatic trypsin inhibitor shown in Figure 6.42,  which is an intracellular protein found only in <u>ruminants (反刍动物)</u>)</p>
+<blockquote>
+<p>The bonding <u>between trypsin and its inhibito</u>r is among the strongest noncovalent associations known in biochemistry.</p>
+<p>Only a tiny amount of trypsin inhibitor is present—far less than needed to inhibit all of the potential trypsin in the pancreas. Thus, only a fraction of the trypsin generated in the duodenum is inhibited, and the rest can be activated. </p>
+</blockquote>
+<h2 id="Activation-by-Cleavage-Blood-Clotting"><a href="#Activation-by-Cleavage-Blood-Clotting" class="headerlink" title="Activation by Cleavage: Blood Clotting"></a>Activation by Cleavage: Blood Clotting</h2><h3 id="1-Formation"><a href="#1-Formation" class="headerlink" title="1. Formation"></a>1. Formation</h3><p>a) Red blood cells enmeshed in the insoluble strands of a fibrin clot.</p>
+<p>b) Electron micrograph of part of a fibrin fiber.</p>
+<p>c) Schematic view of how fibrin monomers are thought to associate to form a fiber. Removal of fibrinopeptides A and B from fibrinogen by thrombin makes sites accessible for association with complementary sites a and b on adjacent monomers. The molecules are believed to overlap as shown because the striations seen in the fibers are 23 nm wide, exactly half the length of the fibrinogen molecule.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201230352457.png" srcset="/img/loading.gif" lazyload alt="image-20191201230352457"></p>
+<p>If a blood clot is examined in the electron microscope, it is found to be composed of striated fibers of a protein called <strong>fibrin ([生化]纤维蛋白，血纤蛋白)</strong> (Figure 11.55a). </p>
+<p>The fibrin monomers are elongated molecules, about 46 nm long, that stick together in a staggered array as shown in Figure 11.55c. Fibrin monomers are derived from a precursor, <strong>fibrinogen (纤维蛋白原)</strong>, by proteolytic cleavages that release small <em>fibrinopeptides</em>(A and B in Figure 11.55c).</p>
+<blockquote>
+<p>纤维蛋白原（英语：Fibrinogen，又称为血纤蛋白原）是一种蛋白质，能够溶解于水。血小板破裂时，会发布凝血致活酶，在钙离子的作用下催化凝血酶原变成凝血酶，凝血酶将血浆中原本可水溶的纤维蛋白原凝固成为变成不溶于水的纤维蛋白，纤维蛋白扭结其他血细胞成团，凝固成为血块。</p>
+</blockquote>
+<p>Loss of these peptides uncovers positions at which the fibrin molecules can stick together. After the clot is formed, it is further stabilized by covalent cross-links between glutamine and lysine residues.</p>
+<table>
+<thead>
+<tr>
+<th>Factor Key</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>V</td>
+<td>Proaccelerin 促凝血球蛋白原</td>
+</tr>
+<tr>
+<td>VII</td>
+<td>Proconvectin</td>
+</tr>
+<tr>
+<td>VIII</td>
+<td>Antihemophilic factor 抗血友病因子</td>
+</tr>
+<tr>
+<td>IX</td>
+<td>Christmas factor [生物化学]克雷司马斯因子</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Stuart factor 斯图尔特因子</td>
+</tr>
+<tr>
+<td>XI</td>
+<td>Thromboplastin antecedent 凝血活酶前体</td>
+</tr>
+<tr>
+<td>XII</td>
+<td>Hageman factor 接触因子</td>
+</tr>
+<tr>
+<td>XIII</td>
+<td>Fibrin stabilizing factor 纤维蛋白稳定因子</td>
+</tr>
+</tbody></table>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201230618420.png" srcset="/img/loading.gif" lazyload alt="image-20191201230618420"></p>
+<p>Blood clotting involves a cascade of proteolytic activation of specific proteases, culminating in the transition of fibrinogen to fibrin.</p>
+<p>Each factor (protease) in the pathway can exist in an inactive form (red) or an active form (green).</p>
+<p>The cascade of proteolytic activations can start from exposure of blood at damaged tissue surfaces (intrinsic pathway) or from internal trauma to blood vessels (extrinsic pathway).</p>
+<p>The common result is activation of fibrinogen to clotting fibrin.</p>
+<p>The proteolysis of fibrinogen to fibrin is catalyzed by the serine protease <strong>thrombin ([生化]凝血酶)</strong>.</p>
+<blockquote>
+<p>Thrombin has sequence and structural similarities to trypsin, but as a protease with a very specific function it cleaves only a few types of bonds, mainly Arg–Gly.</p>
+</blockquote>
+<p>Thrombin itself is produced from <strong>prothrombin（凝血酶原）</strong> by another specific protease; in fact, as Figure 11.56 shows, a whole cascade of proteolytic activation reactions leads ultimately to the formation of a fibrin clot. </p>
+<p>Involved are a series of proteases referred to as <em>factors.</em> In damaged tissues, the proteins <strong>kininogen（激肽原）</strong> and <strong>kallikrein（激肽释放酶）</strong> <u>activate factor XII</u> (also called <strong>Hageman factor</strong>), which in turn activates factor XI and the cascade of reactions proceeds as shown. </p>
+<p>This set of initial reactions is called the <strong>intrinsic pathway（内源性凝血途径）</strong>. Alternatively, damage to blood vessels leads to the release of <strong>tissue factor</strong> and activation of <strong>factor VII</strong>, starting the <strong>extrinsic pathway（外源性凝血途径）</strong></p>
+<p>The two pathways merge in the activation of factor X, which will <strong>proteolyze</strong> and thereby activate <strong>prothrombin</strong>.</p>
+<h3 id="2-Dissolve"><a href="#2-Dissolve" class="headerlink" title="2. Dissolve"></a>2. Dissolve</h3><p>As wounds heal, or tissue damage is repaired, it is essential that blood clots be dissolved. The principal agent for clot dissolution is an enzyme called <strong>plasmin（（血）纤（蛋白）溶酶）</strong>, which cleaves fibrin. Plasmin itself is derived by proteolytic cleavage of an inactive precursor, <strong>plasminogen（ 血纤维蛋白溶酶原）</strong>. </p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/" class="category-chain-item">Biochemistry I (Macromolecules)</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Biochemistry-I-Macromolecules/" class="print-no-link">#Biochemistry I (Macromolecules)</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L14 Enzyme regulation</div>
+      <div>https://zhenyumi.github.io/posts/c6ce20f8/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/cac6ceaa/" title="L13 The Techniques of Molecular Genetics">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L13 The Techniques of Molecular Genetics</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/f1b2ec0b/" title="L14 Population Genetics">
+                        <span class="hidden-mobile">L14 Population Genetics</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,751 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="An homework to write a program to test reaction time and some other things.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The record of one test program">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/8613a0ca/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="An homework to write a program to test reaction time and some other things.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Machine%20learning%20and%20neural%20engineering/image-20210215123143255.png">
+<meta property="article:published_time" content="2021-02-15T03:46:20.000Z">
+<meta property="article:modified_time" content="2021-02-15T03:46:20.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Machine learning and neural engineering">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Machine%20learning%20and%20neural%20engineering/image-20210215123143255.png">
+  
+  
+  
+  <title>The record of one test program - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">The record of one test program</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-02-15 11:46" pubdate>
+          2021年2月15日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          21 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">The record of one test program</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>这个假期需要用Python写一个测试的小软件，具体作用是为了测试被试者的反应时间。具体的软件功能是在屏幕上随机投入20-60个左斜杠<code>\</code>和右斜杠<code>/</code>，被试者需要判断出左斜杠多还是右斜杠多。在这个过程当中记录下一些值。</p>
+<p>对整个过程进行一次记录是对我来说很有必要的，我决定对一些重要的地方进行一些总结。</p>
+<h1 id="代码流程"><a href="#代码流程" class="headerlink" title="代码流程"></a>代码流程</h1><p>Requirements：</p>
+<ol>
+<li>构建界面</li>
+<li>实现抽样：The number of <code>\ </code>and <code>/</code> is sampled from a uniform distribution [20, 40] and cannot be equal<ul>
+<li>避免重叠</li>
+</ul>
+</li>
+<li>Plot：将<code>\ </code>和<code>/</code>绘制在当前页面上</li>
+<li>监测键盘按键</li>
+<li>检测反应时长</li>
+<li>记录信息：<ul>
+<li>Subject ID; </li>
+<li>Trial ID; </li>
+<li>Time: onset of stimulus; </li>
+<li>Time: response is made; </li>
+<li>The number of <code>\</code> in a trial</li>
+<li>The number of <code>/</code> in a trial</li>
+<li>The response: left or right</li>
+<li>Response time: time in 4) – time in 3)</li>
+</ul>
+</li>
+<li>输出结果为csv</li>
+</ol>
+<h2 id="1-构建界面"><a href="#1-构建界面" class="headerlink" title="1. 构建界面"></a>1. 构建界面</h2><p>整个界面使用到了pygame来进行构建，这是老师推荐的方法，本来大概也可能用PyQt5来进行GUI构建，不过对于游戏（测试过程当中）的动态画面来说，还是Pygame更适合一些。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">import</span> pygame<br><span class="hljs-keyword">from</span> pygame.<span class="hljs-built_in">locals</span> <span class="hljs-keyword">import</span> *<br><br><span class="hljs-comment"># Construct Pygame GUI and Initiation of Variables</span><br>pygame.init()<br><span class="hljs-comment">## Set the screen size</span><br>screen_width = <span class="hljs-number">800</span><br>screen_height = <span class="hljs-number">800</span><br>screen = pygame.display.set_mode([screen_width, screen_height])<br><span class="hljs-comment">## Set the title of the windows</span><br>pygame.display.set_caption(<span class="hljs-string">&quot;Trial&quot;</span>)<br>background = pygame.Surface(screen.get_size())<br>background.fill([<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>])<br></code></pre></td></tr></table></figure>
+
+<p>简单构建一个窗体，规定大小之后，继续接下来的操作。</p>
+<h2 id="2-实现抽样"><a href="#2-实现抽样" class="headerlink" title="2. 实现抽样"></a>2. 实现抽样</h2><h3 id="获得数目"><a href="#获得数目" class="headerlink" title="获得数目"></a>获得数目</h3><p>抽样的过程当中需要做到，左右斜杠的总数为60，其中左右斜杠的数目需要在[20,40]这个范围之内，两个斜杠的数目不能相等。</p>
+<p>我的想法就是通过一个无限循环，通过随机数来生成两个数字，并对两个数字进行比较，直到两个数字不相等才break整个循环。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *<br><br><span class="hljs-comment">## Record the number of \ and / in each round</span><br><span class="hljs-keyword">global</span> T_right, T_left<br>T_right = []<br>T_left = []<br><br><span class="hljs-comment">## Construct a random number and determine the number of / and \</span><br><span class="hljs-comment">### Make sure / and \ do not have equal numbers</span><br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>	numofright = randint(<span class="hljs-number">20</span>, <span class="hljs-number">40</span>)<br>	numofleft = <span class="hljs-number">60</span> - numofright<br>    <span class="hljs-keyword">if</span> numofright != numofleft:<br>        T_left.append(numofleft)<br>        T_right.append(numofright)<br>        <span class="hljs-keyword">break</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="避免重叠"><a href="#避免重叠" class="headerlink" title="避免重叠"></a>避免重叠</h3><p>在实际print到屏幕上时，需要防止两个斜杠的位置重叠，因此需要考虑一下这个因素。</p>
+<p>在print的过程当中，实际是通过规定斜杠的中心位置，之后再打字上去，因此需要使斜杠中心之间的距离足够远。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-comment"># Randomly put / and \</span><br><span class="hljs-comment">## Record of the center of / and \</span><br>x_coor = [<span class="hljs-number">0</span>]<br>y_coor = [<span class="hljs-number">0</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, numofright):<br>    <span class="hljs-comment">## Seperate the \</span><br>    xNotS = <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">while</span> xNotS:<br>        x = randint(<span class="hljs-number">50</span>, <span class="hljs-number">750</span>)<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> x_coor:<br>            <span class="hljs-keyword">if</span> <span class="hljs-built_in">abs</span>(x - j) &lt; separate_distance:<br>                xNotS = <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">else</span>:<br>                xNotS = <span class="hljs-literal">False</span><br>    x_coor.append(x)<br>    yNotS = <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">while</span> yNotS:<br>        y = randint(<span class="hljs-number">100</span>, <span class="hljs-number">750</span>)<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> y_coor:<br>            <span class="hljs-keyword">if</span> <span class="hljs-built_in">abs</span>(y - j) &lt; separate_distance:<br>                yNotS = <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">else</span>:<br>                yNotS = <span class="hljs-literal">False</span><br>    y_coor.append(y)<br>    <span class="hljs-comment">## Put the \ into position</span><br>    center = (x, y)  <span class="hljs-comment"># Position</span><br>    textpos = textright.get_rect(center=center)<br>    <span class="hljs-comment">## Insert \ into background</span><br>    background.blit(textright, textpos)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, numofleft):<br>    <span class="hljs-comment"># Seperate the /</span><br>    xNotS = <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">while</span> xNotS:<br>        x = randint(<span class="hljs-number">50</span>, <span class="hljs-number">750</span>)<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> x_coor:<br>            <span class="hljs-keyword">if</span> <span class="hljs-built_in">abs</span>(x - j) &lt; separate_distance:<br>                xNotS = <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">else</span>:<br>                xNotS = <span class="hljs-literal">False</span><br>    x_coor.append(x)<br>    yNotS = <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">while</span> yNotS:<br>        y = randint(<span class="hljs-number">100</span>, <span class="hljs-number">750</span>)<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> y_coor:<br>            <span class="hljs-keyword">if</span> <span class="hljs-built_in">abs</span>(y - j) &lt; separate_distance:<br>                yNotS = <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">else</span>:<br>                yNotS = <span class="hljs-literal">False</span><br>    y_coor.append(y)<br>    <span class="hljs-comment">## Put the \ into position</span><br>    center = (x, y)  <span class="hljs-comment"># Position</span><br>    textpos = textleft.get_rect(center=center)<br>    <span class="hljs-comment">## Insert \ into background</span><br>    background.blit(textleft, textpos)<br></code></pre></td></tr></table></figure>
+
+<h2 id="3-Plot：将-和-绘制在当前页面上"><a href="#3-Plot：将-和-绘制在当前页面上" class="headerlink" title="3. Plot：将\ 和/绘制在当前页面上"></a>3. Plot：将<code>\ </code>和<code>/</code>绘制在当前页面上</h2><p>将左右斜杠插入到screen之后，再update整个pygame界面。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">## Display / and \</span><br><span class="hljs-comment"># Creat \ and / objects</span><br>font = pygame.font.Font(<span class="hljs-literal">None</span>, <span class="hljs-number">50</span>)<br>textright = font.render(<span class="hljs-string">&quot;\\&quot;</span>, <span class="hljs-number">1</span>, (<span class="hljs-number">255</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>))  <span class="hljs-comment"># Color</span><br>textleft = font.render(<span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-number">1</span>, (<span class="hljs-number">255</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>))  <span class="hljs-comment"># Color</span><br>    <br><span class="hljs-comment"># Insert background into the screen</span><br>screen.blit(background, (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>))<br><br>pygame.display.update()<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-监测键盘按键"><a href="#4-监测键盘按键" class="headerlink" title="4. 监测键盘按键"></a>4. 监测键盘按键</h3><p>在斜杠的print结束之后，会要求软件暂停等待被试者的指令输入，直到输入之后，才进行下一个循环。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys<br><br><span class="hljs-comment"># Wait, record the answer, analyse the accuracy</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">wait</span>():<br>    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>        <span class="hljs-keyword">for</span> event <span class="hljs-keyword">in</span> pygame.event.get():<br>            <span class="hljs-keyword">if</span> event.<span class="hljs-built_in">type</span> == QUIT:<br>                pygame.quit()<br>                sys.exit()<br>            <span class="hljs-keyword">if</span> current_round == <span class="hljs-number">0</span>:<br>                <span class="hljs-keyword">return</span><br>            <span class="hljs-keyword">if</span> event.<span class="hljs-built_in">type</span> == KEYDOWN <span class="hljs-keyword">and</span> event.key == K_LEFT:<br>                directions.append(<span class="hljs-string">&quot;Left&quot;</span>)<br>                <span class="hljs-keyword">if</span> numofright &lt; numofleft:<br>                    accuracy.append(<span class="hljs-string">&quot;Correct&quot;</span>)<br>                <span class="hljs-keyword">else</span>:<br>                    accuracy.append(<span class="hljs-string">&quot;Wrong&quot;</span>)<br>                <span class="hljs-keyword">return</span><br>            <span class="hljs-keyword">if</span> event.<span class="hljs-built_in">type</span> == KEYDOWN <span class="hljs-keyword">and</span> event.key == K_RIGHT:<br>                directions.append(<span class="hljs-string">&quot;Right&quot;</span>)<br>                <span class="hljs-keyword">if</span> numofright &gt; numofleft:<br>                    accuracy.append(<span class="hljs-string">&quot;Correct&quot;</span>)<br>                <span class="hljs-keyword">else</span>:<br>                    accuracy.append(<span class="hljs-string">&quot;Wrong&quot;</span>)<br>                <span class="hljs-keyword">return</span><br><br><span class="hljs-comment">## Record the respond</span><br>directions = []<br><span class="hljs-comment">## Record the accuracy</span><br>accuracy = []<br></code></pre></td></tr></table></figure>
+
+<h2 id="5-检测反应时长"><a href="#5-检测反应时长" class="headerlink" title="5. 检测反应时长"></a>5. 检测反应时长</h2><p>监测反应时长就需要计算整个软件运行的时间，有两个思路：</p>
+<ol>
+<li>从软件运行开始启动计时，每做出一个操作就记一次时获得一个时间戳，统计时间区间的时候就用两个时间相减</li>
+<li>多次新建时钟，在tick之后将当前计时清除（pygame.clock）</li>
+</ol>
+<h2 id="6-GUI"><a href="#6-GUI" class="headerlink" title="6. GUI"></a>6. GUI</h2><p>用Qt Designer来写GUI</p>
+<h3 id="config界面"><a href="#config界面" class="headerlink" title="config界面"></a>config界面</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> PyQt5 <span class="hljs-keyword">import</span> QtCore, QtGui, QtWidgets<br><span class="hljs-keyword">from</span> PyQt5.QtWidgets <span class="hljs-keyword">import</span> *<br><br><span class="hljs-comment"># GUI configuration: Login</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Ui_Dialog</span>(<span class="hljs-title class_ inherited__">object</span>):<br>    <span class="hljs-comment">## The function for clicking &#x27;cancel&#x27; button</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">cancel_clicked</span>(<span class="hljs-params">self</span>):<br>        sys.exit()<br>        sys.exit(app.exec_())<br>    <span class="hljs-comment">## The function for clicking &#x27;ok&#x27; button</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">ok_clicked</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">global</span> SubjectID_text<br>        <span class="hljs-keyword">global</span> TrialID_text<br>        <span class="hljs-keyword">if</span> self.SubjectID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            <span class="hljs-keyword">pass</span><br>        <span class="hljs-keyword">else</span>:<br>            SubjectID_text = self.SubjectID.text()<br>        <span class="hljs-keyword">if</span> self.TrialID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            <span class="hljs-keyword">pass</span><br>        <span class="hljs-keyword">else</span>:<br>            TrialID_text = self.TrialID.text()<br>        <span class="hljs-built_in">print</span>(SubjectID_text)<br>        <span class="hljs-built_in">print</span>(TrialID_text)<br>        widget.close()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">setupUi</span>(<span class="hljs-params">self, Dialog</span>):<br>        <span class="hljs-comment"># The main window</span><br>        Dialog.setObjectName(<span class="hljs-string">&quot;Dialog&quot;</span>)<br>        Dialog.resize(<span class="hljs-number">573</span>, <span class="hljs-number">300</span>)<br>        <span class="hljs-comment"># The labels</span><br>        self.Setsubjectid = QtWidgets.QLabel(Dialog)<br>        self.Setsubjectid.setGeometry(QtCore.QRect(<span class="hljs-number">30</span>, <span class="hljs-number">140</span>, <span class="hljs-number">141</span>, <span class="hljs-number">16</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Setsubjectid.setFont(font)<br>        self.Setsubjectid.setObjectName(<span class="hljs-string">&quot;Setsubjectid&quot;</span>)<br>        self.SettrialID = QtWidgets.QLabel(Dialog)<br>        self.SettrialID.setGeometry(QtCore.QRect(<span class="hljs-number">60</span>, <span class="hljs-number">200</span>, <span class="hljs-number">111</span>, <span class="hljs-number">16</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.SettrialID.setFont(font)<br>        self.SettrialID.setObjectName(<span class="hljs-string">&quot;SettrialID&quot;</span>)<br>        self.SubjectID = QtWidgets.QLineEdit(Dialog)<br>        self.SubjectID.setGeometry(QtCore.QRect(<span class="hljs-number">180</span>, <span class="hljs-number">130</span>, <span class="hljs-number">381</span>, <span class="hljs-number">31</span>))<br>        <span class="hljs-comment"># The ID input</span><br>        self.SubjectID.setObjectName(<span class="hljs-string">&quot;SubjectID&quot;</span>)<br>        self.TrialID = QtWidgets.QLineEdit(Dialog)<br>        self.TrialID.setGeometry(QtCore.QRect(<span class="hljs-number">180</span>, <span class="hljs-number">190</span>, <span class="hljs-number">381</span>, <span class="hljs-number">31</span>))<br>        self.TrialID.setObjectName(<span class="hljs-string">&quot;TrialID&quot;</span>)<br>        <span class="hljs-comment"># The OK button</span><br>        self.ok = QtWidgets.QPushButton(Dialog)<br>        self.ok.setGeometry(QtCore.QRect(<span class="hljs-number">350</span>, <span class="hljs-number">250</span>, <span class="hljs-number">93</span>, <span class="hljs-number">28</span>))<br>        self.ok.setObjectName(<span class="hljs-string">&quot;ok&quot;</span>)<br>        self.ok.clicked.connect(self.ok_clicked)<br>        <span class="hljs-comment"># The explain text</span><br>        self.Explain = QtWidgets.QLabel(Dialog)<br>        self.Explain.setGeometry(QtCore.QRect(<span class="hljs-number">30</span>, <span class="hljs-number">30</span>, <span class="hljs-number">521</span>, <span class="hljs-number">71</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Explain.setFont(font)<br>        self.Explain.setWordWrap(<span class="hljs-literal">True</span>)<br>        self.Explain.setObjectName(<span class="hljs-string">&quot;Explain&quot;</span>)<br>        <span class="hljs-comment"># The cancel button</span><br>        self.cancel = QtWidgets.QPushButton(Dialog)<br>        self.cancel.setGeometry(QtCore.QRect(<span class="hljs-number">460</span>, <span class="hljs-number">250</span>, <span class="hljs-number">93</span>, <span class="hljs-number">28</span>))<br>        self.cancel.setObjectName(<span class="hljs-string">&quot;cancel&quot;</span>)<br>        <span class="hljs-comment">## If click the cancel button, then close the whole program</span><br>        self.cancel.clicked.connect(self.cancel_clicked)<br><br>        self.retranslateUi(Dialog)<br>        QtCore.QMetaObject.connectSlotsByName(Dialog)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">retranslateUi</span>(<span class="hljs-params">self, Dialog</span>):<br>        _translate = QtCore.QCoreApplication.translate<br>        Dialog.setWindowTitle(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Config&quot;</span>))<br>        self.Setsubjectid.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Set Subject ID&quot;</span>))<br>        self.SettrialID.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Set Trial ID&quot;</span>))<br>        self.ok.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;OK&quot;</span>))<br>        self.Explain.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Before the trial, you can set the sbject ID and trial ID freely. If you do not want to config this, you can just click \&quot;OK\&quot; and will use default setting.&quot;</span>))<br>        self.cancel.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Cancel&quot;</span>))<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Machine%20learning%20and%20neural%20engineering/image-20210215123143255.png" srcset="/img/loading.gif" lazyload alt="image-20210215123143255"></p>
+<p>其中规定了两个按钮<code>ok</code>和<code>cancel</code>的行为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">cancel_clicked</span>(<span class="hljs-params">self</span>):<br>        sys.exit()<br>        sys.exit(app.exec_())<br>    <span class="hljs-comment">## The function for clicking &#x27;ok&#x27; button</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">ok_clicked</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">global</span> SubjectID_text<br>        <span class="hljs-keyword">global</span> TrialID_text<br>        <span class="hljs-keyword">if</span> self.SubjectID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            <span class="hljs-keyword">pass</span><br>        <span class="hljs-keyword">else</span>:<br>            SubjectID_text = self.SubjectID.text()<br>        <span class="hljs-keyword">if</span> self.TrialID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            <span class="hljs-keyword">pass</span><br>        <span class="hljs-keyword">else</span>:<br>            TrialID_text = self.TrialID.text()<br>        <span class="hljs-built_in">print</span>(SubjectID_text)<br>        <span class="hljs-built_in">print</span>(TrialID_text)<br>        widget.close()<br></code></pre></td></tr></table></figure>
+
+<p>在打开这个GUI的时候需要使用的代码为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">## Open Login Panel</span><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    app = QtWidgets.QApplication(sys.argv)<br>    <span class="hljs-comment">### 规定了窗口为widget</span><br>    widget = QtWidgets.QWidget()<br>    ui = Ui_Dialog()<br>    ui.setupUi(widget)<br>    widget.show()<br></code></pre></td></tr></table></figure>
+
+<p>因为这个界面可能多次出现，因此关闭时使用：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">widget.close()<br></code></pre></td></tr></table></figure>
+
+<h3 id="结算界面"><a href="#结算界面" class="headerlink" title="结算界面"></a>结算界面</h3><p>同上，使用Qt Designer</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># GUI configuration: Save and restart panel</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Ui_save_restart</span>(<span class="hljs-title class_ inherited__">object</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">finish_clicked</span>(<span class="hljs-params">self</span>):<br>        savecsv()<br>        widget2.close()<br>        pygame.quit()<br>        sys.exit()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">ok_clicked</span>(<span class="hljs-params">self</span>):<br>        savecsv()<br>        <span class="hljs-keyword">global</span> current_round<br>        current_round = <span class="hljs-number">0</span><br>        <span class="hljs-built_in">print</span>(current_round)<br>        <span class="hljs-keyword">global</span> TrialID_text<br>        <span class="hljs-keyword">if</span> self.TrialID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            TrialID_text = time.strftime(<span class="hljs-string">&quot;%Y-%m-%d_%H-%M-%S&quot;</span>, time.localtime())<br>        <span class="hljs-keyword">global</span> SubjectID_text<br>        <span class="hljs-keyword">if</span> self.SubjectID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>            <span class="hljs-keyword">pass</span><br>        <span class="hljs-keyword">else</span>:<br>            SubjectID_text = self.SubjectID.text()<br>        <span class="hljs-comment"># Update the placeholder in the save window</span><br>        self.SubjectID.setPlaceholderText(SubjectID_text)<br>        self.TrialID.setPlaceholderText(TrialID_text)<br>        widget2.close()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">filepath_clicked</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">global</span> filepath<br>        filepath = QFileDialog.getExistingDirectory(<span class="hljs-literal">None</span>)<br>        <span class="hljs-built_in">print</span>(filepath)<br>        self.Filepath.setText(filepath)<br>        <span class="hljs-keyword">return</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">setup_save_restart</span>(<span class="hljs-params">self, Dialog</span>):<br>        <span class="hljs-comment"># The tips</span><br>        Dialog.setObjectName(<span class="hljs-string">&quot;Dialog&quot;</span>)<br>        Dialog.resize(<span class="hljs-number">746</span>, <span class="hljs-number">612</span>)<br>        font = QtGui.QFont()<br>        font.setKerning(<span class="hljs-literal">True</span>)<br>        Dialog.setFont(font)<br>        self.Tip1 = QtWidgets.QLabel(Dialog)<br>        self.Tip1.setGeometry(QtCore.QRect(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>, <span class="hljs-number">701</span>, <span class="hljs-number">71</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Calibri&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">14</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Tip1.setFont(font)<br>        self.Tip1.setWordWrap(<span class="hljs-literal">True</span>)<br>        self.Tip1.setObjectName(<span class="hljs-string">&quot;Tip1&quot;</span>)<br>        self.Tip2 = QtWidgets.QLabel(Dialog)<br>        self.Tip2.setGeometry(QtCore.QRect(<span class="hljs-number">20</span>, <span class="hljs-number">90</span>, <span class="hljs-number">701</span>, <span class="hljs-number">81</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Calibri&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">14</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Tip2.setFont(font)<br>        self.Tip2.setWordWrap(<span class="hljs-literal">True</span>)<br>        self.Tip2.setObjectName(<span class="hljs-string">&quot;Tip2&quot;</span>)<br>        self.Tip3 = QtWidgets.QLabel(Dialog)<br>        self.Tip3.setGeometry(QtCore.QRect(<span class="hljs-number">20</span>, <span class="hljs-number">170</span>, <span class="hljs-number">701</span>, <span class="hljs-number">81</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Calibri&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">14</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Tip3.setFont(font)<br>        self.Tip3.setWordWrap(<span class="hljs-literal">True</span>)<br>        self.Tip3.setObjectName(<span class="hljs-string">&quot;Tip3&quot;</span>)<br>        self.Tip4 = QtWidgets.QLabel(Dialog)<br>        self.Tip4.setGeometry(QtCore.QRect(<span class="hljs-number">20</span>, <span class="hljs-number">260</span>, <span class="hljs-number">701</span>, <span class="hljs-number">81</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Calibri&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">14</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Tip4.setFont(font)<br>        self.Tip4.setWordWrap(<span class="hljs-literal">True</span>)<br>        self.Tip4.setObjectName(<span class="hljs-string">&quot;Tip4&quot;</span>)<br>        <span class="hljs-comment"># The subject ID</span><br>        self.SettrialID_2 = QtWidgets.QLabel(Dialog)<br>        self.SettrialID_2.setGeometry(QtCore.QRect(<span class="hljs-number">100</span>, <span class="hljs-number">500</span>, <span class="hljs-number">121</span>, <span class="hljs-number">20</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.SettrialID_2.setFont(font)<br>        self.SettrialID_2.setObjectName(<span class="hljs-string">&quot;SettrialID_2&quot;</span>)<br>        self.SubjectID = QtWidgets.QLineEdit(Dialog)<br>        self.SubjectID.setGeometry(QtCore.QRect(<span class="hljs-number">230</span>, <span class="hljs-number">370</span>, <span class="hljs-number">381</span>, <span class="hljs-number">31</span>))<br>        self.SubjectID.setObjectName(<span class="hljs-string">&quot;SubjectID&quot;</span>)<br>        <span class="hljs-keyword">global</span> SubjectID_text<br>        self.SubjectID.setPlaceholderText(SubjectID_text)<br>        self.Setsubjectid = QtWidgets.QLabel(Dialog)<br>        self.Setsubjectid.setGeometry(QtCore.QRect(<span class="hljs-number">80</span>, <span class="hljs-number">380</span>, <span class="hljs-number">141</span>, <span class="hljs-number">16</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.Setsubjectid.setFont(font)<br>        self.Setsubjectid.setObjectName(<span class="hljs-string">&quot;Setsubjectid&quot;</span>)<br>        <span class="hljs-comment"># Trial ID</span><br>        self.SettrialID = QtWidgets.QLabel(Dialog)<br>        self.SettrialID.setGeometry(QtCore.QRect(<span class="hljs-number">110</span>, <span class="hljs-number">440</span>, <span class="hljs-number">111</span>, <span class="hljs-number">16</span>))<br>        font = QtGui.QFont()<br>        font.setFamily(<span class="hljs-string">&quot;Arial&quot;</span>)<br>        font.setPointSize(<span class="hljs-number">12</span>)<br>        font.setBold(<span class="hljs-literal">False</span>)<br>        font.setWeight(<span class="hljs-number">50</span>)<br>        self.SettrialID.setFont(font)<br>        self.SettrialID.setObjectName(<span class="hljs-string">&quot;SettrialID&quot;</span>)<br>        self.TrialID = QtWidgets.QLineEdit(Dialog)<br>        self.TrialID.setGeometry(QtCore.QRect(<span class="hljs-number">230</span>, <span class="hljs-number">430</span>, <span class="hljs-number">381</span>, <span class="hljs-number">31</span>))<br>        self.TrialID.setObjectName(<span class="hljs-string">&quot;TrialID&quot;</span>)<br>        <span class="hljs-keyword">global</span> TrialID_text<br>        self.TrialID.setPlaceholderText(TrialID_text)<br>        <span class="hljs-comment"># Finish button</span><br>        self.finish = QtWidgets.QPushButton(Dialog)<br>        self.finish.setGeometry(QtCore.QRect(<span class="hljs-number">450</span>, <span class="hljs-number">550</span>, <span class="hljs-number">131</span>, <span class="hljs-number">31</span>))<br>        self.finish.setObjectName(<span class="hljs-string">&quot;finish&quot;</span>)<br>        self.finish.clicked.connect(self.finish_clicked)<br>        <span class="hljs-comment"># Ok button</span><br>        self.ok = QtWidgets.QPushButton(Dialog)<br>        self.ok.setGeometry(QtCore.QRect(<span class="hljs-number">180</span>, <span class="hljs-number">550</span>, <span class="hljs-number">131</span>, <span class="hljs-number">31</span>))<br>        self.ok.setObjectName(<span class="hljs-string">&quot;ok&quot;</span>)<br>        self.ok.clicked.connect(self.ok_clicked)<br>        <span class="hljs-comment"># The filepath input</span><br>        self.Filepath = QtWidgets.QLineEdit(Dialog)<br>        self.Filepath.setGeometry(QtCore.QRect(<span class="hljs-number">230</span>, <span class="hljs-number">490</span>, <span class="hljs-number">381</span>, <span class="hljs-number">31</span>))<br>        self.Filepath.setObjectName(<span class="hljs-string">&quot;Filepath&quot;</span>)<br>        self.Filepath.setPlaceholderText(filepath)<br>        <span class="hljs-comment"># The ... filepath setting button</span><br>        self.set_file_path = QtWidgets.QPushButton(Dialog)<br>        self.set_file_path.setGeometry(QtCore.QRect(<span class="hljs-number">620</span>, <span class="hljs-number">490</span>, <span class="hljs-number">51</span>, <span class="hljs-number">28</span>))<br>        self.set_file_path.setObjectName(<span class="hljs-string">&quot;set_file_path&quot;</span>)<br>        self.set_file_path.clicked.connect(self.filepath_clicked)<br><br>        self.retranslateUi_save_restart(Dialog)<br>        QtCore.QMetaObject.connectSlotsByName(Dialog)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">retranslateUi_save_restart</span>(<span class="hljs-params">self, Dialog</span>):<br>        _translate = QtCore.QCoreApplication.translate<br>        Dialog.setWindowTitle(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Next Trial？&quot;</span>))<br>        self.Tip1.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>,<br>                                     <span class="hljs-string">&quot;You have completed all the rounds and this is the end of this trial. If you want to quit, then click the \&#x27;Finish\&#x27; button or just close this window.&quot;</span>))<br>        self.Tip2.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>,<br>                                     <span class="hljs-string">&quot;You can reset your Subject ID and Trial ID if necessary. If you do not need to change your Subject ID, just click the \&#x27;OK\&#x27; button.&quot;</span>))<br>        self.Tip3.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>,<br>                                     <span class="hljs-string">&quot;If you want to begin a new trial, you must change your Trial ID. You can just click the \&#x27;OK\&#x27; button to use the default setting.&quot;</span>))<br>        self.Setsubjectid.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Set Subject ID&quot;</span>))<br>        self.SettrialID.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Set Trial ID&quot;</span>))<br>        self.finish.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Finish&quot;</span>))<br>        self.ok.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;OK&quot;</span>))<br>        self.SettrialID_2.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;Set file path: &quot;</span>))<br>        self.set_file_path.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;...&quot;</span>))<br>        self.Tip4.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>,<br>                                     <span class="hljs-string">&quot;The experiment result will be saved to a .csv file, you can set the filepath. Or the .csv file will be saved to the same path as the .py file. The file will be named as &#x27;Subject ID-Date.csv&#x27;&quot;</span>))<br><br></code></pre></td></tr></table></figure>
+
+<p>规定了三个按钮的行为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">finish_clicked</span>(<span class="hljs-params">self</span>):<br>    savecsv()<br>    widget2.close()<br>    pygame.quit()<br>    sys.exit()<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">ok_clicked</span>(<span class="hljs-params">self</span>):<br>    savecsv()<br>    <span class="hljs-keyword">global</span> current_round<br>    current_round = <span class="hljs-number">0</span><br>    <span class="hljs-built_in">print</span>(current_round)<br>    <span class="hljs-keyword">global</span> TrialID_text<br>    <span class="hljs-keyword">if</span> self.TrialID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>        TrialID_text = time.strftime(<span class="hljs-string">&quot;%Y-%m-%d_%H-%M-%S&quot;</span>, time.localtime())<br>    <span class="hljs-keyword">global</span> SubjectID_text<br>    <span class="hljs-keyword">if</span> self.SubjectID.text() == <span class="hljs-string">&quot;&quot;</span>:<br>        <span class="hljs-keyword">pass</span><br>    <span class="hljs-keyword">else</span>:<br>        SubjectID_text = self.SubjectID.text()<br>    <span class="hljs-comment"># Update the placeholder in the save window</span><br>    self.SubjectID.setPlaceholderText(SubjectID_text)<br>    self.TrialID.setPlaceholderText(TrialID_text)<br>    widget2.close()<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">filepath_clicked</span>(<span class="hljs-params">self</span>):<br>    <span class="hljs-keyword">global</span> filepath<br>    filepath = QFileDialog.getExistingDirectory(<span class="hljs-literal">None</span>)<br>    <span class="hljs-built_in">print</span>(filepath)<br>    self.Filepath.setText(filepath)<br>    <span class="hljs-keyword">return</span><br></code></pre></td></tr></table></figure>
+
+<p><code>finish</code>：关闭所有窗口，结束运行，并且执行<code>savecsv</code>函数</p>
+<p><code>ok</code>：关闭当前窗口，更新参数，执行<code>savecsv</code>函数</p>
+<p><code>filepath</code>：选择csv文件的保存路径，会传递一个路径string</p>
+<h2 id="7-输出结果为csv"><a href="#7-输出结果为csv" class="headerlink" title="7. 输出结果为csv"></a>7. 输出结果为csv</h2><p>在这个过程当中，使用pandas来进行csv的写入。因此首先需要构建一个dataframe，之后通过函数写入。</p>
+<p>在保存的过程当中会使用到上一步结算界面获得的保存路径，如果没有设置，那么默认的保存路径是当前文件的同目录。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><br><span class="hljs-comment">## The final path saved csv</span><br><span class="hljs-keyword">global</span> filepath<br>filepath = os.path.abspath(__file__)<br>filepath = os.path.dirname(filepath)<br><br><span class="hljs-comment"># If the trial is ended, then save the result and restart the trial</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">savecsv</span>():<br>    Subjectid = [SubjectID_text]*<span class="hljs-built_in">round</span><br>    Trialid = []<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, <span class="hljs-built_in">round</span>):<br>        Trialid.append(<span class="hljs-string">&quot;&#123;0&#125;_&#123;1&#125;&quot;</span>.<span class="hljs-built_in">format</span>(i, TrialID_text))<br>    <span class="hljs-keyword">global</span> T_StoR,T_TtoS, T_onset, T_response<br>    dataframe = []<br>    dataframe = pd.DataFrame(&#123;<span class="hljs-string">&#x27;Subject ID&#x27;</span>: Subjectid, <span class="hljs-string">&#x27;Trial ID&#x27;</span>: Trialid, <span class="hljs-string">&#x27;Time: Time: onset of stimulus (s)&#x27;</span>: T_onset,<br>                              <span class="hljs-string">&#x27;Time: response is made (s)&#x27;</span>: T_response, <span class="hljs-string">&#x27;The number of \\ in the trial&#x27;</span>: T_right,<br>                              <span class="hljs-string">&#x27;The number of / in the trial&#x27;</span>: T_left, <span class="hljs-string">&#x27;The response: left or right&#x27;</span>: directions,<br>                              <span class="hljs-string">&#x27;Response time (ms)&#x27;</span>: T_StoR<br>                              &#125;)<br>    <span class="hljs-keyword">global</span> filepath<br>    filepath = <span class="hljs-string">&quot;&#123;0&#125;\\&#123;1&#125;_&#123;2&#125;.csv&quot;</span>.<span class="hljs-built_in">format</span>(filepath, SubjectID_text.replace(<span class="hljs-string">&#x27;:&#x27;</span>,<span class="hljs-string">&quot;-&quot;</span>), time.strftime(<span class="hljs-string">&#x27;%Y%m%d_%H-%M-%S&#x27;</span>))<br>    filepath = filepath.replace(<span class="hljs-string">&#x27;\\&#x27;</span>,<span class="hljs-string">&#x27;/&#x27;</span>)<br>    file = <span class="hljs-built_in">open</span>(filepath, mode=<span class="hljs-string">&#x27;w+&#x27;</span>)<br>    file = dataframe.to_csv(file)<br>    <span class="hljs-keyword">return</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><p><a target="_blank" rel="noopener" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Machine%20learning%20and%20neural%20engineering/Trial_with_GUI.py">完整代码</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Machine-learning-and-neural-engineering/" class="category-chain-item">Machine learning and neural engineering</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Machine-learning-and-neural-engineering/" class="print-no-link">#Machine learning and neural engineering</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>The record of one test program</div>
+      <div>https://zhenyumi.github.io/posts/8613a0ca/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年2月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/8205675a/" title="L1 Introdction">
+                        <span class="hidden-mobile">L1 Introdction</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

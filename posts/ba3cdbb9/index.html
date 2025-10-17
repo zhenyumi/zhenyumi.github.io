@@ -1,0 +1,939 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="一、Isolation of cellsIsolated and cultivated cells are commonly used to study cell biology  HeLa cells were the first immortalized human cell line (1951)  Virtually all cells can be grown in vitro (几乎所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L3 Isolation of cells and cell culture in vitro">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/ba3cdbb9/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="一、Isolation of cellsIsolated and cultivated cells are commonly used to study cell biology  HeLa cells were the first immortalized human cell line (1951)  Virtually all cells can be grown in vitro (几乎所">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_01.jpg">
+<meta property="article:published_time" content="2020-07-02T11:27:00.000Z">
+<meta property="article:modified_time" content="2020-07-02T11:27:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Cell Biology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_01.jpg">
+  
+  
+  
+  <title>L3 Isolation of cells and cell culture in vitro - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L3 Isolation of cells and cell culture in vitro</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-02 19:27" pubdate>
+          2020年7月2日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          381 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          4 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L3 Isolation of cells and cell culture in vitro</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Isolation-of-cells"><a href="#一、Isolation-of-cells" class="headerlink" title="一、Isolation of cells"></a>一、Isolation of cells</h1><p>Isolated and cultivated cells are commonly used to study cell biology</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220143735252.png" srcset="/img/loading.gif" lazyload alt="image-20200220143735252"></p>
+<p>HeLa cells were the first immortalized human cell line (1951) </p>
+<p>Virtually all cells can be grown <em>in vitro</em> (几乎所有的细胞都可以在体外培养)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220143934345.png" srcset="/img/loading.gif" lazyload alt="image-20200220143934345" style="zoom:80%;" />
+
+<blockquote>
+<p>? Animal cells must be cultured with adhesion, plant cells can be cultured in suspension.</p>
+</blockquote>
+<h2 id="How-to-start-a-cell-culture"><a href="#How-to-start-a-cell-culture" class="headerlink" title="How to start a cell culture?"></a>How to start a cell culture?</h2><ol>
+<li><p>First you have to isolate <u>primary</u> cells from tissues</p>
+<blockquote>
+<p>直接从组织中分离出来的细胞叫做<strong>元代细胞</strong>（Primary Cell）</p>
+</blockquote>
+</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220144037509.png" srcset="/img/loading.gif" lazyload alt="image-20200220144037509"></p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs inform7">Diagram for isolating <span class="hljs-keyword">animal</span> cells<br>EDTA：螯合剂<br>Collagenase<br></code></pre></td></tr></table></figure>
+
+<p>If you are to isolate plant cells for cell cultures, <strong>cellulase（纤维素酶）</strong> and <strong>macerozyme（核酶）</strong> are used instead of <strong>trypsin（胰蛋白酶）</strong> and <strong>collagenase（胶原酶）</strong> to <u>digest the cell wall.</u></p>
+<h2 id="How-to-select-specific-cell-types"><a href="#How-to-select-specific-cell-types" class="headerlink" title="How to select specific cell types?"></a>How to select specific cell types?</h2><p><strong>Growth&#x2F;cultivation</strong> of single cell type that you are interested in. <strong>→</strong> Selection of specific cell types is necessary</p>
+<p><strong>Physical selection</strong> of the cells according to specific properties. </p>
+<ul>
+<li><p><u>Fluorescence</u>-activated cell sorting (FACS)</p>
+</li>
+<li><p><u>Immunoprecipitation</u> of whole cells using antibody against specific cell-surface proteins (called marker, e.g., CD19) which is conjugated with beads (polydextran（聚葡聚糖） or magnetic).</p>
+<ul>
+<li>the <u>antibody</u> binds to a specific protein at the cell surface and thus attaches the whole cell to the bead.</li>
+<li>The cells are then collected by “pull-down”.</li>
+</ul>
+</li>
+<li><p><u>Laser</u> capture microdissection</p>
+<ul>
+<li>excision of cells using a laser beam</li>
+</ul>
+</li>
+</ul>
+<h2 id="Fluorescence-activated-cell-sorting-FACS"><a href="#Fluorescence-activated-cell-sorting-FACS" class="headerlink" title="Fluorescence-activated cell sorting (FACS)"></a>Fluorescence-activated cell sorting (FACS)</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220145419499.png" srcset="/img/loading.gif" lazyload alt="image-20200220145419499" style="zoom:80%;" />
+
+<p>Prerequisite for sorting is the presence of a fluorescent marker in the cells (e.g. fluorescent dye or fluorescence-conjugated antibody)</p>
+<p>Cells are guided by the <strong>sheath fluid</strong> into the center of the stream to get into the drops (1 cell&#x2F;drop)</p>
+<p>Detection of fluorescence (laser&#x2F;analyzer)</p>
+<p>Drops are electrically charged based on the result of analysis of fluorescence.</p>
+<p>Sorting occurs then via deflection of the drop with the cell in an <u>electrical field</u> in different collection tubes</p>
+<blockquote>
+<p>(Labeled cells can be negatively charged, non-labeled cells are positively charged)</p>
+</blockquote>
+<h2 id="Magnetic-beads-immunoprecipitation"><a href="#Magnetic-beads-immunoprecipitation" class="headerlink" title="Magnetic beads (immunoprecipitation)"></a>Magnetic beads (immunoprecipitation)</h2><p>Cell sorting via <u>immunoprecipitation</u> using “magnetic beads”</p>
+<p><strong>Two</strong> strategies: <u>positive</u> isolation of cells and <u>negative</u> isolation of cells.</p>
+<ul>
+<li><p><u>Positive isolation</u>: Immobilize the cells you want <img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220145814992.png" srcset="/img/loading.gif" lazyload alt="image-20200220145814992"> and remove all other cells</p>
+<p>目标提取细胞可以被beads识别</p>
+</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220145822530.png" srcset="/img/loading.gif" lazyload alt="image-20200220145822530"></p>
+<ul>
+<li><u>Negative isolation</u>: Immobilize the cells you want <img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220145814992.png" srcset="/img/loading.gif" lazyload alt="image-20200220145814992"> and remove all other cells</li>
+<li>目标提取细胞是不被beads识别的细胞</li>
+<li>Advantages: 目标提取的细胞没有被beads识别，因此保持了Natural property</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220145921201.png" srcset="/img/loading.gif" lazyload alt="image-20200220145921201" style="zoom:80%;" />
+
+<p>Example: Isolation of T cells from thymus:</p>
+<ul>
+<li>Homogenize thymus tissue</li>
+<li>Add CD3-conjugated magnetic beads</li>
+<li>Immobilize cells by magnetic force</li>
+<li>Wash immobilized cells</li>
+<li>Mission accomplished!</li>
+</ul>
+<p><u>Advantage: The cells you want to isolate remain “untouched”!</u></p>
+<h2 id="Laser-capture-microdissection"><a href="#Laser-capture-microdissection" class="headerlink" title="Laser capture microdissection"></a>Laser capture microdissection</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220150113342.png" srcset="/img/loading.gif" lazyload alt="image-20200220150113342"></p>
+<h1 id="二、Cell-culture"><a href="#二、Cell-culture" class="headerlink" title="二、Cell culture"></a>二、Cell culture</h1><h2 id="Growth-maintenance-of-cells-in-vitro"><a href="#Growth-maintenance-of-cells-in-vitro" class="headerlink" title="Growth &amp; maintenance of cells in vitro"></a>Growth &amp; maintenance of cells <em>in vitro</em></h2><h3 id="1-A-basic-cell-culture-media-for-mammalian-cells-usually-contains"><a href="#1-A-basic-cell-culture-media-for-mammalian-cells-usually-contains" class="headerlink" title="1. A basic cell culture media for mammalian cells usually contains:"></a>1. A basic cell culture media for mammalian cells usually contains:</h3><ol>
+<li><u>Buffer substance</u> for pH regulation. Maintain Ph stability.</li>
+<li><u>Food source</u> (e.g. glucose, glutamine, amino acids, nucleotides, etc.)</li>
+<li><u>Serum（血清）&#x2F;growth stimulant</u> (Some cells grows depends on growth factor)</li>
+<li><u>Minerals</u> for metabolic functioning of the cells</li>
+<li><u>Antibiotic</u> additives and <u>pH indicator</u> (Not necessary, cause the culture environment should be bacteria-free )</li>
+</ol>
+<h3 id="2-A-basic-cell-culture-media-for-plant-cells-usually-contains"><a href="#2-A-basic-cell-culture-media-for-plant-cells-usually-contains" class="headerlink" title="2. A basic cell culture media for plant cells usually contains"></a>2. A basic cell culture media for plant cells usually contains</h3><ol>
+<li><u>Buffer substance</u> for pH regulation</li>
+<li><u>Nitrogen source</u> (e.g. NH4NO3)</li>
+<li><u>Minerals</u> for metabolic functioning of the cells</li>
+</ol>
+<h3 id="3-Some-commonly-used-media-For-Animal-Cells"><a href="#3-Some-commonly-used-media-For-Animal-Cells" class="headerlink" title="3. Some commonly used media For Animal Cells"></a>3. Some commonly used media For Animal Cells</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220150344930.png" srcset="/img/loading.gif" lazyload alt="image-20200220150344930" style="zoom:67%;" />
+
+<ol>
+<li>Dulbecco’s modified essential medium (DMEM)</li>
+<li>RPMI-1640</li>
+<li>McCoy’s 5A</li>
+<li>F12, etc.</li>
+</ol>
+<h3 id="4-Commonly-used-media-for-plant-cells"><a href="#4-Commonly-used-media-for-plant-cells" class="headerlink" title="4. Commonly used media for plant cells"></a>4. Commonly used media for plant cells</h3><p>Murashige &amp; Skoog (MS) medium in different concentrations:</p>
+<ul>
+<li>MS is perfect for most plants</li>
+<li>½ strength is perfect for orchids</li>
+<li>some cell cultures like up to 2% sucrose</li>
+</ul>
+<p><u>Plant medium is cheap</u></p>
+<h2 id="Immortalization-of-a-cell-line"><a href="#Immortalization-of-a-cell-line" class="headerlink" title="Immortalization of a cell line"></a>Immortalization of a cell line</h2><p>Immortalized cells are a population of cells which can escape normal <u>cellular senescence (细胞衰老)</u> and <u>keep undergoing division</u>. Thus, this kind of cells can grow in vitro for prolonged periods. This usually is due to some carcinogenic mutations. </p>
+<p>Strategies to immortalization cells:</p>
+<ol>
+<li><p><strong>Virus</strong> to transform the cells, example is SV40:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220150932516.png" srcset="/img/loading.gif" lazyload alt="image-20200220150932516" style="zoom: 80%;" />
+</li>
+<li><p><strong>Special Genes</strong>, example: hTERT:</p>
+</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220150940787.png" srcset="/img/loading.gif" lazyload alt="image-20200220150940787"></p>
+<h3 id="1-Commonly-used-cell-lines"><a href="#1-Commonly-used-cell-lines" class="headerlink" title="1. Commonly used cell lines"></a>1. Commonly used cell lines</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220150641811.png" srcset="/img/loading.gif" lazyload alt="image-20200220150641811"></p>
+<h3 id="2-Authenticated-Cell-lines-can-be-obtained-from-stock-centers"><a href="#2-Authenticated-Cell-lines-can-be-obtained-from-stock-centers" class="headerlink" title="2. Authenticated Cell lines can be obtained from stock centers"></a>2. Authenticated Cell lines can be obtained from stock centers</h3><p>ATCC Mission: To acquire, authenticate, preserve, develop, standardize, and distribute biological materials and information for the advancement and application of scientific knowledge.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220150900786.png" srcset="/img/loading.gif" lazyload alt="image-20200220150900786"></p>
+<p>ATCC serves by characterizing cell lines, bacteria, viruses, fungi and protozoa. </p>
+<ul>
+<li>4,000 human and animal cell lines and 1,200 hybridoma. </li>
+<li>18,000 strains of bacteria from 900 genera.</li>
+<li>2,000 different types of animal viruses and 1,000 plant viruses.</li>
+<li>49,000 yeast and fungi strains from 1,500 genera and 2,000 strains of protists.</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220150906416.png" srcset="/img/loading.gif" lazyload alt="image-20200220150906416"></p>
+<h3 id="3-Generation-of-a-“new”-cell-line-by-fusion-of-different-cells"><a href="#3-Generation-of-a-“new”-cell-line-by-fusion-of-different-cells" class="headerlink" title="3. Generation of a “new” cell line by fusion of different cells"></a>3. Generation of a “new” cell line by fusion of different cells</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220150959938.png" srcset="/img/loading.gif" lazyload alt="image-20200220150959938" style="zoom: 120%;" />
+
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-keyword">By </span><span class="hljs-keyword">adding </span>membrane fusing agent<br>Heterocaryon：异核体<br>Hybridoma cells: 杂种细胞<br></code></pre></td></tr></table></figure>
+
+<p>Hybridoma cells: fusion of a <u>differentiated</u> cell with a <strong>tumor</strong> cell</p>
+<p>Different types of cells can be <u>fused together</u> to display properties from the two sides…</p>
+<p><u>Fusion with a tumor cell line results in immortal cells (immortalization)…</u></p>
+<h3 id="4-Hybridoma-cells-produce-monoclonal-antibodies-in-hybridoma-cells"><a href="#4-Hybridoma-cells-produce-monoclonal-antibodies-in-hybridoma-cells" class="headerlink" title="4. Hybridoma cells produce monoclonal antibodies in hybridoma cells"></a>4. Hybridoma cells produce monoclonal antibodies in hybridoma cells</h3><p>Generate <u>antibody-secreting B lymphocytes</u> by immunization of a mouse and fuse these cells with <strong>B lymphocyte tumor cells</strong> to generate a hybridoma line, an immortal, antibody-secreting cell line!!!</p>
+<p><u>Form hybridoma:</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220151112745.png" srcset="/img/loading.gif" lazyload alt="image-20200220151112745" style="zoom:80%;" />
+
+<p>Next, <u>screen the individual hybridoma</u> to get the line that produces the best antibody…</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220151130445.png" srcset="/img/loading.gif" lazyload alt="image-20200220151130445" style="zoom: 80%;" />
+
+<p><u>All commercially available monoclonal antibodies are produced in hybridoma cells…</u></p>
+<h1 id="三、2D-and-3D-culture"><a href="#三、2D-and-3D-culture" class="headerlink" title="三、2D and 3D culture"></a>三、2D and 3D culture</h1><p>3-D cell culture might reflect the <em>in vivo</em> condition more accurately. </p>
+<p>In the <em>in vivo</em> situation, cells are <em>embedded</em> in the <u>extracellular matrix (ECM)</u>, which are known to have effects on various essential cellular activities. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220151540381.png" srcset="/img/loading.gif" lazyload alt="image-20200220151540381" style="zoom:80%;" />
+
+<p>3D culture mimic the <em>in vivo</em> environment. (Animal cells cannot be cultured in suspension) </p>
+<h2 id="Cell-shape-determined-by-the-structure-and-composition-of-the-ECM"><a href="#Cell-shape-determined-by-the-structure-and-composition-of-the-ECM" class="headerlink" title="Cell shape determined by the structure and composition of the ECM"></a>Cell shape determined by the structure and composition of the ECM</h2><p>(Fibroblasts produce the ECM proteins and maintain the ECM environment)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220151645262.png" srcset="/img/loading.gif" lazyload alt="image-20200220151645262" style="zoom:80%;" />
+
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-number">2</span><span class="hljs-built_in">D</span> <span class="hljs-variable">or</span> <span class="hljs-number">3</span><span class="hljs-built_in">D</span> <span class="hljs-variable">Culture</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220151719259.png" srcset="/img/loading.gif" lazyload alt="image-20200220151719259" style="zoom:67%;" />
+
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss">Culture with or without <span class="hljs-built_in">laminin</span>(层粘连蛋白) (ECM)<br></code></pre></td></tr></table></figure>
+
+<h2 id="Comparison-between-2D-and-3D-culture"><a href="#Comparison-between-2D-and-3D-culture" class="headerlink" title="Comparison between 2D and 3D culture"></a>Comparison between 2D and 3D culture</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>2D</th>
+<th>3D</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cell interface to medium</td>
+<td>All cells are equally exposed to media components</td>
+<td>As in physiological conditions, there is gradient availability of media components. Upper layer of cells are highly exposed over the lower layer (Heterogeneous exposure)</td>
+</tr>
+<tr>
+<td>Cell junction</td>
+<td>Cell junctions are less prevalent and does not resemble physiological conditions</td>
+<td>Cell junctions are prevalent and enable cell to cell communication.</td>
+</tr>
+<tr>
+<td>Cell Differentiation</td>
+<td>Moderately and poorly differentiated</td>
+<td>Well differentiated</td>
+</tr>
+<tr>
+<td>Drug metabolism</td>
+<td>Drug metabolism not well observed</td>
+<td>Enhanced drug metabolism with increased expression of CYP enzymes</td>
+</tr>
+<tr>
+<td>Drug Sensitivity</td>
+<td>Cells are sensitive and drugs show high efficacy</td>
+<td>Cells often show resistance and drugs show low potency</td>
+</tr>
+<tr>
+<td>Cell Proliferation 细胞增殖</td>
+<td>Higher proliferation rate than in natural environment</td>
+<td>Proliferation rate may be high or low, it is based on cell type and 3D-cell culture technique.</td>
+</tr>
+<tr>
+<td>Cell Shape</td>
+<td>Flat and stretehed</td>
+<td>Natural shape (ellipsoid&#x2F;polarized) is retained</td>
+</tr>
+<tr>
+<td>Response to Stimuli</td>
+<td>Poor response to mechanical stimuli of cells</td>
+<td>well-established responses to mechanical stimuli of cells</td>
+</tr>
+<tr>
+<td>Viability</td>
+<td>Sensitive to cytotoxin</td>
+<td>Greater viability and less susceptible to external factor</td>
+</tr>
+<tr>
+<td>Apoptosis 细胞凋亡</td>
+<td>Highly susceptible to drug-induced apoptosis</td>
+<td>Enhanced resistance to drug-induced apoptotic stimuli</td>
+</tr>
+</tbody></table>
+<h2 id="Approaches-commonly-used-to-analyze-culture-cells"><a href="#Approaches-commonly-used-to-analyze-culture-cells" class="headerlink" title="Approaches commonly used to analyze culture cells"></a>Approaches commonly used to analyze culture cells</h2><h3 id="1-Imaging-approaches"><a href="#1-Imaging-approaches" class="headerlink" title="1. Imaging approaches"></a>1. Imaging approaches</h3><ol>
+<li>Time-lapse live cell imaging</li>
+<li>Fluorescence-based imaging</li>
+<li>Immunofluorescence (IF) imaging</li>
+<li>EM, etc..</li>
+</ol>
+<h3 id="2-Biochemical-approaches"><a href="#2-Biochemical-approaches" class="headerlink" title="2. Biochemical approaches"></a>2. Biochemical approaches</h3><ol>
+<li><p>Cell lysis and analyze proteins</p>
+</li>
+<li><p>“Pulse-chase” experiments</p>
+</li>
+</ol>
+<h3 id="3-Genetic-manipulation-of-culture-cells"><a href="#3-Genetic-manipulation-of-culture-cells" class="headerlink" title="3. Genetic manipulation of culture cells"></a>3. Genetic manipulation of culture cells</h3><ol>
+<li>Mutagenesis (random)</li>
+<li>Gene-editing (knock-out or knock-in)</li>
+<li>Depletion of genes with specific siRNA (called knock-down)</li>
+<li>Ectopic expression (overexpression of genes)</li>
+<li>…</li>
+</ol>
+<h2 id="Protein-analyses-by-electrophoresis"><a href="#Protein-analyses-by-electrophoresis" class="headerlink" title="Protein analyses by electrophoresis"></a>Protein analyses by electrophoresis</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220152324029.png" srcset="/img/loading.gif" lazyload alt="image-20200220152324029"></p>
+<h2 id="Pulse-chase-experiments"><a href="#Pulse-chase-experiments" class="headerlink" title="Pulse-chase experiments"></a>Pulse-chase experiments</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220152347729.png" srcset="/img/loading.gif" lazyload alt="image-20200220152347729"></p>
+<h2 id="Using-genetics-in-the-cultured-cells"><a href="#Using-genetics-in-the-cultured-cells" class="headerlink" title="Using genetics in the cultured cells"></a>Using genetics in the cultured cells</h2><p>Genetic manipulation of culture cells</p>
+<ol>
+<li><p>Mutagenesis (random)</p>
+</li>
+<li><p>Gene-editing (knock-out or knock-in)</p>
+</li>
+<li><p>Depletion of genes with specific siRNA (called knock-down)</p>
+</li>
+<li><p>Ectopic expression (overexpression of genes)</p>
+</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220152427311.png" srcset="/img/loading.gif" lazyload alt="image-20200220152427311"></p>
+<h1 id="四、Transfection-of-the-cell"><a href="#四、Transfection-of-the-cell" class="headerlink" title="四、Transfection of the cell"></a>四、Transfection of the cell</h1><h2 id="Transfection-infection-of-culture-cells"><a href="#Transfection-infection-of-culture-cells" class="headerlink" title="Transfection&#x2F;infection of culture cells"></a>Transfection&#x2F;infection of culture cells</h2><p><strong>Transfection（转染）</strong>: Delivery of exogenous gene (DNA, mRNA) into cultured cells</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220153217141.png" srcset="/img/loading.gif" lazyload alt="image-20200220153217141"></p>
+<ol>
+<li>Optoporation</li>
+<li>Microinjection</li>
+<li>Sonoporation</li>
+<li>Electroporation</li>
+<li>Electroporation</li>
+<li>Viral transduction: Using virus as a vector for the delivery is often called <strong>infection</strong>. </li>
+<li>Lipofection（脂质转染）</li>
+<li>Gene Gun</li>
+</ol>
+<h2 id="Control-gene-expression-and-observe-effects"><a href="#Control-gene-expression-and-observe-effects" class="headerlink" title="Control gene expression and observe effects"></a>Control gene expression and observe effects</h2><h3 id="1-Inducible-gene-expression"><a href="#1-Inducible-gene-expression" class="headerlink" title="1. Inducible gene expression"></a>1. Inducible gene expression</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220153258155.png" srcset="/img/loading.gif" lazyload alt="image-20200220153258155"></p>
+<h3 id="2-Analyze-effects-at-cellular-and-molecular-levels"><a href="#2-Analyze-effects-at-cellular-and-molecular-levels" class="headerlink" title="2. Analyze effects at cellular and molecular levels"></a>2. Analyze effects at cellular and molecular levels</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220153520451.png" srcset="/img/loading.gif" lazyload alt="image-20200220153520451"></p>
+<hr>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200220153531061.png" srcset="/img/loading.gif" lazyload alt="image-20200220153531061"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Cell-Biology/" class="category-chain-item">Cell Biology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Cell-Biology/" class="print-no-link">#Cell Biology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L3 Isolation of cells and cell culture in vitro</div>
+      <div>https://zhenyumi.github.io/posts/ba3cdbb9/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月2日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/3fe6446d/" title="L5 Cell membranes lipids and lipid modification">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L5 Cell membranes lipids and lipid modification</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/9f2a2ede/" title="L2 Visualizing Cells">
+                        <span class="hidden-mobile">L2 Visualizing Cells</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,915 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="一、Overview of Pyruvate Oxidation and the Citric Acid Cycle  The citric acid cycle is the central oxidative pathway in respiration, the process by which all metabolic fuels—carbohydrate, lipid, and pro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L03 Citric Acid Cycle and Glyoxylate Cycle">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/21ac4f1d/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="一、Overview of Pyruvate Oxidation and the Citric Acid Cycle  The citric acid cycle is the central oxidative pathway in respiration, the process by which all metabolic fuels—carbohydrate, lipid, and pro">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20II%20%28Metabolism%29/%E7%99%BD%E3%81%86%E3%81%95%E3%81%8E.png">
+<meta property="article:published_time" content="2020-07-17T13:57:33.000Z">
+<meta property="article:modified_time" content="2020-07-17T13:57:35.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Biochemistry II (Metabolism)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20II%20%28Metabolism%29/%E7%99%BD%E3%81%86%E3%81%95%E3%81%8E.png">
+  
+  
+  
+  <title>L03 Citric Acid Cycle and Glyoxylate Cycle - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20II%20%28Metabolism%29/Ghost%20of%20Tsushima.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L03 Citric Acid Cycle and Glyoxylate Cycle</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-17 21:57" pubdate>
+          2020年7月17日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          940 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L03 Citric Acid Cycle and Glyoxylate Cycle</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Overview-of-Pyruvate-Oxidation-and-the-Citric-Acid-Cycle"><a href="#一、Overview-of-Pyruvate-Oxidation-and-the-Citric-Acid-Cycle" class="headerlink" title="一、Overview of Pyruvate Oxidation and the Citric Acid Cycle"></a>一、Overview of Pyruvate Oxidation and the Citric Acid Cycle</h1><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226101545391.png" srcset="/img/loading.gif" lazyload alt="image-20200226101545391" style="zoom: 50%;" />
+
+<p>The citric acid cycle is the <u>central oxidative pathway in respiration</u>, the process by which all metabolic <u>fuels—carbohydrate, lipid, and protein</u>—are catabolized in aerobic organisms and tissues.</p>
+<p>Most of the energy yield from substrate oxidation in the citric acid cycle comes from <u>subsequent reoxidation of reduced electron carriers</u>.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226101619893.png" srcset="/img/loading.gif" lazyload alt="image-20200226101619893"></p>
+<h2 id="The-three-stages-of-respiration"><a href="#The-three-stages-of-respiration" class="headerlink" title="The three stages of respiration"></a>The three stages of respiration</h2><ol>
+<li>Stage 1 - carbon from metabolic fuels is incorporated into <u>acetyl-CoA</u>. </li>
+<li>Stage 2 - the <u>citric acid cycle</u> oxidizes acetyl-CoA to produce CO2, <u>reduced electron carriers</u>, and a small amount of ATP.  经过cycle (Stage 2)之后，消耗了acetyl-CoA里面的两个C，其余的物质都没有改变</li>
+<li>Stage 3 - the reduced electron carriers are <u>reoxidized</u>, providing energy for the synthesis of additional <u>ATP</u>.</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226191007517.png" srcset="/img/loading.gif" lazyload alt="image-20200226191007517" style="zoom: 22%;" />
+
+<p>Schematic of a mitochondrion. </p>
+<p>Computer model generated from electron tomograms of a mitochondrion.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226191043378.png" srcset="/img/loading.gif" lazyload alt="image-20200226191043378" style="zoom: 25%;" />
+
+<p><strong>Dehydrogenases（脱氢酶）</strong> catalyze <u>substrate oxidations</u>.</p>
+<p><strong>Oxidases（氧化酶）</strong> catalyze the subset of oxidations in which <u>O<del>2</del> is the direct electron acceptor</u>.</p>
+<p><strong>Oxygenase（加氧酶）</strong>: oxygen combines directly with the substrate oxidized.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226191235303.png" srcset="/img/loading.gif" lazyload alt="image-20200226191235303"></p>
+<h2 id="The-fate-of-carbon-in-the-citric-acid-cycle"><a href="#The-fate-of-carbon-in-the-citric-acid-cycle" class="headerlink" title="The fate of carbon in the citric acid cycle"></a>The fate of carbon in the citric acid cycle</h2><p>Note that these departing CO2 groups derive from the two <u>oxaloacetate carboxyl groups</u> that were incorporated as acetyl-CoA in earlier turns of the cycle.</p>
+<p>Other names: Tricarboxylic acid (TCA) cycle; Krebs cycle</p>
+<p>Hans Krebs (1937); rejected by Nature</p>
+<p>Note that these departing CO2 groups derive from the two oxaloacetate carboxyl groups that were incorporated as acetyl-CoA in earlier turns of the cycle.</p>
+<h1 id="二、Pyruvate-Oxidation-A-Major-Entry-Route-for-Carbon-into-the-Citric-Acid-Cycle"><a href="#二、Pyruvate-Oxidation-A-Major-Entry-Route-for-Carbon-into-the-Citric-Acid-Cycle" class="headerlink" title="二、Pyruvate Oxidation: A Major Entry Route for Carbon into the Citric Acid Cycle"></a>二、Pyruvate Oxidation: A Major Entry Route for Carbon into the Citric Acid Cycle</h1><p>Pyruvate oxidation to acetyl-CoA is catalyzed by the pyruvate <strong>dehydrogenase complex (PDH complex, 丙酮酸脱氢酶复合物)</strong>. </p>
+<p>It is an <strong>oxidative decarboxylation (氧化脱羧)</strong>, which is virtually <u>irreversible</u> involving <u>three enzymes</u> and <u>five coenzymes.</u>  由于这个反应不可逆，也不能bypass， 因此偶数碳的脂肪酸不能变成糖</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226195209854.png" srcset="/img/loading.gif" lazyload alt="image-20200226195209854"></p>
+<p>在细胞内条件释放的能量会更多</p>
+<p>Structure of the pyruvate dehydrogenase (PDH) complex</p>
+<ol>
+<li>Electron micrograph of the purified pyruvate dehydrogenase complex from E. coli.</li>
+<li>E<del>2</del> core subcomplex (60 E<del>2</del> monomers). </li>
+<li>E<del>2</del>-E<del>3</del> subcomplex (E<del>2</del> core  12 E<del>3</del> dimers). </li>
+<li>Full PDH complex (E<del>2</del>-E<del>3</del> subcomplex 1 <del>30 E</del>1~ tetramers). </li>
+<li>Cutaway reconstruction of PDH complex.</li>
+</ol>
+<p>E<del>1</del>: pyruvate dehydrogenase (24-E.coli)<br>E<del>2</del>: dihydrolipoamide transacetylase (24)<br>E<del>3</del>: dihydrolipoamide dehydrogenase(12)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226195407516.png" srcset="/img/loading.gif" lazyload alt="image-20200226195407516" style="zoom: 33%;" />
+
+<p>Big complex: 4.6x10^6^ daltons Larger than ribosome</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226195444353.png" srcset="/img/loading.gif" lazyload alt="image-20200226195444353"></p>
+<p><u>Five-step reactions</u><br><u>Five coenzymes</u></p>
+<h1 id="三、Coenzymes-Involved-in-Pyruvate-Oxidation-and-the-Citric-Acid-Cycle"><a href="#三、Coenzymes-Involved-in-Pyruvate-Oxidation-and-the-Citric-Acid-Cycle" class="headerlink" title="三、Coenzymes Involved in Pyruvate Oxidation and the Citric Acid Cycle"></a>三、Coenzymes Involved in Pyruvate Oxidation and the Citric Acid Cycle</h1><p>In pyruvate oxidation, the acceptor of the <strong>active aldehyde (hydroxyethyl group, 羟乙基)</strong> generated by TPP is lipoic acid, which is the internal disulfide of <strong>6,8-dithiooctanoic acid</strong>. (6,8-二硫代辛酸)</p>
+<p>The coenzyme is joined to via an <u>amide</u> bond linking the carboxyl group of lipoic acid to a lysine -amino group. Thus, the reactive species is an amide, called <strong>lipoamide (硫辛酰胺)</strong>, or <strong>lipoyllysine</strong>. </p>
+<p><u>Each lipoyllysine side chain</u> is <del>14Å long, and is located within a flexible lipoyl domain of E</del>2~ (and E<del>3</del>BP), allowing it to function as a “<u>swinging arm (摆臂)</u>” that can interact with the active sites of both the <u>E<del>1</del> and E<del>3</del></u> components of the PDH complex.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226195659868.png" srcset="/img/loading.gif" lazyload alt="image-20200226195659868" style="zoom:67%;" />
+
+<p>Lipoic acid:  10 tons of pork and beef → 30 mg;  “swinging arm” for acetyl group between E<del>1</del> and E<del>3</del></p>
+<h2 id="Oxidized-and-reduced-forms-of-lipoamide"><a href="#Oxidized-and-reduced-forms-of-lipoamide" class="headerlink" title="Oxidized and reduced forms of lipoamide"></a>Oxidized and reduced forms of lipoamide</h2><p>The cyclic disulfide of lipoamide can undergo a reversible two-electron reduction to form the dithiol, <strong>dihydrolipoamide (二硫醇，二氢硫辛酸)</strong>.</p>
+<p>In pyruvate dehydrogenase, this reduction is coupled to the transfer of the <u>hydroxyethyl group moiety from TPP</u>, giving an <strong>acetyl thioester</strong> of the reduced dihydrolipoamide.</p>
+<p>Thus, <u>lipoamide is a carrier of both electrons and acyl groups</u>.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226195838574.png" srcset="/img/loading.gif" lazyload alt="image-20200226195838574" style="zoom:25%;" />
+
+
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226195908926.png" srcset="/img/loading.gif" lazyload alt="image-20200226195908926"></p>
+<p>Flavin coenzymes participate in two-electron oxidoreduction reactions that can proceed in <u>2 one-electron steps.</u></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226195921963.png" srcset="/img/loading.gif" lazyload alt="image-20200226195921963"></p>
+<p><u>FAD and FMN(B2, riboflavin): coenzyme; two electrons acceptor, hold electrons, not diffusing them; tightly binds to the protein.</u></p>
+<p>Coenzyme A (<u>A for acyl（脂肪酰基）</u>) participates in <u>activation of acyl groups</u> in general, including the acetyl group derived from pyruvate.</p>
+<p>The coenzyme is derived metabolically from <u>ATP, the vitamin pantothenic acid, and β-mercaptoethylamine</u>.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226200008335.png" srcset="/img/loading.gif" lazyload alt="image-20200226200008335"></p>
+<p><strong>Thioesters (硫酯类)</strong> such as acetyl-CoA are energy rich because thioesters are destabilized relative to ordinary oxygen esters.</p>
+<p>硫酯键具有较高的能量，高于氧酯键</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226200031306.png" srcset="/img/loading.gif" lazyload alt="image-20200226200031306" style="zoom:67%;" />
+
+<h2 id="Comparison-of-free-energies-of-hydrolysis-of-thioesters-and-oxygen-esters"><a href="#Comparison-of-free-energies-of-hydrolysis-of-thioesters-and-oxygen-esters" class="headerlink" title="Comparison of free energies of hydrolysis of thioesters and oxygen esters"></a>Comparison of free energies of hydrolysis of thioesters and oxygen esters</h2><p><u>Lack of resonance stabilization</u> in thioesters is the basis for the higher $\Delta$G of hydrolysis of thioesters, relative to that of ordinary oxygen esters. </p>
+<p>The free energies of the hydrolysis products are similar for the two classes of compounds.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226200101980.png" srcset="/img/loading.gif" lazyload alt="image-20200226200101980" style="zoom:80%;" />
+
+<h1 id="四、Action-of-the-Pyruvate-Dehydrogenase-Complex"><a href="#四、Action-of-the-Pyruvate-Dehydrogenase-Complex" class="headerlink" title="四、Action of the Pyruvate Dehydrogenase Complex"></a>四、Action of the Pyruvate Dehydrogenase Complex</h1><h2 id="Mechanisms-of-the-pyruvate-dehydrogenase-complex"><a href="#Mechanisms-of-the-pyruvate-dehydrogenase-complex" class="headerlink" title="Mechanisms of the pyruvate dehydrogenase complex"></a>Mechanisms of the pyruvate dehydrogenase complex</h2><p><strong>Substrate channeling</strong>: intermediates of a multiple pathways are “handed off” from one active site to the next without diffusing from the the complex; allows the overall reaction to proceed smoothly and avoids unwanted side reactions.</p>
+<p>E1: pyruvate dehydrogenase (丙酮酸脱氢酶)<br>E2: dihydrolipoamide transacetylase (二氢硫辛酰胺转乙酰酶)<br>E3: dihydrolipoamide dehydrogenase (二氢硫辛酰胺脱氢酶)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226200150508.png" srcset="/img/loading.gif" lazyload alt="image-20200226200150508" style="zoom: 25%;" />
+
+<p><strong>Lipoamide (硫辛酰胺)</strong> is tethered to one enzyme (E<del>2</del>) in the PDH complex, but it interacts with all three enzymes via a flexible swinging arm.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226200227023.png" srcset="/img/loading.gif" lazyload alt="image-20200226200227023"></p>
+<p><strong>Arsenic poisoning (砷中毒)</strong>, both intentional and unintentional, has had a long history, dating back to at least the eighth century. </p>
+<p><strong>Trivalent As(III)</strong> compounds such as <strong>arsenite (亚砷酸盐)</strong> and organic arsenicals react readily with <strong>thiols（硫醇）</strong>, and they are especially reactive with <strong>dithiols（二硫醇类）</strong>, <u>such as dihydrolipoamide</u>, forming bidentate adducts:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226200308062.png" srcset="/img/loading.gif" lazyload alt="image-20200226200308062" style="zoom:67%;" />
+
+<p>三氧化二砷（砒霜）：潘金莲，武大郎；用来治疗leukemia（白血病）； syphilis（梅毒）<br>二硫化砷（雄黄），三硫化砷（雌黄）<br>Middle ages: impatient heirs ”tonics”</p>
+<h1 id="五、The-Citric-Acid-Cycle"><a href="#五、The-Citric-Acid-Cycle" class="headerlink" title="五、The Citric Acid Cycle"></a>五、The Citric Acid Cycle</h1><h2 id="Step-1-Introduction-of-Two-Carbon-Atoms-as-Acetyl-CoA"><a href="#Step-1-Introduction-of-Two-Carbon-Atoms-as-Acetyl-CoA" class="headerlink" title="Step 1: Introduction of Two Carbon Atoms as Acetyl-CoA"></a>Step 1: Introduction of Two Carbon Atoms as Acetyl-CoA</h2><p>The initial reaction, catalyzed by <strong>citrate synthase (柠檬酸合成酶)</strong>, is akin to an <u>aldol condensation (羟醛缩合)</u>.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226200626328.png" srcset="/img/loading.gif" lazyload alt="image-20200226200626328" style="zoom:80%;" />
+
+<p>反应放出大量能量，倾向于正向进行，受到Oxaloacetate浓度调节</p>
+<h3 id="1-Mechanism-of-the-citrate-synthase-reaction"><a href="#1-Mechanism-of-the-citrate-synthase-reaction" class="headerlink" title="1. Mechanism of the citrate synthase reaction"></a>1. Mechanism of the citrate synthase reaction</h3><p>Mechanism of the citrate synthase reaction: </p>
+<p>Step 1: <strong>Asp 375</strong> extracts a proton from the methyl group,and <strong>His 274</strong> donates a proton to the carbonyl oxygen of <strong>acetyl-CoA</strong>, creating an <strong>enol (烯醇)</strong>. </p>
+<p>Step 2: <strong>His 274</strong> deprotonates the acetyl-CoA enol, stabilizing the nucleophilic enolate that attacks the keto carbon of <strong>oxaloacetate</strong>. His 320 protonates the aldol product (S)-citroyl-CoA. </p>
+<p>Step 3:The <strong>citroyl-CoA</strong> intermediate spontaneously hydrolyzes to citrate by a nucleophilic acyl substitution reaction giving exclusively the S stereoisomer of citroyl-CoA.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226200750256.png" srcset="/img/loading.gif" lazyload alt="image-20200226200750256" style="zoom:30%;" />
+
+<h3 id="2-Three-dimensional-structure-of-citrate-synthase"><a href="#2-Three-dimensional-structure-of-citrate-synthase" class="headerlink" title="2. Three-dimensional structure of citrate synthase"></a>2. Three-dimensional structure of citrate synthase</h3><p>The two forms of <u>pig heart citrate synthase</u> homodimer shown here were determined by crystallographic methods and support the induced fit model of enzyme catalysis. </p>
+<ol>
+<li>In the <u>absence of CoA-SH</u> the enzyme crystallizes in an <u>“open” form</u>. Citrate binds at the base of large clefts in both catalytic domains of the homodimeric protein. </li>
+<li><u>Binding of CoA-SH</u> causes the enzyme to adopt a <u>“closed” conformation,</u> with the clefts essentially filled</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226201128853.png" srcset="/img/loading.gif" lazyload alt="image-20200226201128853"></p>
+<h2 id="Step-2-Isomerization-of-Citrate"><a href="#Step-2-Isomerization-of-Citrate" class="headerlink" title="Step 2: Isomerization of Citrate"></a>Step 2: Isomerization of Citrate</h2><p>The <strong>tertiary alcohol</strong> of <strong>citrate</strong> presents yet another chemical problem: tertiary alcohols <u>cannot be oxidized</u> without breaking a carbon–carbon bond. </p>
+<p>To set up the next oxidation in the pathway, citrate is converted to <strong>isocitrate</strong>, a chiral <strong>secondary alcohol</strong>, which can be <u>more readily oxidized</u>. </p>
+<p>This isomerization reaction, catalyzed by <strong>aconitase (乌头酸酶)</strong>, <u>involves successive dehydration and hydration,</u> through cis-aconitate as a dehydrated intermediate, which remains enzyme-bound.</p>
+<p>这个反应是一个可逆反应，在细胞内ΔG &#x3D; 0</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226201225323.png" srcset="/img/loading.gif" lazyload alt="image-20200226201225323"></p>
+<p>The enzyme contains nonheme iron and acid-labile sulfur in a cluster called a 4Fe–4S iron–sulfur center. </p>
+<p>The iron–sulfur cluster coordinates the hydroxyl group and one of the carboxyl groups on the citrate molecule.</p>
+<p>The cis-aconitate intermediate must flip 180° during the reaction, presumably by releasing from the enzyme, then rebinding with the iron–sulfur cluster, but in the opposite orientation. </p>
+<p>Thus, of the four possible <strong>diastereomers (非对映异构体)</strong> of isocitrate, only one, the 2R,3S diastereomer, is produced.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226201330546.png" srcset="/img/loading.gif" lazyload alt="image-20200226201330546"></p>
+<p>The <strong>prochirality (前手性)</strong> of citrate when bound to aconitase:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226201347965.png" srcset="/img/loading.gif" lazyload alt="image-20200226201347965" style="zoom:50%;" />
+
+<p><strong>Fluoroacetate (氟乙酸)</strong> is an example of a <u>mechanism-based</u>, or <u>suicide</u>, <u>inhibitor of aconitase</u>. (2-Fluorocltrate与柠檬酸结构相似，因此使得aconitase错误识别)</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226201406364.png" srcset="/img/loading.gif" lazyload alt="image-20200226201406364"></p>
+<p>“<u>Suicide substrate</u>”: Not toxic to cell itself, but it resembles a normal metabolic closely enough that it undergoes metabolic transformation to a product that does inhibit a crucial enzyme. The cell “comments suicide” by transforming the analog to a toxic product.</p>
+<h2 id="Step-3-Generation-of-CO2-by-an-NAD-Linked-Dehydrogenase"><a href="#Step-3-Generation-of-CO2-by-an-NAD-Linked-Dehydrogenase" class="headerlink" title="Step 3: Generation of CO2 by an NAD+-Linked Dehydrogenase"></a>Step 3: Generation of CO2 by an NAD+-Linked Dehydrogenase</h2><p>The first of two <u>oxidative decarboxylations</u> in the cycle is catalyzed by <strong>isocitrate dehydrogenase (异柠檬酸脱氢酶)</strong>. </p>
+<p>Isocitrate is oxidized to a ketone, <strong>oxalosuccinate (草酰琥珀酸)</strong>, an unstable enzyme-bound intermediate that <strong>spontaneously β-decarboxylates</strong> to give the product, <strong>α-ketoglutarate</strong>. </p>
+<p>The strategy here is to oxidize isocitrate’s secondary alcohol to α keto group β to the carboxyl group to be removed. </p>
+<p>The β-keto group acts as an electron sink to stabilize the <strong>carbanionic (碳负离子)</strong> transition state, facilitating decarboxylation.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226201947387.png" srcset="/img/loading.gif" lazyload alt="image-20200226201947387" style="zoom:80%;" />
+
+<p><u>Two carbon</u> atoms enter the citric acid cycle as acetyl-CoA, and two are lost as CO2 in the oxidative decarboxylations of <u>steps 3 and 4</u>.</p>
+<h2 id="Step-4-Generation-of-a-Second-CO2-by-an-Oxidative-Decarboxylation"><a href="#Step-4-Generation-of-a-Second-CO2-by-an-Oxidative-Decarboxylation" class="headerlink" title="Step 4:	Generation of a Second CO2 by an Oxidative Decarboxylation"></a>Step 4:	Generation of a Second CO2 by an Oxidative Decarboxylation</h2><p>This is a multistep reaction entirely analogous to the <u>pyruvate dehydrogenase reaction</u>. </p>
+<p>An α-keto acid substrate undergoes oxidative decarboxylation, with concomitant formation of an acyl-CoA thioester.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202119677.png" srcset="/img/loading.gif" lazyload alt="image-20200226202119677"></p>
+<p><u>3 enzymes, 5 reactions, 5 coenzymes</u></p>
+<h3 id="1-Decarboxylation-of-α-ketoglutarate"><a href="#1-Decarboxylation-of-α-ketoglutarate" class="headerlink" title="1. Decarboxylation of α-ketoglutarate"></a>1. Decarboxylation of α-ketoglutarate</h3><p>The first step catalyzed out by the a-ketoglutarate dehydrogenase complex is a decarboxylation catalyzed by a-ketoglutarate decarboxylase (E<del>1</del> of the complex), producing a four-carbon TPP derivative.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202221307.png" srcset="/img/loading.gif" lazyload alt="image-20200226202221307" style="zoom:60%;" />
+
+<h2 id="Step-5-A-Substrate-Level-Phosphorylation"><a href="#Step-5-A-Substrate-Level-Phosphorylation" class="headerlink" title="Step 5: A Substrate-Level Phosphorylation"></a>Step 5: A Substrate-Level Phosphorylation</h2><p><u>Succinyl-CoA is an energy-rich thioester compound</u>, and its potential energy is used to drive the formation of a nucleoside triphosphate </p>
+<p>This reaction, catalyzed by <strong>succinyl-CoA synthetase (琥珀酰辅酶A合成酶)</strong>, is comparable to the <u>two</u> substrate-level phosphorylation reactions that we encountered in <u>glycolysis</u>, except that in animal cells the energy-rich nucleotide product is not always ATP but, in some tissues, <u>GTP</u>.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202315076.png" srcset="/img/loading.gif" lazyload alt="image-20200226202315076"></p>
+<h3 id="1-Covalent-catalysis-by-the-succinyl-CoA-synthetase-reaction"><a href="#1-Covalent-catalysis-by-the-succinyl-CoA-synthetase-reaction" class="headerlink" title="1. Covalent catalysis by the succinyl-CoA synthetase reaction"></a>1. Covalent catalysis by the succinyl-CoA synthetase reaction</h3><p>Three successive nucleophilic substitution reactions conserve the energy of the thioester of succinyl-CoA in the <strong>phosphoanhydride bond (磷酸酐键)</strong> of ATP (or GTP).</p>
+<p>An active site histidine side chain is transiently phosphorylated (N-phosphohistidine) during the reaction.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202352814.png" srcset="/img/loading.gif" lazyload alt="image-20200226202352814" style="zoom:20%;" />
+
+<p>A <strong>charge–dipole interaction (电荷偶极相互作用)</strong> stabilizes the phosphohistidine intermediate in the succinyl-CoA synthetase reaction. </p>
+<p>In this schematic, based on the E. coli enzyme structure, the permanent dipoles of two -helices (the “power” helices) are oriented such that the d+ at their N-termini interact with the negative charges on the phosphate group of the active site N-phosphohistidine, stabilizing this transient reaction intermediate.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202441241.png" srcset="/img/loading.gif" lazyload alt="image-20200226202441241" style="zoom:50%;" />
+
+<h2 id="Step-6-A-Flavin（黄素）-Dependent-Dehydrogenation"><a href="#Step-6-A-Flavin（黄素）-Dependent-Dehydrogenation" class="headerlink" title="Step 6: A Flavin（黄素）-Dependent Dehydrogenation"></a>Step 6: A Flavin（黄素）-Dependent Dehydrogenation</h2><p>Completion of the cycle involves conversion of the four-carbon succinate to the four-carbon oxaloacetate. </p>
+<p>The first of the three reactions, catalyzed by <strong>succinate dehydrogenase (琥珀酸脱氢酶)</strong>, is the <strong>FAD</strong>-dependent dehydrogenation of two saturated carbons to a double bond.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202520718.png" srcset="/img/loading.gif" lazyload alt="image-20200226202520718" style="zoom:67%;" />
+
+<p>Complex II:  <u>Embedded in the membrane, tightly bound to the mitochondrial membrane</u></p>
+<p><strong>Succinate dehydrogenase</strong> is competitively inhibited by <strong>malonate (丙二酸)</strong>, a <u>structural analog</u> of succinate. Malonate inhibition of pyruvate oxidation was one of the clues that led Krebs to propose the cyclic nature of this pathway.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202554757.png" srcset="/img/loading.gif" lazyload alt="image-20200226202554757" style="zoom:67%;" />
+
+<p>A single C-C bond is more difficult to oxidize than a C-O bond.</p>
+<p>Therefore, the redox coenzyme for succinate dehydrogenase is not NAD+ but the more powerful oxidant FAD. </p>
+<p>The flavin is bound covalently to the enzyme protein through a specific histidine residue.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202628169.png" srcset="/img/loading.gif" lazyload alt="image-20200226202628169" style="zoom: 33%;" />
+
+<h2 id="Step-7-Hydration-of-a-Carbon–Carbon-Double-Bond"><a href="#Step-7-Hydration-of-a-Carbon–Carbon-Double-Bond" class="headerlink" title="Step 7: Hydration of a Carbon–Carbon Double Bond"></a>Step 7: Hydration of a Carbon–Carbon Double Bond</h2><p>The <u>stereospecific（立体特异性） trans</u> hydration of the carbon–carbon double bond is catalyzed by <strong>fumarate hydratase</strong>, more commonly called <strong>fumarase (延胡索酸酶)</strong>.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202659262.png" srcset="/img/loading.gif" lazyload alt="image-20200226202659262" style="zoom:59%;" />
+
+<h2 id="Step-8-A-Dehydrogenation-that-Regenerates"><a href="#Step-8-A-Dehydrogenation-that-Regenerates" class="headerlink" title="Step 8:	A Dehydrogenation that Regenerates"></a>Step 8:	A Dehydrogenation that Regenerates</h2><pre><code class="hljs">Oxaloacetate
+</code></pre>
+<p>Finally, the cycle is completed with the **NAD+**–dependent dehydrogenation of malate to oxaloacetate, catalyzed by <strong>malate dehydrogenase (苹果酸脱氢酶)</strong>.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202739090.png" srcset="/img/loading.gif" lazyload alt="image-20200226202739090" style="zoom:67%;" />
+
+<h1 id="六、Stoichiometry-and-Energetics-of-the-Citric-Acid-Cycle"><a href="#六、Stoichiometry-and-Energetics-of-the-Citric-Acid-Cycle" class="headerlink" title="六、Stoichiometry and Energetics of the Citric Acid Cycle"></a>六、Stoichiometry and Energetics of the Citric Acid Cycle</h1><center>化学计量学和能量学</center>
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202837925.png" srcset="/img/loading.gif" lazyload alt="image-20200226202837925"></p>
+<p>One turn of the citric acid cycle generates <u>one high-energy phosphate (ATP or GTP)</u> through substrate-level phosphorylation, plus <u>three NADH and one FADH2</u> for subsequent reoxidation in the electron transport chain.</p>
+<ul>
+<li>1个NADH中的H，最后可以产生2.5ATP；一个FADH<del>2</del>，只能产生1.5ATP</li>
+</ul>
+<h1 id="七、Regulation-of-Pyruvate-Dehydrogenase-and-the-Citric-Acid-Cycle"><a href="#七、Regulation-of-Pyruvate-Dehydrogenase-and-the-Citric-Acid-Cycle" class="headerlink" title="七、Regulation of Pyruvate Dehydrogenase and the Citric Acid Cycle"></a>七、Regulation of Pyruvate Dehydrogenase and the Citric Acid Cycle</h1><h2 id="Regulation"><a href="#Regulation" class="headerlink" title="Regulation"></a>Regulation</h2><p>Major regulatory factors controlling pyruvate dehydrogenase and the citric acid cycle: </p>
+<p>Red brackets indicate concentration dependence. </p>
+<p>NADH can inhibit through allosteric interactions, but apparent NADH inhibition can also be a reflection of reduced NAD+ availability.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202911605.png" srcset="/img/loading.gif" lazyload alt="image-20200226202911605" style="zoom:23%;" />
+
+<ul>
+<li>NADH浓度是重要的调节因子，通过allosteric regulation实现</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226202926110.png" srcset="/img/loading.gif" lazyload alt="image-20200226202926110" style="zoom:67%;" />
+
+<h2 id="Pyruvate-Dehydrogenase"><a href="#Pyruvate-Dehydrogenase" class="headerlink" title="Pyruvate Dehydrogenase"></a>Pyruvate Dehydrogenase</h2><p>Regulation of the <u>mammalian</u> pyruvate dehydrogenase complex <u>by <strong>feedback inhibition（反馈抑制(allosteric)）</strong> and by <strong>covalent modification（共价修饰）</strong> of E<del>1</del>.</u> </p>
+<p><u>A kinase and a phosphatase inactivate and activate the first component (E1)</u> of the pyruvate dehydrogenase complex by phosphorylating and dephosphorylating, <u>respectively</u>, three specific serine residues.</p>
+<p>The active form of the pyruvate dehydrogenase complex is <u>feedback inhibited by acetyl-CoA and NADH.</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226203012234.png" srcset="/img/loading.gif" lazyload alt="image-20200226203012234" style="zoom:80%;" />
+
+<p>The citric acid cycle is controlled primarily by the relative intramitochondrial concentrations of NAD+ and NADH.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226203031466.png" srcset="/img/loading.gif" lazyload alt="image-20200226203031466" style="zoom: 50%;" />
+
+<p>Evolution of CAC:</p>
+<p>Metabolic pathways are the products of evolution</p>
+<p>Anaerobic chemotrophs (2.5 billions years ago) </p>
+<h1 id="八、Anaplerotic-Sequences-The-Need-to-Replace-Cycle-Intermediates"><a href="#八、Anaplerotic-Sequences-The-Need-to-Replace-Cycle-Intermediates" class="headerlink" title="八、Anaplerotic Sequences: The Need to Replace Cycle Intermediates"></a>八、Anaplerotic Sequences: The Need to Replace Cycle Intermediates</h1><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226203236154.png" srcset="/img/loading.gif" lazyload alt="image-20200226203236154"></p>
+<p>Citric acid cycle intermediates used in biosynthetic pathways <u>must be replenished</u> (补充) to maintain flux through the cycle.</p>
+<ul>
+<li>因此相关底物的浓度不仅与cycle反应的活性有关，同时与代谢网络内的其他反应有关</li>
+</ul>
+<p>Anaplerotic pathways serve this purpose.</p>
+<h3 id="1-Pyruvate-Carboxylase"><a href="#1-Pyruvate-Carboxylase" class="headerlink" title="1. Pyruvate Carboxylase"></a>1. Pyruvate Carboxylase</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226203303415.png" srcset="/img/loading.gif" lazyload alt="image-20200226203303415" style="zoom:50%;" />
+
+<ul>
+<li>这个反应需要cofactor – biotin</li>
+</ul>
+<h3 id="2-phosphoenolpyruvate-PEP"><a href="#2-phosphoenolpyruvate-PEP" class="headerlink" title="2. phosphoenolpyruvate (PEP)"></a>2. phosphoenolpyruvate (PEP)</h3><p>Because <u>phosphoenolpyruvate</u> is such an energy-rich compound, this reaction, catalyzed by <strong>phosphoenolpyruvate carboxylase</strong>, requires <u>neither an energy cofactor nor biotin</u>. This reaction is important in the <u>C4 pathway of photosynthetic CO2 fixation</u></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226203318048.png" srcset="/img/loading.gif" lazyload alt="image-20200226203318048"></p>
+<h3 id="3-malate-dehydrogenase"><a href="#3-malate-dehydrogenase" class="headerlink" title="3. malate dehydrogenase"></a>3. malate dehydrogenase</h3><p>In addition to <u>pyruvate carboxylase and phosphoenolpyruvate carboxylase</u>, a third anaplerotic process is provided by an enzyme commonly known as <strong>malic enzyme</strong> but more officially as <strong>malate dehydrogenase (苹果酸酶)</strong> (decarboxylating: NADP+).</p>
+<p>The malic enzyme catalyzes the <u>reductive carboxylation</u> of pyruvate to give malate.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226203519117.png" srcset="/img/loading.gif" lazyload alt="image-20200226203519117"></p>
+<h2 id="Mechanism-of-the-biotin-dependent-pyruvate-carboxylase-reaction"><a href="#Mechanism-of-the-biotin-dependent-pyruvate-carboxylase-reaction" class="headerlink" title="Mechanism of the biotin-dependent pyruvate carboxylase reaction"></a>Mechanism of the biotin-dependent pyruvate carboxylase reaction</h2><p>Phase I is catalyzed by the biotin carboxylation (BC) domain.<br>Phase II is catalyzed by the carboxyltransferase (CT) domain. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226203549623.png" srcset="/img/loading.gif" lazyload alt="image-20200226203549623"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226203612731.png" srcset="/img/loading.gif" lazyload alt="image-20200226203612731"></p>
+<h1 id="九、Glyoxylate-Cycle-An-Anabolic-Variant-of-the-Citric-Acid-Cycle"><a href="#九、Glyoxylate-Cycle-An-Anabolic-Variant-of-the-Citric-Acid-Cycle" class="headerlink" title="九、Glyoxylate Cycle: An Anabolic Variant of the Citric Acid Cycle"></a>九、Glyoxylate Cycle: An Anabolic Variant of the Citric Acid Cycle</h1><p>The <strong>glyoxylate cycle (乙醛酸循环)</strong> allows plants and bacteria to carry out net conversion of <u>fat</u> to carbohydrate, bypassing CO2-generating reactions of the citric acid cycle.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226203703424.png" srcset="/img/loading.gif" lazyload alt="image-20200226203703424" style="zoom: 33%;" />
+
+<h2 id="Reactions-of-the-glyoxylate-cycle"><a href="#Reactions-of-the-glyoxylate-cycle" class="headerlink" title="Reactions of the glyoxylate cycle"></a>Reactions of the glyoxylate cycle</h2><p><u>Two acetyl-CoA</u> molecules enter the cycle, one at the <strong>citrate synthase</strong> step, and the second at the <strong>malate synthase</strong> step. </p>
+<p>The reactions catalyzed by <strong>isocitrate lyase and malate synthase (异柠檬酸裂合酶和苹果酸合成酶)</strong> <u>bypass the three citric acid cycle steps between isocitrate and succinate</u> so that the two carbons lost in the citric acid cycle are saved, resulting in the <u>net synthesis of oxaloacetate.</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226203935283.png" srcset="/img/loading.gif" lazyload alt="image-20200226203935283" style="zoom: 25%;" />
+
+<h2 id="Intracellular-relationships-involving-the-glyoxylate-cycle-in-plant-cells"><a href="#Intracellular-relationships-involving-the-glyoxylate-cycle-in-plant-cells" class="headerlink" title="Intracellular relationships involving the glyoxylate cycle in plant cells"></a>Intracellular relationships involving the glyoxylate cycle <u>in plant cells</u></h2><p><strong>Fatty acids</strong> released in lipid bodies are oxidized in <u>glyoxysomes</u> to <u>acetyl-CoA</u>, which can also come directly from <u>acetate</u>. </p>
+<p>Acetyl-CoA is then converted to succinate in the glyoxylate cycle, and the <u>succinate</u> is transported to <u>mitochondria</u>. </p>
+<p>There it is converted in the citric acid cycle to <u>oxaloacetate</u>, which is readily converted to <u>sugars</u> by <u>gluconeogenesis</u>.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200226204027744.png" srcset="/img/loading.gif" lazyload alt="image-20200226204027744"></p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><h3 id="1-Glyoxylate-Cycle-Summary"><a href="#1-Glyoxylate-Cycle-Summary" class="headerlink" title="1. Glyoxylate Cycle Summary"></a>1. Glyoxylate Cycle Summary</h3><ol>
+<li>Input 4 carbons (2 Acetyl-CoA)</li>
+<li>Releases 0 CO2 molecules</li>
+<li>Produces one extra oxaloacetate(OA)</li>
+<li>Two oxidations</li>
+<li>1 NADH, 0 FADH2, 1 (extra) OA per turn of cycle</li>
+<li>Net synthesis of glucose from Acetyl-CoA</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200412183046448.png" srcset="/img/loading.gif" lazyload alt="image-20200412183046448"></p>
+<h3 id="2-Citric-Acid-Cycle-Summary"><a href="#2-Citric-Acid-Cycle-Summary" class="headerlink" title="2. Citric Acid Cycle Summary"></a>2. Citric Acid Cycle Summary</h3><ol>
+<li>Input 2 carbons (1 Acetyl-CoA)</li>
+<li>Releases 2 CO2 molecules</li>
+<li>Four oxidations</li>
+<li>3 NADH, 1 FADH2, 1 GTP per turn of cycle</li>
+<li>No net synthesis of glucose from Acetyl-CoA</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/" class="category-chain-item">Biochemistry II (Metabolism)</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Biochemistry-II-Metabolism/" class="print-no-link">#Biochemistry II (Metabolism)</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L03 Citric Acid Cycle and Glyoxylate Cycle</div>
+      <div>https://zhenyumi.github.io/posts/21ac4f1d/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月17日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/e0468ad9/" title="L02 Carbohydrate Metabolism Glycolysis, Gluconeogenesis, Glycogen Metabolism, and the Pentose Phosphate Pathway">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L02 Carbohydrate Metabolism Glycolysis, Gluconeogenesis, Glycogen Metabolism, and the Pentose Phosphate Pathway</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/ad350e1e/" title="L04 Electron Transport, Oxidative Phosphorylation, and Oxygen Metabolism">
+                        <span class="hidden-mobile">L04 Electron Transport, Oxidative Phosphorylation, and Oxygen Metabolism</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

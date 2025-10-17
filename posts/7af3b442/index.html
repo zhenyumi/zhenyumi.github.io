@@ -1,0 +1,763 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L07 Linkage, Crossing Over, and Chromosome Mapping">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/7af3b442/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+  
+  
+  
+  <title>L07 Linkage, Crossing Over, and Chromosome Mapping - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L07 Linkage, Crossing Over, and Chromosome Mapping</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          137 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          2 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L07 Linkage, Crossing Over, and Chromosome Mapping</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Linkage"><a href="#Linkage" class="headerlink" title="Linkage"></a>Linkage</h1><p><strong>Genetic Linkage</strong> is the phenomenon that genes close together on a chromosome tend to be transmitted as a unit, which influences inheritance patterns</p>
+<p>Chromosomes are called <strong>linkage groups</strong>. They contain a group of genes that are linked together</p>
+<p><u>The number of linkage groups is the number of types of chromosomes of the species</u></p>
+<p>对人来说，女性有23个linkage group（22+X），男性有24个linkage group（22+XY）</p>
+<ul>
+<li>22 autosomal linkage groups </li>
+<li>An X chromosome linkage group </li>
+<li>A Y chromosome linkage group</li>
+</ul>
+<p>For linkage group, crossing-over should be in consideration</p>
+<h1 id="Crossing-Over"><a href="#Crossing-Over" class="headerlink" title="Crossing Over"></a>Crossing Over</h1><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191031163325232.png" srcset="/img/loading.gif" lazyload alt="image-20191031163325232" style="zoom:50%;" />
+
+<p>The term <strong>linked or linkage</strong> means that two or more genes do not independently assort and tend to be <u>transmitted together</u></p>
+<p>Genes that are <u>far apart</u> on the same chromosome may independently assort from each other <u>because of the crossing-over</u></p>
+<ul>
+<li>A <strong>dihybrid cross</strong> studies linkage between two genes</li>
+<li>A <strong>trihybrid cross</strong> studies linkage between three genes</li>
+</ul>
+<h2 id="Multiple-Crossovers"><a href="#Multiple-Crossovers" class="headerlink" title="Multiple Crossovers"></a>Multiple Crossovers</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191031163927902.png" srcset="/img/loading.gif" lazyload alt="image-20191031163927902" style="zoom: 67%;" />
+
+<h2 id="Meiosis-Prophase-I-Diplonema-双线期"><a href="#Meiosis-Prophase-I-Diplonema-双线期" class="headerlink" title="Meiosis Prophase I: Diplonema 双线期"></a>Meiosis Prophase I: Diplonema 双线期</h2><p>The synaptonemal complex degrades and paired chromosomes separate slightly but are in contact as <strong>chiasmata（染色体交叉）</strong></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191117161357766.png" srcset="/img/loading.gif" lazyload alt="image-20191117161357766" style="zoom: 67%;" />
+
+<h2 id="Direct-Evidence-That-Crossing-Over-Results-In-Recombination"><a href="#Direct-Evidence-That-Crossing-Over-Results-In-Recombination" class="headerlink" title="Direct Evidence That Crossing Over Results In Recombination"></a>Direct Evidence That Crossing Over Results In Recombination</h2><p>Harriet Creighton and Barbara McClintock worked with corn </p>
+<p>In previous cytological examinations of corn, they found a chromosome number 9 that had two abnormalities (异常情况)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191117161542328.png" srcset="/img/loading.gif" lazyload alt="image-20191117161542328" style="zoom: 67%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191117161732900.png" srcset="/img/loading.gif" lazyload alt="image-20191117161732900"  />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191117162118378.png" srcset="/img/loading.gif" lazyload alt="image-20191117162118378"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191117162145591.png" srcset="/img/loading.gif" lazyload alt="image-20191117162145591"></p>
+<h1 id="Chromosome-Mapping"><a href="#Chromosome-Mapping" class="headerlink" title="Chromosome Mapping"></a>Chromosome Mapping</h1><p>Genetic mapping is also known as <strong>gene mapping</strong> or <strong>chromosome mapping</strong></p>
+<p>Its purpose is to <u>determine the linear order of linked genes along the same chromosome</u></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191117162320663.png" srcset="/img/loading.gif" lazyload alt="image-20191117162320663"></p>
+<p>Genetic maps are useful in many ways including </p>
+<ul>
+<li><p>Aiding in diagnosis of human disease </p>
+</li>
+<li><p>Aiding in cloning of disease genes </p>
+</li>
+<li><p>Predict likelihood of offspring having traits</p>
+</li>
+</ul>
+<p>Genetic maps can be made by </p>
+<ul>
+<li><strong>Recombination analysis</strong> <strong>→</strong> <strong>Genetic map</strong> </li>
+<li>Molecular approaches including sequencing</li>
+</ul>
+<h2 id="recombination-analysis"><a href="#recombination-analysis" class="headerlink" title="recombination analysis"></a>recombination analysis</h2><p>Genetic map created by recombination analysis <u>estimates the relative distances between linked genes.</u></p>
+<p>The percentage of recombinant offspring is correlated with the distance between the two genes:</p>
+<ol>
+<li>If the genes are far apart, would be many recombinant offspring.</li>
+<li>If the genes are close, would be very few recombinant offspring</li>
+</ol>
+<p>Measure the <strong>recombination frequency</strong> by testcross(测交):</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191031165626719.png" srcset="/img/loading.gif" lazyload alt="image-20191031165626719" style="zoom:50%;" />
+
+<p>Recombination frequency represent the intensity of linkage between genes</p>
+<p>• Recombination frequency <u>never exceeds 50% (for 2 genes)</u><br>$$<br>\ \ \ \ \ \ Heterozygote\  for\  two\  or\  more\  genes\<br>\X\<br>\ Homozygote\  recessive\  for\  the\  same\  genes<br>$$<br><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191117162550635.png" srcset="/img/loading.gif" lazyload alt="image-20191117162550635" style="zoom: 50%;" /></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191031170049172.png" srcset="/img/loading.gif" lazyload alt="image-20191031170049172" style="zoom: 50%;" />
+
+<h2 id="Construction-of-Genetic-Map"><a href="#Construction-of-Genetic-Map" class="headerlink" title="Construction of Genetic Map"></a>Construction of Genetic Map</h2><p>By calculating recombination frequencies between each pair of adjacent genes, we are able to construct a map of a large segment of the chromosome</p>
+<h3 id="Interference"><a href="#Interference" class="headerlink" title="Interference"></a>Interference</h3><p>This lower-than-expected value is due to a common genetic phenomenon, termed interference</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191031170729610.png" srcset="/img/loading.gif" lazyload alt="image-20191031170729610" style="zoom:50%;" />
+
+<p>The extent of the interference is measured by the coefficient of coincidence.</p>
+<p>The interference(I) is expressed as:<br>$$<br>I &#x3D; 1-C<br>$$<br>C is the coefficient of coincidence:<br>$$<br>C &#x3D; \frac{Observed\ number\ of\ double\ crossovers}{Expected\ nuber\ of\ double\ crossovers}<br>$$<br>The $I$ means $(I \cdot 100%)$ of the expected number of crossovers did not occur</p>
+<p>The <strong>genetic map distance</strong> may be <u>much greater</u> than the <strong>observed recombination frequency</strong></p>
+<p>Multiple crossovers occur between widely separated genes, but some of these crossover do not produce genetically recombinant chromosomes.</p>
+<h2 id="Recombination-Frequency-Vs-Genetic-Map-Distance"><a href="#Recombination-Frequency-Vs-Genetic-Map-Distance" class="headerlink" title="Recombination Frequency Vs. Genetic Map Distance"></a>Recombination Frequency Vs. Genetic Map Distance</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191031171709849.png" srcset="/img/loading.gif" lazyload alt="image-20191031171709849" style="zoom: 50%;" />
+
+<p>用重组频率来表示基因之间的相对距离具有一定的局限性</p>
+<p>Example: Recombination near the centromere (in heterochromatin)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110100529745.png" srcset="/img/loading.gif" lazyload alt="image-20191110100529745"  />
+
+<p>Very little recombination takes place in heterochromatin; a small distance in the genetic map corresponds to a large distance on the chromosome.</p>
+<ul>
+<li>Map distances based on recombination frequencies are <u>not a direct measurement</u> of physical distance along a chromosome</li>
+<li><u>Recombination “hot spots”</u> overestimate physical length</li>
+<li><u>Low rates in heterochromatin and centromeres</u> underestimate (估计不足) actual physical length</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetics/" class="category-chain-item">Genetics</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetics/" class="print-no-link">#Genetics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L07 Linkage, Crossing Over, and Chromosome Mapping</div>
+      <div>https://zhenyumi.github.io/posts/7af3b442/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/6daa63e0/" title="L06 peptide and protein structure">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L06 peptide and protein structure</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/b247f43c/" title="L07 Proteins Tertiary Structure">
+                        <span class="hidden-mobile">L07 Proteins Tertiary Structure</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

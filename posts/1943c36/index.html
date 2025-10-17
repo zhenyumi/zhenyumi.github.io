@@ -1,0 +1,904 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="一、Cell TheoryDiscovery of Cells1. 1665 - Robert HooksIn 1665, Robert Hooke saw a network of tiny box-like compartments that he described “… much like a Honey-comb, but that the pores of it were not re">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L1 Introduction to Cell Biology">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/1943c36/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="一、Cell TheoryDiscovery of Cells1. 1665 - Robert HooksIn 1665, Robert Hooke saw a network of tiny box-like compartments that he described “… much like a Honey-comb, but that the pores of it were not re">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_01.jpg">
+<meta property="article:published_time" content="2020-07-02T11:21:00.000Z">
+<meta property="article:modified_time" content="2020-07-02T11:21:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Cell Biology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_01.jpg">
+  
+  
+  
+  <title>L1 Introduction to Cell Biology - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L1 Introduction to Cell Biology</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-02 19:21" pubdate>
+          2020年7月2日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          256 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          3 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L1 Introduction to Cell Biology</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Cell-Theory"><a href="#一、Cell-Theory" class="headerlink" title="一、Cell Theory"></a>一、Cell Theory</h1><h2 id="Discovery-of-Cells"><a href="#Discovery-of-Cells" class="headerlink" title="Discovery of Cells"></a>Discovery of Cells</h2><h3 id="1-1665-Robert-Hooks"><a href="#1-1665-Robert-Hooks" class="headerlink" title="1. 1665 - Robert Hooks"></a>1. 1665 - Robert Hooks</h3><p>In 1665, Robert Hooke saw a network of tiny box-like compartments that he described “… much like a Honey-comb, but that the pores of it were not regular. . . . these pores, or cells, . . . were indeed the first microscopical pores I ever saw, and perhaps, that were ever seen, for I had not met with any Writer or Person, that had made any mention of them before this. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217132837302.png" srcset="/img/loading.gif" lazyload alt="image-20200217132837302"></p>
+<p>He called these little compartments “cellulae”, a Latin term meaning little room. </p>
+<p>Our present-day term therefore is: “cell”.</p>
+<p>In fact, these were cell walls, left by dead cork cells…</p>
+<h3 id="2-1670s-Antoni-van-Leeuwenhoek"><a href="#2-1670s-Antoni-van-Leeuwenhoek" class="headerlink" title="2. ~1670s - Antoni van Leeuwenhoek"></a>2. ~1670s - Antoni van Leeuwenhoek</h3><p>Improvement of technology: the quality of lenses</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217132932982.png" srcset="/img/loading.gif" lazyload alt="image-20200217132932982"></p>
+<p>Leeuwenhoek was the first to observe &amp; describe single-celled organisms (“animalcules”).</p>
+<p>First to record observations of muscle fibers, bacteria, spermatozoa and blood flow. </p>
+<p>Actually, he was the first to observe live cells</p>
+<h3 id="3-1838-1839-Schleiden-Schwann"><a href="#3-1838-1839-Schleiden-Schwann" class="headerlink" title="3. 1838-1839 - Schleiden &amp; Schwann"></a>3. 1838-1839 - Schleiden &amp; Schwann</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">Matthias <span class="hljs-keyword">Schleiden </span>&amp; Theodor <span class="hljs-keyword">Schwann </span>proposed the <span class="hljs-keyword">original </span>Cell Theory<br></code></pre></td></tr></table></figure>
+
+
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217133028894.png" srcset="/img/loading.gif" lazyload alt="image-20200217133028894" style="zoom: 80%;" />
+
+<p>Schleiden &amp; Schwann systematically studied tissues of plants and animals under the microscope and showed:</p>
+<ul>
+<li><p>Cells are the building blocks of all living things.</p>
+</li>
+<li><p>All cells have similar structure: nucleus and membrane.</p>
+</li>
+</ul>
+<p>Schwann was also famous for the discovery of nerve sheath cells : “Schwann” cells.</p>
+<h3 id="4-1858-Rudolf-Virchow"><a href="#4-1858-Rudolf-Virchow" class="headerlink" title="4. 1858 - Rudolf Virchow"></a>4. 1858 - Rudolf Virchow</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs clean">Cells <span class="hljs-keyword">derive</span> <span class="hljs-keyword">from</span> pre-existing cells<br></code></pre></td></tr></table></figure>
+
+<p>Question:</p>
+<p>What is the origin of new cells?</p>
+<p>Are new cells from pre-existing cells or is there biogenesis by vitalism?</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217133238340.png" srcset="/img/loading.gif" lazyload alt="image-20200217133238340"></p>
+<p>Rudolf Virchow proposed cells are from pre-existing cells:</p>
+<ul>
+<li><p><em>Omnis cellula e cellula</em>(“all cells (come) from cells”), </p>
+</li>
+<li><p>but there was no experimental proof, until the discovery of Louis Pasteur</p>
+</li>
+</ul>
+<h3 id="5-1860-Louis-Pasteur"><a href="#5-1860-Louis-Pasteur" class="headerlink" title="5. 1860 - Louis Pasteur"></a>5. 1860 - Louis Pasteur</h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">Louis Pasteur defied “vitalism”, <span class="hljs-keyword">the</span> spontaneous generation <span class="hljs-keyword">of</span> life<br></code></pre></td></tr></table></figure>
+
+<p>Louis Pasteur disproved the concept of “vitalism”, the spontaneous generation of life, via his famous swan-neck bottle experiment</p>
+<p>Experimentally proved that new cells from pre-existing cells</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217133447438.png" srcset="/img/loading.gif" lazyload alt="image-20200217133447438"></p>
+<h4 id="swan-neck-flask-experiment"><a href="#swan-neck-flask-experiment" class="headerlink" title="swan neck flask experiment"></a>swan neck flask experiment</h4><p>Louis Pasteur’s key experiment: swan neck flask experiment</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217133507485.png" srcset="/img/loading.gif" lazyload alt="image-20200217133507485"></p>
+<h3 id="6-1880-Eduard-Strasburger"><a href="#6-1880-Eduard-Strasburger" class="headerlink" title="6. 1880 - Eduard Strasburger"></a>6. 1880 - Eduard Strasburger</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">First observation of cell <span class="hljs-keyword">division </span>– <span class="hljs-keyword">additional </span>proof<br></code></pre></td></tr></table></figure>
+
+<p>Eduard Strasburger: cell division in hair cell from a Tradescantia flower (紫鸭跖草花)</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217133712814.png" srcset="/img/loading.gif" lazyload alt="image-20200217133712814"></p>
+<h2 id="The-three-tenets"><a href="#The-three-tenets" class="headerlink" title="The three tenets"></a>The three tenets</h2><ol>
+<li><p>All living organisms are composed of one or more cells.</p>
+</li>
+<li><p>The cell is basic unit of structure and function for all organisms.</p>
+</li>
+<li><p>All cells arise only from pre-existing cells by division.</p>
+</li>
+</ol>
+<h1 id="二、Levels-of-Organization"><a href="#二、Levels-of-Organization" class="headerlink" title="二、Levels of Organization"></a>二、Levels of Organization</h1><p>Cells are “atoms of life”, the least level where organisms are still alive. </p>
+<p>We are made entirely of cells and material produced by cells</p>
+<p>The levels of organization:</p>
+<p>Molecules </p>
+<ol>
+<li>Organelles </li>
+<li>Cells </li>
+<li>Tissues </li>
+<li>Organs </li>
+<li>Organisms </li>
+<li>Populations</li>
+<li>Ecosystems or taxonomic groups</li>
+</ol>
+<h1 id="三、Diversity-And-Unity-of-Cell"><a href="#三、Diversity-And-Unity-of-Cell" class="headerlink" title="三、Diversity And Unity of Cell"></a>三、Diversity And Unity of Cell</h1><h2 id="Diversity-of-cells"><a href="#Diversity-of-cells" class="headerlink" title="Diversity of cells"></a>Diversity of cells</h2><h3 id="1-Size"><a href="#1-Size" class="headerlink" title="1. Size"></a>1. Size</h3><p>Prokaryotes: Bacteria and Archaea</p>
+<p>Eukaryotes: Animals, Plants, Fungi, Protists (do not have tissues)</p>
+<p>For cells, the <u>size</u> matters: The relationship between the radius, surface area, and volume of a cell</p>
+<p>​	<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217134322850.png" srcset="/img/loading.gif" lazyload alt="image-20200217134322850"></p>
+<p>Eukaryotic and prokaryotic cells</p>
+<ul>
+<li>The size of cells varies greatly.</li>
+<li>Most cells are small:<ul>
+<li>Prokaryotic: 1-10 <strong>µ</strong>m </li>
+<li>Eukaryotic: 10-100 <strong>µ</strong>m</li>
+</ul>
+</li>
+</ul>
+<p><font color="FF0000">How do eukaryotic cells handle the large size?</font></p>
+<h3 id="2-Prokaryotes-Are-The-Most-Diverse"><a href="#2-Prokaryotes-Are-The-Most-Diverse" class="headerlink" title="2. Prokaryotes Are The Most Diverse"></a>2. Prokaryotes Are The Most Diverse</h3><p>Prokaryotes are the most diverse and numerous cells on earth:</p>
+<ul>
+<li>Bacteria come in different shape and size. </li>
+<li>Some bacteria are photosynthetic</li>
+<li>Some bacteria get the energy from H2S.</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217134550057.png" srcset="/img/loading.gif" lazyload alt="image-20200217134550057"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217134556322.png" srcset="/img/loading.gif" lazyload alt="image-20200217134556322"></p>
+<h3 id="3-Cell-Architecture"><a href="#3-Cell-Architecture" class="headerlink" title="3. Cell Architecture"></a>3. Cell Architecture</h3><p>Eukaryotes have nucleus and organelles</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217134816353.png" srcset="/img/loading.gif" lazyload alt="image-20200217134816353"></p>
+<p><font color="FF0000">How do eukaryotic cells evolve?</font></p>
+<h3 id="4-Time-And-Evolution"><a href="#4-Time-And-Evolution" class="headerlink" title="4. Time And Evolution"></a>4. Time And Evolution</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217134929044.png" srcset="/img/loading.gif" lazyload alt="image-20200217134929044"></p>
+<h4 id="Evolution-of-eukaryotic-cells"><a href="#Evolution-of-eukaryotic-cells" class="headerlink" title="Evolution of eukaryotic cells"></a>Evolution of eukaryotic cells</h4><p>It is still a mystery how the primordial eukaryotic cell evolved!</p>
+<ul>
+<li>Eukaryotic cells may have originated as predators.</li>
+</ul>
+<p>Organelle genesis：</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217135026858.png" srcset="/img/loading.gif" lazyload alt="image-20200217135026858"></p>
+<h5 id="1-Phagocytosis-in-eukaryotic-cells"><a href="#1-Phagocytosis-in-eukaryotic-cells" class="headerlink" title="(1) Phagocytosis in eukaryotic cells"></a>(1) Phagocytosis in eukaryotic cells</h5><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217135050042.png" srcset="/img/loading.gif" lazyload alt="image-20200217135050042"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217135057613.png" srcset="/img/loading.gif" lazyload alt="image-20200217135057613"></p>
+<h2 id="The-Unity-of-Cells"><a href="#The-Unity-of-Cells" class="headerlink" title="The Unity of Cells"></a>The Unity of Cells</h2><h3 id="1-The-essential-characteristics-of-cells"><a href="#1-The-essential-characteristics-of-cells" class="headerlink" title="1. The essential characteristics of cells"></a>1. The essential characteristics of cells</h3><p>What defines a cell?</p>
+<p>Basically, cells are chemical systems.</p>
+<p>Cells are composed of small molecules, from which large polymers are assembled to execute the cell function, but with remarkable constancy. </p>
+<p>Nothing in cells disobeys chemical and physical laws. </p>
+<p>However, cells are much more complicated than any other known chemical system. </p>
+<p><font color="FF0000">How is this achieved?</font></p>
+<h3 id="2-Genetic-Information-Determines"><a href="#2-Genetic-Information-Determines" class="headerlink" title="2. Genetic Information Determines"></a>2. Genetic Information Determines</h3><p>Genetic information determines the nature of whole multicellular organisms</p>
+<p>The fertilized egg cell contains all required information</p>
+<h4 id="Representative-genomes"><a href="#Representative-genomes" class="headerlink" title="Representative genomes"></a>Representative genomes</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217162217331.png" srcset="/img/loading.gif" lazyload alt="image-20200217162217331" style="zoom: 50%;" />
+
+<h4 id="How-is-the-genome-expanded"><a href="#How-is-the-genome-expanded" class="headerlink" title="How is the genome expanded?"></a>How is the genome expanded?</h4><p>Four ways of genetic innovation:</p>
+<ol>
+<li>Mutations</li>
+<li>Duplications</li>
+<li>DNA Shuffling</li>
+<li>Horizontal gene transfer (versus vertical transfer from parent to progeny)</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217162306552.png" srcset="/img/loading.gif" lazyload alt="image-20200217162306552" style="zoom:67%;" />
+
+<p>New genes are generated from pre-existing genes</p>
+<h4 id="Horizontal-gene-transfer-HGT"><a href="#Horizontal-gene-transfer-HGT" class="headerlink" title="Horizontal gene transfer (HGT)"></a>Horizontal gene transfer (HGT)</h4><h5 id="1-HGT-in-Prokaryotic-Cells"><a href="#1-HGT-in-Prokaryotic-Cells" class="headerlink" title="(1) HGT in Prokaryotic Cells"></a>(1) HGT in Prokaryotic Cells</h5><p>HGT occurs in prokaryotic cells within the same species or between species</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217162340164.png" srcset="/img/loading.gif" lazyload alt="image-20200217162340164" style="zoom: 67%;" />
+
+<p>Three ways of horizontal gene transfer:</p>
+<ol>
+<li>Transformation (transfer&#x2F;uptake of free DNA)</li>
+<li>Conjugation (Cell to cell transfer of plasmid DNA)</li>
+<li>Transduction (Transfer by viral delivery)</li>
+</ol>
+<h5 id="2-HGT-in-higher-organisms"><a href="#2-HGT-in-higher-organisms" class="headerlink" title="(2) HGT in higher organisms"></a>(2) HGT in higher organisms</h5><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217162447590.png" srcset="/img/loading.gif" lazyload alt="image-20200217162447590"></p>
+<p>Horizontal gene transfer in higher organisms:</p>
+<ul>
+<li><p>Fusion of sperm cell &amp; egg cell (sexual reproduction)</p>
+</li>
+<li><p>HGT also occurs in human via virus infection</p>
+</li>
+</ul>
+<h5 id="3-genes-evolve"><a href="#3-genes-evolve" class="headerlink" title="(3) genes evolve"></a>(3) genes evolve</h5><p>Some genes evolve rapidly, while others not</p>
+<p>Random mutation of DNA occurs during DNA replication : for the better or the worse</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217162741857.png" srcset="/img/loading.gif" lazyload alt="image-20200217162741857" style="zoom: 80%;" />
+
+<h3 id="3-The-astonishing-constancy-of-all-cells"><a href="#3-The-astonishing-constancy-of-all-cells" class="headerlink" title="3. The astonishing constancy of all cells"></a>3. The astonishing constancy of all cells</h3><p>The four points to remember</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217162957825.png" srcset="/img/loading.gif" lazyload alt="image-20200217162957825"></p>
+<p>What Functions are achieved? — Domains of cell biology</p>
+<h1 id="四、Cell-biology-contents"><a href="#四、Cell-biology-contents" class="headerlink" title="四、Cell biology contents"></a>四、Cell biology contents</h1><p>How the barrier is assembled? (Membrane assembly) </p>
+<p>How do cells uptake raw materials? (Transport across membrane) </p>
+<p>How are proteins delivered to the destination? (Intracellular transport) </p>
+<p>How do cells harness and convert energy? </p>
+<p>How do cells sense their environment? (Communication) </p>
+<p>How do cells know when to divide and die? (Cell growth and cell death) </p>
+<p>How cells are organized into tissues? (cell-cell, cell-environment connection) </p>
+<p>What are functional consequences if these processes are altered? (e.g. Cancer)</p>
+<h2 id="Why-study-cell-biology"><a href="#Why-study-cell-biology" class="headerlink" title="Why study cell biology?"></a>Why study cell biology?</h2><h3 id="1-Basic-Science"><a href="#1-Basic-Science" class="headerlink" title="1. Basic Science"></a>1. Basic Science</h3><p>Cell Biology comprises a variety of activities that discuss basic science:</p>
+<ol>
+<li>Cell shape&#x2F;morphology</li>
+<li>Cell motility</li>
+<li>Cell growth&#x2F;proliferation</li>
+<li>Cell division</li>
+<li>Cell death</li>
+<li>Cell differentiation</li>
+</ol>
+<h3 id="2-Basic-for-Disease"><a href="#2-Basic-for-Disease" class="headerlink" title="2. Basic for Disease"></a>2. Basic for Disease</h3><p>All disease states are caused at the cellular level</p>
+<ol>
+<li>Hypercholesterolemia (defective uptake of lipoproteins)</li>
+<li>Cystic fibrosis (misfolding of key protein)</li>
+<li>Diabetes</li>
+<li>Congenital heart defects (errors in cell migration during development)</li>
+<li>Food-borne illness (E. coli)</li>
+<li>Cancer (errors in cell division, growth, migration, etc.)</li>
+<li>Ageing</li>
+</ol>
+<h4 id="Cell-biology-helps-to-understand-cancer"><a href="#Cell-biology-helps-to-understand-cancer" class="headerlink" title="Cell biology helps to understand cancer"></a>Cell biology helps to understand cancer</h4><h5 id="1-Tumor-suppressor-TP53"><a href="#1-Tumor-suppressor-TP53" class="headerlink" title="(1) Tumor suppressor: TP53"></a>(1) Tumor suppressor: TP53</h5><p>How can one single protein protect cells from cancer progression? </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217164438481.png" srcset="/img/loading.gif" lazyload alt="image-20200217164438481" style="zoom:67%;" />
+
+<h5 id="2-immunotherapy"><a href="#2-immunotherapy" class="headerlink" title="(2)  immunotherapy"></a>(2)  immunotherapy</h5><p>CD19-specific CAR-T cell therapy</p>
+<p>A case of how these cells cure acute lymphocytic leukemia (ALL)</p>
+<p>03&#x2F;2013, <em>New England Journal of</em> <em>Medicine</em></p>
+<p>It was approved by FDA in August 2017</p>
+<h6 id="How-CAR-T-therapy-works"><a href="#How-CAR-T-therapy-works" class="headerlink" title="How CAR-T therapy works?"></a>How CAR-T therapy works?</h6><p>Chimeric Antigen Receptor (CAR): synthetic receptors </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217164624456.png" srcset="/img/loading.gif" lazyload alt="image-20200217164624456"></p>
+<p>Cell biology helps to develop TCR-T cells and CAR-T cells</p>
+<h5 id="3-Promise-and-Price-of-cellular-therapy"><a href="#3-Promise-and-Price-of-cellular-therapy" class="headerlink" title="(3) Promise and Price of cellular therapy"></a>(3) Promise and Price of cellular therapy</h5><p>Engineered immune cells</p>
+<p>Tissue-specific stem cells</p>
+<p>Organ growth in culture</p>
+<h4 id="Cell-biology-helps-to-understand-human-ageing"><a href="#Cell-biology-helps-to-understand-human-ageing" class="headerlink" title="Cell biology helps to understand human ageing"></a>Cell biology helps to understand human ageing</h4><p>If you live up to 80 years, you might experience degenerative diseases</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217164851685.png" srcset="/img/loading.gif" lazyload alt="image-20200217164851685" style="zoom:67%;" />
+
+<p>Cause of Alzheimer’s disease remains a mystery, no cure yet</p>
+<h3 id="3-Understand-of-Longevity"><a href="#3-Understand-of-Longevity" class="headerlink" title="3. Understand of Longevity"></a>3. Understand of Longevity</h3><p>Cell biology helps to understand longevity</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217164810088.png" srcset="/img/loading.gif" lazyload alt="image-20200217164810088" style="zoom:80%;" />
+
+<h3 id="4-make-informed-decisions-on-social-issues"><a href="#4-make-informed-decisions-on-social-issues" class="headerlink" title="4.  make informed decisions on social issues"></a>4.  make informed decisions on social issues</h3><p>Genetic engineering of foods</p>
+<p>Biotechnology</p>
+<p>Stem cell researches</p>
+<h3 id="5-The-key-to-success-in-the-course"><a href="#5-The-key-to-success-in-the-course" class="headerlink" title="5. The key to success in the course"></a>5. The key to success in the course</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217170927857.png" srcset="/img/loading.gif" lazyload alt="image-20200217170927857"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217171135267.png" srcset="/img/loading.gif" lazyload alt="image-20200217171135267"></p>
+<h1 id="五、Model-organisms"><a href="#五、Model-organisms" class="headerlink" title="五、Model organisms"></a>五、Model organisms</h1><h2 id="The-application-of-model-systems-to-study-cell-biology"><a href="#The-application-of-model-systems-to-study-cell-biology" class="headerlink" title="The application of model systems to study cell biology"></a>The application of model systems to study cell biology</h2><p>Use of yeast as a model system to study cell division</p>
+<p>Use of <em>Caenorhabditis elegans</em> as a model system to study behavior</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217163211493.png" srcset="/img/loading.gif" lazyload alt="image-20200217163211493" style="zoom:80%;" />
+
+<center>Yeast</center>
+## Model systems commonly used in cell biology 
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217163539500.png" srcset="/img/loading.gif" lazyload alt="image-20200217163539500"></p>
+<h3 id="1-Less-common-model-organisms"><a href="#1-Less-common-model-organisms" class="headerlink" title="1. Less common model organisms"></a>1. Less common model organisms</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217163557357.png" srcset="/img/loading.gif" lazyload alt="image-20200217163557357"></p>
+<h3 id="2-Humans-report-on-our-own"><a href="#2-Humans-report-on-our-own" class="headerlink" title="2. Humans report on our own"></a>2. Humans report on our own</h3><ol>
+<li>Medical examination</li>
+<li>Self-reporting</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200217163631173.png" srcset="/img/loading.gif" lazyload alt="image-20200217163631173"></p>
+<h2 id="Why-Model-Systems"><a href="#Why-Model-Systems" class="headerlink" title="Why Model Systems"></a>Why Model Systems</h2><p>When choose a model system consider the following:</p>
+<ol start="3">
+<li>Short life cycle</li>
+<li>Easy manipulation</li>
+<li>Costs of the system (the cheaper the better)</li>
+<li>Ethical considerations</li>
+<li>Mutations available</li>
+<li>Size of the genome (the smaller the better)</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Cell-Biology/" class="category-chain-item">Cell Biology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Cell-Biology/" class="print-no-link">#Cell Biology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L1 Introduction to Cell Biology</div>
+      <div>https://zhenyumi.github.io/posts/1943c36/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月2日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/9f2a2ede/" title="L2 Visualizing Cells">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L2 Visualizing Cells</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/33608b5a/" title="LaTeX基本操作 - 文档格式、基本输入与排版操作">
+                        <span class="hidden-mobile">LaTeX基本操作 - 文档格式、基本输入与排版操作</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

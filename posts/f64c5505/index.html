@@ -1,0 +1,748 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L02 Weak Interactions">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/f64c5505/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Biochemistry I (Macromolecules)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+  
+  
+  
+  <title>L02 Weak Interactions - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-10_21-07-00.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L02 Weak Interactions</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          538 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L02 Weak Interactions</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="The-Nature-of-Noncovalent-Bonds"><a href="#The-Nature-of-Noncovalent-Bonds" class="headerlink" title="The Nature of Noncovalent Bonds"></a>The Nature of Noncovalent Bonds</h1><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567994659486.png" srcset="/img/loading.gif" lazyload alt="1567994659486"></p>
+<h2 id="Charge–Charge-Interactions"><a href="#Charge–Charge-Interactions" class="headerlink" title="Charge–Charge Interactions"></a>Charge–Charge Interactions</h2><p>在真空中，两个电荷之间的作用力可以使用Coulomb’s law：<br>$$<br>F &#x3D; k \frac{q_1 q_2}{r^2}<br>$$<br>In the c.g.s. (centimeter–gram–second) system, with charges in electrostatic units, k is unity. </p>
+<p>we use the SI, or international, system of units. Here $$q_1$$ and $$q_2$$ are in coulombs (C), r is in meters (m), and  k &#x3D; 1&#x2F;(4$\pi \varepsilon_0$).<br> The quantity $\varepsilon_0$ is the permittivity of a vacuum and has the value 8.85 10^-12^ J^-1^C^2^m^-1^, where J is the energy unit joules. F is in newtons (N). </p>
+<p>但是细胞中并不是真空，所以需要加上一个<strong>dielectric constant</strong> ($\varepsilon$):<br>$$<br>F &#x3D; k \frac{q_1 q_2}{\varepsilon r^2}<br>$$<br><strong>Energy ofinteraction (E)：</strong><br>$$<br>E &#x3D; k \frac{q_1 q_2}{r}<br>$$</p>
+<h2 id="Permanent-and-Induced-Dipole-Interactions"><a href="#Permanent-and-Induced-Dipole-Interactions" class="headerlink" title="Permanent and Induced Dipole Interactions"></a>Permanent and Induced Dipole Interactions</h2><h2 id="Molecular-Repulsion-at-Extremely-Close-Approach-The-van-der-Waals-Radius"><a href="#Molecular-Repulsion-at-Extremely-Close-Approach-The-van-der-Waals-Radius" class="headerlink" title="Molecular Repulsion at Extremely Close Approach: The van der Waals Radius"></a>Molecular Repulsion at Extremely Close Approach: The van der Waals Radius</h2><p>The <strong>van der Waals radius</strong>, r<del>w</del>, of an atom is the radius of an imaginary hard sphere representing the distance of closest approach for another atom.<br>$$<br>F 与 \frac{1}{r^6}正比<br>$$</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567997154139.png" srcset="/img/loading.gif" lazyload alt="1567997154139" style="zoom:33%;" />
+
+<h2 id="Hydrogen-Bonds"><a href="#Hydrogen-Bonds" class="headerlink" title="Hydrogen Bonds"></a>Hydrogen Bonds</h2><p>Hydrogen bonds具有方向(Highly directional)，细胞因此形成ordered structure, 并且许多生物大分子的结构比如蛋白质，Dna 等，都依靠H-bond来进行stabilize<br>H-bond is partially colvalent</p>
+<ul>
+<li>1&#x2F;10 - 1&#x2F;20 binding energy of covalent bonds</li>
+</ul>
+<h1 id="Hydrophilic-And-Hydrophobic"><a href="#Hydrophilic-And-Hydrophobic" class="headerlink" title="Hydrophilic And Hydrophobic"></a>Hydrophilic And Hydrophobic</h1><h2 id="water"><a href="#water" class="headerlink" title="water:"></a>water:</h2><p>cells themselves are about 70%-95% water </p>
+<h2 id="The-unique-properties-of-water"><a href="#The-unique-properties-of-water" class="headerlink" title="The unique properties of water"></a>The unique properties of water</h2><ol>
+<li>Expansion upon freezing $\rarr$ Lower density of ice</li>
+<li>Ability to moderate temperature $\rarr$ High HV</li>
+<li>Cohesive behavior <ol>
+<li>High viscosity(粘度) </li>
+<li>high surface tension</li>
+</ol>
+</li>
+<li>Versatility as a solvent</li>
+</ol>
+<h2 id="Hydrophilic-Substances"><a href="#Hydrophilic-Substances" class="headerlink" title="Hydrophilic Substances"></a>Hydrophilic Substances</h2><p>The interactions of the negative ends of the water dipoles with cations and the positive ends with anions in aqueous solution cause the ions to become <strong>hydrated（水化作用）</strong>, that is, surrounded by shells of water molecules called <strong>hydration shells（水化壳）</strong></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568041694450.png" srcset="/img/loading.gif" lazyload alt="1568041694450"></p>
+<h2 id="Hydrophobic-Substances"><a href="#Hydrophobic-Substances" class="headerlink" title="Hydrophobic Substances"></a>Hydrophobic Substances</h2><p>Without hydrogen bonds<br>Thermodynamically unfavorable</p>
+<ul>
+<li>Hydrophobic 物质在水中溶解的时候，并不会像亲水物质一样形成一个水化壳，而是形成 ice-like <strong>clathrate</strong> structures, or “cages” about nonpolar molecules.</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568041867575.png" srcset="/img/loading.gif" lazyload alt="1568041867575" style="zoom:33%;" />
+
+<p>This ordering of water molecules, which extends well beyond the cage, corresponds to a <strong>decrease in the entropy</strong>, or randomness, of the mixture. 这种结构增大了水分子的“表面积”，更加稳定，使得混合物的熵值减少。<br>但是hydrophobic effect倾向于使得整个系统的熵值增加：Decreased ordered water molecules and thereby increase entropy of the system.（水分子释放后更加自由，系统的熵值增加）</p>
+<p>Decreasing entropy is unfavorable thermodynamically; thus, the dissolving of a hydrophobic substance in water is <strong>entropically unfavorable</strong>.</p>
+<p>Surrounding two hydrophobic molecules with two separate cages requires more ordering of water in clathrates<br>than surrounding both hydrophobes within a single cage.</p>
+<p>Thus, the hydrophobic molecules tend to aggregate because doing so releases some water molecules from the clathrates, thereby increasing the entropy of the system. This phenomenon, called the <strong>hydrophobic effect（疏水效应，又称疏水性效应，属于非极性分子的一种性质，会使这些分子在水溶液中具有自我聚集（self-associate）的特性）</strong>.</p>
+<h2 id="Hydrophobic-Interactions"><a href="#Hydrophobic-Interactions" class="headerlink" title="Hydrophobic Interactions"></a>Hydrophobic Interactions</h2><ul>
+<li>The forces that hold the nonpolar regions of the molecules together</li>
+<li>Proton folding</li>
+<li>Lipid bilayer assembly</li>
+</ul>
+<h1 id="Acid-and-Bases"><a href="#Acid-and-Bases" class="headerlink" title="Acid and Bases"></a>Acid and Bases</h1><ul>
+<li>An acid is any substance that increases the H^+^ concentration of a solution</li>
+<li><h6 id="A-base-is-any-substance-that-reduces-the-H-concentration-of-a-solution"><a href="#A-base-is-any-substance-that-reduces-the-H-concentration-of-a-solution" class="headerlink" title="A base is any substance that reduces the H^+^ concentration of a solution"></a>A base is any substance that reduces the H^+^ concentration of a solution</h6></li>
+</ul>
+<h2 id="pH"><a href="#pH" class="headerlink" title="pH"></a>pH</h2><p>Most biological fluids have pH values in the range of 6~8<br>根据具体目标溶液的pH选择buffer</p>
+<h1 id="Macroions"><a href="#Macroions" class="headerlink" title="Macroions"></a>Macroions</h1><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p><strong>Large polyelectrolytes</strong> such as nucleic acids and <strong>polyampholytes（聚电解质）</strong> such as proteins are classed together as macroions</p>
+<h2 id="Macroions-and-PH"><a href="#Macroions-and-PH" class="headerlink" title="Macroions and PH"></a>Macroions and PH</h2><p>由于Macroions可以被看做net charge，所以其对其它带电粒子具有吸引或排斥的作用。正式因为这个性质，DNA分子倾向于彼此分离，并且倾向于与带正电的蛋白质结合</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568078889632.png" srcset="/img/loading.gif" lazyload alt="1568078889632" style="zoom:33%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568078941310.png" srcset="/img/loading.gif" lazyload alt="1568078941310" style="zoom:33%;" />
+
+<p>On the other hand, if positively and negatively charged macromolecules are mixed, electrostatic attraction makes them tend to associate with one another</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568079139728.png" srcset="/img/loading.gif" lazyload alt="1568079139728" style="zoom: 33%;" />
+
+<h2 id="Macroions-and-ionic-strength"><a href="#Macroions-and-ionic-strength" class="headerlink" title="Macroions and ionic strength"></a>Macroions and ionic strength</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568079349123.png" srcset="/img/loading.gif" lazyload alt="1568079349123" style="zoom:33%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568079377472.png" srcset="/img/loading.gif" lazyload alt="1568079377472" style="zoom:33%;" />
+
+<h3 id="1-Salting-in"><a href="#1-Salting-in" class="headerlink" title="1. Salting in"></a>1. Salting in</h3><p>在起始点因为macroion本身的带电性，不同离子间正负点部分相互吸引，使得macroion之间aggregate。逐渐加入salt之后，salt在macroion周围形成counterion atmosphere，减弱了macroion之间的相互吸引作用，使得macroions它们更倾向于进行水合作用，提高了solubility，因此形成salting in effect。</p>
+<h3 id="2-Salting-out"><a href="#2-Salting-out" class="headerlink" title="2. Salting out"></a>2. Salting out</h3><p>当salt concentration增高到一定浓度的时候，salt ions就会抢夺hydration shells，加上hrdyophobic effect，使得macroions重新聚集。</p>
+<p>In very concentrated salt solutions, much of the water that would normally solvate and help solubilize the protein molecule is bound up in the hydration shells of the numerous salt ions, preventing sufficient hydration of the protein. </p>
+<h2 id="Van-der-Waals-interactions"><a href="#Van-der-Waals-interactions" class="headerlink" title="Van der Waals interactions"></a>Van der Waals interactions</h2><h3 id="Disperision-forces"><a href="#Disperision-forces" class="headerlink" title="Disperision forces"></a>Disperision forces</h3><p><strong>Major stabilization forces for biomolecular structures</strong><br>Between any of two atoms if they are close enough</p>
+<ul>
+<li>When outer electron orbits overlapped</li>
+</ul>
+<p>The fluctuated distribution of electronic charge in a molecular</p>
+<h3 id="Stacking-forces"><a href="#Stacking-forces" class="headerlink" title="Stacking forces"></a>Stacking forces</h3><p>Stacking forces are strong van der waals interactions</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/" class="category-chain-item">Biochemistry I (Macromolecules)</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Biochemistry-I-Macromolecules/" class="print-no-link">#Biochemistry I (Macromolecules)</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L02 Weak Interactions</div>
+      <div>https://zhenyumi.github.io/posts/f64c5505/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/15162b4b/" title="L02 Cellular Reproduction">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L02 Cellular Reproduction</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/d1ae287d/" title="L03 Principles of Inheritance">
+                        <span class="hidden-mobile">L03 Principles of Inheritance</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

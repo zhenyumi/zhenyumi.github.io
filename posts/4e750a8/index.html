@@ -1,0 +1,967 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="The development of nervous system">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L2 Nervous System Development and Diseases">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/4e750a8/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="The development of nervous system">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123150620287.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123150756423.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123150801772.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123150806495.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123150806495.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123151320783.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123152937327.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123152944636.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123154100390.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123154537991.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123154658939.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123155559211.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123160005335.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123160217774.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126144510777.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126144615523.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126144624508.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126144801836.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126145639697.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126145716451.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150125761.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150209073.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150220295.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150350002.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150341198.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150630417.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150942845.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126152338235.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126152426027.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126153134546.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126154005024.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126155154885.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126155402872.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126155441354.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126155811576.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126155818303.png">
+<meta property="article:published_time" content="2021-04-16T14:42:10.000Z">
+<meta property="article:modified_time" content="2021-04-16T14:42:10.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Neurobiology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123150620287.png">
+  
+  
+  
+  <title>L2 Nervous System Development and Diseases - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L2 Nervous System Development and Diseases</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-04-16 22:42" pubdate>
+          2021年4月16日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          661 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          6 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L2 Nervous System Development and Diseases</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Early-nervous-system-development"><a href="#一、Early-nervous-system-development" class="headerlink" title="一、Early nervous system development"></a>一、Early nervous system development</h1><h2 id="Formation-of-nervous-system"><a href="#Formation-of-nervous-system" class="headerlink" title="Formation of nervous system"></a>Formation of nervous system</h2><h3 id="1-Gastrulation-原肠胚形成"><a href="#1-Gastrulation-原肠胚形成" class="headerlink" title="1. Gastrulation 原肠胚形成"></a>1. Gastrulation 原肠胚形成</h3><ol>
+<li><p>Local invagination: three germ layers</p>
+<ul>
+<li>Outer ectoderm (外胚层，外细胞层)</li>
+<li>Middle mesoderm (中胚叶；中胚层) (initiating invagination (入鞘;套入))</li>
+<li>Inner endoderm (内胚层)</li>
+</ul>
+</li>
+<li><p>Establishment of the <strong>midline</strong> and the basic body axes</p>
+</li>
+<li><p>Formation of <strong>notochord</strong> (脊索) at the midline: central event</p>
+<ul>
+<li><strong>Notochord</strong>: distinct cylinder of mesodermal cells</li>
+<li>Notochord defines embryonic midline and is the axis of symmetry for the entire body</li>
+<li><strong>Neuroectoderm (神经外胚层 )</strong>: lies immediately above the notochord and gives rise to the entire nervous system</li>
+<li><strong>Notochord</strong>: transient structure that disappears once early development is complete</li>
+</ul>
+</li>
+</ol>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123150620287.png" srcset="/img/loading.gif" lazyload alt="image-20200123150620287" style="zoom: 80%;" />
+
+<h3 id="2-Neurulation-神经胚形成"><a href="#2-Neurulation-神经胚形成" class="headerlink" title="2. Neurulation 神经胚形成"></a>2. Neurulation 神经胚形成</h3><p><u>Notochord sends inductive signals</u> to the overlaying ectoderm that cause a subset of cells to differentiate into <strong>neuroectodermal precursor cells.</strong> </p>
+<p>Midline ectoderm containing these cells thickens into a distinct columnar (柱形的,筒形的) epithelium called <strong>neural plate (神经板)</strong>. </p>
+<p>The lateral margins of the neural plate fold inward, transforming the neural plate into a tube—<strong>neural tube (神经管)</strong>. </p>
+<p>The cells in <strong>neural tube</strong> gives rise to the brain, the spinal cord and most of PNS.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123150756423.png" srcset="/img/loading.gif" lazyload alt="image-20200123150756423" style="zoom: 80%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123150801772.png" srcset="/img/loading.gif" lazyload alt="image-20200123150801772" style="zoom: 80%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123150806495.png" srcset="/img/loading.gif" lazyload alt="image-20200123150806495" style="zoom: 80%;" />
+
+<h4 id="Floor-plate-底板-and-roof-plate-顶板"><a href="#Floor-plate-底板-and-roof-plate-顶板" class="headerlink" title="Floor plate (底板) and roof plate (顶板)"></a>Floor plate (底板) and roof plate (顶板)</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123150806495.png" srcset="/img/loading.gif" lazyload alt="image-20200123150806495" style="zoom: 80%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123151320783.png" srcset="/img/loading.gif" lazyload alt="image-20200123151320783" style="zoom: 80%;" />
+
+<h5 id="1-Floor-Plate-底板"><a href="#1-Floor-Plate-底板" class="headerlink" title="(1) Floor Plate 底板"></a>(1) Floor Plate 底板</h5><p><strong>Floor plate</strong>: specialized strip of epithelial-like cells at the ventral midline of the neural tube. Sequential functions as follows:</p>
+<ul>
+<li><p><u>Molecular signals</u> from the <strong><font color="0000FF">floor plate</font></strong> as well as from the <strong><font color="0000FF">notochord</font></strong> specify position and fate for the <font color="0000FF">neuroectodermal precursors of the <em>spinal cord</em> and <em>hindbrain</em></font>. </p>
+</li>
+<li><p>These <u>signals</u> lead to differentiation of cells in the <strong>ventral (腹的,腹部的,腹侧的)</strong> portion of the neural tube that eventually give rise to spinal and hindbrain motor neurons and related interneurons (details later on)</p>
+</li>
+</ul>
+<h5 id="2-Roof-Plate-顶板"><a href="#2-Roof-Plate-顶板" class="headerlink" title="(2) Roof Plate 顶板"></a>(2) Roof Plate 顶板</h5><p><strong>Roof plate</strong>: narrow strip of neuroepithelial cells at the dorsal (背的，背侧的；背部的) midline of the neural tube.</p>
+<ul>
+<li><u>Molecular signals</u> from the <strong><font color="00CC00">roof plate</font></strong> help define position and fate for the interneurons in the <font color="00CC00">more <strong>dorsal</strong> regions of the <em>spinal cord</em> and <em>hindbrain</em> </font>(details later on).</li>
+</ul>
+<h4 id="Neural-crest-神经脊"><a href="#Neural-crest-神经脊" class="headerlink" title="Neural crest 神经脊"></a>Neural crest 神经脊</h4><blockquote>
+<p>神经脊（英语：neural crest）属于动物胚胎的外胚层，位于神经管（neural tube）与胚胎上皮之间。神经脊细胞在神经板形成（neurulation）之后不久就会离开原来所在位置。</p>
+</blockquote>
+<p><strong>Neural crest</strong>: the region where the edges of the folded neural plate come together.</p>
+<p><strong>Neural crest cells</strong>: a <em>third</em> population of precursor cells.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123152937327.png" srcset="/img/loading.gif" lazyload alt="image-20200123152937327" style="zoom:50%;" />
+
+<ul>
+<li><p>Migrating away from the neural tube through a matrix of loosely packed <strong>mesenchymal cells</strong> (间充质细胞).</p>
+</li>
+<li><p>Subsets of neural crest cells follow different pathways, along which they are exposed to additional <u>signals</u> that influence their specific differentiation, and give rise to:</p>
+<ol>
+<li>Neurons and glia of the sensory ganglia.</li>
+<li>Neurons and glia of the visceral motor (autonomic) ganglia.</li>
+<li>Neurosecretory cells of the adrenal gland which eventually aggregate around the dorsal portion of the kidney.</li>
+<li>Non-neural structures such as pigment cells, cartilage, and bone, particularly in the face and skull.</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>从Neuro crest来的细胞经过不同的组织，接受这些组织释放信号，从而决定这些从Neuro crest细胞的分化情况</p>
+</blockquote>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123152944636.png" srcset="/img/loading.gif" lazyload alt="image-20200123152944636" style="zoom:50%;" />
+
+<h2 id="Neural-stem-cells"><a href="#Neural-stem-cells" class="headerlink" title="Neural stem cells"></a>Neural stem cells</h2><h3 id="1-Neuroectodermal-precursor-cells-neural-stem-cells"><a href="#1-Neuroectodermal-precursor-cells-neural-stem-cells" class="headerlink" title="1. Neuroectodermal precursor cells: neural stem cells"></a>1. Neuroectodermal precursor cells: neural stem cells</h3><p>神经外胚层前体细胞</p>
+<p>Dividing to produce more precursor cells (self-renewal)</p>
+<p>Capable to give rise to the full range of cell classes</p>
+<h3 id="2-Differentiation-order"><a href="#2-Differentiation-order" class="headerlink" title="2. Differentiation order"></a>2. Differentiation order</h3><ol>
+<li>Subsets of neuroectodermal precursor cells (<strong>stem cells</strong>)</li>
+<li>Region- and fate-specified neural <strong>progenitors (先驱)</strong></li>
+<li>Specific classes of <strong>neurons</strong>, and also <strong>astrocytes</strong>, <strong>oligodendroglial cells</strong></li>
+</ol>
+<h1 id="二、Formation-of-Major-Brain-Subdivisions"><a href="#二、Formation-of-Major-Brain-Subdivisions" class="headerlink" title="二、Formation of Major Brain Subdivisions"></a>二、Formation of Major Brain Subdivisions</h1><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123154100390.png" srcset="/img/loading.gif" lazyload alt="image-20200123154100390" style="zoom: 67%;" />
+
+<h2 id="Segmentation-分割"><a href="#Segmentation-分割" class="headerlink" title="Segmentation 分割"></a>Segmentation 分割</h2><p>The neural tube is organized into repeating units called <strong>neuromeres (神经管节)</strong>. </p>
+<p><strong>Segmentation</strong>: establishing regional identity in the body by dividing the embryo into repeated units, or segments.</p>
+<p><strong>Fruit fly</strong> <strong>Drosophila</strong>: early expression of <strong>homeotic</strong> or <strong>homeobox</strong> genes guides the differentiation of the embryo into distinct segments that give rise to the head, thorax (胸，胸膛；胸腔), and abdomen (腹部；下腹；腹腔). </p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123154537991.png" srcset="/img/loading.gif" lazyload alt="image-20200123154537991" style="zoom: 67%;" />
+
+<ul>
+<li>Temporal (短暂的) pattern of expression of four homeobox genes encoding TFs.</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123154658939.png" srcset="/img/loading.gif" lazyload alt="image-20200123154658939" style="zoom:50%;" />
+
+<p><strong>bcd</strong>: defining the anterior pole of the embryo.</p>
+<p><strong>kr</strong>: expressing in the middle and then at the posterior end of the embryo, defining the anterior-posterior axis. </p>
+<p><strong>h</strong>: delineating the domains that will eventually form the mature segmented body.</p>
+<p><strong>wg</strong>: further refining the organization of Individual segments.</p>
+<h3 id="1-Parallels-between-Drosophila-and-human-Hox-genes"><a href="#1-Parallels-between-Drosophila-and-human-Hox-genes" class="headerlink" title="1. Parallels between Drosophila and human Hox genes"></a>1. Parallels between Drosophila and human Hox genes</h3><p>Human <em>Hox</em> genes (and those of most mammals) have been duplicated twice, leading to four Independent groups (<strong>A,</strong> <strong>B, C, D</strong>), each on a distinct human chromosome.</p>
+<p>The anterior-to-posterior pattern of <em>Hox</em> gene expression in both flies and mammals follows the 5’-to-3’ orientation of these genes on their respective chromosomes</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123155559211.png" srcset="/img/loading.gif" lazyload alt="image-20200123155559211" style="zoom: 67%;" />
+
+<h3 id="2-Hox-gene-expression-in-developing-nervous-system"><a href="#2-Hox-gene-expression-in-developing-nervous-system" class="headerlink" title="2. Hox gene expression in developing nervous system"></a>2. Hox gene expression in developing nervous system</h3><p><strong>Hox</strong> gene expression coincides with, or even precedes, the formation of morphological features–the various <u>bends, folds, and constrictions</u> that underlie the progressive regionalization of the developing neural tube, particularly in the <u><em>hindbrain</em> and <em>spinal cord</em>.</u> </p>
+<p>In vertebrates, <em>Hox</em> gene expression does not extend into the <em>midbrain</em> or forebrain. </p>
+<p>Regional differences in expression of other transcription factors such as <strong><font color="FF0000">Dlx</font></strong> and <strong><font color="FF0000">Pax</font></strong> are seen in these subdivisions prior to and during the morphogenetic events that define them.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123160005335.png" srcset="/img/loading.gif" lazyload alt="image-20200123160005335" style="zoom:100%;" />
+
+<h1 id="三、Molecular-basis-of-neural-induction"><a href="#三、Molecular-basis-of-neural-induction" class="headerlink" title="三、Molecular basis of neural induction"></a>三、Molecular basis of neural induction</h1><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200123160217774.png" srcset="/img/loading.gif" lazyload alt="image-20200123160217774"></p>
+<p>Neural stem cells in the early neural plate and tube, and subsequently within each nascent brain region, must acquire <strong>instructions</strong> that establish their capacity to make nerve cells specific to each region. </p>
+<p><u>These instructions come from neighboring cells or tissues.</u> </p>
+<h2 id="To-Define"><a href="#To-Define" class="headerlink" title="To Define"></a>To Define</h2><p>To define: Using a variety of classic experiments based on the removal or transfer of embryonic tissues</p>
+<p><font size=4><b>What happened to the <u>cells</u> that are <u>moved</u> into a new place:</b></font></p>
+<p>Acquiring the identity of the new region in which they are placed (thus receiving <u>instructions</u> based on their new location). </p>
+<p>Retain an identity that reflects their original position (and thus possess immutable <u>instructions</u> from their original location).</p>
+<p><font size=4><b>What happened to the <u>old place</u> after the cells are removed: </b></font></p>
+<p>Compensated by local cell proliferation, causing little noticeable disruption of subsequent development (a process referred to as embryonic regulation). </p>
+<p>Disrupting subsequent development.</p>
+<p><font size=4><b>What happened to the new place after the cells are moved in:</b></font></p>
+<p>Complete change of local developmental program.</p>
+<hr>
+<p><u><em>Interactions</em> between cells in adjacent germ layers are essential for regional and cellular identity in the developing embryo.</u></p>
+<p>Generally, generation of cell identity and diversity results from the <em>spatial</em> and <em>temporal</em> control of different sets of genes by endogenous signaling molecules. </p>
+<p>Most of these <u>molecular signals are secreted by one embryonic cell class or tissue and then diffuse through extracellular space to act on an adjacent cell class or tissue.</u> </p>
+<p><strong>Neural induction</strong>: apposition of the <u>notochord</u> to the overlaying <u>ectoderm</u> is essential for establishing neuroectodermal stem cells and thus the entire nervous system.</p>
+<h2 id="Major-inductive-signaling-pathways-in-vertebrate-embryos"><a href="#Major-inductive-signaling-pathways-in-vertebrate-embryos" class="headerlink" title="Major inductive signaling pathways in vertebrate embryos"></a>Major inductive signaling pathways in vertebrate embryos</h2><p>The embryonic structures (including the notochord, floorplate, roofplate, and neuroectoderm itself, as well as adjacent mesodermally derived tissues such as somites) that are critical for the induction and patterning of the central nervous system, all secrete these inductive signals.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126144510777.png" srcset="/img/loading.gif" lazyload alt="image-20200126144510777"  />
+
+<h3 id="1-Retinoic-acid-RA，视黄酸"><a href="#1-Retinoic-acid-RA，视黄酸" class="headerlink" title="1. Retinoic acid (RA，视黄酸)"></a>1. Retinoic acid (RA，视黄酸)</h3><p><strong>RA</strong>: One of the first inductive signals to be identified; a derivative of vitamin A.</p>
+<p>RA signaling drives cellular differentiation, regulating the transitions between various classes of neural stem cells leading up to their terminal division for neurogenesis. </p>
+<p><strong>RA</strong> in motor neuron development: Sources? Mechanisms?</p>
+<ul>
+<li>Sources: From PM and LMCm</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126144615523.png" srcset="/img/loading.gif" lazyload alt="image-20200126144615523" style="zoom: 67%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126144624508.png" srcset="/img/loading.gif" lazyload alt="image-20200126144624508" style="zoom:100%;" />
+
+<h3 id="2-Retinoids-类维生素A"><a href="#2-Retinoids-类维生素A" class="headerlink" title="2. Retinoids (类维生素A)"></a>2. Retinoids (类维生素A)</h3><p>Retinoids: inductive signal and teratogen（畸胎原）</p>
+<p>In the early 1930s, investigators noticed that vitamin A deficiency during pregnancy in animals led to a variety of fetal malformations. The most severe abnormalities affected the developing brain, which was often grossly malformed.</p>
+<p>Experimental studies yielded the surprising finding that excess vitamin A caused similar defects. </p>
+<p><strong>Retinoids</strong> include the alcohol, aldehyde, and acid forms of vitamin A (retinol, retinal, and retinoic acid, respectively), are <u>teratogenic</u>(<em>teratogenesis</em> is the term for birth defects induced by exogenous agents)</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126144801836.png" srcset="/img/loading.gif" lazyload alt="image-20200126144801836" style="zoom:67%;" />
+
+<p><strong>Accutane</strong> (the generic name for <strong>13-cis-retinoic acid</strong>) was used to treat severe acne. Women who used this drug during pregnancy had an increased number of spontaneous abortions and children born with a range of birth defects.</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126145639697.png" srcset="/img/loading.gif" lazyload alt="image-20200126145639697"></p>
+<h3 id="3-Fibroblast-growth-factor-FGF-成纤维细胞生长因子"><a href="#3-Fibroblast-growth-factor-FGF-成纤维细胞生长因子" class="headerlink" title="3. Fibroblast growth factor (FGF, 成纤维细胞生长因子)"></a>3. Fibroblast growth factor (FGF, 成纤维细胞生长因子)</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126145716451.png" srcset="/img/loading.gif" lazyload alt="image-20200126145716451" style="zoom:50%;" />
+
+<p><strong>22</strong> FGF ligands and the same receptor tyrosine kinase. </p>
+<p><strong>FGF8</strong>: a particularly important regulator of <strong>forebrain</strong> and <strong>midbrain</strong> development. </p>
+<p>FGFs from the <strong>pre-somitic mesoderm</strong> (from which somites form) regulate <strong>spinal cord</strong> neurogenesis.</p>
+<ul>
+<li>By regulating the gene expression</li>
+</ul>
+<h3 id="4-Bone-morphogenetic-proteins-BMPs-骨塑型蛋白"><a href="#4-Bone-morphogenetic-proteins-BMPs-骨塑型蛋白" class="headerlink" title="4. Bone morphogenetic proteins (BMPs, 骨塑型蛋白)"></a>4. Bone morphogenetic proteins (BMPs, 骨塑型蛋白)</h3><p>The various BMPs play roles in the initial specification of the <u>neural plate</u> as well as the subsequent differentiation of the <u>dorsal</u> part of the spinal cord and hindbrain and the cerebral cortex.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150125761.png" srcset="/img/loading.gif" lazyload alt="image-20200126150125761" style="zoom:50%;" />
+
+<h3 id="5-Wnt"><a href="#5-Wnt" class="headerlink" title="5. Wnt"></a>5. Wnt</h3><p>The <em>noncanonical（非经典的） pathway</em> (planar cell polarity, PCP): featured during early nervous system morphogenesis; regulating cell movements necessary for lengthening the neural plate. </p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150209073.png" srcset="/img/loading.gif" lazyload alt="image-20200126150209073"></p>
+<p>The <em>canonical pathway</em>: influencing cell proliferation, adhesion, and differentiation after the initial morphogenesis of the nervous system is complete</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150220295.png" srcset="/img/loading.gif" lazyload alt="image-20200126150220295" style="zoom:50%;" />
+
+<h3 id="6-Sonic-hedgehog-Shh-音猬因子"><a href="#6-Sonic-hedgehog-Shh-音猬因子" class="headerlink" title="6. Sonic hedgehog (Shh, 音猬因子)"></a>6. Sonic hedgehog (Shh, 音猬因子)</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150350002.png" srcset="/img/loading.gif" lazyload alt="image-20200126150350002" style="zoom: 50%;" />
+
+<p>Particularly important for two phases of neural development:</p>
+<ul>
+<li><p>Closing the neural tube, esp. the anterior midline.</p>
+</li>
+<li><p>Establishing the identity of neurons, esp. motor neurons in spinal cord and hindbrain.</p>
+</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150341198.png" srcset="/img/loading.gif" lazyload alt="image-20200126150341198" style="zoom:50%;" />
+
+<h2 id="Integrated-inductive-signals-specify-neural-identity"><a href="#Integrated-inductive-signals-specify-neural-identity" class="headerlink" title="Integrated inductive signals specify neural identity"></a>Integrated inductive signals specify neural identity</h2><p>Transcriptional <strong>code</strong>: Combination of different traanscription <strong>factors</strong></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150630417.png" srcset="/img/loading.gif" lazyload alt="image-20200126150630417"></p>
+<h1 id="四、Neurogenesis-神经发生"><a href="#四、Neurogenesis-神经发生" class="headerlink" title="四、Neurogenesis 神经发生"></a>四、Neurogenesis 神经发生</h1><blockquote>
+<p>神经发生是指神经元的生成。神经发生是有神经元干细胞增殖分化而成，大部分的神经发生是在胎儿发育阶段，神经发生负责将神经元密布于大脑中。</p>
+</blockquote>
+<p>The mature human brain contains about 100 billion neurons and many more glia cells which are all generated in only a few months from a small population of <u>precursor cells</u>. </p>
+<p>Neurogenesis begins after the initial patterning of the neural tube is complete, and finishes (<em>a few exceptions</em>) <u>before birth</u>.</p>
+<p>A developing human generates about 250,000 new neurons <u>per minute</u> during the peak of cell proliferation. </p>
+<p>Then precursor cells mostly disappear and, in most brain regions, few if any new neurons can ve added to replace those lost by age or injury.</p>
+<h2 id="The-initial-differentiation-of-neurons-and-glia"><a href="#The-initial-differentiation-of-neurons-and-glia" class="headerlink" title="The initial differentiation of neurons and glia"></a>The initial differentiation of neurons and glia</h2><p><strong>Neural precursor cells undergo mitosis within the ventricular zone (心室区).</strong> </p>
+<ol>
+<li><p><em>Symmetrical division</em> generates two new stem cells. [Self-renew]</p>
+<ul>
+<li>dividing relatively slowly and renewing themselves indefinitely.</li>
+</ul>
+</li>
+<li><p><em>Asymmetrical division</em> generates a <u>postmitotic neuroblast</u> (有丝分裂后神经母细胞) and a progenitor with limited mitotic potential. </p>
+<ul>
+<li><p>dividing more rapidly but with a limited capacity for division over time.</p>
+</li>
+<li><p><em>transit amplifying cells:</em> a <em>transitional</em> form between stem cells and differentiated neurons, and account for the <em>amplification</em> in numbers of differentiated cells</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126150942845.png" srcset="/img/loading.gif" lazyload alt="image-20200126150942845"></p>
+<h2 id="Neurogenesis-in-cerebral-cortex（大脑皮层）"><a href="#Neurogenesis-in-cerebral-cortex（大脑皮层）" class="headerlink" title="Neurogenesis in cerebral cortex（大脑皮层）"></a>Neurogenesis in cerebral cortex（大脑皮层）</h2><p><strong>Most neurons of the six cortical layers are generated in an</strong> <strong>inside-out</strong> <strong>manner:</strong> </p>
+<ul>
+<li>Each layer consists of a cohort of cells “born” at a distinct time.</li>
+<li>The first born cells are eventually located in the deepest layers. </li>
+<li>Except layer 1</li>
+<li>Later generations of neurons migrate radially from the site where they are born, traveling through the older cells and coming to lie superficial to them. </li>
+<li>Early born neurons in the lower cortical layers express <em>transcription factors</em> distinct from those of the later-born neurons in the upper cortical layers. </li>
+<li>In most regions of the central nervous system where neurons are arranged into layered or laminar structures (the hippocampus, cerebellum, superior colliculus, and retina), there is a systematic relationship between the layers, time of cell origin, and additional molecular properties, including transcription factor expression</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126152338235.png" srcset="/img/loading.gif" lazyload alt="image-20200126152338235" style="zoom: 50%;" />
+
+<h2 id="Molecular-regulation-of-neurogenesis"><a href="#Molecular-regulation-of-neurogenesis" class="headerlink" title="Molecular regulation of neurogenesis"></a>Molecular regulation of neurogenesis</h2><p>Neural stem cell decisions to generate either additional stem cells or  postmitotic neurons**: Delta-Notch** signaling</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126152426027.png" srcset="/img/loading.gif" lazyload alt="image-20200126152426027" style="zoom:50%;" />
+
+<ul>
+<li>NICD is cleaved and travels to the nucleus, then the cell can generate bHLH neurogenic factors</li>
+</ul>
+<h2 id="Molecular-and-genetic-disruptions-of-early-neural-development"><a href="#Molecular-and-genetic-disruptions-of-early-neural-development" class="headerlink" title="Molecular and genetic disruptions of early neural development"></a>Molecular and genetic disruptions of early neural development</h2><p>Molecules involved in neural induction, neurogenesis, and generation of neuronal diversity: inductive signaling molecules and related signaling proteins</p>
+<ul>
+<li>Maternal dietary <u>insufficiency</u> of substances such as <strong>folic acid</strong> can disrupt embryonic neural tube formation. <ul>
+<li>Cause the neuro tube can not close</li>
+</ul>
+</li>
+<li><u>Excessive</u> maternal intake of <strong>vitamin A</strong>–the metabolic precursor of retinoic acid–can impede neural tube closure and differentiation, or later aspects of neuronal differentiation.</li>
+<li>Embryonic exposure to a variety of other drugs such as <strong>alcohol and thalidomide</strong> can also elicit pathological differentiation of the embryonic nervous system by providing or blocking inductive signals at in appropriate times or places.<ul>
+<li>Because the consequences of disordered neural induction are so severe, <u>pregnant women</u> are advised to <strong>avoid virtually all drugs and dietary supplements</strong> except those specifically prescribed by a physician, especially during the first trimester</li>
+</ul>
+</li>
+</ul>
+<h2 id="Triple-Jeopardy-危险-diseases-associated-with-Sonic-Hedgehog"><a href="#Triple-Jeopardy-危险-diseases-associated-with-Sonic-Hedgehog" class="headerlink" title="Triple Jeopardy (危险): diseases associated with Sonic Hedgehog"></a>Triple Jeopardy (危险): diseases associated with Sonic Hedgehog</h2><p><strong>Holoprosencephaly（前脑无裂畸形）</strong>: disrupting the initial morphogenesis of two distinct cerebral hemispheres.</p>
+<p><strong>Medulloblastoma</strong>: cancerous transformation of cerebellar granule <u>neuron precursor cells</u>. </p>
+<p><strong>Basal cell carcinoma</strong>: the most prevalent cancer of the skin (<u>basal epidermal cells</u> （基底表皮细胞）)</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126153134546.png" srcset="/img/loading.gif" lazyload alt="image-20200126153134546"></p>
+<h3 id="1-Holoprosencephaly"><a href="#1-Holoprosencephaly" class="headerlink" title="1. Holoprosencephaly"></a>1. Holoprosencephaly</h3><p>1 in every 16,000 live births and the most common malformation of the mammalian forebrain known. </p>
+<p>Compromising the normal separation of the two hemispheres of the forebrain and disrupting development of midline facial structures. </p>
+<p>The <u>most severe form</u>: failure of the eye primordium to split into two bilaterally symmetrical fields and the subsequent development of a single eye (cyclopia). </p>
+<p>A small but consistent cases are associated with deletions or missense mutations in <em>SHH</em> on chromosome <em>7.</em> Supported by studies in mice and zebrafish</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126154005024.png" srcset="/img/loading.gif" lazyload alt="image-20200126154005024"></p>
+<h2 id="Neuronal-migration-in-PNS"><a href="#Neuronal-migration-in-PNS" class="headerlink" title="Neuronal migration in PNS"></a>Neuronal migration in PNS</h2><p>In the developing nervous system, migration brings different classes of neurons together so that they can interact, and insures the final position of many postmitotic neurons. </p>
+<p>The developing neuron must be in the right place at the right time so that it can be properly integrated into a functional circuit that can mediate behavior. </p>
+<p>Migration and differentiation of <strong>neural crest cells</strong> from the neural tube to the periphery of the embryo.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126155154885.png" srcset="/img/loading.gif" lazyload alt="image-20200126155154885" style="zoom:150%;" />
+
+<h3 id="1-Neural-crest-migration-神经嵴迁移"><a href="#1-Neural-crest-migration-神经嵴迁移" class="headerlink" title="1. Neural crest migration 神经嵴迁移"></a>1. Neural crest migration 神经嵴迁移</h3><p>They begin as neuroepithelial cells, with all of the intercellular junctions and adhesive interactions that keep epithelial cells in place.</p>
+<p>To move, they need undergo an <strong>epithelial-to-mesenchymal</strong> <strong>transition</strong>. (mesenchymal cells being loosely packed and tending to migrate freely)</p>
+<p>How? They express bHLH family members <strong>Snail1 and Snali2</strong>, which <u>repress expression of intercellular junctional proteins and epithelial adhesion molecule.</u></p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126155402872.png" srcset="/img/loading.gif" lazyload alt="image-20200126155402872" style="zoom: 67%;" />
+
+<p>Neural crest cells are largely guided along distinct migration pathways by signals from non-neural peripheral structures such as somites and other rudimentary musculoskeletal or visceral tissues. </p>
+<p>The signals along these pathways can be secreted molecules such as <u>neurotropic factors and peptide hormone growth factors</u>, cell surface ligands and receptors such as <u>N-cadherin, NCAM or ephreceptors and ephrin ligands</u>, or extracellular matrix molecules such <u>as laminin and fibronectin.</u></p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126155441354.png" srcset="/img/loading.gif" lazyload alt="image-20200126155441354" style="zoom: 67%;" />
+
+<h2 id="Neuronal-migration-in-CNS"><a href="#Neuronal-migration-in-CNS" class="headerlink" title="Neuronal migration in CNS"></a>Neuronal migration in CNS</h2><p><em>Minority</em> of neurons and glia: using existing <u>axon pathways</u> as migratory guides.</p>
+<p><em>Most</em> prominent form: guided by glial cells—<strong>radial glia</strong>.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126155811576.png" srcset="/img/loading.gif" lazyload alt="image-20200126155811576" style="zoom:67%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200126155818303.png" srcset="/img/loading.gif" lazyload alt="image-20200126155818303" style="zoom:67%;" />
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Neurobiology/" class="category-chain-item">Neurobiology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Neurobiology/" class="print-no-link">#Neurobiology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L2 Nervous System Development and Diseases</div>
+      <div>https://zhenyumi.github.io/posts/4e750a8/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年4月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/d1028187/" title="L3 Construction of neural circuits">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L3 Construction of neural circuits</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/541cb50c/" title="L11 Opioid Analgesics &amp; Antagonists Drugs of abuse">
+                        <span class="hidden-mobile">L11 Opioid Analgesics &amp; Antagonists Drugs of abuse</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

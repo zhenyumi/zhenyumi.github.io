@@ -1,0 +1,1030 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="散点图、折线图、相关图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="06. R &lt;- 基本绘图Ⅱ">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/ea35a990/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="散点图、折线图、相关图">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200809-photo_2020-07-16_19-47-54.jpg">
+<meta property="article:published_time" content="2020-08-05T13:14:43.000Z">
+<meta property="article:modified_time" content="2020-08-09T08:43:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="速查">
+<meta property="article:tag" content="R">
+<meta property="article:tag" content="Statistics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200809-photo_2020-07-16_19-47-54.jpg">
+  
+  
+  
+  <title>06. R &lt;- 基本绘图Ⅱ - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200809-photo_2020-07-16_23-09-13.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">06. R <- 基本绘图Ⅱ</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-08-05 21:14" pubdate>
+          2020年8月5日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          34 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">06. R &lt;- 基本绘图Ⅱ</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、散点图"><a href="#一、散点图" class="headerlink" title="一、散点图"></a>一、散点图</h1><p>R中创建散点图的基础函数是plot(x, y)，其中，x和y是数值型向量，代表着图形中的(x, y)点。</p>
+<p>在这个例子当中，使用 <code>mtcars</code> 预设数据集来进行演示：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><br>                   mpg cyl disp  hp drat    wt  qsec vs am gear carb<br>Mazda RX4         <span class="hljs-number">21.0</span>   <span class="hljs-number">6</span>  <span class="hljs-number">160</span> <span class="hljs-number">110</span> <span class="hljs-number">3.90</span> <span class="hljs-number">2.620</span> <span class="hljs-number">16.46</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">4</span><br>Mazda RX4 Wag     <span class="hljs-number">21.0</span>   <span class="hljs-number">6</span>  <span class="hljs-number">160</span> <span class="hljs-number">110</span> <span class="hljs-number">3.90</span> <span class="hljs-number">2.875</span> <span class="hljs-number">17.02</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">4</span><br>Datsun <span class="hljs-number">710</span>        <span class="hljs-number">22.8</span>   <span class="hljs-number">4</span>  <span class="hljs-number">108</span>  <span class="hljs-number">93</span> <span class="hljs-number">3.85</span> <span class="hljs-number">2.320</span> <span class="hljs-number">18.61</span>  <span class="hljs-number">1</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">1</span><br>Hornet <span class="hljs-number">4</span> Drive    <span class="hljs-number">21.4</span>   <span class="hljs-number">6</span>  <span class="hljs-number">258</span> <span class="hljs-number">110</span> <span class="hljs-number">3.08</span> <span class="hljs-number">3.215</span> <span class="hljs-number">19.44</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">1</span><br>Hornet Sportabout <span class="hljs-number">18.7</span>   <span class="hljs-number">8</span>  <span class="hljs-number">360</span> <span class="hljs-number">175</span> <span class="hljs-number">3.15</span> <span class="hljs-number">3.440</span> <span class="hljs-number">17.02</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">2</span><br>Valiant           <span class="hljs-number">18.1</span>   <span class="hljs-number">6</span>  <span class="hljs-number">225</span> <span class="hljs-number">105</span> <span class="hljs-number">2.76</span> <span class="hljs-number">3.460</span> <span class="hljs-number">20.22</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="散点图矩阵"><a href="#散点图矩阵" class="headerlink" title="散点图矩阵"></a>散点图矩阵</h2><p>R中有很多创建散点图矩阵的实用函数。<code>pairs()</code>函数可以创建基础的散点图矩阵。下面的代码生成了一个散点图矩阵，包含<code>mpg</code>、<code>disp</code>、<code>drat</code>和<code>wt</code>四个变量，在这个图中，可以看到分别以其中两个变量作为<code>x</code>, <code>y</code>值的散点图：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;formula&#x27;: </span><br>pairs<span class="hljs-punctuation">(</span>formula<span class="hljs-punctuation">,</span><br>data <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> ...<span class="hljs-punctuation">,</span> subset<span class="hljs-punctuation">,</span><br>na.action <span class="hljs-operator">=</span> stats<span class="hljs-operator">::</span>na.pass<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span><br>pairs<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> labels<span class="hljs-punctuation">,</span> panel <span class="hljs-operator">=</span> points<span class="hljs-punctuation">,</span> ...<span class="hljs-punctuation">,</span><br>      horInd <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-operator">:</span>nc<span class="hljs-punctuation">,</span> verInd <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-operator">:</span>nc<span class="hljs-punctuation">,</span><br>      lower.panel <span class="hljs-operator">=</span> panel<span class="hljs-punctuation">,</span> upper.panel <span class="hljs-operator">=</span> panel<span class="hljs-punctuation">,</span><br>      diag.panel <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> text.panel <span class="hljs-operator">=</span> textPanel<span class="hljs-punctuation">,</span><br>      label.pos <span class="hljs-operator">=</span> <span class="hljs-number">0.5</span> <span class="hljs-operator">+</span> has.diag<span class="hljs-operator">/</span><span class="hljs-number">3</span><span class="hljs-punctuation">,</span> line.main <span class="hljs-operator">=</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span><br>      cex.labels <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> font.labels <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>      row1attop <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> gap <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-built_in">log</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span><br>      horOdd <span class="hljs-operator">=</span> <span class="hljs-operator">!</span>row1attop<span class="hljs-punctuation">,</span> verOdd <span class="hljs-operator">=</span> <span class="hljs-operator">!</span>row1attop<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R">pairs<span class="hljs-punctuation">(</span><span class="hljs-operator">~</span>mpg<span class="hljs-operator">+</span>disp<span class="hljs-operator">+</span>drat<span class="hljs-operator">+</span>wt<span class="hljs-punctuation">,</span> <br>      data<span class="hljs-operator">=</span>mtcars<span class="hljs-punctuation">,</span> <br>      main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Basic Scatter Plot Matrix&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807185540098.png" srcset="/img/loading.gif" lazyload alt="image-20200807185540098" style="zoom: 80%;" />
+
+<p>可以控制参数，调整只显示上方三角或下方三角的图：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 只显示下方</span><br>pairs<span class="hljs-punctuation">(</span><span class="hljs-operator">~</span>mpg<span class="hljs-operator">+</span>disp<span class="hljs-operator">+</span>drat<span class="hljs-operator">+</span>wt<span class="hljs-punctuation">,</span> <br>      data<span class="hljs-operator">=</span>mtcars<span class="hljs-punctuation">,</span> <br>      main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Basic Scatter Plot Matrix&quot;</span><span class="hljs-punctuation">,</span><br>      upper.panel <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 只显示上方</span><br>pairs<span class="hljs-punctuation">(</span><span class="hljs-operator">~</span>mpg<span class="hljs-operator">+</span>disp<span class="hljs-operator">+</span>drat<span class="hljs-operator">+</span>wt<span class="hljs-punctuation">,</span> <br>      data<span class="hljs-operator">=</span>mtcars<span class="hljs-punctuation">,</span> <br>      main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Basic Scatter Plot Matrix&quot;</span><span class="hljs-punctuation">,</span><br>      lower.panel <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p><code>car</code>包中的<code>scatterplotMatrix()</code>函数也可以生成散点图矩阵，它增强了散点图的许多功能，它可以很方便地绘制散点图，并能添加拟合曲线、边界箱线图和置信椭圆，还可以按子集绘图和交互式地识别点。</p>
+<p>有以下可选操作：</p>
+<ul>
+<li>以某个因子为条件绘制散点图矩阵；</li>
+<li>包含线性和平滑拟合曲线；</li>
+<li>在主对角线放置箱线图、密度图或者直方图；</li>
+<li>在各单元格的边界添加轴须图。</li>
+</ul>
+<p>例：线性和平滑（loess）拟合曲线被默认添加，主对角线处添加了核密度曲线和轴须图。<code>spread = FALSE</code>选项表示不添加展示分散度和对称信息的直线，<code>smoother.args=list(lty=2)</code>设定平滑（loess）拟合曲线使用虚线而不是实线。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs R">library<span class="hljs-punctuation">(</span>car<span class="hljs-punctuation">)</span> <br>scatterplotMatrix<span class="hljs-punctuation">(</span><span class="hljs-operator">~</span> mpg <span class="hljs-operator">+</span> disp <span class="hljs-operator">+</span> drat <span class="hljs-operator">+</span> wt<span class="hljs-punctuation">,</span> <br>                  data<span class="hljs-operator">=</span>mtcars<span class="hljs-punctuation">,</span> <br>                  spread<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> <br>                  smoother.args<span class="hljs-operator">=</span><span class="hljs-built_in">list</span><span class="hljs-punctuation">(</span>lty<span class="hljs-operator">=</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>                  main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Scatter Plot Matrix via car Package&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807190937479.png" srcset="/img/loading.gif" lazyload alt="image-20200807190937479" style="zoom:80%;" />
+
+<p>R提供了许多其他的方式来创建散点图矩阵。你可能想探索<code>glus</code>包中的<code>cpars()</code>函数，<code>TeachingDemos</code>包中的<code>pairs2()</code>函数，<code>HH</code>包中的<code>xysplom()</code>函数，<code>ResourceSelection</code>包中的<code>kepairs()</code>函数和<code>SMPracticals</code>包中的<code>pairs.mod()</code>函数。每个包都加入了自己独特的曲线。</p>
+<h2 id="高密度散点图"><a href="#高密度散点图" class="headerlink" title="高密度散点图"></a>高密度散点图</h2><p>当数据点重叠很严重时，用散点图来观察变量关系就显得“力不从心”了。下面是一个人为设计的例子，其中10000个观测点分布在两个重叠的数据群中：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 以seed=1234按照正态分布产生10000个伪随机数</span><br><span class="hljs-operator">&gt;</span> set.seed<span class="hljs-punctuation">(</span><span class="hljs-number">1234</span><span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> n <span class="hljs-operator">&lt;-</span> 10000 <br><span class="hljs-operator">&gt;</span> c1 <span class="hljs-operator">&lt;-</span> matrix<span class="hljs-punctuation">(</span>rnorm<span class="hljs-punctuation">(</span>n<span class="hljs-punctuation">,</span> mean<span class="hljs-operator">=</span><span class="hljs-number">0</span><span class="hljs-punctuation">,</span> sd<span class="hljs-operator">=</span><span class="hljs-number">.5</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> ncol<span class="hljs-operator">=</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> c2 <span class="hljs-operator">&lt;-</span> matrix<span class="hljs-punctuation">(</span>rnorm<span class="hljs-punctuation">(</span>n<span class="hljs-punctuation">,</span> mean<span class="hljs-operator">=</span><span class="hljs-number">3</span><span class="hljs-punctuation">,</span> sd<span class="hljs-operator">=</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> ncol<span class="hljs-operator">=</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span> <br><br><span class="hljs-comment"># 将数据整合为list</span><br><span class="hljs-comment">## 先整合为二维向量</span><br><span class="hljs-operator">&gt;</span> mydata <span class="hljs-operator">&lt;-</span> rbind<span class="hljs-punctuation">(</span>c1<span class="hljs-punctuation">,</span> c2<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span><br>           <span class="hljs-punctuation">[</span><span class="hljs-punctuation">,</span><span class="hljs-number">1</span><span class="hljs-punctuation">]</span>       <span class="hljs-punctuation">[</span><span class="hljs-punctuation">,</span><span class="hljs-number">2</span><span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span><span class="hljs-punctuation">]</span> <span class="hljs-operator">-</span><span class="hljs-number">0.6035329</span> <span class="hljs-operator">-</span><span class="hljs-number">0.4125721</span><br><span class="hljs-punctuation">[</span><span class="hljs-number">2</span><span class="hljs-punctuation">,</span><span class="hljs-punctuation">]</span>  <span class="hljs-number">0.1387146</span>  <span class="hljs-number">0.1735841</span><br><span class="hljs-punctuation">[</span><span class="hljs-number">3</span><span class="hljs-punctuation">,</span><span class="hljs-punctuation">]</span>  <span class="hljs-number">0.5422206</span> <span class="hljs-operator">-</span><span class="hljs-number">0.4600465</span><br><span class="hljs-punctuation">[</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span><span class="hljs-punctuation">]</span> <span class="hljs-operator">-</span><span class="hljs-number">1.1728489</span> <span class="hljs-operator">-</span><span class="hljs-number">0.1436682</span><br><span class="hljs-punctuation">[</span><span class="hljs-number">5</span><span class="hljs-punctuation">,</span><span class="hljs-punctuation">]</span>  <span class="hljs-number">0.2145623</span> <span class="hljs-operator">-</span><span class="hljs-number">0.2755651</span><br><span class="hljs-punctuation">[</span><span class="hljs-number">6</span><span class="hljs-punctuation">,</span><span class="hljs-punctuation">]</span>  <span class="hljs-number">0.2530279</span>  <span class="hljs-number">0.4243228</span><br><span class="hljs-operator">&gt;</span> typeof<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span><br><span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">]</span> <span class="hljs-string">&quot;double&quot;</span><br><br><span class="hljs-comment">## 之后整合为list</span><br><span class="hljs-operator">&gt;</span> mydata <span class="hljs-operator">&lt;-</span> as.data.frame<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span><br>          V1         V2<br><span class="hljs-number">1</span> <span class="hljs-operator">-</span><span class="hljs-number">0.6035329</span> <span class="hljs-operator">-</span><span class="hljs-number">0.4125721</span><br><span class="hljs-number">2</span>  <span class="hljs-number">0.1387146</span>  <span class="hljs-number">0.1735841</span><br><span class="hljs-number">3</span>  <span class="hljs-number">0.5422206</span> <span class="hljs-operator">-</span><span class="hljs-number">0.4600465</span><br><span class="hljs-number">4</span> <span class="hljs-operator">-</span><span class="hljs-number">1.1728489</span> <span class="hljs-operator">-</span><span class="hljs-number">0.1436682</span><br><span class="hljs-number">5</span>  <span class="hljs-number">0.2145623</span> <span class="hljs-operator">-</span><span class="hljs-number">0.2755651</span><br><span class="hljs-number">6</span>  <span class="hljs-number">0.2530279</span>  <span class="hljs-number">0.4243228</span><br><span class="hljs-operator">&gt;</span> typeof<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span><br><span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">]</span> <span class="hljs-string">&quot;list&quot;</span><br><br><span class="hljs-comment">## 规定mydata的两列标题</span><br><span class="hljs-operator">&gt;</span> <span class="hljs-built_in">names</span><span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span> <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;x&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;y&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> typeof<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span><br><span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">]</span> <span class="hljs-string">&quot;list&quot;</span><br><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span><br>           x          y<br><span class="hljs-number">1</span> <span class="hljs-operator">-</span><span class="hljs-number">0.6035329</span> <span class="hljs-operator">-</span><span class="hljs-number">0.4125721</span><br><span class="hljs-number">2</span>  <span class="hljs-number">0.1387146</span>  <span class="hljs-number">0.1735841</span><br><span class="hljs-number">3</span>  <span class="hljs-number">0.5422206</span> <span class="hljs-operator">-</span><span class="hljs-number">0.4600465</span><br><span class="hljs-number">4</span> <span class="hljs-operator">-</span><span class="hljs-number">1.1728489</span> <span class="hljs-operator">-</span><span class="hljs-number">0.1436682</span><br><span class="hljs-number">5</span>  <span class="hljs-number">0.2145623</span> <span class="hljs-operator">-</span><span class="hljs-number">0.2755651</span><br><span class="hljs-number">6</span>  <span class="hljs-number">0.2530279</span>  <span class="hljs-number">0.4243228</span><br></code></pre></td></tr></table></figure>
+
+<p>生成散点图：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R">attach<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span><br>plot<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y<span class="hljs-punctuation">,</span> pch<span class="hljs-operator">=</span><span class="hljs-number">19</span><span class="hljs-punctuation">,</span> main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Scatter Plot with 10,000 Observations&quot;</span><span class="hljs-punctuation">)</span><br>detach<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p><code>smoothScatter()</code>函数可利用核密度估计生成用颜色密度来表示点分布的散点图。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs R">smoothScatter<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> nbin <span class="hljs-operator">=</span> <span class="hljs-number">128</span><span class="hljs-punctuation">,</span> bandwidth<span class="hljs-punctuation">,</span><br>              colramp <span class="hljs-operator">=</span> colorRampPalette<span class="hljs-punctuation">(</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">,</span> blues9<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>              nrpoints <span class="hljs-operator">=</span> <span class="hljs-number">100</span><span class="hljs-punctuation">,</span> ret.selection <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span><br>              pch <span class="hljs-operator">=</span> <span class="hljs-string">&quot;.&quot;</span><span class="hljs-punctuation">,</span> cex <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span> col <span class="hljs-operator">=</span> <span class="hljs-string">&quot;black&quot;</span><span class="hljs-punctuation">,</span><br>              transformation <span class="hljs-operator">=</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span> x<span class="hljs-operator">^</span><span class="hljs-number">.25</span><span class="hljs-punctuation">,</span><br>              postPlotHook <span class="hljs-operator">=</span> box<span class="hljs-punctuation">,</span><br>              xlab <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> ylab <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> xlim<span class="hljs-punctuation">,</span> ylim<span class="hljs-punctuation">,</span><br>              xaxs <span class="hljs-operator">=</span> par<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;xaxs&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> yaxs <span class="hljs-operator">=</span> par<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;yaxs&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> ...<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>代码如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R">attach<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span><br>smoothScatter<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y<span class="hljs-punctuation">,</span> main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Scatter Plot Colored by Smoothed Densities&quot;</span><span class="hljs-punctuation">)</span><br>detach<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807200618128.png" srcset="/img/loading.gif" lazyload alt="image-20200807200618128"></p>
+<p><code>hexbin</code>包中的<code>hexbin()</code>函数将二元变量的封箱放到六边形单元格中（图形比名称更直观）。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R">hexbin<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y<span class="hljs-punctuation">,</span> xbins <span class="hljs-operator">=</span> <span class="hljs-number">30</span><span class="hljs-punctuation">,</span> shape <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>       xbnds <span class="hljs-operator">=</span> <span class="hljs-built_in">range</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> ybnds <span class="hljs-operator">=</span> <span class="hljs-built_in">range</span><span class="hljs-punctuation">(</span>y<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>       xlab <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> ylab <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> IDs <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>示例如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs R">library<span class="hljs-punctuation">(</span>hexbin<span class="hljs-punctuation">)</span> <br>with<span class="hljs-punctuation">(</span>mydata<span class="hljs-punctuation">,</span> <span class="hljs-punctuation">&#123;</span> <br>    bin <span class="hljs-operator">&lt;-</span> hexbin<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y<span class="hljs-punctuation">,</span> xbins<span class="hljs-operator">=</span><span class="hljs-number">50</span><span class="hljs-punctuation">)</span> <br>    plot<span class="hljs-punctuation">(</span>bin<span class="hljs-punctuation">,</span> main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Hexagonal Binning with 10,000 Observations&quot;</span><span class="hljs-punctuation">)</span> <br> <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807200813952.png" srcset="/img/loading.gif" lazyload alt="image-20200807200813952" style="zoom: 80%;" />
+
+<h2 id="三维散点图"><a href="#三维散点图" class="headerlink" title="三维散点图"></a>三维散点图</h2><h3 id="1-静态"><a href="#1-静态" class="headerlink" title="1. 静态"></a>1. 静态</h3><p>可用<code>scatterplot3d</code>包中的<code>scatterplot3d()</code>函数来绘制三维散点图</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;formula&#x27;: </span><br>scatter3d<span class="hljs-punctuation">(</span>formula<span class="hljs-punctuation">,</span> data<span class="hljs-punctuation">,</span> subset<span class="hljs-punctuation">,</span> radius<span class="hljs-punctuation">,</span> xlab<span class="hljs-punctuation">,</span> ylab<span class="hljs-punctuation">,</span> zlab<span class="hljs-punctuation">,</span> id<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> ...<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span><br>scatter3d<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y<span class="hljs-punctuation">,</span> z<span class="hljs-punctuation">,</span><br>	  xlab<span class="hljs-operator">=</span>deparse<span class="hljs-punctuation">(</span><span class="hljs-built_in">substitute</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> ylab<span class="hljs-operator">=</span>deparse<span class="hljs-punctuation">(</span><span class="hljs-built_in">substitute</span><span class="hljs-punctuation">(</span>y<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	  zlab<span class="hljs-operator">=</span>deparse<span class="hljs-punctuation">(</span><span class="hljs-built_in">substitute</span><span class="hljs-punctuation">(</span>z<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> axis.scales<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> axis.ticks<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span><br>	  revolutions<span class="hljs-operator">=</span><span class="hljs-number">0</span><span class="hljs-punctuation">,</span><br>	  bg.col<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;black&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	  axis.col<span class="hljs-operator">=</span><span class="hljs-keyword">if</span> <span class="hljs-punctuation">(</span>bg.col <span class="hljs-operator">==</span> <span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">)</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;darkmagenta&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;black&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;darkcyan&quot;</span><span class="hljs-punctuation">)</span><br>		            <span class="hljs-keyword">else</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;darkmagenta&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;darkcyan&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	  surface.col<span class="hljs-operator">=</span>carPalette<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">[</span><span class="hljs-operator">-</span><span class="hljs-number">1</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span> surface.alpha<span class="hljs-operator">=</span><span class="hljs-number">0.5</span><span class="hljs-punctuation">,</span><br>	  neg.res.col<span class="hljs-operator">=</span><span class="hljs-string">&quot;magenta&quot;</span><span class="hljs-punctuation">,</span> pos.res.col<span class="hljs-operator">=</span><span class="hljs-string">&quot;cyan&quot;</span><span class="hljs-punctuation">,</span><br>	  square.col<span class="hljs-operator">=</span><span class="hljs-keyword">if</span> <span class="hljs-punctuation">(</span>bg.col <span class="hljs-operator">==</span> <span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">)</span> <span class="hljs-string">&quot;black&quot;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&quot;gray&quot;</span><span class="hljs-punctuation">,</span><br>	  point.col<span class="hljs-operator">=</span><span class="hljs-string">&quot;yellow&quot;</span><span class="hljs-punctuation">,</span> text.col<span class="hljs-operator">=</span>axis.col<span class="hljs-punctuation">,</span><br>	  grid.col<span class="hljs-operator">=</span><span class="hljs-keyword">if</span> <span class="hljs-punctuation">(</span>bg.col <span class="hljs-operator">==</span> <span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">)</span> <span class="hljs-string">&quot;black&quot;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&quot;gray&quot;</span><span class="hljs-punctuation">,</span><br>	  fogtype<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;exp2&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;linear&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;exp&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;none&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	  residuals<span class="hljs-operator">=</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">length</span><span class="hljs-punctuation">(</span>fit<span class="hljs-punctuation">)</span> <span class="hljs-operator">==</span> <span class="hljs-number">1</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	  surface<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> fill<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span><br>	  grid<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> grid.lines<span class="hljs-operator">=</span><span class="hljs-number">26</span><span class="hljs-punctuation">,</span> df.smooth<span class="hljs-operator">=</span><span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> df.additive<span class="hljs-operator">=</span><span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>	  sphere.size<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> radius<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> threshold<span class="hljs-operator">=</span><span class="hljs-number">0.01</span><span class="hljs-punctuation">,</span> speed<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> fov<span class="hljs-operator">=</span><span class="hljs-number">60</span><span class="hljs-punctuation">,</span><br>	  fit<span class="hljs-operator">=</span><span class="hljs-string">&quot;linear&quot;</span><span class="hljs-punctuation">,</span> groups<span class="hljs-operator">=</span><span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> parallel<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span><br>	  ellipsoid<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> level<span class="hljs-operator">=</span><span class="hljs-number">0.5</span><span class="hljs-punctuation">,</span> ellipsoid.alpha<span class="hljs-operator">=</span><span class="hljs-number">0.1</span><span class="hljs-punctuation">,</span> id<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span><br>	  model.summary<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> ...<span class="hljs-punctuation">)</span><br><br>Identify3d<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y<span class="hljs-punctuation">,</span> z<span class="hljs-punctuation">,</span> axis.scales<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> groups <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> labels <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-operator">:</span><span class="hljs-built_in">length</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	col <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;blue&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;green&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;orange&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;magenta&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;cyan&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;red&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;yellow&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;gray&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	offset <span class="hljs-operator">=</span> <span class="hljs-punctuation">(</span><span class="hljs-punctuation">(</span><span class="hljs-number">100</span><span class="hljs-operator">/</span><span class="hljs-built_in">length</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-operator">^</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-operator">/</span><span class="hljs-number">3</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <span class="hljs-operator">*</span> <span class="hljs-number">0.02</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p><code>satterplot3d()</code>函数提供了许多选项，包括设置图形符号、轴、颜色、线条、网格线、突出显示和角度等功能。</p>
+<p>示例如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>scatterplot3d<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> scatterplot3d<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span>y<span class="hljs-punctuation">,</span>z<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>scatterplot3d<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> attach<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> scatterplot3d<span class="hljs-punctuation">(</span>wt<span class="hljs-punctuation">,</span> disp<span class="hljs-punctuation">,</span> mpg<span class="hljs-punctuation">,</span> <br>               main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Basic 3D Scatter Plot&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> detach<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807201430874.png" srcset="/img/loading.gif" lazyload alt="image-20200807201430874" style="zoom: 67%;" />
+
+<p>突出显示例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs R">library<span class="hljs-punctuation">(</span>scatterplot3d<span class="hljs-punctuation">)</span> <br>attach<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span> <br>scatterplot3d<span class="hljs-punctuation">(</span>wt<span class="hljs-punctuation">,</span> disp<span class="hljs-punctuation">,</span> mpg<span class="hljs-punctuation">,</span> <br>              pch<span class="hljs-operator">=</span><span class="hljs-number">16</span><span class="hljs-punctuation">,</span> <br>              highlight.3d<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> <br>              type<span class="hljs-operator">=</span><span class="hljs-string">&quot;h&quot;</span><span class="hljs-punctuation">,</span> <br>              main<span class="hljs-operator">=</span><span class="hljs-string">&quot;3D Scatter Plot with Vertical Lines&quot;</span><span class="hljs-punctuation">)</span><br>detach<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807201854214.png" srcset="/img/loading.gif" lazyload alt="image-20200807201854214" style="zoom:67%;" />
+
+<p>添加回归面：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> attach<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> s3d <span class="hljs-operator">&lt;-</span>scatterplot3d<span class="hljs-punctuation">(</span>wt<span class="hljs-punctuation">,</span> disp<span class="hljs-punctuation">,</span> mpg<span class="hljs-punctuation">,</span> <br>                   pch<span class="hljs-operator">=</span><span class="hljs-number">16</span><span class="hljs-punctuation">,</span> <br>                   highlight.3d<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> <br>                   type<span class="hljs-operator">=</span><span class="hljs-string">&quot;h&quot;</span><span class="hljs-punctuation">,</span> <br>                   main<span class="hljs-operator">=</span><span class="hljs-string">&quot;3D Scatter Plot with Vertical Lines and Regression Plane&quot;</span><span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> fit <span class="hljs-operator">&lt;-</span> lm<span class="hljs-punctuation">(</span>mpg <span class="hljs-operator">~</span> wt<span class="hljs-operator">+</span>disp<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> s3d<span class="hljs-operator">$</span>plane3d<span class="hljs-punctuation">(</span>fit<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> detach<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807202119770.png" srcset="/img/loading.gif" lazyload alt="image-20200807202119770" style="zoom:80%;" />
+
+<h3 id="2-旋转可交互式三维散点图"><a href="#2-旋转可交互式三维散点图" class="headerlink" title="2. 旋转可交互式三维散点图"></a>2. 旋转可交互式三维散点图</h3><p>如果能对三维散点图进行交互式操作，那么图形将会更好解释。R提供了一些旋转图形的功能，让你可以从多个角度观测绘制的数据点。</p>
+<p>可用rgl包中的plot3d()函数创建可交互的三维散点图。你能通过鼠标对图形进行旋转。函数格式为：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span><br>plot3d<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y<span class="hljs-punctuation">,</span> z<span class="hljs-punctuation">,</span>  <br>	xlab<span class="hljs-punctuation">,</span> ylab<span class="hljs-punctuation">,</span> zlab<span class="hljs-punctuation">,</span> type <span class="hljs-operator">=</span> <span class="hljs-string">&quot;p&quot;</span><span class="hljs-punctuation">,</span> col<span class="hljs-punctuation">,</span>  <br>	size<span class="hljs-punctuation">,</span> lwd<span class="hljs-punctuation">,</span> radius<span class="hljs-punctuation">,</span><br>	add <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> aspect <span class="hljs-operator">=</span> <span class="hljs-operator">!</span>add<span class="hljs-punctuation">,</span> <br>	xlim <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> ylim <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> zlim <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> <br>	forceClipregion <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> ...<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;mesh3d&#x27;:</span><br>plot3d<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> xlab <span class="hljs-operator">=</span> <span class="hljs-string">&quot;x&quot;</span><span class="hljs-punctuation">,</span> ylab <span class="hljs-operator">=</span> <span class="hljs-string">&quot;y&quot;</span><span class="hljs-punctuation">,</span> zlab <span class="hljs-operator">=</span> <span class="hljs-string">&quot;z&quot;</span><span class="hljs-punctuation">,</span> type <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;shade&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;wire&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;dots&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	add <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> aspect <span class="hljs-operator">=</span> <span class="hljs-operator">!</span>add<span class="hljs-punctuation">,</span> ...<span class="hljs-punctuation">)</span><br>decorate3d<span class="hljs-punctuation">(</span>xlim<span class="hljs-punctuation">,</span> ylim<span class="hljs-punctuation">,</span> zlim<span class="hljs-punctuation">,</span> <br>	xlab <span class="hljs-operator">=</span> <span class="hljs-string">&quot;x&quot;</span><span class="hljs-punctuation">,</span> ylab <span class="hljs-operator">=</span> <span class="hljs-string">&quot;y&quot;</span><span class="hljs-punctuation">,</span> zlab <span class="hljs-operator">=</span> <span class="hljs-string">&quot;z&quot;</span><span class="hljs-punctuation">,</span> <br>	box <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> axes <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> main <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> sub <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>	top <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> aspect <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> expand <span class="hljs-operator">=</span> <span class="hljs-number">1.03</span><span class="hljs-punctuation">,</span> <br>	...<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs R">library<span class="hljs-punctuation">(</span>rgl<span class="hljs-punctuation">)</span> <br>attach<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span> <br>plot3d<span class="hljs-punctuation">(</span>wt<span class="hljs-punctuation">,</span> disp<span class="hljs-punctuation">,</span> mpg<span class="hljs-punctuation">,</span> col<span class="hljs-operator">=</span><span class="hljs-string">&quot;red&quot;</span><span class="hljs-punctuation">,</span> size<span class="hljs-operator">=</span><span class="hljs-number">5</span><span class="hljs-punctuation">)</span><br>detach<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>之后会出现这样的一个可交互的界面，可以通过鼠标来对模型进行旋转操作：</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807203539287.png" srcset="/img/loading.gif" lazyload alt="image-20200807203539287" style="zoom:50%;" />
+
+<p>用<code>car</code>包中类似的函数<code>scatter3d()</code>也可以实现交互效果：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;formula&#x27;: </span><br>scatter3d<span class="hljs-punctuation">(</span>formula<span class="hljs-punctuation">,</span> data<span class="hljs-punctuation">,</span> subset<span class="hljs-punctuation">,</span> radius<span class="hljs-punctuation">,</span> xlab<span class="hljs-punctuation">,</span> ylab<span class="hljs-punctuation">,</span> zlab<span class="hljs-punctuation">,</span> id<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> ...<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span><br>scatter3d<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y<span class="hljs-punctuation">,</span> z<span class="hljs-punctuation">,</span><br>	  xlab<span class="hljs-operator">=</span>deparse<span class="hljs-punctuation">(</span><span class="hljs-built_in">substitute</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> ylab<span class="hljs-operator">=</span>deparse<span class="hljs-punctuation">(</span><span class="hljs-built_in">substitute</span><span class="hljs-punctuation">(</span>y<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	  zlab<span class="hljs-operator">=</span>deparse<span class="hljs-punctuation">(</span><span class="hljs-built_in">substitute</span><span class="hljs-punctuation">(</span>z<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> axis.scales<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> axis.ticks<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span><br>	  revolutions<span class="hljs-operator">=</span><span class="hljs-number">0</span><span class="hljs-punctuation">,</span><br>	  bg.col<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;black&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	  axis.col<span class="hljs-operator">=</span><span class="hljs-keyword">if</span> <span class="hljs-punctuation">(</span>bg.col <span class="hljs-operator">==</span> <span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">)</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;darkmagenta&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;black&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;darkcyan&quot;</span><span class="hljs-punctuation">)</span><br>		            <span class="hljs-keyword">else</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;darkmagenta&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;darkcyan&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	  surface.col<span class="hljs-operator">=</span>carPalette<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">[</span><span class="hljs-operator">-</span><span class="hljs-number">1</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span> surface.alpha<span class="hljs-operator">=</span><span class="hljs-number">0.5</span><span class="hljs-punctuation">,</span><br>	  neg.res.col<span class="hljs-operator">=</span><span class="hljs-string">&quot;magenta&quot;</span><span class="hljs-punctuation">,</span> pos.res.col<span class="hljs-operator">=</span><span class="hljs-string">&quot;cyan&quot;</span><span class="hljs-punctuation">,</span><br>	  square.col<span class="hljs-operator">=</span><span class="hljs-keyword">if</span> <span class="hljs-punctuation">(</span>bg.col <span class="hljs-operator">==</span> <span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">)</span> <span class="hljs-string">&quot;black&quot;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&quot;gray&quot;</span><span class="hljs-punctuation">,</span><br>	  point.col<span class="hljs-operator">=</span><span class="hljs-string">&quot;yellow&quot;</span><span class="hljs-punctuation">,</span> text.col<span class="hljs-operator">=</span>axis.col<span class="hljs-punctuation">,</span><br>	  grid.col<span class="hljs-operator">=</span><span class="hljs-keyword">if</span> <span class="hljs-punctuation">(</span>bg.col <span class="hljs-operator">==</span> <span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">)</span> <span class="hljs-string">&quot;black&quot;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&quot;gray&quot;</span><span class="hljs-punctuation">,</span><br>	  fogtype<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;exp2&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;linear&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;exp&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;none&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	  residuals<span class="hljs-operator">=</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">length</span><span class="hljs-punctuation">(</span>fit<span class="hljs-punctuation">)</span> <span class="hljs-operator">==</span> <span class="hljs-number">1</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	  surface<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> fill<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span><br>	  grid<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> grid.lines<span class="hljs-operator">=</span><span class="hljs-number">26</span><span class="hljs-punctuation">,</span> df.smooth<span class="hljs-operator">=</span><span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> df.additive<span class="hljs-operator">=</span><span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>	  sphere.size<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> radius<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> threshold<span class="hljs-operator">=</span><span class="hljs-number">0.01</span><span class="hljs-punctuation">,</span> speed<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> fov<span class="hljs-operator">=</span><span class="hljs-number">60</span><span class="hljs-punctuation">,</span><br>	  fit<span class="hljs-operator">=</span><span class="hljs-string">&quot;linear&quot;</span><span class="hljs-punctuation">,</span> groups<span class="hljs-operator">=</span><span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> parallel<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span><br>	  ellipsoid<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> level<span class="hljs-operator">=</span><span class="hljs-number">0.5</span><span class="hljs-punctuation">,</span> ellipsoid.alpha<span class="hljs-operator">=</span><span class="hljs-number">0.1</span><span class="hljs-punctuation">,</span> id<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span><br>	  model.summary<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> ...<span class="hljs-punctuation">)</span><br><br>Identify3d<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y<span class="hljs-punctuation">,</span> z<span class="hljs-punctuation">,</span> axis.scales<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> groups <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> labels <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-operator">:</span><span class="hljs-built_in">length</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	col <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;blue&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;green&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;orange&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;magenta&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;cyan&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;red&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;yellow&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;gray&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span><br>	offset <span class="hljs-operator">=</span> <span class="hljs-punctuation">(</span><span class="hljs-punctuation">(</span><span class="hljs-number">100</span><span class="hljs-operator">/</span><span class="hljs-built_in">length</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-operator">^</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-operator">/</span><span class="hljs-number">3</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <span class="hljs-operator">*</span> <span class="hljs-number">0.02</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>car<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> with<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">,</span> <br>      scatter3d<span class="hljs-punctuation">(</span>wt<span class="hljs-punctuation">,</span> disp<span class="hljs-punctuation">,</span> mpg<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807203829535.png" srcset="/img/loading.gif" lazyload alt="image-20200807203829535" style="zoom:67%;" />
+
+<h2 id="气泡图"><a href="#气泡图" class="headerlink" title="气泡图"></a>气泡图</h2><p>气泡图（bubble plot）即先创建一个二维散点图，然后用点的大小来代表第三个变量的值。</p>
+<p>可用<code>symbols()</code>函数来创建气泡图。该函数可以在指定的(<em>x</em>, <em>y</em>)坐标上绘制圆圈图、方形图、星形图、温度计图和箱线图。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs R">symbols<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> circles<span class="hljs-punctuation">,</span> squares<span class="hljs-punctuation">,</span> rectangles<span class="hljs-punctuation">,</span> stars<span class="hljs-punctuation">,</span><br>        thermometers<span class="hljs-punctuation">,</span> boxplots<span class="hljs-punctuation">,</span> inches <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> add <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span><br>        fg <span class="hljs-operator">=</span> par<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;col&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> bg <span class="hljs-operator">=</span> <span class="hljs-literal">NA</span><span class="hljs-punctuation">,</span><br>        xlab <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> ylab <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> main <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>        xlim <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> ylim <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> ...<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>以绘制圆圈图为例：</p>
+<p><code>symbols(x, y, circle=radius) </code>, 其中<code>x</code>、<code>y</code>和<code>radius</code>是需要设定的向量，分别表示x、y坐标和圆圈半径。</p>
+<p>如果想用面积而不是半径来表示第三个变量，那么按照圆圈半径的公式（$r &#x3D; \sqrt{\frac{A}{\pi}}$ ）变换即可：<code>symbols(x, y, circle=sqrt(z/pi))</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> r <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">sqrt</span><span class="hljs-punctuation">(</span>disp<span class="hljs-operator">/</span><span class="hljs-built_in">pi</span><span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> symbols<span class="hljs-punctuation">(</span>wt<span class="hljs-punctuation">,</span> mpg<span class="hljs-punctuation">,</span> circle<span class="hljs-operator">=</span>r<span class="hljs-punctuation">,</span> inches<span class="hljs-operator">=</span><span class="hljs-number">0.30</span><span class="hljs-punctuation">,</span> <br>         fg<span class="hljs-operator">=</span><span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">,</span> bg<span class="hljs-operator">=</span><span class="hljs-string">&quot;lightblue&quot;</span><span class="hljs-punctuation">,</span> <br>         main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Bubble Plot with point size proportional to displacement&quot;</span><span class="hljs-punctuation">,</span> <br>         ylab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Miles Per Gallon&quot;</span><span class="hljs-punctuation">,</span> <br>         xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Weight of Car (lbs/1000)&quot;</span><span class="hljs-punctuation">)</span> <br><span class="hljs-comment"># inches是比例因子，控制着圆圈大小（默认最大圆圈为1英寸）</span><br><span class="hljs-operator">&gt;</span> text<span class="hljs-punctuation">(</span>wt<span class="hljs-punctuation">,</span> mpg<span class="hljs-punctuation">,</span> rownames<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> cex<span class="hljs-operator">=</span><span class="hljs-number">0.6</span><span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> detach<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807204318549.png" srcset="/img/loading.gif" lazyload alt="image-20200807204318549"></p>
+<h1 id="二、折线图"><a href="#二、折线图" class="headerlink" title="二、折线图"></a>二、折线图</h1><p>这部分以R内置的<code>Orange</code>数据集为例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>Orange<span class="hljs-punctuation">)</span><br>  Tree  age circumference<br><span class="hljs-number">1</span>    <span class="hljs-number">1</span>  <span class="hljs-number">118</span>            <span class="hljs-number">30</span><br><span class="hljs-number">2</span>    <span class="hljs-number">1</span>  <span class="hljs-number">484</span>            <span class="hljs-number">58</span><br><span class="hljs-number">3</span>    <span class="hljs-number">1</span>  <span class="hljs-number">664</span>            <span class="hljs-number">87</span><br><span class="hljs-number">4</span>    <span class="hljs-number">1</span> <span class="hljs-number">1004</span>           <span class="hljs-number">115</span><br><span class="hljs-number">5</span>    <span class="hljs-number">1</span> <span class="hljs-number">1231</span>           <span class="hljs-number">120</span><br><span class="hljs-number">6</span>    <span class="hljs-number">1</span> <span class="hljs-number">1372</span>           <span class="hljs-number">142</span><br></code></pre></td></tr></table></figure>
+
+<p>如果将散点图上的点从左往右连接起来，就会得到一个折线图.</p>
+<h2 id="相关函数及参数"><a href="#相关函数及参数" class="headerlink" title="相关函数及参数"></a>相关函数及参数</h2><p>折线图一般可用下列两个函数之一来创建： </p>
+<p><code>plot(x, y, type=)</code>  </p>
+<p><code>lines(x, y, type=)</code></p>
+<h3 id="1-点类型"><a href="#1-点类型" class="headerlink" title="1. 点类型"></a>1. 点类型</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pch (plotting character)</td>
+<td>指定绘制点时使用的符号</td>
+</tr>
+<tr>
+<td>cex</td>
+<td>指定符号的大小。cex 是一个数值，表示绘图符号相对于默认大小的缩放倍数。默认大小为 1，1.5 表示放大为默认值的 1.5 倍，0.5 表示缩小为默认值的 50%，等等</td>
+</tr>
+</tbody></table>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200712222057141.png" srcset="/img/loading.gif" lazyload alt="image-20200712222057141" style="zoom: 67%;" />
+
+<h3 id="2-线条类型"><a href="#2-线条类型" class="headerlink" title="2. 线条类型"></a>2. 线条类型</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>lty</td>
+<td>指定线条类型</td>
+</tr>
+<tr>
+<td>lwd</td>
+<td>指定线条宽度。lwd 是以默认值的相对大小来表示的（默认值为 1）。例如，lwd&#x3D;2 将生成一条两倍于默认宽度的线条</td>
+</tr>
+</tbody></table>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200712223518295.png" srcset="/img/loading.gif" lazyload alt="image-20200712223518295" style="zoom:67%;" />
+
+<h3 id="3-参数：type"><a href="#3-参数：type" class="headerlink" title="3. 参数：type"></a>3. 参数：<code>type</code></h3><p>参数<code>type</code>指定图像类型：</p>
+<table>
+<thead>
+<tr>
+<th>参数（type&#x3D;）</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>p</td>
+<td>只有点</td>
+</tr>
+<tr>
+<td>l</td>
+<td>只有线</td>
+</tr>
+<tr>
+<td>o</td>
+<td>实心点和线（即线覆盖在点上）</td>
+</tr>
+<tr>
+<td>b、c</td>
+<td>线连接点（c 时不绘制点）</td>
+</tr>
+<tr>
+<td>s、S</td>
+<td>阶梯线</td>
+</tr>
+<tr>
+<td>h</td>
+<td>直方图式的垂直线</td>
+</tr>
+<tr>
+<td>n</td>
+<td>不生成任何点和线（通常用来为后面的命令创建坐标轴）</td>
+</tr>
+</tbody></table>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808214925804.png" srcset="/img/loading.gif" lazyload alt="image-20200808214925804"></p>
+<h3 id="4-示例"><a href="#4-示例" class="headerlink" title="4. 示例"></a>4. 示例</h3><p>在绘制单一数据集的折线图的时候，在<code>plot</code>, <code>line</code>函数中直接调用数据集：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> opar <span class="hljs-operator">&lt;-</span> par<span class="hljs-punctuation">(</span>no.readonly <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> par<span class="hljs-punctuation">(</span>mfrow<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> t1 <span class="hljs-operator">&lt;-</span> subset<span class="hljs-punctuation">(</span>Orange<span class="hljs-punctuation">,</span> Tree<span class="hljs-operator">==</span><span class="hljs-number">1</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> plot<span class="hljs-punctuation">(</span>t1<span class="hljs-operator">$</span>age<span class="hljs-punctuation">,</span> t1<span class="hljs-operator">$</span>circumference<span class="hljs-punctuation">,</span> <br>      xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Age (days)&quot;</span><span class="hljs-punctuation">,</span> <br>      ylab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Circumference (mm)&quot;</span><span class="hljs-punctuation">,</span> <br>      main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Orange Tree 1 Growth&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> plot<span class="hljs-punctuation">(</span>t1<span class="hljs-operator">$</span>age<span class="hljs-punctuation">,</span> t1<span class="hljs-operator">$</span>circumference<span class="hljs-punctuation">,</span> <br>      xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Age (days)&quot;</span><span class="hljs-punctuation">,</span> <br>      ylab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Circumference (mm)&quot;</span><span class="hljs-punctuation">,</span> <br>      main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Orange Tree 1 Growth&quot;</span><span class="hljs-punctuation">,</span> <br>      type<span class="hljs-operator">=</span><span class="hljs-string">&quot;b&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> par<span class="hljs-punctuation">(</span>opar<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808214108345.png" srcset="/img/loading.gif" lazyload alt="image-20200808214108345" style="zoom:67%;" />
+
+<p>在绘制多个数据集的时候，即将多个折线放在同一张图里时，则先使用<code>plot</code>函数绘制出一个只有坐标轴的空的区域，之后再向上添加折线：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 为方便起见，将因子转化为数值型</span><br><span class="hljs-operator">&gt;</span> Orange<span class="hljs-operator">$</span>Tree <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">as.numeric</span><span class="hljs-punctuation">(</span>Orange<span class="hljs-operator">$</span>Tree<span class="hljs-punctuation">)</span> <br><span class="hljs-comment"># 确定需要绘制的折线数目</span><br><span class="hljs-operator">&gt;</span> ntrees <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">max</span><span class="hljs-punctuation">(</span>Orange<span class="hljs-operator">$</span>Tree<span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 获得四个角的坐标</span><br><span class="hljs-operator">&gt;</span> xrange <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">range</span><span class="hljs-punctuation">(</span>Orange<span class="hljs-operator">$</span>age<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> yrange <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">range</span><span class="hljs-punctuation">(</span>Orange<span class="hljs-operator">$</span>circumference<span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 绘制四个点，在正方形的四个角处</span><br><span class="hljs-comment"># 由于type=n，因此不显示点，因此得到符合期望的只有坐标轴的空白背景</span><br><span class="hljs-operator">&gt;</span> plot<span class="hljs-punctuation">(</span>xrange<span class="hljs-punctuation">,</span> yrange<span class="hljs-punctuation">,</span> <br>      type<span class="hljs-operator">=</span><span class="hljs-string">&quot;n&quot;</span><span class="hljs-punctuation">,</span> <br>      xlab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Age (days)&quot;</span><span class="hljs-punctuation">,</span> <br>      ylab<span class="hljs-operator">=</span><span class="hljs-string">&quot;Circumference (mm)&quot;</span> <br> <span class="hljs-punctuation">)</span><br><br><span class="hljs-comment">#设定需要绘制的各个折线的参数：颜色、线条以及点的格式 </span><br><span class="hljs-operator">&gt;</span> colors <span class="hljs-operator">&lt;-</span> rainbow<span class="hljs-punctuation">(</span>ntrees<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> linetype <span class="hljs-operator">&lt;-</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-operator">:</span>ntrees<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> plotchar <span class="hljs-operator">&lt;-</span> seq<span class="hljs-punctuation">(</span><span class="hljs-number">18</span><span class="hljs-punctuation">,</span> <span class="hljs-number">18</span><span class="hljs-operator">+</span>ntrees<span class="hljs-punctuation">,</span> <span class="hljs-number">1</span><span class="hljs-punctuation">)</span><br><br><span class="hljs-comment">#使用for循环绘制折线</span><br><span class="hljs-operator">&gt;</span> <span class="hljs-keyword">for</span> <span class="hljs-punctuation">(</span>i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span><span class="hljs-operator">:</span>ntrees<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">&#123;</span> <br>    <span class="hljs-comment">## 得到Orange数据集中当前Tree参数为i的子集 -&gt; tree</span><br>     tree <span class="hljs-operator">&lt;-</span> subset<span class="hljs-punctuation">(</span>Orange<span class="hljs-punctuation">,</span> Tree<span class="hljs-operator">==</span>i<span class="hljs-punctuation">)</span> <br>    <span class="hljs-comment">## 绘制子集tree的折线</span><br>     lines<span class="hljs-punctuation">(</span>tree<span class="hljs-operator">$</span>age<span class="hljs-punctuation">,</span> tree<span class="hljs-operator">$</span>circumference<span class="hljs-punctuation">,</span><br>           type<span class="hljs-operator">=</span><span class="hljs-string">&quot;b&quot;</span><span class="hljs-punctuation">,</span> <br>           lwd<span class="hljs-operator">=</span><span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <br>           lty<span class="hljs-operator">=</span>linetype<span class="hljs-punctuation">[</span>i<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span> <br>           col<span class="hljs-operator">=</span>colors<span class="hljs-punctuation">[</span>i<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span> <br>           pch<span class="hljs-operator">=</span>plotchar<span class="hljs-punctuation">[</span>i<span class="hljs-punctuation">]</span> <br>     <span class="hljs-punctuation">)</span> <br> <span class="hljs-punctuation">&#125;</span><br><br><span class="hljs-comment"># 后续对图像进行修正，添加标题和图例</span><br><span class="hljs-operator">&gt;</span> title<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;Tree Growth&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;example of line plot&quot;</span><span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 坐标(xrange[1], yrange[2])即左上角</span><br><span class="hljs-operator">&gt;</span> legend<span class="hljs-punctuation">(</span>xrange<span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span> yrange<span class="hljs-punctuation">[</span><span class="hljs-number">2</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span> <br>        <span class="hljs-number">1</span><span class="hljs-operator">:</span>ntrees<span class="hljs-punctuation">,</span> <br>        cex<span class="hljs-operator">=</span><span class="hljs-number">0.8</span><span class="hljs-punctuation">,</span> <br>        col<span class="hljs-operator">=</span>colors<span class="hljs-punctuation">,</span> <br>        pch<span class="hljs-operator">=</span>plotchar<span class="hljs-punctuation">,</span> <br>        lty<span class="hljs-operator">=</span>linetype<span class="hljs-punctuation">,</span> <br>        title<span class="hljs-operator">=</span><span class="hljs-string">&quot;Tree&quot;</span><br> <span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808215508583.png" srcset="/img/loading.gif" lazyload alt="image-20200808215508583" style="zoom:80%;" />
+
+<h1 id="三、相关图"><a href="#三、相关图" class="headerlink" title="三、相关图"></a>三、相关图</h1><p>相关系数矩阵是多元统计分析的一个基本方面。哪些被考察的变量与其他变量相关性很强，而哪些并不强？相关变量是否以某种特定的方式聚集在一起？随着变量数的增加，这类问题将变得更难回答。相关图作为一种相对现代的方法，可以通过对相关系数矩阵的可视化来回答这些问题。</p>
+<p>可以使用<code>cor()</code>函数获得变量之间的相关关系：</p>
+<p>Correlation, Variance and Covariance (Matrices):</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># Usage</span><br>var<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> na.rm <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> use<span class="hljs-punctuation">)</span><br><br>cov<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> use <span class="hljs-operator">=</span> <span class="hljs-string">&quot;everything&quot;</span><span class="hljs-punctuation">,</span><br>    method <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;pearson&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;kendall&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;spearman&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><br>cor<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> y <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> use <span class="hljs-operator">=</span> <span class="hljs-string">&quot;everything&quot;</span><span class="hljs-punctuation">,</span><br>    method <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;pearson&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;kendall&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;spearman&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><br>cov2cor<span class="hljs-punctuation">(</span>V<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x</td>
+<td>a numeric vector, matrix or data frame.</td>
+</tr>
+<tr>
+<td>y</td>
+<td>NULL (default) or a vector, matrix or data frame with compatible dimensions to x. The default is equivalent to y &#x3D; x (but more efficient).</td>
+</tr>
+<tr>
+<td>na.rm</td>
+<td>logical. Should missing values be removed?</td>
+</tr>
+<tr>
+<td>use</td>
+<td>an optional character string giving a method for computing covariances in the presence of missing values. This must be (an abbreviation of) one of the strings <code>&quot;everything&quot;</code>, <code>&quot;all.obs&quot;</code>, <code>&quot;complete.obs&quot;</code>, <code>&quot;na.or.complete&quot;</code>, or <code>&quot;pairwise.complete.obs&quot;</code>.</td>
+</tr>
+<tr>
+<td>method</td>
+<td>a character string indicating which correlation coefficient (or covariance) is to be computed. One of <code>&quot;pearson&quot;</code> (default), <code>&quot;kendall&quot;</code>, or <code>&quot;spearman&quot;</code>: can be abbreviated.</td>
+</tr>
+<tr>
+<td>V</td>
+<td>symmetric numeric matrix, usually positive definite such as a covariance matrix.</td>
+</tr>
+</tbody></table>
+<p>在绘制相关图的时候，利用<code>corrgram</code>包中的<code>corrgram()</code>函数，你可以用图形的方式展示该相关系数矩阵。</p>
+<p>常用格式：<code>corrgram(x, order=, panel=, text.panel=, diag.panel=)</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># Usage</span><br>corrgram<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">,</span> type <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> order <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> labels<span class="hljs-punctuation">,</span> <br>         panel <span class="hljs-operator">=</span> panel.shade<span class="hljs-punctuation">,</span> lower.panel <span class="hljs-operator">=</span> panel<span class="hljs-punctuation">,</span> <br>         upper.panel <span class="hljs-operator">=</span> panel<span class="hljs-punctuation">,</span> diag.panel <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span><br>         text.panel <span class="hljs-operator">=</span> textPanel<span class="hljs-punctuation">,</span> label.pos <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">0.5</span><span class="hljs-punctuation">,</span> <span class="hljs-number">0.5</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>         label.srt <span class="hljs-operator">=</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span>cex.labels <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> font.labels <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <br>         row1attop <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> dir <span class="hljs-operator">=</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span><br>         gap <span class="hljs-operator">=</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span> <span class="hljs-built_in">abs</span> <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> <br>         col.regions <span class="hljs-operator">=</span> colorRampPalette<span class="hljs-punctuation">(</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;red&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;salmon&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;white&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;royalblue&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;navy&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>         cor.method <span class="hljs-operator">=</span> <span class="hljs-string">&quot;pearson&quot;</span><span class="hljs-punctuation">,</span>outer.labels <span class="hljs-operator">=</span> <span class="hljs-literal">NULL</span><span class="hljs-punctuation">,</span> ...<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x</td>
+<td>一行一个观测的数据框</td>
+</tr>
+<tr>
+<td>order</td>
+<td>当<code>order=TRUE</code>时，相关矩阵将使用主成分分析法对变量重排序</td>
+</tr>
+<tr>
+<td>lower.panel，upper.panel</td>
+<td>设置主对角线下方和上方的元素类型</td>
+</tr>
+<tr>
+<td>text.panel，diag.panel</td>
+<td>主对角线元素类型</td>
+</tr>
+</tbody></table>
+<p><code>panel</code>相关的参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>面板选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>非对角线</td>
+<td>panel.pie</td>
+<td>用饼图的填充比例来表示相关性大小</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.shade</td>
+<td>用阴影的深度来表示相关性大小</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.ellipse</td>
+<td>画一个置信椭圆和平滑曲线</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.pts</td>
+<td>画一个散点图</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.conf</td>
+<td>画出相关性及置信区间</td>
+</tr>
+<tr>
+<td>主对角线</td>
+<td>panel.txt</td>
+<td>输出变量名</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.minmax</td>
+<td>输出变量的最大最小值和变量名</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.ednsity</td>
+<td>输出核密度曲线和变量名</td>
+</tr>
+</tbody></table>
+<p>这部分以预设数据集<code>mtcars</code>为例，进行制图示例。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 获得相关系数</span><br><span class="hljs-operator">&gt;</span> cor<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809162242215.png" srcset="/img/loading.gif" lazyload alt="image-20200809162242215"></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 绘制相关图</span><br><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>corrgram<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> corrgram<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">,</span> order<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> lower.panel<span class="hljs-operator">=</span>panel.shade<span class="hljs-punctuation">,</span> <br>          upper.panel<span class="hljs-operator">=</span>panel.pie<span class="hljs-punctuation">,</span> text.panel<span class="hljs-operator">=</span>panel.txt<span class="hljs-punctuation">,</span> <br>          main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Corrgram of mtcars intercorrelations&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809162355711.png" srcset="/img/loading.gif" lazyload alt="image-20200809162355711"></p>
+<p>对于图像的解释（本图为了将有相似相关模式的变量聚集在一起，对矩阵的行和列都重新进行了排序（使用主成分法））：</p>
+<ol>
+<li>蓝色和从左下指向右上的斜杠表示单元格中的两个变量呈正相关。反过来，红色和从左上指向右下的斜杠表示变量呈负相关。</li>
+<li>色彩越深，饱和度越高，说明变量相关性越大。相关性接近于0的单元格基本无色。<ul>
+<li>从图中含阴影的单元格中可以看到，<code>gear</code>、<code>am</code>、<code>drat</code>和<code>mpg</code>相互间呈正相关。<code>wt</code>、<code>disp</code>、<code>hp</code>和<code>carb</code>相互间也呈正相关。但第一组变量与第二组变量呈负相关。</li>
+<li><code>carb</code>和<code>am</code>、<code>vs</code>和<code>gear</code>、<code>vs</code>和<code>am</code>以及<code>drat</code>和<code>qsec</code>四组变量间的相关性很弱。</li>
+</ul>
+</li>
+<li>上三角单元格用饼图展示了相同的信息。颜色的功能同上，但相关性大小由被填充的饼图块的大小来展示。正相关性将从12点钟处开始顺时针填充饼图，而负相关性则逆时针方向填充饼图。</li>
+</ol>
+<p>其它示例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> corrgram<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">,</span> order<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> lower.panel<span class="hljs-operator">=</span>panel.ellipse<span class="hljs-punctuation">,</span> <br><span class="hljs-operator">+</span>          upper.panel<span class="hljs-operator">=</span>panel.pts<span class="hljs-punctuation">,</span> text.panel<span class="hljs-operator">=</span>panel.txt<span class="hljs-punctuation">,</span> <br><span class="hljs-operator">+</span>          main<span class="hljs-operator">=</span><span class="hljs-string">&quot;low:panel.ellipse, up:panel.pts&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809163800392.png" srcset="/img/loading.gif" lazyload alt="image-20200809163800392" style="zoom: 67%;" />
+
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> corrgram<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">,</span> order<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> lower.panel<span class="hljs-operator">=</span>panel.ellipse<span class="hljs-punctuation">,</span> <br><span class="hljs-operator">+</span>          upper.panel<span class="hljs-operator">=</span>panel.conf<span class="hljs-punctuation">,</span> text.panel<span class="hljs-operator">=</span>panel.txt<span class="hljs-punctuation">,</span> <br><span class="hljs-operator">+</span>          main<span class="hljs-operator">=</span><span class="hljs-string">&quot;low:panel.ellipse, up:panel.conf&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809163906795.png" srcset="/img/loading.gif" lazyload alt="image-20200809163906795" style="zoom:67%;" />
+
+<p>可以使用<code>col.corrgram</code>或在<code>corrgram()</code>函数中使用<code>col.regions</code>参数更改颜色：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> cols <span class="hljs-operator">&lt;-</span> colorRampPalette<span class="hljs-punctuation">(</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;darkgoldenrod4&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;burlywood1&quot;</span><span class="hljs-punctuation">,</span> <br><span class="hljs-operator">+</span>                            <span class="hljs-string">&quot;darkkhaki&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;darkgreen&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> corrgram<span class="hljs-punctuation">(</span>mtcars<span class="hljs-punctuation">,</span> order<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> col.regions<span class="hljs-operator">=</span>cols<span class="hljs-punctuation">,</span> <br><span class="hljs-operator">+</span>          lower.panel<span class="hljs-operator">=</span>panel.shade<span class="hljs-punctuation">,</span> <br><span class="hljs-operator">+</span>          upper.panel<span class="hljs-operator">=</span>panel.conf<span class="hljs-punctuation">,</span> text.panel<span class="hljs-operator">=</span>panel.txt<span class="hljs-punctuation">,</span> <br><span class="hljs-operator">+</span>          main<span class="hljs-operator">=</span><span class="hljs-string">&quot;A Corrgram (or Horse) of a Different Color&quot;</span><span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809164118661.png" srcset="/img/loading.gif" lazyload alt="image-20200809164118661"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" class="category-chain-item">软件使用总结</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/" class="category-chain-item">R</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E9%80%9F%E6%9F%A5/" class="print-no-link">#速查</a>
+      
+        <a href="/tags/R/" class="print-no-link">#R</a>
+      
+        <a href="/tags/Statistics/" class="print-no-link">#Statistics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>06. R &lt;- 基本绘图Ⅱ</div>
+      <div>https://zhenyumi.github.io/posts/ea35a990/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年8月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/aa088a94/" title="L26 Cancer cell biology">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L26 Cancer cell biology</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/59056965/" title="L25 Cells to tissues cell adhesion to extracellular matrix (ECM)">
+                        <span class="hidden-mobile">L25 Cells to tissues cell adhesion to extracellular matrix (ECM)</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

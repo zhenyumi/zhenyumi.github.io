@@ -1,0 +1,800 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L15 Inheritance of  Complex Quantitative Traits">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/d3e0f831/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+  
+  
+  
+  <title>L15 Inheritance of  Complex Quantitative Traits - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L15 Inheritance of  Complex Quantitative Traits</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          925 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L15 Inheritance of  Complex Quantitative Traits</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Frequency-Distributions"><a href="#一、Frequency-Distributions" class="headerlink" title="一、Frequency Distributions"></a>一、Frequency Distributions</h1><h2 id="Some-Definitions"><a href="#Some-Definitions" class="headerlink" title="Some Definitions"></a>Some Definitions</h2><h3 id="1-Population"><a href="#1-Population" class="headerlink" title="1. Population"></a>1. Population</h3><p><strong>Population</strong>: Group of individuals interested</p>
+<h3 id="2-Sample"><a href="#2-Sample" class="headerlink" title="2. Sample"></a>2. Sample</h3><p><strong>Sample</strong>: only a small fraction of all the individuals in the population can be measured. We call this group the sample.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103204055198.png" srcset="/img/loading.gif" lazyload alt="image-20200103204055198" style="zoom:67%;" />
+
+<h3 id="3-Frequency-Distribution"><a href="#3-Frequency-Distribution" class="headerlink" title="3. Frequency Distribution"></a>3. Frequency Distribution</h3><p><strong>Frequency distribution</strong>: is a list, table or graph that displays the frequency of various outcomes in a sample.</p>
+<p>Histogram 柱状图</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103204134579.png" srcset="/img/loading.gif" lazyload alt="image-20200103204134579" style="zoom:50%;" />
+
+<h3 id="4-Mean-or-Average-平均值"><a href="#4-Mean-or-Average-平均值" class="headerlink" title="4. Mean or Average 平均值"></a>4. Mean or Average 平均值</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">平均数，统计学术语，是表示一组数据集中趋势的量数，是指在一组数据中所有数据之和再除以这组数据的个数。它是反映数据集中趋势的一项指标。解答平均数应用题的关键在于确定“总数量”以及和总数量对应的总份数。<br></code></pre></td></tr></table></figure>
+
+
+<p>$$<br>\overline{x} &#x3D; \frac{x_1 + x_2 + ··· \ + x_n}{n}<br>$$</p>
+<h3 id="5-Median-中位数"><a href="#5-Median-中位数" class="headerlink" title="5. Median 中位数"></a>5. Median 中位数</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">中位数，又称中点数，中值。中位数是按顺序排列的一组数据中居于中间位置的数，即在这组数据中，有一半的数据比他大，有一半的数据比他小<br></code></pre></td></tr></table></figure>
+
+<h3 id="6-Mode-众数"><a href="#6-Mode-众数" class="headerlink" title="6. Mode 众数"></a>6. Mode 众数</h3><figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coq">众数（<span class="hljs-keyword">Mode</span>）是指在统计分布上具有明显集中趋势点的数值，代表数据的一般水平。 也是一组数据中出现次数最多的数值，有时众数在一组数中有好几个。用M表示。<br></code></pre></td></tr></table></figure>
+
+<h3 id="7-Model-Class"><a href="#7-Model-Class" class="headerlink" title="7. Model Class"></a>7. Model Class</h3><p>The <strong>modal class</strong> in a sample is the class that contains the most observations.</p>
+<h3 id="8-Variance-方差"><a href="#8-Variance-方差" class="headerlink" title="8. Variance 方差"></a>8. Variance 方差</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">方差是在概率论和统计方差衡量随机变量或一组数据时离散程度的度量。概率论中方差用来度量随机变量和其数学期望（即均值）之间的偏离程度。统计中的方差（样本方差）是每个样本值与全体样本值的平均数之差的平方值的平均数<br></code></pre></td></tr></table></figure>
+
+<p><strong>Variance</strong> 方差: to measure the spread of data in a frequency distribution</p>
+<p>The sample variance, denoted $S^2$ , is calculated from the formula<br>$$<br>s^{2} &#x3D; \frac{\sum (X_{k} - \overline{X})^{2}}{n - 1}<br>$$</p>
+<h3 id="9-standard-deviation-标准差"><a href="#9-standard-deviation-标准差" class="headerlink" title="9. standard deviation 标准差"></a>9. standard deviation 标准差</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">标准差（Standard Deviation） ，中文环境中又常称均方差，是离均差平方的算术平均数的平方根，用σ表示。在概率统计中最常使用作为统计分布程度上的测量。标准差是方差的算术平方根。标准差能反映一个数据集的离散程度。平均数相同的两组数据，标准差未必相同。<br></code></pre></td></tr></table></figure>
+
+<p>$$<br>s &#x3D; \sqrt{s^{2}}<br>$$</p>
+<h1 id="二、Quantitative-And-Qualitative-Traits"><a href="#二、Quantitative-And-Qualitative-Traits" class="headerlink" title="二、Quantitative And Qualitative Traits"></a>二、Quantitative And Qualitative Traits</h1><h2 id="The-Definition"><a href="#The-Definition" class="headerlink" title="The Definition"></a>The Definition</h2><h3 id="1-Complex-Quantitative-Trait-数量性状"><a href="#1-Complex-Quantitative-Trait-数量性状" class="headerlink" title="1. Complex &#x2F; Quantitative Trait 数量性状"></a>1. Complex &#x2F; Quantitative Trait 数量性状</h3><p>A <strong>quantitative trait</strong> is a measurable phenotype that depends on the cumulative actions of many genes and the environment.</p>
+<p>These traits can vary among individuals, over a range, to produce a continuous distribution of phenotypes. </p>
+<p>Examples include aspects of morphology (height, weight); physiology (blood pressure); behavior (aggression); as well as molecular phenotypes (gene expression levels, high- and low-density cholesterol levels).</p>
+<p>Quantitative traits do not behave according to simple Mendelian inheritance laws.</p>
+<p>Individuals cannot be classified by discrete values</p>
+<p>Quantitative trait distribution show a continuous range of variation</p>
+<p>Complex mode of <strong>inheritance</strong></p>
+<p>Moderate to great <strong>environmental effect</strong></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103210814490.png" srcset="/img/loading.gif" lazyload alt="image-20200103210814490" style="zoom:67%;" />
+
+<h3 id="2-Mendelian-Qualitative-traits-孟德尔性状-质量性状"><a href="#2-Mendelian-Qualitative-traits-孟德尔性状-质量性状" class="headerlink" title="2. Mendelian &#x2F; Qualitative traits 孟德尔性状&#x2F;质量性状"></a>2. Mendelian &#x2F; Qualitative traits 孟德尔性状&#x2F;质量性状</h3><p>Mendelian traits&#x2F;Qualitative traits</p>
+<p>Phenotype with discrete and easy to measure values</p>
+<p>Individuals can be correctly classified according to phenotype</p>
+<p>Show mendelian <strong>inheritance</strong></p>
+<p>Little environmental effect</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103210106931.png" srcset="/img/loading.gif" lazyload alt="image-20200103210106931"></p>
+<h2 id="Example-of-Quantitative-Traits"><a href="#Example-of-Quantitative-Traits" class="headerlink" title="Example of Quantitative Traits"></a>Example of Quantitative Traits</h2><h3 id="1-Polygenetic-in-wheat-grains-color"><a href="#1-Polygenetic-in-wheat-grains-color" class="headerlink" title="1. Polygenetic in wheat grains color"></a>1. Polygenetic in wheat grains color</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103211042802.png" srcset="/img/loading.gif" lazyload alt="image-20200103211042802"></p>
+<p>■ FIGURE 22.1 Inheritance of grain color in wheat. Three independently assorting genes [A, B, and C] are assumed to control grain color. Each gene has two alleles. The alleles that contribute additively to pigmentation are represented by uppercase letters.</p>
+<h3 id="2-Length-of-The-Corolla-In-Tobacco-Flowers-Studied-By-Edward-M-East"><a href="#2-Length-of-The-Corolla-In-Tobacco-Flowers-Studied-By-Edward-M-East" class="headerlink" title="2. Length of The Corolla In Tobacco Flowers (Studied By Edward M. East)"></a>2. Length of The Corolla In Tobacco Flowers (Studied By Edward M. East)</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103211301722.png" srcset="/img/loading.gif" lazyload alt="image-20200103211301722"></p>
+<p>This variability if F2 was due to two sources: </p>
+<ol>
+<li><p>the segregation and independent assortment of different pairs of alleles controlling corolla length, and </p>
+</li>
+<li><p>environmental factors.</p>
+</li>
+</ol>
+<p>The reduced amount of variation within the F3 lines was presumably due to the segregation of fewer allelic differences.</p>
+<p><u>Edward M. East</u> had studied <strong>444 F2 plants</strong> and failed to find even one with either of the parental phenotypes. </p>
+<p>This failure would seem to <strong>rule out (排除)</strong> the hypothesis of four or fewer genes controlling corolla length.</p>
+<h2 id="Quantitative-Trait-Loci"><a href="#Quantitative-Trait-Loci" class="headerlink" title="Quantitative Trait Loci"></a>Quantitative Trait Loci</h2><p>the locus for a gene that influences a quantitative trait is called a <strong>quantitative trait locus (QTL).</strong></p>
+<p>QT loci have been identified and mapped on specific chromosomes in model laboratory organisms</p>
+<h3 id="1-RFLPs"><a href="#1-RFLPs" class="headerlink" title="1. RFLPs"></a>1. RFLPs</h3><p>restriction fragment-length polymorphisms, RFLPs (限制性片段长度多态性)</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103222255588.png" srcset="/img/loading.gif" lazyload alt="image-20200103222255588"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103222324790.png" srcset="/img/loading.gif" lazyload alt="image-20200103222324790"></p>
+<h3 id="2-RFLP-And-Quantitative-Trait-Loci"><a href="#2-RFLP-And-Quantitative-Trait-Loci" class="headerlink" title="2. RFLP And Quantitative Trait Loci"></a>2. RFLP And Quantitative Trait Loci</h3><p><strong>Steven D. Tanksley</strong> exploited the fact that L. pimpinellifoliumand L. esculentum differ in the sites where restriction enzymes cleave genomic DNA. (RFLPs)</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103222421177.png" srcset="/img/loading.gif" lazyload alt="image-20200103222421177"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103222433756.png" srcset="/img/loading.gif" lazyload alt="image-20200103222433756"></p>
+<h1 id="三、The-Multiple-Factor-Hypothesis"><a href="#三、The-Multiple-Factor-Hypothesis" class="headerlink" title="三、The Multiple Factor Hypothesis"></a>三、The Multiple Factor Hypothesis</h1><h2 id="mu-g-e-And-T"><a href="#mu-g-e-And-T" class="headerlink" title="$\mu$, $g$, $e$ And $T$"></a>$\mu$, $g$, $e$ And $T$</h2><p>The key idea in quantitative genetics is that traits are controlled by <strong>many</strong> different factors in the <strong>environment</strong> and in the <strong>genotype</strong>.</p>
+<ul>
+<li><p><strong>$\mu$</strong> represents the population mean, </p>
+</li>
+<li><p><strong>g</strong> represents the deviation from the mean that is due to genetic factors, and </p>
+</li>
+<li><p><strong>e</strong> represents the deviation from the mean that is due to environmental factors.</p>
+</li>
+</ul>
+<p>$$<br>T &#x3D; \mu + g + e<br>$$</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103211644098.png" srcset="/img/loading.gif" lazyload alt="image-20200103211644098" style="zoom: 80%;" />
+
+<h2 id="Partitioning-the-Phenotypic-Variance-表型变异的划分"><a href="#Partitioning-the-Phenotypic-Variance-表型变异的划分" class="headerlink" title="Partitioning the Phenotypic Variance 表型变异的划分"></a>Partitioning the Phenotypic Variance 表型变异的划分</h2><h3 id="1-Definition"><a href="#1-Definition" class="headerlink" title="1. Definition"></a>1. Definition</h3><p>$V_T$ total phenotypic variance</p>
+<p>$V_g$ genetic variance</p>
+<p>$V_e$ environmental variance<br>$$<br>V_{T} &#x3D; V_{g} + V_{e}<br>$$</p>
+<h3 id="2-Example-Calculation"><a href="#2-Example-Calculation" class="headerlink" title="2. Example Calculation"></a>2. Example Calculation</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103212025655.png" srcset="/img/loading.gif" lazyload alt="image-20200103212025655"><br>$$<br>V_{e} &#x3D; (V_{A} + V_{B} + V_{F1})&#x2F;3 \ &#x3D; (1.92\ days^{2} + 2.05\ days^{2} + 2.88 \ days^{2})&#x2F;3 \ &#x3D;2.28\ days^{2}<br>$$<br>The $V_e$ Average represents the varients of environment</p>
+<p>假设F2的生长环境与F1，A，B相同：<br>$$<br>\because V_{T} &#x3D; V_{g} + V_{e} \<br>\therefore V_{g} &#x3D; V_{T} - V_{e} \<br>&#x3D; 14.26\ days^{2} - 2.28\ days^{2} \<br>&#x3D; 11.98\ days^{2}<br>$$</p>
+<h3 id="3-Broad-sense-Heritability-广义遗传性"><a href="#3-Broad-sense-Heritability-广义遗传性" class="headerlink" title="3. Broad-sense Heritability 广义遗传性"></a>3. Broad-sense Heritability 广义遗传性</h3><p>$$<br>H^{2} &#x3D; V_{g} &#x2F; V_{T} \<br>V_{g} &#x2F; (V_{g} + V_{e})<br>$$</p>
+<p>For F2 wheat population<br>$$<br>V_{T} &#x3D; V_{g} + V_{e}<br>$$</p>
+<p>$$<br>14.26\ days^{2} &#x3D; 11.98\ days^{2} + 2.28\ days^{2}<br>$$</p>
+<p>$$<br>H^{2} &#x3D; 11.98&#x2F;14.26 &#x3D; 0.84<br>$$</p>
+<p>In this population 84% of the observed variability in wheat maturation time is due to genetic differences among individuals.</p>
+<p>$H^{2}$ 代表由gene贡献的“差异”的比例</p>
+<h3 id="4-Narrow-sense-Heritability-狭义遗传性"><a href="#4-Narrow-sense-Heritability-狭义遗传性" class="headerlink" title="4. Narrow-sense Heritability 狭义遗传性"></a>4. Narrow-sense Heritability 狭义遗传性</h3><p>Genetic variance has three major components: the <strong>additive genetic variance (加性遗传方差)</strong>, <strong>dominance variance (显性方差)</strong>, and <strong>epistatic variance (上位方差)</strong></p>
+<ul>
+<li><p>Additive genetic variance involves the inheritance of a particular allele from your parent and this allele’s independent effect on the specific phenotype, which will cause the phenotype deviation from the mean phenotype</p>
+</li>
+<li><p>Dominance genetic variance refers to the phenotype deviation caused by the interactions between alternative alleles that control one trait at one specific locus. </p>
+</li>
+<li><p>Epistatic variance involves an interaction between different alleles in different loci</p>
+</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103214650437.png" srcset="/img/loading.gif" lazyload alt="image-20200103214650437"><br>$$<br>V_{g} &#x3D; V_{a} + V_{d} + V_{i}<br>$$</p>
+<p>$$<br>\therefore V_{T} &#x3D; V_{a} + V_{d} + V_{i} + V_{e}<br>$$</p>
+<p>$$<br>h^{2} &#x3D; V_{a} &#x2F; V_{T}<br>$$</p>
+<p>The closer $h^{2}$ is to one, the greater is our ability to predict an offspring’s phenotype.</p>
+<p>Thus, if we knew the parental phenotypes, we would be better able to predict the height of a human’s offspring than the litter size of a pig’s offspring.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103214850561.png" srcset="/img/loading.gif" lazyload alt="image-20200103214850561" style="zoom:80%;" />
+
+<h1 id="五、Predicting-Phenotypes"><a href="#五、Predicting-Phenotypes" class="headerlink" title="五、Predicting Phenotypes"></a>五、Predicting Phenotypes</h1><h2 id="Example-Calculation-IQ"><a href="#Example-Calculation-IQ" class="headerlink" title="Example Calculation: IQ"></a>Example Calculation: IQ</h2><p>the narrow-sense heritability of IQ has been estimated to be about $h^{2}$&#x3D;0.4 — that is, <u>about 40% of the observed variation in IQ scores is due to the additive effects of alleles.</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103215034108.png" srcset="/img/loading.gif" lazyload alt="image-20200103215034108" style="zoom:80%;" />
+$$
+T_{o} = \mu + h^{2}[(T_{M} + T_{F})/2 - \mu]
+$$
+$T_{o}$ is the mean of the offspring, $\mu$ is the mean of the overall population
+
+<p>$T_{s}$ is the mean of the selected parents, and $h^{2}$ is the narrow-sense heritability.</p>
+<p>$(T_{M} + T_{F})&#x2F;2$ is usually called the <strong>midparent value (中间价)</strong><br>$$<br>\therefore T_{o} &#x3D; h^{2} [T_{P} - \mu]<br>$$</p>
+<p>$$<br>\therefore T_{o} &#x3D; 100 + (0.4)[115 - 100] &#x3D; 106<br>$$</p>
+<h2 id="Artificial-Selection"><a href="#Artificial-Selection" class="headerlink" title="Artificial Selection"></a>Artificial Selection</h2><p>$T_{o} &#x3D; h^{2} [T_{P} - \mu]$ , this equation allows us to predict how the mean of the population will change by selecting the individuals that will be parents. We call this process <strong>artificial selection.</strong><br>$$<br>[T_{o} - \mu] &#x3D; h^{2} [T_{s} - \mu]<br>$$</p>
+<p>$$<br>R &#x3D; h^{2} S<br>$$</p>
+<p>S: selection differential 选择差异</p>
+<p>R: the response to selection</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103221231267.png" srcset="/img/loading.gif" lazyload alt="image-20200103221231267" style="zoom:67%;" />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200103221247652.png" srcset="/img/loading.gif" lazyload alt="image-20200103221247652"></p>
+<p>Frequency distributions of pupa weight in <em>Tribolium</em> populations selected for increased size. The shape of the distributions is only approximate. The means at generations 0 and 120 are indicated by arrows.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetics/" class="category-chain-item">Genetics</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetics/" class="print-no-link">#Genetics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L15 Inheritance of  Complex Quantitative Traits</div>
+      <div>https://zhenyumi.github.io/posts/d3e0f831/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/44dedc7b/" title="L15 Carbohydrates">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L15 Carbohydrates</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/5848230a/" title="L16 Lipids And Membranes">
+                        <span class="hidden-mobile">L16 Lipids And Membranes</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

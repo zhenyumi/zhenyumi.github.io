@@ -1,0 +1,908 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L08 protein quaternary structure and Protein-Protein interactions">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/26fcd038/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Biochemistry I (Macromolecules)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+  
+  
+  
+  <title>L08 protein quaternary structure and Protein-Protein interactions - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-10_21-07-00.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L08 protein quaternary structure and Protein-Protein interactions</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L08 protein quaternary structure and Protein-Protein interactions</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Quaternary-Structure"><a href="#Quaternary-Structure" class="headerlink" title="Quaternary Structure"></a>Quaternary Structure</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Functional protein often organized with multiple folded polypeptide chains (<strong>subunits</strong>)</p>
+<ol>
+<li>Multisubunit proteins</li>
+<li>Assembled via <u>noncovalent</u> forces</li>
+</ol>
+<h3 id="1-Two-types-of-quaternary-organization"><a href="#1-Two-types-of-quaternary-organization" class="headerlink" title="1. Two types of quaternary organization"></a>1. Two types of quaternary organization</h3><ol>
+<li><p>Homotypic – association between <u>identical or nearly identical</u> subunits</p>
+</li>
+<li><p>Heterotypic – association between very different subunits</p>
+</li>
+</ol>
+<h3 id="2-Interactions-involved-in-protein‐protein-interactions"><a href="#2-Interactions-involved-in-protein‐protein-interactions" class="headerlink" title="2. Interactions involved in protein‐protein interactions"></a>2. Interactions involved in protein‐protein interactions</h3><ol>
+<li>Salt bridges</li>
+<li>H‐bonding</li>
+<li>Van der Waals interactions</li>
+<li>Hydrophobic effects</li>
+<li>Disulfide boding</li>
+</ol>
+<h3 id="3-Numbers-of-subunits"><a href="#3-Numbers-of-subunits" class="headerlink" title="3. Numbers of subunits"></a>3. Numbers of subunits</h3><h4 id="Monomer"><a href="#Monomer" class="headerlink" title="Monomer"></a>Monomer</h4><h4 id="Oligomer"><a href="#Oligomer" class="headerlink" title="Oligomer"></a>Oligomer</h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Number of subunit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dimer</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Trimer</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Tetramer</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Hexamer</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Octamer</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Dodecamer</td>
+<td>12</td>
+</tr>
+</tbody></table>
+<h4 id="Large-Molecular-Machines"><a href="#Large-Molecular-Machines" class="headerlink" title="Large Molecular Machines"></a>Large Molecular Machines</h4><ol>
+<li>Viral capsids (Viron) : 60*n</li>
+<li>Proteasome: &gt;28 subunits</li>
+<li>Ribosome</li>
+</ol>
+<h1 id="Multisubunit-Proteins"><a href="#Multisubunit-Proteins" class="headerlink" title="Multisubunit Proteins"></a>Multisubunit Proteins</h1><h2 id="Homotypic-protein-protein-interaction"><a href="#Homotypic-protein-protein-interaction" class="headerlink" title="Homotypic protein-protein interaction"></a>Homotypic protein-protein interaction</h2><p>If the two <u>interacting groups</u> lie in <u>entirely different regions of the subunit,</u>we would call this interaction <strong>heterologous（异源的）</strong>.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026153636381.png" srcset="/img/loading.gif" lazyload alt="image-20191026153636381" style="zoom:50%;" />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026153745589.png" srcset="/img/loading.gif" lazyload alt="image-20191026153745589"></p>
+<h2 id="Helical-Symmetry"><a href="#Helical-Symmetry" class="headerlink" title="Helical Symmetry"></a>Helical Symmetry</h2><p>Heterologous interactions must be specially oriented to give a truly linear complex. More often, the interaction is such that each unit is twisted through some angle with respect to the preceding one. <u>This twisting gives rise to a helical structure.</u>（ Figure 6.38(a) ）</p>
+<p>Examples：、</p>
+<ol>
+<li>Actin Filament<ul>
+<li>F-actin</li>
+<li>G-Actin</li>
+</ul>
+</li>
+<li>Tobacco Mosaic Virus</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026154617682.png" srcset="/img/loading.gif" lazyload alt="image-20191026154617682" style="zoom:33%;" />
+
+<p>Both linear and helical arrays are potentially capable of indefinite growth by addition of <strong>more</strong> subunits. Actin filaments can be thousands of units in length.</p>
+<h2 id="Point-group-Symmetry-点群对称"><a href="#Point-group-Symmetry-点群对称" class="headerlink" title="Point-group Symmetry 点群对称"></a>Point-group Symmetry 点群对称</h2><p>The classes of point-group symmetry involve a defined number of subunits arranged about one or more <strong>axes of symmetry.</strong></p>
+<p>An n-fold axis of symmetry corresponds to rotation of each subunit by 360&#x2F;n degrees with respect to its neighbor; thus, a 2-fold axis corresponds to 180° rotation. The simplest kinds of point-group symmetry are the cyclic symmetries , shown in Figure 6.38b–d. These rings of subunits involve heterologous interactions where<br>C<del>n</del> n &#x3D; 3 or greater.</p>
+<h3 id="1-Point-group-点群"><a href="#1-Point-group-点群" class="headerlink" title="1. Point-group 点群"></a>1. Point-group 点群</h3><p>在晶体学中，晶体学点群是对称操作（例如旋转、反映）的集合。这些操作以固定的中心向其他方向移动能使晶体复原，因此称为对称操作。</p>
+<h3 id="2-Schoenflies-notation-熊夫利记号"><a href="#2-Schoenflies-notation-熊夫利记号" class="headerlink" title="2. Schoenflies notation 熊夫利记号"></a>2. <strong>Schoenflies notation</strong> 熊夫利记号</h3><p>在熊夫利中，点群是用字母符号加上数字下标表示的。下面简述晶体学中使用的这种符号的意义：<br>C<del>n</del>（循环群）表示该群有一根n次旋转轴。C<del>nh</del>是C<del>n</del>加上一个与旋转轴垂直的镜面（反映）对称元素。C<del>nv</del>则是C<del>n</del>加上一个与旋转轴平行的镜面对称元素。<br>S<del>2n</del>（源自德语Spiegel，意思是镜面）表示一根只含有<del>2n</del>次旋转反映轴（简称映轴）。<br>D<del>n</del>（二面体群）表示这个群只有一根n次旋转轴和n根垂直于这根主轴的二重轴。D<del>nh</del>是加上一个与n次旋转轴垂直的镜面。D<del>nd</del>则是D<del>n</del>是加上n个与n次旋转轴平行的镜面。<br>字母T（四面体）表示这个群有四面体的对称性。T<del>d</del>则包括了旋转反映操作，T群本身则不包含旋转反映操作，T<del>h</del>则是T群加上与旋转轴垂直的镜面。<br>字母O（八面体）表示该群具有八面体或者立方体的对称性，可能包括（O<del>h</del>）或不包括（O）旋转反映操作。<br>根据晶体局限定理，在二维或三维空间中n的取值只有1、2、3、4和6。 </p>
+<table>
+<thead>
+<tr>
+<th align="center">n</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><em>Cn</em></td>
+<td align="center"><em>C1</em></td>
+<td align="center"><em>C2</em></td>
+<td align="center"><em>C3</em></td>
+<td align="center"><em>C4</em></td>
+<td align="center"><em>C6</em></td>
+</tr>
+<tr>
+<td align="center"><em>Cnv</em></td>
+<td align="center"><em>C1v</em>&#x3D;<em>C1h</em></td>
+<td align="center"><em>C2v</em></td>
+<td align="center"><em>C3v</em></td>
+<td align="center"><em>C4v</em></td>
+<td align="center"><em>C6v</em></td>
+</tr>
+<tr>
+<td align="center"><em>Cnh</em></td>
+<td align="center"><em>C1h</em></td>
+<td align="center"><em>C2h</em></td>
+<td align="center"><em>C3h</em></td>
+<td align="center"><em>C4h</em></td>
+<td align="center"><em>C6h</em></td>
+</tr>
+<tr>
+<td align="center"><em>Dn</em></td>
+<td align="center"><em>D1</em>&#x3D;<em>C2</em></td>
+<td align="center"><em>D2</em></td>
+<td align="center"><em>D3</em></td>
+<td align="center"><em>D4</em></td>
+<td align="center"><em>D6</em></td>
+</tr>
+<tr>
+<td align="center"><em>Dnh</em></td>
+<td align="center"><em>D1h</em>&#x3D;<em>C2v</em></td>
+<td align="center"><em>D2h</em></td>
+<td align="center"><em>D3h</em></td>
+<td align="center"><em>D4h</em></td>
+<td align="center"><em>D6h</em></td>
+</tr>
+<tr>
+<td align="center"><em>Dnd</em></td>
+<td align="center"><em>D1d</em>&#x3D;<em>C2h</em></td>
+<td align="center"><em>D2d</em></td>
+<td align="center"><em>D3d</em></td>
+<td align="center"><em>D4d</em></td>
+<td align="center"><em>D6d</em></td>
+</tr>
+<tr>
+<td align="center"><em>S2n</em></td>
+<td align="center"><em>S2</em></td>
+<td align="center"><em>S4</em></td>
+<td align="center"><em>S6</em></td>
+<td align="center"><em>S8</em></td>
+<td align="center"><em>S12</em></td>
+</tr>
+</tbody></table>
+<h3 id="3-Dyad-axis"><a href="#3-Dyad-axis" class="headerlink" title="3. Dyad axis"></a>3. Dyad axis</h3><p>A special situation of great importance arises when two subunits are related to one another by a 2-fold axis (also called a <strong>dyad axis</strong>) to give C<del>2</del> symmetry. That is, each subunit is rotated by 180° about this axis with respect to the other:<br><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026160259593.png" srcset="/img/loading.gif" lazyload alt="image-20191026160259593" style="zoom:33%;" /></p>
+<p>Note that in this case the 2-fold symmetry means that two identical interactions occur, symmetrically placed about the dyad axis. Such a symmetric interaction is called <strong>isologous（同构异素的）</strong>, as opposed to the asymmetric heterologous interaction.</p>
+<h2 id="Protein-Dimers"><a href="#Protein-Dimers" class="headerlink" title="Protein Dimers"></a>Protein Dimers</h2><p>A protein homodimer is formed by two identical proteins. </p>
+<p>A protein heterodimer is formed by two different proteins. </p>
+<h3 id="1-Homodimer"><a href="#1-Homodimer" class="headerlink" title="1. Homodimer"></a>1. Homodimer</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162033516.png" srcset="/img/loading.gif" lazyload alt="image-20191026162033516" style="zoom:33%;" />
+
+<p>Dimers are <strong>the most common</strong> quaternary structures</p>
+<p>The two monomers are usually related by the 2‐fold symmetry</p>
+<h4 id="Asymmetric-Homodimer"><a href="#Asymmetric-Homodimer" class="headerlink" title="Asymmetric Homodimer"></a>Asymmetric Homodimer</h4><p>Two subunits can associate in an way without symmetries</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162205585.png" srcset="/img/loading.gif" lazyload alt="image-20191026162205585" style="zoom:33%;" />
+
+<h3 id="2-Heterodimer"><a href="#2-Heterodimer" class="headerlink" title="2. Heterodimer"></a>2. Heterodimer</h3><p>Dimers are formed between two different monomers</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162338689.png" srcset="/img/loading.gif" lazyload alt="image-20191026162338689" style="zoom:33%;" />
+
+<h1 id="Prediction-of-quaternary-structure"><a href="#Prediction-of-quaternary-structure" class="headerlink" title="Prediction of quaternary structure"></a>Prediction of quaternary structure</h1><h2 id="Experimental-methods"><a href="#Experimental-methods" class="headerlink" title="Experimental methods"></a>Experimental methods</h2><p>(low resolution)</p>
+<ol>
+<li><p>Measure mass of protein complex</p>
+</li>
+<li><p>Measure size of protein complex</p>
+</li>
+<li><p>Detect protein behaviors in designed conditions</p>
+</li>
+</ol>
+<h2 id="Computational-methods"><a href="#Computational-methods" class="headerlink" title="Computational methods"></a>Computational methods</h2><p>   (low accuracy)</p>
+<ol>
+<li>“Docking”</li>
+</ol>
+<h1 id="Methods-to-investigate-protein‐protein-interactions"><a href="#Methods-to-investigate-protein‐protein-interactions" class="headerlink" title="Methods to investigate protein‐protein interactions"></a>Methods to investigate protein‐protein interactions</h1><p><strong>Protein complex</strong></p>
+<ol>
+<li>Transient</li>
+<li>Stable</li>
+</ol>
+<p><strong>Binding affinity</strong></p>
+<ol>
+<li>Dissociation constant ($K_d$)<br>Most biological functions are performed by protein complex</li>
+</ol>
+<blockquote>
+<p>In chemistry, biochemistry, and pharmacology, a dissociation constant ($K_d$) is a specific type of equilibrium constant that measures the propensity of a larger object to separate (dissociate) reversibly into smaller components, as when a complex falls apart into its component molecules, or when a salt splits up into its component ions. The dissociation constant is the inverse of the association constant.</p>
+<p>由于整个结合的过程是一个可逆反应，the rate of the binding reaction is proportional to the concentrations of the reactants.</p>
+<p>In short, the smaller $K_d$  value the greater binding affinity.</p>
+</blockquote>
+<h2 id="High-throughput-高通量"><a href="#High-throughput-高通量" class="headerlink" title="High throughput 高通量"></a>High throughput 高通量</h2><h3 id="1-Yeast-two‐hybrid-酵母菌双杂合系统"><a href="#1-Yeast-two‐hybrid-酵母菌双杂合系统" class="headerlink" title="1. Yeast two‐hybrid 酵母菌双杂合系统"></a>1. Yeast two‐hybrid 酵母菌双杂合系统</h3><p>亦简称Two-hybrid screening，是一种研究蛋白质交互作用或蛋白质和DNA交互作用的实验技术。</p>
+<h4 id="Reporter-gene"><a href="#Reporter-gene" class="headerlink" title="Reporter gene"></a>Reporter gene</h4><p>A reporter gene (often simply reporter) is a gene that researchers attach to a regulatory sequence of another gene of interest in bacteria, cell culture, animals or plants. </p>
+<p>Certain genes are chosen as reporters because the characteristics they confer on organisms expressing them are <strong>easily identified and measured</strong>, or because they are <strong>selectable markers</strong>.</p>
+<h4 id="UAS"><a href="#UAS" class="headerlink" title="UAS"></a>UAS</h4><p>真核生物中存在一种上游激活序列(upstream activating sequence, UAS)，其作用是和激活蛋白结合并大大增加启动子的转录速度，从而在转录水平对靶基因表达进行调控。真核细胞转录起始需要反式转录激活因子的参与。</p>
+<p>很多真核生物的位点特异性转录激活因子是组件式的，通常具有两个可分割开的结构域，即DNA特异性结合结构域(DNA-binding domain, BD)与转录激活结构域(transcriptional activation domain, AD)。</p>
+<p>这两个结构域即使分开时仍各具功能，互不影响。但一个完整的某个特定基因的转录激活因子必须同时含有这两个结构域，否则无法完成激活功能。只有将这两部分通过适当的途径在空间上接近才能恢复其激活转录的能力。</p>
+<h4 id="探究蛋白质相互作用原理"><a href="#探究蛋白质相互作用原理" class="headerlink" title="探究蛋白质相互作用原理"></a>探究蛋白质相互作用原理</h4><p>在酵母双杂交系统中，“诱饵”蛋白X克隆至DNA-BD载体中，表达DNA-BD&#x2F;X融合蛋白；待测试蛋白Y克隆至AD载体中，表达AD&#x2F;Y融合蛋白。一旦X与Y蛋白间有相互作用，则DNA-BD和AD也随之被牵拉靠近，恢复行使功能。使得下游的reporter gene表达，检测到reporter gene的表达产物，则说明prey蛋白与bait蛋白有interactions.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026195958173.png" srcset="/img/loading.gif" lazyload alt="image-20191026195958173" style="zoom: 40%;" />
+
+<h4 id="Strengths-and-weakness"><a href="#Strengths-and-weakness" class="headerlink" title="Strengths and weakness"></a>Strengths and weakness</h4><h5 id="1-Strengths"><a href="#1-Strengths" class="headerlink" title="(1) Strengths"></a>(1) Strengths</h5><ol>
+<li><strong>Two-hybrid screens are low-tech</strong>; they can be carried out in any lab without sophisticated equipment.</li>
+<li>Two-hybrid screens can <strong>provide an important first hint</strong> for the identification of interaction partners.</li>
+<li>The <strong>assay is scalable,</strong> which makes it possible to screen for interactions among many proteins. Furthermore, it can be automated, and by using robots many proteins can be screened against thousands of potentially interacting proteins in a relatively short time. Two types of large screens are used: the library approach and the matrix approach.</li>
+<li>Yeast two-hybrid data can be of <strong>similar quality to data generated by the alternative approach of coaffinity purification followed by mass spectrometry (AP&#x2F;MS).</strong></li>
+</ol>
+<h5 id="2-Weakness"><a href="#2-Weakness" class="headerlink" title="(2) Weakness"></a>(2) Weakness</h5><ol>
+<li>The main criticism applied to the yeast two-hybrid screen of protein–protein interactions are the possibility of a <strong>high number of false positive (and false negative) identifications.</strong></li>
+</ol>
+<h3 id="2-Phage-display-噬菌体展示技术"><a href="#2-Phage-display-噬菌体展示技术" class="headerlink" title="2. Phage display 噬菌体展示技术"></a>2. Phage display 噬菌体展示技术</h3><p>In this technique, <u>a gene</u> encoding a <u>protein of interest</u> is inserted into a phage <strong>coat protein gene</strong>, causing the phage to <strong>“display” the protein on its outside</strong> while containing the gene for the protein on its inside, resulting in a connection between genotype and phenotype.</p>
+<p>These displaying phages can then be <strong>screened（筛）</strong> against other proteins, peptides or DNA sequences, <u>in order to detect interaction between the displayed protein and those other molecules.</u></p>
+<p>In this way, large libraries of proteins can be screened and amplified in a process called in vitro selection, which is analogous to natural selection.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026202246124.png" srcset="/img/loading.gif" lazyload alt="image-20191026202246124" style="zoom:33%;" />
+
+<p>噬菌体展示技术是将多肽或蛋白质的编码基因或目的基因片段克隆入噬菌体外壳蛋白结构基因的适当位置，在阅读框正确且不影响其他外壳蛋白正常功能的情况下，使外源多肽或蛋白与外壳蛋白融合表达，融合蛋白随子代噬菌体的重新组装而展示在噬菌体表面。被展示的多肽或蛋白可以保持相对独立的空间结构和生物活性，以利于靶分子的识别和结合。</p>
+<p>肽库与固相上的靶蛋白分子经过一定时间孵育后，洗去未结合的游离噬菌体，然后以竞争受体或酸洗脱下与靶分子结合吸附的噬菌体，洗脱的噬菌体感染宿主细胞后经繁殖扩增，进行下一轮洗脱，经过3轮～5轮的“吸附-洗脱-扩增”后，与靶分子特异结合的噬菌体得到高度富集。所得的噬菌体制剂可用来做进一步富集有期望结合特性的目标噬菌体。</p>
+<h3 id="3-Tandem-affinity-purification-串联亲和纯化，TAP"><a href="#3-Tandem-affinity-purification-串联亲和纯化，TAP" class="headerlink" title="3. Tandem affinity purification 串联亲和纯化，TAP"></a>3. Tandem affinity purification 串联亲和纯化，TAP</h3><p>串联亲和纯化<em>（TAP&#x2F;MS）</em>是免疫共沉淀<em>（Co-IP&#x2F;MS）</em>的“近亲”，两者在寻找诱饵蛋白的互作蛋白以及纯化互作蛋白的原理方面非常相似。但是TAP&#x2F;MS经过2步亲和纯化，而Co-IP&#x2F;MS只有1步亲和纯化，故而TAP&#x2F;MS可以有效减少非特异蛋白的结合</p>
+<p>The goal is to extract from a cell only the protein of interest, in complex with any other proteins it interacted with. TAP uses two types of <strong>agarose（琼脂糖） beads</strong> that <u>bind to the protein of interest</u> and that can be separated from the cell lysate by centrifugation, <u>without disturbing, denaturing or contaminating the involved complexes.</u> </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026203416188.png" srcset="/img/loading.gif" lazyload alt="image-20191026203416188" style="zoom:40%;" />
+
+<p>The original TAP method involves the fusion of the TAP tag to the C-terminus of the protein under study. The TAP tag consists of <strong>calmodulin binding peptide</strong> (CBP，钙调蛋白结合肽) from the N-terminal, followed by a TEV protease cleavage site and two Protein A domains, which bind tightly to <strong>IgG（Immunoglobulin G，免疫球蛋白G）</strong> (making a TAP tag a type of epitope tag).</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026204134751.png" srcset="/img/loading.gif" lazyload alt="image-20191026204134751" style="zoom:50%;" />
+
+<h2 id="Low-throughput—Affinity‐based"><a href="#Low-throughput—Affinity‐based" class="headerlink" title="Low throughput—Affinity‐based"></a>Low throughput—Affinity‐based</h2><h3 id="1-Co‐immunoprecipitation-免疫共沉淀"><a href="#1-Co‐immunoprecipitation-免疫共沉淀" class="headerlink" title="1. Co‐immunoprecipitation 免疫共沉淀"></a>1. Co‐immunoprecipitation 免疫共沉淀</h3><p>免疫共沉淀（Co-Immunoprecipitation）是以抗体和抗原之间的专一性作用为基础的用于研究蛋白质相互作用的经典方法。是确定两种蛋白质在完整细胞内生理性相互作用的有效方法。</p>
+<p>当细胞在非变性条件下被裂解时，完整细胞内存在的许多蛋白质－蛋白质间的相互作用被保留了下来。当用预先固化在argarose beads上的蛋白质A的抗体免疫沉淀A蛋白，那么与A蛋白在体内结合的蛋白质B也能一起沉淀下来。再通过蛋白变性分离，对B蛋白进行检测，进而证明两者间的相互作用。</p>
+<p>这种方法得到的目的蛋白是在细胞内与兴趣蛋白天然结合的，符合体内实际情况，得到的结果可信度高。这种方法常用于测定两种目标蛋白质是否在体内结合；也可用于确定一种特定蛋白质的新的作用搭档。</p>
+<h3 id="2-Pull‐down-assays-拉下实验"><a href="#2-Pull‐down-assays-拉下实验" class="headerlink" title="2. Pull‐down assays 拉下实验"></a>2. Pull‐down assays 拉下实验</h3><p>拉下实验（Pull-down assay）该实验是一个行之有效的验证酵母双杂交系统的体外试验技术,近年来越来越受到广大学者的青睐。</p>
+<p>其基本原理是将靶蛋白-GST融合蛋白亲和固化在谷胱甘肽亲和树脂上,作为与目的蛋白亲和的支撑物,充当一种“诱饵蛋白”,目的蛋白溶液过柱,可从中捕获与之相互作用的“捕获蛋白”(目的蛋白),洗脱结合物后通过SDS-PAGE电泳分析,从而证实两种蛋白间的相互作用或筛选相应的目的蛋白,“诱饵蛋白”和“捕获蛋白”均可通过细胞裂解物、纯化的蛋白、表达系统以及体外转录翻译系统等方法获得。</p>
+<h2 id="Low-throughput——Light‐based"><a href="#Low-throughput——Light‐based" class="headerlink" title="Low throughput——Light‐based"></a>Low throughput——Light‐based</h2><h3 id="1-Light-scattering-光散射-–-size-shape"><a href="#1-Light-scattering-光散射-–-size-shape" class="headerlink" title="1. Light scattering 光散射 – size&#x2F;shape"></a>1. Light scattering 光散射 – size&#x2F;shape</h3><h3 id="2-Surface-plasmon-resonance-表面等离子共振‐-Kd"><a href="#2-Surface-plasmon-resonance-表面等离子共振‐-Kd" class="headerlink" title="2. Surface plasmon resonance 表面等离子共振‐ Kd"></a>2. Surface plasmon resonance 表面等离子共振‐ K<del>d</del></h3><h2 id="Low-throughput——Heat‐based"><a href="#Low-throughput——Heat‐based" class="headerlink" title="Low throughput——Heat‐based"></a>Low throughput——Heat‐based</h2><h3 id="1-Isothermal-titration-calorimetry-等温滴定热法‐-Kd"><a href="#1-Isothermal-titration-calorimetry-等温滴定热法‐-Kd" class="headerlink" title="1. Isothermal titration calorimetry 等温滴定热法‐ Kd"></a>1. Isothermal titration calorimetry 等温滴定热法‐ K<del>d</del></h3><p>生物大分子可以和很多配体特异性结合,当物质结合时,热量要么产生,要么吸收。 生物大分子与配体相互作用的定量描述需要确定反应过程中热力学参数的变化。 相互作用过程中产生的热量变化可以用量热计定量监测。</p>
+<p>等温滴定量热技术（ Isothermal Titration Calorimetry, ITC）是一种监测由结合成分的添加而起始的任何化学反应的热力学技术，它已 经成为鉴定生物分子间相互作用的首选方法。 它通过高灵敏度、 高自动化的微量量热仪连续、 准确地监测和记录一个变化过程的量热曲线， 原位、 在线和无损伤地同时提供热力学和动力 学信息，如结合常数（Ka） 、结合位点数（n） ，结合焓（ΔH） 、熵（ΔS） 、恒压热容（ΔC<del>p</del>）和动力学数据（如酶促反应的 K<del>m</del> 和 k<del>cat</del> ) 。这些信息提供了生物分子相互作用的真实写照。</p>
+<h3 id="2-Microscale-thermophoresis-微量热泳"><a href="#2-Microscale-thermophoresis-微量热泳" class="headerlink" title="2. Microscale thermophoresis 微量热泳"></a>2. Microscale thermophoresis 微量热泳</h3><p>微量热泳动仪使用红外激光进行局部加热导致分子定向移动，继而通过荧光分析温度梯度场中的分子分布比。MST技术能够检测到由于结合而引起的生物分子的大小、电荷和水化层的变化。相互作用的过程可以在天然条件下，无需固定、任何生物溶液中完成测量。</p>
+<p>未结合的适配子的热泳动运动与已同目标蛋白结合的适配子的热泳动不同。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/" class="category-chain-item">Biochemistry I (Macromolecules)</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Biochemistry-I-Macromolecules/" class="print-no-link">#Biochemistry I (Macromolecules)</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L08 protein quaternary structure and Protein-Protein interactions</div>
+      <div>https://zhenyumi.github.io/posts/26fcd038/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/904e407c/" title="L08 Genetics of Bacteria and Bacteriophages">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L08 Genetics of Bacteria and Bacteriophages</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/6a3e8942/" title="L09 Structure of DNA and RNA">
+                        <span class="hidden-mobile">L09 Structure of DNA and RNA</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

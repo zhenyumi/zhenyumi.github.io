@@ -1,0 +1,1007 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L07 Proteins Tertiary Structure">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/b247f43c/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Biochemistry I (Macromolecules)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-12_22-40-56.jpg">
+  
+  
+  
+  <title>L07 Proteins Tertiary Structure - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-10_21-07-00.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L07 Proteins Tertiary Structure</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          14 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L07 Proteins Tertiary Structure</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Tertiary-structure-of-proteins"><a href="#Tertiary-structure-of-proteins" class="headerlink" title="Tertiary structure of proteins"></a>Tertiary structure of proteins</h1><p>Tertiary structure describes the folding of the polypeptide chain to assemble the different secondary structure elements in a particular arrangement (a unique shape). </p>
+<p>（蛋白质的三维结构描述了蛋白质的折叠，将不同的二级结构以特定的方式结合在一起）</p>
+<p>Models of proteins:</p>
+<ol>
+<li>stick model: showing atomic positions</li>
+<li>cartoon model: show the backbone</li>
+<li>surface model: show the solvent accessible surface</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571463955537.png" srcset="/img/loading.gif" lazyload alt="1571463955537"></p>
+<h2 id="Two-major-structural-classes-of-proteins"><a href="#Two-major-structural-classes-of-proteins" class="headerlink" title="Two major structural classes of proteins"></a>Two major structural classes of proteins</h2><p>The proteins have two major classes——<strong>Fibrous protein（纤维蛋白）</strong> and <strong>Globular protein</strong>（球状蛋白质）</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571465006459.png" srcset="/img/loading.gif" lazyload alt="1571465006459" style="zoom: 80%;" />
+
+<h3 id="1-Fibrous-Protein"><a href="#1-Fibrous-Protein" class="headerlink" title="1. Fibrous Protein"></a>1. Fibrous Protein</h3><p>Fibrous proteins include the major proteins of skin and connective tissue and of animal fibers like hair and silk. </p>
+<ul>
+<li><p>Fibrous proteins are distinguished from globular proteins by their <u>filamentous, or elongated form</u>. </p>
+</li>
+<li><p>Most of them play <strong>structural roles（Provide mechanical support，提供了机械支持）</strong> in animal cells and tissues—they hold things together.</p>
+</li>
+<li><p>The amino acid sequence of each of these proteins <u>favors a particular kind of secondary structure</u>（具有特定的二级结构）, which <u>confers on each protein a particular set of appropriate mechanical properties</u>（赋予了特定蛋白特定的机械机能）.</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571465854860.png" srcset="/img/loading.gif" lazyload alt="1571465854860" style="zoom:67%;" />
+
+<h4 id="keratins-角蛋白"><a href="#keratins-角蛋白" class="headerlink" title="keratins 角蛋白"></a>keratins 角蛋白</h4><p>在生物体中存在$\alpha-$ 和 $\beta-$keratins，其中$\alpha-$keratins结构主要为alpha-helix，而beta–keratins包含更多的beta-sheet</p>
+<p><strong>keratins are adapted to helical form.</strong></p>
+<h5 id="1-alpha-keratins"><a href="#1-alpha-keratins" class="headerlink" title="(1) $\alpha-$keratins"></a>(1) $\alpha-$keratins</h5><p> <u>$\alpha-$keratins是Hair, Fingernails, Animal skin 的主要成分.</u></p>
+<p>The α-keratins are members of a broad group of <u>intermediate filament proteins,</u> which play important structural roles in the <u>nuclei, cytoplasm, and surfaces of many cell types.</u></p>
+<p><strong>Predominantly α-helical structure</strong>. The structure is also called a kind of <strong>coiled-coil</strong>.</p>
+<p>α-keratins have <u>cysteine-rich</u> sequences, adapt to <strong>disulfide cross-links</strong></p>
+<p>The structure of a typical α-keratin, that of hair, is depicted in Figure:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571467470470.png" srcset="/img/loading.gif" lazyload alt="1571467470470" style="zoom:90%;" />
+
+<p>The individual molecules contain long sequences—over 300 residues in length— that are wholly α-helical. Pairs of these <u>right-handed helices</u> twist about one another in a <strong>left-handed coiled-coil structure</strong></p>
+<p>In intermediate filaments,pairs of coiled coils themselves tend to associate into a four-chain protofilament (c),and two of these in turn pack together to form a protofibril (d).</p>
+<p>在一些组织中， $\alpha-$keratins形成的总体结构可以很柔软，但是在某些组织中（如指甲）也可以变得很坚硬。这个变化的主要原因在于 <strong>disulfide cross-links</strong> <strong>within the several levels of fiber structure</strong></p>
+<p>由之前的图中可以看出，α-keratins含有较高比例的cysteine，在人类的“卷发”形状中，就是通过减少二硫键，蛋白质纤维的重新排列以及再氧化作用等使得特定的头发样式定型。</p>
+<h5 id="2-beta-keratins"><a href="#2-beta-keratins" class="headerlink" title="(2) $\beta-$keratins"></a>(2) $\beta-$keratins</h5><p>The beta-keratins, as their name implies, contain much more beta-sheet structure. Indeed, they represented the second major structural class described by Pauling and his coworkers. The beta-keratins are found mostly in <strong>birds and reptiles,in structures like feathers and scales</strong>. </p>
+<h4 id="Fibroin-丝蛋白"><a href="#Fibroin-丝蛋白" class="headerlink" title="Fibroin 丝蛋白"></a>Fibroin 丝蛋白</h4><p>Fibroin is the main component of silk created by silkworms or spiders  </p>
+<p><u>Glycine and alanine rich sequence</u> (45% and 29%) ，The β-sheet regions comprise almost exclusively multiple repetitions of the sequence</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571469041801.png" srcset="/img/loading.gif" lazyload alt="1571469041801" style="zoom:67%;" />
+
+<p>Contains long regions of <strong>antiparallel  β‐sheet</strong>,  <u>with the polypeptide chains running parallel to the fiber axis</u></p>
+<p>fibroin contains small amounts of other, <strong>bulky amino acids like valine and tyrosine</strong>, which would not fit into the structure we have shown. These are carried in compact folded regions that periodically interrupt the β-sheet segments, and they probably account for the amount of stretchiness that silk fibers have.</p>
+<h4 id="collagen-胶原质"><a href="#collagen-胶原质" class="headerlink" title="collagen 胶原质"></a>collagen 胶原质</h4><p>Because it performs such a wide variety of functions, collagen is the most abundant single protein in most vertebrates. Diverse forms include：1. Tendon 2. Bone  3. Skin </p>
+<h5 id="1-Collagen-Structure"><a href="#1-Collagen-Structure" class="headerlink" title="(1) Collagen Structure"></a>(1) Collagen Structure</h5><p>The basic unit of the collagen fiber is the <strong>tropocollagen（原胶原(蛋白)）</strong> molecule,a <u>triple helix</u> of three polypeptide chains, <u>each about 1000 residues in length.</u><u>，这三条chain are in a right‐handed supercoil，但是<strong>单条链的螺旋方式是left-handed helices</strong>.</u></p>
+<ul>
+<li><p>3 residues&#x2F;turn</p>
+</li>
+<li><p>Rise: 0.31 nm&#x2F;residue: Collagen is more extended than α-helix</p>
+</li>
+<li><p>Repetitive motif: Gly-X-Y</p>
+<ul>
+<li><p>X: Often Proline</p>
+</li>
+<li><p>Y: proline or hydroxyproline</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102213633692.png" srcset="/img/loading.gif" lazyload alt="image-20191102213633692" style="zoom: 33%;" /></li>
+</ul>
+</li>
+<li><p>This is Polyproline II helix</p>
+</li>
+</ul>
+<p>Examination of the model reveals that every third residue, which must lie near the center of the triple helix, can be only glycine. Any side chain other than —H would be too bulky. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571470032303.png" srcset="/img/loading.gif" lazyload alt="1571470032303" style="zoom: 80%;" />
+
+<p>Formation of the individual helices of the collagen type is also favored by the presence of proline or hydroxyproline in the tropocollagen molecule. A repetitive motif in the sequence is of the form <strong>Gly–X–Y</strong>, where X is often proline and Y is  proline or hydroxyproline</p>
+<h5 id="2-Poly-proline-II-helix"><a href="#2-Poly-proline-II-helix" class="headerlink" title="(2) Poly-proline II helix"></a>(2) Poly-proline II helix</h5><p>The PPII helix is defined by (φ,ψ) backbone dihedral angles of roughly (-75°, 150°) and trans isomers of the peptide bonds.</p>
+<p>Substitution of the poly-Pro II (φ,ψ) dihedral angles into this equation yields almost exactly Ω &#x3D; -120°, i.e., the PPII helix is a left-handed helix (since Ω is negative) with <strong>3 residues per turn (360°&#x2F;120° &#x3D; 3)</strong>. The rise per residue is approximately 3.1 Å. This structure is somewhat similar to that adopted in the fibrous protein collagen, which is composed mainly of proline, hydroxyproline, and glycine.</p>
+<h3 id="2-Globular-proteins"><a href="#2-Globular-proteins" class="headerlink" title="2. Globular proteins"></a>2. Globular proteins</h3><h4 id="Classification-of-globular-proteins"><a href="#Classification-of-globular-proteins" class="headerlink" title="Classification of globular proteins"></a>Classification of globular proteins</h4><p><font color="990000">Classification of globular proteins 与 Classification of protein domains 有区别</font></p>
+<ol>
+<li><p>All $\alpha$ proteins：<br> All-α proteins are a class of structural domains in which the secondary structure is composed entirely of α-helices, with the possible exception of a few isolated β-sheets on the periphery.<br> Common examples include the bromodomain, the globin fold and the homeodomain fold. </p>
+</li>
+<li><p>All $\beta$ proteins ：</p>
+<p>All-β proteins are a class of structural domains in which the secondary structure is composed entirely of β-sheets, with the possible exception of a few isolated α-helices on the periphery.</p>
+</li>
+</ol>
+<p>Common examples include the SH3 domain, the beta-propeller domain, the immunoglobulin fold and B3 DNA binding domain. </p>
+<ol start="3">
+<li>$\alpha + \beta$ proteins：</li>
+</ol>
+<p>   α+β proteins are a class of structural domains in which the secondary structure is composed of α-helices and β-strands that <strong>occur separately</strong> along the backbone. <strong>The β-strands are therefore mostly antiparallel.</strong><br>   Common examples include the ferredoxin fold, ribonuclease A, and the SH2 domain.</p>
+   <img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571547806048.png" srcset="/img/loading.gif" lazyload alt="1571547806048" style="zoom:50%;" />
+
+<ol start="4">
+<li><p>$\alpha &#x2F; \beta$ proteins：</p>
+<p>α&#x2F;β proteins are a class of structural domains in which the secondary structure is composed of <strong>alternating α-helices and β-strand（交替出现）</strong>s along the backbone. <strong>The β-strands are therefore mostly parallel.</strong><br>Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-repeat (LRR) proteins such as ribonuclease inhibitor. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571548217599.png" srcset="/img/loading.gif" lazyload alt="1571548217599" style="zoom:50%;" />
+</li>
+<li><p>Others:</p>
+<ul>
+<li>Contain few secondary structures </li>
+<li>Intrinsically unstructured  proteins</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571472807662.png" srcset="/img/loading.gif" lazyload alt="1571472807662"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571472843270.png" srcset="/img/loading.gif" lazyload alt="1571472843270"></p>
+<p>The majority of globular domainscan be broadly  classified as: “mainly  α ”,“mainly  β ” and “ α + β ”  </p>
+<p>A small number of globular domains have little  α or β secondary structure </p>
+<h4 id="Protein-domains"><a href="#Protein-domains" class="headerlink" title="Protein domains"></a>Protein domains</h4><p>The protein domains are structural units that fold <strong>more or less independently of each other.</strong></p>
+<p><u>A small number of globular domains have little α or β secondary structure</u></p>
+<p>The <font color="990000">majority of <strong>globular domains</strong></font> can be broadly classified as:</p>
+<ul>
+<li>mainly α</li>
+<li>mainly β </li>
+<li>α + β</li>
+</ul>
+<p>It is a substructure produced by any contiguous（接近的，临近的） part of a polypeptide chain that can fold independently of the rest of the protein into a compact, stable structure. A domain usually contains between 40 and 350 amino acids, and it is the modular unit from which many larger proteins are constructed. </p>
+<p><em>A protein domain is a conserved part of a given protein sequence and (tertiary) structure that can evolve, function, and exist independently of the rest of the protein chain.</em> $\rarr$ <strong>Same domains in different proteins usually have similar functions</strong> </p>
+<p>Smaller proteins typically contain a single domain </p>
+<p>Larger proteins may contain several domains </p>
+<h4 id="Alpha-domain-structure"><a href="#Alpha-domain-structure" class="headerlink" title="Alpha domain structure"></a>Alpha domain structure</h4><h5 id="1-Four-Helix-Bundle"><a href="#1-Four-Helix-Bundle" class="headerlink" title="(1) Four Helix Bundle"></a>(1) Four Helix Bundle</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473787608.png" srcset="/img/loading.gif" lazyload alt="1571473787608" style="zoom: 67%;" />
+
+<h4 id="Beta-domain-structure"><a href="#Beta-domain-structure" class="headerlink" title="Beta domain structure"></a>Beta domain structure</h4><h5 id="beta-Sandwich"><a href="#beta-Sandwich" class="headerlink" title="$\beta$ Sandwich"></a>$\beta$ Sandwich</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473968257.png" srcset="/img/loading.gif" lazyload alt="1571473968257" style="zoom: 50%;" />
+
+<p>The sandwich has a edge, H-bond is influenced by that, so it is less stable than barrel.</p>
+<h5 id="beta-barrel"><a href="#beta-barrel" class="headerlink" title="$\beta$ barrel"></a>$\beta$ barrel</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474015601.png" srcset="/img/loading.gif" lazyload alt="1571474015601" style="zoom:50%;" />
+
+<h4 id="Alpha-Beta-domain-structures"><a href="#Alpha-Beta-domain-structures" class="headerlink" title="Alpha&#x2F;Beta domain structures"></a>Alpha&#x2F;Beta domain structures</h4><h5 id="TIM-barrel"><a href="#TIM-barrel" class="headerlink" title="TIM barrel"></a>TIM barrel</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474427361.png" srcset="/img/loading.gif" lazyload alt="1571474427361" style="zoom:60%;" />
+
+<h5 id="Open-twisted-α-β"><a href="#Open-twisted-α-β" class="headerlink" title="Open twisted α&#x2F;β"></a>Open twisted α&#x2F;β</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474617045.png" srcset="/img/loading.gif" lazyload alt="1571474617045" style="zoom:67%;" />
+
+<h4 id="Domain-structure"><a href="#Domain-structure" class="headerlink" title="Domain structure"></a>Domain structure</h4><p>Complex domain structure are composed of simple domains</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474920788.png" srcset="/img/loading.gif" lazyload alt="1571474920788" style="zoom:67%;" />
+
+<h2 id="General-rules-governing-tertiary-structure"><a href="#General-rules-governing-tertiary-structure" class="headerlink" title="General rules governing tertiary structure"></a>General rules governing tertiary structure</h2><p><font color="990000">The environment is the key factor of protein folding</font></p>
+<p>All globular proteins have a <u>defined inside and outside</u> </p>
+<p>The hydrophobic residues to be  packedmostly on the inside  (hydrophobic core) </p>
+<p>The hydrophilic residues are on  the outside, <strong>in contact with water</strong> (hydrophilic surface) </p>
+<p>Membrane proteins Transmembrane regions are <u>highly hydrophobic</u></p>
+<h4 id="CATH-database"><a href="#CATH-database" class="headerlink" title="CATH database"></a>CATH database</h4><p>The CATH Protein Structure Classification database is a free, publicly available online resource that provides information on the evolutionary relationships of protein domains. </p>
+<p>CATH database (<strong>C</strong>lass, <strong>A</strong>rchitecture, <strong>T</strong>opology, and  “<strong>H</strong>omologous superfamily) </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473546206.png" srcset="/img/loading.gif" lazyload alt="1571473546206"></p>
+<h1 id="Protein-purification"><a href="#Protein-purification" class="headerlink" title="Protein purification"></a>Protein purification</h1><h2 id="Chromatographic-separations"><a href="#Chromatographic-separations" class="headerlink" title="Chromatographic separations"></a>Chromatographic separations</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471428683.png" srcset="/img/loading.gif" lazyload alt="1571471428683" style="zoom: 80%;" />
+
+<p>色谱法利用不同物质在不同相态的选择性分配，以流动相对固定相中的混合物进行洗脱，混合物中不同的物质会以不同的速度沿固定相移动，最终达到分离的效果。</p>
+<h3 id="1-Ion-exchange-chromotography-离子交换色谱"><a href="#1-Ion-exchange-chromotography-离子交换色谱" class="headerlink" title="1. Ion exchange chromotography 离子交换色谱"></a>1. Ion exchange chromotography 离子交换色谱</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471613873.png" srcset="/img/loading.gif" lazyload alt="1571471613873" style="zoom:80%;" />
+
+<p>离子交换色谱利用待分离组分与固定相之间发生离子交换的能力差异来实现分离。离子交换色谱的固定相一般为离子交换树脂，树脂分子结构中存在许多可以电离的活性中心，待分离组分中的离子会与这些活性中心发生离子交换，形成<strong>离子交换平衡</strong>，从而在流动相与固定相之间形成分配。固定相的固有离子与待分离组分中的离子之间相互争夺固定相中的离子交换中心，并随着流动相的运动而运动，最终实现分离。<br>离子交换色谱的分配系数又叫做选择系数，其表达式为：<br>$$<br>K_{s} &#x3D; \frac{[RX^+]}{[X^+]}<br>$$</p>
+<h3 id="2-Gel-filtration-chromatography-凝胶色谱"><a href="#2-Gel-filtration-chromatography-凝胶色谱" class="headerlink" title="2. Gel filtration chromatography 凝胶色谱"></a>2. Gel filtration chromatography <strong>凝胶色谱</strong></h3><p>凝胶色谱的原理比较特殊，类似于分子筛。待分离组分在进入凝胶色谱后，会依据分子量的不同，进入或者不进入固定相凝胶的孔隙中，不能进入凝胶孔隙的分子会很快随流动相洗脱，而能够进入凝胶孔隙的分子则需要更长时间的冲洗才能够流出固定相，从而实现了根据分子量差异对各组分的分离。调整固定相使用的凝胶的交联度可以调整凝胶孔隙的大小；改变流动相的溶剂组成会改变固定相凝胶的溶涨状态，进而改变孔隙的大小，获得不同的分离效果。 </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471984688.png" srcset="/img/loading.gif" lazyload alt="1571471984688" style="zoom:80%;" />
+
+<h3 id="3-Affinity-chromatography-亲和色谱法，亲和层析"><a href="#3-Affinity-chromatography-亲和色谱法，亲和层析" class="headerlink" title="3. Affinity chromatography 亲和色谱法，亲和层析"></a>3. Affinity chromatography <strong>亲和色谱法，亲和层析</strong></h3><p><font color="990000">High specificity</font></p>
+<p>亲和色谱法（英语：Affinity chromatography，又称为亲和层析）是一种利用固定相的结合特性来分离分子的色谱方法。亲和色谱在凝胶过滤色谱柱上连接与待分离的物质有一定结合能力的分子，并且它们的结合是可逆的，在改变流动相条件时二者还能相互分离。亲和色谱可以用来从混合物中纯化或浓缩某一分子，也可以用来去除或减少混合物中某一分子的含量。</p>
+<h1 id="Protein-folding"><a href="#Protein-folding" class="headerlink" title="Protein folding"></a>Protein folding</h1><h2 id="Factors-Determining-Secondary-and-Tertiary-Structure"><a href="#Factors-Determining-Secondary-and-Tertiary-Structure" class="headerlink" title="Factors Determining Secondary and Tertiary Structure"></a>Factors Determining Secondary and Tertiary Structure</h2><ul>
+<li>Amino Acids sequence</li>
+<li>Physical and chemical conditions<ul>
+<li>High temperature</li>
+<li>Extreme pH</li>
+<li>Organic Solvents: Urea; Guanidine (胍); Alcohol</li>
+</ul>
+</li>
+<li>The process that a protein loses its native (functional) 3D structure is call denaturation <ul>
+<li>Random coil structure (maybe very complicated) </li>
+<li>Loss of biological activities</li>
+</ul>
+</li>
+</ul>
+<h2 id="Thermodynamics"><a href="#Thermodynamics" class="headerlink" title="Thermodynamics"></a>Thermodynamics</h2><p>Folding is a <strong>spontaneous process</strong> that is <strong>mainly guided by hydrophobic interactions</strong>, formation of intramolecular hydrogen bonds, van der Waals forces, and it is <strong>opposed by conformational entropy</strong>.</p>
+<p>The protein folding process finally reach a state that the <strong>free energy minimum</strong>, the protein folding process is thermodynamic favoured.</p>
+<h3 id="1-Negative-Free-Energy-Change"><a href="#1-Negative-Free-Energy-Change" class="headerlink" title="1. Negative Free Energy Change"></a>1. Negative Free Energy Change</h3><p>The negative free energy change is achieved by a balance of  several thermodynamic factors ：</p>
+<ol>
+<li>Conformational entropy </li>
+<li><strong>Charge‐charge interactions</strong>: Charge–charge interactions can occur between positively and negatively charged side chain groups.<ol>
+<li>Salt bridges: At neutral pH, one group will be charged positively and the other negatively, so an electrostatic attractive force exists between them.We could say that such a pair forms a kind of salt within the protein molecule; consequently, such interactions are sometimes called <strong>salt bridges</strong>.</li>
+</ol>
+</li>
+<li>Internal H‐bonds <ol>
+<li>H‐bond network：蛋白质中“蛋白质骨架”与“side chains”相互结合，共形成三种氢键。虽然单个氢键的作用较小，但是数量弥补了键强度的不足。</li>
+</ol>
+</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571662080448.png" srcset="/img/loading.gif" lazyload alt="1571662080448" style="zoom:67%;" />
+
+<ol start="4">
+<li>van der Waals interactions </li>
+<li>Hydrophobic interactions (hydrophobic effects) </li>
+<li>Disulfide bonds (exist in some proteins): An important structure called disulfide bond stabilize the protein structure. The disufide bond is unstable in reductive environment. 在细胞内的环境通常是还原性的，而细胞外通常是氧化性的环境。在细胞内二硫键处于被还原（—SH  HS—）的状态，而在细胞外处于被氧化的状态（—S—S—）。因此对于细胞产生的<strong>分泌蛋白以及位于外膜的蛋白</strong>，通常选择使用二硫键对蛋白质结构进行稳定。</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658986922.png" srcset="/img/loading.gif" lazyload alt="1571658986922" style="zoom:33%;" />
+
+<p>Disulfide bonds are relatively rare, they mainly exists in:</p>
+<ul>
+<li>Secreted proteins </li>
+<li>Extracellular parts of membrane proteins</li>
+</ul>
+<p>The different redox states </p>
+<ul>
+<li><p>Inside of cells – reduced </p>
+</li>
+<li><p>Outside of cells– oxidized</p>
+</li>
+</ul>
+<h3 id="2-Thermodynamics"><a href="#2-Thermodynamics" class="headerlink" title="2. Thermodynamics"></a>2. Thermodynamics</h3><ul>
+<li><p>The unfavorable conformational entropy change, which <u>favors the unfolded state</u> </p>
+</li>
+<li><p>The favorable enthalpy contribution <u>arising from intramolecular interactions</u> </p>
+</li>
+<li><p>The favorable entropy change <u>arising from the burying of hydrophobic groups within the molecule</u></p>
+</li>
+<li><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658503456.png" srcset="/img/loading.gif" lazyload alt="1571658503456" style="zoom:50%;" /></li>
+</ul>
+<h2 id="Kinetics"><a href="#Kinetics" class="headerlink" title="Kinetics"></a>Kinetics</h2><p>Protein folding is <strong>not a completely random</strong> search through a vast conformational space</p>
+<h3 id="1-Free-Energy-Landscape"><a href="#1-Free-Energy-Landscape" class="headerlink" title="1. Free Energy Landscape"></a>1. Free Energy Landscape</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571659433230.png" srcset="/img/loading.gif" lazyload alt="1571659433230" style="zoom:50%;" />
+
+<p>In physics, chemistry, and biochemistry, an energy landscape is a mapping of all possible conformations of a molecular entity, or the spatial positions of interacting molecules in a system, or parameters and their corresponding energy levels, typically Gibbs free energy.</p>
+<h3 id="2-rate-limiting-factors"><a href="#2-rate-limiting-factors" class="headerlink" title="2.  rate limiting factors"></a>2.  rate limiting factors</h3><ol>
+<li>Protein size :<ul>
+<li><strong>Smaller</strong> proteins fold <strong>faster</strong> than larger ones </li>
+<li>Large numbers of <strong>disulfide bonds can slow folding</strong></li>
+</ul>
+</li>
+<li>Backbone topology:<ul>
+<li>All‐helical proteins tend to fold faster than all β‐sheet proteins</li>
+</ul>
+</li>
+</ol>
+<h2 id="Factors-Determining-Secondary-and-Tertiary-Structure-1"><a href="#Factors-Determining-Secondary-and-Tertiary-Structure-1" class="headerlink" title="Factors Determining Secondary and Tertiary Structure"></a>Factors Determining Secondary and Tertiary Structure</h2><ol>
+<li><strong>Amino acid sequence</strong>：primary structure是蛋白质结构的根本决定因素</li>
+<li>Physical and chemical conditions：<ul>
+<li>Temperature</li>
+<li>pH：The ionic bonds（salt bridge） are broken if the protein is taken to pH values high enough or low enough that either side chain loses its charge.</li>
+<li>Organic solvents （Urea, guanidine, alcohol）：可以通过竞争氢键来影响蛋白质的折叠</li>
+</ul>
+</li>
+</ol>
+<h2 id="denaturation-and-renaturation-变性与复性"><a href="#denaturation-and-renaturation-变性与复性" class="headerlink" title="denaturation and renaturation 变性与复性"></a>denaturation and renaturation 变性与复性</h2><p>The process that a protein loses its native (functional)  3D structure is call <strong>denaturation</strong></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658253587.png" srcset="/img/loading.gif" lazyload alt="1571658253587" style="zoom:50%;" />
+
+<p><font color="000099">Anfinsen 表明，即使没有二硫键，蛋白质也可以正常折叠。</font></p>
+<p><font color="000099">Anfinsen experiment表明，二硫键应该是最后形成的。</font></p>
+<p>protein can self-assemble into its functional conformation, and it needs no information to guide it other than that contained in its sequence. </p>
+<ul>
+<li><p>Uniqueness </p>
+<ul>
+<li>Sequence determined</li>
+</ul>
+</li>
+<li><p>Stability </p>
+<ul>
+<li><p>Free energy minimum </p>
+</li>
+<li><p>Folding is a thermodynamically favored process </p>
+</li>
+<li><p>Disulfide bonds help to stabilize folded structure</p>
+</li>
+</ul>
+</li>
+<li><p>Kinetical accessibility</p>
+</li>
+</ul>
+<h3 id="1-Thermal-denaturation-热变性"><a href="#1-Thermal-denaturation-热变性" class="headerlink" title="1. Thermal denaturation 热变性"></a>1. Thermal denaturation 热变性</h3><p>Differences between the native and denatured conformations can be detected by several spectroscopic(借助分光镜的) methods</p>
+<p>例：对于DNase A</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102220059687.png" srcset="/img/loading.gif" lazyload alt="image-20191102220059687" style="zoom: 50%;" />
+
+<ul>
+<li>Solution viscosity (<font color="FF0000">red</font>) </li>
+<li>Optical rotation at 365 nm (<font color="00cc00">green</font>) </li>
+<li>UV absorbance at 287 nm (<font color="0000FF">blue</font>)</li>
+</ul>
+<h2 id="Protein-folding-in-vivo"><a href="#Protein-folding-in-vivo" class="headerlink" title="Protein folding in vivo"></a>Protein folding in vivo</h2><p>在体内存在一些分子蛋白伴侣（Molecular chaperones）可以帮助蛋白质正确折叠：</p>
+<ul>
+<li>Heat  Shock Proteins, HSP：</li>
+</ul>
+<ol>
+<li>Prevent improper folding </li>
+<li>Prevent and disrupt aggregation</li>
+</ol>
+<h2 id="diseases-about-protein-folding"><a href="#diseases-about-protein-folding" class="headerlink" title="diseases about protein folding"></a>diseases about protein folding</h2><h3 id="1-Prion"><a href="#1-Prion" class="headerlink" title="1. Prion"></a>1. Prion</h3><p>朊病毒是错误折叠的蛋白质，这种蛋白质可以导致其他正常的蛋白质也发生错误折叠</p>
+<ul>
+<li><p>疯牛病：</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660355690.png" srcset="/img/loading.gif" lazyload alt="1571660355690" style="zoom:33%;" /></li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660376952.png" srcset="/img/loading.gif" lazyload alt="1571660376952" style="zoom:50%;" />
+
+<h3 id="2-Amyloid-淀粉样变性"><a href="#2-Amyloid-淀粉样变性" class="headerlink" title="2. Amyloid 淀粉样变性"></a>2. Amyloid 淀粉样变性</h3><p>Amyloid与许多疾病有关，比如阿尔茨海默症，帕金森症，二型糖尿病等…</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660482400.png" srcset="/img/loading.gif" lazyload alt="1571660482400" style="zoom:50%;" />
+
+<h1 id="Protein-dynamics"><a href="#Protein-dynamics" class="headerlink" title="Protein dynamics"></a>Protein dynamics</h1><p>Protein have dynamics  structures </p>
+<p>Protein dyanmicsis  essential for protein  activities</p>
+<h2 id="Categories"><a href="#Categories" class="headerlink" title="Categories"></a>Categories</h2><h3 id="1-Atomic-fluctuations-原子波动"><a href="#1-Atomic-fluctuations-原子波动" class="headerlink" title="1. Atomic fluctuations 原子波动"></a>1. Atomic fluctuations 原子波动</h3><ol>
+<li>The vibrations and oscillations of individual atoms and bonds </li>
+<li>Time periods ranging from 10^‐15^to 10^‐12^s </li>
+<li>Spatial displacements between 0.01 and 1 Å</li>
+</ol>
+<h3 id="2-Collective-motions-集体运动"><a href="#2-Collective-motions-集体运动" class="headerlink" title="2. Collective motions 集体运动"></a>2. Collective motions 集体运动</h3><p>The movement of groups of <strong>covalently</strong>-linked  atoms as one unit </p>
+<ol>
+<li><p>Individual sidechain </p>
+</li>
+<li><p>Helix  </p>
+</li>
+<li><p>Entire domain</p>
+</li>
+</ol>
+<p>Time periods ranging from 10^‐12^to 10^‐3^ s </p>
+<p>Spatial displacements between 0.01 and &gt;5 Å </p>
+<h3 id="3-Triggered-conformational-changes"><a href="#3-Triggered-conformational-changes" class="headerlink" title="3. Triggered conformational changes"></a>3. Triggered conformational changes</h3><p>The response motions (ligand binding) of  groups of atoms  </p>
+<p>Individual sidechain </p>
+<p>Whole interacting region </p>
+<p>Time periods ranging from 10^‐9^to 10^3^ s </p>
+<p>Spatial displacements between 0.5 and &gt;10 Å</p>
+<h1 id="Prediction-of-secondary-structure"><a href="#Prediction-of-secondary-structure" class="headerlink" title="Prediction of secondary structure"></a>Prediction of secondary structure</h1><p>High accuracy $\ \rarr \ $~80% </p>
+<p>Differences are most frequently found in definition of the precise location of the ends of helices and strands</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571661077088.png" srcset="/img/loading.gif" lazyload alt="1571661077088" style="zoom:50%;" />
+
+<h1 id="Prediction-of-tertiary-structure"><a href="#Prediction-of-tertiary-structure" class="headerlink" title="Prediction of tertiary structure"></a>Prediction of tertiary structure</h1><p>对三级结构的预测精确度很低，但是如果所预测的蛋白有已知的同源结构，准确度会提升</p>
+<p>Largely depends on sizes of predicted proteins </p>
+<p>The accuracy can be increase if a homologue structure exists </p>
+<p>Higher sequence similarity, higher accuracy </p>
+<h1 id="Protein-structure-determination"><a href="#Protein-structure-determination" class="headerlink" title="Protein structure determination"></a>Protein structure determination</h1><h2 id="X‐ray-Crystallography"><a href="#X‐ray-Crystallography" class="headerlink" title="X‐ray Crystallography"></a>X‐ray Crystallography</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102222551196.png" srcset="/img/loading.gif" lazyload alt="image-20191102222551196"></p>
+<h2 id="Protein-crystallography-in-applications"><a href="#Protein-crystallography-in-applications" class="headerlink" title="Protein crystallography in applications"></a>Protein crystallography in applications</h2><ul>
+<li><p>Academics </p>
+<ul>
+<li>Protein structures </li>
+<li>Structural genomics </li>
+<li>Protein-protein or protein-ligand interactions</li>
+<li>Catalytic mechanisms of enzymes</li>
+</ul>
+</li>
+<li><p>Industry </p>
+<ul>
+<li>Understanding diseases </li>
+<li>Drug design</li>
+</ul>
+</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/" class="category-chain-item">Biochemistry I (Macromolecules)</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Biochemistry-I-Macromolecules/" class="print-no-link">#Biochemistry I (Macromolecules)</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L07 Proteins Tertiary Structure</div>
+      <div>https://zhenyumi.github.io/posts/b247f43c/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/7af3b442/" title="L07 Linkage, Crossing Over, and Chromosome Mapping">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L07 Linkage, Crossing Over, and Chromosome Mapping</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/904e407c/" title="L08 Genetics of Bacteria and Bacteriophages">
+                        <span class="hidden-mobile">L08 Genetics of Bacteria and Bacteriophages</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

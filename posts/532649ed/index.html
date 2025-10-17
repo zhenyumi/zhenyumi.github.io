@@ -1,0 +1,863 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L01 The Science of Genetics">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/532649ed/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+  
+  
+  
+  <title>L01 The Science of Genetics - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L01 The Science of Genetics</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          255 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          3 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L01 The Science of Genetics</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Genetics"><a href="#一、Genetics" class="headerlink" title="一、Genetics"></a>一、Genetics</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Genetics is the science of genes, heredity, and variation in living organisms.</p>
+<p>This discipline involves the study of cells,  individuals, their offspring, and the populations within which organisms live</p>
+<p>Scientists investigate all form of inherited variation as well as the molecular basis underlying such characteristics.</p>
+<h3 id="1-Transmission-Genetics-Mendelian-Genetics-Classic-Genetics-经典遗传学"><a href="#1-Transmission-Genetics-Mendelian-Genetics-Classic-Genetics-经典遗传学" class="headerlink" title="1. Transmission Genetics&#x2F;Mendelian Genetics (Classic Genetics) 经典遗传学"></a>1. Transmission Genetics&#x2F;Mendelian Genetics (Classic Genetics) 经典遗传学</h3><p><strong>Transmission genetics</strong> is the oldest field of genetics </p>
+<ul>
+<li>It examines <u>how traits are passed from one generation to the next</u></li>
+</ul>
+<p>The conceptual framework was provided by Gregor Mendel in the 1860s </p>
+<ul>
+<li>Genetic determinants pass from parent to offspring as discrete units <ul>
+<li>These are now termed genes</li>
+</ul>
+</li>
+</ul>
+<p>During this time, geneticists pursued their science by <u>analyzing the outcomes of crosses between different strains</u> of organisms, much as Mendel had done in his work with peas.</p>
+<h4 id="Genetic-Cross-基因杂交"><a href="#Genetic-Cross-基因杂交" class="headerlink" title="Genetic Cross 基因杂交"></a>Genetic Cross 基因杂交</h4><p>The basic experimental approach is the <strong>genetic cross</strong> </p>
+<ul>
+<li>Two selected individuals are mated </li>
+<li>The traits in question are analyzed over several generations </li>
+<li>Analysis is often quantitative in nature</li>
+</ul>
+<h3 id="2-Molecular-Genetics-分子遗传学"><a href="#2-Molecular-Genetics-分子遗传学" class="headerlink" title="2.  Molecular Genetics 分子遗传学"></a>2.  Molecular Genetics 分子遗传学</h3><p><strong>Molecular genetics</strong> is the most modern field of genetics </p>
+<ul>
+<li>It deals with <u>how the molecular features of DNA underlie gene expression</u><ul>
+<li>Gene organization, function and regulation </li>
+<li>Detailed analysis of DNA, RNA and proteins</li>
+<li>Example: Loss‐of‐function mutation which eliminates the function of a gene, often revealing its role in creating a trait.</li>
+</ul>
+</li>
+</ul>
+<p>The replication, expression, and mutation of genes could now be studied at the molecular level. This approach to genetic analysis was raised to a new level when it became possible to sequence DNA molecules easily.</p>
+<h3 id="3-Population-Genetics-Classic-Genetics-群体遗传学"><a href="#3-Population-Genetics-Classic-Genetics-群体遗传学" class="headerlink" title="3. Population Genetics (Classic Genetics) 群体遗传学"></a>3. Population Genetics (Classic Genetics) 群体遗传学</h3><p><strong>Population genetics</strong> deals with the <u>genetic variation of populations and how that variation is related to the environment</u></p>
+<p>Population geneticists develop mathematical theories to explain the prevalence（流行，广泛） of certain alleles within populations</p>
+<p>Genetics can also be studied at the level of an entire population of organisms. Individuals within a population may carry different alleles of a gene; perhaps they carry different alleles of many genes. These differences make individuals genetically distinct, possibly even unique.</p>
+<h2 id="Centrol-Dogma"><a href="#Centrol-Dogma" class="headerlink" title="Centrol Dogma"></a>Centrol Dogma</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116101148348.png" srcset="/img/loading.gif" lazyload alt="image-20191116101148348" style="zoom:50%;" />
+
+<h3 id="1-Genetic-material"><a href="#1-Genetic-material" class="headerlink" title="1. Genetic material"></a>1. Genetic material</h3><p>In eukaryotes and prokaryotes, <u>DNA (deoxyribonucleic acid)</u> serves as the molecular storing genetic information. In virus,  either DNA or RNA (ribonucleic acid) serves this function.</p>
+<h3 id="2-Gene"><a href="#2-Gene" class="headerlink" title="2. Gene"></a>2. Gene</h3><p>Gene is the functional unit of heredity. It is an <u>informational storage unit</u> capable of undergoing replication, mutation, and expression. In chemical terms, it is a <u>linear array of nucleotides</u> – the chemical building blocks of DNA and RNA.</p>
+<h3 id="3-Phenotypes"><a href="#3-Phenotypes" class="headerlink" title="3. Phenotypes"></a>3. Phenotypes</h3><p>The <u>observable characteristics or traits of an organism</u>, such as its morphology, development, biochemical or physiological properties, and behavior.</p>
+<h2 id="Three-Great-Milestones-in-Genetics"><a href="#Three-Great-Milestones-in-Genetics" class="headerlink" title="Three Great Milestones in Genetics"></a>Three Great Milestones in Genetics</h2><ol>
+<li><strong>1866 Gregor Mendel</strong>: The discovery of rules governing the inheritance of traits in organisms (Genes and the<br>rules of inheritance)</li>
+<li><strong>1953 James Watson and Francis Crick</strong>: The identification of the material responsible for this inheritance and the elucidation of its structure (structure of DNA)</li>
+<li><strong>2003 The Human Genome Project</strong>: The comprehensive analysis of the hereditary material in human beings and other organisms, (sequencing DNA and cataloguing genes)</li>
+</ol>
+<h1 id="二、The-Rules-of-Inheritance"><a href="#二、The-Rules-of-Inheritance" class="headerlink" title="二、The Rules of Inheritance"></a>二、The Rules of Inheritance</h1><h2 id="Gregor-Mendel"><a href="#Gregor-Mendel" class="headerlink" title="Gregor Mendel"></a>Gregor Mendel</h2><ul>
+<li>Studied the inheritance of different <u>traits</u> of peas. </li>
+<li>Discovered that “genes” exits in different forms (<u>now call alleles).</u> </li>
+<li>Proposed pea has 2 copies of each “genes”.</li>
+</ul>
+<h2 id="The-Rule"><a href="#The-Rule" class="headerlink" title="The Rule"></a>The Rule</h2><ol>
+<li><p>Alleles of the same gene separate during gamete formation. </p>
+</li>
+<li><p>Alleles of different genes are inherited independently.</p>
+</li>
+</ol>
+<h1 id="三、The-Structure-of-DNA"><a href="#三、The-Structure-of-DNA" class="headerlink" title="三、The Structure of DNA"></a>三、The Structure of DNA</h1><ol>
+<li><p>Nucleic acids are made of building blocks called nucleotides. </p>
+</li>
+<li><p>Nucleotides are linked in a chain through sugar‐phosphate interactions.</p>
+</li>
+</ol>
+<h2 id="Nucleotides"><a href="#Nucleotides" class="headerlink" title="Nucleotides"></a>Nucleotides</h2><p>Nucleotides have three components：</p>
+<ol>
+<li>Sugar molecule (ribose or deoxyribose) </li>
+<li>Phosphate molecule </li>
+<li>Nitrogen‐containing molecule : (adenine, guanine, cytosine, thymine, uracil)</li>
+</ol>
+<p>RNA is ribonucleic acid. </p>
+<p>DNA is deoxyribonucleic acid.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116102940817.png" srcset="/img/loading.gif" lazyload alt="image-20191116102940817" style="zoom:50%;" />
+
+<ul>
+<li>DNA molecules are made of two chains of nucleotides wound around each other in a helix </li>
+<li>Two chains are held together by hydrogen bonds</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116103031972.png" srcset="/img/loading.gif" lazyload alt="image-20191116103031972" style="zoom: 67%;" />
+
+<h2 id="Base-Pairs"><a href="#Base-Pairs" class="headerlink" title="Base Pairs"></a>Base Pairs</h2><p>Base pairs hold the chains together </p>
+<ul>
+<li><p>Adenine (A) pairs with Thymine (T) &#x2F; Uracil (U) </p>
+</li>
+<li><p>Guanine (G) pairs with Cytosine (C)</p>
+</li>
+</ul>
+<p>Two chains of a DNA molecule are complementary.</p>
+<h2 id="The-Human-Genome-Project"><a href="#The-Human-Genome-Project" class="headerlink" title="The Human Genome Project"></a>The Human Genome Project</h2><p>Sequencing DNA and Cataloguing Genes</p>
+<h2 id="Genome-基因组"><a href="#Genome-基因组" class="headerlink" title="Genome (基因组)"></a>Genome (基因组)</h2><p><strong>Genome</strong>—<u>the collection of DNA molecules that is characteristic of an organism.</u></p>
+<p><strong>Genomics（基因组学）</strong> is the analysis of DNA sequences that make up a genome. Genomics involves DNA sequencing technology, robotics, and computer science.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116103505450.png" srcset="/img/loading.gif" lazyload alt="image-20191116103505450" style="zoom:67%;" />
+
+<h1 id="四、Molecular-Level-of-Genetics"><a href="#四、Molecular-Level-of-Genetics" class="headerlink" title="四、Molecular Level of Genetics"></a>四、Molecular Level of Genetics</h1><h2 id="DNA-as-the-Genetic-Material"><a href="#DNA-as-the-Genetic-Material" class="headerlink" title="DNA as the Genetic Material"></a>DNA as the Genetic Material</h2><ul>
+<li>Information flows from DNA to RNA to protein. </li>
+<li>In all cellular organisms, the genetic material is DNA.</li>
+</ul>
+<p>The genetic material </p>
+<ol>
+<li><p>Must be able to <u>replicate</u> </p>
+</li>
+<li><p>Must contain <u>information</u> </p>
+</li>
+<li><p>Must be <u>able to change</u></p>
+</li>
+</ol>
+<h2 id="DNA-Replication"><a href="#DNA-Replication" class="headerlink" title="DNA Replication"></a>DNA Replication</h2><p>Based on the <u>complementary nature of the two strands</u> of duplex DNA molecules. </p>
+<p>When the two parental strands are separated, the separated strands can serve as template for the synthesis of new strands. </p>
+<p>New strands are assembled by <u>incorporating nucleotides</u> according to base‐pairing rules. </p>
+<p>At the end of replication, each template strand is paired with a newly synthesized partner strand. </p>
+<p>DNA replication is <u>catalyzed by enzymes</u>.</p>
+<h2 id="Gene-Expression"><a href="#Gene-Expression" class="headerlink" title="Gene Expression"></a>Gene Expression</h2><ol>
+<li><p>During <u>transcription</u>, an RNA molecule (mRNA) is synthesized from a DNA template.</p>
+</li>
+<li><p><u>messenger RNA (mRNA)</u> molecules contains the information needed to synthesize a polypeptide.</p>
+</li>
+<li><p>During <u>translation</u>, the <u>triplet codons</u> in the RNA specify the incorporation of particular amino acids into a polypeptide chain.</p>
+</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116104019233.png" srcset="/img/loading.gif" lazyload alt="image-20191116104019233" style="zoom: 80%;" />
+
+<h2 id="Trait-And-Genes"><a href="#Trait-And-Genes" class="headerlink" title="Trait And Genes"></a>Trait And Genes</h2><h3 id="1-Trait"><a href="#1-Trait" class="headerlink" title="1. Trait"></a>1. Trait</h3><p>A <strong>trait</strong> is any characteristic that an organism displays</p>
+<h4 id="Morphological-traits-形态学特征"><a href="#Morphological-traits-形态学特征" class="headerlink" title="Morphological traits 形态学特征"></a><strong>Morphological traits</strong> 形态学特征</h4><p>Affect the <u>appearance</u> of the organism </p>
+<p>Example: The color of a flower </p>
+<h4 id="Physiological-traits-生理学特征"><a href="#Physiological-traits-生理学特征" class="headerlink" title="Physiological traits 生理学特征"></a><strong>Physiological traits</strong> 生理学特征</h4><p>Affect the <u>function</u> of the organism </p>
+<p>Example: Ability to metabolize a sugar</p>
+<h4 id="Behavioral-traits-行为学特征"><a href="#Behavioral-traits-行为学特征" class="headerlink" title="Behavioral traits 行为学特征"></a>Behavioral traits 行为学特征</h4><p>Affect the ways an <u>organism responds to the environment</u> </p>
+<p>Example: Mating calls of bird species</p>
+<h3 id="2-Relationship-Between-Traits-And-Genes"><a href="#2-Relationship-Between-Traits-And-Genes" class="headerlink" title="2. Relationship Between Traits And Genes"></a>2. Relationship Between Traits And Genes</h3><ol>
+<li>Genes&#x2F;traits within a particular species can be studied at the population level</li>
+<li><u>Traits are observed at the organism level</u></li>
+<li><u>Proteins</u> function at the cellular level</li>
+<li>Genes are expressed at the molecular level</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116105002468.png" srcset="/img/loading.gif" lazyload alt="image-20191116105002468" style="zoom: 67%;" />
+
+<h3 id="3-Influence-Factor-of-Traits"><a href="#3-Influence-Factor-of-Traits" class="headerlink" title="3. Influence Factor of Traits"></a>3. Influence Factor of Traits</h3><p>The traits an individual expresses do not result from its genes alone. </p>
+<p>Rather, <u>traits are a result of the interaction between genes and the environment.</u></p>
+<ul>
+<li>For example, an individual’s diet has an effect on his&#x2F;her height and weight and even intelligence</li>
+<li>In some cases, the environment dictates whether a disease is manifested in an individual or not. (在某些情况下，环境决定了一种疾病是否表现在一个人身上。)</li>
+</ul>
+<h4 id="Phenylketonuria-PKU，苯丙酮尿症"><a href="#Phenylketonuria-PKU，苯丙酮尿症" class="headerlink" title="Phenylketonuria (PKU，苯丙酮尿症)"></a>Phenylketonuria (PKU，苯丙酮尿症)</h4><p>Humans have a gene encoding the enzyme phenylalanine hydroxylase (苯丙氨酸羟化酶)</p>
+<p>Humans with one or two functional copies of this gene can metabolize phenylalanine </p>
+<p>Humans with two copies of a rare inactive allele cannot metabolize phenylalanine </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116105844566.png" srcset="/img/loading.gif" lazyload alt="image-20191116105844566"></p>
+<p>Phenylalanine will thus accumulate </p>
+<ul>
+<li>It ultimately causes a number of detrimental effects; Mental impairment</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116105923769.png" srcset="/img/loading.gif" lazyload alt="image-20191116105923769" style="zoom: 33%;" />
+
+<p>Newborns are now routinely screened for PKU </p>
+<p>Individuals with the disease are put on a strict dietary regimen Their diet is essentially phenylalanine‐free </p>
+<p>These individuals tend to develop normally</p>
+<h1 id="五、Inheritance"><a href="#五、Inheritance" class="headerlink" title="五、Inheritance"></a>五、Inheritance</h1><p>Inherited Differences in Traits Are Due to Genetic Variation</p>
+<p>Genetic variation is a result of various types of changes to DNA at the molecular level.</p>
+<h3 id="1-Gene-mutations"><a href="#1-Gene-mutations" class="headerlink" title="1. Gene mutations"></a>1. Gene mutations</h3><ul>
+<li>Differences in gene sequences</li>
+</ul>
+<p>Lead to two or more expression forms or alleles of the same gene</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116105237534.png" srcset="/img/loading.gif" lazyload alt="image-20191116105237534" style="zoom: 67%;" />
+
+<h3 id="2-Changes-in-chromosome-structure"><a href="#2-Changes-in-chromosome-structure" class="headerlink" title="2. Changes in chromosome structure"></a>2. Changes in chromosome structure</h3><ul>
+<li>Large segments of a chromosome may be lost, duplicated or reattached to another chromosome</li>
+</ul>
+<h3 id="3-Changes-in-chromosome-number"><a href="#3-Changes-in-chromosome-number" class="headerlink" title="3. Changes in chromosome number"></a>3. Changes in chromosome number</h3><ul>
+<li>Single chromosomes may be lost or gained</li>
+</ul>
+<p>A whole extra set of chromosomes may be inherited</p>
+<h2 id="Natural-Selection"><a href="#Natural-Selection" class="headerlink" title="Natural Selection"></a>Natural Selection</h2><p>Natural selection can be summarized as such:</p>
+<ol>
+<li><p>Members of a species <u>compete for essential resources.</u></p>
+</li>
+<li><p>In some individuals, <u>random mutations</u> lead to <u>beneficial alleles.</u> </p>
+<p><u>Individuals are better adapted to the environment</u></p>
+</li>
+<li><p>These individuals are more likely to survive and reproduce</p>
+</li>
+<li><p>Therefore, the <u>beneficial alleles are passed on to subsequent generations</u></p>
+</li>
+</ol>
+<p>Thus, genetic changes can accumulate. </p>
+<p>These can slowly lead to remarkable modifications in the characteristics of a species</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetics/" class="category-chain-item">Genetics</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetics/" class="print-no-link">#Genetics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L01 The Science of Genetics</div>
+      <div>https://zhenyumi.github.io/posts/532649ed/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/211e6167/" title="L21 Apoptosis">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L21 Apoptosis</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/1eabe41c/" title="L01 The Scope of Biochemistry">
+                        <span class="hidden-mobile">L01 The Scope of Biochemistry</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

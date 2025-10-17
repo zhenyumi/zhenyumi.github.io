@@ -1,0 +1,1241 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Introduction to cloning vectors">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L11 Cloning Vectors and Host cells">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/5cda9bd9/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Introduction to cloning vectors">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105003836734.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105004346942.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105004549239.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105004708975.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105004754676.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005137854.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005245041.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005252437.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005304320.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005403327.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005511857.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005517900.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005557334.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005626782.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010228977.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105004754676.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010409794.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010428394.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010537552.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010619772.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010655374.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010851998.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010907051.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010937051.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105011427572.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105011758340.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012443977.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012533804.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012701328.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012811453.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012846577.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012944489.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013015140.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013134649.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013206729.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013252576.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013304563.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013449385.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013523439.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013714589.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105014022607.png">
+<meta property="article:published_time" content="2021-01-08T10:32:26.000Z">
+<meta property="article:modified_time" content="2021-01-08T10:32:26.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetic Engineering">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105003836734.png">
+  
+  
+  
+  <title>L11 Cloning Vectors and Host cells - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L11 Cloning Vectors and Host cells</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-01-08 18:32" pubdate>
+          2021年1月8日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          775 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          7 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L11 Cloning Vectors and Host cells</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Basic-features-of-Cloning-Vectors"><a href="#一、Basic-features-of-Cloning-Vectors" class="headerlink" title="一、Basic features of Cloning Vectors."></a>一、Basic features of Cloning Vectors.</h1><h2 id="Why-the-Vector-and-the-Host-Cell-are-important"><a href="#Why-the-Vector-and-the-Host-Cell-are-important" class="headerlink" title="Why the Vector and the Host Cell are important ?"></a>Why the Vector and the Host Cell are important ?</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105003836734.png" srcset="/img/loading.gif" lazyload alt="image-20210105003836734" style="zoom: 67%;" />
+
+<ul>
+<li>They enables manipulation of genetic materials in living cells.</li>
+<li>A particular gene can be isolated and its nucleotide sequence determined and analyzed. </li>
+<li>Protein&#x2F;enzyme&#x2F;RNA function can be investigated. </li>
+<li>Mutations can be identified, e.g. gene defects related to specific diseases. </li>
+<li>Target protein or RNA can be expressed and purified.</li>
+</ul>
+<h2 id="What-would-be-ideal-features-for-a-cloning-vector"><a href="#What-would-be-ideal-features-for-a-cloning-vector" class="headerlink" title="What would be ideal features for a cloning vector ?"></a>What would be ideal features for a cloning vector ?</h2><p>It should be able to <u>replicate autonomously</u> in the host cell.</p>
+<p>It should be of a <u>reasonable size</u>, facilitating the cloning procedure</p>
+<p>Harbors sequence&#x2F;<u>modules for cloning</u></p>
+<p>Easy to be <u>isolated &amp; purified</u>.</p>
+<p>Easy to be <u>screened and identified</u> in the host cell.</p>
+<h2 id="Basic-features-of-Cloning-Vectors"><a href="#Basic-features-of-Cloning-Vectors" class="headerlink" title="Basic features of (Cloning) Vectors"></a>Basic features of (Cloning) Vectors</h2><p><strong>Modules for replication:</strong> Origin of replication – Different Origin largely determined the copy number.</p>
+<p><strong>Modules for insert&#x2F;cut-out the gene of interest</strong>: Multiple Cloning sites or recombination site</p>
+<p><strong>Modules for select the transformants:</strong> Antibiotic resistance genes; Reporter genes.</p>
+<p><strong>Modules for the control of target gene:</strong> promoter, operator, ribosome binding site. (for expression vector only)</p>
+<h2 id="TYPES-OF-VECTORS"><a href="#TYPES-OF-VECTORS" class="headerlink" title="TYPES OF VECTORS"></a>TYPES OF VECTORS</h2><table>
+<thead>
+<tr>
+<th>Vectors</th>
+<th>Targeted Host</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Plasmid</td>
+<td>Bacteria, Streptomyces</td>
+</tr>
+<tr>
+<td>Phages Vector</td>
+<td>Bacteria</td>
+</tr>
+<tr>
+<td>Cosmid</td>
+<td>Bacteria</td>
+</tr>
+<tr>
+<td>Yeast Cloning Vectors</td>
+<td>Yeasts</td>
+</tr>
+<tr>
+<td>Human Artificial Chromosome</td>
+<td>Human Cell line</td>
+</tr>
+<tr>
+<td>SV40 vector</td>
+<td>Mammalian Cell</td>
+</tr>
+</tbody></table>
+<h1 id="二、A-general-introduction-about-plasmid"><a href="#二、A-general-introduction-about-plasmid" class="headerlink" title="二、A general introduction about plasmid"></a>二、A general introduction about plasmid</h1><h2 id="Plasmid-vector"><a href="#Plasmid-vector" class="headerlink" title="Plasmid vector"></a>Plasmid vector</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105004346942.png" srcset="/img/loading.gif" lazyload alt="image-20210105004346942" style="zoom: 50%;" />
+
+<ul>
+<li>Plasmid vector is a small piece of circular DNA found outside of the bacterial chromosome.</li>
+<li>Capable of autonomous replication</li>
+<li>Can transfer genes from one cell to other.</li>
+</ul>
+<h3 id="1-Features-of-Plasmid"><a href="#1-Features-of-Plasmid" class="headerlink" title="1. Features of Plasmid"></a>1. Features of Plasmid</h3><ol>
+<li><p>Small (Versus host genome), Extrachromosomal DNA, originally found as naturally occurring.</p>
+</li>
+<li><p>Normally dispensable, but can have selective advantage under certain condition.</p>
+</li>
+<li><p>Plasmid could mediate their own transfer between Bacteria. </p>
+<ul>
+<li><u>Conjugative vs Non-conjugative</u>, Mobilization</li>
+</ul>
+</li>
+<li><p>Must be a replicon, must replicate along with host cell division, otherwise will be lost</p>
+</li>
+<li><p>High copy plasmids are usually small; low copy plasmids can be large</p>
+</li>
+<li><p>Replication is strictly controlled for low copy plasmid. </p>
+<ul>
+<li>Stringent control vs Relaxed control</li>
+</ul>
+</li>
+<li><p>Plasmid replication requires host cell functions. </p>
+</li>
+<li><p>Copy number is regulated by initiation of plasmid replication.</p>
+</li>
+</ol>
+<h4 id="Stringent-control-vs-Relaxed-control"><a href="#Stringent-control-vs-Relaxed-control" class="headerlink" title="Stringent control vs Relaxed control"></a>Stringent control vs Relaxed control</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105004549239.png" srcset="/img/loading.gif" lazyload alt="image-20210105004549239" style="zoom:50%;" />
+
+<h3 id="2-Varieties-Of-Plasmids-Based-On-Functions"><a href="#2-Varieties-Of-Plasmids-Based-On-Functions" class="headerlink" title="2. Varieties Of Plasmids Based On Functions"></a>2. Varieties Of Plasmids Based On Functions</h3><p>(based on function there are five main classes:)</p>
+<ol>
+<li><strong>Fertility &#x2F; F- plasmids</strong>: They are capable of conjugation and result in the expression of sex pilli.</li>
+<li><strong>Resistance (R) plasmids</strong>: They contain genes that provide resistance against antibiotics or poisons.</li>
+<li><strong>Col plasmids</strong>: They contain genes that code for bacteriocins, proteins that can kill other bacteria.</li>
+<li><strong>Degradative plasmids</strong>: They enable the digestion of unusual substances, e.g. toluene and salicylic acid.</li>
+<li><strong>Virulence plasmids:</strong> They turn the bacterium into a pathogen</li>
+</ol>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105004708975.png" srcset="/img/loading.gif" lazyload alt="image-20210105004708975" style="zoom:100%;" />
+
+<h2 id="Typical-features-of-a-cloning-plasmid-learn-from-pUC18"><a href="#Typical-features-of-a-cloning-plasmid-learn-from-pUC18" class="headerlink" title="Typical features of a cloning plasmid: learn from pUC18"></a>Typical features of a cloning plasmid: learn from pUC18</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105004754676.png" srcset="/img/loading.gif" lazyload alt="image-20210105004754676" style="zoom: 50%;" />
+
+<p>A classical cloning vector</p>
+<ul>
+<li>Small size </li>
+<li>Origin of replication </li>
+<li>Multiple cloning site (MCS) </li>
+<li>Selectable marker genes</li>
+</ul>
+<p>pUC18 is one of a series of plasmid cloning vectors created by Joachim Messing and co-workers.</p>
+<p>Nomenclature:</p>
+<ul>
+<li>p &#x3D;plasmid</li>
+<li>UC &#x3D; University of California</li>
+<li>18 &#x3D; a number given to distinguish it from others</li>
+</ul>
+<p>pBR322 &#x3D; $\text{plasmid}^{\text{Boliver Rodriguez}}$</p>
+<ol>
+<li><p><strong>Antibiotic resistance gene</strong>: a gene for antibiotic <u>resistance</u> to A<u>mpicillin (ampR)</u>.</p>
+<ul>
+<li><strong>How does Ampicillin resistance works ?</strong></li>
+</ul>
+</li>
+<li><p>A reporter gene (and its promoter) encode enzyme <u>beta-galactosidase (lacZ).</u></p>
+<ul>
+<li><strong>What’s the function of this reporter gene ?</strong></li>
+</ul>
+</li>
+<li><p>Polylinker region (<strong>multipe cloning sites, MCS</strong>), with a series of unique restriction sites<br>found nowhere else in the plasmid. </p>
+<ul>
+<li>Enabling cut and paste of your target DNA – You all know already !</li>
+</ul>
+</li>
+<li><p>Replication origin: enabling the replication within E.coli host cell.</p>
+</li>
+</ol>
+<h2 id="Antibiotic-resistance-genes-ampicillin-resistance-satellite-colony"><a href="#Antibiotic-resistance-genes-ampicillin-resistance-satellite-colony" class="headerlink" title="Antibiotic resistance genes (ampicillin resistance &amp; satellite colony)"></a>Antibiotic resistance genes (ampicillin resistance &amp; satellite colony)</h2><h3 id="1-Antibiotics"><a href="#1-Antibiotics" class="headerlink" title="1. Antibiotics"></a>1. Antibiotics</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005137854.png" srcset="/img/loading.gif" lazyload alt="image-20210105005137854" style="zoom:50%;" />
+
+<p>The antibiotics acts by inhibition of:</p>
+<ul>
+<li>Cell wall synthesis (e.g. Ampicillin)</li>
+<li>Translation</li>
+<li>Transcription</li>
+<li>DNA replication</li>
+<li>Other basal metabolic processes.</li>
+</ul>
+<p>Different antibiotics:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005245041.png" srcset="/img/loading.gif" lazyload alt="image-20210105005245041" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005252437.png" srcset="/img/loading.gif" lazyload alt="image-20210105005252437" style="zoom:100%;" />
+
+<h4 id="How-does-Ampicillin-resistance-works"><a href="#How-does-Ampicillin-resistance-works" class="headerlink" title="How does Ampicillin resistance works ?"></a>How does Ampicillin resistance works ?</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005304320.png" srcset="/img/loading.gif" lazyload alt="image-20210105005304320" style="zoom: 33%;" />
+
+<ul>
+<li>Penicillin irreversibly <strong>blocks bacterial cell wall synthes is</strong> by inhibiting the formation of peptidoglycan cross-links. Penicillin <u>covalently binds to</u> the enzyme <u>transpeptidase</u> that links the peptidoglycan molecules in bacteria, it inhibits the molecule so that it cannot react any furt her and cell wall cannot be further synthesized.</li>
+</ul>
+<h3 id="2-AmpR-β-Lactamases"><a href="#2-AmpR-β-Lactamases" class="headerlink" title="2. AmpR: β-Lactamases"></a>2. AmpR: β-Lactamases</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005403327.png" srcset="/img/loading.gif" lazyload alt="image-20210105005403327" style="zoom:100%;" />
+
+<ul>
+<li>Ampicillin is a derivatives of penicillin.</li>
+<li>The ampicillin resistance gene (AmpR) encode beta-lactamase.Through hydrolysis, the enzyme lactamase breaks the <u>β-lactam ring open</u>, deactivating the molecule’s antibacterial properties</li>
+<li>Penicillin (or Ampicillin) kills bacteria by interfering with the ability to synthesize cell wall</li>
+<li>In the presence of penicillin, bacteria cell often ruptures during cell division.</li>
+</ul>
+<h4 id="Ampicillin-and-the-Satellite-Colonies"><a href="#Ampicillin-and-the-Satellite-Colonies" class="headerlink" title="Ampicillin and the Satellite Colonies ?"></a><strong>Ampicillin and the</strong> <strong>Satellite Colonies ?</strong></h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005511857.png" srcset="/img/loading.gif" lazyload alt="image-20210105005511857" style="zoom:80%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005517900.png" srcset="/img/loading.gif" lazyload alt="image-20210105005517900" style="zoom:100%;" />
+
+<ul>
+<li>Satellite colonies are very small colonies of cells that have not taken up the plasmid that form around a large colony that has taken up the plasmid. The satellites form because the beta -lactamase released by the AmpR expressing colony degrades the ampicillin in the vicinity of the colony.</li>
+<li>Would satellite colonies forming after you transform a Kanamycin containing plasmid ? <ul>
+<li>The answer is no</li>
+</ul>
+</li>
+</ul>
+<h2 id="LacZ-reporter-genes-blue-write-selection"><a href="#LacZ-reporter-genes-blue-write-selection" class="headerlink" title="LacZ reporter genes (blue &amp; write selection)"></a>LacZ reporter genes (blue &amp; write selection)</h2><h3 id="1-beta-galactosidase-lacZ-Blue-and-Write-selection"><a href="#1-beta-galactosidase-lacZ-Blue-and-Write-selection" class="headerlink" title="1. beta-galactosidase (lacZ) &amp; Blue and Write selection"></a>1. beta-galactosidase (lacZ) &amp; Blue and Write selection</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005557334.png" srcset="/img/loading.gif" lazyload alt="image-20210105005557334" style="zoom: 50%;" />
+
+<ul>
+<li>Suppressor protein <strong>(LacI )</strong> bound to the operator sequence to block the engagement of RNA polymerase.</li>
+<li>When lactose come, (allolactose), it binds to the LacI protein, triggers an conformational change and lacI no longer able to block the polymerase</li>
+<li><strong>LacZ</strong>, which encode the beta-glactosidase is now able to express and mediate the hydrolysis of lactose into glactose and glucose.</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105005626782.png" srcset="/img/loading.gif" lazyload alt="image-20210105005626782" style="zoom:67%;" />
+
+<p><strong>Three key words</strong></p>
+<ul>
+<li>alpha complementation. <ul>
+<li>It turned out that the <u>Lac Z gene in the E.coli for the cloning is an truncated version,</u> a 30 amino acids long piece of it is missing</li>
+<li>This <u>30 aa piece is actually in the plasmid</u> you are going to use. The 30 aa piece + the rest of the LacZ can then perform as the natural ones. <ul>
+<li><u>The 30aa call alpha peptide, and this reaction called alpha complementation.</u></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><u>IPTG</u> <ul>
+<li>IPTG and X-Gel: In fact, we use the IPTG to inactivate LacI. <strong>IPTG is a structural mimic of allolactose</strong>. And <strong>X-gal as substrate of LacZ</strong>. If alpha complementation happened successfully, X-gal will be hydrolyzed and part of it becomes a blue precipitate.</li>
+<li>If there is insert in the alpha peptide, the colony would looks white.</li>
+</ul>
+</li>
+<li>X-gal</li>
+</ul>
+<p><strong>IPTG &amp; X-Gal</strong></p>
+<ul>
+<li>IPTG is a structural mimic of allolactose. And X-gal as substrate of LacZ.</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010228977.png" srcset="/img/loading.gif" lazyload alt="image-20210105010228977" style="zoom:100%;" />
+
+<ul>
+<li><strong>IPTG:</strong> Isopropyl β-D-Thiogalactoside （异丙基硫代半乳糖苷）</li>
+<li><strong>X-gal:</strong> 5-Bromo-4-chloro-3-indolyl β-D-galactopyranoside （ 5-溴-4-氯-3-吲哚-β-D-半乳糖苷)</li>
+</ul>
+<h3 id="2-Look-at-pUC18-again"><a href="#2-Look-at-pUC18-again" class="headerlink" title="2. Look at pUC18 again"></a>2. Look at pUC18 again</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105004754676.png" srcset="/img/loading.gif" lazyload alt="image-20210105004754676" style="zoom: 50%;" />
+
+<ul>
+<li>LacZ: beta-galactosidase </li>
+<li>Alpha peptide </li>
+<li>lacZΔM15 deletion mutation. </li>
+<li>Alpha complementation </li>
+<li>MCS (multiple cloning site) </li>
+<li>IPTG </li>
+<li>X-gal</li>
+</ul>
+<p>The <strong>Multiple cloning site</strong> located within the alpha peptide coding region, so an insertion in this region will disrupt the alpha peptide.</p>
+<h3 id="3-Other-features-that-might-exist-in-a-cloning-plasmid"><a href="#3-Other-features-that-might-exist-in-a-cloning-plasmid" class="headerlink" title="3. Other features that might exist in a cloning plasmid"></a>3. Other features that might exist in a cloning plasmid</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010409794.png" srcset="/img/loading.gif" lazyload alt="image-20210105010409794" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010428394.png" srcset="/img/loading.gif" lazyload alt="image-20210105010428394" style="zoom:100%;" />
+
+<ul>
+<li>Sequencing primer binding site</li>
+<li>Phage promoter for RNA synthesis. (T7, SP6, T3).</li>
+</ul>
+<h1 id="三、Plasmid-conformation-and-its-purification"><a href="#三、Plasmid-conformation-and-its-purification" class="headerlink" title="三、Plasmid conformation and its purification"></a>三、Plasmid conformation and its purification</h1><h2 id="The-conformation-of-a-plasmid"><a href="#The-conformation-of-a-plasmid" class="headerlink" title="The conformation of a plasmid"></a>The conformation of a plasmid</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010537552.png" srcset="/img/loading.gif" lazyload alt="image-20210105010537552" style="zoom:100%;" />
+
+<ul>
+<li>How many conformation does a plasmid has </li>
+<li>How many bands would you expect when you run your extracted plasmid on gel ?</li>
+</ul>
+<p>In General, a plasmid have three different conformations,</p>
+<ul>
+<li>Nicked</li>
+<li>Linear</li>
+<li>Supercoiled</li>
+</ul>
+<p><strong>Supercoiled DNA</strong>: </p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010619772.png" srcset="/img/loading.gif" lazyload alt="image-20210105010619772" style="zoom:100%;" />
+
+<p><strong>DNA supercoiling</strong> refers to the over or under-winding of a DNA strand, and is an expression of the strain on that strand. Supercoiling is important in a number of biological processes, such as compacting DNA, and by regulating access to the genetic code, DNA supercoiling strongly affects DNA metabolism and possibly gene expression. Additionally, certain enzymes such as <u>topoisomerases</u> are able to change DNA topology to facilitate functions such as <u>DNA replication or transcription</u>.</p>
+<p>How many bands would you expect when you run your extracted plasmid on gel ?</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010655374.png" srcset="/img/loading.gif" lazyload alt="image-20210105010655374" style="zoom:50%;" />
+
+<ul>
+<li>You are likely to observe 4 bands when you resolve your plasmid on gel.</li>
+<li>Single stranded circular DNA (sscDNA)</li>
+<li>Supercoiled</li>
+<li>Linear</li>
+<li>Nicked</li>
+</ul>
+<p>The ss-circular DNA exist likely due to the incomplete reannealing of the two stands of dsDNA during the plasmid mini-prep</p>
+<h2 id="Plasmid-Purification-Plasmid-purification-through-CsCl-gradient-centrifugation"><a href="#Plasmid-Purification-Plasmid-purification-through-CsCl-gradient-centrifugation" class="headerlink" title="Plasmid Purification: Plasmid purification through CsCl gradient centrifugation"></a>Plasmid Purification: Plasmid purification through CsCl gradient centrifugation</h2><p>“ Old School method of purifying plasmid”:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010851998.png" srcset="/img/loading.gif" lazyload alt="image-20210105010851998" style="zoom: 67%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010907051.png" srcset="/img/loading.gif" lazyload alt="image-20210105010907051" style="zoom: 33%;" />
+
+<ul>
+<li>CsCl gradient with ethidium bromide and UV light.</li>
+</ul>
+<h3 id="1-Plasmid-Purification-Alkaline-lysis-method-of-plasmid-purification"><a href="#1-Plasmid-Purification-Alkaline-lysis-method-of-plasmid-purification" class="headerlink" title="1. Plasmid Purification: Alkaline lysis method of plasmid purification"></a>1. Plasmid Purification: Alkaline lysis method of plasmid purification</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105010937051.png" srcset="/img/loading.gif" lazyload alt="image-20210105010937051" style="zoom:80%;" />
+
+<p>What are the components in P1, P2 and N3 ?</p>
+<p><strong>Solution I</strong>: 25mM Tris-HCl, pH8.0, 10mM EDTA, (50mM glucose in some protocol) 100ul – <u>optional lysozyme treatment</u> when dealing with gram positive strain. Lysozyme digest cell wall made of peptidoglycan.</p>
+<p><strong>Solution II</strong>: 200mM NaOH, 1% SDS, 200ul. <u>At high pH, then, the solution is rich in hydroxide ions, and these negatively-charged ions can pull hydrogen ions off of molecules like the base pairs in DNA</u>. This process disrupts the hydrogen bonding that holds the two DNA strands together, causing them to separate.</p>
+<p><strong>Reminder</strong>: Alkaline hydrolysis and Alkaline denaturation</p>
+<p><strong>Solution III</strong>: 3 M potassium acetate, pH 4.8, 150ul</p>
+<ul>
+<li><u>After adding the solution, the solution is neutralized suddenly.</u> The DNA in a <u>plasmid</u> have good chance to <u>re-anneal</u> between two strand. The <u>genomic DNA is too large to be re-annealed</u>, so form precipitate</li>
+</ul>
+<p>The alkaline lysis can be modified to be used together with the <strong>column</strong>. Include the <strong>chaotropic salt</strong> into the solutions help with the binding to the column.</p>
+<h2 id="Transformation-Transduction-Transfection"><a href="#Transformation-Transduction-Transfection" class="headerlink" title="Transformation &amp; Transduction &amp; Transfection"></a>Transformation &amp; Transduction &amp; Transfection</h2><p><strong>Transformation – put a plasmid into host cell</strong></p>
+<ul>
+<li><strong>Heat shock</strong> 30min - 90s – 5mins, <u>create tiny holes</u> in the membrane to allow for efficient transformations</li>
+<li><strong>Competent Cell</strong> – CaCl2 (0.1M) most classical method (E.coli grow to the pre-log phase) OD600 &#x3D; 0.2-0.6.</li>
+<li><strong>Super-competent Cell</strong> – grew cell in low temperature + MnCl2 been included in the wash buffer. You can try to make your own.</li>
+<li>Transformation efficiency, 10^6 to 10^9 clones per 1ug of DNA, very low.</li>
+</ul>
+<p>Colony-forming unit, or <strong>CFU</strong> &amp; Plaque-forming unit, or <strong>PFU</strong></p>
+<p><strong>Transduction</strong> - is the process of transferring any bacterial gene to a second bacterium through a <strong>bacteriophage</strong></p>
+<p><strong>Transfection</strong> <strong>–</strong> transfer the DNA into cell through virus (<strong>phage</strong>)</p>
+<p>Transfection is the process of deliberately introducing naked or purified nucleic acids into eukaryotic cells. Refers specifically <strong>virus infection</strong> based methods</p>
+<h1 id="四、A-very-brief-introduction-about-E-coli"><a href="#四、A-very-brief-introduction-about-E-coli" class="headerlink" title="四、A very brief introduction about E.coli."></a>四、A very brief introduction about <em>E.coli</em>.</h1><h2 id="Introduction-and-history"><a href="#Introduction-and-history" class="headerlink" title="Introduction and history"></a>Introduction and history</h2><p><strong>A brief introduction of the</strong> <strong>E.coli</strong> <strong>stains that we used in Molecular Cloning</strong></p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105011427572.png" srcset="/img/loading.gif" lazyload alt="image-20210105011427572" style="zoom:100%;" />
+
+<p><strong>What would be a ideal host cell?</strong> </p>
+<ul>
+<li>The host cell should be compatible with the features of cloning plasmid that we uses</li>
+</ul>
+<p><em>E. coli</em> are <strong>gram-negative</strong></p>
+<ul>
+<li>Would it be necessary to do a lysozyme treatment when we extract plasmid from E.coli ?<ul>
+<li>the answer is no, the <u>thick layer of peptidoglycan of gram positive strain would require <strong>lysozyme</strong> treatment.</u></li>
+</ul>
+</li>
+</ul>
+<p>E. coli named after Dr. Theodor Escherich, who first described it back to 1885. There are quite some strains, some of which are deadly to humans</p>
+<p>All of currently used strain in genetic engineering derived from <strong>K-12 strain</strong> – DH5alpha, DH10b (Top10), DB3.1 and <strong>the</strong> <strong>B strain.</strong> – BL21, Rosetta , they are not pathogen. </p>
+<ul>
+<li>Currently used strains have all kinds of mutations.</li>
+</ul>
+<p><em>DH5alpha</em>: </p>
+<ul>
+<li>F-, endA1, glnV44, thi-1, recA1, relA1, gyrA96, deoR, nupG, Φ80d, lacZΔM15 Δ(lacZYA-argF)U169, hsdR17(rK- mK+), λ–</li>
+</ul>
+<h2 id="A-few-common-mutations"><a href="#A-few-common-mutations" class="headerlink" title="A few common mutations"></a><strong>A few common mutations</strong></h2><p>F-, endA1, glnV44, thi-1, recA1, relA1, gyrA96, deoR, nupG, Φ80d lacZΔM15 Δ(lacZYA-argF)U169, hsdR17(rK- mK+), λ–</p>
+<p><strong>Mutation enables blue&#x2F;write screening.</strong> <strong>lacZ</strong></p>
+<ul>
+<li>Φ80d lacZΔM15, delete a small fragment in LacZ, enables alpha complementation.</li>
+</ul>
+<p><strong>Mutation leads to Nutrient Deficient</strong> </p>
+<ul>
+<li>cannot growth in nature environment (<strong>thi-1:</strong> This strain requires thiamine (thiamine auxotroph, cannot produce its own thiamine))</li>
+</ul>
+<p><strong>Mutation to stabilize the Plasmid,</strong> </p>
+<ol>
+<li>Reduce chance of recombination. (Mutation in a DNA-dependent ATPase that  is essential for recombination and general DNA repair, <strong>recA1</strong>)</li>
+<li>Increase yield. <ul>
+<li>Endonuclease A deficient, <strong>endA1</strong></li>
+<li><strong>deoR</strong>: The transcriptional repressor DeoR, for “Deoxyribose Regulator”. Allow produce the decoxyribose constantly, therefore can take large plasmid.</li>
+<li><strong>nupG</strong>: NupG is one of two high-affinity nucleoside transporters in E. coli.</li>
+</ul>
+</li>
+<li><strong>Inactivate endogenous restriction&#x2F;modification systems</strong><ul>
+<li><strong>hsdR17(rK- mK+)</strong>, mutation eliminate restriction enzyme Ecok1, </li>
+<li>DNA without mEcok1 modification won’t be cut. </li>
+<li>Ecok1-mEcok1 (restriction-modification system)</li>
+</ul>
+</li>
+</ol>
+<p>There are lots of different strains</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105011758340.png" srcset="/img/loading.gif" lazyload alt="image-20210105011758340" style="zoom:100%;" />
+
+<h2 id="Most-commonly-used-strains"><a href="#Most-commonly-used-strains" class="headerlink" title="Most commonly used strains"></a>Most commonly used strains</h2><h3 id="1-Strains"><a href="#1-Strains" class="headerlink" title="1. Strains"></a>1. Strains</h3><p><strong>K-12 strains</strong></p>
+<ul>
+<li>DH5alpha, - general cloning</li>
+<li>DH10b (Top10) – general cloning</li>
+<li>DB3.1 - Gateway cloning, to propagate any plasmid that contains ccdB gene.</li>
+</ul>
+<p><strong>B strains</strong></p>
+<ul>
+<li>BL21, - recombinant protein expression</li>
+<li>Rosetta - recombinant protein expression with rare codon optimization.</li>
+</ul>
+<h3 id="2-BL21-and-Rosetta-Strains-for-recombinant-protein-expression"><a href="#2-BL21-and-Rosetta-Strains-for-recombinant-protein-expression" class="headerlink" title="2. BL21 and Rosetta Strains for recombinant protein expression"></a>2. BL21 and Rosetta Strains for recombinant protein expression</h3><h4 id="BL21-DE3-pLysS"><a href="#BL21-DE3-pLysS" class="headerlink" title="BL21(DE3) pLysS"></a>BL21(DE3) pLysS</h4><p><em>E. coli</em> str. B F– <em>ompT gal dcm lon hsdSB</em>(<em>rB</em>–<em>m</em> <em>B</em>–) λ(DE3 [<em>lacI lacUV5</em>-<em>T7p07 ind1 sam7 nin5</em>]) [<em>malB</em>+]K-12(λS) pLysS[*T7p20 ori*p15A](CmR)</p>
+<ul>
+<li><strong>Deficient in Lon and OmpT proteases</strong></li>
+<li>an E. coli B strain with <strong>DE3,</strong> a λ prophage carrying the <strong>T7 RNA polymerase gene and lacI</strong></li>
+<li>Transformed plasmids containing T7 promoter driven expression are repressed until IPTG induction of T7 RNA polymerase from a lac promoter.</li>
+<li>pLysS plasmid chloramphenicol resistant; grow with chloramphenicol to retain plasmid</li>
+<li>The pLysS plasmid <strong>encodes T7 phage lysozyme</strong>, an inhibitor for T7 polymerase which reduces and almost eliminates expression from transformed T7 promoter containing plasmids when not induced.</li>
+</ul>
+<h4 id="Rosetta™-DE3-pLysS"><a href="#Rosetta™-DE3-pLysS" class="headerlink" title="Rosetta™(DE3)pLysS"></a>Rosetta™(DE3)pLysS</h4><p><em>E. coli</em> str. B F– <em>ompT gal dcm lon</em>? <em>hsdS**B</em>(<em>r**B</em>–<em>m**B</em>–) λ(DE3 [<em>lacI lacUV5</em>-<em>T7p07 ind1 sam7 nin5</em>]) [<em>malB</em>+]K-12(λS) pLysSRARE[*T7p20 ileX argU thrU tyrU glyT thrT argW metT leuW proL ori*p15A](CmR)</p>
+<ul>
+<li>an <em>E. coli</em> B strain with DE3, a λ prophage carrying the T7 RNA polymerase gene and lacIq</li>
+<li>Transformed plasmids containing T7 promoter driven expression are repressed until IPTG induction of T7 RNA polymerase from a lac promoter.</li>
+<li>Chloramphenicol resistant</li>
+<li>pLysSRARE <strong>contains tRNA</strong> genes argU, argW, ileX, glyT, leuW, proL, metT, thrT, tyrU, and thrU. <strong>The</strong> <strong>rare codons</strong> AGG, AGA, AUA, CUA, CCC, and GGA are supplemented</li>
+<li>The pLysS plasmid encodes T7 phage lysozyme, an inhibitor for T7 polymerase which reduces and almost eliminates expression from transformed T7 promoter containing plasmids when not induced</li>
+</ul>
+<h2 id="ccdB-gene-represent-another-useful-selection-systems-in-gene-cloning"><a href="#ccdB-gene-represent-another-useful-selection-systems-in-gene-cloning" class="headerlink" title="ccdB gene represent another useful selection systems in gene cloning"></a>ccdB gene represent another useful selection systems in gene cloning</h2><p>This is part of the <strong>toxin-antitoxin system</strong> that encoded by the <strong>ccd operon</strong> which located on the <strong>F sex</strong> factor plasmid of E. Coli.</p>
+<ul>
+<li>There are two genes, ccdA and ccdB.<ul>
+<li><strong>ccdB</strong> codes for a <u>toxic protein</u> that act on DNA gyrase, can ultimately kill the cell. </li>
+<li><strong>ccdA</strong> codes for the <u>antitoxin protein</u> that protects the cell against the toxic CcdB.</li>
+</ul>
+</li>
+</ul>
+<p>Cells that lose ccdA through the loss of the F plasmid will be killed after cell division</p>
+<p>DB3.1, which contains a mutant version of DNA gyrase (gyrA462) that is resistant to the toxic effects of CcdB</p>
+<p>Cells with <strong>F- genotype is sensitive to the ccdB.</strong> Such as DH5alpha. Cells with F+ genotype is tolerant to ccdB. Such as JM109</p>
+<h2 id="Advantages-Disadvantages-of-Plasmid-as-vector"><a href="#Advantages-Disadvantages-of-Plasmid-as-vector" class="headerlink" title="Advantages &amp; Disadvantages of Plasmid as vector"></a>Advantages &amp; Disadvantages of Plasmid as vector</h2><p><strong>Advantages:</strong></p>
+<ul>
+<li>Readily isolated from cells</li>
+<li>Can be reintroduced into a bacterial cell</li>
+<li>Small size(easy to manipulate and isolate)</li>
+<li>Circular (stable in the host cell).</li>
+<li>Several copies may be present(facilitates replication)</li>
+<li>Frequently have antibiotic resistance(detection easy).</li>
+</ul>
+<p><strong>Disadvantages</strong>:</p>
+<ul>
+<li>Cannot accept too large fragments (typical Sizes range from 0 – 10kb)</li>
+</ul>
+<h1 id="五、Other-types-of-Vectors-besides-plasmid"><a href="#五、Other-types-of-Vectors-besides-plasmid" class="headerlink" title="五、Other types of Vectors (besides plasmid)"></a>五、Other types of Vectors (besides plasmid)</h1><h2 id="Phage-vectors"><a href="#Phage-vectors" class="headerlink" title="Phage vectors"></a>Phage vectors</h2><h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012443977.png" srcset="/img/loading.gif" lazyload alt="image-20210105012443977" style="zoom: 33%;" />
+
+<p>Phages are Bacteria eaters.</p>
+<ol>
+<li>tailless,</li>
+<li>head with tail</li>
+<li>filamentous.</li>
+</ol>
+<p>Genome: ssDNA&#x2F;dsDNA&#x2F;RNA. dsDNA most often</p>
+<p>Phages may be classified as either <strong>virulent</strong> or <strong>temperate</strong>, depending on their life cycles. Virulent under goes lytic growth only. While temperate phage under goes Lysogenic cycle mostly, but can also go to lytic growth some time.</p>
+<p><strong>lytic</strong> growth cycle or <strong>lysogenic</strong> cycle:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012533804.png" srcset="/img/loading.gif" lazyload alt="image-20210105012533804" style="zoom:100%;" />
+
+<h3 id="2-Why-we-might-fancy-Phage-vectors"><a href="#2-Why-we-might-fancy-Phage-vectors" class="headerlink" title="2. Why we might fancy Phage vectors ?"></a>2. Why we might fancy Phage vectors ?</h3><p>Derivatives of phage have been developed as cloning vectors since the earl of gene technology</p>
+<p>The phage derivatives are considered to be the <u>most suitable</u> cloning vehicles for <strong>cloning genomic eukaryotic DNA</strong> because of the following advantages over the plasmids.</p>
+<p>Easy to transform: thousands of phage plaques can be obtained in a single petri dish</p>
+<p>Millions of independently cloned virus particle can be constituted to form <strong>a gene library</strong></p>
+<p>Selection by DNA-DNA hybridization is possible</p>
+<h3 id="3-Lambda-Phage-Vectors"><a href="#3-Lambda-Phage-Vectors" class="headerlink" title="3. Lambda Phage Vectors"></a>3. Lambda Phage Vectors</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012701328.png" srcset="/img/loading.gif" lazyload alt="image-20210105012701328" style="zoom:50%;" />
+
+<p>Lambda phage genome: a linear dsDNA of 48502 bp (~49kb) in length</p>
+<p>The DNA isolated from virus particles is a double stranded linear molecule <u>with short complementary single stranded</u> projections of <u>12 nucleotides at its 5’ ends.</u></p>
+<p>These <strong>cohesive termini,</strong> also referred to as <strong>cos sites</strong>, <u>allow</u> the DNA to be <u>circularized</u> after infection of the host cell.</p>
+<h4 id="The-life-cycle-of-lambda-phage"><a href="#The-life-cycle-of-lambda-phage" class="headerlink" title="The life cycle of lambda phage"></a>The life cycle of lambda phage</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012811453.png" srcset="/img/loading.gif" lazyload alt="image-20210105012811453" style="zoom:67%;" />
+
+<p><strong>Adsorption</strong>: phage particle binding to receptors on the bacterial surface </p>
+<p><strong>Prophage</strong>: If the lysogenic cycle is initiated, the phage genome integrates into the host chromosome and is maintained as a prophage. If the lytic cycle is initiated, a complex sequence of transcriptional events essentially enables the phage to take over the host cell and produce multiple copies of the genome and the structural proteins. These components are then assembled or packaged into mature phage, which are released following lysis of the host cell.</p>
+<p><strong>Plaque</strong>: Particles of phage λ were mixed with a strain of E. coli and plated using a soft agar overlay. After overnight incubation the bacterial cells grow to form a lawn, in which regions of phage infection appear as cleared areas or plaques. The plaques are areas where lysis of the bacterial cells has occurred.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012846577.png" srcset="/img/loading.gif" lazyload alt="image-20210105012846577" style="zoom:100%;" />
+
+<h2 id="GENERAL-STRUCTURE-OF-BACTERIOPHAGE"><a href="#GENERAL-STRUCTURE-OF-BACTERIOPHAGE" class="headerlink" title="GENERAL STRUCTURE OF BACTERIOPHAGE"></a>GENERAL STRUCTURE OF BACTERIOPHAGE</h2><p>The genetic map of phage comprises approximately 40 genes which are organized in functional clusters.</p>
+<p>Genes coding for head and tail are proteins (genes A-J) are on the left of the linear map</p>
+<p>The central region contains genes, such as int, xis, exo etc., which are responsible for lysogenisation i.e the process leading to the integration of viral DNA and other recombination events. - Much of this central region is not essential for lytic growth.</p>
+<p>Genes to the right of the central region comprise six regulatory genes, two genes (O and P) which are essential for DNA replication during lytic growth and two more genes (S and R) which are required for the lysis of the cellular membranes</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105012944489.png" srcset="/img/loading.gif" lazyload alt="image-20210105012944489" style="zoom:100%;" />
+
+<p>In the phage DNA, larger <u>central region is not essential</u> for phage growth and replication.</p>
+<ul>
+<li>This region of phage can be deleted or replaced without seriously impairing the phage growth cycle.</li>
+<li><u>Using this non-essential region of phage, several phage vector derivatives have been constructed for efficient gene cloning.</u></li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013015140.png" srcset="/img/loading.gif" lazyload alt="image-20210105013015140" style="zoom:100%;" />
+
+<h2 id="TYPES-OF-PHAGE-VECTORS"><a href="#TYPES-OF-PHAGE-VECTORS" class="headerlink" title="TYPES OF PHAGE VECTORS"></a>TYPES OF PHAGE VECTORS</h2><p>Wild type phage DNA itself cannot be used as a vector since it contains too many restriction sites.</p>
+<p>Further, these sites are often located within the essential regions for phage’s growth and development</p>
+<p>From these wild phages, derivatives with single target sites and two target sites have been synthesized.</p>
+<p>Phage vectors which <u>contain single site</u> for the insertion of foreign DNA have been designated as I<strong>nsertional vectors.</strong></p>
+<p>Vectors with <u>two cleavage sites</u>, which allow foreign DNA to be substituted for the DNA sequences between those sites, are known as <strong>replacement vectors</strong></p>
+<h3 id="1-INSERTIONAL-VECTORS"><a href="#1-INSERTIONAL-VECTORS" class="headerlink" title="1. INSERTIONAL VECTORS"></a>1. INSERTIONAL VECTORS</h3><p>A large segment of the non-essential region has been deleted, and the two arms ligated together.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013134649.png" srcset="/img/loading.gif" lazyload alt="image-20210105013134649" style="zoom:100%;" />
+
+<ul>
+<li>A large segment of the non-essential region has been deleted, and the two arms ligated together</li>
+<li>An insertion vector possesses at least one unique restriction site into which new DNA can be inserted</li>
+<li><u>Capsid places a physical constraint on the amount of DNA that can be incorporated</u></li>
+<li>During phage assembly. viable phage particles can be produced from DNA that is between approximately 38 and 51 kb in length.</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013206729.png" srcset="/img/loading.gif" lazyload alt="image-20210105013206729" style="zoom: 50%;" />
+
+<h4 id="Selection-system-for-the-insertional-lambda-phage-vector"><a href="#Selection-system-for-the-insertional-lambda-phage-vector" class="headerlink" title="Selection system for the insertional lambda phage vector."></a>Selection system for the insertional lambda phage vector.</h4><p>LacZ – blue&#x2F;write selection is one way. </p>
+<p><strong>cl gene</strong> – product is necessary for the lysogenic growth of the phage. </p>
+<ul>
+<li>Insertion into the cl gene would leads to the phage go strictly through the lytic cycle</li>
+<li><strong>WT phage would go to the lysogenic growth</strong> when infect E.coli that had an prophage already, the infection of the phage would leads to the slow growth but not lysis of cell, which would leads to cloudy but not transparent plaque.</li>
+<li><strong>Recombinant phage</strong> that with cl gene disrupted would be forced to go for <strong>lytic cycle,</strong> which would leads to the transparent plaque.</li>
+</ul>
+<p>Wild-type <u>lambda phage do not</u> efficiently <u>infect</u> E coli lysogenic for an unrelated bacteriophage P2.</p>
+<ul>
+<li>Thus, wild-type phage are <strong>S</strong>ensitive to <strong>P</strong>2 <strong>I</strong>nterference (<strong>spi</strong>).</li>
+<li>Phage genes responsible for the spi phenotype are carried on the stuffer fragment of the insertion vector.</li>
+<li>Removal of the stuffer makes the recombinant phage insensitive to P2 interference</li>
+<li>Therefore, only the recombinant can growth in the presence of P2.s</li>
+</ul>
+<h3 id="2-REPLACEMENT-VECTORS"><a href="#2-REPLACEMENT-VECTORS" class="headerlink" title="2. REPLACEMENT VECTORS"></a>2. REPLACEMENT VECTORS</h3><p><strong>Replacement vector -</strong> foreign DNA replaces a piece of DNA (stuffer fragment) of the vector. Compared with insertional vector, longer DNA can be inserted.</p>
+<ul>
+<li>A central ‘<strong>stuffer</strong>’ <strong>fragment</strong> is removed and replaced with the insert DNA. </li>
+<li>DNA fragments between approximately 9 and 22 kb may be cloned in EMBL4;</li>
+<li><strong>PolyStuffer:</strong> stuffer made by multiple repeats of short piece of DNA – to increase the cloning efficiency (as the NaeI will cut the stuffer into pieces).</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013252576.png" srcset="/img/loading.gif" lazyload alt="image-20210105013252576" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013304563.png" srcset="/img/loading.gif" lazyload alt="image-20210105013304563" style="zoom:80%;" />
+
+<h2 id="How-do-we-transform-phage-vector-into-E-coli"><a href="#How-do-we-transform-phage-vector-into-E-coli" class="headerlink" title="How do we transform phage vector into E. coli ?"></a>How do we transform phage vector into E. coli ?</h2><p>Key benefit of phage vector: transduction was done through infecting the E.coli with in-vitro packed phage particles</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013449385.png" srcset="/img/loading.gif" lazyload alt="image-20210105013449385" style="zoom:100%;" />
+
+<ul>
+<li>There are strains (1&amp;2) supplement proteins required for packaging of phage particles</li>
+<li>In this case, only the cos site is required for the packaging of DNA into the capside.</li>
+</ul>
+<h2 id="Cosmid"><a href="#Cosmid" class="headerlink" title="Cosmid"></a>Cosmid</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013523439.png" srcset="/img/loading.gif" lazyload alt="image-20210105013523439" style="zoom: 67%;" />
+
+<p>Cosmid is a hybrid of plasmid and lamda phage vectors</p>
+<p>Plasmid with lamda phage packaging sequence(cos)</p>
+<p>Cosmid are able to contain 37 to 52kb of DNA</p>
+<p>Packaged into lamda phage particles and injected into host cells</p>
+<p>Circularizes in cell and continues as a large plasmid</p>
+<h2 id="BACTERIAL-ARTIFICIAL-CHROMOSOMES-BAC"><a href="#BACTERIAL-ARTIFICIAL-CHROMOSOMES-BAC" class="headerlink" title="BACTERIAL ARTIFICIAL CHROMOSOMES (BAC)"></a>BACTERIAL ARTIFICIAL CHROMOSOMES (BAC)</h2><p>BACs are based on bacterial mini-F plasmids, which are small pieces of episomal bacterial DNA that give the bacteria the ability to initiate conjugation with adjacent bacteria. They have a cloning limit of 75-300 kb</p>
+<p>BAC is named after the YAC, but it is not actually maintained as chromosome.</p>
+<p>Actually, the Human genome project mainly take advantage of BAC</p>
+<h2 id="YEAST-ARTIFICIAL-CHROMOSOMES-YAC"><a href="#YEAST-ARTIFICIAL-CHROMOSOMES-YAC" class="headerlink" title="YEAST ARTIFICIAL CHROMOSOMES (YAC)"></a>YEAST ARTIFICIAL CHROMOSOMES (YAC)</h2><h3 id="1-Introduction-1"><a href="#1-Introduction-1" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p>YACs are artificial chromosomes that replicate in yeast cells. They consist of <strong>Telomeres</strong>, which are ends of chromosomes involved in the replication and stability of linear DNA.</p>
+<p><strong>Origin of replication</strong> sequences necessary for the replication in yeast cells.</p>
+<p><strong>A yeast centromere</strong>, which is a specialized chromosomal region where spindle fibers </p>
+<ul>
+<li>attach during mitosis</li>
+</ul>
+<p><strong>A selectable marker</strong> for identification in yeast cells</p>
+<ul>
+<li>Ampicillin resistance gene for selective amplification</li>
+<li>Recognition sites for restriction enzymes</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105013714589.png" srcset="/img/loading.gif" lazyload alt="image-20210105013714589" style="zoom:67%;" />
+
+<h3 id="2-THE-PROCEDURE-FOR-MAKING-YAC-VECTORS"><a href="#2-THE-PROCEDURE-FOR-MAKING-YAC-VECTORS" class="headerlink" title="2. THE PROCEDURE FOR MAKING YAC VECTORS"></a>2. THE PROCEDURE FOR MAKING YAC VECTORS</h3><ol>
+<li>The target DNA is partially digested by a restriction endonuclease, and the YAC<br>vector is cleaved by restriction enzymes.</li>
+<li>The cleaved vector segments are ligated with a digested DNA fragment to form<br>an artificial chromosome.</li>
+<li>Yeast cells are transformed to make a large number of copies.</li>
+</ol>
+<p>They are the largest of the cloning vectors, with a cloning limit of 100-1000 kb, however they have very low efficiency</p>
+<h2 id="SHUTTLE-VECTORS"><a href="#SHUTTLE-VECTORS" class="headerlink" title="SHUTTLE VECTORS"></a>SHUTTLE VECTORS</h2><p><strong>Definition</strong>: They are the vectors that can shuttle between more than one host, for example, one is E. coli and the other is yeast.</p>
+<p><strong>Structure and function</strong>: Most of the vectors for use in eukaryotic cells are constructed as shuttle vectors</p>
+<p>In <em>E. coli</em>:</p>
+<ul>
+<li>• This means that <u>they can survive and have the genes (ori and ampr ) required for replication and selection in E. coli.</u></li>
+</ul>
+<p>In the desired eukaryotic cells:</p>
+<ul>
+<li>They can also survive in the desired host cells, and let the target insert sequences take effects.</li>
+</ul>
+<h2 id="E-coli-EXPRESSION-VECTORS"><a href="#E-coli-EXPRESSION-VECTORS" class="headerlink" title="E.coli EXPRESSION VECTORS"></a><em>E.coli</em> EXPRESSION VECTORS</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20210105014022607.png" srcset="/img/loading.gif" lazyload alt="image-20210105014022607" style="zoom: 50%;" />
+
+<p>Definition of expression vectors: Cloned genes – expression vector – hostfusion protein expression</p>
+<p>Structure：</p>
+<ol>
+<li>Promoter: a strong promoter (T7)</li>
+<li>RBS: Ribosome binding site</li>
+<li>ATG: translation initiation condon</li>
+<li>MCS: Multiple cloning sites</li>
+<li>TT: transcription terminator</li>
+<li>ampr, Ori, </li>
+<li>Tag for affinity purification: His-tag, GST, MBP etc</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetic-Engineering/" class="category-chain-item">Genetic Engineering</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetic-Engineering/" class="print-no-link">#Genetic Engineering</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L11 Cloning Vectors and Host cells</div>
+      <div>https://zhenyumi.github.io/posts/5cda9bd9/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年1月8日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/aaa82678/" title="L12 Different Methods for Gene Cloning">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L12 Different Methods for Gene Cloning</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

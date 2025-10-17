@@ -1,0 +1,885 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="No such things">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L07 The Small RNA World">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/d986c58d/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="No such things">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_%EC%BA%AC%EB%A3%A8%ED%83%88%EC%B6%9C.png">
+<meta property="article:published_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:modified_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Molecular Biology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_%EC%BA%AC%EB%A3%A8%ED%83%88%EC%B6%9C.png">
+  
+  
+  
+  <title>L07 The Small RNA World - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_Sunlight%281%29.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L07 The Small RNA World</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-24 17:20" pubdate>
+          2020年7月24日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          253 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          3 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L07 The Small RNA World</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、microRNAs"><a href="#一、microRNAs" class="headerlink" title="一、microRNAs"></a>一、microRNAs</h1><h2 id="The-Definition"><a href="#The-Definition" class="headerlink" title="The Definition"></a>The Definition</h2><h3 id="1-Roles-and-Functions-in-Cell"><a href="#1-Roles-and-Functions-in-Cell" class="headerlink" title="1. Roles and Functions in Cell"></a>1. Roles and Functions in Cell</h3><ul>
+<li>Small RNAs are a pool of 21 to 24 nt RNAs that generally function in <strong>gene</strong> <strong>silencing</strong> </li>
+<li>Small RNAs contribute to <strong>post-transcriptional gene silencing</strong> by affecting mRNA translation or stability</li>
+<li>Small RNAs contribute to  <strong>transcriptional gene silencing</strong> through epigenetic modifications to chromatin</li>
+</ul>
+<h4 id="Some-miRNAs-are-highly-conserved-and-important-gene-regulators"><a href="#Some-miRNAs-are-highly-conserved-and-important-gene-regulators" class="headerlink" title="Some miRNAs are highly conserved and important gene regulators"></a>Some miRNAs are highly conserved and important gene regulators</h4><p>Nearly half of the targets of  conserved miRNAs are  transcription factors.  </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105154936825.png" srcset="/img/loading.gif" lazyload alt="image-20191105154936825" style="zoom: 80%;" />
+
+<h3 id="2-Dicers-and-Argonatures"><a href="#2-Dicers-and-Argonatures" class="headerlink" title="2. Dicers and Argonatures"></a>2. Dicers and Argonatures</h3><p>RNA silencing uses a set of  core reactions in which  <strong>double-stranded RNA</strong>  <strong>(dsRNA)</strong> is processed by  <strong>Dicer</strong> or <strong>Dicer-like proteins</strong> into <strong>short RNA duplexes</strong>. </p>
+<p>These small RNAs subsequently associate with <strong>ARGONAUTE</strong> proteins to confer silencing.  </p>
+<h4 id="Dicer-and-Dicer-like-Proteins"><a href="#Dicer-and-Dicer-like-Proteins" class="headerlink" title="Dicer and Dicer-like Proteins"></a>Dicer and Dicer-like Proteins</h4><p>In siRNA and miRNA biogenesis, Dicer or Dicer-like (DCL) proteins <u>cleave long dsRNA or foldback (hairpin) RNA into ~ 21 – 25 nt  fragments.</u></p>
+<h5 id="1-miRNAs-and-siRNAs-are-processed-by-related-but-different-DCL-proteins"><a href="#1-miRNAs-and-siRNAs-are-processed-by-related-but-different-DCL-proteins" class="headerlink" title="(1) miRNAs and siRNAs are processed  by related but different DCL proteins"></a>(1) miRNAs and siRNAs are processed  by related but different DCL proteins</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105154404701.png" srcset="/img/loading.gif" lazyload alt="image-20191105154404701" style="zoom: 50%;" />
+
+<h4 id="Argonaute-proteins"><a href="#Argonaute-proteins" class="headerlink" title="Argonaute proteins"></a>Argonaute proteins</h4><p>ARGONAUTE proteins bind  small RNAs and their targets. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105150109045.png" srcset="/img/loading.gif" lazyload alt="image-20191105150109045" style="zoom:50%;" />
+
+<p>ARGONAUTE proteins are  named after the <em>argonaute1</em> mutant of Arabidopsis; <em>ago1</em> has thin radial leaves and was named for the octopus  <em>Argonauta</em> which it resembles.</p>
+<h5 id="1-miRNAs-and-siRNAs-associate-with-several-AGO-proteins"><a href="#1-miRNAs-and-siRNAs-associate-with-several-AGO-proteins" class="headerlink" title="(1) miRNAs and siRNAs associate with several AGO proteins"></a>(1) miRNAs and siRNAs associate with several AGO proteins</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105154554115.png" srcset="/img/loading.gif" lazyload alt="image-20191105154554115" style="zoom:50%;" />
+
+<h5 id="2-miRNAs-and-siRNAs-are-processed-by-related-but-different-DCL-proteins"><a href="#2-miRNAs-and-siRNAs-are-processed-by-related-but-different-DCL-proteins" class="headerlink" title="(2) miRNAs and siRNAs are processed by related but different DCL proteins"></a>(2) miRNAs and siRNAs are processed by related but different DCL proteins</h5><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191226162338618.png" srcset="/img/loading.gif" lazyload alt="image-20191226162338618"></p>
+<h2 id="RNA-silencing"><a href="#RNA-silencing" class="headerlink" title="RNA silencing"></a>RNA silencing</h2><p><strong>siRNA</strong> -mediated silencing via post-transcriptional and transcriptional gene silencing </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105150412370.png" srcset="/img/loading.gif" lazyload alt="image-20191105150412370" style="zoom: 50%;" />
+
+<p><strong>miRNA</strong> -mediated slicing of mRNA and translational repression </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105150505471.png" srcset="/img/loading.gif" lazyload alt="image-20191105150505471" style="zoom:50%;" />
+
+<h3 id="1-miRNAs"><a href="#1-miRNAs" class="headerlink" title="1. miRNAs"></a>1. miRNAs</h3><ol>
+<li>miRNAs are thought to have evolved from siRNAs, and  are produced and processed somewhat similarly </li>
+<li>Plants have a small number of highly conserved miRNAs, and a large number of non-conserved miRNAs </li>
+<li>miRNAs are encoded by specific <em>MIR</em> genes but act on  other genes – they are trans-acting regulatory factors </li>
+<li>miRNAs in plants regulate developmental and  physiological events</li>
+</ol>
+<p>microRNAs slice mRNAs or interfere with their translation</p>
+<p>Most siRNAs are produced from  transposons and repetitive DNA </p>
+<ul>
+<li>Most of the cellular siRNAs are derived from transposons and other repetitive  sequences. In Arabidopsis, as shown above, there is a high density of these repeats  in the pericentromeric regions of the chromosome.</li>
+</ul>
+<p>Small interfering RNAs (siRNAs) are  preferentially derived from pericentromeric region</p>
+<ul>
+<li>The density of small RNA-homologous loci is highest in the  centromeric and pericentromeric regions which contain a high  density of repeat sequence classes, such as transposons.</li>
+</ul>
+<p>siRNAs recruit DNA methylases and histone-modifying enzymes to targets </p>
+<ul>
+<li>Dicer-like (DCL) nuclease  produces siRNAs which  bind to Argonaute (AGO)  proteins to bring  modifying enzymes such  as DRM1 and DRM2 to  DNA targets.</li>
+<li>RNA-dependent RNA  Polymerase (RdRP)  amplifies the signal  and produces  secondary siRNAs</li>
+<li>Two plant-specific  RNA polymerases,  RNA Pol IV and RNA  Pol V, contribute to  siRNA-mediated  silencing.</li>
+</ul>
+<h1 id="一、MIR-Genes"><a href="#一、MIR-Genes" class="headerlink" title="一、MIR Genes"></a>一、MIR Genes</h1><p>MIR genes are transcribed into long RNAs that are processed to miRNA</p>
+<ol>
+<li>miRNAs are encoded by MIR genes </li>
+<li>The primary miRNA (pri-miRNA)  transcript folds back into a double-stranded structure, which is processed  by DCL1 </li>
+<li>The miRNA strand is degraded</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105154733842.png" srcset="/img/loading.gif" lazyload alt="image-20191105154733842" style="zoom: 50%;" />
+
+<p><strong>Some</strong> <strong>MIR</strong> <strong>gene families are present</strong> <strong>in all plants or all angiosperms</strong>(被子植物) ：</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105155046278.png" srcset="/img/loading.gif" lazyload alt="image-20191105155046278" style="zoom: 67%;" />
+
+<h3 id="1-MIR156-–-Highly-Conserved"><a href="#1-MIR156-–-Highly-Conserved" class="headerlink" title="1. MIR156 – Highly Conserved"></a>1. MIR156 – Highly Conserved</h3><ul>
+<li>miR156 is <u>highly conserved within the plant kingdom</u> </li>
+<li>miR156 is found in angiosperms as well as mosses (苔藓)</li>
+<li>miR156 is encoded by six or more genes in Arabidopsis </li>
+<li>miR156 targets transcription factors that <u>control developmental phase changes</u></li>
+</ul>
+<h3 id="2-Targets-of-some-conserved-miRNAs"><a href="#2-Targets-of-some-conserved-miRNAs" class="headerlink" title="2. Targets of some conserved miRNAs"></a>2. Targets of some conserved miRNAs</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105160004038.png" srcset="/img/loading.gif" lazyload alt="image-20191105160004038" style="zoom:67%;" />
+
+<h3 id="3-Plant-miRNAs"><a href="#3-Plant-miRNAs" class="headerlink" title="3. Plant miRNAs"></a>3. Plant miRNAs</h3><p>Plant miRNAs are thought to be  distantly related to their targets </p>
+<p>Plant miRNAs are  thought to be derived  from their target  sequences following  <u>gene duplication,  inverted duplication  and divergence.</u> </p>
+<p>Only some miRNAs confer  selective advantage and are retained and further duplicated. </p>
+<h2 id="miRNAs-and-vegetative-phase-change"><a href="#miRNAs-and-vegetative-phase-change" class="headerlink" title="miRNAs and vegetative phase change"></a>miRNAs and vegetative phase change</h2><h3 id="1-Phase-Change"><a href="#1-Phase-Change" class="headerlink" title="1. Phase Change"></a>1. Phase Change</h3><p>Vegetative phase change is the transition  from juvenile to adult growth in plants. </p>
+<p>Vegetative phase change affects morphology and reproductive competence</p>
+<p>Phase change can affect leaf shape, phyllotaxy, and trichome patterns</p>
+<p>Eucalyptus leaves are strongly dimorphic, as  are leaves of holly and  ivy. In other plants including Arabidopsis  and maize the change  is more subtle.</p>
+<p>(桉树的叶子是强烈的二态的，就像冬青和常春藤的叶子一样。在包括拟南芥和玉米在内的其他植物中，这种变化更为微妙。)</p>
+<p>In Arabidopsis, phase change affects leaf  shape and trichome patterning  </p>
+<p>miR156 targets SPL genes,  promoters of phase change </p>
+<p>The function of miR156 in promoting developmental change is conserved </p>
+<h4 id="Phase-change-may-involve-a-temporal-cascade-of-miRNAs-and-transcription-factor"><a href="#Phase-change-may-involve-a-temporal-cascade-of-miRNAs-and-transcription-factor" class="headerlink" title="Phase change may involve a temporal cascade of miRNAs and transcription factor"></a>Phase change may involve a temporal cascade of miRNAs and transcription factor</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105163907456.png" srcset="/img/loading.gif" lazyload alt="image-20191105163907456" style="zoom:50%;" />
+
+
+
+<h3 id="2-miR172"><a href="#2-miR172" class="headerlink" title="2. miR172"></a>2. miR172</h3><p>miR172 promotes flowering in  Arabidopsis by targeting AP2-like  transcription factors  </p>
+<p>miR172 expression temporally regulates AP2-like proteins</p>
+<p>It is thought that floral initiation can occur when the level of AP2-like floral inhibitors drops below a certain level. </p>
+<h3 id="3-Summery"><a href="#3-Summery" class="headerlink" title="3. Summery"></a>3. Summery</h3><ul>
+<li>Vegetative phase change affects morphology and reproductive compe</li>
+<li>miRNAs contribute to the temporal control of gene expression and phachange </li>
+<li>In the nematode <em>C. elegans</em>, <em>lin-4</em> silencing of <em>lin-14</em> is required for  developmental progression</li>
+</ul>
+<h2 id="miRNAs-contribute-to-developmental-patterning"><a href="#miRNAs-contribute-to-developmental-patterning" class="headerlink" title="miRNAs contribute to developmental patterning"></a>miRNAs contribute to developmental patterning</h2><p>miRNA distribution  patterns can spatially  restrict activity of their  targets </p>
+<p>miRNAs can move  between cells to spatially  restrict activity of their  targets </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191226162936380.png" srcset="/img/loading.gif" lazyload alt="image-20191226162936380" style="zoom: 50%;" />
+
+<h2 id="miRNAs-and-nutrient-uptake-–-miR399"><a href="#miRNAs-and-nutrient-uptake-–-miR399" class="headerlink" title="miRNAs and nutrient uptake – miR399"></a>miRNAs and nutrient uptake – miR399</h2><ul>
+<li>The rate of nutrient uptake in the roots is regulated by signals from the shoot</li>
+<li><em>PHO2</em> encodes a ubiquitin-conjugating E2 that presumably contributes to  directed proteolysis </li>
+<li>PHO2 levels are regulated by <strong>miR399</strong> which accumulates upon phosphate  starvation </li>
+<li>Starvation-induced miR399 moves from shoot to root, regulating phosphate  uptake through PHO2 </li>
+<li><em>PHO2</em> expression is also controlled by <em>IPS1</em>, a target mimic of miR399</li>
+</ul>
+<h1 id="三、The-Small-RNA-World"><a href="#三、The-Small-RNA-World" class="headerlink" title="三、The Small RNA World"></a>三、<strong>The Small RNA World</strong></h1><h2 id="tasiRNAs"><a href="#tasiRNAs" class="headerlink" title="tasiRNAs"></a>tasiRNAs</h2><h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p><strong>tasiRNAs &#x3D; trans-acting siRNAS</strong> Encoded by <em>TAS</em> genes Primary transcript processing initiated by miRNA</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105170129054.png" srcset="/img/loading.gif" lazyload alt="image-20191105170129054" style="zoom: 33%;" />
+
+<blockquote>
+<p>Arabidopsis has four families of TAS genes</p>
+<ul>
+<li><p><em>TAS1 and TAS2</em> tasiRNAs target pentatricopeptide repeat genes.</p>
+</li>
+<li><p><em>TAS3</em> tasiRNAs target ARF transcription factors.</p>
+</li>
+<li><p><em>TAS4</em> tasiRNAs target MYB transcription factors</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="2-tasiRNA-biogenesis"><a href="#2-tasiRNA-biogenesis" class="headerlink" title="2. tasiRNA biogenesis"></a>2. tasiRNA biogenesis</h3><p>The dsRNA is cleaved by DCL4  into a series of shorter dsRNAs,  releasing many tasiRNAs from a  single <em>TAS</em> gene. </p>
+<h4 id="Arabidopsis"><a href="#Arabidopsis" class="headerlink" title="Arabidopsis"></a>Arabidopsis</h4><p><strong>Arabidopsis has four families of</strong>  <strong>TAS</strong> <strong>genes</strong> </p>
+<p><em>TAS1 and TAS2</em> tasiRNAs target  pentatricopeptide repeat genes. </p>
+<p><em>TAS3</em> tasiRNAs target ARF  transcription factors. </p>
+<p><em>TAS4</em> tasiRNAs target MYB  transcription factors</p>
+<h2 id="“phasiRNAs”-–-PHASED-siRNAs"><a href="#“phasiRNAs”-–-PHASED-siRNAs" class="headerlink" title="“phasiRNAs” – PHASED siRNAs"></a>“phasiRNAs” – PHASED siRNAs</h2><p>As part of a potent signal amplification system, these  phased siRNAs function to post-transcriptionally silence  genes, <u>mainly in trans but also in cis.</u></p>
+<p>Several “phased” tasiRNAs are derived from each TAS gene</p>
+<p>Mutations that affect tasiRNA  production affect phase change </p>
+<h1 id="四、The-influence-of-RNA-pol"><a href="#四、The-influence-of-RNA-pol" class="headerlink" title="四、The influence of RNA pol"></a>四、The influence of RNA pol</h1><p>Plants have additional RNA  polymerase complexes that  contribute to silencing </p>
+<table>
+<thead>
+<tr>
+<th>Complex</th>
+<th>Distribution</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RNA Polymerase I</td>
+<td>All eukaryotes</td>
+<td>Production of rRNA</td>
+</tr>
+<tr>
+<td>RNA Polymerase II</td>
+<td>All eukaryotes</td>
+<td>Production of mRNA, microRNA</td>
+</tr>
+<tr>
+<td>RNA Polymerase III</td>
+<td>All eukaryotes</td>
+<td>Production of tRNA, 5S rRNA</td>
+</tr>
+<tr>
+<td>RNA Polymerase IV</td>
+<td>Land plants</td>
+<td>Production of siRNAs</td>
+</tr>
+<tr>
+<td>RNA Polymerase V</td>
+<td>Angiosperms</td>
+<td>Recruitment of AGO to DNA</td>
+</tr>
+</tbody></table>
+<p>Loss of function of RNA Pol IV  interferes with silencing </p>
+<p>Transcriptional silencing requires  RNA Pol IV and V </p>
+<ul>
+<li><p>RNA Pol IV  contributes to siRNA  production. Non-coding RNAs  produced by RNA  Pol V direct silencing  machinery to target  sites.  </p>
+</li>
+<li><p>Loss of function of RNA Pol IV interferes with silencing</p>
+</li>
+</ul>
+<h1 id="四、Transposons"><a href="#四、Transposons" class="headerlink" title="四、Transposons"></a>四、Transposons</h1><p>Most siRNAs are produced from transposons and repetitive DNA</p>
+<p>Most of the cellular siRNAs are derived from transposons and other repetitive sequences. In Arabidopsis, as shown above, there is a high density of these repeats in the pericentromeric (中心体周围) regions of the chromosome.</p>
+<h2 id="Epigenetic-silencing-of-transposons-and-repetitive-elements"><a href="#Epigenetic-silencing-of-transposons-and-repetitive-elements" class="headerlink" title="Epigenetic silencing of transposons and repetitive elements"></a>Epigenetic silencing of transposons and repetitive elements</h2><p>Transposons must be tightly controlled to prevent widespread  mutagenic activity. Epigenetic controls to maintain silencing include  DNA methylation, histone modification and siRNA production.</p>
+<h1 id="五、DNA-methylation"><a href="#五、DNA-methylation" class="headerlink" title="五、DNA methylation"></a>五、DNA methylation</h1><p>DNA can be covalently  modified by cytosine  methylation. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105185923793.png" srcset="/img/loading.gif" lazyload alt="image-20191105185923793" style="zoom:50%;" />
+
+<h2 id="DNA-methyltransferases-in-Arabidopsis"><a href="#DNA-methyltransferases-in-Arabidopsis" class="headerlink" title="DNA methyltransferases in  Arabidopsis"></a><strong>DNA methyltransferases in</strong>  <strong>Arabidopsis</strong></h2><p>MET1 (METHYLTRANSFERASE1) – 5’-CG-3’ sites </p>
+<ul>
+<li>Silencing of transposons, repetitive elements, some  imprinted gene</li>
+</ul>
+<p>CMT3 (CHROMOMETHYLASE3) – 5’-CHG-3’ sites </p>
+<ul>
+<li>(H&#x3D; A, C or T) </li>
+<li>Interacts with histone mark </li>
+<li>DRM 1, DRM 2 (DOMAINS REARRANGED 1 and 2) - 5’-CHH-3’ sites </li>
+<li>Primarily targets repetitive elements </li>
+<li>Requires the active targeting of siRNAs</li>
+</ul>
+<p>CG methylation can be propagated during DNA replication </p>
+<h3 id="1-Asymmetric-Methylation"><a href="#1-Asymmetric-Methylation" class="headerlink" title="1. Asymmetric Methylation"></a>1. Asymmetric Methylation</h3><p>Asymmetric methylation sites require additional information </p>
+<p>Asymmetric methylation sites are maintained (and initiated) by information  on associated histones, and an RNA-based mechanism, RNA-directed DNA  </p>
+<p>Methylation (RdDM), that directs DNA methylases to these sites.  </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105210206759.png" srcset="/img/loading.gif" lazyload alt="image-20191105210206759" style="zoom:50%;" />
+
+<p><u>Some sites are maintained by small  interfering RNAs (siRNAs)</u> </p>
+<p>Different DNA methylases act on  different sites </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105210257273.png" srcset="/img/loading.gif" lazyload alt="image-20191105210257273" style="zoom:50%;" />
+
+<p>Heterochromatin DNA is highly methylated </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191105210316719.png" srcset="/img/loading.gif" lazyload alt="image-20191105210316719" style="zoom:50%;" />
+
+<p>DNA methylation is <u>densest at（最密集）</u> the repetitive elements around the centromere.</p>
+<p>Although CG methylation  is more abundant in  pericentromeric regions,  a higher proportion of  CHH methylation is  found there.  </p>
+<h1 id="六、siRNAs-summary"><a href="#六、siRNAs-summary" class="headerlink" title="六、siRNAs - summary"></a>六、siRNAs - summary</h1><p>The siRNA pathway silences foreign DNA, transposons and  repetitive elements. </p>
+<p>In plants, siRNAs are produced by the action of Dicer-like proteins dicing dsRNA into 24 nt siRNAs </p>
+<p>The siRNAs associate with AGO proteins and form  silencing complexes </p>
+<p>The silencing complexes can act post-transcriptionally on  RNA targets, cleaving them or interfering with translation </p>
+<p>The silencing complexes can also act on chromatin,  silencing their targets by DNA methylation or histone  modification</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Molecular-Biology/" class="category-chain-item">Molecular Biology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Molecular-Biology/" class="print-no-link">#Molecular Biology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L07 The Small RNA World</div>
+      <div>https://zhenyumi.github.io/posts/d986c58d/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/808992df/" title="L06 DNA Replication">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L06 DNA Replication</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/53ddf4cb/" title="L08 Epigenetics">
+                        <span class="hidden-mobile">L08 Epigenetics</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

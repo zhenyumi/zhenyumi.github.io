@@ -1,0 +1,955 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="The method of DNA purification and genotyping using Sangon Ki">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Column based DNA purification and Genotyping">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/8350c993/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="The method of DNA purification and genotyping using Sangon Ki">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-04T07:10:29.000Z">
+<meta property="article:modified_time" content="2022-05-27T10:59:29.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Lab Protocols">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Column based DNA purification and Genotyping - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">Column based DNA purification and Genotyping</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-08-04 15:10" pubdate>
+          2021年8月4日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Column based DNA purification and Genotyping</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Column-based-DNA-purification"><a href="#Column-based-DNA-purification" class="headerlink" title="&lt;Sangon&gt; Column-based DNA purification"></a>&lt;Sangon&gt; Column-based DNA purification</h1><p>Step1: 配置消化MIX：(180μl <font color="0000FF">ACL Solution</font> + 20μl <font color="0000FF">proteinase K</font>) for each tube</p>
+<ul>
+<li>保证液体最终能浸没样本（比如鼠尾）</li>
+<li>加完液体后，对tube贴上封口膜，防止在后续水浴过程中热胀冷缩导致tube开口</li>
+</ul>
+<p>Step2：56℃水浴至少3-4h，<font color="FF0000">直到组织被完全消化（轻轻晃一下没有大块的组织，可以晃散）</font></p>
+<ul>
+<li>时间可以更长，在水浴的过程中过一段时间就去震荡一下tube，同时倾斜观察样本是否能够被震散</li>
+<li>震散的情况：倾斜tube，没有明显的大块固体残留，剩余细小的颗粒状固体</li>
+<li>如果没有震散，则继续水浴</li>
+</ul>
+<p>Step3：加入200μl <font color="0000FF">Buffer CL</font>，颠倒混匀</p>
+<ul>
+<li>这一步可能会出现白色沉淀</li>
+</ul>
+<p>Step4：70℃水浴10min至白色沉淀消失</p>
+<ul>
+<li>此时溶液应变清亮，如果没有，代表细胞裂解不彻底，会导致提取出的DNA不纯或者量少</li>
+</ul>
+<p>Step5：加入200μl <font color="0000FF">无水乙醇</font>，颠倒混匀</p>
+<p>Step6：拿出吸附柱，将样本取500μl导入柱子当中</p>
+<ul>
+<li>这一步保证对于不同的tube取等量的样本液体</li>
+<li>尽量不要吸到别的杂质，比如毛发等</li>
+</ul>
+<p>Step7：静置2min，之后在10,000rpm (~11,200 x g)、RT下离心1min</p>
+<p>Step8：倒掉收集管当中的液体，加入500μl的<font color="0000FF">CW1 Solution</font></p>
+<ul>
+<li>确认CW1是否已加入无水乙醇</li>
+</ul>
+<p>Step9：在10,000rpm (~11,200 x g)，RT下离心30s。如果有必要的话，多次重复离心。</p>
+<ul>
+<li>在这一步尽量使所有的液体都被离心下去，可多次重复30s的离心过程</li>
+</ul>
+<p>Step10：倒掉收集管当中的液体，加入500μl的<font color="0000FF">CW2 Solution</font></p>
+<ul>
+<li>确认CW2是否已加入无水乙醇</li>
+</ul>
+<p>Step11：在10,000rpm (~11,200 x g)，RT下离心30s</p>
+<p>Step12：倒掉收集管当中的液体。在12,000rpm (~13,400 x g)，RT下离心2min</p>
+<p>Step13：倒掉收集管当中的液体。敞口放置10min左右晾干</p>
+<p>Step14：将一个新的1.5ml的离心管写好标记，等待晾干完成后将上面的分离柱组合进这个新的1.5ml的离心管上。</p>
+<p>Step15：每一个tube取50μl的<font color="0000FF">CE Buffer</font>，悬空滴加在吸附柱的中间。静置3min。</p>
+<p>Step16：在12,000rpm (~13,400 x g)，RT下离心2min</p>
+<p>Step17：重复Step 15-16</p>
+<p>Step18：将样本放在-20℃保存</p>
+<h1 id="Column-based-DNA-purification-1"><a href="#Column-based-DNA-purification-1" class="headerlink" title="&lt;TIANGEN&gt; Column-based DNA purification"></a>&lt;TIANGEN&gt; Column-based DNA purification</h1><blockquote>
+<p>Use TIANamp Genomic DNA Kit</p>
+</blockquote>
+<p>Step1：对于动物组织，先打碎处理为细胞悬液，之后在10,000rpm (~11,200 x g)、RT下离心1min。倒尽上清液，加入200 μl <font color="0000FF">Buffer GA</font>，震荡至彻底悬浮。</p>
+<p>Step2：加入20 μl <font color="0000FF">Proteinse K</font>溶液，混匀</p>
+<ul>
+<li>对于组织基因组的提取，需要在加入酶之后，在56℃下放置（水浴），直到组织溶解</li>
+<li>可以再进行下一步前进行简短离心去除管盖内壁的水珠</li>
+<li>通常消化1-3h，<font color="FF0000">直到组织被完全消化（轻轻晃一下没有大块的组织，可以晃散）</font>，鼠尾可以消化过夜</li>
+</ul>
+<p>Step3：加入200μl <font color="0000FF">Buffer GB</font>，颠倒混匀</p>
+<ul>
+<li>可能会出现白色沉淀</li>
+</ul>
+<p>Step4：在70℃下放置10min</p>
+<ul>
+<li>此时溶液应变清亮，如果没有，代表细胞裂解不彻底，会导致提取出的DNA不纯或者量少</li>
+</ul>
+<p>Step5：加入200 μl<font color="0000FF">无水乙醇</font>，充分震荡混匀15 sec</p>
+<ul>
+<li>此时可能会出现絮状沉淀</li>
+<li>可以简短离心去除管盖内壁的水珠</li>
+</ul>
+<p>Step6：将吸附柱放进收集管当中，再将Step5所得到的溶液以及絮状沉淀加入到一个<font color="0000FF">吸附柱CB3</font>里，在12,000rpm (~13,400 x g)，RT下离心30 sec</p>
+<p>Step7：倒掉废液，将吸附柱CB3放进收集管当中。</p>
+<p>Step8：向吸附柱CB3当中加入500μl <font color="0000FF">Buffer GD</font>，在12,000rpm (~13,400 x g)，RT下离心30 sec</p>
+<ul>
+<li>确认GD是否已加入无水乙醇</li>
+</ul>
+<p>Step9：倒掉废液，将吸附柱CB3放进收集管当中</p>
+<p>Step10：向吸附柱CB3当中加入600μl <font color="0000FF">Buffer PW</font>，在12,000rpm (~13,400 x g)，RT下离心30 sec</p>
+<p>Step11：倒掉废液，将吸附柱CB3放进收集管当中</p>
+<p>Step12：重复Step10-11</p>
+<p>Step13：将吸附柱放进收集管当中，在12,000rpm (~13,400 x g)，RT下离心2 min</p>
+<p>Step14：倒掉废液，将吸附柱CB3放进收集管当中。将吸附柱在室温下放置数分钟，彻底晾干其中的漂洗液</p>
+<ul>
+<li>放置10 min左右</li>
+<li>这一步用来去除残留的乙醇，乙醇会干扰后续的酶反应实验</li>
+</ul>
+<p>Step15：将吸附柱转移进一个<strong>新的</strong>收集管当中，向吸附膜的中间部位悬空滴加50-200μl <font color="0000FF">Buffer TE</font>，室温放置2-5min</p>
+<ul>
+<li>洗脱缓冲液体积不少于50 μl，体积过小会影响回收效率</li>
+<li>洗脱液的pH会对洗脱效率有很大影响，若用ddH<del>2</del>O做洗脱溶液，应该保证其pH在7.0~8.5之间，pH低于7.0会影响洗脱效率</li>
+</ul>
+<p>Step16：在12,000rpm (~13,400 x g)，RT下离心2 min</p>
+<ul>
+<li>为了增加基因组DNA的得率，可以将离心后的溶液再加入到吸附柱CB3当中，室温放置2min，在12,000rpm (~13,400 x g)，RT下离心2 min</li>
+</ul>
+<p>Step17：将收集管当中的溶液转移到一个新的离心管当中</p>
+<ul>
+<li>DNA样本应该保存在-20℃，防止其降解</li>
+</ul>
+<h1 id="TIANamp-Stool-DNA-Kit"><a href="#TIANamp-Stool-DNA-Kit" class="headerlink" title="&lt;TIANGEN&gt;TIANamp Stool DNA Kit"></a>&lt;TIANGEN&gt;TIANamp Stool DNA Kit</h1><p>Step0：打一盒冰</p>
+<p>Step1：称取粪便180-220 mg（1-2粒）至2 ml离心管当中，并将管子放置在冰上</p>
+<p>Step2：向管中加入500 μl <font color="0000FF">Buffer SA</font>，100 μl <font color="0000FF">Buffer SC</font>，15 μl <font color="0000FF">Proteinase K</font>，0.25g的<font color="0000FF">研磨珠</font>。间歇震荡直至完全混匀</p>
+<p>Step3：先震荡至完全匀浆状态。之后在70℃水浴15 min，每隔5min震荡一次</p>
+<ul>
+<li>对于存在革兰氏阳性菌的情况，可以将温度提高至95℃促进裂解</li>
+</ul>
+<p>Step4：Vortex混匀15 sec，在12,000rpm (~13,400 x g)，RT下离心3 min</p>
+<p>Step5：转移上清液至新的1.5ml离心管中。向管中加入10 μl <font color="0000FF">RNase A</font></p>
+<p>Step6：震荡混匀，室温放置5 min</p>
+<p>Step7：加入200 μl <font color="0000FF">Buffer SH</font>，震荡混匀，放置在冰上5 min</p>
+<p>Step8：在12,000rpm (~13,400 x g)，RT下离心3 min</p>
+<p>Step9：转移上清液至一个新的离心管当中，加入等体积<font color="0000FF">Buffer GFA</font></p>
+<ul>
+<li>使用前检查是否已加入异丙醇</li>
+</ul>
+<p>Step10：混合完成后，将液体加入到吸附柱CR2当中并组合收集管，在12,000rpm (~13,400 x g)，RT下离心30 sec</p>
+<p>Step11：倒掉废液，将吸附柱CR2放进收集管当中</p>
+<p>Step12：加入500 μl <font color="0000FF">Buffer GD</font>，在12,000rpm (~13,400 x g)，RT下离心30 sec</p>
+<ul>
+<li>使用GD前检查是否已加入无水乙醇</li>
+</ul>
+<p>Step13：倒掉废液，将吸附柱CR2放进收集管当中</p>
+<p>Step14：加入700 μl <font color="0000FF">Buffer PW</font>，在12,000rpm (~13,400 x g)，RT下离心30 sec</p>
+<ul>
+<li>使用PW前检查是否已加入无水乙醇</li>
+</ul>
+<p>Step15：倒掉废液，将吸附柱CR2放进收集管当中</p>
+<p>Step16：重复Step 14-15</p>
+<p>Step17：在12,000rpm (~13,400 x g)，RT下离心2 min</p>
+<p>Step18：倒掉废液，将吸附柱CR2放进收集管当中。将吸附柱在室温下放置数分钟，彻底晾干其中的漂洗液</p>
+<ul>
+<li>放置10 min左右</li>
+<li>这一步用来去除残留的乙醇，乙醇会干扰后续的酶反应实验</li>
+</ul>
+<p>Step19：将吸附柱转移进一个<strong>新的</strong>收集管当中，向吸附膜的中间部位悬空滴加50-200μl <font color="0000FF">Buffer TB</font>，室温放置2-5min</p>
+<ul>
+<li>洗脱缓冲液体积不少于50 μl，体积过小会影响回收效率</li>
+<li>洗脱液的pH会对洗脱效率有很大影响，若用ddH<del>2</del>O做洗脱溶液，应该保证其pH在7.0~8.5之间，pH低于7.0会影响洗脱效率</li>
+</ul>
+<p>Step20：在12,000rpm (~13,400 x g)，RT下离心2 min</p>
+<ul>
+<li>为了增加基因组DNA的得率，可以将离心后的溶液再加入到吸附柱CB3当中，室温放置2min，在12,000rpm (~13,400 x g)，RT下离心2 min</li>
+</ul>
+<p>Step21：将收集管当中的溶液转移到一个新的离心管当中</p>
+<ul>
+<li>DNA样本应该保存在-20℃，防止其降解</li>
+</ul>
+<h1 id="PCR"><a href="#PCR" class="headerlink" title="PCR"></a>PCR</h1><p><font color="FF0000">注意引物浓度！！</font></p>
+<h2 id="16p11-2df-mice"><a href="#16p11-2df-mice" class="headerlink" title="16p11.2df mice"></a>16p11.2df mice</h2><blockquote>
+<p>For 16p11.2df mice (<a target="_blank" rel="noopener" href="https://www.jax.org/strain/013128">https://www.jax.org/strain/013128</a>)</p>
+</blockquote>
+<p><font color="FF0000">保持在冰上操作，并保持洁净环境（可以在超净台当中操作）。</font></p>
+<p>Step1：配置PCR反应体系（20μl）</p>
+<table>
+<thead>
+<tr>
+<th>Taq Mix</th>
+<th>DNA Sample</th>
+<th>Primer LN01 (10μM)</th>
+<th>Primer LN02 (10μM)</th>
+<th>dd$\text{H}_{2}\text{O}$</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10 μl</td>
+<td>2 μl</td>
+<td>1 μl</td>
+<td>1 μl</td>
+<td>6 μl</td>
+<td>20 μl</td>
+</tr>
+</tbody></table>
+<p>Step2：设置PCR流程</p>
+<ol>
+<li>94℃. 2:00</li>
+<li>94℃, 0:20</li>
+<li>52℃, 1:00</li>
+<li>72℃, 1:00</li>
+<li>Goto 2, 30x</li>
+<li>72℃. 2:00</li>
+<li>10℃, Infinite hold</li>
+</ol>
+<h2 id="For-SFB-Stool"><a href="#For-SFB-Stool" class="headerlink" title="For SFB Stool"></a>For SFB Stool</h2><p>每个样本提取出来的DNA跑两个分别的PCR反应：</p>
+<ol>
+<li><font color="0000FF">SFB1008R</font> + SFB779F</li>
+<li><font color="0000FF">SFB1380R</font> + SFB779F</li>
+</ol>
+<p><font color="FF0000">注意引物浓度！！</font></p>
+<p>PCR反应体系（25μl，引物浓度100μM）:</p>
+<table>
+<thead>
+<tr>
+<th>Taq Mix</th>
+<th>Primer F</th>
+<th>Primer R</th>
+<th>Sterile $\text{H}_{2}\text{O}$</th>
+<th>DNA Sample</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>12.5 μl</td>
+<td>0.1 μl</td>
+<td>0.1 μl</td>
+<td>11.3 μl</td>
+<td>1 μl</td>
+<td>25.0 μl</td>
+</tr>
+</tbody></table>
+<ul>
+<li>在配置的过程中即将Primer: 100μM → 10μM</li>
+</ul>
+<p>对于不同的引物浓度（10μM）：</p>
+<table>
+<thead>
+<tr>
+<th>Taq Mix</th>
+<th>Primer F</th>
+<th>Primer R</th>
+<th>Sterile $\text{H}_{2}\text{O}$</th>
+<th>DNA Sample</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>12.5 μl</td>
+<td>1 μl</td>
+<td>1 μl</td>
+<td>9.5 μl</td>
+<td>1 μl</td>
+<td>25.0 μl</td>
+</tr>
+</tbody></table>
+<ul>
+<li>根据测得的DNA浓度的不同，适当调整DNA Sample和Sterile $\text{H}_{2}\text{O}$之间的比例</li>
+</ul>
+<p>若Taq Mix中不含Loading的上样体系：3μl Loading + 7μl PCR Product</p>
+<p>PCR Program：</p>
+<ul>
+<li>Lid：105℃</li>
+<li>Volumn：25μl</li>
+</ul>
+<ol>
+<li>95℃, 3:00</li>
+<li>94℃, 0:30</li>
+<li>58℃, 0:30</li>
+<li>72℃, 0:45</li>
+<li>Goto 2, 30X</li>
+<li>72℃, 5:00</li>
+<li>4℃, Infinite Hold</li>
+</ol>
+<h1 id="Agarose-gel-electrophoresis"><a href="#Agarose-gel-electrophoresis" class="headerlink" title="Agarose gel electrophoresis"></a>Agarose gel electrophoresis</h1><p>Step1：制胶（1.8%）：称取1.8g agarose H，使用100ml 1x TAE溶解</p>
+<ul>
+<li>可以先加入一些液体，在加入agarose H之后，用剩下的液体冲掉锥形瓶壁上残留的固体</li>
+</ul>
+<p>Step2：在锥形瓶口蒙上一块称量纸。使用微波炉，将溶液加热沸腾至少三次</p>
+<ul>
+<li>直到固体完全溶解</li>
+<li>不要沸腾太多次</li>
+</ul>
+<p>Step3：等待溶液自然冷却至50-60℃</p>
+<ul>
+<li>此时用手背感觉微烫</li>
+</ul>
+<p>Step4：在溶液当中加入8-10μl核酸染料，晃匀</p>
+<ul>
+<li>摇晃幅度可以偏大，速度应该偏慢。避免出现气泡</li>
+</ul>
+<p>Step5：将制胶板提前调平，按照样本数目选择梳齿孔数。将溶液倒入其中</p>
+<ul>
+<li>15孔：load~20μl体系</li>
+<li>20孔：load~10μl体系</li>
+</ul>
+<p>Step6：等待约20min，使胶凝固</p>
+<ul>
+<li>等待胶凝固之后，拿起梳齿的时候，轻轻慢慢地垂直拿起来，不要前后或左右摇晃，避免使胶产生裂缝</li>
+</ul>
+<p>Step7：上样：拿一个透明手套，根据样本数滴加 loading dye。</p>
+<ul>
+<li>一个样本3μl loading dye</li>
+<li>加入3μl的DNA marker</li>
+<li><strong>对于已经含有loading dye的Master mix，可以忽略这一步</strong></li>
+</ul>
+<p>Step8：在140V条件下开始跑胶，大概跑到2&#x2F;3的时候停止</p>
+<ul>
+<li>注：对于1.5%的琼脂胶，40min大概可以跑到2&#x2F;3。对于1.8%，40min大概能够跑到1&#x2F;2</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Lab/" class="category-chain-item">Lab</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Lab/Lab-Protocols/" class="category-chain-item">Lab Protocols</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Lab-Protocols/" class="print-no-link">#Lab Protocols</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Column based DNA purification and Genotyping</div>
+      <div>https://zhenyumi.github.io/posts/8350c993/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年8月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

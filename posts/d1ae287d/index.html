@@ -1,0 +1,789 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L03 Principles of Inheritance">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/d1ae287d/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+  
+  
+  
+  <title>L03 Principles of Inheritance - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L03 Principles of Inheritance</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          228 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          2 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L03 Principles of Inheritance</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Theories-Explain-Transmission-of-Hereditary-Traits"><a href="#一、Theories-Explain-Transmission-of-Hereditary-Traits" class="headerlink" title="一、Theories Explain Transmission of Hereditary Traits"></a>一、Theories Explain Transmission of Hereditary Traits</h1><h2 id="Theory-of-pangenesis-泛生论"><a href="#Theory-of-pangenesis-泛生论" class="headerlink" title="Theory of pangenesis (泛生论)"></a>Theory of pangenesis (泛生论)</h2><p>“Seeds” are produced by all parts of the body </p>
+<ul>
+<li>Collected in the reproductive organs </li>
+<li>Then transmitted to offspring at moment of conception</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116184639959.png" srcset="/img/loading.gif" lazyload alt="image-20191116184639959" style="zoom:50%;" />
+
+
+
+<h2 id="Preformation-Theory-先成论"><a href="#Preformation-Theory-先成论" class="headerlink" title="Preformation Theory (先成论)"></a>Preformation Theory (先成论)</h2><p><u>People using early microscopes thought they saw a miniature human in the sperm</u></p>
+<p>With proper nourishment the miniature human unfolds into its adult proportions </p>
+<ul>
+<li><p>The Spermists believed the characteristics of the future person were found in the sperm </p>
+</li>
+<li><p>The Ovists believed the characteristics of the future person resided in the egg</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116184839782.png" srcset="/img/loading.gif" lazyload alt="image-20191116184839782" style="zoom:50%;" />
+
+<h2 id="Theory-of-Blending-Inheritance-混合遗传"><a href="#Theory-of-Blending-Inheritance-混合遗传" class="headerlink" title="Theory of Blending Inheritance(混合遗传)"></a>Theory of Blending Inheritance(混合遗传)</h2><p>The theory is that the progeny inherits any characteristic as the average of the parents’ values of that characteristic.  </p>
+<p>As an example of this a crossing of a red flower variety with a white variety of the same species would yield pink-flowered offspring. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116184947097.png" srcset="/img/loading.gif" lazyload alt="image-20191116184947097" style="zoom:67%;" />
+
+<h1 id="二、Mendelian-inheritance-孟德尔定律"><a href="#二、Mendelian-inheritance-孟德尔定律" class="headerlink" title="二、Mendelian inheritance 孟德尔定律"></a>二、Mendelian inheritance 孟德尔定律</h1><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567662750655.png" srcset="/img/loading.gif" lazyload alt="1567662750655"></p>
+<h2 id="Principle-of-Dominance"><a href="#Principle-of-Dominance" class="headerlink" title="Principle of Dominance"></a>Principle of Dominance</h2><p><u>In heterozygote, one allele may hide the presence of another.</u></p>
+<h2 id="Mendel’s-First-Law-The-Principle-of-Segregation"><a href="#Mendel’s-First-Law-The-Principle-of-Segregation" class="headerlink" title="Mendel’s First Law (The Principle of Segregation)"></a>Mendel’s First Law (The Principle of Segregation)</h2><p>In a heterozygote, two different alleles segregate from each other during the formation of gametes.</p>
+<p>Mendel’s First Law: Allele Pairs Segregate（分离） during Gamete Formation.</p>
+<p>Mendel’s first law, or the <strong>law of segregation</strong>, which states that equal and independent segregation of alleles occurs during formation of gamete cells.</p>
+<h2 id="Mendel’s-Second-Law-The-Principle-of-Independent-Assortment"><a href="#Mendel’s-Second-Law-The-Principle-of-Independent-Assortment" class="headerlink" title="Mendel’s Second Law (The Principle of Independent Assortment)"></a>Mendel’s Second Law (The Principle of Independent Assortment)</h2><p>The alleles of different genes assort independently of each other.</p>
+<p>Mendel’s Second Law: Different Genes Assort Independently during Gamete Formation.</p>
+<p>Mendel’s second law, or the <strong>law of independent assortment</strong>, states that different genes assort into gametes independently of one another.</p>
+<h2 id="Exceptions-to-Mendel’s-Laws"><a href="#Exceptions-to-Mendel’s-Laws" class="headerlink" title="Exceptions to Mendel’s Laws"></a>Exceptions to Mendel’s Laws</h2><h3 id="（1）Incomplete-Dominance-不完全显性"><a href="#（1）Incomplete-Dominance-不完全显性" class="headerlink" title="（1）Incomplete Dominance 不完全显性"></a>（1）Incomplete Dominance 不完全显性</h3><p>Some alleles of a gene are neither dominant nor recessive. Instead, hybrid progeny（后代） <strong>display a phenotype intermediate between those of the two parents.</strong></p>
+<p>Examples：Flowering time；花色</p>
+<h3 id="（2）-Codominance-共显性"><a href="#（2）-Codominance-共显性" class="headerlink" title="（2） Codominance 共显性"></a>（2） Codominance 共显性</h3><p>Recessive alleles often produce nonfunctional proteins, or none at all. However, there are many examples of two alleles of a gene that produce <strong>two different functional proteins</strong>, neither of which is dominant to the other.</p>
+<p>Examples：血型</p>
+<h3 id="（3）Linked-Genes-基因连锁"><a href="#（3）Linked-Genes-基因连锁" class="headerlink" title="（3）Linked Genes 基因连锁"></a>（3）Linked Genes 基因连锁</h3><p>Alleles for two different genes assort together in the gametes, rather than assorting independently. </p>
+<p>Genes that are close together on one chromosome are inherited together, contrary to Mendel’s second law.</p>
+<h2 id="Monohybrid-Crosses"><a href="#Monohybrid-Crosses" class="headerlink" title="Monohybrid Crosses"></a>Monohybrid Crosses</h2><h3 id="（1）True-breeding-or-pure-breeding-纯系"><a href="#（1）True-breeding-or-pure-breeding-纯系" class="headerlink" title="（1）True breeding or pure breeding 纯系"></a>（1）True breeding or pure breeding 纯系</h3><p>A true-breeding plant is one that, when self-fertilized, only produces offspring with the same traits. True-breeding organisms are genetically identical and have identical alleles for specified traits. The alleles for these type of organisms are homozygous. </p>
+<h3 id="（2）Monohybrid-cross-单基因杂交"><a href="#（2）Monohybrid-cross-单基因杂交" class="headerlink" title="（2）Monohybrid cross 单基因杂交"></a>（2）Monohybrid cross 单基因杂交</h3><p>genetic cross between <u>two true breeding individuals</u> with different alleles at one genetic locus of interest</p>
+<ul>
+<li>One given trait&#x2F;character is studied, which is controlled by a single gene locus. </li>
+<li>One parent having two dominant alleles and the other two recessives in this locus</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116190547409.png" srcset="/img/loading.gif" lazyload alt="image-20191116190547409" style="zoom:50%;" />
+
+<p>The approximately a 3:1 ratio between the dominant trait and the recessive trait <u>in F2</u> shows <strong>The Principle of Segregation</strong>.</p>
+<h2 id="Dihybrid-crosses"><a href="#Dihybrid-crosses" class="headerlink" title="Dihybrid crosses"></a>Dihybrid crosses</h2><p>Cross with two traits</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116190525191.png" srcset="/img/loading.gif" lazyload alt="image-20191116190525191" style="zoom:50%;" />
+
+<p>The 9:3:3:1 ratio in F2 shows <strong>The Principle of Independent Assortment</strong> and The alleles of different genes assort (segregate) independently of each other.</p>
+<h1 id="三、Probability"><a href="#三、Probability" class="headerlink" title="三、Probability"></a>三、Probability</h1><p>Mendel’s principles can be used to predict the outcomes of crosses between different strains of  organisms</p>
+<p>methods to predict outcomes </p>
+<ul>
+<li><p>The Punnett Square Method </p>
+</li>
+<li><p>The Forked‐Line Method</p>
+</li>
+</ul>
+<h2 id="Sum-Rule"><a href="#Sum-Rule" class="headerlink" title="Sum Rule"></a>Sum Rule</h2><p>如果事件A和B,are mutually exclusive，则:<br>$$<br>P(A\  or \ B) &#x3D; P(A)+P(B)<br>$$</p>
+<h2 id="Product-Rule"><a href="#Product-Rule" class="headerlink" title="Product Rule"></a>Product Rule</h2><p>If two events A and B are independent, then the probability of both events is the product of the probabilities for each event.<br>$$<br>P(A \text{ and }B) &#x3D; P（A）\cdot P（B）<br>$$</p>
+<h2 id="To-Calculate-the-result"><a href="#To-Calculate-the-result" class="headerlink" title="To Calculate the result"></a>To Calculate the result</h2><h3 id="（1）Punnett-Square-Method"><a href="#（1）Punnett-Square-Method" class="headerlink" title="（1）Punnett Square Method"></a>（1）Punnett Square Method</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568723352432.png" srcset="/img/loading.gif" lazyload alt="1568723352432" style="zoom: 33%;" />
+
+<h3 id="（2）The-Forked-line-Method-树形法、叉线法"><a href="#（2）The-Forked-line-Method-树形法、叉线法" class="headerlink" title="（2）The Forked-line Method 树形法、叉线法"></a>（2）The Forked-line Method 树形法、叉线法</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568723678415.png" srcset="/img/loading.gif" lazyload alt="1568723678415"></p>
+<h2 id="To-Test-the-Accuracy-of-Expectation"><a href="#To-Test-the-Accuracy-of-Expectation" class="headerlink" title="To Test the Accuracy of Expectation"></a>To Test the Accuracy of Expectation</h2><h3 id="1-The-Chi-Square-Test"><a href="#1-The-Chi-Square-Test" class="headerlink" title="1. The Chi Square Test"></a>1. The Chi Square Test</h3><h4 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h4><p>A statistical method used to determine <u>goodness of fit</u> (适合度，适配度，拟合度）</p>
+<p><u>The chi square test does not prove that a hypothesis is correct</u></p>
+<p>It evaluates whether or not the data and the hypothesis have a good fit</p>
+<p>The formula:<br>$$<br>X^2 &#x3D; \sum \frac{(O-E)^2}{E}<br>$$<br>where<br>O &#x3D; observed data in each category<br>E &#x3D; expected data in each category based on the experimenter’s hypothesis<br>$\sum$ &#x3D; Sum of the calculations for each category</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116191254133.png" srcset="/img/loading.gif" lazyload alt="image-20191116191254133" style="zoom:50%;" />
+
+<h4 id="To-get-the-result"><a href="#To-get-the-result" class="headerlink" title="To get the result"></a>To get the result</h4><p>Compare the $X^2$and the critical value， 检验实验数据与实验假设是否符合</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569324370163.png" srcset="/img/loading.gif" lazyload alt="1569324370163" style="zoom:50%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569324236231.png" srcset="/img/loading.gif" lazyload alt="1569324236231" style="zoom: 50%;" />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116191701132.png" srcset="/img/loading.gif" lazyload alt="image-20191116191701132"></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116191607900.png" srcset="/img/loading.gif" lazyload alt="image-20191116191607900" style="zoom: 50%;" />
+
+<h3 id="（4）Pedigree-Conventions"><a href="#（4）Pedigree-Conventions" class="headerlink" title="（4）Pedigree Conventions"></a>（4）Pedigree Conventions</h3><p>Mendelian Principles in Human Genetics has many obstacles:</p>
+<ol>
+<li><p>Incomplete family records </p>
+</li>
+<li><p>Not enough progeny </p>
+</li>
+<li><p>Uncontrolled environment</p>
+</li>
+</ol>
+<p>Pedigrees are diagrams that <u>show the relationships among the members of a family.</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569324447765.png" srcset="/img/loading.gif" lazyload alt="1569324447765" style="zoom:33%;" />
+
+<h4 id="Inheritance-of-a-Dominant-Trait"><a href="#Inheritance-of-a-Dominant-Trait" class="headerlink" title="Inheritance of a Dominant Trait"></a>Inheritance of a Dominant Trait</h4><ul>
+<li><p>Easy to identify </p>
+</li>
+<li><p>Every individual who carries the dominant allele manifests the traits </p>
+</li>
+<li><p>Dominant traits that are associated with reduced viability or fertility never become frequent in a population</p>
+</li>
+<li><p>Example: <strong>Freckles</strong> (雀斑)；<strong>Widow’s peak</strong> （美人尖）</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569324481495.png" srcset="/img/loading.gif" lazyload alt="1569324481495" style="zoom:33%;" />
+
+<h4 id="Inheritance-of-a-Recessive-Trait"><a href="#Inheritance-of-a-Recessive-Trait" class="headerlink" title="Inheritance of a Recessive Trait"></a>Inheritance of a Recessive Trait</h4><ul>
+<li>Difficult to identify </li>
+<li>Several generations are needed to trace the transmission of a receive allele</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569324854056.png" srcset="/img/loading.gif" lazyload alt="1569324854056" style="zoom:33%;" />
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetics/" class="category-chain-item">Genetics</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetics/" class="print-no-link">#Genetics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L03 Principles of Inheritance</div>
+      <div>https://zhenyumi.github.io/posts/d1ae287d/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/f64c5505/" title="L02 Weak Interactions">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L02 Weak Interactions</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/cac6a20/" title="L03 thermodynamics">
+                        <span class="hidden-mobile">L03 thermodynamics</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

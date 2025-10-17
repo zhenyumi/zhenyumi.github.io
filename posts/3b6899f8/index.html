@@ -1,0 +1,822 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="The molecular systen inside of the cell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L9 Molecular signaling within neurons">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/3b6899f8/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="The molecular systen inside of the cell">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606150238137.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606150301921.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606150356708.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606150919944.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606150941817.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606151531926.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152028855.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152055154.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152126537.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152247436.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152649960.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152851292.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606153700977.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152213966.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606153750410.png">
+<meta property="article:published_time" content="2021-06-06T11:24:01.000Z">
+<meta property="article:modified_time" content="2021-06-06T11:24:01.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Neurobiology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606150238137.png">
+  
+  
+  
+  <title>L9 Molecular signaling within neurons - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L9 Molecular signaling within neurons</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-06-06 19:24" pubdate>
+          2021年6月6日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          225 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          2 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L9 Molecular signaling within neurons</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Chemical-signaling"><a href="#一、Chemical-signaling" class="headerlink" title="一、Chemical signaling"></a>一、Chemical signaling</h1><p>Chemical communication coordinates the behavior of individual nerve and glial cells in physiological processes that range from neural differentiation to learning and memory</p>
+<p>To carry out such communication, a series of extraordinarily diverse and complex chemical signaling pathways has evolved</p>
+<p>The essential components of chemical signaling are:</p>
+<ol>
+<li>Signaling cell: cells that initiate the process by releasing signaling molecules.</li>
+<li>Signal: a molecular signal that transmits information from one cell to another</li>
+<li>Receptor: a receptor molecule that transduces the information provided by the signal.</li>
+<li>Effector molecule: a target molecule that mediates the cellular response.</li>
+<li>Response: subsequent cellular responses</li>
+</ol>
+<h2 id="Forms-of-chemical-signaling"><a href="#Forms-of-chemical-signaling" class="headerlink" title="Forms of chemical signaling"></a>Forms of chemical signaling</h2><p><strong>Synaptic transmission</strong>: a special form of chemical signaling that transfers information from one neuron to another.</p>
+<p><strong>Paracrine signaling</strong>: acting over a longer range than synaptic transmission and involving the secretion of chemical signals onto a group of nearby target cells.</p>
+<p><strong>Endocrine signaling</strong>: referring to the secretion of hormones into the bloodstream,where they can affect targets throughout the body</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606150238137.png" srcset="/img/loading.gif" lazyload alt="image-20210606150238137"></p>
+<h2 id="Signal-amplification"><a href="#Signal-amplification" class="headerlink" title="Signal amplification"></a>Signal amplification</h2><p>Amplification occurs because individual signaling reactions can generate a much larger number of molecular products than the number of molecules that initiate the reaction.</p>
+<ul>
+<li>The activation of a single receptor by a signaling molecule, such as the neurotransmitter norepinephrine, can lead to the activation of numerous G-proteins inside cells</li>
+<li>These activated proteins can bind to other signaling molecules, such as the enzyme adenylyl cyclase.</li>
+</ul>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606150301921.png" srcset="/img/loading.gif" lazyload alt="image-20210606150301921"></p>
+<ul>
+<li>Each activated enzyme molecule generates a large number of cAMP molecules</li>
+<li>cAMP binds to and activates another family of enzymes—the protein kinases—that can phosphorylate many target proteins</li>
+</ul>
+<p>Although not every step in this signaling pathway involves amplification, overall the cascade results in a tremendous increase in the potency of the initial signal.</p>
+<h2 id="Activation-of-signaling-pathways"><a href="#Activation-of-signaling-pathways" class="headerlink" title="Activation of signaling pathways"></a>Activation of signaling pathways</h2><p>The molecular components of these signal transduction pathways are always activated by a chemical signaling molecule.</p>
+<p>Such signaling molecules can be grouped into three classes: <strong>cell-impermeant</strong>, <strong>cell-permeant</strong>, and <strong>cell-associated signaling molecules</strong>.</p>
+<p>The first two classes are secreted molecules and thus can act on target cells removed from the site of signal synthesis or release.</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606150356708.png" srcset="/img/loading.gif" lazyload alt="image-20210606150356708"></p>
+<h3 id="1-Cell-impermeant-molecules"><a href="#1-Cell-impermeant-molecules" class="headerlink" title="1. Cell-impermeant molecules"></a>1. Cell-impermeant molecules</h3><p>Cell-impermeant molecules cannot readily traverse the plasma membrane of the target cell and must bind to the extracellular portion of transmembrane receptor proteins.</p>
+<p>Hundreds of secreted molecules have now been identified, including the neurotransmitters; proteins such as neurotrophic factors; and peptide hormones such as glucagon, insulin, and various reproductive hormones</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606150919944.png" srcset="/img/loading.gif" lazyload alt="image-20210606150919944" style="zoom:50%;" />
+
+<p>These signaling molecules are typically short-lived, either because they are rapidly metabolized or because they are internalized by endocytosis once bound to their receptors.</p>
+<h3 id="2-Cell-permeant-molecules"><a href="#2-Cell-permeant-molecules" class="headerlink" title="2. Cell-permeant molecules"></a>2. Cell-permeant molecules</h3><p>Cell-permeant signaling molecules can cross the plasma membrane to act directly on receptors that are inside the cell.</p>
+<p>They include numerous steroid (glucocorticoids, estradiol, and testosterone) and thyroid hormones (thyroxin), and retinoids.</p>
+<p>These signaling molecules are relatively insoluble in aqueous solutions and are often transported in blood and other extracellular fluids by binding to specific carrier proteins.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606150941817.png" srcset="/img/loading.gif" lazyload alt="image-20210606150941817" style="zoom:50%;" />
+
+<p>In this form, they may persist in the bloodstream for hours or even days.</p>
+<h3 id="3-Cell-associated-molecules"><a href="#3-Cell-associated-molecules" class="headerlink" title="3. Cell-associated molecules"></a>3. Cell-associated molecules</h3><p>These molecules are arrayed on the extracellular surface of the plasma membrane.</p>
+<p>As a result, these molecules act only on other cells that are physically in contact with the cell that carries such signals</p>
+<p>Examples include proteins such as the integrins and neural cell adhesion molecules (NCAMs) that influence axonal growth.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606151531926.png" srcset="/img/loading.gif" lazyload alt="image-20210606151531926" style="zoom:50%;" />
+
+<p>Membrane-bound signaling molecules are more difficult to study, but are clearly important in neuronal development and other circumstances where physical contact between cells provides information about cellular identities.</p>
+<h2 id="Receptor-types"><a href="#Receptor-types" class="headerlink" title="Receptor types"></a>Receptor types</h2><p>Binding of signal molecules causes a conformational change in the receptor, which then triggers the subsequent signaling cascade within the affected cell</p>
+<p>The receptors for <u>impermeant signal molecules</u> are proteins that span the plasma membrane.</p>
+<ul>
+<li>The extracellular domain of such receptors includes the binding site for the signal, while the intracellular domain activates intracellular signaling cascades after the signal binds.</li>
+<li>They are grouped into families defined by the mechanism used to transduce signal binding into a cellular response:<ul>
+<li>Channel-linked receptors </li>
+<li>Enzyme-linked receptors </li>
+<li>G-protein-coupled receptors</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-Channel-linked-receptors"><a href="#1-Channel-linked-receptors" class="headerlink" title="1. Channel-linked receptors"></a>1. Channel-linked receptors</h3><p><strong>Channel-linked receptors</strong> (also called <u>ligand-gated ion channels</u>) have the receptor and transducing functions as part of the same protein molecule</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152028855.png" srcset="/img/loading.gif" lazyload alt="image-20210606152028855" style="zoom:67%;" />
+
+<p>Interaction of the chemical signal with the binding site of the receptor causes the opening or closing of an ion channel pore in another part of the same molecule.</p>
+<p>The resulting ion flux changes the membrane potential of the target cell and, in some cases, can also lead to entry of Ca2+ ions that serve as a second messenger signal within the cell.</p>
+<h3 id="2-Enzyme-linked-receptors"><a href="#2-Enzyme-linked-receptors" class="headerlink" title="2. Enzyme-linked receptors"></a>2. Enzyme-linked receptors</h3><p>The intracellular domain of such receptors is an enzyme whose catalytic activity is regulated by the binding of an extracellular signal.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152055154.png" srcset="/img/loading.gif" lazyload alt="image-20210606152055154" style="zoom:50%;" />
+
+<p>The great majority of these receptors are protein kinases, often tyrosine kinases, that phosphorylate intracellular target proteins, thereby changing the physiological function of the target cells.</p>
+<p>Noteworthy members of this group of receptors are the Trk family of neurotrophin receptors and other receptors for growth factors.</p>
+<h3 id="3-G-protein-coupled-receptors"><a href="#3-G-protein-coupled-receptors" class="headerlink" title="3. G-protein-coupled receptors"></a>3. G-protein-coupled receptors</h3><p><strong>G-protein-coupled receptors</strong> regulate intracellular reactions by an indirect mechanism involving an intermediate transducing molecule, called a <strong>GTP-binding</strong> <strong>protein</strong> (or <strong>G-protein</strong>).</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152126537.png" srcset="/img/loading.gif" lazyload alt="image-20210606152126537" style="zoom:67%;" />
+
+<p>Because these receptors all share the structural feature of crossing the plasma membrane seven times, they are also referred to as 7-transmembrane receptors (or metabotropic receptors).</p>
+<p>Well-known examples include the β-adrenergic receptor, the muscarinic type of acetylcholine receptor, and metabotropic glutamate receptors, as well as the receptors for odorants in the olfactory system, and many types of receptors for peptide hormones.</p>
+<p>Rhodopsin, the light-sensitive proteins of retinal photoreceptors, are another form of G-protein-linked receptors whose activating signal is photons of light, rather than a chemical signal</p>
+<h4 id="G-proteins-and-their-molecular-targets"><a href="#G-proteins-and-their-molecular-targets" class="headerlink" title="G-proteins and their molecular targets"></a>G-proteins and their molecular targets</h4><p>There are two general classes of GTP-binding proteins.</p>
+<h5 id="1-Heterotrimeric-G-proteins"><a href="#1-Heterotrimeric-G-proteins" class="headerlink" title="(1) Heterotrimeric G-proteins"></a>(1) Heterotrimeric G-proteins</h5><p><strong>Heterotrimeric G-proteins</strong> are composed of three distinct subunits: α, β, γ. </p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152247436.png" srcset="/img/loading.gif" lazyload alt="image-20210606152247436" style="zoom:67%;" />
+
+<ul>
+<li>There are many different α, β and γ subunits, allowing a bewildering number of G-protein permutations</li>
+<li>Regardless of the specific composition of the heterotrimeric G-protein, its α subunit binds to guanine nucleotides, either GTP or GDP.</li>
+<li>Binding of GDP allows the α subunit to bind to the β and γ subunits to form an inactive trimer.</li>
+<li>Binding of an extracellular signal to a G-proteincoupled receptor in turn allows the G-protein to bind to the receptor and causes GDP to be replaced with GTP.</li>
+</ul>
+<p>When GTP is bound to the G-protein, the α subunit dissociates from the βγ complex and activates the G-protein.</p>
+<p>Following activation, both the GTP-bound α subunit and the free βγ complex can bind to downstream effector molecules that mediate a variety of responses in the target cell.</p>
+<h5 id="2-monomeric-G-proteins"><a href="#2-monomeric-G-proteins" class="headerlink" title="(2) monomeric G-proteins"></a>(2) monomeric G-proteins</h5><p>The second class of GTP-binding proteins are the <strong>monomeric G-proteins</strong> (also called <strong>small G-proteins</strong>)</p>
+<p>These monomeric GTPases also relay signals from activated cell surface receptors to intracellular targets such as the cytoskeleton and the vesicle trafficking apparatus of the cell.</p>
+<p>The first small G-protein was discovered in a virus that causes rat sarcoma tumors and was therefore called <strong>ras</strong>.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152649960.png" srcset="/img/loading.gif" lazyload alt="image-20210606152649960" style="zoom:67%;" />
+
+<ul>
+<li>Ras helps regulate cell differentiation and proliferation by relaying signals from receptor kinases to the nucleus.</li>
+<li>Ras is known to be involved in many forms of neuronal signaling, including long-term synaptic potentiation.</li>
+<li>Since the discovery of ras, a large number of small GTPases have been identified and can be sorted into five different subfamilies with different functions</li>
+<li>For instance, some are involved in vesicle trafficking in the presynaptic terminal or elsewhere in the neuron, while others play a central role in protein and RNA trafficking in and out of the nucleus</li>
+</ul>
+<hr>
+<p>Similar to heterotrimeric G-proteins, monomeric G-proteins function as molecular timers that are active in their GTP-bound state, becoming inactive when they have hydrolyzed the bound GTP to GDP.</p>
+<p>Monomeric G-proteins are activated by replacement of bound GDP with GTP; this reaction is controlled by a group of proteins called <em>guanine nucleotide exchange</em> <em>factors</em> (GEFs).</p>
+<p>Termination of signaling by both heterotrimeric and monomeric G-proteins is determined by hydrolysis of GTP to GDP.</p>
+<p>The rate of GTP hydrolysis is an important property of a particular G-protein that can be regulated by other proteins, termed GTPase-activating proteins (GAPs).</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152851292.png" srcset="/img/loading.gif" lazyload alt="image-20210606152851292"></p>
+<p>By replacing GTP with GDP, GAPs return G-proteins to their inactive form.</p>
+<p>GAPs were first recognized as regulators of small G-proteins, but recently similar proteins have been found to regulate the α subunits of heterotrimeric G-proteins.</p>
+<p>Activated G-proteins alter the function of many downstream effectors</p>
+<p>Most of these effectors are enzymes that produce intracellular second messengers</p>
+<p>Effector enzymes include adenylyl cyclase, guanylyl cyclase, phospholipase C, and others</p>
+<p>The second messengers produced by these enzymes trigger the complex biochemical signaling cascades.</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606153700977.png" srcset="/img/loading.gif" lazyload alt="image-20210606153700977"></p>
+<ul>
+<li>Because each of these cascades is activated by specific G-protein subunits, the pathways activated by a particular receptor are determined by the specific identity of the Gprotein subunits associated with it</li>
+</ul>
+<p>G-proteins can also directly bind to and activate ion channels.</p>
+<p>In summary, the binding of chemical signals to their receptors activates cascades of signal transduction events in the cytosol of target cells.</p>
+<p>Within such cascades, G-proteins serve a pivotal function as the molecular transducing elements that couple membrane receptors to their molecular effectors within the cell.</p>
+<p>The diversity of G-proteins and their downstream targets leads to many types of physiological responses.</p>
+<h3 id="4-Intracellular-receptors"><a href="#4-Intracellular-receptors" class="headerlink" title="4. Intracellular receptors"></a>4. Intracellular receptors</h3><p><strong>Intracellular receptors</strong> are activated by cell-permeant or lipophilic signaling molecules.</p>
+<p>Many of these receptors lead to the activation of signaling cascades that produce new mRNA and protein within the target cell.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606152213966.png" srcset="/img/loading.gif" lazyload alt="image-20210606152213966" style="zoom:67%;" />
+
+<p>Often such receptors comprise a receptor protein bound to an inhibitory protein complex.</p>
+<p>When the signaling molecule binds to the receptor, the inhibitory complex dissociates to expose a DNA-binding domain on the receptor</p>
+<p>This activated form of the receptor can then move into the nucleus and directly interact with nuclear DNA, resulting in altered transcription.</p>
+<h2 id="Second-messengers"><a href="#Second-messengers" class="headerlink" title="Second messengers"></a>Second messengers</h2><p>Neurons use many different second messengers as intracellular signals</p>
+<p>These messengers differ in the mechanism by which they are produced and removed, as well as their downstream targets and effects .</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210606153750410.png" srcset="/img/loading.gif" lazyload alt="image-20210606153750410"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Neurobiology/" class="category-chain-item">Neurobiology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Neurobiology/" class="print-no-link">#Neurobiology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L9 Molecular signaling within neurons</div>
+      <div>https://zhenyumi.github.io/posts/3b6899f8/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年6月6日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/ce78770f/" title="L10 Synaptic plasticity">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L10 Synaptic plasticity</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/56abcc83/" title="L16 Antidiabetic Drugs">
+                        <span class="hidden-mobile">L16 Antidiabetic Drugs</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

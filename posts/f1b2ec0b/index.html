@@ -1,0 +1,865 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L14 Population Genetics">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/f1b2ec0b/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (中国标准时间)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-09_19-11-59.jpg">
+  
+  
+  
+  <title>L14 Population Genetics - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L14 Population Genetics</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-25 23:45" pubdate>
+          2020年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          584 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L14 Population Genetics</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、The-Introduction-to-Population-Genetics"><a href="#一、The-Introduction-to-Population-Genetics" class="headerlink" title="一、The Introduction to Population Genetics"></a>一、The Introduction to Population Genetics</h1><p><u>Population genetics studies genes in groups of individual.</u></p>
+<p>Populations in Genetic Equilibrium (allele frequencies no longer change)</p>
+<h2 id="Allele-Frequencies-And-Genotype-Frequencies"><a href="#Allele-Frequencies-And-Genotype-Frequencies" class="headerlink" title="Allele Frequencies And Genotype Frequencies"></a>Allele Frequencies And Genotype Frequencies</h2><h3 id="1-Introduction-to-Allele-Frequencies"><a href="#1-Introduction-to-Allele-Frequencies" class="headerlink" title="1. Introduction to Allele Frequencies"></a>1. Introduction to Allele Frequencies</h3><p>It is the number of copies of a particular allele divided by the number of copies of all alleles at the genetic place (locus) in a population</p>
+<h3 id="2-Estimation-of-Allele-Frequencies"><a href="#2-Estimation-of-Allele-Frequencies" class="headerlink" title="2. Estimation of Allele Frequencies"></a>2. Estimation of Allele Frequencies</h3><p>$$<br>\text{Frequencies of an allele &#x3D; } \frac{\text{Numbers of copies of a particular allele}}{\text{Numbers of copies of ALL alleles}}<br>$$</p>
+<p>Suppose <em><strong>p</strong></em> is the allele frequency of one allele, and <em><strong>q</strong></em> is the allele frequency of the other allele</p>
+<p>Then<br>$$<br>p + q &#x3D; 1<br>$$</p>
+<h3 id="3-Introduction-to-Genotype-Frequencies"><a href="#3-Introduction-to-Genotype-Frequencies" class="headerlink" title="3. Introduction to Genotype Frequencies"></a>3. Introduction to Genotype Frequencies</h3><p>Is the number of individuals with a given genotype divided by the total number of individuals in population.</p>
+<h1 id="二、The-Hardy-Weinberg-principle"><a href="#二、The-Hardy-Weinberg-principle" class="headerlink" title="二、The Hardy-Weinberg principle"></a>二、The Hardy-Weinberg principle</h1><h2 id="Introduction-of-The-Principle"><a href="#Introduction-of-The-Principle" class="headerlink" title="Introduction of The Principle"></a>Introduction of The Principle</h2><p>Describes a mathematical <u>relationship between allele frequencies and genotype frequencies.</u></p>
+<p>Allows the prediction of a population’s genotype frequencies from its allele frequencies.</p>
+<p>Assume that in a population, a particular gene segregates two alleles, <u><em><strong>A</strong></em> and <em><strong>a</strong></em>, with frequencies of <em><strong>p</strong></em> and <em><strong>q</strong></em>, respectively.</u></p>
+<p>If members of the population <u>mate randomly,</u></p>
+<ul>
+<li>The diploid genotypes of the next generation will be formed by the <u>random union of haploid eggs and haploid sperm.</u></li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211212149140.png" srcset="/img/loading.gif" lazyload alt="image-20191211212149140" style="zoom: 33%;" />
+
+<ul>
+<li>The probability of producing an <em><strong>AA</strong></em> homozygote is $p \cdot p &#x3D; p^{2}$.</li>
+<li>The probability of producing an <em><strong>aa</strong></em> homozygote is $q \cdot q &#x3D; q^{2}$</li>
+<li>A heterozygote may be produced by<ul>
+<li>an <em><strong>A</strong></em> sperm uniting with an <em><strong>a</strong></em> egg and</li>
+<li>an <em><strong>a</strong></em> sperm uniting with an <em><strong>A</strong></em> egg</li>
+<li>Each of these events occurs with probability $ p \cdot q$, so the total probability of forming an <em><strong>Aa</strong></em> zygote is $2pq$.</li>
+</ul>
+</li>
+</ul>
+<p>These predicted frequencies can be obtained by expanding the <strong>binomial expression</strong><br>$$<br>(p + q)^{2} &#x3D; p^{2} + 2pq + 2q^{2}<br>$$</p>
+<h2 id="Hardy-Weinberg-Equilibrium"><a href="#Hardy-Weinberg-Equilibrium" class="headerlink" title="Hardy-Weinberg Equilibrium"></a>Hardy-Weinberg Equilibrium</h2><h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h3><p>The <u>key assumption</u> underlying the Hardy-Weinberg principle is <u>random mating</u>.</p>
+<p>If no differential survival or reproduction exists among members of the population,</p>
+<ul>
+<li>the Hardy-Weinberg genotype frequencies persist generation after generation.</li>
+<li>the genotype is expected to produce $p^{2} + 2pq + q^{2}$</li>
+<li>the population is at equilibrium.</li>
+</ul>
+<p>This condition is Hardy-Weinberg equilibrium. </p>
+<p><u><strong>Mutation、migration、natural selection、random genetic drift</strong></u> can influence this equilibrium（causes changes in the frequencies）</p>
+<h3 id="2-Prediction"><a href="#2-Prediction" class="headerlink" title="2. Prediction"></a>2. Prediction</h3><p>In the equilibrium, we can predict allele frequencies from the genotype frequencies and can also predict genotype frequencies from the allele frequencies.</p>
+<h2 id="The-Hardy-Weinberg-Principle-for-X-Linked-Genes"><a href="#The-Hardy-Weinberg-Principle-for-X-Linked-Genes" class="headerlink" title="The Hardy-Weinberg Principle for X-Linked Genes"></a>The Hardy-Weinberg Principle for X-Linked Genes</h2><p>For X-linked genes, allele frequencies are <u>estimated from the frequencies of the genotypes in <strong>males</strong>.</u></p>
+<p>Example: Color Vision</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211213648844.png" srcset="/img/loading.gif" lazyload alt="image-20191211213648844" style="zoom: 33%;" />
+
+
+
+<h2 id="For-Multiple-Alleles"><a href="#For-Multiple-Alleles" class="headerlink" title="For Multiple Alleles"></a>For Multiple Alleles</h2><p>Genotypes can be calculated by expanding trinomial<br>$$<br>(p + q + r)^{2} &#x3D; p^{2} + q^{2} + r^{2} + 2pq + 2qr + 2pr<br>$$<br>Example: Blood type</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211214149840.png" srcset="/img/loading.gif" lazyload alt="image-20191211214149840" style="zoom:33%;" />
+
+<h1 id="三、Exceptions-to-the-Hardy-Weinberg-Principle"><a href="#三、Exceptions-to-the-Hardy-Weinberg-Principle" class="headerlink" title="三、Exceptions to the Hardy-Weinberg Principle"></a>三、Exceptions to the Hardy-Weinberg Principle</h1><p>The cases that will <u>disrupt Hardy-Weinberg equilibrium</u> (…the genotype or allele frequencies will not persist generation after generation)</p>
+<h2 id="Non-random-Mating"><a href="#Non-random-Mating" class="headerlink" title="Non-random Mating"></a>Non-random Mating</h2><p>Nonrandom mating includes<br>-	<strong>Consanguineous mating</strong> (mating between <u>genetically related individuals</u>，近亲结婚)<br>-	<strong>Assortative mating</strong> (mating between individuals with <u>similar phenotypes</u>，选型交配)</p>
+<p>Both consanguineous mating and assortative mating reduce the frequency of heterozygotes and increase the frequency of homozygotes.</p>
+<p>The effects of consanguineous mating can be quantified using the <u><strong>inbreeding coefficient (近交系数)</strong></u>, <em><strong>F</strong></em>.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211214625841.png" srcset="/img/loading.gif" lazyload alt="image-20191211214625841"></p>
+<p>F &#x3D; 0 ~ 1<br>F &#x3D; 1时：For a population that is <u>completely inbreeding or Self-fertilization</u></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211214717298.png" srcset="/img/loading.gif" lazyload alt="image-20191211214717298"></p>
+<h2 id="Unequal-Survival"><a href="#Unequal-Survival" class="headerlink" title="Unequal Survival"></a>Unequal Survival</h2><p>If zygotes <u>produced by random mating</u> have <u>different survival rates</u></p>
+<p><strong>Heterozygotes ≠ Homozygotes</strong></p>
+<p>A sample of 200 adults yielded the following data:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191212100215155.png" srcset="/img/loading.gif" lazyload alt="image-20191212100215155" style="zoom: 50%;" />
+
+<h2 id="Population-Subdivision-种群分化-种群破碎化"><a href="#Population-Subdivision-种群分化-种群破碎化" class="headerlink" title="Population Subdivision 种群分化&#x2F;种群破碎化"></a>Population Subdivision 种群分化&#x2F;种群破碎化</h2><p>In nature, populations may be subdivided due to <u>geographical or ecological barriers (地理或生态障碍)</u> that may be correlated with genetic differences.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191212100834858.png" srcset="/img/loading.gif" lazyload alt="image-20191212100834858"></p>
+<h2 id="Migration"><a href="#Migration" class="headerlink" title="Migration"></a>Migration</h2><p>The introduction of genes by recent migrations can alter allele and genotype frequencies within a population and </p>
+<p>disrupt Hardy-Weinberg equilibrium</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191212101925972.png" srcset="/img/loading.gif" lazyload alt="image-20191212101925972"></p>
+<h1 id="四、Natural-Selection-–-systematic-changes-differential-survival-and-reproduction"><a href="#四、Natural-Selection-–-systematic-changes-differential-survival-and-reproduction" class="headerlink" title="四、Natural Selection – (systematic changes-differential survival and reproduction)"></a>四、Natural Selection – (systematic changes-differential survival and reproduction)</h1><p>According to Charles Darwin: “<u>the Origin of Species by Means of Natural Selection</u>“, published in 1859</p>
+<ol>
+<li>Organisms produce more offspring than the environment can support</li>
+<li>Only some of them can survive and reproduce</li>
+<li>After many generations of such competition, traits associated with strong competitive ability become prevalent in the population</li>
+</ol>
+<p><u>Selection for survival and reproduction in the face of competition</u> is therefore the mechanism that changes the physical and behavioral characteristics of a species. This process was called <strong>natural selection.</strong></p>
+<h2 id="The-Concept-of-Fitness"><a href="#The-Concept-of-Fitness" class="headerlink" title="The Concept of Fitness"></a>The Concept of Fitness</h2><p>Fitness is the ability to survive and reproduce is a phenotype and that it is determined, at least partly, by genes.</p>
+<p>Geneticists refer to this ability to survive and reproduce as <strong>Fitness</strong>.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213101721332.png" srcset="/img/loading.gif" lazyload alt="image-20191213101721332" style="zoom: 67%;" />
+
+<p>Each member of a population has its own fitness value</p>
+<ul>
+<li>w &#x3D; 0 if it dies or fails to reproduce, </li>
+<li>w &#x3D; 1 if it survives and (on average) produces 1 offspring, </li>
+<li>w &#x3D; 2 if it survives and (on average) produces 2 offspring, </li>
+<li>and so forth.</li>
+</ul>
+<h2 id="Natural-Selection-at-the-Level-of-the-Gene"><a href="#Natural-Selection-at-the-Level-of-the-Gene" class="headerlink" title="Natural Selection at the Level of the Gene"></a>Natural Selection at the Level of the Gene</h2><p>Example: Color of moss</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213102345752.png" srcset="/img/loading.gif" lazyload alt="image-20191213102345752"></p>
+<ul>
+<li><p>assume that fitness is determined by a single gene , in a particular species of insect.</p>
+</li>
+<li><p>alleles, A for dark in color and a for light in color. A is dominant</p>
+</li>
+<li><p>Coefficient can be separated to <strong>relative fitness</strong> and <strong>selection coefficient</strong></p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213102355100.png" srcset="/img/loading.gif" lazyload alt="image-20191213102355100" style="zoom: 50%;" />
+
+<h2 id="Natural-Selection-at-the-Level-of-the-Gene-1"><a href="#Natural-Selection-at-the-Level-of-the-Gene-1" class="headerlink" title="Natural Selection at the Level of the Gene"></a>Natural Selection at the Level of the Gene</h2><p>The initial genetic composition of the population:</p>
+<ul>
+<li>Suppose A with p &#x3D; 0.5, and a with q &#x3D; 0.5, and that s2 &#x3D; 0.1.</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213103613729.png" srcset="/img/loading.gif" lazyload alt="image-20191213103613729" style="zoom: 67%;" />
+
+<p>In forming the next generation, each genotype will contribute gametes in proportion to its frequency and relative fitness.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213103716959.png" srcset="/img/loading.gif" lazyload alt="image-20191213103716959" style="zoom: 33%;" />
+
+<p>q (G2) &#x3D; 0.270 + 0.487&#x2F;2 &#x3D; 0.513 &gt; q (G1) &#x3D; 0.5</p>
+<p>Every generation afterward, the freauency of a will rise, and eventually it will equal 1, at which point we can say that the allele has been fixed in the population.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213104509481.png" srcset="/img/loading.gif" lazyload alt="image-20191213104509481" style="zoom:67%;" />
+
+<p>Selection for a recessive allele—and therefore against a harmful dominant allele—is more effective than selection<br>against a recessive allele.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213105305903.png" srcset="/img/loading.gif" lazyload alt="image-20191213105305903"></p>
+<h1 id="五、Random-Genetic-Drift"><a href="#五、Random-Genetic-Drift" class="headerlink" title="五、Random Genetic Drift"></a>五、Random Genetic Drift</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Natural selection as a systematic force in evolution. However, evolution is affected by random processes.</p>
+<p>Allele frequencies change unpredictably in populations because of uncertainties during reproduction.</p>
+<ul>
+<li>Mutation is a random process that profoundly affects evolution</li>
+<li>Genetic drift, the random change of allele frequencies in populations, due to uncertainties in Mendelian segregation.</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213110537738.png" srcset="/img/loading.gif" lazyload alt="image-20191213110537738"></p>
+<p>Genetic drift, the random change of allele frequencies in populations, due to uncertainties in Mendelian<br>segregation.</p>
+<p>Thus, the genetic composition of the population can change even without the force of natural selection.</p>
+<h2 id="The-Effects-of-Population-Size"><a href="#The-Effects-of-Population-Size" class="headerlink" title="The Effects of Population Size"></a>The Effects of Population Size</h2><p>In large populations, the effect of genetic drift is minimal.<br>$$<br>\text{HWE: }(p + q)^{2} &#x3D; p^{2} + 2pq + q^{2}<br>$$</p>
+<p>In small populations, genetic drift may be the primary evolutionary force.</p>
+<p>The effect of population size is determined by monitoring the frequency of heterozygotes, or the heterozygosity of a population over time. Represented with H</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213113816429.png" srcset="/img/loading.gif" lazyload alt="image-20191213113816429" style="zoom:50%;" />
+
+<p>In large populations, the effect of genetic drift is minimal.</p>
+<p>In small populations, genetic drift may be the primary evolutionary force.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213114206592.png" srcset="/img/loading.gif" lazyload alt="image-20191213114206592" style="zoom:50%;" />
+
+<p>Hardy-Weinberg equilibrium:</p>
+<ul>
+<li><p>In a <strong>randomly mating</strong> population</p>
+</li>
+<li><p><u>without natural selection or genetic drift</u> to change allele frequencies,</p>
+</li>
+<li><p>and <u>without migration or mutation</u> to introduce new alleles</p>
+</li>
+</ul>
+<p>The real population:</p>
+<ul>
+<li>these evolutionary forces may act in contrary ways to create a <u>dynamic eauilibrium</u>, in which there is no net change in allele frequencies.</li>
+</ul>
+<p>Dynamic equilibrium can be caused by:</p>
+<ul>
+<li>Balancing Selection</li>
+<li>Mutation-selection Balance</li>
+</ul>
+<ul>
+<li>Mutation-drift Balance</li>
+</ul>
+<h3 id="1-Balancing-Selection-平衡选择"><a href="#1-Balancing-Selection-平衡选择" class="headerlink" title="1. Balancing Selection 平衡选择"></a>1. Balancing Selection 平衡选择</h3><p>Balancing selection also called <strong>heterozygote advantage（杂合优势）</strong></p>
+<p>The selection <u>favors the heterozygotes</u> at the expense of each type of homozygote in the population.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214184856039.png" srcset="/img/loading.gif" lazyload alt="image-20191214184856039"></p>
+<p>At the balance point, the frequency of A is <u>p &#x3D; t &#x2F; (s + t)</u>, and the frequency of a is <u>q &#x3D; s &#x2F; (s + t)</u></p>
+<h4 id="Deduction-of-Equilibrium-Circumstances"><a href="#Deduction-of-Equilibrium-Circumstances" class="headerlink" title="Deduction of Equilibrium Circumstances"></a>Deduction of Equilibrium Circumstances</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214184948518.png" srcset="/img/loading.gif" lazyload alt="image-20191214184948518"><br>$$<br>\text{The Average Fitness: } \overline{w} &#x3D; (1 - s) \times p^{2}  + 1 \times (2pq) + (1 - t) \times q^{2} \<br>\because p + q  &#x3D; (p + q)^{2} &#x3D; 1 \<br>\therefore \overline{w} &#x3D; 1 - sp^{2} -tq^{2}<br>$$</p>
+<p>$$<br>\text{Frequency of A in the next generation after selection：} p’ &#x3D;  \frac{p^{2}(1-s) + \frac{1}{2} \cdot 2pq}{ \overline{w} }  \<br>\because p + q &#x3D; 1 \<br>\therefore p’ &#x3D;  \frac{p(p+q)-sp^{2}}{\overline{w}} &#x3D;\frac{p(1 - sp)}{\overline{w}}<br>$$</p>
+<p>$$<br>\text{Change in frequency of A due to selection：}\Delta p &#x3D;  p’ - p &#x3D; p (\frac{1-sp}{1} -1) &#x3D;p \cdot \frac{1-sp^{2}-tq^{2}}{\overline{w}} &#x3D; p \cdot 1 &#x3D; p \<br>\because \overline{w} &#x3D; 1 - sp^{2} -tq^{2} \<br>\therefore \Delta p &#x3D; p \cdot \frac{1-sp^{2}-tq^{2}}{\overline{w}} &#x3D; p \cdot 1 &#x3D; p<br>$$</p>
+<p>$$<br>\text{At equilibrium: } \Delta p &#x3D; 0 \<br>\therefore \frac{1 - sp}{\overline{w} } &#x3D; 1 \<br>\therefore sp &#x3D; sp^{2} + tq^{2} \<br>\therefore<br>p &#x3D; \frac{t}{s + t},\   q &#x3D; \frac{s}{s + t}<br>$$</p>
+<h4 id="Example-malaria-parasite"><a href="#Example-malaria-parasite" class="headerlink" title="Example: malaria parasite"></a>Example: malaria parasite</h4><p>The malaria parasite <em>Plasmodium falciparum</em> (yellow) emerging from red blood cells that it had infected.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214195803482.png" srcset="/img/loading.gif" lazyload alt="image-20191214195803482" style="zoom:67%;" />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214195813009.png" srcset="/img/loading.gif" lazyload alt="image-20191214195813009"><br>$$<br>\text{Suppose s &#x3D; 1, p &#x3D; 0.1} \ p &#x3D; \frac{t}{s+ t}  \ \therefore t &#x3D; (0.1)&#x2F;(0.9) &#x3D; 0.11<br>$$</p>
+<h3 id="2-Mutation-Selection-Balance-突变-选择平衡"><a href="#2-Mutation-Selection-Balance-突变-选择平衡" class="headerlink" title="2. Mutation-Selection Balance 突变-选择平衡"></a>2. Mutation-Selection Balance 突变-选择平衡</h3><p>Mutation-selection balance:</p>
+<ul>
+<li>the rate at which <strong>deleterious recessive alleles</strong> are created by <strong>mutation</strong></li>
+<li>equals <u>the rate at which deleterious alleles are eliminated</u> by selection.</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214200529996.png" srcset="/img/loading.gif" lazyload alt="image-20191214200529996" style="zoom: 80%;" /><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214200529996.png" srcset="/img/loading.gif" lazyload alt="image-20191214200529996"></p>
+<h4 id="At-Equilibrium"><a href="#At-Equilibrium" class="headerlink" title="At Equilibrium"></a>At Equilibrium</h4><p>$$<br>\Delta q_{s} &#x3D; - \frac{sq^{2} p}{1 - sq^{2}}<br>$$</p>
+<p>$$<br>\Delta q_{mu} &#x3D; \mu p<br>$$</p>
+<p>$$<br>\text{At equilibrium: } \Delta q_{s} + \Delta q_{mu} &#x3D; 0 \<br>\therefore \mu p &#x3D; \frac{sq^{2} p}{1 - sq} \<br>\text{assuming: }1 - sq^{2} \rarr 1 \<br>q^{2}<em>{eq} \approx \frac{\mu}{s} \<br>\therefore q</em>{eq} &#x3D; \sqrt{\frac{\mu}{s}}<br>$$</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214202715993.png" srcset="/img/loading.gif" lazyload alt="image-20191214202715993"></p>
+<p>A typical value for $\mu$ is 3 x 10^6^ mutations per generation.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214200529996.png" srcset="/img/loading.gif" lazyload alt="image-20191214200529996"></p>
+<ul>
+<li><p>For s &#x3D; 1, q &#x3D; 0.0017</p>
+</li>
+<li><p>For s &#x3D; 0.1, q &#x3D; 0.0055,</p>
+</li>
+</ul>
+<p>Studies with natural populations of Drosophila have indicated that lethal alleles are less frequent than the preceding calculations predict.</p>
+<p>Which has been attributed to <u>partial dominance of the lethal alleles.</u></p>
+<h3 id="3-Mutation-Drift-Balance"><a href="#3-Mutation-Drift-Balance" class="headerlink" title="3. Mutation-Drift Balance"></a>3. Mutation-Drift Balance</h3><p><strong>Random genetic drift</strong> eliminates variability from a population</p>
+<p><strong>Mutation</strong> replenishes（补充） the variability that is lost by drift</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214203935603.png" srcset="/img/loading.gif" lazyload alt="image-20191214203935603"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214203948438.png" srcset="/img/loading.gif" lazyload alt="image-20191214203948438"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Genetics/" class="category-chain-item">Genetics</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Genetics/" class="print-no-link">#Genetics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L14 Population Genetics</div>
+      <div>https://zhenyumi.github.io/posts/f1b2ec0b/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/c6ce20f8/" title="L14 Enzyme regulation">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L14 Enzyme regulation</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/44dedc7b/" title="L15 Carbohydrates">
+                        <span class="hidden-mobile">L15 Carbohydrates</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

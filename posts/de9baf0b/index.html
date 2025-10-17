@@ -1,0 +1,1173 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="各种分布；假设检验；方差分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="05. R &lt;- 独立性、相关性、假设检验以及相关统计量">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/de9baf0b/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="各种分布；假设检验；方差分析">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200813-__abigail_williams_fate_and_1_more_drawn_by_daisi_gi__49eb0bc904cbb215c53360a33ba574a2%281%29.jpg">
+<meta property="article:published_time" content="2020-08-01T05:29:18.000Z">
+<meta property="article:modified_time" content="2020-08-13T14:01:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="速查">
+<meta property="article:tag" content="R">
+<meta property="article:tag" content="Statistics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200813-__abigail_williams_fate_and_1_more_drawn_by_daisi_gi__49eb0bc904cbb215c53360a33ba574a2%281%29.jpg">
+  
+  
+  
+  <title>05. R &lt;- 独立性、相关性、假设检验以及相关统计量 - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200813-__amiya_arknights_drawn_by_seorang__1f921738bf0af1cd4366f26fa6a272a8%281%29.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">05. R <- 独立性、相关性、假设检验以及相关统计量</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-08-01 13:29" pubdate>
+          2020年8月1日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          50 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">05. R &lt;- 独立性、相关性、假设检验以及相关统计量</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Sampling-Distribution-抽样分布"><a href="#一、Sampling-Distribution-抽样分布" class="headerlink" title="一、Sampling Distribution (抽样分布)"></a>一、Sampling Distribution (抽样分布)</h1><h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><h3 id="1-Point-Estimation"><a href="#1-Point-Estimation" class="headerlink" title="1. Point Estimation"></a>1. Point Estimation</h3><table>
+<thead>
+<tr>
+<th>Population</th>
+<th>Sample</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Population mean: $E[X] &#x3D; \mu$</td>
+<td>Sample mean: $\bar{x} &#x3D; \frac{1}{n} \sum^{n}<em>{i&#x3D;1} x</em>{x}$</td>
+</tr>
+<tr>
+<td>Population variance: $var(X) &#x3D; \sigma^{2}$</td>
+<td>Sample variance: $s^{2} &#x3D; \frac{1}{n-1} \sum^{n}<em>{i&#x3D;1} (x</em>{i} - \bar{x})^{2}$</td>
+</tr>
+<tr>
+<td>Population standard deviation: $\sigma_{X} &#x3D; \sqrt{var(X)} &#x3D; \sigma$</td>
+<td>Sample standard deviation: s &#x3D; $\sqrt{\frac{\sum^{n}<em>{i&#x3D;1}{(x</em>{i}-\bar{x})^{2}}}{n-1}}$</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>Descriptive Statistics</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Population distribution</th>
+<th>Sample distribution</th>
+<th>Sampling distribution of the sample mean</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mean</td>
+<td>$\mu$</td>
+<td>$\bar{x}$</td>
+<td>$\mu_{\bar{X}}$</td>
+</tr>
+<tr>
+<td>Variance</td>
+<td>$\sigma^{2}$</td>
+<td>$s^{2}$</td>
+<td>$\sigma_{\bar{X}}^{2}$</td>
+</tr>
+<tr>
+<td>Standard  deviation</td>
+<td>$\sigma$</td>
+<td>$s$</td>
+<td>$\sigma_{\bar{X}}$</td>
+</tr>
+</tbody></table>
+<h3 id="2-In-Hypothesis-Test"><a href="#2-In-Hypothesis-Test" class="headerlink" title="2. In Hypothesis Test"></a>2. In Hypothesis Test</h3><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$Z$,  $t$,  $\Chi$; …</td>
+<td>Test statistic.</td>
+</tr>
+<tr>
+<td>$p$</td>
+<td>p-value</td>
+</tr>
+<tr>
+<td>$\alpha$</td>
+<td>Significant Level; The probability of making a type I error<br />$\alpha$ &#x3D; P(reject H<del>0</del> | H<del>0</del> is true).</td>
+</tr>
+<tr>
+<td>$\beta$</td>
+<td>The probability of committing a type II error<br />$\beta$ &#x3D; P(do not reject H<del>0</del> | H<del>0</del> is false).</td>
+</tr>
+<tr>
+<td>$1-\beta$</td>
+<td><strong>Power</strong>; <br />power &#x3D; P(reject H<del>0</del> | H<del>0</del> is false)</td>
+</tr>
+</tbody></table>
+<h3 id="3-Interval-Estimation-Confidence-Interval-置信区间"><a href="#3-Interval-Estimation-Confidence-Interval-置信区间" class="headerlink" title="3. Interval Estimation - Confidence Interval 置信区间"></a>3. Interval Estimation - Confidence Interval 置信区间</h3><h4 id="Confidence-Interval-for-The-Mean"><a href="#Confidence-Interval-for-The-Mean" class="headerlink" title="Confidence Interval for The Mean"></a>Confidence Interval for The Mean</h4><p>若总体方差 (Population Variance, $\sigma^{2}$)已知，可以直接使用它来计算出样本的置信区间，涉及正态分布</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201833305.png" srcset="/img/loading.gif" lazyload alt="image-20200802201833305"></p>
+<h4 id="Confidence-Interval-for-The-Variance"><a href="#Confidence-Interval-for-The-Variance" class="headerlink" title="Confidence Interval for The Variance"></a>Confidence Interval for The Variance</h4><p>只有在样本正态分布的时候，才可以使用此方法估计方差的样本空间。</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201854804.png" srcset="/img/loading.gif" lazyload alt="image-20200802201854804"></p>
+<h4 id="Interval-for-proportion"><a href="#Interval-for-proportion" class="headerlink" title="Interval for proportion"></a>Interval for proportion</h4><p>涉及比例的时候，使用正态分布相关对置信区间进行估计：</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201905729.png" srcset="/img/loading.gif" lazyload alt="image-20200802201905729"></p>
+<h3 id="4-连续性矫正-Continuity-Correction"><a href="#4-连续性矫正-Continuity-Correction" class="headerlink" title="4. 连续性矫正 (Continuity Correction)"></a>4. 连续性矫正 (Continuity Correction)</h3><p>当满足n足够大，p不过小，np&gt;5或者nq&lt;30的条件时，可近似地采用u检验法，就是有连续性矫正，即正态近似法来进行显著性检验；</p>
+<p>在R中的检验函数中通过参数<code>correct</code>进行设置。</p>
+<h1 id="二、假设检验-Hypothesis-Test"><a href="#二、假设检验-Hypothesis-Test" class="headerlink" title="二、假设检验 (Hypothesis Test)"></a>二、假设检验 (Hypothesis Test)</h1><h2 id="相关概念-1"><a href="#相关概念-1" class="headerlink" title="相关概念"></a>相关概念</h2><p>在统计假设检验中，首先要对总体分布参数设定一个假设（零假设，H<del>0</del>），然后从总体分布中抽样，通过样本计算所得的统计量来对总体参数进行推断。假定零假设为真，如果计算获得观测样本的统计量的概率非常小，便可以拒绝原假设，接受它的对立面（称作备择假设或者研究假设，H<del>1</del>）。</p>
+<p>在假设检验当中，通常会提到两种错误：</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200801212425336.png" srcset="/img/loading.gif" lazyload alt="image-20200801212425336" style="zoom:80%;" />
+
+<h2 id="相关函数"><a href="#相关函数" class="headerlink" title="相关函数"></a>相关函数</h2><h3 id="1-Testing-for-Means-t-test"><a href="#1-Testing-for-Means-t-test" class="headerlink" title="1. Testing for Means: t-test"></a>1. Testing for Means: t-test</h3><p>在这一部分当中，使用<code>MASS</code>包的<code>UScrime</code>数据集来进行示范：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>MASS<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>UScrime<span class="hljs-punctuation">)</span><br>    M So  Ed Po1 Po2  LF  M.F Pop  NW  U1 U2 GDP Ineq     Prob    Time    y<br><span class="hljs-number">1</span> <span class="hljs-number">151</span>  <span class="hljs-number">1</span>  <span class="hljs-number">91</span>  <span class="hljs-number">58</span>  <span class="hljs-number">56</span> <span class="hljs-number">510</span>  <span class="hljs-number">950</span>  <span class="hljs-number">33</span> <span class="hljs-number">301</span> <span class="hljs-number">108</span> <span class="hljs-number">41</span> <span class="hljs-number">394</span>  <span class="hljs-number">261</span> <span class="hljs-number">0.084602</span> <span class="hljs-number">26.2011</span>  <span class="hljs-number">791</span><br><span class="hljs-number">2</span> <span class="hljs-number">143</span>  <span class="hljs-number">0</span> <span class="hljs-number">113</span> <span class="hljs-number">103</span>  <span class="hljs-number">95</span> <span class="hljs-number">583</span> <span class="hljs-number">1012</span>  <span class="hljs-number">13</span> <span class="hljs-number">102</span>  <span class="hljs-number">96</span> <span class="hljs-number">36</span> <span class="hljs-number">557</span>  <span class="hljs-number">194</span> <span class="hljs-number">0.029599</span> <span class="hljs-number">25.2999</span> <span class="hljs-number">1635</span><br><span class="hljs-number">3</span> <span class="hljs-number">142</span>  <span class="hljs-number">1</span>  <span class="hljs-number">89</span>  <span class="hljs-number">45</span>  <span class="hljs-number">44</span> <span class="hljs-number">533</span>  <span class="hljs-number">969</span>  <span class="hljs-number">18</span> <span class="hljs-number">219</span>  <span class="hljs-number">94</span> <span class="hljs-number">33</span> <span class="hljs-number">318</span>  <span class="hljs-number">250</span> <span class="hljs-number">0.083401</span> <span class="hljs-number">24.3006</span>  <span class="hljs-number">578</span><br><span class="hljs-number">4</span> <span class="hljs-number">136</span>  <span class="hljs-number">0</span> <span class="hljs-number">121</span> <span class="hljs-number">149</span> <span class="hljs-number">141</span> <span class="hljs-number">577</span>  <span class="hljs-number">994</span> <span class="hljs-number">157</span>  <span class="hljs-number">80</span> <span class="hljs-number">102</span> <span class="hljs-number">39</span> <span class="hljs-number">673</span>  <span class="hljs-number">167</span> <span class="hljs-number">0.015801</span> <span class="hljs-number">29.9012</span> <span class="hljs-number">1969</span><br><span class="hljs-number">5</span> <span class="hljs-number">141</span>  <span class="hljs-number">0</span> <span class="hljs-number">121</span> <span class="hljs-number">109</span> <span class="hljs-number">101</span> <span class="hljs-number">591</span>  <span class="hljs-number">985</span>  <span class="hljs-number">18</span>  <span class="hljs-number">30</span>  <span class="hljs-number">91</span> <span class="hljs-number">20</span> <span class="hljs-number">578</span>  <span class="hljs-number">174</span> <span class="hljs-number">0.041399</span> <span class="hljs-number">21.2998</span> <span class="hljs-number">1234</span><br><span class="hljs-number">6</span> <span class="hljs-number">121</span>  <span class="hljs-number">0</span> <span class="hljs-number">110</span> <span class="hljs-number">118</span> <span class="hljs-number">115</span> <span class="hljs-number">547</span>  <span class="hljs-number">964</span>  <span class="hljs-number">25</span>  <span class="hljs-number">44</span>  <span class="hljs-number">84</span> <span class="hljs-number">29</span> <span class="hljs-number">689</span>  <span class="hljs-number">126</span> <span class="hljs-number">0.034201</span> <span class="hljs-number">20.9995</span>  <span class="hljs-number">682</span><br></code></pre></td></tr></table></figure>
+
+<p>t检验涉及到t分布（t distribution）:</p>
+<h4 id="独立样本的-t-检验"><a href="#独立样本的-t-检验" class="headerlink" title="独立样本的 t 检验"></a>独立样本的 t 检验</h4><p>假设两组数据是独立的，并且是从正态总体中抽得。一种检验的调用格式为：</p>
+<p><code>t.test(y ~ x, data)</code></p>
+<ul>
+<li><code>y</code>是一个数值型变量，<code>x</code>是一个二分变量</li>
+</ul>
+<p>另外一种调用格式为：</p>
+<p><code>t.test(y1, y2)</code></p>
+<ul>
+<li>其中的<code>y1和y2</code>为数值型向量（即各组的结果变量）。</li>
+<li>可选参数<code>data</code>的取值为一个包含了这些变量的矩阵或数据框。</li>
+</ul>
+<p>即：</p>
+<p>Default S3 method:<br><code>t.test(x, y = NULL,        alternative = c(&quot;two.sided&quot;, &quot;less&quot;, &quot;greater&quot;),        mu = 0, paired = FALSE, var.equal = FALSE,        conf.level = 0.95, ...)</code></p>
+<p>S3 method for class ‘formula’:</p>
+<p><code>t.test(formula, data, subset, na.action, ...)</code></p>
+<p>注：</p>
+<ol>
+<li>这里的t检验默认假定方差不相等，并使用<code>Welsh</code>的修正自由度。你可以添加一个参数<code>var.equal=TRUE</code>以假定方差相等，并使用合并方差估计。</li>
+<li>默认的备择假设是双侧的（即均值不相等，但大小的方向不确定）。你可以添加一个参数<code>alternative=&quot;less&quot;</code>或<code>alternative=&quot;greater&quot;</code>来进行有方向的检验。</li>
+</ol>
+<p>参数表:</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>y<del>1</del> (<code>x</code>), y<del>2</del> (<code>y</code>)</td>
+<td>数值型向量，也可以是<code>matrix</code>。<br />当<code>x</code>为<code>matrix</code>时，<code>y</code>会被忽略</td>
+</tr>
+<tr>
+<td><code>var.equal=</code></td>
+<td><code>var.equal=TRUE</code>以假定方差相等，并使用合并方差估计。<br />默认为<code>FLASE</code></td>
+</tr>
+<tr>
+<td><code>alternative=</code></td>
+<td>设置该参数为：<code>alternative=&quot;less&quot;</code>或<code>alternative=&quot;greater&quot;</code>来进行有方向的检验<br />默认为双侧检验</td>
+</tr>
+<tr>
+<td><code>conf.level=</code></td>
+<td>confidence level of the interval</td>
+</tr>
+<tr>
+<td><code>mu</code></td>
+<td>a number indicating the true value of the mean (or difference in means if you are performing a two sample test).</td>
+</tr>
+</tbody></table>
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-comment"># 简化后续代码</span><br><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>MASS<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> attach<span class="hljs-punctuation">(</span>UScrime<span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># Welch Two Sample t-test</span><br><span class="hljs-operator">&gt;</span> t.test<span class="hljs-punctuation">(</span>Prob<span class="hljs-punctuation">,</span> GDP<span class="hljs-punctuation">)</span><br><br>	Welch Two Sample t<span class="hljs-operator">-</span>test<br><br>data<span class="hljs-operator">:</span>  Prob and GDP<br>t <span class="hljs-operator">=</span> <span class="hljs-operator">-</span><span class="hljs-number">37.325</span><span class="hljs-punctuation">,</span> df <span class="hljs-operator">=</span> <span class="hljs-number">46</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">&lt;</span> <span class="hljs-number">2.2e-16</span><br>alternative hypothesis<span class="hljs-operator">:</span> true difference <span class="hljs-keyword">in</span> means is not equal to <span class="hljs-number">0</span><br><span class="hljs-number">95</span> percent confidence interval<span class="hljs-operator">:</span><br> <span class="hljs-operator">-</span><span class="hljs-number">553.6667</span> <span class="hljs-operator">-</span><span class="hljs-number">497.0051</span><br>sample estimates<span class="hljs-operator">:</span><br>   mean of x    mean of y <br>  <span class="hljs-number">0.04709138</span> <span class="hljs-number">525.38297872</span> <br><br><span class="hljs-comment"># 当两个数据组的方差相等时，不使用Welch Method调整方差</span><br><span class="hljs-operator">&gt;</span> t.test<span class="hljs-punctuation">(</span>Prob<span class="hljs-punctuation">,</span> GDP<span class="hljs-punctuation">,</span> var.equal <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">)</span><br><br>	Two Sample t<span class="hljs-operator">-</span>test<br><br>data<span class="hljs-operator">:</span>  Prob and GDP<br>t <span class="hljs-operator">=</span> <span class="hljs-operator">-</span><span class="hljs-number">37.325</span><span class="hljs-punctuation">,</span> df <span class="hljs-operator">=</span> <span class="hljs-number">92</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">&lt;</span> <span class="hljs-number">2.2e-16</span><br>alternative hypothesis<span class="hljs-operator">:</span> true difference <span class="hljs-keyword">in</span> means is not equal to <span class="hljs-number">0</span><br><span class="hljs-number">95</span> percent confidence interval<span class="hljs-operator">:</span><br> <span class="hljs-operator">-</span><span class="hljs-number">553.2894</span> <span class="hljs-operator">-</span><span class="hljs-number">497.3824</span><br>sample estimates<span class="hljs-operator">:</span><br>   mean of x    mean of y <br>  <span class="hljs-number">0.04709138</span> <span class="hljs-number">525.38297872</span> <br><br><span class="hljs-comment"># One-sided t test，此时置信区间在右侧</span><br><span class="hljs-operator">&gt;</span> t.test<span class="hljs-punctuation">(</span>Prob<span class="hljs-punctuation">,</span> GDP<span class="hljs-punctuation">,</span> alternative <span class="hljs-operator">=</span> <span class="hljs-string">&quot;less&quot;</span><span class="hljs-punctuation">)</span><br><br>	Welch Two Sample t<span class="hljs-operator">-</span>test<br><br>data<span class="hljs-operator">:</span>  Prob and GDP<br>t <span class="hljs-operator">=</span> <span class="hljs-operator">-</span><span class="hljs-number">37.325</span><span class="hljs-punctuation">,</span> df <span class="hljs-operator">=</span> <span class="hljs-number">46</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">&lt;</span> <span class="hljs-number">2.2e-16</span><br>alternative hypothesis<span class="hljs-operator">:</span> true difference <span class="hljs-keyword">in</span> means is less than <span class="hljs-number">0</span><br><span class="hljs-number">95</span> percent confidence interval<span class="hljs-operator">:</span><br>      <span class="hljs-operator">-</span><span class="hljs-literal">Inf</span> <span class="hljs-operator">-</span><span class="hljs-number">501.7093</span><br>sample estimates<span class="hljs-operator">:</span><br>   mean of x    mean of y <br>  <span class="hljs-number">0.04709138</span> <span class="hljs-number">525.38297872</span> <br><br><span class="hljs-comment"># One-sided t test，此时置信区间在左侧</span><br><span class="hljs-operator">&gt;</span> t.test<span class="hljs-punctuation">(</span>Prob<span class="hljs-punctuation">,</span> GDP<span class="hljs-punctuation">,</span> alternative <span class="hljs-operator">=</span> <span class="hljs-string">&quot;greater&quot;</span><span class="hljs-punctuation">)</span><br><br>	Welch Two Sample t<span class="hljs-operator">-</span>test<br><br>data<span class="hljs-operator">:</span>  Prob and GDP<br>t <span class="hljs-operator">=</span> <span class="hljs-operator">-</span><span class="hljs-number">37.325</span><span class="hljs-punctuation">,</span> df <span class="hljs-operator">=</span> <span class="hljs-number">46</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">=</span> <span class="hljs-number">1</span><br>alternative hypothesis<span class="hljs-operator">:</span> true difference <span class="hljs-keyword">in</span> means is greater than <span class="hljs-number">0</span><br><span class="hljs-number">95</span> percent confidence interval<span class="hljs-operator">:</span><br> <span class="hljs-operator">-</span><span class="hljs-number">548.9624</span>       <span class="hljs-literal">Inf</span><br>sample estimates<span class="hljs-operator">:</span><br>   mean of x    mean of y <br>  <span class="hljs-number">0.04709138</span> <span class="hljs-number">525.38297872</span> <br><br><span class="hljs-comment"># 指定求50%的置信区间</span><br><span class="hljs-operator">&gt;</span> t.test<span class="hljs-punctuation">(</span>Prob<span class="hljs-punctuation">,</span> GDP<span class="hljs-punctuation">,</span> conf.level <span class="hljs-operator">=</span> <span class="hljs-number">.5</span><span class="hljs-punctuation">)</span><br><br>	Welch Two Sample t<span class="hljs-operator">-</span>test<br><br>data<span class="hljs-operator">:</span>  Prob and GDP<br>t <span class="hljs-operator">=</span> <span class="hljs-operator">-</span><span class="hljs-number">37.325</span><span class="hljs-punctuation">,</span> df <span class="hljs-operator">=</span> <span class="hljs-number">46</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">&lt;</span> <span class="hljs-number">2.2e-16</span><br>alternative hypothesis<span class="hljs-operator">:</span> true difference <span class="hljs-keyword">in</span> means is not equal to <span class="hljs-number">0</span><br><span class="hljs-number">50</span> percent confidence interval<span class="hljs-operator">:</span><br> <span class="hljs-operator">-</span><span class="hljs-number">534.9047</span> <span class="hljs-operator">-</span><span class="hljs-number">515.7671</span><br>sample estimates<span class="hljs-operator">:</span><br>   mean of x    mean of y <br>  <span class="hljs-number">0.04709138</span> <span class="hljs-number">525.38297872</span> <br><br><span class="hljs-operator">&gt;</span> detach<span class="hljs-punctuation">(</span>UScrime<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="非独立样本的-t-检验"><a href="#非独立样本的-t-检验" class="headerlink" title="非独立样本的 t 检验"></a>非独立样本的 t 检验</h4><p>非独立样本的t检验假定组间的差异呈正态分布。对于本例，检验的调用格式为：</p>
+<p><code>t.test(y1, y2, paired = TRUE)</code></p>
+<p>例：针对<code>UScrime</code>数据集当中的两个数据组<code>U1</code>和<code>U2</code>进行分析</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>MASS<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> attach<span class="hljs-punctuation">(</span>UScrime<span class="hljs-punctuation">)</span><br><br><span class="hljs-comment"># 对这两个数据集进行初步分析</span><br><span class="hljs-operator">&gt;</span> sapply<span class="hljs-punctuation">(</span>UScrime<span class="hljs-punctuation">[</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-string">&quot;U1&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;U2&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span> <span class="hljs-keyword">function</span><span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span>mean<span class="hljs-operator">=</span>mean<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span>sd<span class="hljs-operator">=</span>sd<span class="hljs-punctuation">(</span>x<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br>           U1       U2<br>mean <span class="hljs-number">95.46809</span> <span class="hljs-number">33.97872</span><br>sd   <span class="hljs-number">18.02878</span>  <span class="hljs-number">8.44545</span><br>         <br><span class="hljs-comment"># Paired t test</span><br><span class="hljs-operator">&gt;</span> t.test<span class="hljs-punctuation">(</span>U1<span class="hljs-punctuation">,</span> U2<span class="hljs-punctuation">,</span> paired <span class="hljs-operator">=</span> <span class="hljs-literal">TRUE</span><span class="hljs-punctuation">)</span><br><br>	Paired t<span class="hljs-operator">-</span>test<br><br>data<span class="hljs-operator">:</span>  U1 and U2<br>t <span class="hljs-operator">=</span> <span class="hljs-number">32.407</span><span class="hljs-punctuation">,</span> df <span class="hljs-operator">=</span> <span class="hljs-number">46</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">&lt;</span> <span class="hljs-number">2.2e-16</span><br>alternative hypothesis<span class="hljs-operator">:</span> true difference <span class="hljs-keyword">in</span> means is not equal to <span class="hljs-number">0</span><br><span class="hljs-number">95</span> percent confidence interval<span class="hljs-operator">:</span><br> <span class="hljs-number">57.67003</span> <span class="hljs-number">65.30870</span><br>sample estimates<span class="hljs-operator">:</span><br>mean of the differences <br>               <span class="hljs-number">61.48936</span> <br><br><span class="hljs-operator">&gt;</span> detach<span class="hljs-punctuation">(</span>UScrime<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-Testing-for-Variances-Chi-Square-and-F-Test"><a href="#2-Testing-for-Variances-Chi-Square-and-F-Test" class="headerlink" title="2. Testing for Variances: Chi-Square and F Test"></a>2. Testing for Variances: Chi-Square and F Test</h3><h4 id="One-sample-hypothesis-testing-for-variance：-Chi-Square-Test"><a href="#One-sample-hypothesis-testing-for-variance：-Chi-Square-Test" class="headerlink" title="One-sample hypothesis testing for variance： Chi-Square Test"></a>One-sample hypothesis testing for variance： Chi-Square Test</h4><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802212617184.png" srcset="/img/loading.gif" lazyload alt="image-20200802212617184"></p>
+<p>对于单样本的假设检验，需要使用到卡方检验 (Chi-Square test)，使用格式如下：</p>
+<p><code>chisq.test(x, y = NULL, correct = TRUE,            p = rep(1/length(x), length(x)), rescale.p = FALSE,            simulate.p.value = FALSE, B = 2000)</code></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code>, <code>y</code></td>
+<td>数值型向量，也可以是<code>matrix</code>。<br />当<code>x</code>为<code>matrix</code>时，<code>y</code>会被忽略</td>
+</tr>
+<tr>
+<td><code>correct</code></td>
+<td>该逻辑参数控制2x2列联表的独立性检验时，是否进行连续性矫正，即对所有$</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td>输入的概率值，应与<code>x</code>变量的长度一致。注意<code>p</code>不可以为负数</td>
+</tr>
+<tr>
+<td><code>rescale.p</code></td>
+<td>该逻辑参数控制是否将<code>p</code>的和重新调整为1</td>
+</tr>
+<tr>
+<td><code>simulate.p.value</code></td>
+<td>控制是否以蒙特卡洛采样的方法模拟p值</td>
+</tr>
+<tr>
+<td><code>B</code></td>
+<td>蒙特卡洛采样的重复次数</td>
+</tr>
+</tbody></table>
+<p>例，使用<code>MASS</code>包的<code>UScrime</code>数据集来进行示范比较<code>U1</code>和<code>U2</code>：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>MASS<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>Uscrime<span class="hljs-punctuation">)</span><br>    M So  Ed Po1 Po2  LF  M.F Pop  NW  U1 U2 GDP Ineq     Prob    Time    y<br><span class="hljs-number">1</span> <span class="hljs-number">151</span>  <span class="hljs-number">1</span>  <span class="hljs-number">91</span>  <span class="hljs-number">58</span>  <span class="hljs-number">56</span> <span class="hljs-number">510</span>  <span class="hljs-number">950</span>  <span class="hljs-number">33</span> <span class="hljs-number">301</span> <span class="hljs-number">108</span> <span class="hljs-number">41</span> <span class="hljs-number">394</span>  <span class="hljs-number">261</span> <span class="hljs-number">0.084602</span> <span class="hljs-number">26.2011</span>  <span class="hljs-number">791</span><br><span class="hljs-number">2</span> <span class="hljs-number">143</span>  <span class="hljs-number">0</span> <span class="hljs-number">113</span> <span class="hljs-number">103</span>  <span class="hljs-number">95</span> <span class="hljs-number">583</span> <span class="hljs-number">1012</span>  <span class="hljs-number">13</span> <span class="hljs-number">102</span>  <span class="hljs-number">96</span> <span class="hljs-number">36</span> <span class="hljs-number">557</span>  <span class="hljs-number">194</span> <span class="hljs-number">0.029599</span> <span class="hljs-number">25.2999</span> <span class="hljs-number">1635</span><br><span class="hljs-number">3</span> <span class="hljs-number">142</span>  <span class="hljs-number">1</span>  <span class="hljs-number">89</span>  <span class="hljs-number">45</span>  <span class="hljs-number">44</span> <span class="hljs-number">533</span>  <span class="hljs-number">969</span>  <span class="hljs-number">18</span> <span class="hljs-number">219</span>  <span class="hljs-number">94</span> <span class="hljs-number">33</span> <span class="hljs-number">318</span>  <span class="hljs-number">250</span> <span class="hljs-number">0.083401</span> <span class="hljs-number">24.3006</span>  <span class="hljs-number">578</span><br><span class="hljs-number">4</span> <span class="hljs-number">136</span>  <span class="hljs-number">0</span> <span class="hljs-number">121</span> <span class="hljs-number">149</span> <span class="hljs-number">141</span> <span class="hljs-number">577</span>  <span class="hljs-number">994</span> <span class="hljs-number">157</span>  <span class="hljs-number">80</span> <span class="hljs-number">102</span> <span class="hljs-number">39</span> <span class="hljs-number">673</span>  <span class="hljs-number">167</span> <span class="hljs-number">0.015801</span> <span class="hljs-number">29.9012</span> <span class="hljs-number">1969</span><br><span class="hljs-number">5</span> <span class="hljs-number">141</span>  <span class="hljs-number">0</span> <span class="hljs-number">121</span> <span class="hljs-number">109</span> <span class="hljs-number">101</span> <span class="hljs-number">591</span>  <span class="hljs-number">985</span>  <span class="hljs-number">18</span>  <span class="hljs-number">30</span>  <span class="hljs-number">91</span> <span class="hljs-number">20</span> <span class="hljs-number">578</span>  <span class="hljs-number">174</span> <span class="hljs-number">0.041399</span> <span class="hljs-number">21.2998</span> <span class="hljs-number">1234</span><br><span class="hljs-number">6</span> <span class="hljs-number">121</span>  <span class="hljs-number">0</span> <span class="hljs-number">110</span> <span class="hljs-number">118</span> <span class="hljs-number">115</span> <span class="hljs-number">547</span>  <span class="hljs-number">964</span>  <span class="hljs-number">25</span>  <span class="hljs-number">44</span>  <span class="hljs-number">84</span> <span class="hljs-number">29</span> <span class="hljs-number">689</span>  <span class="hljs-number">126</span> <span class="hljs-number">0.034201</span> <span class="hljs-number">20.9995</span>  <span class="hljs-number">682</span><br><br><span class="hljs-operator">&gt;</span> chisq.test<span class="hljs-punctuation">(</span>U1<span class="hljs-punctuation">,</span> U2<span class="hljs-punctuation">)</span><br><br>	Pearson<span class="hljs-string">&#x27;s Chi-squared test</span><br><span class="hljs-string"></span><br><span class="hljs-string">data:  U1 and U2</span><br><span class="hljs-string">X-squared = 877.07, df = 850, p-value = 0.2527</span><br><span class="hljs-string"></span><br><span class="hljs-string">Warning message:</span><br><span class="hljs-string">In chisq.test(U1, U2) : Chi-squared近似算法有可能不准</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="Testing-for-The-Equality-of-Two-variances-F-test"><a href="#Testing-for-The-Equality-of-Two-variances-F-test" class="headerlink" title="Testing for The Equality of Two variances: F-test"></a>Testing for The Equality of Two variances: F-test</h4><h4 id="相关概念-2"><a href="#相关概念-2" class="headerlink" title="相关概念"></a>相关概念</h4><p>Uses the F distribution（统计值服从F-分布的检验）</p>
+<p>Let:<br>$$<br>U_{1} &#x3D; \frac{(n_{1}-1)s_{1}^{2}}{\sigma_{1}^2}, U_{2} &#x3D; \frac{(n_{2}-1)s_{2}^{2}}{\sigma_{2}^2}<br>$$<br>The test statistic:<br>$$<br>F &#x3D; \frac{U_{1}&#x2F;v_{1}}{U_{2}&#x2F;v_{2}} &#x3D; \frac{\frac{(n_{1}-1)s_{1}^{2}}{\sigma_{1}^2}&#x2F;(n_{1}-1)}{\frac{(n_{2}-1)s_{2}^{2}}{\sigma_{2}^2}&#x2F;(n_{2}-1)} &#x3D;<br>\frac{s_{1}^{2}}{s_{2}^{2}} \cdot \frac{\sigma_{2}^{2}}{\sigma_{1}^{2}}<br>$$</p>
+<center><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802211008431.png" srcset="/img/loading.gif" lazyload alt="image-20200802211008431" style="zoom:67%;" /></center>
+
+<h4 id="相关函数-1"><a href="#相关函数-1" class="headerlink" title="相关函数"></a>相关函数</h4><p>在R中，使用F test的时候，可以通过函数<code>var.test()</code>来实现，和<code>t.test()</code>相似，它也有两种使用格式：</p>
+<p>Default S3 method:<br><code>var.test(x, y, ratio = 1,          alternative = c(&quot;two.sided&quot;, &quot;less&quot;, &quot;greater&quot;),          conf.level = 0.95, ...)</code></p>
+<p>S3 method for class ‘formula’: </p>
+<p><code>var.test(formula, data, subset, na.action, ...)</code></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code>, <code>y</code></td>
+<td>数值型向量，也可以是<code>matrix</code>。<br />当<code>x</code>为<code>matrix</code>时，<code>y</code>会被忽略</td>
+</tr>
+<tr>
+<td><code>ratio</code></td>
+<td>the hypothesized ratio of the population variances of x and y.</td>
+</tr>
+</tbody></table>
+<p>例，使用<code>MASS</code>包的<code>UScrime</code>数据集来进行示范比较<code>U1</code>和<code>U2</code>：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>MASS<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>UScrime<span class="hljs-punctuation">)</span><br>    M So  Ed Po1 Po2  LF  M.F Pop  NW  U1 U2 GDP Ineq     Prob    Time    y<br><span class="hljs-number">1</span> <span class="hljs-number">151</span>  <span class="hljs-number">1</span>  <span class="hljs-number">91</span>  <span class="hljs-number">58</span>  <span class="hljs-number">56</span> <span class="hljs-number">510</span>  <span class="hljs-number">950</span>  <span class="hljs-number">33</span> <span class="hljs-number">301</span> <span class="hljs-number">108</span> <span class="hljs-number">41</span> <span class="hljs-number">394</span>  <span class="hljs-number">261</span> <span class="hljs-number">0.084602</span> <span class="hljs-number">26.2011</span>  <span class="hljs-number">791</span><br><span class="hljs-number">2</span> <span class="hljs-number">143</span>  <span class="hljs-number">0</span> <span class="hljs-number">113</span> <span class="hljs-number">103</span>  <span class="hljs-number">95</span> <span class="hljs-number">583</span> <span class="hljs-number">1012</span>  <span class="hljs-number">13</span> <span class="hljs-number">102</span>  <span class="hljs-number">96</span> <span class="hljs-number">36</span> <span class="hljs-number">557</span>  <span class="hljs-number">194</span> <span class="hljs-number">0.029599</span> <span class="hljs-number">25.2999</span> <span class="hljs-number">1635</span><br><span class="hljs-number">3</span> <span class="hljs-number">142</span>  <span class="hljs-number">1</span>  <span class="hljs-number">89</span>  <span class="hljs-number">45</span>  <span class="hljs-number">44</span> <span class="hljs-number">533</span>  <span class="hljs-number">969</span>  <span class="hljs-number">18</span> <span class="hljs-number">219</span>  <span class="hljs-number">94</span> <span class="hljs-number">33</span> <span class="hljs-number">318</span>  <span class="hljs-number">250</span> <span class="hljs-number">0.083401</span> <span class="hljs-number">24.3006</span>  <span class="hljs-number">578</span><br><span class="hljs-number">4</span> <span class="hljs-number">136</span>  <span class="hljs-number">0</span> <span class="hljs-number">121</span> <span class="hljs-number">149</span> <span class="hljs-number">141</span> <span class="hljs-number">577</span>  <span class="hljs-number">994</span> <span class="hljs-number">157</span>  <span class="hljs-number">80</span> <span class="hljs-number">102</span> <span class="hljs-number">39</span> <span class="hljs-number">673</span>  <span class="hljs-number">167</span> <span class="hljs-number">0.015801</span> <span class="hljs-number">29.9012</span> <span class="hljs-number">1969</span><br><span class="hljs-number">5</span> <span class="hljs-number">141</span>  <span class="hljs-number">0</span> <span class="hljs-number">121</span> <span class="hljs-number">109</span> <span class="hljs-number">101</span> <span class="hljs-number">591</span>  <span class="hljs-number">985</span>  <span class="hljs-number">18</span>  <span class="hljs-number">30</span>  <span class="hljs-number">91</span> <span class="hljs-number">20</span> <span class="hljs-number">578</span>  <span class="hljs-number">174</span> <span class="hljs-number">0.041399</span> <span class="hljs-number">21.2998</span> <span class="hljs-number">1234</span><br><span class="hljs-number">6</span> <span class="hljs-number">121</span>  <span class="hljs-number">0</span> <span class="hljs-number">110</span> <span class="hljs-number">118</span> <span class="hljs-number">115</span> <span class="hljs-number">547</span>  <span class="hljs-number">964</span>  <span class="hljs-number">25</span>  <span class="hljs-number">44</span>  <span class="hljs-number">84</span> <span class="hljs-number">29</span> <span class="hljs-number">689</span>  <span class="hljs-number">126</span> <span class="hljs-number">0.034201</span> <span class="hljs-number">20.9995</span>  <span class="hljs-number">682</span><br><br><span class="hljs-operator">&gt;</span> attach<span class="hljs-punctuation">(</span>UScrime<span class="hljs-punctuation">)</span><br>The following objects are masked from UScrime <span class="hljs-punctuation">(</span>pos <span class="hljs-operator">=</span> <span class="hljs-number">3</span><span class="hljs-punctuation">)</span><span class="hljs-operator">:</span><br><br>    Ed<span class="hljs-punctuation">,</span> GDP<span class="hljs-punctuation">,</span> Ineq<span class="hljs-punctuation">,</span> LF<span class="hljs-punctuation">,</span> M<span class="hljs-punctuation">,</span> M.F<span class="hljs-punctuation">,</span> NW<span class="hljs-punctuation">,</span> Po1<span class="hljs-punctuation">,</span> Po2<span class="hljs-punctuation">,</span> Pop<span class="hljs-punctuation">,</span> Prob<span class="hljs-punctuation">,</span> So<span class="hljs-punctuation">,</span> Time<span class="hljs-punctuation">,</span> U1<span class="hljs-punctuation">,</span> U2<span class="hljs-punctuation">,</span> y<br><br><span class="hljs-operator">&gt;</span> var.test<span class="hljs-punctuation">(</span>U1<span class="hljs-punctuation">,</span>U2<span class="hljs-punctuation">)</span><br><br>	<span class="hljs-built_in">F</span> test to compare two variances<br><br>data<span class="hljs-operator">:</span>  U1 and U2<br><span class="hljs-built_in">F</span> <span class="hljs-operator">=</span> <span class="hljs-number">4.5571</span><span class="hljs-punctuation">,</span> num df <span class="hljs-operator">=</span> <span class="hljs-number">46</span><span class="hljs-punctuation">,</span> denom df <span class="hljs-operator">=</span> <span class="hljs-number">46</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">=</span> <span class="hljs-number">9.637e-07</span><br>alternative hypothesis<span class="hljs-operator">:</span> true ratio of variances is not equal to <span class="hljs-number">1</span><br><span class="hljs-number">95</span> percent confidence interval<span class="hljs-operator">:</span><br> <span class="hljs-number">2.538310</span> <span class="hljs-number">8.181442</span><br>sample estimates<span class="hljs-operator">:</span><br>ratio of variances <br>          <span class="hljs-number">4.557086</span> <br><br><span class="hljs-operator">&gt;</span> detach<span class="hljs-punctuation">(</span>UScrime<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="3-Testing-for-Proportions"><a href="#3-Testing-for-Proportions" class="headerlink" title="3. Testing for Proportions"></a>3. Testing for Proportions</h3><h4 id="One-sample-hypothesis-testing-for-proportion"><a href="#One-sample-hypothesis-testing-for-proportion" class="headerlink" title="One-sample hypothesis testing for proportion"></a>One-sample hypothesis testing for proportion</h4><p>当对样本的比例与总体进行假设检验的时候，需要使用<code>z test</code>，在R中可以通过函数<code>prop.test</code>实现：<br><code>prop.test(x, n, p = NULL,           alternative = c(&quot;two.sided&quot;, &quot;less&quot;, &quot;greater&quot;),           conf.level = 0.95, correct = TRUE)</code></p>
+<p>使用方法同之前的<code>t.test()</code></p>
+<p>例：1175个病人当中大约0.38的病人为A血型，检验此样本的A血型比例是否与之前得到的结论：”比例为0.32” 一致</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803202751070.png" srcset="/img/loading.gif" lazyload alt="image-20200803202751070"></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> prop.test<span class="hljs-punctuation">(</span><span class="hljs-number">446.5</span><span class="hljs-punctuation">,</span> <span class="hljs-number">1175</span><span class="hljs-punctuation">,</span> p <span class="hljs-operator">=</span> <span class="hljs-number">0.32</span><span class="hljs-punctuation">,</span> correct <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">)</span><br><br>	<span class="hljs-number">1</span><span class="hljs-operator">-</span>sample proportions test without continuity correction<br><br>data<span class="hljs-operator">:</span>  <span class="hljs-number">446.5</span> out of <span class="hljs-number">1175</span><span class="hljs-punctuation">,</span> null probability <span class="hljs-number">0.32</span><br>X<span class="hljs-operator">-</span>squared <span class="hljs-operator">=</span> <span class="hljs-number">19.439</span><span class="hljs-punctuation">,</span> df <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">=</span> <span class="hljs-number">1.038e-05</span><br>alternative hypothesis<span class="hljs-operator">:</span> true p is not equal to <span class="hljs-number">0.32</span><br><span class="hljs-number">95</span> percent confidence interval<span class="hljs-operator">:</span><br> <span class="hljs-number">0.3526801</span> <span class="hljs-number">0.4081020</span><br>sample estimates<span class="hljs-operator">:</span><br>   p <br><span class="hljs-number">0.38</span><br><br><span class="hljs-operator">&gt;</span> prop.test<span class="hljs-punctuation">(</span><span class="hljs-number">446.5</span><span class="hljs-punctuation">,</span> <span class="hljs-number">1175</span><span class="hljs-punctuation">,</span> p <span class="hljs-operator">=</span> <span class="hljs-number">0.32</span><span class="hljs-punctuation">,</span> correct <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> alternative <span class="hljs-operator">=</span> <span class="hljs-string">&quot;less&quot;</span><span class="hljs-punctuation">)</span><br><br>	<span class="hljs-number">1</span><span class="hljs-operator">-</span>sample proportions test without continuity correction<br><br>data<span class="hljs-operator">:</span>  <span class="hljs-number">446.5</span> out of <span class="hljs-number">1175</span><span class="hljs-punctuation">,</span> null probability <span class="hljs-number">0.32</span><br>X<span class="hljs-operator">-</span>squared <span class="hljs-operator">=</span> <span class="hljs-number">19.439</span><span class="hljs-punctuation">,</span> df <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">=</span> <span class="hljs-number">1</span><br>alternative hypothesis<span class="hljs-operator">:</span> true p is less than <span class="hljs-number">0.32</span><br><span class="hljs-number">95</span> percent confidence interval<span class="hljs-operator">:</span><br> <span class="hljs-number">0.000000</span> <span class="hljs-number">0.403542</span><br>sample estimates<span class="hljs-operator">:</span><br>   p <br><span class="hljs-number">0.38</span> <br><br><span class="hljs-operator">&gt;</span> prop.test<span class="hljs-punctuation">(</span><span class="hljs-number">446.5</span><span class="hljs-punctuation">,</span> <span class="hljs-number">1175</span><span class="hljs-punctuation">,</span> p <span class="hljs-operator">=</span> <span class="hljs-number">0.32</span><span class="hljs-punctuation">,</span> correct <span class="hljs-operator">=</span> <span class="hljs-literal">FALSE</span><span class="hljs-punctuation">,</span> alternative <span class="hljs-operator">=</span> <span class="hljs-string">&quot;greater&quot;</span><span class="hljs-punctuation">)</span><br><br>	<span class="hljs-number">1</span><span class="hljs-operator">-</span>sample proportions test without continuity correction<br><br>data<span class="hljs-operator">:</span>  <span class="hljs-number">446.5</span> out of <span class="hljs-number">1175</span><span class="hljs-punctuation">,</span> null probability <span class="hljs-number">0.32</span><br>X<span class="hljs-operator">-</span>squared <span class="hljs-operator">=</span> <span class="hljs-number">19.439</span><span class="hljs-punctuation">,</span> df <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">=</span> <span class="hljs-number">5.192e-06</span><br>alternative hypothesis<span class="hljs-operator">:</span> true p is greater than <span class="hljs-number">0.32</span><br><span class="hljs-number">95</span> percent confidence interval<span class="hljs-operator">:</span><br> <span class="hljs-number">0.3570094</span> <span class="hljs-number">1.0000000</span><br>sample estimates<span class="hljs-operator">:</span><br>   p <br><span class="hljs-number">0.38</span> <br></code></pre></td></tr></table></figure>
+
+<h2 id="方差分析-Analysis-of-Variance-ANOVA"><a href="#方差分析-Analysis-of-Variance-ANOVA" class="headerlink" title="方差分析 (Analysis of Variance, ANOVA)"></a>方差分析 (Analysis of Variance, ANOVA)</h2><h3 id="1-相关概念"><a href="#1-相关概念" class="headerlink" title="1. 相关概念"></a>1. 相关概念</h3><h4 id="Source-of-Variance"><a href="#Source-of-Variance" class="headerlink" title="Source of Variance"></a>Source of Variance</h4><p>方差分析的基本原理是认为不同处理组的均数间的差别基本来源有两个：</p>
+<ol>
+<li>实验条件，即不同的处理造成的差异，称为<strong>组间差异</strong>。用变量在各组的均值与总均值之偏差平方和的总和表示，记作$SS_{B}$，组间自由度$df_{B}$。</li>
+<li>随机误差，如测量误差造成的差异或个体间的差异，称为<strong>组内差异</strong>，用变量在各组的均值与该组内变量值之偏差平方和的总和表示， 记作$SS_{W}$，组内自由度$df_{W}$。</li>
+</ol>
+<p>总偏差平方和 SS<del>T</del> &#x3D; SS<del>B</del> + SS<del>W</del></p>
+<h4 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h4><p>方差分析的基本思想是：通过分析研究不同来源的变异对总变异的贡献大小，从而确定可控因素对研究结果影响力的大小。</p>
+<p>分析方法 根据资料设计类型的不同，有以下两种方差分析的方法： </p>
+<ol>
+<li>对成组设计的多个样本均值比较，应采用<strong>完全随机设计</strong>的方差分析，即单因素方差分析。 </li>
+<li>对随机区组设计的多个样本均值比较，应采用<strong>配伍组设计</strong>的方差分析，即两因素方差分析。</li>
+</ol>
+<p>单因素方差分析是用来研究一个控制变量的不同水平是否对观测变量产生了显著影响。这里，由于仅研究单个因素对观测变量的影响，因此称为单因素方差分析。</p>
+<ul>
+<li>例如，分析不同施肥量是否给农作物产量带来显著影响，考察地区差异是否影响妇女的生育率，研究学历对工资收入的影响等。这些问题都可以通过单因素方差分析得到答案。</li>
+</ul>
+<p>多因素方差分析用来研究两个及两个以上控制变量是否对观测变量产生显著影响。这里，由于研究多个因素对观测变量的影响，因此称为多因素方差分析。多因素方差分析不仅能够分析多个因素对观测变量的独立影响，更能够分析多个控制因素的交互作用能否对观测变量的分布产生显著影响，进而最终找到利于观测变量的最优组合。</p>
+<ul>
+<li>例如：分析不同品种、不同施肥量对农作物产量的影响时，可将农作物产量作为观测变量，品种和施肥量作为控制变量。利用多因素方差分析方法，研究不同品种、不同施肥量是如何影响农作物产量的，并进一步研究哪种品种与哪种水平的施肥量是提高农作物产量的最优组合。</li>
+<li>当设计包含两个甚至更多的因子时，便是<strong>因素方差分析设计</strong>，比如两因子时称作双因素方差分析，三因子时称作三因素方差分析，以此类推。若因子设计包括组内和组间因子，又称作<strong>混合模型方差分析</strong>。</li>
+</ul>
+<h4 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h4><p>基本步骤: 整个方差分析的基本步骤如下：</p>
+<ol>
+<li><p>建立检验假设；</p>
+<ul>
+<li>H0：多个样本总体均值相等；</li>
+<li>H1：多个样本总体均值不相等或不全等。</li>
+<li></li>
+<li>检验水准为0.05。</li>
+</ul>
+</li>
+<li><p>计算检验统计量F值；</p>
+</li>
+<li><p>确定P值并作出推断结果。</p>
+</li>
+</ol>
+<h5 id="1-Total-sum-of-squares-SST"><a href="#1-Total-sum-of-squares-SST" class="headerlink" title="(1) Total sum of squares (SST)"></a>(1) Total sum of squares (SS<del>T</del>)</h5><p>$$<br>SS_{T} &#x3D; \sum (x - \bar{\bar{x}})^2<br>$$</p>
+<ul>
+<li>$\bar{\bar{x}}$ is <strong>the grand mean</strong>, which is the mean of the whole sample space</li>
+<li>$x$ is each <strong>individual value</strong> in the whole sample space</li>
+<li><strong>The degree of freedom</strong>: $df_{T} &#x3D; n-1$, $n$ is the <strong>whole sample size</strong></li>
+</ul>
+<h5 id="2-Sum-of-squares-within-SSW"><a href="#2-Sum-of-squares-within-SSW" class="headerlink" title="(2) Sum of squares within (SSW)"></a>(2) Sum of squares within (SS<del>W</del>)</h5><p>$$<br>SS_{W} &#x3D; \sum (x_{1} - \overline{x_{1}})^2 + \sum(x_{2} - \overline{x_{2}})^2 + ··· + \sum(x_{k} - \overline{x_{k}} )^2 \<br>&#x3D; df_{1} \cdot s_{1}^{2} + df_{2} \cdot s_{2}^{2} + ··· + df_{k}\cdot s_{k}^{2}<br>$$</p>
+<ul>
+<li>$k$ is the <strong>number of samples</strong></li>
+<li>$x_{k}$ is each <strong>individual value</strong> in the $k^{th}$ sample, $\overline{x_{k}}$ is the <strong>mean</strong> of the $ k^{th}$ sample.</li>
+<li>$df_{k}$ is the <strong>degree of freedom</strong> of the $k^{th}$ sample where $df_{k} &#x3D; \text{the sample size} - 1$, $s_{k}^{2}$ is the <strong>variance</strong> of the $k^{th}$ sample.</li>
+<li>$df_{W}$ &#x3D; $\sum df_{k} &#x3D; n-k$, n is the <strong>whole sample size</strong></li>
+</ul>
+<p>$$<br>s_{W}^{2} &#x3D; \frac{SS_{W}}{n-k}<br>$$</p>
+<h5 id="3-Sum-of-squares-between-SSB"><a href="#3-Sum-of-squares-between-SSB" class="headerlink" title="(3) Sum of squares between (SSB)"></a>(3) Sum of squares between (SS<del>B</del>)</h5><p>$$<br>SS_{B} &#x3D; \sum \Big{(} n_{k}\cdot (\overline{x_{k}} - \bar{\bar{x}})^2 \Big{)}<br>$$</p>
+<ul>
+<li>$k$ is the <strong>number of samples</strong>, $n_{k}$ is the <strong>sample size of each sample</strong></li>
+<li>$\bar{\bar{x}}$ is <strong>the grand mean</strong>, which is the mean of the whole sample space</li>
+<li>$\overline{x_{k}}$ is the <strong>mean</strong> of the $ k^{th}$ sample.</li>
+<li>$df_{B} &#x3D; k-1$</li>
+</ul>
+<p>$$<br>s_{B}^{2} &#x3D; \frac{SS_{B}}{k-1}<br>$$</p>
+<h5 id="4-The-ANOVA-Table"><a href="#4-The-ANOVA-Table" class="headerlink" title="(4) The ANOVA Table"></a>(4) The ANOVA Table</h5><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200511172104986.png" srcset="/img/loading.gif" lazyload alt="image-20200511172104986"></p>
+<h4 id="F-Test-in-ANOVA"><a href="#F-Test-in-ANOVA" class="headerlink" title="F Test in ANOVA"></a>F Test in ANOVA</h4><p>$$<br>H_{0} : \mu_{1} &#x3D; \mu_{2} &#x3D; ··· &#x3D; \mu_{k} \rarr F \leq 1\<br>H_{1} : \text{not all are equal} \rarr F &gt; 1<br>$$</p>
+<p>$$<br>F_{k-1, n-k} &#x3D; \frac{S_{B}^{2}}{S_{W}^{2}}<br>$$</p>
+<p>The p-value:<br>$$<br>\text{p-value} &#x3D; P(\geq \frac{s_{B}^{2}}{s_{W}^{2}})<br>$$<br><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200511173014263.png" srcset="/img/loading.gif" lazyload alt="image-20200511173014263"></p>
+<h4 id="Assumptions-when-using-ANOVA"><a href="#Assumptions-when-using-ANOVA" class="headerlink" title="Assumptions when using ANOVA"></a>Assumptions when using ANOVA</h4><ol>
+<li>Randomness, independence</li>
+<li>Population normally distributed</li>
+<li>Variance:<ol>
+<li>Different groups have equal variance (classical ANOVA) $\rarr s_{W}^{2} &#x3D; \frac{SS_{W}}{n-k}$</li>
+<li>Unequal variance: Welch’s ANOVA</li>
+</ol>
+</li>
+</ol>
+<h4 id="Post-hoc-tests"><a href="#Post-hoc-tests" class="headerlink" title="Post hoc tests"></a>Post <em>hoc</em> tests</h4><h5 id="1-Relationship-between-F-test-and-t-test"><a href="#1-Relationship-between-F-test-and-t-test" class="headerlink" title="(1) Relationship between F-test and t-test"></a>(1) Relationship between F-test and t-test</h5><p>When there are only two groups: $F_{1,n-2} &#x3D; t_{n-2}^{2}$</p>
+<h5 id="2-Bonferroni-Procedure"><a href="#2-Bonferroni-Procedure" class="headerlink" title="(2) Bonferroni Procedure"></a>(2) Bonferroni Procedure</h5><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200512182618288.png" srcset="/img/loading.gif" lazyload alt="image-20200512182618288"><br>$$<br>\text{p.adj &#x3D; min} \Big{[} p \times {k \choose 2} ,1 \Big{]}<br>$$<br>If $p.adj &lt; \alpha$, then $H_{0}$ is rejected. </p>
+<h5 id="3-Fisher’s-Least-Significant-Difference-LSD"><a href="#3-Fisher’s-Least-Significant-Difference-LSD" class="headerlink" title="(3) Fisher’s Least Significant Difference (LSD)"></a>(3) Fisher’s Least Significant Difference (LSD)</h5><p>Fisher’s LSD method is used in ANOVA to create confidence intervals for all <strong>pairwise differences</strong> between factor level means while controlling the individual error rate to a significance level you specify.</p>
+<p>Therefore:<br>$$<br>t_{v} &#x3D; \frac{(\bar{x}<em>{1} - \bar{x}</em>{2}) }{\sqrt{s_{p}^{2}(\frac{1}{n_{1}} + \frac{1}{n_{2}})}} \Rarr t_{v} &#x3D; \frac{(\bar{x}<em>{1} - \bar{x}</em>{2}) }{\sqrt{s_{W}^{2}(\frac{1}{n_{1}} + \frac{1}{n_{2}})}}, v &#x3D; n_{1}+n_{2} -2<br>$$</p>
+<h4 id="Chi-Square-Test-for-Categorial-Data"><a href="#Chi-Square-Test-for-Categorial-Data" class="headerlink" title="Chi-Square Test for Categorial Data"></a>Chi-Square Test for Categorial Data</h4><p>$$<br>\chi^2 &#x3D; \sum_{cells} \frac{(O_{i} - E_{i})^2}{E_{i}}<br>$$</p>
+<ul>
+<li>$O_{i}$ is the observed data; $E_{i}$ is the expected data</li>
+</ul>
+<p>$$<br>p &#x3D; P(\chi_{v}^{2} \geq \chi^{2})<br>$$</p>
+<ul>
+<li>$v$ is t</li>
+</ul>
+<h3 id="2-相关函数"><a href="#2-相关函数" class="headerlink" title="2. 相关函数"></a>2. 相关函数</h3><h4 id="aov"><a href="#aov" class="headerlink" title="aov"></a>aov</h4><h5 id="1-函数解释"><a href="#1-函数解释" class="headerlink" title="(1) 函数解释"></a>(1) 函数解释</h5><p>在R中ANOVA可以通过函数<code>aov()</code>和<code>lm()</code>来实现。</p>
+<ul>
+<li>虽然ANOVA和回归方法都是独立发展而来，但是从函数形式上看，它们都是广义线性模型的特例。讨论回归时用到的<code>lm()</code>函数也能分析ANOVA模型。</li>
+</ul>
+<p><code>aov()</code>的基本用法是：</p>
+<p><code>aov(formula, data = NULL, projections = FALSE, qr = TRUE,     contrasts = NULL, ...)</code></p>
+<h5 id="2-表达式（formula）"><a href="#2-表达式（formula）" class="headerlink" title="(2) 表达式（formula）"></a>(2) 表达式（formula）</h5><p>关于<code>formula</code>：</p>
+<p>R表达式中常用的符号：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>~</code></td>
+<td>分隔符号，左边为响应变量，右边为解释变量。例如，要通过 <code>x</code>、<code>z</code> 和 <code>w</code> 预测 <code>y</code>，代码为 <code>y ~ x + z + w</code></td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>分隔预测变量</td>
+</tr>
+<tr>
+<td><code>:</code></td>
+<td>表示预测变量的交互项。例如，要通过 <code>x</code>、<code>z</code> 及 <code>x</code> 与 <code>z</code> 的交互项预测 <code>y</code>，代码为 <code>y ~ x + z + x:z</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>表示所有可能交互项的简洁方式。代码 <code>y~ x * z * w</code> 可展开为 <code>y ~ x + z + w + x:z + x:w + z:w + x:z:w</code></td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>表示交互项达到某个次数。代码 <code>y ~ (x + z + w)^2</code> 可展开为 <code>y ~ x + z + w + x:z + x:w + z:w</code></td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>表示包含除因变量外的所有变量。例如，若一个数据框包含变量 <code>x</code>、<code>y</code>、<code>z</code> 和 <code>w</code>，代码 <code>y ~ .</code> 可展开为 <code>y ~ x + z + w</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>减号，表示从等式中移除某个变量。例如，<code>y ~ (x + z + w)^2 – x:w</code> 可展开为 <code>y ~ x + z + w + x:z + z:w</code></td>
+</tr>
+<tr>
+<td><code>-1</code></td>
+<td>删除截距项。例如，表达式 <code>y ~ x - 1</code> 拟合 <code>y</code> 在 <code>x</code> 上的回归，并强制直线通过原点</td>
+</tr>
+<tr>
+<td><code>I()</code></td>
+<td>从算术的角度来解释括号中的元素。例如，<code>y ~ x + (z + w)^2</code> 将展开为 <code>y ~ x + z + w + z:w</code>。<br />相反, 代码 <code>y ~ x + I((z + w)^2)</code>将展开为 <code>y ~ x + h</code>，<code>h</code> 是一个由 <code>z</code> 和 <code>w</code> 的平方和创建的新变量</td>
+</tr>
+<tr>
+<td><code>function</code></td>
+<td>可以在表达式中用的数学函数。例如，<code>log(y) ~ x + z + w</code> 表示通过 <code>x</code>、<code>z</code> 和 <code>w</code> 来预测 <code>log(y)</code></td>
+</tr>
+</tbody></table>
+<p>常见研究设计的表达式:</p>
+<table>
+<thead>
+<tr>
+<th>描述</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单因素 ANOVA</td>
+<td><code>y ~ A</code></td>
+</tr>
+<tr>
+<td>含单个协变量的单因素 ANCOVA</td>
+<td><code>y ~ x + A</code></td>
+</tr>
+<tr>
+<td>双因素 ANOVA</td>
+<td><code>y ~ A * B</code></td>
+</tr>
+<tr>
+<td>含两个协变量的双因素 ANCOVA</td>
+<td><code>y ~ x1 + x2 + A*B</code></td>
+</tr>
+<tr>
+<td>随机化区组</td>
+<td><code>y ~ B + A</code> （<code>B</code> 是区组因子）</td>
+</tr>
+<tr>
+<td>单因素组内 ANOVA</td>
+<td><code>y ~ A + Error(Subject/A)</code></td>
+</tr>
+<tr>
+<td>含单个组内因子（<code>W</code>）和单个组间因子（<code>B</code>）的重复测量 ANOVA</td>
+<td><code>y ~ B * W + Error(Subject/W)</code></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>小写字母表示定量变量，大写字母表示组别因子，<code>Subject</code>是对被试者独有的标识变量。</p>
+</li>
+<li><p>表达式中效应的顺序在两种情况下会造成影响：</p>
+<ul>
+<li><p>因子不止一个，并且是非平衡设计；</p>
+</li>
+<li><p>存在协变量。出现任意一种情况时，等式右边的变量都与其他每个变量相关。</p>
+</li>
+</ul>
+</li>
+<li><p>此时，我们无法清晰地划分它们对因变量的影响。例如，对于双因素方差分析，若不同处理方式中的观测数不同， 那么模型<code>y ~ A*B</code>与模型<code>y ~ B*A</code>的结果不同。</p>
+</li>
+</ul>
+<h4 id="结果可视化"><a href="#结果可视化" class="headerlink" title="结果可视化"></a>结果可视化</h4><p><code>HH</code>包中的<code>ancova()</code>函数可以绘制因变量、协变量和因子之间的关系图。</p>
+<p>这部分演示使用<code>multcomp</code>包中的<code>litter</code>数据集进行演示：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>multcomp<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>litter<span class="hljs-punctuation">)</span><br>  dose weight gesttime number<br><span class="hljs-number">1</span>    <span class="hljs-number">0</span>  <span class="hljs-number">28.05</span>     <span class="hljs-number">22.5</span>     <span class="hljs-number">15</span><br><span class="hljs-number">2</span>    <span class="hljs-number">0</span>  <span class="hljs-number">33.33</span>     <span class="hljs-number">22.5</span>     <span class="hljs-number">14</span><br><span class="hljs-number">3</span>    <span class="hljs-number">0</span>  <span class="hljs-number">36.37</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">14</span><br><span class="hljs-number">4</span>    <span class="hljs-number">0</span>  <span class="hljs-number">35.52</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">13</span><br><span class="hljs-number">5</span>    <span class="hljs-number">0</span>  <span class="hljs-number">36.77</span>     <span class="hljs-number">21.5</span>     <span class="hljs-number">15</span><br><span class="hljs-number">6</span>    <span class="hljs-number">0</span>  <span class="hljs-number">29.60</span>     <span class="hljs-number">23.0</span>      <span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
+
+<p>示例代码：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>HH<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> ancova<span class="hljs-punctuation">(</span>weight <span class="hljs-operator">~</span> gesttime <span class="hljs-operator">+</span> dose<span class="hljs-punctuation">,</span> data<span class="hljs-operator">=</span>litter<span class="hljs-punctuation">)</span><br>Analysis of Variance Table<br><br>Response<span class="hljs-operator">:</span> weight<br>          Df  Sum Sq Mean Sq <span class="hljs-built_in">F</span> value   Pr<span class="hljs-punctuation">(</span><span class="hljs-operator">&gt;</span><span class="hljs-built_in">F</span><span class="hljs-punctuation">)</span>   <br>gesttime   <span class="hljs-number">1</span>  <span class="hljs-number">134.30</span> <span class="hljs-number">134.304</span>  <span class="hljs-number">8.0493</span> <span class="hljs-number">0.005971</span> <span class="hljs-operator">*</span><span class="hljs-operator">*</span><br>dose       <span class="hljs-number">3</span>  <span class="hljs-number">137.12</span>  <span class="hljs-number">45.708</span>  <span class="hljs-number">2.7394</span> <span class="hljs-number">0.049883</span> <span class="hljs-operator">*</span> <br>Residuals <span class="hljs-number">69</span> <span class="hljs-number">1151.27</span>  <span class="hljs-number">16.685</span>                    <br><span class="hljs-operator">-</span><span class="hljs-operator">-</span><span class="hljs-operator">-</span><br>Signif. codes<span class="hljs-operator">:</span>  <span class="hljs-number">0</span> ‘<span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span>’ <span class="hljs-number">0.001</span> ‘<span class="hljs-operator">*</span><span class="hljs-operator">*</span>’ <span class="hljs-number">0.01</span> ‘<span class="hljs-operator">*</span>’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200813211014546.png" srcset="/img/loading.gif" lazyload alt="image-20200813211014546"></p>
+<h3 id="3-单因素方差分析-ANOVA"><a href="#3-单因素方差分析-ANOVA" class="headerlink" title="3. 单因素方差分析 (ANOVA)"></a>3. 单因素方差分析 (ANOVA)</h3><h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>单因素方差分析中，你感兴趣的是比较分类因子定义的两个或多个组别中的因变量均值。以<code>multcomp</code>包中的<code>cholesterol</code>数据集为例:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>multcomp<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> attach<span class="hljs-punctuation">(</span>cholesterol<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>cholesterol<span class="hljs-punctuation">)</span><br>    trt response<br><span class="hljs-number">1</span> <span class="hljs-number">1</span>time   <span class="hljs-number">3.8612</span><br><span class="hljs-number">2</span> <span class="hljs-number">1</span>time  <span class="hljs-number">10.3868</span><br><span class="hljs-number">3</span> <span class="hljs-number">1</span>time   <span class="hljs-number">5.9059</span><br><span class="hljs-number">4</span> <span class="hljs-number">1</span>time   <span class="hljs-number">3.0609</span><br><span class="hljs-number">5</span> <span class="hljs-number">1</span>time   <span class="hljs-number">7.7204</span><br><span class="hljs-number">6</span> <span class="hljs-number">1</span>time   <span class="hljs-number">2.7139</span><br><br><span class="hljs-comment"># 计算各组样本大小</span><br><span class="hljs-comment"># 每10个患者接受其中一个药物疗法</span><br><span class="hljs-operator">&gt;</span> table<span class="hljs-punctuation">(</span>trt<span class="hljs-punctuation">)</span><br>trt<br> <span class="hljs-number">1</span>time <span class="hljs-number">2</span>times <span class="hljs-number">4</span>times  drugD  drugE <br>    <span class="hljs-number">10</span>     <span class="hljs-number">10</span>     <span class="hljs-number">10</span>     <span class="hljs-number">10</span>     <span class="hljs-number">10</span> <br><br><span class="hljs-comment"># 计算各组均值</span><br><span class="hljs-comment"># 均值显示drugE降低胆固醇多，而1time降低胆固醇最少</span><br><span class="hljs-operator">&gt;</span> aggregate<span class="hljs-punctuation">(</span>response<span class="hljs-punctuation">,</span> by <span class="hljs-operator">=</span> <span class="hljs-built_in">list</span><span class="hljs-punctuation">(</span>trt<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> FUN <span class="hljs-operator">=</span> mean<span class="hljs-punctuation">)</span><br>  Group.1        x<br><span class="hljs-number">1</span>   <span class="hljs-number">1</span>time  <span class="hljs-number">5.78197</span><br><span class="hljs-number">2</span>  <span class="hljs-number">2</span>times  <span class="hljs-number">9.22497</span><br><span class="hljs-number">3</span>  <span class="hljs-number">4</span>times <span class="hljs-number">12.37478</span><br><span class="hljs-number">4</span>   drugD <span class="hljs-number">15.36117</span><br><span class="hljs-number">5</span>   drugE <span class="hljs-number">20.94752</span><br><br><span class="hljs-comment"># 计算各组标准差</span><br><span class="hljs-comment"># 各组的标准差相对恒定，在2.88到3.48间浮动</span><br><span class="hljs-operator">&gt;</span> aggregate<span class="hljs-punctuation">(</span>response<span class="hljs-punctuation">,</span> by<span class="hljs-operator">=</span><span class="hljs-built_in">list</span><span class="hljs-punctuation">(</span>trt<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> FUN<span class="hljs-operator">=</span>sd<span class="hljs-punctuation">)</span><br>  Group.1        x<br><span class="hljs-number">1</span>   <span class="hljs-number">1</span>time <span class="hljs-number">2.878113</span><br><span class="hljs-number">2</span>  <span class="hljs-number">2</span>times <span class="hljs-number">3.483054</span><br><span class="hljs-number">3</span>  <span class="hljs-number">4</span>times <span class="hljs-number">2.923119</span><br><span class="hljs-number">4</span>   drugD <span class="hljs-number">3.454636</span><br><span class="hljs-number">5</span>   drugE <span class="hljs-number">3.345003</span><br><br><span class="hljs-comment"># 检验组间差异（ANOVA）</span><br><span class="hljs-comment"># ANOVA对治疗方式（trt）的F检验非常显著（p&lt;0.0001），</span><br><span class="hljs-comment"># 说明五种疗法的效果不同</span><br><span class="hljs-operator">&gt;</span> fit <span class="hljs-operator">&lt;-</span> aov<span class="hljs-punctuation">(</span>response <span class="hljs-operator">~</span> trt<span class="hljs-punctuation">)</span><br><br><span class="hljs-operator">&gt;</span> fit<br>Call<span class="hljs-operator">:</span><br>   aov<span class="hljs-punctuation">(</span>formula <span class="hljs-operator">=</span> response <span class="hljs-operator">~</span> trt<span class="hljs-punctuation">)</span><br><br>Terms<span class="hljs-operator">:</span><br>                      trt Residuals<br>Sum of Squares  <span class="hljs-number">1351.3690</span>  <span class="hljs-number">468.7504</span><br>Deg. of Freedom         <span class="hljs-number">4</span>        <span class="hljs-number">45</span><br><br>Residual standard error<span class="hljs-operator">:</span> <span class="hljs-number">3.227488</span><br>Estimated effects may be unbalanced<br><br><span class="hljs-operator">&gt;</span> summary<span class="hljs-punctuation">(</span>fit<span class="hljs-punctuation">)</span><br>            Df Sum Sq Mean Sq <span class="hljs-built_in">F</span> value   Pr<span class="hljs-punctuation">(</span><span class="hljs-operator">&gt;</span><span class="hljs-built_in">F</span><span class="hljs-punctuation">)</span>    <br>trt          <span class="hljs-number">4</span> <span class="hljs-number">1351.4</span>   <span class="hljs-number">337.8</span>   <span class="hljs-number">32.43</span> <span class="hljs-number">9.82e-13</span> <span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span><br>Residuals   <span class="hljs-number">45</span>  <span class="hljs-number">468.8</span>    <span class="hljs-number">10.4</span>                     <br><span class="hljs-operator">-</span><span class="hljs-operator">-</span><span class="hljs-operator">-</span><br>Signif. codes<span class="hljs-operator">:</span>  <span class="hljs-number">0</span> ‘<span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span>’ <span class="hljs-number">0.001</span> ‘<span class="hljs-operator">*</span><span class="hljs-operator">*</span>’ <span class="hljs-number">0.01</span> ‘<span class="hljs-operator">*</span>’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span><br><br><span class="hljs-comment"># 展示数据：各组的均值和置信区间</span><br><span class="hljs-operator">&gt;</span> plot<span class="hljs-punctuation">(</span>response <span class="hljs-operator">~</span> trt<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803212729715.png" srcset="/img/loading.gif" lazyload alt="image-20200803212729715"></p>
+<h4 id="多重比较"><a href="#多重比较" class="headerlink" title="多重比较"></a>多重比较</h4><p>虽然ANOVA对各疗法的F检验表明五种药物疗法效果不同，但是并没有告诉你哪种疗法与其他疗法不同。多重比较可以解决这个问题。例如，<code>TukeyHSD()</code>函数提供了对各组均值差异的成对检验，这个函数需要在<code>aov()</code>函数得到单因素方差分析的结果后（例如：<code>fit &lt;- aov(factor1 ~ factor2)</code>），对得到的结果进行分析（例如: <code>TukeyHSD(fit)</code>，即<code>TukeyHSD(aov(factor1 ~ factor2))</code>）: </p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> ...<br><br><span class="hljs-comment"># 可以看到，1time和2times的均值差异不显著（p=0.138），</span><br><span class="hljs-comment"># 而1time和4times间的差异非常显著（p&lt;0.001）。</span><br><span class="hljs-operator">&gt;</span> TukeyHSD<span class="hljs-punctuation">(</span>fit<span class="hljs-punctuation">)</span><br>  Tukey multiple comparisons of means<br>    <span class="hljs-number">95</span>% family<span class="hljs-operator">-</span>wise confidence level<br><br>Fit<span class="hljs-operator">:</span> aov<span class="hljs-punctuation">(</span>formula <span class="hljs-operator">=</span> response <span class="hljs-operator">~</span> trt<span class="hljs-punctuation">)</span><br><br><span class="hljs-operator">$</span>trt<br>                  diff        lwr       upr     p adj<br><span class="hljs-number">2</span>times<span class="hljs-operator">-</span><span class="hljs-number">1</span>time   <span class="hljs-number">3.44300</span> <span class="hljs-operator">-</span><span class="hljs-number">0.6582817</span>  <span class="hljs-number">7.544282</span> <span class="hljs-number">0.1380949</span><br><span class="hljs-number">4</span>times<span class="hljs-operator">-</span><span class="hljs-number">1</span>time   <span class="hljs-number">6.59281</span>  <span class="hljs-number">2.4915283</span> <span class="hljs-number">10.694092</span> <span class="hljs-number">0.0003542</span><br>drugD<span class="hljs-operator">-</span><span class="hljs-number">1</span>time    <span class="hljs-number">9.57920</span>  <span class="hljs-number">5.4779183</span> <span class="hljs-number">13.680482</span> <span class="hljs-number">0.0000003</span><br>drugE<span class="hljs-operator">-</span><span class="hljs-number">1</span>time   <span class="hljs-number">15.16555</span> <span class="hljs-number">11.0642683</span> <span class="hljs-number">19.266832</span> <span class="hljs-number">0.0000000</span><br><span class="hljs-number">4</span>times<span class="hljs-operator">-</span><span class="hljs-number">2</span>times  <span class="hljs-number">3.14981</span> <span class="hljs-operator">-</span><span class="hljs-number">0.9514717</span>  <span class="hljs-number">7.251092</span> <span class="hljs-number">0.2050382</span><br>drugD<span class="hljs-operator">-</span><span class="hljs-number">2</span>times   <span class="hljs-number">6.13620</span>  <span class="hljs-number">2.0349183</span> <span class="hljs-number">10.237482</span> <span class="hljs-number">0.0009611</span><br>drugE<span class="hljs-operator">-</span><span class="hljs-number">2</span>times  <span class="hljs-number">11.72255</span>  <span class="hljs-number">7.6212683</span> <span class="hljs-number">15.823832</span> <span class="hljs-number">0.0000000</span><br>drugD<span class="hljs-operator">-</span><span class="hljs-number">4</span>times   <span class="hljs-number">2.98639</span> <span class="hljs-operator">-</span><span class="hljs-number">1.1148917</span>  <span class="hljs-number">7.087672</span> <span class="hljs-number">0.2512446</span><br>drugE<span class="hljs-operator">-</span><span class="hljs-number">4</span>times   <span class="hljs-number">8.57274</span>  <span class="hljs-number">4.4714583</span> <span class="hljs-number">12.674022</span> <span class="hljs-number">0.0000037</span><br>drugE<span class="hljs-operator">-</span>drugD    <span class="hljs-number">5.58635</span>  <span class="hljs-number">1.4850683</span>  <span class="hljs-number">9.687632</span> <span class="hljs-number">0.0030633</span><br><br><span class="hljs-comment"># 结果可视化</span><br><span class="hljs-comment"># 图形中置信区间包含0的疗法说明差异不显著（p&gt;0.5）</span><br><span class="hljs-operator">&gt;</span> opar <span class="hljs-operator">&lt;-</span> par<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> par<span class="hljs-punctuation">(</span>las <span class="hljs-operator">=</span> <span class="hljs-number">2</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> par<span class="hljs-punctuation">(</span>mar<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">5</span><span class="hljs-punctuation">,</span><span class="hljs-number">8</span><span class="hljs-punctuation">,</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> plot<span class="hljs-punctuation">(</span>TukeyHSD<span class="hljs-punctuation">(</span>fit<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> par<span class="hljs-punctuation">(</span>opar<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803214000157.png" srcset="/img/loading.gif" lazyload alt="image-20200803214000157"></p>
+<p><code>multcomp</code>包中的<code>glht()</code>函数提供了多重均值比较更为全面的方法，既适用于线性模型，也适用于广义线性模型。</p>
+<p>下面的代码重现了Tukey HSD检验:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>multcomp<span class="hljs-punctuation">)</span><br><br><span class="hljs-operator">&gt;</span> tuk <span class="hljs-operator">&lt;-</span> glht<span class="hljs-punctuation">(</span>fit<span class="hljs-punctuation">,</span> linfct<span class="hljs-operator">=</span>mcp<span class="hljs-punctuation">(</span>trt<span class="hljs-operator">=</span><span class="hljs-string">&quot;Tukey&quot;</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> tuk<br><br>	 General Linear Hypotheses<br><br>Multiple Comparisons of Means<span class="hljs-operator">:</span> Tukey Contrasts<br><br><br>Linear Hypotheses<span class="hljs-operator">:</span><br>                     Estimate<br><span class="hljs-number">2</span>times <span class="hljs-operator">-</span> <span class="hljs-number">1</span>time <span class="hljs-operator">==</span> <span class="hljs-number">0</span>     <span class="hljs-number">3.443</span><br><span class="hljs-number">4</span>times <span class="hljs-operator">-</span> <span class="hljs-number">1</span>time <span class="hljs-operator">==</span> <span class="hljs-number">0</span>     <span class="hljs-number">6.593</span><br>drugD <span class="hljs-operator">-</span> <span class="hljs-number">1</span>time <span class="hljs-operator">==</span> <span class="hljs-number">0</span>      <span class="hljs-number">9.579</span><br>drugE <span class="hljs-operator">-</span> <span class="hljs-number">1</span>time <span class="hljs-operator">==</span> <span class="hljs-number">0</span>     <span class="hljs-number">15.166</span><br><span class="hljs-number">4</span>times <span class="hljs-operator">-</span> <span class="hljs-number">2</span>times <span class="hljs-operator">==</span> <span class="hljs-number">0</span>    <span class="hljs-number">3.150</span><br>drugD <span class="hljs-operator">-</span> <span class="hljs-number">2</span>times <span class="hljs-operator">==</span> <span class="hljs-number">0</span>     <span class="hljs-number">6.136</span><br>drugE <span class="hljs-operator">-</span> <span class="hljs-number">2</span>times <span class="hljs-operator">==</span> <span class="hljs-number">0</span>    <span class="hljs-number">11.723</span><br>drugD <span class="hljs-operator">-</span> <span class="hljs-number">4</span>times <span class="hljs-operator">==</span> <span class="hljs-number">0</span>     <span class="hljs-number">2.986</span><br>drugE <span class="hljs-operator">-</span> <span class="hljs-number">4</span>times <span class="hljs-operator">==</span> <span class="hljs-number">0</span>     <span class="hljs-number">8.573</span><br>drugE <span class="hljs-operator">-</span> drugD <span class="hljs-operator">==</span> <span class="hljs-number">0</span>      <span class="hljs-number">5.586</span><br><br><span class="hljs-comment"># 结果可视化</span><br><span class="hljs-operator">&gt;</span> opar <span class="hljs-operator">&lt;-</span> par<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> par<span class="hljs-punctuation">(</span>mar<span class="hljs-operator">=</span><span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">5</span><span class="hljs-punctuation">,</span><span class="hljs-number">4</span><span class="hljs-punctuation">,</span><span class="hljs-number">6</span><span class="hljs-punctuation">,</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> plot<span class="hljs-punctuation">(</span>cld<span class="hljs-punctuation">(</span>tuk<span class="hljs-punctuation">,</span> level<span class="hljs-operator">=</span><span class="hljs-number">.05</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span>col<span class="hljs-operator">=</span><span class="hljs-string">&quot;lightgrey&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> par<span class="hljs-punctuation">(</span>opar<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803214823691.png" srcset="/img/loading.gif" lazyload alt="image-20200803214823691"></p>
+<h4 id="评估检验的假设条件"><a href="#评估检验的假设条件" class="headerlink" title="评估检验的假设条件"></a>评估检验的假设条件</h4><p>我们对于结果的信心依赖于做统计检验时数据满足假设条件的程度。单因素方差分析中，我们假设因变量服从正态分布，各组方差相等。</p>
+<p>这部分的演示使用<code>multcomp</code>包中的<code>cholesterol</code>来演示：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> data<span class="hljs-punctuation">(</span>cholesterol<span class="hljs-punctuation">,</span> package <span class="hljs-operator">=</span> <span class="hljs-string">&quot;multcomp&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>cholesterol<span class="hljs-punctuation">)</span><br>    trt response<br><span class="hljs-number">1</span> <span class="hljs-number">1</span>time   <span class="hljs-number">3.8612</span><br><span class="hljs-number">2</span> <span class="hljs-number">1</span>time  <span class="hljs-number">10.3868</span><br><span class="hljs-number">3</span> <span class="hljs-number">1</span>time   <span class="hljs-number">5.9059</span><br><span class="hljs-number">4</span> <span class="hljs-number">1</span>time   <span class="hljs-number">3.0609</span><br><span class="hljs-number">5</span> <span class="hljs-number">1</span>time   <span class="hljs-number">7.7204</span><br><span class="hljs-number">6</span> <span class="hljs-number">1</span>time   <span class="hljs-number">2.7139</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="1-正态性检验：Q-Q-Plot"><a href="#1-正态性检验：Q-Q-Plot" class="headerlink" title="(1) 正态性检验：Q-Q Plot"></a>(1) 正态性检验：Q-Q Plot</h5><p>可以使用Q-Q图来检验正态性假设，这个过程需要使用<code>car</code>包中的<code>qqPlot()</code>函数：</p>
+<p>示例代码：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> qqPlot<span class="hljs-punctuation">(</span>lm<span class="hljs-punctuation">(</span>response <span class="hljs-operator">~</span> trt<span class="hljs-punctuation">,</span> data<span class="hljs-operator">=</span>cholesterol<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <br>         simulate<span class="hljs-operator">=</span><span class="hljs-literal">TRUE</span><span class="hljs-punctuation">,</span> main<span class="hljs-operator">=</span><span class="hljs-string">&quot;Q-Q Plot&quot;</span><span class="hljs-punctuation">,</span> labels<span class="hljs-operator">=</span><span class="hljs-literal">FALSE</span><span class="hljs-punctuation">)</span><br><span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">]</span> <span class="hljs-number">19</span> <span class="hljs-number">38</span><br></code></pre></td></tr></table></figure>
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200813212955405.png" srcset="/img/loading.gif" lazyload alt="image-20200813212955405" style="zoom:67%;" />
+
+<p><code>qqPlot()</code>要求用<code>lm()</code>拟合。图形如上图所示。数据落在95%的置信区间范围内，说明满足正态性假设。</p>
+<h5 id="2-方差齐性检验"><a href="#2-方差齐性检验" class="headerlink" title="(2) 方差齐性检验"></a>(2) 方差齐性检验</h5><p>R提供了一些可用来做方差齐性检验的函数。例如，可以通过如下代码来做Bartlett检验：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> bartlett.test<span class="hljs-punctuation">(</span>response <span class="hljs-operator">~</span> trt<span class="hljs-punctuation">,</span> data<span class="hljs-operator">=</span>cholesterol<span class="hljs-punctuation">)</span><br><br>	Bartlett test of homogeneity of variances<br><br>data<span class="hljs-operator">:</span>  response by trt<br>Bartlett<span class="hljs-string">&#x27;s K-squared = 0.57975, df = 4, p-value = 0.9653</span><br></code></pre></td></tr></table></figure>
+
+<p>Fligner-Killeen检验（<code>fligner.test()</code>函数）:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> fligner.test<span class="hljs-punctuation">(</span>response <span class="hljs-operator">~</span> trt<span class="hljs-punctuation">,</span> data<span class="hljs-operator">=</span>cholesterol<span class="hljs-punctuation">)</span><br><br>	Fligner<span class="hljs-operator">-</span>Killeen test of homogeneity of variances<br><br>data<span class="hljs-operator">:</span>  response by trt<br>Fligner<span class="hljs-operator">-</span>Killeen<span class="hljs-operator">:</span>med chi<span class="hljs-operator">-</span>squared <span class="hljs-operator">=</span> <span class="hljs-number">0.74277</span><span class="hljs-punctuation">,</span> df <span class="hljs-operator">=</span> <span class="hljs-number">4</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">=</span> <span class="hljs-number">0.946</span><br><br><br></code></pre></td></tr></table></figure>
+
+<p>和Brown-Forsythe检验（<code>HH</code>包中的<code>hov()</code>函数）</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> hov<span class="hljs-punctuation">(</span>response <span class="hljs-operator">~</span> trt<span class="hljs-punctuation">,</span> data<span class="hljs-operator">=</span>cholesterol<span class="hljs-punctuation">)</span><br><br>	hov<span class="hljs-operator">:</span> Brown<span class="hljs-operator">-</span>Forsyth<br><br>data<span class="hljs-operator">:</span>  response<br><span class="hljs-built_in">F</span> <span class="hljs-operator">=</span> <span class="hljs-number">0.075477</span><span class="hljs-punctuation">,</span> df<span class="hljs-operator">:</span>trt <span class="hljs-operator">=</span> <span class="hljs-number">4</span><span class="hljs-punctuation">,</span> df<span class="hljs-operator">:</span>Residuals <span class="hljs-operator">=</span> <span class="hljs-number">45</span><span class="hljs-punctuation">,</span> p<span class="hljs-operator">-</span>value <span class="hljs-operator">=</span> <span class="hljs-number">0.9893</span><br>alternative hypothesis<span class="hljs-operator">:</span> variances are not identical<br></code></pre></td></tr></table></figure>
+
+<h5 id="3-离群点检测"><a href="#3-离群点检测" class="headerlink" title="(3) 离群点检测"></a>(3) 离群点检测</h5><p>可利用<code>car</code>包中的<code>outlierTest()</code>函数来检测离群点：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>car<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> outlierTest<span class="hljs-punctuation">(</span>fit<span class="hljs-punctuation">)</span><br>No Studentized residuals with Bonferroni p <span class="hljs-operator">&lt;</span> <span class="hljs-number">0.05</span><br>Largest <span class="hljs-operator">|</span>rstudent<span class="hljs-operator">|</span><span class="hljs-operator">:</span><br>    rstudent unadjusted p<span class="hljs-operator">-</span>value Bonferroni p<br><span class="hljs-number">63</span> <span class="hljs-operator">-</span><span class="hljs-number">3.109569</span>          <span class="hljs-number">0.0027364</span>       <span class="hljs-number">0.2025</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<p>对于这个例子，综上：从输出结果来看，并没有证据说明胆固醇数据（<code>cholesterol</code>）中含有离群点（当p&gt;1时将产生NA）。因此根据Q-Q图、Bartlett检验和离群点检验，该数据似乎可以用ANOVA模型拟合得很好。这些方法反过来增强了我们对于所得结果的信心。</p>
+<h3 id="4-单因素协方差分析-ANCOVA"><a href="#4-单因素协方差分析-ANCOVA" class="headerlink" title="4. 单因素协方差分析 (ANCOVA)"></a>4. 单因素协方差分析 (ANCOVA)</h3><h4 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h4><p>单因素协方差分析（ANCOVA）扩展了单因素方差分析（ANOVA），包含一个或多个定量的协变量。</p>
+<p>这部分演示使用<code>multcomp</code>包中的<code>litter</code>数据集进行演示：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> data<span class="hljs-punctuation">(</span>litter<span class="hljs-punctuation">,</span> package <span class="hljs-operator">=</span> <span class="hljs-string">&quot;multcomp&quot;</span><span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>litter<span class="hljs-punctuation">)</span><br>  dose weight gesttime number<br><span class="hljs-number">1</span>    <span class="hljs-number">0</span>  <span class="hljs-number">28.05</span>     <span class="hljs-number">22.5</span>     <span class="hljs-number">15</span><br><span class="hljs-number">2</span>    <span class="hljs-number">0</span>  <span class="hljs-number">33.33</span>     <span class="hljs-number">22.5</span>     <span class="hljs-number">14</span><br><span class="hljs-number">3</span>    <span class="hljs-number">0</span>  <span class="hljs-number">36.37</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">14</span><br><span class="hljs-number">4</span>    <span class="hljs-number">0</span>  <span class="hljs-number">35.52</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">13</span><br><span class="hljs-number">5</span>    <span class="hljs-number">0</span>  <span class="hljs-number">36.77</span>     <span class="hljs-number">21.5</span>     <span class="hljs-number">15</span><br><span class="hljs-number">6</span>    <span class="hljs-number">0</span>  <span class="hljs-number">29.60</span>     <span class="hljs-number">23.0</span>      <span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
+
+<p>示例代码：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> attach<span class="hljs-punctuation">(</span>litter<span class="hljs-punctuation">)</span><br><br><span class="hljs-operator">&gt;</span> table<span class="hljs-punctuation">(</span>dose<span class="hljs-punctuation">)</span><br>dose<br>  <span class="hljs-number">0</span>   <span class="hljs-number">5</span>  <span class="hljs-number">50</span> <span class="hljs-number">500</span> <br> <span class="hljs-number">20</span>  <span class="hljs-number">19</span>  <span class="hljs-number">18</span>  <span class="hljs-number">17</span> <br><br><span class="hljs-operator">&gt;</span> aggregate<span class="hljs-punctuation">(</span>weight<span class="hljs-punctuation">,</span> by<span class="hljs-operator">=</span><span class="hljs-built_in">list</span><span class="hljs-punctuation">(</span>dose<span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> FUN<span class="hljs-operator">=</span>mean<span class="hljs-punctuation">)</span><br>  Group.1        x<br><span class="hljs-number">1</span>       <span class="hljs-number">0</span> <span class="hljs-number">32.30850</span><br><span class="hljs-number">2</span>       <span class="hljs-number">5</span> <span class="hljs-number">29.30842</span><br><span class="hljs-number">3</span>      <span class="hljs-number">50</span> <span class="hljs-number">29.86611</span><br><span class="hljs-number">4</span>     <span class="hljs-number">500</span> <span class="hljs-number">29.64647</span><br><br><span class="hljs-operator">&gt;</span> fit <span class="hljs-operator">&lt;-</span> aov<span class="hljs-punctuation">(</span>weight <span class="hljs-operator">~</span> gesttime <span class="hljs-operator">+</span> dose<span class="hljs-punctuation">)</span><br><span class="hljs-operator">&gt;</span> summary<span class="hljs-punctuation">(</span>fit<span class="hljs-punctuation">)</span><br>            Df Sum Sq Mean Sq <span class="hljs-built_in">F</span> value  Pr<span class="hljs-punctuation">(</span><span class="hljs-operator">&gt;</span><span class="hljs-built_in">F</span><span class="hljs-punctuation">)</span>   <br>gesttime     <span class="hljs-number">1</span>  <span class="hljs-number">134.3</span>  <span class="hljs-number">134.30</span>   <span class="hljs-number">8.049</span> <span class="hljs-number">0.00597</span> <span class="hljs-operator">*</span><span class="hljs-operator">*</span><br>dose         <span class="hljs-number">3</span>  <span class="hljs-number">137.1</span>   <span class="hljs-number">45.71</span>   <span class="hljs-number">2.739</span> <span class="hljs-number">0.04988</span> <span class="hljs-operator">*</span> <br>Residuals   <span class="hljs-number">69</span> <span class="hljs-number">1151.3</span>   <span class="hljs-number">16.69</span>                   <br><span class="hljs-operator">-</span><span class="hljs-operator">-</span><span class="hljs-operator">-</span><br>Signif. codes<span class="hljs-operator">:</span>  <span class="hljs-number">0</span> ‘<span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span>’ <span class="hljs-number">0.001</span> ‘<span class="hljs-operator">*</span><span class="hljs-operator">*</span>’ <span class="hljs-number">0.01</span> ‘<span class="hljs-operator">*</span>’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span><br><br><span class="hljs-operator">&gt;</span> detach<span class="hljs-punctuation">(</span>litter<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="计算调整的均值"><a href="#计算调整的均值" class="headerlink" title="计算调整的均值"></a>计算调整的均值</h4><p>由于使用了协变量，你可能想要获取调整的组均值，即去除协变量效应后的组均值。可使用<code>effects</code>包中的<code>effects()</code>函数来计算调整的均值：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>effects<span class="hljs-punctuation">)</span><br><br><span class="hljs-operator">&gt;</span> effect<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;dose&quot;</span><span class="hljs-punctuation">,</span> fit<span class="hljs-punctuation">)</span><br><br> dose effect<br>dose<br>       <span class="hljs-number">0</span>        <span class="hljs-number">5</span>       <span class="hljs-number">50</span>      <span class="hljs-number">500</span> <br><span class="hljs-number">32.35367</span> <span class="hljs-number">28.87672</span> <span class="hljs-number">30.56614</span> <span class="hljs-number">29.33460</span> <br></code></pre></td></tr></table></figure>
+
+<h4 id="多重比较-1"><a href="#多重比较-1" class="headerlink" title="多重比较"></a>多重比较</h4><p>使用<code>multcomp</code>包来对所有均值进行成对比较。另外，<code>multcomp</code>包还可以用来检验用户自定义的均值假设。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>multcomp<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> contrast <span class="hljs-operator">&lt;-</span> rbind<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;no drug vs. drug&quot;</span> <span class="hljs-operator">=</span> <span class="hljs-built_in">c</span><span class="hljs-punctuation">(</span><span class="hljs-number">3</span><span class="hljs-punctuation">,</span> <span class="hljs-operator">-</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-operator">-</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-operator">-</span><span class="hljs-number">1</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> summary<span class="hljs-punctuation">(</span>glht<span class="hljs-punctuation">(</span>fit<span class="hljs-punctuation">,</span> linfct<span class="hljs-operator">=</span>mcp<span class="hljs-punctuation">(</span>dose<span class="hljs-operator">=</span>contrast<span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">)</span><br><br>	 Simultaneous Tests <span class="hljs-keyword">for</span> General Linear Hypotheses<br><br>Multiple Comparisons of Means<span class="hljs-operator">:</span> User<span class="hljs-operator">-</span>defined Contrasts<br><br><br>Fit<span class="hljs-operator">:</span> aov<span class="hljs-punctuation">(</span>formula <span class="hljs-operator">=</span> weight <span class="hljs-operator">~</span> gesttime <span class="hljs-operator">+</span> dose<span class="hljs-punctuation">)</span><br><br>Linear Hypotheses<span class="hljs-operator">:</span><br>                      Estimate Std. Error t value Pr<span class="hljs-punctuation">(</span><span class="hljs-operator">&gt;</span><span class="hljs-operator">|</span>t<span class="hljs-operator">|</span><span class="hljs-punctuation">)</span>  <br>no drug vs. drug <span class="hljs-operator">==</span> <span class="hljs-number">0</span>    <span class="hljs-number">8.284</span>      <span class="hljs-number">3.209</span>   <span class="hljs-number">2.581</span>    <span class="hljs-number">0.012</span> <span class="hljs-operator">*</span><br><span class="hljs-operator">-</span><span class="hljs-operator">-</span><span class="hljs-operator">-</span><br>Signif. codes<span class="hljs-operator">:</span>  <span class="hljs-number">0</span> ‘<span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span>’ <span class="hljs-number">0.001</span> ‘<span class="hljs-operator">*</span><span class="hljs-operator">*</span>’ <span class="hljs-number">0.01</span> ‘<span class="hljs-operator">*</span>’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span><br><span class="hljs-punctuation">(</span>Adjusted p values reported <span class="hljs-operator">-</span><span class="hljs-operator">-</span> single<span class="hljs-operator">-</span>step method<span class="hljs-punctuation">)</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="评估检验的假设条件-ANCOVA-Special，检验回归斜率的同质性"><a href="#评估检验的假设条件-ANCOVA-Special，检验回归斜率的同质性" class="headerlink" title="评估检验的假设条件: ANCOVA Special，检验回归斜率的同质性"></a>评估检验的假设条件: ANCOVA Special，检验回归斜率的同质性</h4><p>ANCOVA与ANOVA相同，都需要正态性和同方差性假设，可以用在ANOVA中提到的相同的步骤来检验这些假设条件。另外，ANCOVA还假定回归斜率相同。</p>
+<p>以<code>multcomp</code>包中的<code>litter</code>数据集为例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> head<span class="hljs-punctuation">(</span>litter<span class="hljs-punctuation">)</span><br>  dose weight gesttime number<br><span class="hljs-number">1</span>    <span class="hljs-number">0</span>  <span class="hljs-number">28.05</span>     <span class="hljs-number">22.5</span>     <span class="hljs-number">15</span><br><span class="hljs-number">2</span>    <span class="hljs-number">0</span>  <span class="hljs-number">33.33</span>     <span class="hljs-number">22.5</span>     <span class="hljs-number">14</span><br><span class="hljs-number">3</span>    <span class="hljs-number">0</span>  <span class="hljs-number">36.37</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">14</span><br><span class="hljs-number">4</span>    <span class="hljs-number">0</span>  <span class="hljs-number">35.52</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">13</span><br><span class="hljs-number">5</span>    <span class="hljs-number">0</span>  <span class="hljs-number">36.77</span>     <span class="hljs-number">21.5</span>     <span class="hljs-number">15</span><br><span class="hljs-number">6</span>    <span class="hljs-number">0</span>  <span class="hljs-number">29.60</span>     <span class="hljs-number">23.0</span>      <span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
+
+<p>假定四个处理组通过<strong>怀孕时间</strong> (gesttime)来预测<strong>出生体重</strong> (weight)的回归斜率都相同。ANCOVA模型包含<strong>怀孕时间</strong> (gesttime)×<strong>剂量</strong> (dose)的交互项时，可对回归斜率的同质性进行检验。交互效应若显著，则意味着时间和幼崽出生体重间的关系依赖于药物剂量的水平：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs R"><span class="hljs-operator">&gt;</span> library<span class="hljs-punctuation">(</span>multcomp<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> fit2 <span class="hljs-operator">&lt;-</span> aov<span class="hljs-punctuation">(</span>weight <span class="hljs-operator">~</span> gesttime<span class="hljs-operator">*</span>dose<span class="hljs-punctuation">,</span> data<span class="hljs-operator">=</span>litter<span class="hljs-punctuation">)</span> <br><span class="hljs-operator">&gt;</span> summary<span class="hljs-punctuation">(</span>fit2<span class="hljs-punctuation">)</span><br>              Df Sum Sq Mean Sq <span class="hljs-built_in">F</span> value  Pr<span class="hljs-punctuation">(</span><span class="hljs-operator">&gt;</span><span class="hljs-built_in">F</span><span class="hljs-punctuation">)</span>   <br>gesttime       <span class="hljs-number">1</span>  <span class="hljs-number">134.3</span>  <span class="hljs-number">134.30</span>   <span class="hljs-number">8.289</span> <span class="hljs-number">0.00537</span> <span class="hljs-operator">*</span><span class="hljs-operator">*</span><br>dose           <span class="hljs-number">3</span>  <span class="hljs-number">137.1</span>   <span class="hljs-number">45.71</span>   <span class="hljs-number">2.821</span> <span class="hljs-number">0.04556</span> <span class="hljs-operator">*</span> <br>gesttime<span class="hljs-operator">:</span>dose  <span class="hljs-number">3</span>   <span class="hljs-number">81.9</span>   <span class="hljs-number">27.29</span>   <span class="hljs-number">1.684</span> <span class="hljs-number">0.17889</span>   <br>Residuals     <span class="hljs-number">66</span> <span class="hljs-number">1069.4</span>   <span class="hljs-number">16.20</span>                   <br><span class="hljs-operator">-</span><span class="hljs-operator">-</span><span class="hljs-operator">-</span><br>Signif. codes<span class="hljs-operator">:</span>  <span class="hljs-number">0</span> ‘<span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span>’ <span class="hljs-number">0.001</span> ‘<span class="hljs-operator">*</span><span class="hljs-operator">*</span>’ <span class="hljs-number">0.01</span> ‘<span class="hljs-operator">*</span>’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<p>可以看到交互效应不显著，支持了斜率相等的假设。若假设不成立，可以尝试变换协变量或因变量，或使用能对每个斜率独立解释的模型，或使用不需要假设回归斜率同质性的非参数ANCOVA方法。<code>sm</code>包中的<code>sm.ancova()</code>函数为后者提供了一个例子。</p>
+<hr>
+<p>方差分析当然不止这么点，只不过双因素方差分析、重复测量方差分析、多元方差分析对我来说用的实在太少，于是也就不费心在这里去记录课本上的内容以及相关笔记了。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" class="category-chain-item">软件使用总结</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/" class="category-chain-item">R</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E9%80%9F%E6%9F%A5/" class="print-no-link">#速查</a>
+      
+        <a href="/tags/R/" class="print-no-link">#R</a>
+      
+        <a href="/tags/Statistics/" class="print-no-link">#Statistics</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>05. R &lt;- 独立性、相关性、假设检验以及相关统计量</div>
+      <div>https://zhenyumi.github.io/posts/de9baf0b/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年8月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/98828963/" title="L23 Cellular motility">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L23 Cellular motility</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/fe88ba67/" title="04. R &lt;- 概率分布">
+                        <span class="hidden-mobile">04. R &lt;- 概率分布</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

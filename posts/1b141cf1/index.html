@@ -1,0 +1,1259 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="一、A First Look at MetabolismDifferent Kinds of Organisms1. Two Major CategoriesMetabolism can be subdivided into two major categories:  Catabolism（分解代谢） - those processes in which complex substances a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L01 Chemical Logic of Metabolism">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/1b141cf1/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="一、A First Look at MetabolismDifferent Kinds of Organisms1. Two Major CategoriesMetabolism can be subdivided into two major categories:  Catabolism（分解代谢） - those processes in which complex substances a">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20II%20%28Metabolism%29/%E7%99%BD%E3%81%86%E3%81%95%E3%81%8E.png">
+<meta property="article:published_time" content="2020-07-17T13:57:33.000Z">
+<meta property="article:modified_time" content="2020-07-17T13:57:33.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Biochemistry II (Metabolism)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20II%20%28Metabolism%29/%E7%99%BD%E3%81%86%E3%81%95%E3%81%8E.png">
+  
+  
+  
+  <title>L01 Chemical Logic of Metabolism - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20II%20%28Metabolism%29/Ghost%20of%20Tsushima.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L01 Chemical Logic of Metabolism</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-17 21:57" pubdate>
+          2020年7月17日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          18 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L01 Chemical Logic of Metabolism</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、A-First-Look-at-Metabolism"><a href="#一、A-First-Look-at-Metabolism" class="headerlink" title="一、A First Look at Metabolism"></a>一、A First Look at Metabolism</h1><h2 id="Different-Kinds-of-Organisms"><a href="#Different-Kinds-of-Organisms" class="headerlink" title="Different Kinds of Organisms"></a>Different Kinds of Organisms</h2><h3 id="1-Two-Major-Categories"><a href="#1-Two-Major-Categories" class="headerlink" title="1. Two Major Categories"></a>1. Two Major Categories</h3><p>Metabolism can be subdivided into two major categories:</p>
+<ol>
+<li><p><strong>Catabolism</strong>（分解代谢） - those processes in which complex substances are degraded to simpler molecules. </p>
+</li>
+<li><p><strong>Anabolism</strong> （合成代谢）- those processes concerned primarily with the synthesis of complex organic molecules.</p>
+</li>
+</ol>
+<p>Catabolism is generally accompanied by the net release of chemical energy.</p>
+<p>Anabolism requires a net input of chemical energy. </p>
+<p>These two sets of reactions are coupled together by ATP. </p>
+<h3 id="2-Source-of-The-Fuel-Molecules"><a href="#2-Source-of-The-Fuel-Molecules" class="headerlink" title="2. Source of The Fuel Molecules"></a>2. Source of The Fuel Molecules</h3><p>A fundamental distinction among organisms lies in the <u>source of their fuel molecules</u>. </p>
+<ol>
+<li><p><strong>Autotrophs（自养生物）</strong> (from Greek, “self-feeding”) synthesize glucose and all of their other organic compounds from inorganic carbon, supplied as CO2. </p>
+</li>
+<li><p><strong>Heterotrophs（异养生物）</strong> (“feeding on others”) can synthesize their organic metabolites only from other organic compounds, which they must therefore consume.</p>
+</li>
+</ol>
+<p>A primary difference between plants and animals is that <u>plants</u> are autotrophs and <u>animals</u> are heterotrophs.</p>
+<h3 id="3-Need-of-Oxygen"><a href="#3-Need-of-Oxygen" class="headerlink" title="3. Need of Oxygen"></a>3. Need of Oxygen</h3><p>Microorganisms show adaptability (适应性) with respect to their ability to survive in the absence of oxygen. </p>
+<p>Virtually all multicellular organisms and many bacteria are strictly <strong>aerobic（需氧的，有氧的）</strong> organisms; they depend absolutely upon <u>respiration</u>, the coupling of energy generation to the oxidation of nutrients by oxygen. </p>
+<p>By contrast, many <u>microorganisms</u> either can, or must, grow in <strong>anaerobic（无氧;厌氧菌的）</strong> environments, deriving their metabolic energy from processes that do not involve molecular oxygen.</p>
+<h2 id="Three-Stages"><a href="#Three-Stages" class="headerlink" title="Three Stages"></a>Three Stages</h2><p>Both catabolic and anabolic pathways occur in three stages of complexity:</p>
+<ol>
+<li>Stage 1: the <u>interconversion</u> of polymers and complex lipids with monomeric intermediates</li>
+<li>Stage 2: the <u>interconversion</u> of monomeric sugars, amino acids,  and lipids with still simpler organic compounds</li>
+<li>Stage 3: the ultimate <u>degradation to, or synthesis from</u>, inorganic compounds, including CO2, H2O and NH3.</li>
+</ol>
+<h2 id="Brief-Overview-of-Metabolism"><a href="#Brief-Overview-of-Metabolism" class="headerlink" title="Brief Overview of Metabolism"></a>Brief Overview of Metabolism</h2><p>A brief overview of metabolism:</p>
+<blockquote>
+<p>We shall also use the terms <strong>intermediary metabolism</strong>, <strong>energy metabolism</strong>, and <strong>central pathways</strong></p>
+</blockquote>
+<blockquote>
+<ol>
+<li><p><strong>Intermediary metabolism (中间代谢)</strong> comprises all reactions concerned with </p>
+<ol>
+<li>storing and generating metabolic energy and </li>
+<li>with using that energy in biosynthesis of low-molecular-weight compounds (intermediates) and </li>
+<li>energy storage compounds.</li>
+</ol>
+<ul>
+<li><u>Not included</u> are nucleic acid and protein biosynthesis from monomeric precursors. The reactions of intermediary metabolism can be thought of as those that do not involve a nucleic acid template because the information needed to specify each reaction is provided within the structure of the enzyme catalyzing that reaction</li>
+<li>可以将中间代谢的反应视为不涉及核酸模板的反应，因为在催化该反应的酶结构中提供了指定每种反应所需的信息。 可以将中间代谢的反应视为不涉及核酸模板的反应，因为在催化该反应的酶结构中提供了指定每种反应所需的信息。</li>
+</ul>
+</li>
+<li><p><strong>Energy metabolism (能量代谢)</strong> is that part of intermediary metabolism consisting of pathways that store or generate metabolic energy.</p>
+</li>
+<li><p><strong>Central pathways of metabolism (代谢的中心途径)</strong> are substantially the same in many different organisms, </p>
+<ul>
+<li>and they account for relatively large amounts of mass transfer and energy generation within a cell; they are the quantitatively major pathways</li>
+<li>The central pathways involve the oxidation of fuel molecules and the synthesis of small biomolecules from the resulting fragments; these pathways are found in all aerobic organisms</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p><strong>Intermediary metabolism（中间代谢）</strong> refers primarily to the biosynthesis, utilization, and degradation of <u>low-molecular-weight compound</u> (intermediates).</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215115358508.png" srcset="/img/loading.gif" lazyload alt="image-20200215115358508" style="zoom: 80%;" />
+
+<h1 id="二、Freeways-on-the-Metabolic-Road-Map"><a href="#二、Freeways-on-the-Metabolic-Road-Map" class="headerlink" title="二、Freeways on the Metabolic Road Map"></a>二、Freeways on the Metabolic Road Map</h1><p>The first pathway that we study is <u>glycolysis（糖酵解）</u>, <u>a stage 2 pathway</u> for degradation of carbohydrates, in <u>either aerobic or anaerobic cells</u>. </p>
+<p>The major input to glycolysis is glucose, usually derived from either energy-storage polysaccharides or dietary carbohydrates. </p>
+<p>This pathway leads to <strong>pyruvate（丙酮酸）</strong>, a three-carbon α-keto acid. </p>
+<p><u>Anaerobic</u> organisms reduce pyruvate to a variety of products, for example <strong>lactate（乳酸）</strong>, or <strong>ethanol</strong> plus carbon dioxide. </p>
+<p>These processes are called <u>fermentations</u>. </p>
+<p>In <u>oxidative metabolism</u> (respiration), the major fate of pyruvate is its oxidation to a metabolically <u>activated</u> two-carbon fragment, <strong>acetyl-CoA</strong>. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200213131916019.png" srcset="/img/loading.gif" lazyload alt="image-20200213131916019"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">乙酰辅酶<span class="hljs-selector-tag">A</span><br></code></pre></td></tr></table></figure>
+
+<p>The two carbons in the <u>acetyl group</u> then undergo oxidation in the <strong>citric acid cycle</strong>. </p>
+<p>In aerobic organisms the citric acid cycle is the principal <u>stage 3 pathway.</u> </p>
+<p>This cyclic pathway accepts simple carbon compounds, derived not only from <u>carbohydrate</u> but also from <u>lipid or protein</u>, and oxidizes them to CO2.</p>
+<p>Using the freeway analogy again, we will see that numerous on-ramps（引导滑道） from the highways and byways of stage 1 and stage 2 metabolism lead to the citric acid cycle. In fact, all catabolic pathways <u>converge</u> at this point.</p>
+<h2 id="Overview-of-Pyruvate-Oxidation-and-the-Citric-Acid-Cycle"><a href="#Overview-of-Pyruvate-Oxidation-and-the-Citric-Acid-Cycle" class="headerlink" title="Overview of Pyruvate Oxidation and the Citric Acid Cycle"></a>Overview of Pyruvate Oxidation and the Citric Acid Cycle</h2><h3 id="1-Citric-Acid-Cycle"><a href="#1-Citric-Acid-Cycle" class="headerlink" title="1. Citric Acid Cycle"></a>1. Citric Acid Cycle</h3><p>The fate of carbon in the citric acid cycle: </p>
+<p>Note that these departing CO2 groups derive from the two <strong>oxaloacetate carboxyl groups（草酰乙酸羧基组）</strong> that were incorporated as acetyl-CoA in earlier turns of the cycle.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200217094039346.png" srcset="/img/loading.gif" lazyload alt="image-20200217094039346"></p>
+<p>Oxidative reactions of the citric acid cycle generate <strong>reduced electron carriers（还原电子载体）</strong> whose reoxidation drives <u>ATP biosynthesis</u>, primarily through processes in the <u>mitochondrial respiratory chain</u>—<strong>electron transpor</strong>t and <strong>oxidative phosphorylation（氧化磷酸化）</strong>.</p>
+<p>The mitochondrial membrane uses oxidative energy to maintain a transmembrane gradient of hydrogen ion concentration (the <strong>protonmotive force（质子驱动力）</strong>), and discharge of this electrochemical potential energy powers the synthesis of ATP from ADP + Pi.</p>
+<h4 id="Oxidative-Phosphorylation"><a href="#Oxidative-Phosphorylation" class="headerlink" title="Oxidative Phosphorylation"></a>Oxidative Phosphorylation</h4><p>Chemiosmotic（化学渗透的） coupling of electron transport and ATP synthesis: </p>
+<p>Protons are pumped by c<u>omplexes I, III, and IV</u> as electrons flow through the complexes, generating an <u>electrochemical gradient</u> across the membrane (protonmotive force, pmf). </p>
+<p>Proton re-entry to the matrix, through the <u>F0 channel</u> of <strong>ATP synthase (complex V)</strong>, provides the energy to drive ATP synthesis.</p>
+<p>Chemiosmotic coupling refers to the use of a transmembrane proton gradient to drive endergonic（吸能的） processes like ATP synthesis.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212161209872.png" srcset="/img/loading.gif" lazyload alt="image-20200212161209872" style="zoom: 67%;" />
+
+<h2 id="Overview-of-Metabolism"><a href="#Overview-of-Metabolism" class="headerlink" title="Overview of Metabolism"></a>Overview of Metabolism</h2><p>Overview of metabolism: </p>
+<p>Shown here are the central metabolic pathways and some key intermediates.</p>
+<p>Catabolic pathways (red) proceed downward and </p>
+<p>Anabolic pathways (blue) proceed upward. </p>
+<p>Note the three stages of metabolism.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215120108796.png" srcset="/img/loading.gif" lazyload alt="image-20200215120108796"></p>
+<h3 id="1-Initial-Phase-Glycolysis"><a href="#1-Initial-Phase-Glycolysis" class="headerlink" title="1. Initial Phase: Glycolysis"></a>1. Initial Phase: Glycolysis</h3><p>The initial phase of carbohydrate catabolism: glycolysis: </p>
+<p>Pyruvate either undergoes reduction in fermentation reactions or enters oxidative metabolism (respiration) via conversion to acetyl-CoA</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215120232753.png" srcset="/img/loading.gif" lazyload alt="image-20200215120232753" style="zoom:80%;" />
+
+<h3 id="2-Oxidative-metabolism"><a href="#2-Oxidative-metabolism" class="headerlink" title="2. Oxidative metabolism"></a>2. Oxidative metabolism</h3><p>Oxidative metabolism includes </p>
+<ul>
+<li><p>Pyruvate oxidation</p>
+</li>
+<li><p>The citric acid cycle</p>
+</li>
+<li><p>Electron transport</p>
+</li>
+<li><p>Oxidative phosphorylation</p>
+<p>Pyruvate oxidation supplies acetyl-CoA to the citric acid cycle.</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215120303370.png" srcset="/img/loading.gif" lazyload alt="image-20200215120303370" style="zoom:80%;" />
+
+<h3 id="3-Carbohydrate-anabolism"><a href="#3-Carbohydrate-anabolism" class="headerlink" title="3. Carbohydrate anabolism"></a>3. Carbohydrate anabolism</h3><p>Biosynthesis of carbohydrates includes <strong>gluconeogenesis（糖再生）</strong> and <strong>polysaccharide synthesis（多糖合成）</strong>.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215120353245.png" srcset="/img/loading.gif" lazyload alt="image-20200215120353245" style="zoom:80%;" />
+
+<h3 id="4-Photosynthesis"><a href="#4-Photosynthesis" class="headerlink" title="4. Photosynthesis"></a>4. Photosynthesis</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215120326205.png" srcset="/img/loading.gif" lazyload alt="image-20200215120326205" style="zoom:80%;" />
+
+<h3 id="5-Distinct-Pathways-for-Biosynthesis-and-Degradation"><a href="#5-Distinct-Pathways-for-Biosynthesis-and-Degradation" class="headerlink" title="(+) 5. Distinct Pathways for Biosynthesis and Degradation"></a>(+) 5. Distinct Pathways for Biosynthesis and Degradation</h3><blockquote>
+<p>It is important to realize that in these cases the opposed pathways are quite distinct from one another</p>
+<p>They may share some common intermediates or enzymatic reactions, but they are separate reaction sequences, regulated by distinct mechanisms and with different enzymes catalyzeing their regulated reactions. They may even occur in separate cellular compartments</p>
+<p>Biosynthetic and degradative pathways are never simple reversals of on another, even though they often begin and end with the same metabolites</p>
+<p>Thus, opposed biosynthetic and degradative pathways must <strong>both be exergonic</strong>, and thus unidirectional, in their respective directions.</p>
+<p>Using separate pathways for the biosynthetic and degradative processes is crucial for control, <strong>so</strong> conditions that activate one pathway tend to inhibit the opposed pathway and vice versa.</p>
+</blockquote>
+<h2 id="Futile-Cycle"><a href="#Futile-Cycle" class="headerlink" title="Futile Cycle"></a>Futile Cycle</h2><p>Degradative and biosynthetic pathways are distinct for two reasons: </p>
+<p>A pathway can be exergonic in only one direction</p>
+<p>Pathways must be <u>separately regulated</u> to avoid <strong>futile cycles（无效循环）</strong>.</p>
+<blockquote>
+<p><strong>futile cycle</strong>: No useful work is done</p>
+</blockquote>
+<p><u>Compartmentation and allosteric control</u> of anabolic and catabolic processes prevent futile cycles, which simply waste energy.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212162002554.png" srcset="/img/loading.gif" lazyload alt="image-20200212162002554" style="zoom:50%;" />
+
+<p>A similar futile cycle could result from the interconversion of fructose-6-phosphate with fructose-1,6- bisphosphate in carbohydrate metabolism.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212162015360.png" srcset="/img/loading.gif" lazyload alt="image-20200212162015360" style="zoom:67%;" />
+
+<blockquote>
+<p>However, enzymes catalyzing both of the above reactions respond to allosteric effectors, such that one enzyme is inhibited by conditions that activate the other. This <strong>reciprocal control (相互控制)</strong> prevents the futile cycle from occurring, even though the two enzymes occupy the same cell compartment.</p>
+<p>Therefore, it is more appropriate to call this situation—two seemingly opposed cellular reactions that are independently controlled— a <strong>substrate cycle</strong>. (底物循环)</p>
+<p>底物循环（substrate cycle）。一对催化两个途径的中间代谢物之间循环的方向相反、代谢上不可逆的反应。有时该循环通过ATP的水解导致热能的释放。例如，葡萄糖+ATP&#x3D;葡萄糖-6-磷酸+ADP与葡萄糖-6-磷酸+H2O&#x3D;葡萄糖+Pi反应组成的循环反应，其净反应实际上是ATP+H2O&#x3D;ADP+Pi。</p>
+</blockquote>
+<h1 id="三、Biochemical-Reaction-Types"><a href="#三、Biochemical-Reaction-Types" class="headerlink" title="三、Biochemical Reaction Types"></a>三、Biochemical Reaction Types</h1><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212162838825.png" srcset="/img/loading.gif" lazyload alt="image-20200212162838825"></p>
+<p>Much of the chemistry of biological molecules is the chemistry of the carbonyl group because the vast majority of biological molecules contain them.</p>
+<p>Most of the chemistry of <u>carbonyl groups</u> involves <strong>nucleophiles（亲核试剂）</strong>  (abbreviated “Nu:”) and <strong>electrophiles（亲电试剂）</strong>.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212163424789.png" srcset="/img/loading.gif" lazyload alt="image-20200212163424789" style="zoom: 80%;" />
+
+<blockquote>
+<p>Recall that a <strong>nucleophile</strong> is a “nucleus-loving” substance with a <u>negatively</u> polarized, electron-rich atom that can <u>form a bond</u> by <u>donating</u> a pair of electrons to an electron-poor atom.</p>
+<p>An electrophile is an “electron-loving” substance with a <u>positively</u> polarized, electron-poor atom that can form a bond by accepting a pair of electrons from an electron-rich atom.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215121454964.png" srcset="/img/loading.gif" lazyload alt="image-20200215121454964"></p>
+<ol>
+<li>常见的Electrophiles: Carbonyl carbons (羰基碳原子),  protonated imines (质子化亚胺), phosphate groups, and protons.</li>
+<li>常见的Nucleophiles: Oxyanions (含氧阴离子 ) (e.g., hydroxide ion, alkoxides (醇盐), or ionized carboxylates (离子化羧化物)), thiolates (硫醇盐) (deprotonated sulfhydryls (脱质子磺酸, <strong>sulfhydryls</strong> is the <strong>-SH</strong> )), <strong>carbanions (碳负离子)</strong>, deprotonated amines, and the imidazole side chain of histidine (咪唑侧链组氨酸)</li>
+</ol>
+</blockquote>
+<h3 id="1-Nucleophilic-substitution"><a href="#1-Nucleophilic-substitution" class="headerlink" title="1. Nucleophilic substitution"></a>1. Nucleophilic substitution</h3><blockquote>
+<p>In a nucleophilic substitution reaction, one nucleophile replaces a second nucleophile (the leaving group) on an -hybridized carbon atom. The leaving group develops a partial negative charge in the transition state, and the best leaving groups are those that are <u>stable as anions.</u> </p>
+<p>Thus, <strong>halides（卤化物）</strong> and the conjugate bases of strong acids, such as the phosphate anion, are good leaving groups. </p>
+</blockquote>
+<h4 id="SN1-mechanism"><a href="#SN1-mechanism" class="headerlink" title="SN1 mechanism"></a>S<del>N</del>1 mechanism</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212163915481.png" srcset="/img/loading.gif" lazyload alt="image-20200212163915481" style="zoom:67%;" />
+
+<p>The S<del>N</del>1 mechanism is a substitution reaction in organic chemistry. “S<del>N</del>“ stands for <u>nucleophilic substitution</u> and the “1” represents the <u>fact that the rate-determining step is unimolecular.</u></p>
+<blockquote>
+<p>S<del>N</del>1 (<u>S</u>ubstitution, <u>N</u>ucleophilic, <u>Uni</u>molecular)</p>
+</blockquote>
+<h4 id="SN2-mechanism"><a href="#SN2-mechanism" class="headerlink" title="SN2 mechanism"></a>S<del>N</del>2 mechanism</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212164113617.png" srcset="/img/loading.gif" lazyload alt="image-20200212164113617" style="zoom:67%;" />
+
+<p>The <strong>S<del>N</del>2</strong> ( (Substitution, Nucleophilic, Bimolecular) ) reaction (Substitution, Nucleophilic, Bimolecular)) is a type of reaction mechanism that is common in organic chemistry. </p>
+<blockquote>
+<p>The attacking nucleophile approaches one side of the electrophilic center while the leaving group remains partially bonded to other side</p>
+</blockquote>
+<h4 id="acyl-substitution-reaction"><a href="#acyl-substitution-reaction" class="headerlink" title="acyl substitution reaction"></a>acyl substitution reaction</h4><p>An acyl substitution reaction mechanism <u>involves a tetrahedral oxyanion reaction intermediate.</u></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212164210006.png" srcset="/img/loading.gif" lazyload alt="image-20200212164210006"></p>
+<p>Nucleophilic acyl substitution describe a class of substitution reactions <u>involving nucleophiles and acyl compounds</u>. In this type of reaction, a <strong>nucleophile</strong> – such as an <u>alcohol, amine, or enolate (烯醇化物)</u> – displaces the <strong>leaving group</strong> of an acyl derivative – such as an <u>acid halide, anhydride, or ester</u>. The resulting product is a <u>carbonyl</u>-containing compound in which the nucleophile has taken the place of the leaving group present in the original acyl derivative. </p>
+<blockquote>
+<p>Acyl substitutions occur most readily when the carbonyl carbon is bonded to an <u>electronegative atom</u> (such as O or N) or a <u>highly polarizable atom</u> (such as S)</p>
+</blockquote>
+<h3 id="2-Nucleophilic-addition"><a href="#2-Nucleophilic-addition" class="headerlink" title="2. Nucleophilic addition"></a>2. Nucleophilic addition</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212164420399.png" srcset="/img/loading.gif" lazyload alt="image-20200212164420399" style="zoom:80%;" />
+
+<blockquote>
+<p>The carbonyl carbon in aldehydes and ketones is bonded to atoms (C and H) that cannot stabilize a negative charge, and thus are not good leaving groups</p>
+<p>These carbonyl groups typically undergo nucleophilic addition reactions, instead of substitution reactions.</p>
+</blockquote>
+<blockquote>
+<p>Recall from Chapter 11 that an oxyanion intermediate is formed in the initial steps of peptide bond hydrolysis by the serine proteases.</p>
+<p>The oxyanion intermediate then has several fates, depending on the nucleophile (Figure 12.7).</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215124451772.png" srcset="/img/loading.gif" lazyload alt="image-20200215124451772" style="zoom:80%;" />
+
+<ol>
+<li><p>When the attacking nucleophile is a <u>hydride ion</u> (H:-), the oxyanion intermediate undergoes protonation to form an alcohol. Alcohols also result when the attacking nucleophile is a <u>carbanion</u> (R<del>3</del>C^-^) and this is one of the mechanisms that yield <u>new C-C bonds</u>.</p>
+</li>
+<li><p>When an <u>oxygen nucleophile adds</u>, such as an alcohol (ROH), the oxyanion intermediate undergoes proton transfer to yield a <u>hemiacetal （半缩醛）</u>. This reaction is the basis of ring formation in monosaccharides (Chapter 9).</p>
+</li>
+<li><p>Reaction with a second equivalent of alcohol gives an acetal. When the attacking nucleophile is a <u>primary amine</u> (R’ NH<del>2</del>) the oxyanion intermediate picks up a proton from the amino group, giving a <u>carbinolamine</u>, which loses water to form an <u>imine</u> (R<del>2</del>C &#x3D; NR’).Imines (called <strong>Schiff bases</strong>) are common reaction intermediates in many biochemical reactions due to their ability to delocalize electrons.</p>
+</li>
+</ol>
+</blockquote>
+<h3 id="3-Carbonyl-condensation（羰基缩合）"><a href="#3-Carbonyl-condensation（羰基缩合）" class="headerlink" title="3. Carbonyl condensation（羰基缩合）"></a>3. Carbonyl condensation（羰基缩合）</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212164452379.png" srcset="/img/loading.gif" lazyload alt="image-20200212164452379"></p>
+<p>Carbonyl condensation reactions: </p>
+<p>These reactions are initiated by deprotonation of the <u>weakly acidic</u> hydrogen to give a resonance-stabilized enolate ion (top). </p>
+<blockquote>
+<p>A carbonyl condensation reaction relies on the weak acidity of the $\alpha$ carbonyl hydrogen, producing a <u>carbanion</u>, which is in <u>resonance</u> with a nucleophilic <u>enolate (烯醇化物) ion</u>.</p>
+<p>烯醇（Enol）指的是双键碳上连有羟基的一类化合物，其与羰基化合物成互变异构</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215130205078.png" srcset="/img/loading.gif" lazyload alt="image-20200215130205078"></p>
+<p>The enolate ion, stabilized by resonance, nucleophilically adds to the electrophilic carbon of a second carbonyl, forming a new bond (Figure 12.8)</p>
+</blockquote>
+<ul>
+<li>In an <strong>alsdol condensation (醛醇缩合)</strong> (left side), the enolate adds to an <u>aldehyde or ketone</u>, yielding a β-hydroxycarbonyl product. </li>
+<li>In a <strong>Claisen condensation</strong> (right side), the enolate adds to an ester, yielding a β-keto product.</li>
+</ul>
+<blockquote>
+<p>Aldol and Claisen condensations are both reversible</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212164910611.png" srcset="/img/loading.gif" lazyload alt="image-20200212164910611" style="zoom:80%;" />
+
+<blockquote>
+<p>If the second carbonyl is an aldehyde or ketone (an <strong>aldol condensation</strong>), this nucleophilic addition produces an <u>oxyanion intermediate</u>, which is protonated to give a $\beta$-hydroxy carbonyl product.</p>
+<p>If the second carbonyl is an ester (a <strong>Claisen condensation</strong>), the intermediate oxyanion <u>expels the ester alkoxide (RO-)</u> as the leaving group, giving a $\beta$-keto product</p>
+</blockquote>
+<h3 id="4-Eliminations"><a href="#4-Eliminations" class="headerlink" title="4. Eliminations"></a>4. Eliminations</h3><blockquote>
+<p>Elimination reactions can occur by several different mechanisms, but the most common one involves a carbanion intermediate.</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212164946939.png" srcset="/img/loading.gif" lazyload alt="image-20200212164946939" style="zoom:67%;" />
+
+<blockquote>
+<p>The reactant is often a <u>$\beta$-hydroxy carbonyl (where  X&#x3D;OH)</u> in which the <u>H atom</u> to be removed is made <u>more acidic</u> by being adjacent to a carbonyl group. A base abstracts the proton to give a carbanion intermediate (resonance-stabilized with the enolate) that loses OH^-^ to form C&#x3D;C the double bond. $\beta$-hydroxy carbonyl compounds are readily dehydrated via these $\alpha$,$\beta$-elimination reactions.</p>
+</blockquote>
+<p>Example:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212165006596.png" srcset="/img/loading.gif" lazyload alt="image-20200212165006596" style="zoom:67%;" />
+
+<h3 id="5-Oxidative-and-Reductions"><a href="#5-Oxidative-and-Reductions" class="headerlink" title="5. Oxidative and Reductions"></a>5. Oxidative and Reductions</h3><p>Energy production in most cells involves the oxidation of fuel molecules such as glucose. </p>
+<p>Oxidation-reduction, or <strong>redox</strong>, chemistry thus lies at the core of metabolism.</p>
+<p>Redox reactions involve <u>reversible electron transfer</u> from <u>a donor (the reductant) to an acceptor (the oxidant).</u></p>
+<p>In this example, because the alcohol has lost a pair of electrons and two hydrogen atoms, this type of oxidation is called <strong>dehydrogenation（脱氢作用）</strong>, and enzymes that catalyze this reaction are called dehydrogenase .</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212165200080.png" srcset="/img/loading.gif" lazyload alt="image-20200212165200080" style="zoom: 67%;" />
+
+<blockquote>
+<p>A base abstracts the weakly acidic O-H proton, the electrons from that C&#x3D;O bond move to form a bond, and the C-H bond is cleaved. The hydrogen and the electron pair (i.e., hydride, H<del>-</del>) add to NAD^+^ in a nucleophilic addition reaction, reducing it to NADH</p>
+<p>The plus sign in NAD^+^ reflects the charge on the pyridine ring nitrogen in the oxidized form; this charge is lost as the electron pair moves through the ring onto this nitrogen</p>
+<p>redox reactions are <u>reversible</u>, and dehydrogenases can catalyze the reductive direction as well.</p>
+</blockquote>
+<hr>
+<p>There are other, less common types of reactions in biochemical pathways, such as <strong>free radical reactions</strong>, but these five represent the basic toolkit that cells use to carry out the vast majority of their chemical transformations</p>
+<h1 id="四、Some-Bioenergetic-Considerations"><a href="#四、Some-Bioenergetic-Considerations" class="headerlink" title="四、Some Bioenergetic Considerations"></a>四、Some Bioenergetic Considerations</h1><h2 id="Oxidation-as-a-Metabolic-Energy-Source"><a href="#Oxidation-as-a-Metabolic-Energy-Source" class="headerlink" title="Oxidation as a Metabolic Energy Source"></a>Oxidation as a Metabolic Energy Source</h2><p>Oxygen, the ultimate electron acceptor for aerobic organisms, is a strong oxidant; it has a marked tendency to <u>attract electrons</u>, becoming reduced in the process</p>
+<h3 id="1-Energy-Release-in-Small-Increments"><a href="#1-Energy-Release-in-Small-Increments" class="headerlink" title="(+)1. Energy Release in Small Increments"></a>(+)1. Energy Release in Small Increments</h3><blockquote>
+<p>In catabolism of glucose, about 40% of the released energy is used to drive the synthesis of ATP from ADP and P<del>i</del>.</p>
+<p>A series of coupled oxidation–reduction reactions occurs, with the electrons passed to intermediate electron carriers such as NAD^+^ and FAD, and finally transferred to oxygen</p>
+</blockquote>
+<blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215165156015.png" srcset="/img/loading.gif" lazyload alt="image-20200215165156015"></p>
+<p>Reactions 12.2 and 12.3 are examples of <strong>obligate-coupling stoichiometry</strong>. These are stoichiometric relationships fixed by the chemical nature of the process. Thus, the complete oxidation of glucose requires the transfer of <u>12 pairs</u> of electrons from glucose to molecular oxygen, whether as a direct process, as in combustion, or via intermediate electron carriers, as in the biological process.</p>
+</blockquote>
+<blockquote>
+<p>The transfer of electrons from these intermediate electron carriers to oxygen is catalyzed by the <strong>electron transport chain</strong>, or <strong>respiratory chain</strong>, and oxygen is called the <strong>terminal electron acceptor</strong>. </p>
+<p>Because the potential energy stored in the organic substrate is <u>released in small increments</u>, it is <u>easier to control oxidation and capture</u> some of the energy as it is released—small energy transfers waste less energy than a single large transfer does.</p>
+</blockquote>
+<h3 id="2-Other-Electron-Acceptors"><a href="#2-Other-Electron-Acceptors" class="headerlink" title="2. Other Electron Acceptors"></a>2. Other Electron Acceptors</h3><p>Most biological energy derives from oxidation of reduced metabolites in a series of reactions, with oxygen as the final electron acceptor.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212165240591.png" srcset="/img/loading.gif" lazyload alt="image-20200212165240591"></p>
+<p>Not all metabolic energy comes from oxidation by oxygen. </p>
+<p>Substances other than oxygen can serve as terminal electron acceptors.</p>
+<p>Many microorganisms either can or must live anaerobically. </p>
+<p>For example, <em>Desulfovibrio</em>（脱硫弧菌） carry out anaerobic respiration using sulfate as the terminal electron acceptor:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212165310128.png" srcset="/img/loading.gif" lazyload alt="image-20200212165310128" style="zoom:50%;" />
+
+<blockquote>
+<p>Most anaerobic organisms, however, derive their energy from <strong>fermentations</strong>, which are energy-yielding catabolic pathways that proceed with <u>no net change in the <strong>oxidation state</strong> of the products as compared with that of the substrates</u></p>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs erlang-repl">Oxidation State 氧化态：<br>氧化态表示一个化合物中某个原子的氧化程度。形式氧化态是通过假设所有异核化学键都为<span class="hljs-number">100</span><span class="hljs-comment">%离子键而算出来的。氧化态用阿拉伯数字表示，可以为正数、负数或是零。</span><br></code></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="3-Energy-Yields-Respiratory-Quotients-and-Reducing-Equivalents"><a href="#3-Energy-Yields-Respiratory-Quotients-and-Reducing-Equivalents" class="headerlink" title="3. Energy Yields, Respiratory Quotients, and Reducing Equivalents"></a>3. Energy Yields, Respiratory Quotients, and Reducing Equivalents</h3><h4 id="Energy-Yields"><a href="#Energy-Yields" class="headerlink" title="Energy Yields"></a>Energy Yields</h4><p>If metabolic energy comes primarily from oxidative reactions, it follows that the <u>more highly reduced a substrate, the higher its potential for generating biological energy</u></p>
+<p><u>The combustion of fat provides more heat energy</u> than the combustion of an equivalent mass of carbohydrate. </p>
+<p>In other words, fat has a higher <strong>caloric content（热焓, 含热量）</strong> than carbohydrate. </p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212165359206.png" srcset="/img/loading.gif" lazyload alt="image-20200212165359206" style="zoom:67%;" />
+
+<p>Compare the oxidation of glucose with the oxidation of a typical saturated fatty acid, <strong>palmitic acid（棕榈酸）</strong>.</p>
+<h4 id="Reducing-Equivalents"><a href="#Reducing-Equivalents" class="headerlink" title="Reducing Equivalents"></a>Reducing Equivalents</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212165404936.png" srcset="/img/loading.gif" lazyload alt="image-20200212165404936"></p>
+<p>Another way to express the degree of substrate oxidation is to say that <u>more <strong>reducing equivalents（还原当量）</strong> are derived from oxidation of fat than from oxidation of carbohydrate.</u> </p>
+<blockquote>
+<p>We can also tell that glucose is the more highly oxidized substance because its oxidation produces more moles of per mole of consumed during oxidation, a ratio called the <strong>respiratory quotient</strong>, or <strong>RQ</strong>.</p>
+<p>The above reaction stoichiometries reveal RQ for glucose to be 1.0(6CO<del>2</del>&#x2F;6O<del>2</del>) whereas that for palmitic acid is 0.70(16CO<del>2</del>&#x2F;23O<del>2</del>)</p>
+<p>In general, <u>the lower the RQ for a substrate, the more oxygen consumed per carbon oxidized and the greater the potential per mole of substrate for generating ATP.</u></p>
+</blockquote>
+<p>A reducing equivalent can be defined as <u>1 mole of hydrogen atoms (one proton and one electron per H atom).</u> </p>
+<p>For example, two moles of reducing equivalents are used in the reduction of one-half mole of oxygen to water:</p>
+<pre><code class="hljs">            ½ O2 + 2e- + 2H+ → H2O 
+</code></pre>
+<blockquote>
+<p>Whereas the breakdown of complex organic compounds yields both energy and reducing equivalents, the biosynthesis of such compounds utilizes both.</p>
+</blockquote>
+<h5 id="1-NAD-NADH-And-NADP-NADPH"><a href="#1-NAD-NADH-And-NADP-NADPH" class="headerlink" title="(1) NAD+&#x2F;NADH And NADP+&#x2F;NADPH"></a>(1) NAD+&#x2F;NADH And NADP+&#x2F;NADPH</h5><p>The major source of electrons for reductive biosynthesis is <strong>NADPH</strong>, <strong>nicotinamide adenine dinucleotide phosphate (reduced).</strong> </p>
+<p>NADP+ and NADPH are <u>identical</u> to NAD+ and NADH, respectively, except that the former have an additional phosphate esterified at C-2 on the adenylate moiety.</p>
+<blockquote>
+<p>NAD+ and NADP are <u>equivalent in their thermodynamic tendency to accept electrons</u>; they have <u>equal standard reduction potentials</u> (Chapter 3).</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212165649638.png" srcset="/img/loading.gif" lazyload alt="image-20200212165649638" style="zoom:67%;" />
+
+<p><strong>Nicotinamide</strong> <strong>nucleotides（烟酰胺核苷酸）</strong> in catabolism and biosynthesis: </p>
+<p>NAD+ is the cofactor for most enzymes that act in the direction of <u>substrate oxidation (dehydrogenases).</u></p>
+<p>NADPH usually functions as a cofactor for reductases, enzymes that catalyze <u>substrate reduction</u>. </p>
+<blockquote>
+<p>Nicotinamide nucleotide–linked enzymes that oxidize substrates (dehydrogenases) usually use and NAD+, those enzymes that reduce substrates (reductases) usually use NADPH</p>
+<p>Of course, both dehydrogenases and reductases catalyze <u>reversible</u> reactions—the directions are determined by the <strong>redox state</strong>, or <strong>ratio</strong> of the oxidized and reduced forms of each pair that prevail in the cell.</p>
+</blockquote>
+<blockquote>
+<p>Thus, the NAD+&#x2F;NADH pair is maintained at a more oxidized level than the NADP+ &#x2F;NADPH pair in a healthy cell. These ratios generally drive NAD+-linked reactions in the oxidative direction and NADP+-linked reactions in the reductive direction. </p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212165743236.png" srcset="/img/loading.gif" lazyload alt="image-20200212165743236"></p>
+<blockquote>
+<p>An exception is two -linked dehydrogenases in the <strong>pentose phosphate pathway</strong> (see Chapter 13), which convert to NADPH and represent a major route for regeneration of the reduced nucleotide.</p>
+</blockquote>
+<h2 id="ATP-as-a-Free-Energy-Currency"><a href="#ATP-as-a-Free-Energy-Currency" class="headerlink" title="ATP as a Free Energy Currency"></a>ATP as a Free Energy Currency</h2><blockquote>
+<p>ATP serves as an immediate donor of free energy—it is continuously formed and consumed.</p>
+</blockquote>
+<blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215172147177.png" srcset="/img/loading.gif" lazyload alt="image-20200215172147177" style="zoom:80%;" />
+
+<p>There is no chemical necessity for the production of 32 moles of ATP (in fact, there is not even a direct chemical connection between glucose oxidation and ATP synthesis). We could not predict a stoichiometry of 32 ATP from chemical considerations. </p>
+<p>This is instead an <strong>evolved-coupling</strong> <strong>stoichiometry</strong>. Evolved-coupling stoichiometries are biological adaptations, phenotypic traits acquired during evolution—they are the result of compromise</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215172330673.png" srcset="/img/loading.gif" lazyload alt="image-20200215172330673"></p>
+</blockquote>
+<h3 id="1-ATP-coupling-coefficient"><a href="#1-ATP-coupling-coefficient" class="headerlink" title="1. ATP-coupling coefficient"></a>1. ATP-coupling coefficient</h3><p>The fundamental biological role of ATP as an energy-coupling compound is to <u>convert thermodynamically unfavorable processes into favorable processes</u>.</p>
+<blockquote>
+<p>The number of ATP (or ATP equivalents) produced in the catabolic direction will always be different from the number of ATP (or ATP equivalents) required in the anabolic direction</p>
+<p>We refer to these numbers as the <strong>ATP-coupling coefficient</strong> of the reaction or pathway. For example, in the fructose-6-phosphate&#x2F;fructose-1,6-bisphosphate substrate cycle (page 481), the glycolytic reaction,</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215172719215.png" srcset="/img/loading.gif" lazyload alt="image-20200215172719215" style="zoom:80%;" />
+
+<p>has an ATP-coupling coefficient of The gluconeogenic reaction:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215172752562.png" srcset="/img/loading.gif" lazyload alt="image-20200215172752562" style="zoom:80%;" />
+
+<p>has an ATP-coupling coefficient of 0. Likewise, as we will learn in Chapter 13, glycolysis has an overall ATP-coupling coefficient of +2, whereas gluconeogenesis has an ATP-coupling coefficient of -6.</p>
+<p>Coupling ATP hydrolysis to a pathway provides a new chemical route, using different reactions with different stoichiometries, resulting in a different overall equilibrium constant for the process.</p>
+</blockquote>
+<h3 id="2-The-Influence-of-Gradient-of-ATP-ADP"><a href="#2-The-Influence-of-Gradient-of-ATP-ADP" class="headerlink" title="(+)2. The Influence of Gradient  of ATP&#x2F;ADP"></a>(+)2. The Influence of Gradient  of ATP&#x2F;ADP</h3><blockquote>
+<p>In fact, coupling ATP hydrolysis to a process changes the equilibrium ratio of certain [reactants] to [products] by a factor of 10^8^ ! </p>
+<p>To illustrate this, let’s consider how the equilibrium ratio of [fructose-1,6-bisphosphate] to [fructose-6-phosphate]:</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215173709376.png" srcset="/img/loading.gif" lazyload alt="image-20200215173709376" style="zoom:80%;" />
+
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215173739108.png" srcset="/img/loading.gif" lazyload alt="image-20200215173739108"></p>
+<p>In many cells, the normal intracellular concentration of Pi is ~ 1mM (10^-3^ M), so the equilibrium ratio of [fructose-1,6-bisphosphate] &#x2F; [ fructose-6-phosphate] achieved by this reaction would be (0.0014)(10^-3^) &#x3D; 1.4 X 10^-6^ </p>
+<p>Now let’s compare that to a reaction that couples the phosphorylation of fructose-6-phosphate to ATP hydrolysis, as in reaction 12.6 above. $\Delta G ^{\circ \prime}$ for this reaction is -14.2 kJ&#x2F;mol (see Table 13.1, page 534), and thus the equilibrium constant, K, for this reaction is 308.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215174236025.png" srcset="/img/loading.gif" lazyload alt="image-20200215174236025" style="zoom:80%;" />
+</blockquote>
+<blockquote>
+<p>In most normal, healthy cells, [ATP] is several-fold (3–10 times) higher than [ADP].</p>
+<p>For the purposes of this calculation, let’s make the <u>simplifying assumption</u> that the intracellular concentrations of ADP and ATP are roughly equal, that is, <u>their concentration ratio is ~1.</u></p>
+<p>Thus, [ADP] and [ATP] cancel out, and the equilibrium ratio of [fructose-1,6-bisphosphate]&#x2F;[fructose-6-phosphate] for this reaction is 308.</p>
+<p>This equilibrium ratio is indeed 10^8^ times higher than that achieved without ATP coupling [308&#x2F;(1.4 X 10^-6^) &#x3D; 2.2 X 10^8^]. </p>
+</blockquote>
+<h3 id="3-Metabolite-Concentrations-and-Solvent-Capacity"><a href="#3-Metabolite-Concentrations-and-Solvent-Capacity" class="headerlink" title="3. Metabolite Concentrations and Solvent Capacity"></a>3. Metabolite Concentrations and Solvent Capacity</h3><blockquote>
+<p>Evolution has produced a complex cell metabolism comprising thousands of enzymes and metabolic intermediates each at very low individual concentrations.</p>
+<p>There are at least a couple of reasons why a cell must maintain its components at very low concentrations:</p>
+<ol>
+<li>Aqueous compartment has a finite capacity for the amount of dissolved substances (metabolites and macromolecules)—this is its <strong>solvent capacity</strong>. Thus, individual metabolites must exist at low concentrations (10^-3^-10^-6^M, or even lower) to <u>avoid exceeding the solvent capacity of the cell</u></li>
+<li>Low metabolite concentrations minimize unwanted side reactions.</li>
+</ol>
+</blockquote>
+<h4 id="ATP-Coupling-Help-Avoid-High-Metabolite-Concentrations"><a href="#ATP-Coupling-Help-Avoid-High-Metabolite-Concentrations" class="headerlink" title="ATP Coupling Help Avoid High Metabolite Concentrations"></a>ATP Coupling Help Avoid High Metabolite Concentrations</h4><blockquote>
+<p>How does ATP coupling help avoid high metabolite concentrations? It does it by <u>activating metabolic intermediates.</u></p>
+</blockquote>
+<p>Activated intermediates, such as ATP, allow reactions to occur under <u>physiologically relevant concentrations（有关生理浓度）</u> of metabolic intermediates.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212165855849.png" srcset="/img/loading.gif" lazyload alt="image-20200212165855849" style="zoom:50%;" />
+
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ATP</span>: TWO phosphoanhydride bonds<br><span class="hljs-attribute">ATP</span> has a “high phosphoryl  group transfer potential”<br><span class="hljs-attribute">ATP</span>: “free energy currency”<br><span class="hljs-attribute">Turn</span> over fast (a resting human): <span class="hljs-number">65</span> kg ATP/<span class="hljs-number">24</span> hrs!!!<br><span class="hljs-attribute">Exercise</span>: <span class="hljs-number">0</span>.<span class="hljs-number">5</span> kg ATP/min<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> Mechanical energy: muscle contract<br><span class="hljs-bullet">2.</span> Chemical energy<br><span class="hljs-bullet">3.</span> Osmotic energy: trasnporting againesy concentration gradient.<br><span class="hljs-bullet">4.</span> Electrical energy: nerve pulse<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Cells have evolved a number of activated intermediates besides ATP, including acetyl-CoA, acyl-lipoate, and nucleoside diphosphate sugars (NDP-sugars)</p>
+</blockquote>
+<h4 id="Thermodynamic-Properties-of-ATP"><a href="#Thermodynamic-Properties-of-ATP" class="headerlink" title="Thermodynamic Properties of ATP"></a>Thermodynamic Properties of ATP</h4><blockquote>
+<p>When we call ATP a <u>“high-energy compound,”</u> as we did in Chapter 3, we use that term <u>within a defined context</u>; i.e., a high-energy compound is one containing at least one bond with a sufficiently favorable $\Delta G ^{\circ \prime}$ of hydrolysis.</p>
+<p>Note, however, that calling a substance a high-energy compound does not mean that it is chemically unstable or unusually reactive</p>
+<p>ATP is a <em><strong>kinetically</strong></em> stable compound; its spontaneous hydrolysis is slow, but when hydrolysis does occur, whether spontaneously or enzyme-catalyzed, substantial free energy is released.</p>
+</blockquote>
+<p><strong>Phosphoanhydride（磷酸酐键）</strong> bonds are thermodynamically unstable, but <u>kinetically stable</u>—large free energies of activation require enzymes to lower the activation barrier.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212170126691.png" srcset="/img/loading.gif" lazyload alt="image-20200212170126691" style="zoom:67%;" />
+
+<blockquote>
+<p>It is more accurate to say that ATP has a “high phosphoryl group transfer potential” than to call it a high-energy compound</p>
+<p>The electrostatic repulsion among the negative charges in the molecule before hydrolysis, resonance stabilization of the products of hydrolysis, and the tendency of the hydrolysis products to deprotonate</p>
+<p>The above mentioned factors combine to give ATP hydrolysis a $\Delta$G°’ of -30.5 kJ&#x2F;mol, twice the phosphate transfer potential of phosphate esters such as AMP. </p>
+<p>On the other hand, several important metabolites have $\Delta $G°’ values for hydrolysis that are much more negative than that of ATP</p>
+<p>This means that ATP is actually intermediate on the scale of “chemical potential.” This is important as well because it means that the breakdown of a compound such as phosphoenolpyruvate can be coupled to drive the synthesis of ATP itself from ADP and P<del>i</del>.</p>
+<p>In fact, such coupled reactions, called <strong>substrate-level phosphorylation</strong> reactions, represent the process by which ATP is synthesized in glycolysis, as we discuss in Chapter 13.</p>
+</blockquote>
+<h3 id="4-ATP-is-Chelated-within-Cells"><a href="#4-ATP-is-Chelated-within-Cells" class="headerlink" title="(+) 4. ATP is Chelated within Cells"></a>(+) 4. ATP is Chelated within Cells</h3><blockquote>
+<p>Most ATP is chelated within cells, as a complex with Mg2+</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215184147831.png" srcset="/img/loading.gif" lazyload alt="image-20200215184147831" style="zoom:67%;" />
+
+<p>ADP is also complexed with Mg2+ but ADP has a different affinity for Mg2+ from that of ATP. Varying levels of Mg2+ will change $\Delta G$ in complicated ways, depending upon relative affinities of reactants and products for the magnesium ion.</p>
+</blockquote>
+<h2 id="The-Important-Differences-Between-Delta-G-And-Delta-G-circ-prime"><a href="#The-Important-Differences-Between-Delta-G-And-Delta-G-circ-prime" class="headerlink" title="(+) The Important Differences Between $\Delta G$ And $\Delta G ^{\circ \prime}$"></a>(+) The Important Differences Between $\Delta G$ And $\Delta G ^{\circ \prime}$</h2><blockquote>
+<p><u>But what provides the energy for synthesis of compounds with a much higher phophate transfer potential than that of ATP itself?</u> Much of the answer lies in the fact that $\Delta G$ values under intracellular conditions are quite different from <u>standard</u> ($\Delta G ^{\circ \prime}$) values.</p>
+<p>This is mainly because intracellular concentrations are far different from the 1M concentrations used to compute standard free energies.</p>
+<p>In fact, the physiological ratio of [ATP]&#x2F;[ADP] is times higher than the equilibrium ratio.</p>
+<p>As we shall see, maintenance of the physiological ratio of [ATP]&#x2F;[ADP] so far away from equilibrium is accomplished by <em>kinetic</em> control, i.e., by regulation of enzymes. The key point is that maintaining the physiological ratio so far from equilibrium provides the <strong>thermodynamic driving force</strong> for nearly every biochemical event in the cell.</p>
+</blockquote>
+<h2 id="Kinetic-Control-of-Substrate-Cycles"><a href="#Kinetic-Control-of-Substrate-Cycles" class="headerlink" title="Kinetic Control of Substrate Cycles"></a>Kinetic Control of Substrate Cycles</h2><p>ATP can drive the synthesis of higher-energy compounds, if <u>nonequilibrium intracellular concentrations</u> make such reactions exergonic.</p>
+<blockquote>
+<p>Enzymes in substrate cycles are kinetically regulated by the levels of allosteric effectors.</p>
+<p>The choice of which pathway operates, however, is determined entirely by the metabolic needs of the cell (via allosteric effectors), not by thermodynamics (because both pathways are favorable). </p>
+</blockquote>
+<blockquote>
+<p>Why is it so important for both pathways to be thermodynamically favorable at all times? <u><em>Because regulation can be imposed only on reactions that are displaced far from equilibrium.</em></u> Consider the following analogy:</p>
+<p>A dam separates two bodies of water. If the water level is the same on both sides of the dam, we can say the system is at equilibrium. If we now open the floodgate, what happens? Water may move back and forth through the floodgate, but there will be no net movement of water or change in water levels. Thus, regulation (opening the floodgate) has no impact on a system at equilibrium. Now imagine a different system.</p>
+</blockquote>
+<h2 id="Other-High-Energy-Phosphate-Compounds"><a href="#Other-High-Energy-Phosphate-Compounds" class="headerlink" title="Other High-Energy Phosphate Compounds"></a>Other High-Energy Phosphate Compounds</h2><blockquote>
+<p>This same principle allows ATP to drive the synthesis of compounds of even higher phosphate transfer potential, such as creatine phosphate</p>
+</blockquote>
+<blockquote>
+<p>Creatine phosphate (CrP) is produced from creatine by the enzyme <strong>creatine kinase</strong>:</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212170158561.png" srcset="/img/loading.gif" lazyload alt="image-20200212170158561" style="zoom:67%;" />
+
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">Cr:</span> creatine （肌氨酸,肌肉素）<br><span class="hljs-symbol">CrP:</span> creatine phosphate（[化]磷酸肌酸）<br><span class="hljs-symbol">CK:</span> creatine kinase（肌酸激酶）<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Mammalian cells have several different creatine kinase isozymes, one of which is localized to the intermembrane space of mitochondria (mCK; see margin).</p>
+<p>However, because ATP levels are high within mitochondria, and creatine phosphate levels are relatively low the reaction is exergonic as written and proceeds to the right in the mitochondrial intermembrane space.</p>
+</blockquote>
+<p>ATP can also drive the synthesis of compounds of even higher phosphate transfer potential, such as creatine phosphate. </p>
+<p>This compound shuttles phosphate bond energy from ATP in mitochondria to myofibrils, where that bond energy is transduced to the mechanical energy of muscle contraction. </p>
+<p>Creatine phosphate (CrP) is produced from creatine by the enzyme creatine kinase:</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212170329476.png" srcset="/img/loading.gif" lazyload alt="image-20200212170329476"></p>
+<blockquote>
+<p>In some invertebrate animals <strong>arginine phosphate</strong>, instead of creatine phosphate, plays a similar role in storing high-energy phosphate for rapid production, as needed, of ATP.</p>
+</blockquote>
+<h2 id="Other-High-Energy-Nucleotides"><a href="#Other-High-Energy-Nucleotides" class="headerlink" title="(+) Other High-Energy Nucleotides"></a>(+) Other High-Energy Nucleotides</h2><blockquote>
+<p>Evolution has created an array of enzymes that preferentially bind ATP and use its chemical potential to drive endergonic reactions</p>
+<p>In most cells, ATP levels, at 2–8 mM, are several-fold higher than those of the other nucleoside triphosphates and also several-fold higher than the levels of ADP or AMP. These factors give ATP a strong tendency to distribute its $\gamma$ (outermost) phosphate in the synthesis of other nucleoside triphosphates.</p>
+<p>This is accomplished through the action of <strong>nucleoside diphosphate kinase</strong>, which synthesizes CTP from CDP in the following example.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215185527061.png" srcset="/img/loading.gif" lazyload alt="image-20200215185527061" style="zoom:75%;" />
+
+<p>Some metabolic reactions, such as the activation of amino acids for protein synthesis, cleave ATP, not to ADP and P<del>i</del> but to AMP and PP<del>i</del></p>
+<p>The conversion of AMP to ATP, allowing reuse of the nucleotide, involves another enzyme, <strong>adenylate kinase</strong> (also called myokinase because of its abundance in muscle).</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215185627707.png" srcset="/img/loading.gif" lazyload alt="image-20200215185627707" style="zoom:70%;" />
+</blockquote>
+<h1 id="五、Major-Metabolic-Control-Mechanisms"><a href="#五、Major-Metabolic-Control-Mechanisms" class="headerlink" title="五、Major Metabolic Control Mechanisms"></a>五、Major Metabolic Control Mechanisms</h1><p><strong>Enzyme levels</strong>: expression and degradation.</p>
+<p><strong>Enzyme activity</strong> is regulated by interaction with substrates, products, and allosteric effectors and by covalent modification of enzyme protein.</p>
+<p><strong>Compartmentation</strong></p>
+<p><strong>Hormonal regulation</strong> （glucagon， cAMP）</p>
+<p><strong>Distributive control of metabolism（代谢的分配控制）</strong>.</p>
+<h2 id="Control-of-Enzyme-Levels"><a href="#Control-of-Enzyme-Levels" class="headerlink" title="(+) Control of Enzyme Levels"></a>(+) Control of Enzyme Levels</h2><blockquote>
+<p>Through synthesis of new protein, from less than one molecule per cell to many thousands of molecules per cell.</p>
+<p>This phenomenon is called enzyme <strong>induction</strong>. Similarly, the presence of the end product of a pathway may turn off the synthesis of enzymes needed to generate that end product, a process called <strong>repression</strong>.</p>
+</blockquote>
+<h2 id="Control-of-Enzyme-Activity"><a href="#Control-of-Enzyme-Activity" class="headerlink" title="(+) Control of Enzyme Activity"></a>(+) Control of Enzyme Activity</h2><blockquote>
+<p>The <em>catalytic activity</em> of an enzyme molecule can be controlled in two ways: <u>by reversible interaction with ligands</u> (substrates, products, or allosteric modifiers) and by <u>covalent modification of the protein molecule</u></p>
+<p>Enzyme activity is most commonly controlled by <strong>low-molecular-weight ligands</strong>, principally substrates and <strong>allosteric effectors</strong>.</p>
+<p>For example, protein–protein interactions can affect enzyme activity, and several enzymes of nucleic acid metabolism are activated by binding to <u>DNA</u>.</p>
+</blockquote>
+<blockquote>
+<p>Chapter 11 introduced several types of covalent modification that are used to regulate enzyme activity, including <strong>phosphorylation</strong>, <strong>acetylation</strong>, <strong>methylation</strong>, <strong>adenylylation</strong> (the transfer of an adenylate moiety from ATP), and <strong>ADP-ribosylation</strong> (the transfer of an ADP-ribosyl moiety from NAD+).</p>
+<p>Many other less common covalent modifications are now known.</p>
+<p>However, <strong>phosphorylation</strong> is by far the <u>most widespread</u> covalent modification used to control enzyme activity.</p>
+<p>Control through covalent modification is often associated with regulatory cascades. Modification activates an enzyme, which in turn acts on a second enzyme, which may activate yet a third enzyme, which finally acts on the substrate.</p>
+<p>Because enzymes act catalytically, this cascading provides an efficient way to <em>amplify</em> the original biological signal.</p>
+</blockquote>
+<h2 id="Compartmentation"><a href="#Compartmentation" class="headerlink" title="Compartmentation"></a>Compartmentation</h2><blockquote>
+<p>Compartmentation creates a division of labor within a cell, which increases the efficiency of cell function. The creatine–creatine phosphate shuttle (page 496) is a good example of this.</p>
+</blockquote>
+<h3 id="1-Physical-Compartmentation"><a href="#1-Physical-Compartmentation" class="headerlink" title="1. Physical Compartmentation"></a>1. Physical Compartmentation</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200215190819664.png" srcset="/img/loading.gif" lazyload alt="image-20200215190819664"></p>
+<p>Locations of major metabolic pathways within a eukaryotic cell:<br>This hypothetical cell combines features of a plant cell and an animal cell.</p>
+<blockquote>
+<p>Typically, intermediates of a pathway remain trapped within an organelle, while specific carriers allow substrates to enter and products to exit. The flux through a pathway, therefore, can be regulated by controlling the <u>rate</u> at which a substrate enters the compartment.</p>
+<p>Juxtaposition (并列) of enzymes that catalyze sequential reactions localizes substrates even in the absence of membrane-bound organelles.</p>
+</blockquote>
+<h3 id="2-Weak-Interactions-Caused-Compartmentation"><a href="#2-Weak-Interactions-Caused-Compartmentation" class="headerlink" title="(+) 2. Weak Interactions Caused Compartmentation"></a>(+) 2. Weak Interactions Caused Compartmentation</h3><blockquote>
+<p>Compartmentation can also result from weak interactions among enzymes that do not remain complexed when they are isolated.</p>
+<p>For example, conversion of glucose to pyruvate by glycolysis is catalyzed by enzymes that interact quite weakly in solution. However, there is evidence that <u>these enzymes interact within the cytosol</u>, forming a supramolecular structure that facilitates the multistep glycolytic pathway. </p>
+<p>The cytosol is much more highly structured than was formerly thought.</p>
+</blockquote>
+<blockquote>
+<p>It has been proposed that soluble enzymes are bound within the cell to the structural elements of the cytomatrix</p>
+<p>Whether highly structured or loosely associated, multienzyme complexes allow for efficient control of reaction pathways. Enzyme complexes restrict diffusion of intermediates, thereby keeping the average concentrations of intermediates low (but their local concentrations high, at enzyme catalytic sites). T</p>
+</blockquote>
+<h2 id="Hormonal-regulation"><a href="#Hormonal-regulation" class="headerlink" title="Hormonal regulation"></a>Hormonal regulation</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212170536715.png" srcset="/img/loading.gif" lazyload alt="image-20200212170536715" style="zoom:67%;" />
+
+<p><strong>Second messengers（第二信使）</strong> transmit information from hormones bound at the cell surface, thereby controlling intracellular metabolic processes.</p>
+<blockquote>
+<p>第二信使（英语：Second messenger）在生物学里是胞内信号分子，负责细胞内的信号转导以触发生理变化，如增殖，细胞分化，迁移，存活和细胞凋亡。因此第二信使是细胞内的信号转导的启动组成部件之一。第二信使分子的例子包括：环腺苷酸（cAMP），环磷酸鸟苷（cGMP），肌醇三磷酸（IP3），甘油二酯（DAG），钙离子（Ca）。细胞释放第二信使分子是响应于暴露在细胞外的信号分子-第一信使。第一信使是细胞外因子，通常是激素或神经递质，如肾上腺素，生长激素，和血清素。</p>
+</blockquote>
+<blockquote>
+<p>The process of transmitting these messages and bringing about metabolic changes is called <strong>signal transduction</strong>. The <strong>extracellular messengers</strong> include hormones, growth factors, neurotransmitters, and pheromones, which interact with specific receptors, resulting in specific metabolic changes in the target cell.</p>
+</blockquote>
+<blockquote>
+<p>Metabolic responses to hormones can involve changes in <u>gene expression</u>, leading to changes in <u>enzyme levels</u>. This type of response typically operates on a <u>timescale of hours to days</u>, resulting in a reprogramming of the metabolic capability of the cell. </p>
+<p><u>On a shorter timescale (seconds to hours),</u> some hormones stimulate the synthesis of intracellular <strong>second messengers</strong> that c<u>ontrol metabolic reactions.</u> </p>
+<p>One of the most important second messengers is <strong>adenosine 3’,5’-cyclic monophosphate</strong>, more commonly called <strong>cyclic AMP</strong>, or simply <strong>cAMP</strong>.</p>
+</blockquote>
+<h3 id="1-Modular-Signal-Transduction-Systems"><a href="#1-Modular-Signal-Transduction-Systems" class="headerlink" title="(+) 1. Modular Signal Transduction Systems"></a>(+) 1. Modular Signal Transduction Systems</h3><blockquote>
+<p>Signal transduction systems are modular in nature, allowing for a diversity of metabolic responses based on the same operating principles. Thus, secretion of one hormone can have quite diverse effects in different tissues, depending upon the nature of the receptor and other components and second messenger systems in different target cells. Moreover, a single second messenger may have diverse effects within a single cell. </p>
+</blockquote>
+<h2 id="Distributive-Control-of-Metabolism"><a href="#Distributive-Control-of-Metabolism" class="headerlink" title="(+) Distributive Control of Metabolism"></a>(+) Distributive Control of Metabolism</h2><blockquote>
+<p>We now realize that metabolic regulation is more complex and that all of the enzymes in a pathway contribute toward control of pathway flux.</p>
+<p>An approach called <strong>metabolic control analysis</strong> assigns to each enzyme in a pathway a <strong>flux control coefficient</strong>, $C^{J}$,  a value that can vary between zero and one.</p>
+<p>The <strong>flux</strong> through the pathway, <strong>J</strong>, is equal to the rate of the forward process, minus</p>
+<p>the rate of the reverse process, $v_{r}$:<br>$$<br>J &#x3D; v_{f} - v_{r}<br>$$<br>For a given enzyme, the flux control coefficient is the relative increase in flux, divided by the relative increase in enzyme activity that brought about that flux increase.</p>
+<p>For a true rate-limiting enzyme, the flux control coefficient is 1; a 20% increase in the activity of that enzyme would increase that flux rate by 20%. </p>
+</blockquote>
+<blockquote>
+<p>Flux-control coefficients are properties of the pathway or metabolic system, and thus all the flux-control coefficients in the pathway must sum to 1:<br>$$<br>C_{1}^{J} + C_{2}^{J} + C_{3}^{J} + ··· + C_{n}^{J} &#x3D; 1<br>$$<br>The predictions of metabolic control theory can be tested, for example, by using mutations affecting a specific enzyme to bring about defined changes in the activity of that enzyme in vivo</p>
+<p><em>every</em> enzyme in a pathway contributes toward control of that pathway; in other words, every enzyme has a flux-control coefficient greater than zero.</p>
+<p>Thus, regulation of a pathway is <em>distributed</em> among all of the enzymes involved in the pathway, giving rise to the concept of <strong>distributive control of metabolism</strong>. </p>
+</blockquote>
+<h2 id="Levels-of-Organization-at-Which-Metabolism-Is-Studied"><a href="#Levels-of-Organization-at-Which-Metabolism-Is-Studied" class="headerlink" title="Levels of Organization at Which Metabolism Is Studied"></a>Levels of Organization at Which Metabolism Is Studied</h2><ol>
+<li><strong>Whole organism</strong>: Radioactive tracers; 14C-acetate-cholesterol synthesis; GTT; NMR,; noninvasive MRI.</li>
+<li><strong>Isolated or perfused organs</strong>.</li>
+<li><strong>Whole cells</strong>: trypsin, collagenase, cellulase, FACS sorting, tissue, cell line.</li>
+<li><strong>Cell-free system</strong>: shear forces, hypotonic media, freezing and thawing, sonication, lysozyme, homogenation.</li>
+<li><strong>Purified compartments</strong>: </li>
+<li><strong>Purified proteins</strong>: citric acid cycle, reconstitution</li>
+</ol>
+<h1 id="六、Experimental-Analysis-of-Metabolism"><a href="#六、Experimental-Analysis-of-Metabolism" class="headerlink" title="六、Experimental Analysis of Metabolism"></a>六、Experimental Analysis of Metabolism</h1><h2 id="NMR（核磁共振）"><a href="#NMR（核磁共振）" class="headerlink" title="NMR（核磁共振）"></a>NMR（核磁共振）</h2><p><u>Example: Living organisms: ^31^P-NMR spectra</u></p>
+<p>Effect of anaerobic exercise on 31P-NMR spectra of human forearm muscle: </p>
+<ol>
+<li><p>Before exercise. </p>
+</li>
+<li><p>One minute into a 19-minute exercise period. </p>
+</li>
+<li><p>The 19^th^ minute. </p>
+</li>
+<li><p>Ten minutes after exercise.</p>
+</li>
+</ol>
+<p>Peak areas are proportional to intracellular concentrations.</p>
+<p>Peak 1 &#x3D; P<del>i</del>; 2 &#x3D; creatine phosphate; 3 &#x3D; ATP γ-phosphate; 4 &#x3D; ATP α-phosphate; 5 &#x3D; ATP β-phosphate; 6 &#x3D; phosphomonoesters. </p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212172618020.png" srcset="/img/loading.gif" lazyload alt="image-20200212172618020"></p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">NMR:</span> nuclear magnetic resonance 核磁共振<br></code></pre></td></tr></table></figure>
+
+<h2 id="Metabolic-Probes"><a href="#Metabolic-Probes" class="headerlink" title="Metabolic Probes"></a>Metabolic Probes</h2><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212172702610.png" srcset="/img/loading.gif" lazyload alt="image-20200212172702610" style="zoom: 67%;" />
+
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss">CO, <span class="hljs-built_in">cyanide</span>(氰化物): respiratory chain studies<br></code></pre></td></tr></table></figure>
+
+<p>By <u>inactivating individual enzymes, mutations and enzyme inhibitors</u> help identify the metabolic roles of enzymes.</p>
+<p>The steps of a hypothetical metabolic pathway are identified by analysis of mutants defective in individual steps of the pathway. </p>
+<p>We can identify metabolite C as the substrate for enzyme III by the absence of this enzyme in mutants that accumulate C. </p>
+<p>We know that D and E follow C in the pathway because feeding either D or E to mutants defective in enzyme III bypasses the genetic block and allows the cells to grow.</p>
+<h1 id="七、Radioisotopes-and-the-Liquid-Scintillation-Counter"><a href="#七、Radioisotopes-and-the-Liquid-Scintillation-Counter" class="headerlink" title="七、Radioisotopes and the Liquid Scintillation Counter"></a>七、Radioisotopes and the Liquid Scintillation Counter</h1><p>Radioisotopes <u>revolutionized</u> biochemistry when they became available to investigators shortly after World War II.</p>
+<p>Radioisotopes extend by orders of magnitude the <u>sensitivity</u> with which chemical species can be detected. </p>
+<p>Traditional chemical analysis can detect and quantify molecules in the <u>micromole or nanomole range</u> (i.e., 10-6 to 10-9 mole). </p>
+<p>A compound that is “labeled,” containing one or more atoms of a radioisotope, can be detected in <u>picomole or even femtomole amounts</u> (i.e., 10-12 to 10-15 mole). </p>
+<p>Radiolabeled compounds are called <strong>tracers</strong> because they allow an investigator to follow specific chemical or biochemical transformations in the presence of a huge excess of nonradioactive material.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212172934650.png" srcset="/img/loading.gif" lazyload alt="image-20200212172934650" style="zoom:67%;" />
+
+<p>Of the many uses of <u>stable isotopes</u> in biochemical research, we mention three applications here. </p>
+<p>First, incorporation of a stable isotope often increases the <u>density</u> of a material because the rare isotopes usually have higher atomic weights than their more abundant counterparts.</p>
+<ul>
+<li>This difference presents a way to <u>separate</u> labeled from nonlabeled compounds physically, as in the Meselson–Stahl experiment on <u>DNA replication</u>.</li>
+</ul>
+<p>Second, compounds labeled with stable isotopes, particularly are widely used in <u>NMR</u> studies of molecular structure and dynamics. </p>
+<p>Third, stable isotopes are used to <u>study reaction mechanisms</u>. The “kinetic isotope effect” refers to the effect on reaction rate of substitution of an atom by a heavy isotope.</p>
+<h1 id="八、Metabolomics"><a href="#八、Metabolomics" class="headerlink" title="八、Metabolomics"></a>八、Metabolomics</h1><blockquote>
+<p>Metabolomics is the scientific study of chemical processes involving metabolites. Specifically, metabolomics is the “systematic study of the unique chemical fingerprints that specific cellular processes leave behind”, the study of their small-molecule metabolite profiles.</p>
+<p>（代谢物组学（英语：metabolomics）是在后基因组学时代兴起的一门跨领域学科，其主要目标是定量的研究生命体对外界刺激、病理生理变化、以及本身基因突变而产生的其体内代谢物水平的多元动态反应。）</p>
+</blockquote>
+<p>The development of these new technologies has driven the “-omics” revolution:</p>
+<ul>
+<li>Genomics</li>
+<li>Transcriptomics</li>
+<li>Proteomics</li>
+<li>Metabolomics</li>
+</ul>
+<p><u>Hundreds or even thousands</u> of specific components are measured simultaneously in a biological sample. </p>
+<p>Thus, it is now feasible to measure the <u>full set of transcripts (<strong>transcriptome 转录组</strong>)</u>, proteins (<strong>proteome（蛋白质组）</strong>), or metabolites (<strong>metabolome（代谢组）</strong>) in a particular cell or tissue. </p>
+<p>The metabolome represents the <u>ultimate molecular phenotype</u> of a cell under a given set of conditions because all the changes in gene expression and enzyme activity eventually lead to changes in cellular metabolite levels (<u>the metabolic state or profile</u>).</p>
+<h2 id="Basic-Process"><a href="#Basic-Process" class="headerlink" title="Basic Process"></a>Basic Process</h2><p>Basic process of metabolic profiling: </p>
+<p>Metabolites are identified and quantified by an analytical method. </p>
+<p>Data are collected and visualized by informatics approaches. </p>
+<p>Informatics approaches are then used to reveal relationships and patterns among the samples.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212174528756.png" srcset="/img/loading.gif" lazyload alt="image-20200212174528756"></p>
+<p>Differential metabolic profile from livers of control mice and livers from mice 2 h after treatment with <strong>acetaminophen（对乙酰氨基酚）</strong>:</p>
+<p>The 2D plot (m&#x2F;z vs. elution time) shows cations detected by CE-MS analysis. </p>
+<p>The arrow points to the metabolite subsequently identified as <strong>ophthalmate（邻苯二甲酸酯）</strong> whose <strong>level significantly increased</strong> in treated mice. </p>
+<p>The color bar indicates the increase (red) or the decrease (blue) of metabolite level after drug treatment.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212174635402.png" srcset="/img/loading.gif" lazyload alt="image-20200212174635402"></p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">Biomarkers</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="Example-Diabetic-Studies"><a href="#Example-Diabetic-Studies" class="headerlink" title="Example: Diabetic Studies"></a>Example: Diabetic Studies</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212174739157.png" srcset="/img/loading.gif" lazyload alt="image-20200212174739157"></p>
+<h2 id="Example-CML-Patients"><a href="#Example-CML-Patients" class="headerlink" title="Example: CML Patients"></a>Example: CML Patients</h2><p>Principal component analysis of blood plasma metabolites in <strong>chronic myeloid leukemia (CML)</strong> patients: </p>
+<p>3D scatter plot of the first three principal components (PC1 vs. PC2 vs. PC3). </p>
+<p>Green squares are patients who are sensitive to drug treatment (SCML). </p>
+<p>Black diamonds are patients who are resistant to <u>drug treatment</u> (RCML). </p>
+<p>Red triangles are untreated CML patients (UCML).</p>
+<p>Blue circles are healthy controls (HC).</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20200212174810261.png" srcset="/img/loading.gif" lazyload alt="image-20200212174810261" style="zoom:67%;" />
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Biochemistry-II-Metabolism/" class="category-chain-item">Biochemistry II (Metabolism)</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Biochemistry-II-Metabolism/" class="print-no-link">#Biochemistry II (Metabolism)</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L01 Chemical Logic of Metabolism</div>
+      <div>https://zhenyumi.github.io/posts/1b141cf1/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月17日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/1362cf09/" title="L17 Cell communication via enzyme-coupled receptors">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L17 Cell communication via enzyme-coupled receptors</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/e0468ad9/" title="L02 Carbohydrate Metabolism Glycolysis, Gluconeogenesis, Glycogen Metabolism, and the Pentose Phosphate Pathway">
+                        <span class="hidden-mobile">L02 Carbohydrate Metabolism Glycolysis, Gluconeogenesis, Glycogen Metabolism, and the Pentose Phosphate Pathway</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

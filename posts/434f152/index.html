@@ -1,0 +1,1326 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Pharmacokinetics of drugs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L3 Pharmacokinetics">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/434f152/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Pharmacokinetics of drugs">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303100018915.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303100435928.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303100632290.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303100702860.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303101143293.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303101914730.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103229018.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103253528.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103351231.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103413221.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103454039.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103514330.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103853740.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303104035077.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303104143953.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303105020155.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303105720007.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303105841718.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303105853960.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303110336776.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303110516361.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303110729047.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303111618840.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304191516623.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304191653343.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304193035988.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304193609121.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304194302444.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304194514296.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304194759874.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304195240737.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304195739591.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304195837206.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304200136300.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304200203480.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304200224603.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304200306170.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304200335532.png">
+<meta property="article:published_time" content="2021-04-16T06:03:03.000Z">
+<meta property="article:modified_time" content="2021-04-16T06:03:03.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Molecular Pharmacology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303100018915.png">
+  
+  
+  
+  <title>L3 Pharmacokinetics - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L3 Pharmacokinetics</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-04-16 14:03" pubdate>
+          2021年4月16日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          796 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          7 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L3 Pharmacokinetics</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><strong>Properties of an ideal drug</strong></p>
+<ul>
+<li><strong>Safety</strong>: Fewer side effects or lower toxicity</li>
+<li><strong>Effectiveness</strong>: Better therapeutic effects</li>
+<li><strong>Selectivity</strong>: Target to desired sites or molecules</li>
+</ul>
+<p><strong>Pharmacokinetics &amp; Pharmacodynamics</strong></p>
+<ul>
+<li><strong>PD</strong> governs the concentration-effect part of the interaction, whereas pharmacokinetics deals with the dose-concentration part</li>
+<li>The <strong>PK</strong> processes of ADE determine how rapidly and for how long the drug will appear at the target organ</li>
+</ul>
+<p><strong>Pharmacokinetic Process-ADME</strong></p>
+<ul>
+<li>Absorption</li>
+<li>Distribution</li>
+<li>Metabolism</li>
+<li>Excretion<ul>
+<li>It is also called ADME process</li>
+<li>Elimination is the sum of M and E</li>
+<li><strong>Elimination Of Drugs</strong><ul>
+<li>Metabolism: Liver</li>
+<li>Excretion: Kidney, Liver (bile), Lungs</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303100018915.png" srcset="/img/loading.gif" lazyload alt="image-20210303100018915" style="zoom:100%;" />
+
+<h1 id="一、Drug-administration"><a href="#一、Drug-administration" class="headerlink" title="一、Drug administration"></a>一、Drug administration</h1><p>Route and form in which drug is delivered to body</p>
+<h2 id="Oral-administration"><a href="#Oral-administration" class="headerlink" title="Oral administration"></a>Oral administration</h2><p>Oral administration-most common route</p>
+<p><strong>Governed by:</strong></p>
+<ul>
+<li>surface area for absorption, blood flow, physical state of drug, concentration.</li>
+<li>occurs via <u>passive</u> process.</li>
+<li>In <u>theory</u>: weak acids optimally absorbed in stomach, weak bases in intestine</li>
+<li>In <u>reality</u>: the overall rate of absorption of drugs is always greater in the intestine</li>
+</ul>
+<h3 id="1-Subject-to-First-Pass-Effect"><a href="#1-Subject-to-First-Pass-Effect" class="headerlink" title="1. Subject to First Pass Effect"></a>1. Subject to First Pass Effect</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303100435928.png" srcset="/img/loading.gif" lazyload alt="image-20210303100435928" style="zoom:100%;" />
+
+<ul>
+<li>pass through liver before reaching circulation</li>
+<li>undergo metabolism by liver</li>
+</ul>
+<h3 id="2-Rate-of-Appearance-in-Blood"><a href="#2-Rate-of-Appearance-in-Blood" class="headerlink" title="2. Rate of Appearance in Blood"></a>2. Rate of Appearance in Blood</h3><p>Dependent on rate of dissolution</p>
+<p>Rate of absorption from GI tract</p>
+<ul>
+<li><strong>timed release</strong><ul>
+<li>dissolve at different rates</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-Forms-of-Oral-Drugs"><a href="#3-Forms-of-Oral-Drugs" class="headerlink" title="3. Forms of Oral Drugs"></a>3. Forms of Oral Drugs</h3><ol>
+<li>liquids: syrups, elixirs</li>
+<li>suspensions</li>
+<li>powders</li>
+<li>pills: capsules, tablets</li>
+</ol>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303100632290.png" srcset="/img/loading.gif" lazyload alt="image-20210303100632290" style="zoom: 33%;" />
+
+<h2 id="Buccal-Sublingual-颊部-舌下给药"><a href="#Buccal-Sublingual-颊部-舌下给药" class="headerlink" title="Buccal&#x2F;Sublingual 颊部&#x2F;舌下给药"></a>Buccal&#x2F;Sublingual 颊部&#x2F;舌下给药</h2><p>sublingual (SL) &#x3D; <u>under tongue</u></p>
+<p>absorbed through <strong>oral mucus membranes</strong> in mouth</p>
+<ul>
+<li>buccal &#x3D; cheek</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303100702860.png" srcset="/img/loading.gif" lazyload alt="image-20210303100702860" style="zoom:67%;" />
+
+<h3 id="1-Sublingual-Administration-舌下给药"><a href="#1-Sublingual-Administration-舌下给药" class="headerlink" title="1. Sublingual Administration 舌下给药"></a>1. Sublingual Administration 舌下给药</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303101143293.png" srcset="/img/loading.gif" lazyload alt="image-20210303101143293" style="zoom:100%;" />
+
+<p>Absorption from the oral mucosa has special significance for certain drugs despite the small surface area.</p>
+<ul>
+<li><font color="FF0000">Nitroglycerin</font>: <strong>nonionic</strong>, <strong>very lipid Soluble</strong>, releases NO for vasodilation </li>
+<li>Because of <strong>venous drainage（静脉引流）</strong> into the <strong>superior vena cava（上腔静脉）</strong>, this route “protects” it from first-pass liver metabolism.<ul>
+<li>nonionic and lipid soluble 保证了能够快速穿过细胞膜</li>
+<li>舌下给药的方式避免了通过肝脏，避免了肝脏对药物的消除作用，从而使得药物的利用效率更高</li>
+<li>适用于需要快速比较紧急或避免肝脏的（首关）消除的方法</li>
+</ul>
+</li>
+</ul>
+<h2 id="Parenteral-注射"><a href="#Parenteral-注射" class="headerlink" title="Parenteral 注射"></a>Parenteral 注射</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303101914730.png" srcset="/img/loading.gif" lazyload alt="image-20210303101914730" style="zoom:100%;" />
+
+<p>Route other than alimentary canal</p>
+<ul>
+<li>intradermal (ID) 皮内注射</li>
+<li>subcutaneous (SC or SQ) 皮下注射</li>
+<li>intramuscular (IM) 肌内注射</li>
+<li>intravenous (IV) 静脉注射</li>
+</ul>
+<h3 id="1-Intravenous-IV"><a href="#1-Intravenous-IV" class="headerlink" title="1. Intravenous (IV)"></a>1. Intravenous (IV)</h3><p><strong>directly into vein</strong></p>
+<ul>
+<li>rapid onset of drug actions</li>
+<li>Fastest</li>
+</ul>
+<h3 id="2-Intramuscular"><a href="#2-Intramuscular" class="headerlink" title="2. Intramuscular"></a>2. Intramuscular</h3><p>Rapid rate of absorption from aqueous solution, depending on the muscle.</p>
+<p>Perfusion of particular muscle influences the rate of absorption</p>
+<p>Slow &amp; constant absorption of drug when injected in an oil solution or suspension</p>
+<h3 id="3-Subcutaneous"><a href="#3-Subcutaneous" class="headerlink" title="3. Subcutaneous"></a>3. Subcutaneous</h3><p>Slow and constant absorption</p>
+<p>Slow-release pellet may be implanted</p>
+<p>Drug must not be irritating</p>
+<h2 id="Topical-on-the-skin"><a href="#Topical-on-the-skin" class="headerlink" title="Topical: on the skin"></a>Topical: on the skin</h2><p><u>not absorbed</u> in appreciable amounts</p>
+<ul>
+<li>have local effects: (keep in mind large surface area)</li>
+</ul>
+<p><u>absorbed</u></p>
+<ul>
+<li>transdermal: usually slowly over a day</li>
+</ul>
+<p><strong>Example not absorbed</strong>:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103229018.png" srcset="/img/loading.gif" lazyload alt="image-20210303103229018" style="zoom:100%;" />
+
+<ul>
+<li>A cream to treat Eczema</li>
+</ul>
+<p><strong>Example: absorbed</strong></p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103253528.png" srcset="/img/loading.gif" lazyload alt="image-20210303103253528" style="zoom: 67%;" />
+
+<h2 id="Example-Nitroglycerin"><a href="#Example-Nitroglycerin" class="headerlink" title="Example: Nitroglycerin"></a>Example: Nitroglycerin</h2><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103351231.png" srcset="/img/loading.gif" lazyload alt="image-20210303103351231" style="zoom: 50%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103413221.png" srcset="/img/loading.gif" lazyload alt="image-20210303103413221" style="zoom: 33%;" />
+
+<h2 id="Inhalation"><a href="#Inhalation" class="headerlink" title="Inhalation"></a>Inhalation</h2><p><u><strong>systemic drugs</strong></u>: intended to be absorbed into blood</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103454039.png" srcset="/img/loading.gif" lazyload alt="image-20210303103454039" style="zoom: 67%;" />
+
+<p><u><strong>local drugs</strong></u>: designed to act on lung tissue</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103514330.png" srcset="/img/loading.gif" lazyload alt="image-20210303103514330" style="zoom: 67%;" />
+
+<h2 id="Intraarterial-Administration-动脉注射"><a href="#Intraarterial-Administration-动脉注射" class="headerlink" title="Intraarterial Administration 动脉注射"></a>Intraarterial Administration 动脉注射</h2><p>Occasionally a drug is injected directly into an artery to localize its effect to a particular organ, e.g., for liver tumors, head&#x2F;neck cancers.</p>
+<p>Requires great care and should be reserved for experts.</p>
+<h2 id="Intrathecal"><a href="#Intrathecal" class="headerlink" title="Intrathecal"></a>Intrathecal</h2><p>Necessary if the blood-brain barrier and blood-CSF barrier impede entrance into the CNS.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303103853740.png" srcset="/img/loading.gif" lazyload alt="image-20210303103853740" style="zoom: 67%;" />
+
+<p>Used for local or rapid effects of drugs on the meninges or cerebrospinal axis, as in spinal anesthesia or acute CNS infections.</p>
+<h2 id="Rectal-Vaginal"><a href="#Rectal-Vaginal" class="headerlink" title="Rectal&#x2F;Vaginal"></a>Rectal&#x2F;Vaginal</h2><p>**Suppositories (**栓剂) </p>
+<ul>
+<li>Vaginal: usually not absorbed<ul>
+<li>Local Effect</li>
+</ul>
+</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303104035077.png" srcset="/img/loading.gif" lazyload alt="image-20210303104035077" style="zoom:100%;" />
+
+<ul>
+<li><strong>Rectal:</strong> <strong>absorbed</strong><ul>
+<li>May be useful when oral administration is precluded by vomiting or when the patient is unconscious.</li>
+<li><u>some first pass effect,</u> approximately 50% of the drug that is absorbed from the rectum will bypass the liver.</li>
+</ul>
+</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303104143953.png" srcset="/img/loading.gif" lazyload alt="image-20210303104143953" style="zoom:100%;" />
+
+<h2 id="Choice-of-route-of-drug-administration"><a href="#Choice-of-route-of-drug-administration" class="headerlink" title="Choice of route of drug administration"></a>Choice of route of drug administration</h2><p><strong>Consider factors</strong></p>
+<ul>
+<li>Concentration in blood</li>
+<li>Rapidity of onset</li>
+<li>Duration of effects</li>
+<li>Magnitude of effects</li>
+<li>Amount delivered</li>
+</ul>
+<h1 id="二、Drug-Absorption"><a href="#二、Drug-Absorption" class="headerlink" title="二、Drug Absorption"></a>二、Drug Absorption</h1><p>Process of drug leaving site of administration</p>
+<h3 id="1-Important-Properties-Affecting-Drug-Absorption"><a href="#1-Important-Properties-Affecting-Drug-Absorption" class="headerlink" title="1. Important Properties Affecting Drug Absorption"></a>1. Important Properties Affecting Drug Absorption</h3><p><strong>Chemical properties</strong></p>
+<ul>
+<li>acid or base</li>
+<li>degree of ionization</li>
+<li>polarity</li>
+<li><strong>molecular weight</strong><ul>
+<li>molecular is small → Lipid soluble</li>
+</ul>
+</li>
+<li>lipid solubility</li>
+<li>partition coefficient</li>
+</ul>
+<p><strong>Physiologic variables</strong></p>
+<ul>
+<li>gastric motility 胃蠕动</li>
+<li>pH at the absorption site</li>
+<li>area of absorbing surface</li>
+<li>blood flow</li>
+<li>Pre-systemic elimination</li>
+<li>ingestion w&#x2F;wo food</li>
+</ul>
+<h3 id="2-Influenced-by"><a href="#2-Influenced-by" class="headerlink" title="2. Influenced by"></a>2. Influenced by</h3><p><strong>size &amp; thickness of absorbing surface</strong></p>
+<ul>
+<li>GI tract<ul>
+<li>large with single cell layer<ul>
+<li><strong>small bowel &gt; large bowel</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Surface</strong></p>
+<ul>
+<li>Lung<ul>
+<li>Large with single cell layer</li>
+</ul>
+</li>
+<li>Mucus membranes<ul>
+<li>Surface small with multiple cell layers</li>
+</ul>
+</li>
+<li>Skin<ul>
+<li>Surface large with multiple cell layers</li>
+</ul>
+</li>
+</ul>
+<p><strong>blood supply</strong> <strong>to surface</strong></p>
+<ul>
+<li>GI, lung, mucus membranes<ul>
+<li>good blood supply</li>
+</ul>
+</li>
+<li>skin: variable</li>
+</ul>
+<h3 id="3-Factors-Influencing-Absorption"><a href="#3-Factors-Influencing-Absorption" class="headerlink" title="3. Factors Influencing Absorption"></a>3. Factors Influencing Absorption</h3><ol>
+<li>interaction of drug with surface characteristics<ul>
+<li>e.g. skin: low in water and lipid</li>
+</ul>
+</li>
+<li>amount of time in contact with surface</li>
+<li>concentration gradient</li>
+</ol>
+<h2 id="Cell-Membranes"><a href="#Cell-Membranes" class="headerlink" title="Cell Membranes"></a>Cell Membranes</h2><p>The character of biological membrane</p>
+<ul>
+<li>Be composed of phospholipids and proteins<ul>
+<li>lipid soluble molecule can cross it easily</li>
+</ul>
+</li>
+<li>Has aqueous channel<ul>
+<li>water and liquid soluble molecule with little molecule weight can cross it easily</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-Membranes-and-Absorption"><a href="#1-Membranes-and-Absorption" class="headerlink" title="1. Membranes and Absorption"></a>1. Membranes and Absorption</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303105020155.png" srcset="/img/loading.gif" lazyload alt="image-20210303105020155" style="zoom:100%;" />
+
+<h4 id="Aqueous-diffusion"><a href="#Aqueous-diffusion" class="headerlink" title="Aqueous diffusion"></a>Aqueous diffusion</h4><p>Water-soluble, small molecular mass drugs</p>
+<p>The force of it is the liquid static pressure or osmotic pressure across the membrane</p>
+<p>Through aqueous channels</p>
+<h5 id="1-Molecular-Size"><a href="#1-Molecular-Size" class="headerlink" title="(1) Molecular Size"></a>(1) Molecular Size</h5><p>In general, smaller molecules diffuse more readily across membranes than larger ones (because the <u>diffusion coefficient is inversely related to the sq. root of the MW</u>). This applies to passive diffusion but NOT to specialized transport mechanisms (active transport, pinocytosis)</p>
+<ul>
+<li>tight junction: MW &lt;200 for diffusion</li>
+<li>large fenestrations in capillaries: MW 20K-30K.</li>
+</ul>
+<h4 id="Lipid-diffusion"><a href="#Lipid-diffusion" class="headerlink" title="Lipid diffusion"></a>Lipid diffusion</h4><p>The lipid-soluble drug molecule penetrates along a concentration gradient by virtue of its solubility in the lipid membrane</p>
+<h5 id="1-Oil-Water-Partition-Coefficient"><a href="#1-Oil-Water-Partition-Coefficient" class="headerlink" title="(1) Oil: Water Partition Coefficient"></a>(1) Oil: Water Partition Coefficient</h5><p>The greater the partition coefficient, the higher the lipid-solubility of the drug, and the greater its diffusion across membranes.</p>
+<p>A non-ionizable compound (or the non-ionized form of an acid or a base) will reach an equilibrium across the membrane that is proportional to its concentration gradient.</p>
+<h4 id="Ionization"><a href="#Ionization" class="headerlink" title="Ionization"></a>Ionization</h4><p>Most drugs are small (MW &lt; 1000) <strong>weak electrolytes</strong> (acids&#x2F;bases). This influences passive diffusion since cell membranes are hydrophobic lipid bilayers that are much more permeable to the non-ionized forms of drugs.</p>
+<p>The fraction of drug that is non-ionized depends on its pKa, and the local biophase pH…</p>
+<p><strong>ionized &#x3D; polar &#x3D; water-soluble</strong></p>
+<p><strong>non-ionized &#x3D; less polar &#x3D; more lipid-soluble</strong></p>
+<ul>
+<li>Think of an acid as having a carboxyl: COOH &#x2F; COO-</li>
+<li>Think of a base as having an amino: NH3+ &#x2F; NH2</li>
+</ul>
+<p>For both acids and bases, pKa &#x3D; acid dissociation constant, the pH at which 50% of the molecules are ionized.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>weak acid &#x3D; aspirin (pKa 3.5)</li>
+<li>weak base &#x3D; morphine (pKa 8.0)</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303105720007.png" srcset="/img/loading.gif" lazyload alt="image-20210303105720007" style="zoom:100%;" />
+
+<ul>
+<li>The pH on each side of the membrane determines the equilibrium on each side</li>
+</ul>
+<h5 id="1-Henderson-Hasselbalch-Eqn"><a href="#1-Henderson-Hasselbalch-Eqn" class="headerlink" title="(1) Henderson-Hasselbalch Eqn"></a>(1) Henderson-Hasselbalch Eqn</h5><p>$$<br>\log{\frac{\text{protonated}}{\text{unprotonated}}} &#x3D; pK_{a} - pH<br>$$</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303105841718.png" srcset="/img/loading.gif" lazyload alt="image-20210303105841718" style="zoom:100%;" />
+
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303105853960.png" srcset="/img/loading.gif" lazyload alt="image-20210303105853960" style="zoom:100%;" />
+
+<p>Moral of the story</p>
+<ul>
+<li>Acids are increasingly ionized with increasing pH (basic environment)</li>
+<li>Bases are increasingly ionized with decreasing pH (acidic environment)</li>
+</ul>
+<p>Acidic drugs are best absorbed from acidic environments</p>
+<ul>
+<li>Basic drugs are best absorbed from basic environments</li>
+</ul>
+<p>Certain compounds may exist as <u>strong electrolytes</u>. This means they are ionized at all body pH values. They are poorly lipid soluble.</p>
+<p>**Example: **</p>
+<ul>
+<li><strong>strong acid</strong> &#x3D; glucuronic acid derivatives of drugs.</li>
+<li><strong>strong base</strong> &#x3D; quarternary ammonium compounds such as acetylcholine</li>
+</ul>
+<h3 id="2-Membrane-Transfer"><a href="#2-Membrane-Transfer" class="headerlink" title="2. Membrane Transfer"></a>2. Membrane Transfer</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303110336776.png" srcset="/img/loading.gif" lazyload alt="image-20210303110336776" style="zoom:100%;" />
+
+<h4 id="Special-carriers"><a href="#Special-carriers" class="headerlink" title="Special carriers"></a>Special carriers</h4><p>Substances that are important for cell function and too large or too insoluble in lipid to diffuse passively through membranes, eg, peptides, amino acids, glucose.</p>
+<p>These kind of transport, unlike passive diffusion, is saturable and inhibitable</p>
+<ul>
+<li>Active transport is characterized by a requirement for energy</li>
+<li>Facilitated diffusion needs no energy</li>
+</ul>
+<h4 id="Active-Transport"><a href="#Active-Transport" class="headerlink" title="Active Transport"></a>Active Transport</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303110516361.png" srcset="/img/loading.gif" lazyload alt="image-20210303110516361" style="zoom:100%;" />
+
+<p><strong>Occurrence</strong>：</p>
+<ul>
+<li>neuronal membranes, renal tubule cells, hepatocytes</li>
+</ul>
+<p><strong>Characteristics</strong>：</p>
+<ul>
+<li>carrier-mediated </li>
+<li>selectivity </li>
+<li>competitive inhibition by congeners </li>
+<li>energy requirement </li>
+<li>saturable </li>
+<li>movement against concentration gradient</li>
+</ul>
+<h4 id="Facilitated-Diffusion"><a href="#Facilitated-Diffusion" class="headerlink" title="Facilitated Diffusion"></a>Facilitated Diffusion</h4><p>This is a carrier-mediated process that <u>does NOT require energy</u>. In this process, movement of the substance can NOT be against its concentration gradient.</p>
+<p>Necessary for the transport of endogenous compounds whose rate of movement across membranes by simple diffusion would be too slow</p>
+<h4 id="Endocytosis-Exocytosis-Internalization"><a href="#Endocytosis-Exocytosis-Internalization" class="headerlink" title="Endocytosis, Exocytosis, Internalization"></a>Endocytosis, Exocytosis, Internalization</h4><p>Endocytosis (or pinocytosis): a portion of the plasma membrane invaginates and then pinches off from the surface to form an intracellular vesicle.</p>
+<p>Example: This is the mechanism by which thyroid follicular cells, in response to TSH, take up thyroglobulin (MW &gt; 500,000).</p>
+<h1 id="三、Drug-Distribution"><a href="#三、Drug-Distribution" class="headerlink" title="三、Drug Distribution"></a>三、Drug Distribution</h1><p>via circulation to sites of action sites of elimination</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303110729047.png" srcset="/img/loading.gif" lazyload alt="image-20210303110729047" style="zoom:100%;" />
+
+<h2 id="Phases-of-Distribution"><a href="#Phases-of-Distribution" class="headerlink" title="Phases of Distribution"></a>Phases of Distribution</h2><p>first phase</p>
+<ul>
+<li>reflects cardiac output and regional blood flow. Thus, heart, liver, kidney &amp; brain receive most of the drug during the first few minutes after absorption.</li>
+</ul>
+<p>next phase</p>
+<ul>
+<li>delivery to muscle, most viscera（内脏）, skin and adipose is slower, and involves a far larger fraction of the body mass.</li>
+</ul>
+<h2 id="Drug-Reservoirs"><a href="#Drug-Reservoirs" class="headerlink" title="Drug Reservoirs"></a>Drug Reservoirs</h2><p>Body compartments where a drug can accumulate are reservoirs. They have dynamic effects on drug availability.</p>
+<p><strong>plasma proteins as reservoirs (bind drug)</strong></p>
+<p><strong>cellular reservoirs</strong></p>
+<ul>
+<li>Adipose (lipophilic drugs)</li>
+<li>Bone (crystal lattice)</li>
+<li>Transcellular (ion trapping)</li>
+</ul>
+<h3 id="1-Adipose-Reservoir"><a href="#1-Adipose-Reservoir" class="headerlink" title="1. Adipose Reservoir"></a>1. Adipose Reservoir</h3><p>Many lipid-soluble drugs are stored in fat. In obesity, fat content may be as high as 50%, and in starvation it may still be only as low as 10% of body weight.</p>
+<h3 id="2-Bone-Reservoir"><a href="#2-Bone-Reservoir" class="headerlink" title="2. Bone Reservoir"></a>2. Bone Reservoir</h3><p>Tetracycline antibiotics (and other divalent metal ion-chelating agents) and heavy metals may accumulate in bone. They are <u>adsorbed</u> onto the bone-crystal surface and eventually become incorporated into the crystal lattice</p>
+<p>Bone then can become a reservoir for slow release of toxic agents (e.g., lead, radium) into the blood</p>
+<h3 id="3-GI-Tract-as-Reservoir"><a href="#3-GI-Tract-as-Reservoir" class="headerlink" title="3. GI Tract as Reservoir"></a>3. GI Tract as Reservoir</h3><p>Weak bases are passively concentrated in the stomach from the blood because of the large pH differential.</p>
+<p>Some drugs are excreted in the bile in active form or as a conjugate that can be hydrolyzed in the intestine and reabsorbed.</p>
+<h2 id="Factors-Affecting-Distribution"><a href="#Factors-Affecting-Distribution" class="headerlink" title="Factors Affecting Distribution"></a>Factors Affecting Distribution</h2><p><strong>Rate of blood flow</strong></p>
+<ul>
+<li>greater amounts delivered to organs and tissues with greater blood flow</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210303111618840.png" srcset="/img/loading.gif" lazyload alt="image-20210303111618840" style="zoom:50%;" />
+
+<p><strong>solubility of drug</strong></p>
+<ul>
+<li>Lipid: readily moves into tissues</li>
+<li>Nonlipid: limited ability to cross cell membranes</li>
+</ul>
+<p><strong>Protein binding</strong></p>
+<ul>
+<li>unbound drug &#x3D; active</li>
+</ul>
+<p><strong>effect of protein binding</strong></p>
+<ul>
+<li>limit action</li>
+<li>prolong action</li>
+</ul>
+<h2 id="Redistribution"><a href="#Redistribution" class="headerlink" title="Redistribution"></a>Redistribution</h2><p>Termination of drug action is normally by biotransformation&#x2F;excretion, but may also occur as a result of redistribution between various compartments.</p>
+<p>Particularly true for lipid-soluble drugs that affect brain and heart.</p>
+<h2 id="Barriers-to-Distribution"><a href="#Barriers-to-Distribution" class="headerlink" title="Barriers to Distribution"></a>Barriers to Distribution</h2><p>specialized capillaries in selected tissues</p>
+<p>Placental Membranes</p>
+<ul>
+<li>layer of epithelial cells</li>
+</ul>
+<p>blood brain barrier</p>
+<ul>
+<li>endothelial layers of capillaries in brain plus glial sheath</li>
+</ul>
+<h1 id="四、Drug-Metabolism"><a href="#四、Drug-Metabolism" class="headerlink" title="四、Drug Metabolism"></a>四、Drug Metabolism</h1><h2 id="Drug-Biotransformation"><a href="#Drug-Biotransformation" class="headerlink" title="Drug Biotransformation"></a>Drug Biotransformation</h2><p>Questions:</p>
+<ol>
+<li><strong>Why</strong> is drug biotransformation necessary</li>
+<li>The role of <u>biotransformation</u> in drug Disposition (<strong>How</strong>)</li>
+<li><strong>Where</strong> do drug biotransformation occur</li>
+<li>The <u>enzymes involved</u> in biotransformation (<strong>What</strong>)</li>
+</ol>
+<h3 id="1-The-role-of-biotransformation"><a href="#1-The-role-of-biotransformation" class="headerlink" title="1. The role of biotransformation"></a>1. The role of biotransformation</h3><p>Converts pro-drug to active compound</p>
+<p>Coverts less active drug to more active drug </p>
+<p>Produces toxic compound </p>
+<p>Terminates drug actions</p>
+<h3 id="2-Biotransformation-process-Phase-I"><a href="#2-Biotransformation-process-Phase-I" class="headerlink" title="2. Biotransformation process-Phase I"></a>2. Biotransformation process-Phase I</h3><p><strong>Phase 1 reactions</strong> usually convert the parent drug to a more polar metabolite by introducing or unmasking a functional group (-OH, -NH2, -SH)</p>
+<p>Often these metabolites are inactive, although in some instances activity is only modified or even enhanced</p>
+<p>If phase 1 metabolites are sufficiently polar, they may be readily excreted</p>
+<h3 id="3-Biotransformation-process-Phase-II"><a href="#3-Biotransformation-process-Phase-II" class="headerlink" title="3. Biotransformation process-Phase II"></a>3. Biotransformation process-Phase II</h3><p>Phase 2 reactions ：An endogenous substrate such as glucuronic acid, sulfuric acid, acetic acid, or an amino acid combines with the functional group to form a highly polar conjugate.</p>
+<p>Phase 1 reactions was catalyzed by <strong>cytochrome P450</strong> in the hepatic microsome and Phase 2 reactions was catalyzed by some transferases.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304191516623.png" srcset="/img/loading.gif" lazyload alt="image-20210304191516623" style="zoom:100%;" />
+
+<h4 id="Phase-II-Conjugation-Reactions"><a href="#Phase-II-Conjugation-Reactions" class="headerlink" title="Phase II Conjugation Reactions"></a>Phase II Conjugation Reactions</h4><p>Glucuronidation (UDP glucuronosyltransferases)</p>
+<ul>
+<li>Glucuronidation is the most important conjugation reaction<ul>
+<li>Enzyme: uridine diphosphate glucuronyl transferases, localized in the microsome</li>
+</ul>
+</li>
+</ul>
+<p>Glutathione (glutathione S-transferases)</p>
+<p>Amino acid (glycine, glutamine)</p>
+<p>Sulfate (sulfotransferases)</p>
+<ul>
+<li>Sulfation also is an important conjugation reaction<ul>
+<li>Enzyme: sulfotransferases, localized in the cytosol</li>
+</ul>
+</li>
+</ul>
+<p>Acetylation (N-acetyltransferases)</p>
+<p>Methylation (methyltransferases)</p>
+<blockquote>
+<p><strong>Many conjugation enzymes exhibit polymorphism</strong></p>
+</blockquote>
+<h2 id="Biotransformation-of-Major-Functional-Groups"><a href="#Biotransformation-of-Major-Functional-Groups" class="headerlink" title="Biotransformation of Major Functional Groups"></a>Biotransformation of Major Functional Groups</h2><p> (-OH): oxidation, methylation, glucuronide conjugation, sulfate conjugation</p>
+<p>(-COOH): oxidation, glucuronide conjugation, glycine conjugation</p>
+<p>(-NH2): deamination (and aldehyde formation), glucuronide conjugation, methylation</p>
+<h2 id="Places-that-Biotransformations-Occur"><a href="#Places-that-Biotransformations-Occur" class="headerlink" title="Places that Biotransformations Occur"></a>Places that Biotransformations Occur</h2><p>Extrahepatic microsomal enzymes (oxidation, conjugation)</p>
+<p>Hepatic microsomal enzymes (oxidation, conjugation)</p>
+<p>Hepatic non-microsomal enzymes (acetylation, sulfation,GSH, alcohol&#x2F;aldehyde dehydrogenase, hydrolysis, ox&#x2F;red)</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304191653343.png" srcset="/img/loading.gif" lazyload alt="image-20210304191653343" style="zoom:100%;" />
+
+<p>Liver is the principal organ of drug metabolism because of its containing most drug-metabolizing enzymes and its high blood flow</p>
+<ul>
+<li>Gastrointestinal tract, the lungs, the skin and the kidneys</li>
+</ul>
+<p>In a cell, the enzymes are localized in the endoplasmic reticulum, mitochondria, cytosol, lysosomes, or even the nuclear envelope or plasma membrane</p>
+<h3 id="1-Microsomal-Mixed-Function-Oxidase-System-Phase-I-Reactions"><a href="#1-Microsomal-Mixed-Function-Oxidase-System-Phase-I-Reactions" class="headerlink" title="1. Microsomal Mixed Function Oxidase System &amp; Phase I Reactions"></a>1. Microsomal Mixed Function Oxidase System &amp; Phase I Reactions</h3><p>The enzyme systems involved in phase 1 reactions are located primarily in the endoplasmic reticulum.</p>
+<p>The ER membranes are isolated by homogenization and fractionation of the cell, they reform into vesicles called microsomes</p>
+<p>The <u>smooth microsomes</u> are relatively rich in enzymes responsible for oxidative drug metabolism</p>
+<h4 id="Microsomal-Mixed-Function-Oxidase-System"><a href="#Microsomal-Mixed-Function-Oxidase-System" class="headerlink" title="Microsomal Mixed Function Oxidase System"></a>Microsomal Mixed Function Oxidase System</h4><p>This system includes a series of enzymes involved in drug oxidation</p>
+<p>One molecule of oxygen is consumed (reduced) per substrate molecule, with one oxygen atom appearing in the product and the other in water</p>
+<p>In this oxidation-reduction process, two microsomal enzymes play a key role</p>
+<ul>
+<li>NADPH-cytochrome P450 reductase</li>
+<li>Cytochrome P450</li>
+</ul>
+<h4 id="Human-Liver-P450-Enzymes"><a href="#Human-Liver-P450-Enzymes" class="headerlink" title="Human Liver P450 Enzymes"></a>Human Liver P450 Enzymes</h4><p>Twelve CYP gene families have been identified in humans, and the categories are based upon protein sequence homology</p>
+<ul>
+<li>Families CYP plus arabic numeral (&gt;40% homology of amino acid sequence, eg. <strong>CYP1</strong>)</li>
+<li>Subfamily 40-55% homology of amino acid sequence; eg. <strong>CYP1A</strong></li>
+<li>Subfamily additional arabic numeral when more than 1 subfamily has been identified; eg. <strong>CYP1A2</strong></li>
+</ul>
+<p><strong>CYP3A4</strong> is very common to the metabolism of many drugs; its presence in the GI tract is responsible for poor oral availability of many drugs</p>
+<h3 id="2-Metabolism-of-Drugs-to-Toxic-Products"><a href="#2-Metabolism-of-Drugs-to-Toxic-Products" class="headerlink" title="2. Metabolism of Drugs to Toxic Products"></a>2. Metabolism of Drugs to Toxic Products</h3><p>Several compounds have been shown to be metabolically transformed to reactive intermediates that are toxic to various organs</p>
+<ul>
+<li>Alternative detoxification mechanisms </li>
+<li>Endogenous detoxifying co-substrates</li>
+</ul>
+<p>The number of specific examples of such drug-induced toxicity is expanding rapidly</p>
+<h4 id="Acetominophen-Metabolism"><a href="#Acetominophen-Metabolism" class="headerlink" title="Acetominophen Metabolism"></a>Acetominophen Metabolism</h4><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304193035988.png" srcset="/img/loading.gif" lazyload alt="image-20210304193035988" style="zoom:100%;" />
+
+<h1 id="五、Drug-Excretion"><a href="#五、Drug-Excretion" class="headerlink" title="五、Drug Excretion"></a>五、Drug Excretion</h1><p>movement from tissues to blood to site of removal from body</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304193609121.png" srcset="/img/loading.gif" lazyload alt="image-20210304193609121" style="zoom:100%;" />
+
+<h2 id="Renal-Excretion-of-Drugs"><a href="#Renal-Excretion-of-Drugs" class="headerlink" title="Renal Excretion of Drugs"></a>Renal Excretion of Drugs</h2><p>Filtration (Glomerulus)</p>
+<p>Reabsorption Passive Transport (Tubule)</p>
+<p>Secretion Active Transport (Tubule)</p>
+<ul>
+<li>Transporter for Organic Acids</li>
+<li>Transporter for Organic Bases</li>
+</ul>
+<h3 id="1-Glomerular（肾小球）-Filtration"><a href="#1-Glomerular（肾小球）-Filtration" class="headerlink" title="1. Glomerular（肾小球） Filtration"></a>1. Glomerular（肾小球） Filtration</h3><p>Only unbound drug is filtered.</p>
+<p>Plasma Protein Binding of drug prevents filtration: Thyroxine is 99% bound</p>
+<p>Molecular Size:</p>
+<ul>
+<li>Albumin (70,000) is not filtered.</li>
+<li>Inulin (5,500) is freely filtered; can be used to estimate GFR.</li>
+</ul>
+<h3 id="2-Tubular-Reabsorption"><a href="#2-Tubular-Reabsorption" class="headerlink" title="2. Tubular Reabsorption"></a>2. Tubular Reabsorption</h3><p>Passive Transport:</p>
+<ul>
+<li>pH, concentration, size, lipid solubility, ionization</li>
+<li>acid urine favors reabsorption of weak acid. </li>
+<li>basic urine favors reabsorption of weak base.</li>
+</ul>
+<p>Active Transport: </p>
+<ul>
+<li>Uric acid, glucose, amino acids………</li>
+</ul>
+<h3 id="3-Tubular-Secretion"><a href="#3-Tubular-Secretion" class="headerlink" title="3. Tubular Secretion"></a>3. Tubular Secretion</h3><p>Active Transport </p>
+<ul>
+<li>Organic Acids (inhibited by probenecid) </li>
+<li>Organic Bases </li>
+<li>No effect of protein binding on this process</li>
+</ul>
+<h3 id="4-Secretion-Vs-Active-Reabsorption"><a href="#4-Secretion-Vs-Active-Reabsorption" class="headerlink" title="4. Secretion Vs. Active Reabsorption"></a>4. Secretion Vs. Active Reabsorption</h3><p>The acid and base transport systems can operate bidirectionally, and at least some drugs are both secreted and actively reabsorbed</p>
+<p>However, active transport of most exogenous ions is predominantly secretory.</p>
+<h3 id="5-Renal-System"><a href="#5-Renal-System" class="headerlink" title="5. Renal System"></a>5. Renal System</h3><p>lipid soluble drugs are passively reabsorbed</p>
+<p>changing pH of urine</p>
+<ul>
+<li>acidic urine &#x3D;<ol>
+<li>alkaline drugs eliminated</li>
+<li>acid drugs reabsorbed</li>
+</ol>
+</li>
+<li>alkaline urine &#x3D;<ol>
+<li>acid drugs eliminated</li>
+<li>alkaline drugs absorbed</li>
+</ol>
+</li>
+</ul>
+<p>renal disease&#x2F; decreased clearance</p>
+<ul>
+<li>affects drug dosage</li>
+</ul>
+<h2 id="Hepatic-or-Biliary-Excretion"><a href="#Hepatic-or-Biliary-Excretion" class="headerlink" title="Hepatic or Biliary Excretion"></a>Hepatic or Biliary Excretion</h2><p>Some organic acids and bases are actively secreted into the bile</p>
+<p>Some drugs are secreted into the bile</p>
+<ul>
+<li>Glucuronides of steroids and morphine are actively secreted</li>
+</ul>
+<h3 id="1-Enterohepatic-Cycle"><a href="#1-Enterohepatic-Cycle" class="headerlink" title="1. Enterohepatic Cycle"></a>1. Enterohepatic Cycle</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304194302444.png" srcset="/img/loading.gif" lazyload alt="image-20210304194302444" style="zoom:100%;" />
+
+<ul>
+<li>Prolongs drug half-life</li>
+</ul>
+<h2 id="Pulmonary-Excretion"><a href="#Pulmonary-Excretion" class="headerlink" title="Pulmonary Excretion"></a>Pulmonary Excretion</h2><p>Factors: </p>
+<ul>
+<li>Plasma solubility of drug </li>
+<li>Cardiac output </li>
+<li>Respiration</li>
+</ul>
+<p>Gaseous Anesthetics</p>
+<ul>
+<li>Rate of pulmonary excretion is proportional to alveolar tension of the gaseous drug and inversely proportional to its plasma solubility</li>
+</ul>
+<h2 id="Drug-Elimination-Kinetics"><a href="#Drug-Elimination-Kinetics" class="headerlink" title="Drug Elimination Kinetics"></a>Drug Elimination Kinetics</h2><h3 id="1-First-order-kinetics"><a href="#1-First-order-kinetics" class="headerlink" title="1. First-order kinetics"></a>1. First-order kinetics</h3><p>A fixed <u>percent&#x2F;fraction</u> of the drug is eliminated per unit time.</p>
+<p>The rate of drug elimination is directly proportionate to plasma concentration</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304194514296.png" srcset="/img/loading.gif" lazyload alt="image-20210304194514296" style="zoom:100%;" />
+
+<ul>
+<li><strong>First-order elimination</strong> is also know as constant fraction elimination. Its time-concentration curve presents a curve in a route plot as well as a straight line in a semilogarithmic plot</li>
+</ul>
+<h3 id="2-Zero-order-kinetics"><a href="#2-Zero-order-kinetics" class="headerlink" title="2. Zero-order kinetics"></a>2. Zero-order kinetics</h3><p>A fixed <u>amount</u> of the drug is eliminated per unit time</p>
+<p>The rate of drug elimination is independent of plasma concentration.</p>
+<p><strong>Zero-order elimination</strong> is also know as constant quantity elimination. Its time-concentration curve presents a beeline in a route plot as well as a curve in a semilogarithmic plot</p>
+<h3 id="3-Michaelis-Menten-kinetics"><a href="#3-Michaelis-Menten-kinetics" class="headerlink" title="3. Michaelis-Menten kinetics"></a>3. Michaelis-Menten kinetics</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304194759874.png" srcset="/img/loading.gif" lazyload alt="image-20210304194759874" style="zoom:100%;" />
+
+<p>Most drug elimination pathways will become saturated if the dose is high enough.<br>$$<br>\frac{dC}{dt} &#x3D; \frac{V_{max} \cdot C}{K_{m} + C}<br>$$</p>
+<ul>
+<li>Km represents the concentration at which half of the maximal rate of elimination is reached</li>
+<li>Vmax is equal to the maximal rate of elimination</li>
+</ul>
+<p>When Km&gt;&gt;C, the drug elimination capacity is more and more than the amount of drug in body, so the C can be ignored. It can be considered as first-order kinetics<br>$$<br>\frac{dC}{dt} &#x3D; \frac{V_{max} \cdot C}{K_{m}}<br>$$</p>
+<p>When C&gt; &gt; Km , the amount of drug exceed the drug elimination capacity, so Km can be ignored. It can be considered as zero-order kinetics<br>$$<br>\frac{dC}{dt} &#x3D; \frac{V_{max} \cdot C}{C} &#x3D; V_{max}<br>$$</p>
+<h2 id="Clinical-Pharmacokinetics"><a href="#Clinical-Pharmacokinetics" class="headerlink" title="Clinical Pharmacokinetics"></a>Clinical Pharmacokinetics</h2><p>The four most important parameters are</p>
+<ul>
+<li><strong>Volume of distribution</strong>, a measure of the apparent space in the body available to contain the drug</li>
+<li><strong>Clearance</strong>, a measure of the body’s efficiency in eliminating drug</li>
+<li>Eliminiation <strong>half-life</strong>, a measure of the rate of removal of drug from the body</li>
+<li><strong>Bioavailability</strong>, the fraction of drug absorbed as such into the systemic circulation</li>
+</ul>
+<h3 id="1-Volume-of-Distribution"><a href="#1-Volume-of-Distribution" class="headerlink" title="1. Volume of Distribution"></a>1. Volume of Distribution</h3><p>$$<br>v_{d} &#x3D; \frac{\text{total drug in body (mg)}}{\text{plasma conc. (mg&#x2F;ml)}}<br>$$</p>
+<p>It is the volume necessary to contain the amount of drug as the same concentration as in the blood</p>
+<p>The apparent volume of distribution is a calculated space and does not always conform to any actual anatomic space</p>
+<h4 id="Example-of-Vd"><a href="#Example-of-Vd" class="headerlink" title="Example of Vd"></a>Example of Vd</h4><p>The plasma volume of a 70-kg man ~ 3L, blood volume ~ 5.5L, extracellular fluid volume ~ 12L, and total body water ~ 42L</p>
+<p>If 500 μg of digoxin were in his body, C<del>plasma</del> would be ~ 0.7 ng&#x2F;ml. Dividing 500 μg by 0.7 ng&#x2F;ml yields a Vd of 700L, a value 10 times total body volume! Huh?</p>
+<p>Digoxin is <u>hydrophobic</u> and distributes preferentially to muscle and fat, leaving very little drug in plasma. The digoxin dose required therapeutically depends on body composition.</p>
+<h3 id="2-Clearance"><a href="#2-Clearance" class="headerlink" title="2. Clearance"></a>2. Clearance</h3><p>Clearance does not indicate how much drug is removed but, rather, the volume of blood that would have to be completely freed of drug to account for the elimination rate</p>
+<p>CL is expressed as volume per unit time.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304195240737.png" srcset="/img/loading.gif" lazyload alt="image-20210304195240737" style="zoom:100%;" />
+
+<p>Example: propranolol, CLp &#x3D; 12 ml&#x2F;min&#x2F;kg or 840 ml&#x2F;min in a 70-kg man. </p>
+<p>The drug is cleared almost exclusively by the liver. </p>
+<p>Every minute, the liver is able to remove the amount of drug contained in 840 ml of plasma</p>
+<p>Clearance of most drugs is constant over a range of concentrations.</p>
+<p>This means that elimination is not saturated and its rate is directly proportional to the drug concentration: this is a description of 1st-order elimination.</p>
+<h3 id="3-Half-Life-t1-2"><a href="#3-Half-Life-t1-2" class="headerlink" title="3. Half Life (t1&#x2F;2)"></a>3. Half Life (t1&#x2F;2)</h3><p>Is the time it takes for the plasma concentration or the amount of drug in the body to be reduced by 50%</p>
+<p>Indicate the rate of drug elimination in vivo</p>
+<p>each half-life: the concentration decreases by half of remaining concentration</p>
+<h4 id="Give-100-mg-of-a-drug"><a href="#Give-100-mg-of-a-drug" class="headerlink" title="Give 100 mg of a drug"></a>Give 100 mg of a drug</h4><ul>
+<li>useful in determining drug dosage frequency</li>
+<li><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304195739591.png" srcset="/img/loading.gif" lazyload alt="image-20210304195739591" style="zoom: 33%;" /></li>
+</ul>
+<h4 id="Meanings-of-t1-2"><a href="#Meanings-of-t1-2" class="headerlink" title="Meanings of t1&#x2F;2"></a>Meanings of t1&#x2F;2</h4><p>Confirm the interval of administration, generally the interval of administration is one t1&#x2F;2</p>
+<p>Predict the elimination or accumulation of drug in vivo</p>
+<ul>
+<li>As to a single administration, drugs can be eliminated from body after 5 t1&#x2F;2</li>
+<li>As to continuous administration, drugs concentration can reach steady state concentration after 5 t1&#x2F;2</li>
+</ul>
+<h3 id="4-The-elimination-accumulation-of-drug"><a href="#4-The-elimination-accumulation-of-drug" class="headerlink" title="4. The elimination &amp; accumulation of drug"></a>4. The elimination &amp; accumulation of drug</h3><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304195837206.png" srcset="/img/loading.gif" lazyload alt="image-20210304195837206" style="zoom:100%;" />
+
+<h3 id="5-Steady-state-concentration"><a href="#5-Steady-state-concentration" class="headerlink" title="5. Steady-state concentration"></a>5. Steady-state concentration</h3><p>The steady state will be achieved when the rate of drug elimination equals the rate of drug administration</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304200136300.png" srcset="/img/loading.gif" lazyload alt="image-20210304200136300" style="zoom:100%;" />
+
+<ul>
+<li>To the majority of drug eliminated by first-order kinetics, the time achieved to steady state is only determined by the half life</li>
+</ul>
+<p>The alteration of the amount of drug in vivo with different dose and same frequency</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304200203480.png" srcset="/img/loading.gif" lazyload alt="image-20210304200203480" style="zoom:100%;" />
+
+<p>The alteration of the amount of drug in vivo with same dose and different frequency</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304200224603.png" srcset="/img/loading.gif" lazyload alt="image-20210304200224603" style="zoom:100%;" />
+
+<h3 id="6-Bioavailability-F"><a href="#6-Bioavailability-F" class="headerlink" title="6. Bioavailability (F)"></a>6. Bioavailability (F)</h3><p>The fraction of unchanged drug reaching the systemic circulation following administration by any route</p>
+<p>The area under the blood concentration-time curve (AUC) is a common measure of the extent of bioavailability for a drug.</p>
+<p>For an intravenous dose of the drug, bioavailability is assumed to be equal to unity.</p>
+<p><strong>AUC (area under the curve)</strong></p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304200306170.png" srcset="/img/loading.gif" lazyload alt="image-20210304200306170" style="zoom:100%;" />
+
+<ul>
+<li>To multiply concentration by time</li>
+</ul>
+<p>Indicates the area under the concentration-time curve</p>
+<p>Is an important index to appraise the extent of drugs entering systemic circulation</p>
+<p>Unit: (mg&#x2F;mL)·min, (mg&#x2F;L)·h, (ng&#x2F;L)·min, (ng&#x2F;mL)·h, etc</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Pharmacology/image-20210304200335532.png" srcset="/img/loading.gif" lazyload alt="image-20210304200335532" style="zoom:100%;" />
+
+<p>Bioavailability is used to calculate the PK parameters</p>
+<ul>
+<li>When drugs are extravascular administered, the equations that contain the term dose must include the bioavailability term F, such that the available dose is used</li>
+</ul>
+<p>For a drug administered orally, bioavailability may be less than 100% for two main reasons</p>
+<ul>
+<li>Incomplete extent of absorption</li>
+<li>First-pass elimination</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Molecular-Pharmacology/" class="category-chain-item">Molecular Pharmacology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Molecular-Pharmacology/" class="print-no-link">#Molecular Pharmacology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L3 Pharmacokinetics</div>
+      <div>https://zhenyumi.github.io/posts/434f152/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年4月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/c9f809bd/" title="L4 Drug Receptors &amp; Pharmacodynamics">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L4 Drug Receptors &amp; Pharmacodynamics</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/7b0aa72b/" title="L2 Pharmacology Orientated Human Anatomy Physiology">
+                        <span class="hidden-mobile">L2 Pharmacology Orientated Human Anatomy Physiology</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,1309 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Logo.png">
+  <link rel="icon" href="/img/Logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="比L23好懂一点...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L24 Cells to tissues cell-cell adhesion">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/e928511d/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="比L23好懂一点...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_01.jpg">
+<meta property="article:published_time" content="2020-08-04T07:39:00.000Z">
+<meta property="article:modified_time" content="2020-08-04T07:39:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Cell Biology">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_01.jpg">
+  
+  
+  
+  <title>L24 Cells to tissues cell-cell adhesion - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>鹘横海</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">L24 Cells to tissues cell-cell adhesion</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-08-04 15:39" pubdate>
+          2020年8月4日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">L24 Cells to tissues cell-cell adhesion</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="Two-main-ways-in-which-animal-cells-are-bound-together"><a href="#Two-main-ways-in-which-animal-cells-are-bound-together" class="headerlink" title="Two main ways in which animal cells are bound together"></a>Two main ways in which animal cells are bound together</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175534848.png" srcset="/img/loading.gif" lazyload alt="image-20200529175534848"></p>
+<p>Connection is important!</p>
+<ul>
+<li>Allow cells to form distinct communities, i.e. tissues</li>
+<li>Bidirectional communication between interior and exterior of cells.</li>
+</ul>
+<p>Epithelial tissue (lining sheets):</p>
+<ul>
+<li>cell-cell junctions, cytoskeleton of the cell transmits mechanical stresses</li>
+<li>from cell to cell via cell-cell adhesion sites and to the basal matrix.</li>
+</ul>
+<p>Connective tissue (e.g. bones, tendon etc.): Cell-ECM adhesions</p>
+<ul>
+<li>It is the matrix-rather than the cells- that bears most of the mechanical stress to which the tissue is subjected.</li>
+</ul>
+<blockquote>
+<p><strong>Connective tissues</strong>, such as bone or tendon, are formed from an extracellular matrix produced by cells that are distributed sparsely in the matrix.</p>
+</blockquote>
+<h1 id="一、Adhesion-between-cells"><a href="#一、Adhesion-between-cells" class="headerlink" title="一、Adhesion between cells"></a>一、Adhesion between cells</h1><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180307337.png" srcset="/img/loading.gif" lazyload alt="image-20200529180307337"></p>
+<blockquote>
+<p>In epithelial tissues, such as the lining of the gut or the epidermal covering of the skin, cells are tightly bound together into sheets called <strong>epithelia</strong>.</p>
+<p>Within the <strong>epithelium</strong>,  cells are attached to each other directly by <strong>cell–cell junctions</strong>, where cytoskeletal filaments are anchored, transmitting stresses across the <strong>interiors</strong> of the cells, from adhesion site to adhesion site.</p>
+<p> The cytoskeleton of <strong>epithelial cells</strong> is also linked to the basal lamina through <strong>cell–matrix junctions</strong></p>
+<ul>
+<li>These <strong>cell–matrix junctions</strong> link the cytoskeleton to the matrix, allowing the cells to move through the matrix and monitor changes in its mechanical properties.</li>
+<li>The extracellular matrix is less pronounced, consisting mainly of a thin mat called the <strong>basal lamina</strong> (or <strong>basement membrane</strong>) underlying the sheet</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Two other types of <strong>cell–cell junction</strong> are shown in the Figure</p>
+<ol>
+<li><strong>Tight junctions</strong> hold the cells closely together near the <strong>apex</strong>, sealing the gap between the cells and thereby <u>preventing molecules from leaking across the epithelium</u>. </li>
+<li>Near the <strong>basal end</strong> of the cells are <strong>channel-forming junctions</strong>, called <strong>gap junctions</strong>, that <u>create passageways linking the cytoplasms of adjacent cells.</u></li>
+</ol>
+</blockquote>
+<h2 id="Anchoring-junctions"><a href="#Anchoring-junctions" class="headerlink" title="Anchoring junctions"></a>Anchoring junctions</h2><blockquote>
+<p>Two types of <strong>anchoring junctions（锚接点）</strong> link the cytoskeletons of adjacent cells: </p>
+<ol>
+<li><strong>adherens junctions（粘附连接）</strong> are anchorage sites for <strong>actin filaments</strong>; </li>
+<li><strong>desmosomes（桥粒）</strong> are anchorage sites for <strong>intermediate filaments.</strong></li>
+</ol>
+<p>Two additional types of <strong>anchoring junctions</strong> link the cytoskeleton of the epithelial cells  to the <strong>basal lamina</strong>: </p>
+<ol>
+<li><strong>actin-linked cell–matrix junctions</strong> anchor <strong>actin filaments</strong> to the matrix, </li>
+<li>while <strong>hemidesmosomes（半桥粒）</strong> anchor <strong>intermediate filaments</strong> to it.</li>
+</ol>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180322439.png" srcset="/img/loading.gif" lazyload alt="image-20200529180322439" style="zoom:50%;" />
+
+<blockquote>
+<p>Each of the four major <strong>anchoring junction</strong> types <u>depends on <strong>transmembrane</strong> <strong>adhesion proteins</strong> that span the plasma membrane</u>, with one end linking to the cytoskeleton inside the cell and the other end linking to other structures outside it</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180328205.png" srcset="/img/loading.gif" lazyload alt="image-20200529180328205"></p>
+<table>
+    <caption>
+        <font size="5">Anchoring Junctions</font>
+    </caption>
+    <tr>
+        <th>Junction</th>
+        <th>Transmembrane adhesion protein</th>
+        <th>Extracellular ligand</th>
+        <th>Intracellular cytoskeletal attachment</th>
+        <th>Intracellular adaptor proteins</th>
+    </tr>
+    <tr>
+        <th colspan="5"><center>Cell-Cell</center></th>
+    </tr>
+    <tr>
+        <td>Adherens junction</td>
+        <td>Classical cadherins</td>
+        <td>Classical cadherin on neighboring cell</td>
+        <td>Actin filaments</td>
+        <td>α-Catenin, β-catenin, plakoglobin (γ-catenin), p120-catenin, vinculin</td>
+    </tr>
+    <tr>
+        <td>Desmosome</td>
+        <td> Nonclassical cadherins  (desmoglein, desmocollin)</td>
+        <td>Desmoglein and desmocollin on neighboring cell</td>
+        <td>Intermediate filaments</td>
+        <td>Plakoglobin (γ-catenin), plakophilin, desmoplakin</td>
+    </tr>
+    <tr>
+        <th colspan="5"><center>Cell-Matrix</center></th>
+    </tr>
+    <tr>
+        <td>Actin-linked cell–matrix junction</td>
+        <td>Integrin</td>
+        <td>Extracellular matrix proteins</td>
+        <td>Actin filaments</td>
+        <td>Talin, kindlin, vinculin, paxillin, focal adhesion kinase (FAK), numerous others</td>
+    </tr>
+    <tr>
+        <td>Hemidesmosome</td>
+        <td>α<sub>6</sub>β<sub>4</sub> Integrin, type XVII collagen</td>
+        <td>Extracellular matrix proteins</td>
+        <td>Intermediate filaments</td>
+        <td>Plectin, BP230</td>
+    </tr>
+</table>
+
+<h3 id="1-Cadherins-control-selective-assortment-recognition-of-cells"><a href="#1-Cadherins-control-selective-assortment-recognition-of-cells" class="headerlink" title="1. Cadherins control selective assortment&#x2F;recognition of cells"></a>1. Cadherins control selective assortment&#x2F;recognition of cells</h3><blockquote>
+<p>Proteins of the <strong>cadherin（钙黏着蛋白）</strong> superfamily chiefly mediate attachment of <u>cell to cell</u></p>
+<p>Proteins of the <strong>integrin（整联蛋白）</strong> superfamily chiefly mediate attachment of cells to <strong>matrix</strong>.</p>
+<ul>
+<li>There are some exceptions to these rules. Some integrins, for example, mediate cell–cell rather than cell–matrix attachment.</li>
+</ul>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180350453.png" srcset="/img/loading.gif" lazyload alt="image-20200529180350453"></p>
+<p>Classical experiment (1950s):</p>
+<ul>
+<li>disaggregation and reaggregation of an early amphibian embryo in vitro.</li>
+<li>The embryo consisting of mesoderm cells, neural plate cells and epidermal cells has been disaggregated and then reaggregated in a random mixture</li>
+</ul>
+<p>disaggregated embryo (randomized arrangement of different cell types)</p>
+<ul>
+<li>→ “self”-arrangement reminiscent of a normal embryo with a “neural tube” internally, epidermis externally, and mesoderm in between.</li>
+</ul>
+<h3 id="2-Cadherins-are-the-adhesion-molecule-of-adhering-junctions-and-desmosomes"><a href="#2-Cadherins-are-the-adhesion-molecule-of-adhering-junctions-and-desmosomes" class="headerlink" title="2. Cadherins are the adhesion molecule of adhering junctions and desmosomes"></a>2. Cadherins are the adhesion molecule of adhering junctions and desmosomes</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180450310.png" srcset="/img/loading.gif" lazyload alt="image-20200529180450310"></p>
+<ul>
+<li>The name is derived from <strong>Ca2+</strong> and <strong>adherin</strong>（粘附素）, meaning <u>Ca2+-dependent adhering</u></li>
+<li>Dissociation of cells from tissue needs <strong>EDTA&#x2F;trypsin（EDTA &#x2F;胰蛋白酶）</strong> (EDTA chelates (螯合) the Ca2+ to deactivate the cadherin-cadherin interaction)</li>
+<li><strong>Classical cadherins</strong> and <strong>non-classical cadherins</strong>. over 180 family members in humans.</li>
+<li>Plants, fungi, bacteria and archaea have <strong>no</strong> cadherins</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180525081.png" srcset="/img/loading.gif" lazyload alt="image-20200529180525081"></p>
+<h4 id="Cadherins-comprise-a-large-family-of-proteins"><a href="#Cadherins-comprise-a-large-family-of-proteins" class="headerlink" title="Cadherins comprise a large family of proteins"></a>Cadherins comprise a large family of proteins</h4><blockquote>
+<p>Cadherins Form a Diverse Family of Adhesion Molecules</p>
+<p>Cadherins are present in <u>all</u> multicellular animals whose genomes have been analyzed.</p>
+<ul>
+<li>They are also present in the <strong>choanoflagellates（鞭毛虫）</strong>, which can exist either as free-living unicellular organisms or as multicellular colonies and are thought to be representatives of the group of protists from which all animals evolved</li>
+</ul>
+<p>Other eukaryotes, including <strong>fungi</strong> and <strong>plants</strong>, lack <strong>cadherins</strong>, and they are also absent from <strong>bacteria</strong> and <strong>archaea</strong>.</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180552216.png" srcset="/img/loading.gif" lazyload alt="image-20200529180552216" style="zoom:67%;" />
+
+<blockquote>
+<p>The cadherins take their name from their dependence on Ca2+ ions: removing Ca2+ from the extracellular medium causes adhesions mediated by cadherins to come apart（破碎；崩溃）. The first three <strong>cadherins</strong> to be discovered were named according to the <u>main tissues in which they were found</u>:</p>
+<ol>
+<li><strong><font color="EE0000">E-cadherin</font></strong> is present on many types of <strong>epithelial cells（上皮细胞）</strong></li>
+<li><strong><font color="EE0000">N-cadherin</font></strong> on <strong>nerve, muscle, and lens cells（神经，肌肉和晶状体细胞）</strong></li>
+<li><strong><font color="EE0000">P-cadherin</font></strong> on  cells in the <strong>placenta and epidermis（胎盘和表皮）</strong></li>
+</ol>
+<p>All are <u>also found in other tissues</u>. These and other <strong>classical cadherins</strong> are closely related in sequence throughout their extracellular and intracellular domains.</p>
+</blockquote>
+<blockquote>
+<p>There are also a large number of <strong>nonclassical cadherins</strong> that are more distantly related in sequence, with more than 50 expressed in the brain alone</p>
+<ul>
+<li>The <strong>nonclassical cadherins</strong> include proteins with known adhesive function, such as the diverse <strong><font color="EE0000">protocadherins</font>（原钙黏蛋白）</strong> found in the brain, and the <strong><font color="EE0000">desmocollins</font> (桥粒胶蛋白)</strong> and <strong><font color="EE0000">desmogleins</font> (桥粒糖蛋白)</strong> that form <strong>desmosomes</strong></li>
+</ul>
+<p>Other family members are involved primarily in signaling. Together, the classical and nonclassical cadherin proteins constitute the <strong>cadherin superfamily</strong> (Figure 19–4), with more than 180 members in humans.</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200729162025563.png" srcset="/img/loading.gif" lazyload alt="image-20200729162025563"></p>
+<h4 id="Homophilic-adhesion"><a href="#Homophilic-adhesion" class="headerlink" title="Homophilic adhesion"></a>Homophilic adhesion</h4><blockquote>
+<p>Cadherins Mediate Homophilic Adhesion</p>
+<ul>
+<li>the binding between cadherins is generally <strong>homophilics</strong></li>
+<li>Cadherin molecules of a specific subtype on one cell bind to cadherin molecules of the <strong>same</strong> or <strong>closely related subtype</strong> on adjacent cells.</li>
+</ul>
+<p>All  the members of the superfamily, by definition, have an extracellular portion consisting of several copies of the <strong><font color="EE0000">extracellular cadherin (EC)</font> domain</strong></p>
+<ul>
+<li>Homophilic binding occurs at the <strong>N-terminal tips</strong> of the cadherin molecules</li>
+<li>Each cadherin domain forms a more-or-less rigid unit, joined to the next cadherin domain by a hinge. <strong>Ca2+ ions</strong> bind to sites near each hinge and <u>prevent it from flexing</u>, so that the whole string of cadherin domains behaves as a rigid and slightly curved rod.</li>
+</ul>
+<p>Cadherins (and most other cell–cell adhesion proteins) typically bind to their partners with <u>relatively low affinity.</u></p>
+<p>Regulatory mechanisms can easily disassemble the junction by <u>separating</u> the molecules sequentially</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180624545.png" srcset="/img/loading.gif" lazyload alt="image-20200529180624545"></p>
+<p>Homophilic adhesion:</p>
+<ul>
+<li>the same type or similar subtype of molecule binds to each other<ul>
+<li>ensures linkage of the same type of cells and make sure that different types of cells remain separated</li>
+</ul>
+</li>
+</ul>
+<p>In general, only the same type of cadherin binds to each other</p>
+<ul>
+<li>ensures linkage of the same type of filaments across cell borders</li>
+<li>ensures linkage of the same type of cells and make sure that different types of cells remain separated</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180714767.png" srcset="/img/loading.gif" lazyload alt="image-20200529180714767" style="zoom:50%;" />
+
+<ul>
+<li>Cells can be sorted by types and expression level of cadherins</li>
+<li>Qualitative differences in the expression of cadherins play a role in the organization of tissues</li>
+</ul>
+<h4 id="Changes-in-expression-of-cadherins-leads-to-development-of-different-tissues"><a href="#Changes-in-expression-of-cadherins-leads-to-development-of-different-tissues" class="headerlink" title="Changes in expression of cadherins leads to development of different tissues"></a>Changes in expression of cadherins leads to development of different tissues</h4><blockquote>
+<p>Cadherin-Dependent Cell–Cell Adhesion Guides the Organization of Developing Tissues</p>
+<p>Cadherins play a crucial part in these <strong>cell-sorting processes</strong> during development.</p>
+<p>Both <strong>qualitative</strong> and <strong>quantitative</strong> differences in the expression of cadherins have a role in organizing tissues.</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180808213.png" srcset="/img/loading.gif" lazyload alt="image-20200529180808213"></p>
+<ul>
+<li>Changes in expression of cadherins leads to development of different tissues</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180827269.png" srcset="/img/loading.gif" lazyload alt="image-20200529180827269"></p>
+<ul>
+<li>During embryonic development: cells expressing the same cadherins group together</li>
+<li>The appearance and disappearance of specific cadherins correlate with steps in <strong>embryonic development</strong> where cells <u>regroup and change their contacts to create new tissue structures.</u></li>
+</ul>
+<p>In the vertebrate embryo changes in cadherin expression are seen when the <strong>neural tube</strong> forms and pinches off from the overlying ectoderm:</p>
+<ul>
+<li>Neural tube cells lose <strong><font color="EE0000">E-cadherin</font></strong> and acquire other cadherins (<strong><font color="EE0000">N-cadherin</font></strong>) while the cells in the overlying ectoderm continue to express E-cadherin.</li>
+<li>Neural crest cells express <strong><font color="EE0000">cadherin 7</font></strong>, allowing detachment&#x2F;migration away from the neutral tube but keeps holding them together.</li>
+<li>For <strong>ganglion formation (神经节形成)</strong>, cells switch back to <strong>N-cadherin</strong> expression.</li>
+</ul>
+<h4 id="Cadherin-interactions-are-dependent-on-calcium"><a href="#Cadherin-interactions-are-dependent-on-calcium" class="headerlink" title="Cadherin interactions are dependent on calcium"></a>Cadherin interactions are dependent on calcium</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185255157.png" srcset="/img/loading.gif" lazyload alt="image-20200529185255157"></p>
+<h5 id="1-Clustering-of-cadherins-increases-strength-of-interactions-between-cells"><a href="#1-Clustering-of-cadherins-increases-strength-of-interactions-between-cells" class="headerlink" title="(1) Clustering of cadherins increases strength of interactions between cells"></a>(1) Clustering of cadherins increases strength of interactions between cells</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185323547.png" srcset="/img/loading.gif" lazyload alt="image-20200529185323547" style="zoom: 33%;" />
+
+<ul>
+<li>Interaction between individual cadherins is weak.</li>
+<li>Strength comes from clustering of cadherins in common domain.</li>
+<li>Similar to Velcro (一种尼龙塔扣).</li>
+</ul>
+<h5 id="2-Links-to-cytoskeleton-cluster-cadherins-in-desmosomes-and-adhering-junctions"><a href="#2-Links-to-cytoskeleton-cluster-cadherins-in-desmosomes-and-adhering-junctions" class="headerlink" title="(2) Links to cytoskeleton cluster cadherins in desmosomes and adhering junctions"></a>(2) Links to cytoskeleton cluster cadherins in desmosomes and adhering junctions</h5><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185413256.png" srcset="/img/loading.gif" lazyload alt="image-20200529185413256" style="zoom:50%;" />
+
+<h5 id="3-Catenins（连环素）-link-cadherins-to-actin-filaments-in-adherens-junctions"><a href="#3-Catenins（连环素）-link-cadherins-to-actin-filaments-in-adherens-junctions" class="headerlink" title="(3) Catenins（连环素） link cadherins to actin filaments in adherens junctions"></a>(3) Catenins（连环素） link cadherins to actin filaments in adherens junctions</h5><blockquote>
+<p>Catenins Link Classical Cadherins to the Actin Cytoskeleton</p>
+<p>These <strong>cytoskeletal linkages</strong> are essential for efficient cell–cell adhesion, as <strong>cadherins</strong> that lack their cytoplasmic domains cannot stably hold cells together.</p>
+<p>The linkage of cadherins to the cytoskeleton is indirect and depends on <strong>adaptor proteins</strong> that <u>assemble on the cytoplasmic tail</u> of the <strong>cadherin</strong></p>
+<p>At <strong>adherens junctions</strong>, the cadherin tail binds two such proteins: <strong><font color="EE0000">β-catenin</font>&#x2F;</strong> and a distant relative called <strong><font color="EE0000">p120-catenin</font></strong>; a third protein called <strong><font color="EE0000">α-catenin</font></strong> interacts with <strong><font color="EE0000">β-catenin</font></strong> and recruits a variety of other proteins to provide a dynamic linkage to actin  filaments</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185440552.png" srcset="/img/loading.gif" lazyload alt="image-20200529185440552" style="zoom: 50%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185449893.png" srcset="/img/loading.gif" lazyload alt="image-20200529185449893" style="zoom: 50%;" />
+
+<h4 id="Assembly-of-an-adherent-junction"><a href="#Assembly-of-an-adherent-junction" class="headerlink" title="Assembly of an adherent junction"></a>Assembly of an adherent junction</h4><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185523724.png" srcset="/img/loading.gif" lazyload alt="image-20200529185523724"></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185529456.png" srcset="/img/loading.gif" lazyload alt="image-20200529185529456"></p>
+<blockquote>
+<p><strong>Adherens junctions</strong> are <u>not</u> simply <u>passive</u> sites of protein–protein binding but are <strong>dynamic tension sensors</strong> that regulate their  behavior in response to changing mechanical conditions</p>
+<p>This ability to transduce a mechanical signal into a change in junctional behavior is an example of <strong>mechanotransduction</strong>（机械转导）. It is also important at cell–matrix junctions.</p>
+<p> <strong><font color="EE0000">vinculin</font> (黏着斑蛋白)</strong>, which promotes the <u>recruitment</u> of more actin to the junction</p>
+</blockquote>
+<h3 id="3-Epithelial–Mesenchymal-Transitions-Depend-on-Control-of-Cadherins"><a href="#3-Epithelial–Mesenchymal-Transitions-Depend-on-Control-of-Cadherins" class="headerlink" title="3. Epithelial–Mesenchymal Transitions Depend on Control of  Cadherins"></a>3. Epithelial–Mesenchymal Transitions Depend on Control of  Cadherins</h3><blockquote>
+<p><strong>Epithelial–Mesenchymal Transitions（上皮-间质转化）</strong> Depend on Control of Cadherins</p>
+<p>The assembly of cells into an epithelium is a <u>reversible process.</u> By switching on expression of adhesion molecules, dispersed unattached <strong>mesenchymal cells</strong>, such as <strong>fibroblasts</strong>, can come together to form an epithelium</p>
+<ul>
+<li>细胞组装成上皮是可逆的过程。通过打开粘附分子的表达，分散的未附着的间充质细胞（例如成纤维细胞）可以聚集在一起形成上皮</li>
+</ul>
+<p>Such <strong>epithelial–mesenchymal transitions</strong> play an important part in normal embryonic developments</p>
+<ul>
+<li>the origin of the neural crest is one example</li>
+<li>These transitions depend in part on transcription regulatory proteins called <strong><font color="EE0000">Slug</font></strong>, <strong><font color="EE0000">Snail</font></strong>, and <strong><font color="EE0000">Twist</font></strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Epithelial–mesenchymal transitions also occur as pathological events during adult life, in cancer</p>
+<ul>
+<li>Most cancers originate in epithelia, but become dangerously prone to spread—that is, <strong>malignant</strong>—only when the cancer cells escape from the epithelium of origin and invade other tissues</li>
+<li>Mutations that disrupt the production or function of <strong><font color="EE0000">E-cadherin</font></strong> are often found in cancer cells and are thought to help make them malignant.</li>
+</ul>
+</blockquote>
+<h3 id="4-Mechanotransduction-in-an-adherent-junction"><a href="#4-Mechanotransduction-in-an-adherent-junction" class="headerlink" title="4. Mechanotransduction in an adherent junction"></a>4. Mechanotransduction in an adherent junction</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185542328.png" srcset="/img/loading.gif" lazyload alt="image-20200529185542328" style="zoom: 50%;" />
+
+<h4 id="Tissue-remodeling-depends-on-the-coordination-of-actin-mediated-contraction-with-cell–cell-adhesion"><a href="#Tissue-remodeling-depends-on-the-coordination-of-actin-mediated-contraction-with-cell–cell-adhesion" class="headerlink" title="Tissue remodeling depends on the coordination of actin-mediated contraction with cell–cell adhesion"></a>Tissue remodeling depends on the coordination of actin-mediated contraction with cell–cell adhesion</h4><blockquote>
+<p><strong>Tissue Remodeling</strong> (组织重塑) Depends on the Coordination of Actin-Mediated Contraction With Cell–Cell Adhesion</p>
+<p>By indirectly linking the <strong>actin filaments</strong> in one cell to those in its neighbors, they enable the cells in the tissue to use their actin cytoskeletons in a coordinated way.</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185616174.png" srcset="/img/loading.gif" lazyload alt="image-20200529185616174" style="zoom:80%;" />
+
+<blockquote>
+<p> the prototypical examples of adherens junctions occur in epithelia, where they often form a continuous <strong>adhesion belt (粘附带)</strong> (or <strong>zonula adherens (小带粘连)</strong>) just <u>beneath the apical face of the epithelium</u>, encircling each of the interacting cells in the sheet</p>
+<p>Within each cell, a <strong>contractile bundle</strong> of <strong>actin filaments</strong> and <strong><font color="EE0000">myosin II</font></strong> lies adjacent to the <strong>adhesion belt</strong>, oriented parallel to the plasma membrane and tethered to it by the <strong>cadherins</strong> and their associated intracellular <strong>adaptor proteins</strong>. </p>
+<ul>
+<li>The actin–myosin bundles are thus <u>linked</u>, via the <strong>cadherins</strong>, into an extensive <strong>transcellular network.</strong></li>
+</ul>
+</blockquote>
+<p>Myosin motors can cause contraction on the adhesion belt to form epithelial tube</p>
+<blockquote>
+<p><strong>Actin-dependent contraction</strong> along specific cell boundaries is coordinated with a <u>loss</u> of specific <strong>adherens junctions</strong> to allow  cells to insert themselves between other cells (a process called <strong>intercalation (置闰,插入)</strong>),  resulting in a longer and narrower epithelium.</p>
+<p> The mechanisms underlying the loss of adhesion along specific cell boundaries are not clear, but they depend in part on <u>increased degradation of <strong>β-catenin</strong></u>, due to its <strong>phosphorylation</strong> by a protein kinase that is localized specifically at those boundaries.</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185628580.png" srcset="/img/loading.gif" lazyload alt="image-20200529185628580"></p>
+<h4 id="In-desmosomes-cadherins-are-linked-to-intermediate-filaments"><a href="#In-desmosomes-cadherins-are-linked-to-intermediate-filaments" class="headerlink" title="In desmosomes, cadherins are linked to intermediate filaments"></a>In desmosomes, cadherins are linked to intermediate filaments</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185653064.png" srcset="/img/loading.gif" lazyload alt="image-20200529185653064" style="zoom:47%;" />
+
+<p><strong>Desmosomes</strong> are structurally similar to <strong>adherens junctions</strong>.</p>
+<ul>
+<li>In Desmosomes, cadherins link to <strong>intermediate filaments</strong> while in adherens junctions, cadherins link to <strong>actin filaments.</strong></li>
+</ul>
+<p>Desmosomes give cells <strong>mechanical strength</strong>.</p>
+<ul>
+<li>Desmosomes are particularly plentiful in tissues that are subject to mechanical stress (heart muscle, epithelium).</li>
+</ul>
+<p>Desmosomes are not found in Drosophila</p>
+<h3 id="5-Desmosome"><a href="#5-Desmosome" class="headerlink" title="5. Desmosome"></a>5. Desmosome</h3><blockquote>
+<p>Desmosomes Give Epithelia Mechanical Strength</p>
+<p>They are present in most <strong>mature vertebrate epithelia</strong> and are particularly plentiful in <u>tissues that are subject to high levels of mechanical stress</u>, such as <strong>heart muscle</strong> and the <strong>epidermis</strong>, the epithelium that <u>forms the outer layer of the skin</u>.</p>
+<p>The <strong>particular type of intermediate filaments</strong> attached to the desmosomes depends on the cell type: they are <strong><font color="EE0000">keratin filaments</font> (角蛋白丝)</strong> in most <strong>epithelial cells</strong>, for example, and <strong><font color="EE0000">desmin filaments</font> (结蛋白细丝)</strong> in <strong>heart muscle cells</strong></p>
+<ul>
+<li>The importance of desmosomes is demonstrated by some forms of the potentially fatal skin disease <strong>pemphigus（天疱疮）</strong>.</li>
+</ul>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185805741.png" srcset="/img/loading.gif" lazyload alt="image-20200529185805741"></p>
+<p><strong>Desmoglein</strong> and <strong>desmocollin</strong> are <strong>nonclassical cadherins.</strong></p>
+<ul>
+<li>Their <strong>cytoplasmic tails</strong> bind <strong><font color="EE0000">plakoglobin</font>（珠蛋白） (<font color="EE0000">γ-catenin</font>)</strong> and <strong><font color="EE0000">plakophilin</font> （亲脂蛋白）</strong> (a distant relative of <strong><font color="EE0000">p120-catenin</font></strong>), which in turn bind to <strong><font color="EE0000">desmoplakin</font> （去铁素）</strong>.</li>
+</ul>
+<p><strong>Desmoplakin</strong> binds to the sides of intermediate filaments, thereby <u>tying the desmosome to these filaments.</u></p>
+<h4 id="Desmosome-hemidesmosome-and-intermediate-filament-network"><a href="#Desmosome-hemidesmosome-and-intermediate-filament-network" class="headerlink" title="Desmosome, hemidesmosome and intermediate filament network"></a>Desmosome, hemidesmosome and intermediate filament network</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185900111.png" srcset="/img/loading.gif" lazyload alt="image-20200529185900111" style="zoom: 50%;" />
+
+<h3 id="6-Specialized-adhesion-selectin"><a href="#6-Specialized-adhesion-selectin" class="headerlink" title="6. Specialized adhesion: selectin"></a>6. Specialized adhesion: selectin</h3><blockquote>
+<p>Selectins Mediate <strong>Transient</strong> Cell–Cell Adhesions in the Bloodstream</p>
+<p> At least three other superfamilies of cell–cell adhesion proteins are important: the <strong>integrins</strong>, the <strong>selectins</strong>, and the <strong>adhesive immunoglobulin (Ig) superfamily</strong> members</p>
+<ul>
+<li><strong>Selectins</strong>, like <strong>cadherins</strong> and <strong>integrins</strong>, require <strong>Ca2+</strong> for  their adhesive function; <strong>Ig superfamily</strong> members do not.</li>
+</ul>
+<p><strong>Selectins</strong> are cell-surface carbohydrate-binding proteins (<strong>lectins</strong>（凝集素）) that <u>mediate a variety of transient cell–cell adhesion interactions in the bloodstream</u></p>
+<ul>
+<li>Their main role, in vertebrates at least, is in <u>governing the traffic of white blood cells</u> into normal lymphoid organs and any inflamed tissues</li>
+</ul>
+<p>Each <strong>selectin</strong> is a <strong>transmembrane protein</strong> with a conserved <strong>lectin domain</strong> that binds to a <strong>specific oligosaccharide</strong> on another cell</p>
+<p>There are at least three types:</p>
+<ol>
+<li><strong><font color="EE0000">L-selectin</font></strong> on <strong>white blood cells</strong></li>
+<li><strong><font color="EE0000">P-selectin</font></strong> on <strong>blood platelets</strong> and on <strong>endothelial cells</strong> that have been locally activated by an <strong>inflammatory response</strong></li>
+<li><strong><font color="EE0000">E-selectin</font></strong> on <strong>activated endothelial cells</strong>. In a lymphoid organ, such as a <strong>lymph node</strong> or the <strong>spleen</strong>, the endothelial cells express <strong>oligosaccharides</strong> that are recognized by <strong>L-selectin</strong> on <strong>lymphocytes</strong>, causing the lymphocytes to loiter and become trapped.</li>
+</ol>
+<p>Selectins and integrins act in sequence to let white blood cells leave the bloodstream and enter tissues</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185914610.png" srcset="/img/loading.gif" lazyload alt="image-20200529185914610"></p>
+<ul>
+<li>Selectins are cell-surface carbohydrate-binding proteins (lectins)</li>
+<li>Ca2+-dependent adhesion</li>
+<li>Mediate transient adhesions in the blood stream </li>
+<li>Bind to lectins on other cell-surface proteins</li>
+<li>At least 3 types:<ul>
+<li><strong>L-selectin</strong>: on white blood cells (leucocytes)</li>
+<li><strong>P-selectin</strong>: on platelets and endothelial cells</li>
+<li><strong>E-selectin</strong>: on activated endothelial cells selectins binding is weak, they collaborate with integrin to cause migration of white blood cells from the blood stream into tissues.</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-Specialized-adhesion-Immunoglobulin-superfamily-members"><a href="#7-Specialized-adhesion-Immunoglobulin-superfamily-members" class="headerlink" title="7. Specialized adhesion: Immunoglobulin superfamily members"></a>7. Specialized adhesion: Immunoglobulin superfamily members</h3><blockquote>
+<p>Members of the Immunoglobulin Superfamily Mediate <strong>Ca2+-Independent</strong> Cell–Cell Adhesion</p>
+<p>The chief endothelial cell proteins that are recognized by the white blood cell <strong>integrins</strong> are called <strong><font color="EE0000">ICAMs</font></strong> (intercellular cell adhesion molecules) or <strong><font color="EE0000">VCAMs</font></strong> (vascular cell adhesion molecules).</p>
+<ul>
+<li>They are members of another large and ancient family of cell-surface molecules—the <strong>immunoglobulin (Ig) superfamily</strong>. These contain one or more extracellular <strong>Ig-like domains</strong> that are characteristic of antibody molecules.</li>
+</ul>
+<p>While <strong>ICAMs</strong> and <strong>VCAMs</strong> on <strong>endothelial cells</strong> both mediate <strong>heterophilic binding</strong> to <strong>integrins</strong>, many other Ig superfamily members appear to mediate homophilic binding</p>
+<ul>
+<li>An example is the <strong>neural cell adhesion molecule (<font color="EE0000">NCAM</font>)</strong>,  which is expressed by various cell types, including most nerve cells, and can take different forms, generated by <strong>alternative splicing</strong> of an RNA transcript produced  from a single gene</li>
+</ul>
+<p>Some forms of <strong>NCAM</strong> carry an unusually large quantity of <strong>sialic acid</strong> (with chains containing hundreds of repeating sialic acid  units). By virtue of their negative charge, the <strong>long polysialic acid</strong> chains can interfere with cell adhesion (because like charges repel one another); thus, these forms of <strong>NCAM</strong> can serve to <u>inhibit adhesion</u>, rather than cause it</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190001673.png" srcset="/img/loading.gif" lazyload alt="image-20200529190001673" style="zoom:50%;" />
+
+<ul>
+<li>Ca2+ -independent</li>
+<li>Heavy glycosylation, multiple disulfide bonds</li>
+<li>Bind to integrin</li>
+<li>several major proteins:<ul>
+<li>ICAMs (intercellular cell adhesion molecules)</li>
+<li>VCAMs (vascular cell adhesion molecules)</li>
+<li>NCAM (neural cell adhesion molecules)</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p> Although <strong>cadherins</strong> and <strong>Ig superfamily members</strong> are frequently expressed on the same cells, the adhesions mediated by <strong>cadherins</strong> are much <u>stronger</u>, and they are largely responsible for holding cells together, segregating cell collectives into discrete tissues, and maintaining tissue integrity</p>
+</blockquote>
+<h2 id="Occluding-junctions-tight-junctions-zonula-occludens"><a href="#Occluding-junctions-tight-junctions-zonula-occludens" class="headerlink" title="Occluding junctions: tight junctions (zonula occludens)"></a>Occluding junctions: tight junctions (zonula occludens)</h2><blockquote>
+<p>Tight Junctions Form a Seal Between Cells and a Fence Between Plasma Membrane Domains</p>
+<p>Essentially all epithelia are anchored to other tissue on one side—the <strong>basal side</strong>—and free of such attachment on their opposite side—the <strong>apical sides</strong></p>
+<p>Correspondingly, all epithelia have at least one function in common: they serve as <u>selective permeability barriers</u>, separating the fluid that permeates the tissue on their basal side from fluid with a different chemical composition on their apical side.</p>
+<p>This barrier function requires that the adjacent cells be sealed together by <strong>tight junctions</strong>, so that molecules cannot leak freely across the cell sheet.</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190144199.png" srcset="/img/loading.gif" lazyload alt="image-20200529190144199"></p>
+<ul>
+<li>Epithelial tissue<ul>
+<li>Lines all surfaces &amp; cavities</li>
+<li>Serves as permeability barrier</li>
+</ul>
+</li>
+<li>Endothelial tissue<ul>
+<li>Lines capillaries</li>
+<li>Permeability barrier</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-Organization-of-tight-junction"><a href="#1-Organization-of-tight-junction" class="headerlink" title="1. Organization of tight junction"></a>1. Organization of tight junction</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190303887.png" srcset="/img/loading.gif" lazyload alt="image-20200529190303887"></p>
+<ul>
+<li>Tight junctions spot-weld (点焊) the plasma membranes of neighboring cells</li>
+</ul>
+<h3 id="2-The-function-of-tight-junctions"><a href="#2-The-function-of-tight-junctions" class="headerlink" title="2. The function of tight junctions"></a>2. The function of tight junctions</h3><blockquote>
+<p>The epithelium of the small intestine provides a good illustration of tight-junction structure and function</p>
+<ul>
+<li>This epithelium has a <strong>simple columnar (柱形的)</strong> structure; that is, it consists of a single layer of tall (columnar) cells. These are of several differentiated types, but the <u>majority are absorptive cells</u>, specialized for uptake of nutrients from the <strong>internal cavity</strong>, or <strong>lumen</strong>, of the gut.</li>
+</ul>
+<p>The absorptive cells have to transport selected nutrients across the epithelium from the lumen into the extracellular fluid on the other side. From there, these nutrients diffuse into small blood vessels to provide nourishment to the organism</p>
+<ul>
+<li>This <strong>transcellular transport</strong> depends on two sets of transport proteins in the plasma membrane of the absorptive cell.<ol>
+<li>One set is confined to the <strong>apical surface</strong> of the cell (facing the lumen) and actively transports selected molecules into the cell from the gut.  </li>
+<li>The other set is confined to the <strong>basolateral</strong> (基底外侧, basal and lateral) surfaces of the cell, and it allows the same molecules to leave the cell by <strong>passive transport</strong> into the extracellular fluid on the other side of the epithelium.</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190324290.png" srcset="/img/loading.gif" lazyload alt="image-20200529190324290"></p>
+<ul>
+<li>Tight junctions seal the intracellular space to form a barrier</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190407814.png" srcset="/img/loading.gif" lazyload alt="image-20200529190407814" style="zoom:50%;" />
+
+<ul>
+<li>Tight junctions <u>maintain cell polarity</u></li>
+<li>This segregation permits a vectorialtransfer (向量转移) of nutrients across the epithelium from the gut lumen to the blood.</li>
+<li>Serve as “fences” to <u>separate domains within the PM”</u></li>
+<li><u>Selective for ions, but do not allow macromolecules to pass.</u></li>
+</ul>
+<blockquote>
+<p><u>This seal is not absolute</u>, however. Although all tight junctions are impermeable to macromolecules, <u>their permeability to ions and other small molecules varies.</u></p>
+<ul>
+<li>Tight junctions in the epithelium lining the small intestine, for example, are 10,000 times more permeable to inorganic ions, such as Na+, than the tight junctions in the epithelium lining the urinary bladder</li>
+<li>The movement of ions and other molecules between epithelial cells is called <strong>paracellular transport (细胞旁运输)</strong>, and <u>tissue-specific differences in transport rates  generally result from differences in the proteins that form tight junctions.</u></li>
+</ul>
+</blockquote>
+<h3 id="3-Molecular-organization-of-tight-junctions"><a href="#3-Molecular-organization-of-tight-junctions" class="headerlink" title="3. Molecular organization of tight junctions"></a>3. Molecular organization of tight junctions</h3><blockquote>
+<p>Tight Junctions Contain Strands of Transmembrane Adhesion Proteins</p>
+<ul>
+<li>When tight junctions are visualized by freeze-fracture electron microscopy, they are seen as a branching network of <strong>sealing strands</strong> that completely encircles the apical end of each cell in the epithelial sheet</li>
+</ul>
+<p>The main transmembrane proteins forming these strands are the <strong><font color="EE0000">claudins</font> (闭合蛋白)</strong>, which are essential for tight-junction formation and function.</p>
+<ul>
+<li><p>Mice that lack the <strong><font color="EE0000">claudin-1</font></strong> gene, for example, fail to make tight junctions between the cells in the epidermal layer of the skin</p>
+</li>
+<li><p>The <strong>claudin</strong> protein family has many members (24 in humans), and these are expressed in different combinations in different epithelia to confer particular permeability properties on the epithelial sheet</p>
+<ul>
+<li>They are thought to form <strong>paracellular pores</strong>—selective channels allowing <strong>specific ions</strong> to cross the tight-junctional barrier, from one extracellular space to another.</li>
+</ul>
+</li>
+</ul>
+<p>Normal tight junctions also contain a second major transmembrane protein called <strong><font color="EE0000">occludin</font> (封端蛋白)</strong>, which is <u>not essential</u> for the assembly or structure of the tight junction but is important for <u>limiting junctional permeability</u></p>
+<p>A third transmembrane protein, <strong><font color="EE0000">tricellulin</font></strong>, is required to seal cell membranes together and <u>prevent transepithelial leakage</u> at the points where <u>three cells meet.</u></p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190427849.png" srcset="/img/loading.gif" lazyload alt="image-20200529190427849" style="zoom: 50%;" />
+
+<p>Claudin:</p>
+<ul>
+<li>Loss causes dehydration and death in mice</li>
+<li>Overexpression causes tight junction formation in fibroblasts</li>
+</ul>
+<p>Occludin: </p>
+<ul>
+<li>Detailed function unknown</li>
+</ul>
+<p>Tricellulin: </p>
+<ul>
+<li>Required to seal membrane</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190629259.png" srcset="/img/loading.gif" lazyload alt="image-20200529190629259" style="zoom: 40%;" />
+
+<ul>
+<li>Scaffold proteins (ZO&#x2F;Tjp) link claudins to the actin-cytoskeleton<ul>
+<li>ZO (zonula occludens) proteins (ZO-1&#x2F;-2) also called Tjp (tight junction proteins) are anchor sites for tight-junctional strands</li>
+</ul>
+</li>
+</ul>
+<h4 id="Scaffold-protein-zonula-occludens-ZO"><a href="#Scaffold-protein-zonula-occludens-ZO" class="headerlink" title="Scaffold protein: zonula occludens (ZO)"></a>Scaffold protein: zonula occludens (ZO)</h4><blockquote>
+<p>Scaffold Proteins Organize Junctional Protein Complexes</p>
+<ul>
+<li>Like the cadherin molecules of an <strong>adherens junction</strong>, the <strong>claudins</strong> and <strong>occludins</strong> of a tight junction interact with each other on their extracellular sides to promote junction assembly.</li>
+<li>Also as in <strong>adherens junctions</strong>, the organization of adhesion proteins in a tight junction depends on <strong>additional proteins</strong> that bind the cytoplasmic side of the adhesion proteins</li>
+</ul>
+<p>The key organizational proteins at tight junctions are the <strong>zonula occludens (ZO)</strong> proteins.</p>
+<ul>
+<li>The three major members of the ZO  family—**<font color="EE0000">ZO-1</font>**, <strong><font color="EE0000">ZO-2</font></strong>, and **<font color="EE0000">ZO-3</font>**—are large <strong>scaffold proteins</strong> that provide a <strong>structural support</strong> on which the tight junction is built. </li>
+<li>These intracellular molecules consist of strings of <strong>protein-binding domains</strong>, typically including several **<font color="EE0000">PDZ domains</font>**—segments about 80 amino acids long that can recognize and bind the C-terminal tails of specific partner proteins</li>
+</ul>
+<p>One domain of these scaffold proteins can <u>attach to a claudin protein,</u> while others can <u>attach to <strong>occludin</strong> or the actin cytoskeleton</u>.</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190800153.png" srcset="/img/loading.gif" lazyload alt="image-20200529190800153"></p>
+<ul>
+<li>ZO proteins contains multiple protein-binding domains</li>
+<li>These domains enable the proteins to interact with each other and with numerous other partners to generate a tightly woven protein network that organizes the sealing strands of the tight junction and links them to the actin cytoskeleton.</li>
+</ul>
+<blockquote>
+<p>The tight-junctional network of sealing strands usually lies just apical to adherens and desmosome junctions that bond the cells together mechanically; the whole assembly is called a <strong>junctional complex</strong></p>
+</blockquote>
+<h4 id="Tight-junction-and-grass-seeds"><a href="#Tight-junction-and-grass-seeds" class="headerlink" title="Tight junction and grass seeds"></a>Tight junction and grass seeds</h4><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190934751.png" srcset="/img/loading.gif" lazyload alt="image-20200529190934751" style="zoom: 43%;" />
+
+<ul>
+<li><strong>Grass seeds</strong> normally contain proteins (<strong><font color="EE0000">glutens</font></strong>) which <ul>
+<li>have only few of useful amino acids </li>
+<li>inhibit carbohydrate digestion. The latter could be avoided by heating (cooking bread)</li>
+</ul>
+</li>
+<li><strong><font color="EE0000">Gliadin</font></strong> (component of <strong>glutens</strong>) also split into polypeptides which weakens tight cell junctions: this will cause celiac disease. 10% of humans are sensitive to glutens.</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191007239.png" srcset="/img/loading.gif" lazyload alt="image-20200529191007239"></p>
+<h1 id="二、Signaling-between-neighboring-cells"><a href="#二、Signaling-between-neighboring-cells" class="headerlink" title="二、Signaling between neighboring cells"></a>二、Signaling between neighboring cells</h1><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191037930.png" srcset="/img/loading.gif" lazyload alt="image-20200529191037930" style="zoom:80%;" />
+
+<ul>
+<li>Cell contacts regulate cell division and coordinate activities between cells</li>
+</ul>
+<h3 id="1-β-catenin-in-adhering-junctions-is-a-transcription-factor-activated-by-Wnt-signaling"><a href="#1-β-catenin-in-adhering-junctions-is-a-transcription-factor-activated-by-Wnt-signaling" class="headerlink" title="1. β-catenin in adhering junctions is a transcription factor activated by Wnt signaling"></a>1. β-catenin in adhering junctions is a transcription factor activated by Wnt signaling</h3><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191126549.png" srcset="/img/loading.gif" lazyload alt="image-20200529191126549"></p>
+<h3 id="2-Neighboring-cells-communicate-directly-through-gap-junctions"><a href="#2-Neighboring-cells-communicate-directly-through-gap-junctions" class="headerlink" title="2. Neighboring cells communicate directly through gap junctions"></a>2. Neighboring cells communicate directly through gap junctions</h3><blockquote>
+<p>Gap Junctions Couple Cells Both Electrically and Metabolically</p>
+<ul>
+<li>Tight junctions block the passageways through the gaps between epithelial cells, preventing extracellular molecules from leaking from one side of an epithelium to the other</li>
+<li>Another type of junctional structure has a radically different function: it bridges gaps between adjacent cells so as to <strong>create direct channels</strong> from the cytoplasm of one to that of the other. These channels are called <strong>gap junctions.</strong></li>
+</ul>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191143482.png" srcset="/img/loading.gif" lazyload alt="image-20200529191143482" style="zoom:47%;" />
+
+<h3 id="3-Gap-junctions-allow-diffusion-of-small-molecules-between-neighboring-cells"><a href="#3-Gap-junctions-allow-diffusion-of-small-molecules-between-neighboring-cells" class="headerlink" title="3. Gap junctions allow diffusion of small molecules between neighboring cells"></a>3. Gap junctions allow diffusion of small molecules between neighboring cells</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191255225.png" srcset="/img/loading.gif" lazyload alt="image-20200529191255225" style="zoom: 33%;" />
+
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191311319.png" srcset="/img/loading.gif" lazyload alt="image-20200529191311319" style="zoom:50%;" />
+
+<ul>
+<li><strong><font color="EE0000">Connexons</font></strong> are protein assembles which regulate the gap junction transfer.</li>
+<li>Six <strong><font color="EE0000">connexins</font></strong> form one <strong>connexon</strong> and two connexons build one channel.</li>
+</ul>
+<h2 id="Structure-of-Gap-junctions"><a href="#Structure-of-Gap-junctions" class="headerlink" title="Structure of Gap junctions"></a>Structure of Gap junctions</h2><blockquote>
+<p> Each gap junction appears in conventional electron micrographs as a patch where the membranes of two adjacent cells are  separated by a <strong>uniform narrow gap</strong> of about 2–4 nm</p>
+<p> The gap is <u>spanned by channel-forming proteins</u>, of which there are two distinct families,  called the <strong><font color="EE0000">connexins</font>（连接蛋白）</strong> and the <strong><font color="EE0000">innexins</font></strong>. </p>
+<ul>
+<li><strong>Connexins</strong> are the predominant gap-junction proteins in vertebrates, with 21 isoforms in humans</li>
+<li><strong>Innexins</strong> are found in the gap junctions of invertebrates.</li>
+</ul>
+<p>Gap junctions have a pore size of about 1.4 nm, which allows the exchange of <strong>inorganic ions</strong> and other <strong>small water-soluble molecules</strong>, but not of macromolecules such as proteins or nucleic acids</p>
+<p>This electrical coupling via gap junctions serves an obvious purpose in tissues containing electrically excitable cells: <u>action potentials can spread rapidly from cell to cell, without the delay that occurs at chemical synapses</u></p>
+<ul>
+<li>In vertebrates, for example, electrical coupling through gap junctions synchronizes  the contractions of heart muscle cells as well as those of the smooth muscle cells responsible for the peristaltic movements of the intestine.</li>
+</ul>
+<p> In principle, the sharing of small metabolites and ions provides a mechanism for <u>coordinating the activities of individual cells</u> in such tissues and for smoothing out random fluctuations in small-molecule concentrations in different cells.</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191351378.png" srcset="/img/loading.gif" lazyload alt="image-20200529191351378"></p>
+<ul>
+<li>Six connexons can be homomeric or heteromeric</li>
+</ul>
+<blockquote>
+<p>A Gap-Junction <strong>Connexon</strong> Is Made of Six Transmembrane <strong>Connexin</strong> Subunits</p>
+<ul>
+<li><strong>Connexins</strong> are <u>four-pass transmembrane proteins</u>, <u>six</u> of which assemble to form a <strong>hemichannel</strong>, or <strong>connexon</strong></li>
+</ul>
+<p> A gap junction consists of many such <strong>connexon pairs</strong> in parallel, forming a sort of <strong>molecular sieve</strong>.</p>
+<ul>
+<li>Not only does this sieve provide a <strong>communication channel</strong> between cells, but it also provides a form of <strong>cell–cell adhesion</strong> that supplements the cadherin and claudin-mediated adhesions we discussed earlier.</li>
+</ul>
+<p>Gap junctions in <u>different tissues can have different properties</u> because they are formed from <u>different combinations of connexins</u>, creating channels that differ in <u>permeability and regulation</u>.</p>
+<ul>
+<li>Most cell types express more than one type of connexin, and two different connexin proteins can assemble into a <u>heteromeric  connexon</u></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Like conventional ion channels (discussed in Chapter 11), individual gap-junction channels do not remain open all the time; instead, they <u>flip between open and closed states</u></p>
+<ul>
+<li>These changes are triggered by a <u>variety of stimuli</u>, including the <strong>voltage difference</strong> between the two connected cells, the <strong>membrane potential</strong> of each cell, and <u>various chemical properties of the cytoplasm</u>, including the <strong>pH</strong> and concentration of free <strong>Ca2+</strong></li>
+</ul>
+<p>Some subtypes of gap junctions can also be regulated by <strong>extracellular signals</strong> such as neurotransmitters.</p>
+</blockquote>
+<h3 id="1-Gap-junctions-are-dynamic-structure"><a href="#1-Gap-junctions-are-dynamic-structure" class="headerlink" title="1. Gap junctions are dynamic structure"></a>1. Gap junctions are dynamic structure</h3><blockquote>
+<p>Each gap-junctional plaque is a <strong>dynamic structure</strong> that can readily assemble, disassemble, or be remodeled and it can contain a cluster of a <u>few to many thousands of connexons</u></p>
+<p> Studies with fluorescently labeled connexins in living cells show that new connexons are <u>continually added around the periphery</u> of an existing junctional plaque, while old connexons are <u>removed from the middle of it and destroyed</u></p>
+<ul>
+<li>This <u>turnover is rapid</u>: the connexin molecules have a half-life of <u>only a few hours.</u></li>
+<li>unpaired hemichannels are normally held  in a closed conformation,</li>
+</ul>
+<p>in some circumstances they can open and serve as channels for the release of small signal molecules.</p>
+</blockquote>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191449153.png" srcset="/img/loading.gif" lazyload alt="image-20200529191449153" style="zoom:50%;" />
+
+<ul>
+<li>Assembly and remodeling of gap junctions over 20 hrs</li>
+<li>Experiment (metabolic labeling)<ul>
+<li>Cells expressing tetra-cysteine-tagged connexin (connexin-4C) were used to label gap junctions.</li>
+<li>The tag is detected via fluorescent dyes: first with the green dye FlAsH and 4 hrs later with the red dye ReAsH. </li>
+<li>After 8 hrs incubation, most of the “old” green label disappeared and was replaced by newer red connexins.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Regulation-of-gap-junction-communication"><a href="#Regulation-of-gap-junction-communication" class="headerlink" title="Regulation of gap-junction communication"></a>Regulation of gap-junction communication</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191620796.png" srcset="/img/loading.gif" lazyload alt="image-20200529191620796"></p>
+<ul>
+<li>Gap junctions have open and closed states</li>
+<li>Closure is triggered by <u>lower pH</u> or an <u>increase in Ca2+ levels</u></li>
+<li>Gap junctions can be regulated by extracellular signals</li>
+<li>Experiment:<ul>
+<li>One neuron was injected with a fluorescent dye (lucifer yellow).</li>
+<li>The dye diffuses via gap junctions, revealing all connected cells (left).</li>
+<li>After dopamine treatment, permeability&#x2F;connectivity between neurons is greatly reduced (right).</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-End-to-end-junctions-in-heart-muscle"><a href="#1-End-to-end-junctions-in-heart-muscle" class="headerlink" title="1. End-to-end junctions in heart muscle"></a>1. End-to-end junctions in heart muscle</h3><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191656118.png" srcset="/img/loading.gif" lazyload alt="image-20200529191656118" style="zoom:100%;" />
+
+<h3 id="2-The-function-of-gap-junctions"><a href="#2-The-function-of-gap-junctions" class="headerlink" title="2. The function of gap junctions"></a>2. The function of gap junctions</h3><p>Electrically excitable cells</p>
+<ul>
+<li>rapid spreading of action potentials (no delay by synapses) synchronization of a set of neurons electrical coupling throughgap junctions allows:<ul>
+<li>synchronization of heart muscle cells</li>
+<li>synchronization of smooth muscle cells (peristaltic movement of intestine</li>
+</ul>
+</li>
+</ul>
+<p>Other cells:</p>
+<ul>
+<li>sharing of metabolites smoothing-out random fluctuations of metabolites and small molecules coordination of cells in tissues &#x2F; organs (e.g. liver)</li>
+</ul>
+<p>Mutations in connexins are severe:</p>
+<ul>
+<li>deafness (connexin 26)</li>
+<li>cataracts of lenses</li>
+<li>neurodegenerative disease, etc.</li>
+</ul>
+<h2 id="Gap-junction-in-plant-plasmodesmata-原生质丝"><a href="#Gap-junction-in-plant-plasmodesmata-原生质丝" class="headerlink" title="Gap junction in plant: plasmodesmata 原生质丝"></a>Gap junction in plant: plasmodesmata 原生质丝</h2><blockquote>
+<p>原生质丝（英语：Plasmodesmata）为植物细胞和部分藻类细胞壁间贯穿细胞壁的特有孔道，可以让相邻细胞的细胞质相互流通。有微小孔道，为细胞间物质运输与信息传递的重要信道，信道中有一连接两细胞内质网的连丝微管，细胞质可经由原生质丝交流及运输，此过程称为共质体运输 (Symplast)。</p>
+</blockquote>
+<blockquote>
+<p>In Plants, Plasmodesmata Perform Many of the Same Functions as Gap Junctions</p>
+<p>The tissues of a plant are organized on different principles from those of an animal. </p>
+<ul>
+<li>This is because plant cells are imprisoned within tough cell walls composed of an extracellular matrix rich in cellulose and other polysaccharides</li>
+<li>Thus, plant cells have <u>only one class of intercellular junctions</u>, <strong>plasmodesmata</strong></li>
+</ul>
+<p>Running through the center of the channel in most plasmodesmata is a <strong>narrower cylindrical structure</strong>, the <strong>desmotubule (连丝微管)</strong>, which is <u>continuous with elements of the <strong>smooth endoplasmic reticulum (ER)</strong></u> in each of the connected cells</p>
+<p>They can also be inserted <em>de novo</em> through preexisting cell walls, where they are commonly found in dense clusters called <strong>pit fields</strong>. When no longer required, plasmodesmata can be removed</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191837350.png" srcset="/img/loading.gif" lazyload alt="image-20200529191837350"></p>
+<ul>
+<li>Connect the cytoplasm of the two adjacent cells, cut-off 800 Da by a rough and cylindrical channel with a diameter of 20-40 nm.</li>
+<li>Connected by desmotubule which is the continuation of the smooth endoplasmic reticulum (ER)</li>
+<li>Certain virus movement proteins spread via plasmodesmata</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191845789.png" srcset="/img/loading.gif" lazyload alt="image-20200529191845789" style="zoom:50%;" />
+
+<h2 id="Signal-relayed-junctions-synapse"><a href="#Signal-relayed-junctions-synapse" class="headerlink" title="Signal relayed junctions: synapse"></a>Signal relayed junctions: synapse</h2><p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191932829.png" srcset="/img/loading.gif" lazyload alt="image-20200529191932829"></p>
+<ul>
+<li>Many types of adhesion molecules act together to create a synapse.</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Academic-Notebook/" class="category-chain-item">Academic Notebook</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Academic-Notebook/Cell-Biology/" class="category-chain-item">Cell Biology</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Cell-Biology/" class="print-no-link">#Cell Biology</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>L24 Cells to tissues cell-cell adhesion</div>
+      <div>https://zhenyumi.github.io/posts/e928511d/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>向海</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年8月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/59056965/" title="L25 Cells to tissues cell adhesion to extracellular matrix (ECM)">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L25 Cells to tissues cell adhesion to extracellular matrix (ECM)</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/98828963/" title="L23 Cellular motility">
+                        <span class="hidden-mobile">L23 Cellular motility</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
